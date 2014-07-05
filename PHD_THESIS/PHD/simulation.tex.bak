@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% simulation.tex: Chapter on MC production: Here Mostly ECAL Timing
+% simulation.tex: Chapter on ECAL Timing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{ECAL Time Reconstruction and Calibration}
+\chapter{Timing Reconstruction and Calibration}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The time of an electromagnetic object such as a photon is extracted at the level of individual crystals called reconstructed hits~(rechits). The recorded time of the photon is the crystal calibrated time where the Time-Of-Flight~(TOF) as well as the time to transmit the recorded signal from the front-end detectors to the back-end readout electronics is removed such that on average the time is zero for a photon produced at the nominal proton-proton collision point and travelling at speed of light and then impinges at the surface of the crystal.  There are separate algorithms for extracting and calibrating the crystals using the rechit time. This calibrated time is considered the reconstructed time~($T_{RECO}$). 
 Measuring the difference in timing between any two reconstructed objects ( individual crystals or electromagnetic objects) originating from the same nominal point and thus assumed in principle to have the same time give the timing resolution of the detector as well as the crystal-to-crystal synchronization factor.  $T_{RECO}$ of a photon can be defined in either of the following ways:
@@ -31,7 +31,7 @@ The digital  filtering~(DF) technique is used to reconstruct the amplitude colle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The Ecal time is calibrated such that the the time travel by a photon or any highly relativistic  particle  produce at the nominal region of CMS proton-proton collision is on average 0 ns. This ensures that if a particle in detected with a significantly large positive time, then it is either this particle is travelling with a very small velocity (slowly moving particles or small $\beta << 1$ particle or it was produced as the decay product of stopped particle in the detector or it is a particle which is not travelling in a straight line but rather on a curved path to reach the ECAL.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{ECAL Time Performance}
+\subsection{Electromagnetic Calorimeter Timing Performance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The time performance of the ECAL crystals is studied and validated using events with a Z decay  i.e $\PZ \rightarrow \Pelectron \Ppositron$. 
 \newline
