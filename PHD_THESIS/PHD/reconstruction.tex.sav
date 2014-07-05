@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% reconstruction.tex:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Event Reconstruction and Particle Identification}
+\label{reconstruction_and Particle_ID_chapter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{ Reconstruction}
+We describe the reconstruction of events as done in CMS especially photons and electrons.
+\subsection{ Particle Identification Using Timing}
+Timing of an event is extracted from the energy supercluster deposited on the
+scintillating crystals of the ECAL. Using the seed crystal( basic cluster with highest energy), we can extract the time of arrival of a particular event as well as predict the vertex origin of the event and then use this to distinguish between events that occur within the LHC bunch collision called prompt events( photons)  from
+events that arise from a new massive particle decaying into either photons or electrons in the ECAL.
+
+\subsection{Photon or Electron Reco}
+Electron reconstruction is done at track seeding stage using two major algorithms:
+\begin{itemized}
+\item Tracker driven Seeding: more suitable for low $p_{T}$ electrons as well as better performance for electrons inside jets.
+\item ECAL driven seeding: starts by reconstructing ECAL clusters of clusters~("Superclusters") of transverse energy $E_{T} > 4$~$GeV/c$ and optimised for isolated  electrons with some
+    $p_{T}$ range  relevant for the mass of Z or W down to  $p_{T} 5$~$GeV/c$.
+    
+\end{itemized}
+
+The electron  selection variables can  be classified into 3 categories:
+The Identification~(ID), isolation and conversion rejection variables.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

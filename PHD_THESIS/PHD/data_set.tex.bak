@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% data_set.tex:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Analysis Strategy for Long-Lived Particles }
+\section{Analysis Strategy}
+\subsection{Signal and Background Modelling}
+In modern particle physics experiments, being able to do pseudo experiments which provide reliable insight into the kinematics and detector response to the physics of interest is a necessity. CMS is no exception.
+Using physics event generators like PYTHIA, Madgraph, SHERPA is very common.
+The generated events are then passed into the GEANT4 which provides a simulation of the physics of the event and the response of the CMS detector.   
+The resulting  event is known as a Monte Carlo Simulation ~(MC) events and the dataset is a MC dataset.
+In this analysis, we have used quite a number of cathegories of MC dataset for both the signal as well as the background. The following events were produced using PYTHIA and simulated using GEANT4.
+\subsection{Event Selection}
+\subsubsection{Higher Level Triggering and DataSet}
+\subsection{Background Estimation}
+\subsection{Efficiency and Systematics Studies}
+
+
+\section{Limit Setting}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using the excellent timing resolution as described in previous chapters,
+we can use the timing information of arrival photons on the ECAL to distinguish 
+between in-time photons( prompt) as well as out of time or delayed photons.
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{Search_strategy_or_Analysis_chapter}
