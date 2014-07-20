@@ -287,7 +287,7 @@ The  hadronic barrel(\text{HB}) and hadronic endcap(\text{HE}) of the HCAL cover
 The HB calorimeter is an assembly of two half barrels each composed of 18 identical $20^{o}$ wedges in $\phi$. Each wedge is made of flat brass alloy absorber plate parallel to beam axis with the innermost and outermost layers made up of stainless steal interleaved by plastic scintillating tiles.
 The first active layer is situated directly behind the ECAL in order to actively sample low energy showering particles from the support material between the ECAL and HCAL. Each scintillating tile has a size of $\Delta\eta\times\Delta\phi=0.087 \times\ 0.087$ and is instrumented with a single wave length shifting fiber(WLS) for better collection of light. The summed optical signals or light are converted into fast electronic
 signals by photo-sensors called  hybrid photo-diode(HPD).
-This inhomogeneous design gives the HCAL, an energy resolution of ${\displaystyle \Delta E/E \approx 0.5/\sqrt{E(GeV)} }$ above 250~GeV  much lower compared to that of homogeneous ECAL detector.
+This inhomogeneous design gives the HCAL, an energy resolution of ${\displaystyle \Delta E/E \approx 0.5/\sqrt{E(GeV)} }$ for particles with energy above 250~GeV, much lower compared to that of homogeneous ECAL detector.
 
 The forward hadronic~(HF) calorimeters placed upstream have scintillating tiles called Beam Scintillation Counters~(BSC) which in coincidence with the beam pick-up monitors ~(BPTX) detector helps to eliminate beam background contamination at the trigger level and is also useful for detection of hadrons in the forward region. HF made up of steel absorbers embedded in radiation hard quartz fibers running parallel to the 
 beam axis and providing a fast collection of Cherenkov light. The signal results from Cherenkov light emitted in the quartz 
@@ -305,7 +305,7 @@ Within each tower, the energy deposits in ECAL and HCAL cells are summed to defi
 % \newline
 % All these information is fed into the PF algorithm for particle reconstruction.
 \subsection{Muon Chambers}
-Muons are long-lived particles capable of travelling across the entire lateral section of the CMS detector into the muon chambers producing tracks in the tracker and depositing very little fraction of their energy in the calorimeters. The muon chambers uses ionization and the magnetic field from the return iron yokes to curve the tracks of charged long-live particles like muons, measuring their momentum and finally detecting them. There are three different types of muon chambers: the drift tubes~(DT) chambers in the barrel, cathode strip chambers~(CSC) n the endcaps and resistive plate chambers ~(RPC) glued to the DT and CSC chambers. Four layers or stations of DT/RPC and CSC/RPC are embedded in an interleaved  style with the iron yoke for track reconstruction and triggering. Figure \eqref{CMS-SUBD} provides a longitudinal view of the CMS detector showing the position of the stations.
+Muons are long-lived particles capable of travelling across the entire lateral section of the CMS detector into the muon chambers producing tracks in the tracker and depositing very little fraction of their energy in the calorimeters. The muon chambers uses ionization and the magnetic field from the return iron yokes to curve the tracks of charged long-live particles like muons, measuring their momentum and finally detecting them. There are three different types of muon chambers: the drift tubes~(DT) chambers in the barrel, cathode strip chambers~(CSC) n the endcaps and resistive plate chambers ~(RPC) glued to the DT and CSC chambers. Four layers or stations of DT/RPC and CSC/RPC are embedded in an interleaved  style with the iron yoke for track reconstruction and triggering. Figure \eqref{cmslview} provides a longitudinal view of the CMS detector showing the position of the stations.
 The DT and CSC record track segments characterised by the position of the track and the bending angle which is used to determine the precise transverse momentum and charge of a given particle during off-line reconstruction. The RPCs are dedicated trigger chambers used to determine the candidate muon's approximate transverse momentum ad bunch crossing number where the particle originates. The RPC has a timing resolution of about 3~ns.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -313,26 +313,26 @@ The DT and CSC record track segments characterised by the position of the track 
 \centering
 \mbox{\includegraphics[scale=0.6]{THESISPLOTS/CMS_Int_View.png}} 
 \captionof{figure}{Longitudinal view of CMS showing the coverage range of its sub-detectors.}
-\label{fig:CMS Detector Longitudinal view.}
+\label{fig:cmslview.}
 \end{center}
 
 \subsection{Particle Detection}
 Particle types that are identified using the CMS detector include electrons, photons, hadrons, muons, neutrinos and other weakly interacting particles. These particles depending on their charge, nature of interaction and lifetime can be identified either using some or all the sub-detectors of the CMS detector.
-The figure \eqref{CMSSLICE} show a  transverse slice of the CMS detectors with tracks in the tracker and muon sub-detectors and calorimeter energy deposit showing how different particles interact with the material in different sub-detectors thus ensuring their unique identification and reconstruction in the detector.
+The figure \eqref{cmsSLICE} show a  transverse slice of the CMS detectors with tracks in the tracker and muon sub-detectors and calorimeter energy deposit showing how different particles interact with the material in different sub-detectors thus ensuring their unique identification and reconstruction in the detector.
 
 \begin{center}\label{CMSSLICE}
 \centering
 \mbox{\includegraphics[scale=0.4]{THESISPLOTS/CMS_Slice.png}} 
 \captionof{figure}{Transverse slice of the CMS detector showing how different types of particles interact and hence identified using this detector.}
-\label{fig:CMS SLICE}
+\label{fig:cmsSLICE}
 \end{center}
 
 
 \subsection{Triggering}
-The CMS uses two layers of triggering. Level1~(L1) triggers and High Level Triggers~(HLT). L1 triggers are online triggers implemented at the hardware level while HLT triggers are offline triggers implemented using software. 
-
-
-
-
+In CMS, there are a billion interactions happening every second which means data from protons colliding 40 million times every second equivalent to the 25~ns LHC bunch crossing time interval has to be process and analyse before the next collision happens. Obviously this is impossible and infact, not every proton-proton collision will lead to the production of an interesting physics event. Thus one has to find a way of selecting only events produced from head-on proton collision with sufficient amount of energy. Even with this selection, it is not possible to process a single event in a 25~ns time frame. Thus, the CMS uses a two level triggering system for selecting interesting events and a pipeline system to temporarily store and process information from many interactions at the same time. Thus so as not to confuse particles from two different events, the CMS triggering system has a very good timing resolution and synchronization so that signals from millions of electronic channels and synchronised and identified to be produced by the same event.
+The CMS triggering system consist of two layers: The Level-1~(L1) and High Level Triggers~(HLT) triggers. L1 triggers are hardware designed electronic system while HLT is a farm of more than 1000 standard computers running the HLT event selection algorithm. Thus event selection begins at the L1 and HLT triggers.
+The L1 trigger electronics is implemented in FPGA and ASIC technology and consists of a calorimeter, muon trigger and a global trigger boards. The global trigger board makes the final decision based on the calorimeter and muon triggers to reject or keep and event for further processing at the HLT trigger. The L1 trigger is responsible for selecting the best 100,000 events each second from the initial 1 billions events from interactions happening every second. The pipeline system is used during the L1 trigger latency time of about 3.2~$\mu$s.
+The HLT trigger using assimilated and synchronised information from different parts of the detectors recreates the entire event. the HLT runs complex algorithm relating to physics objects like matching tracks to hits from the muon chambers  or energy deposits above a certain threshold in the calorimeters without tracks for electromagnetic objects. By the time this selection process in complete, there are now only 100 events per second with the remaining 99,900 thrown away.
+With the average event size of about 1~Megabyte, in a stable and effective LHC proton collision year or $10^{7}$~seconds, the CMS produces about a Petabyte of data which is stored in tapes for later offline analysis. Due to the large amount of data, such analysis are performed using clusters of computers geographically connected to each other in a virtual computing environment called the LHC Computing Grid~(LCG) to which the CMS is a member. This data is made available to 7 primary and later to secondary tier centres consisting of national research laboratories and universities around the world using a data transport system term Physics Experiment Data Export~(PhEDEx).
 \label{Collider_And_Detector_chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

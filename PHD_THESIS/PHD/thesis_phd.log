@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.21)  19 JUL 2014 21:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.21)  20 JUL 2014 02:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1478,8 +1478,11 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 265.
 See the caption package documentation for explanation.
 
-[59 <./THESISPLOTS/CMS-ECAL-EB-EE.png>] [60] [61]
-<THESISPLOTS/CMS_Int_View.png, id=1040, 656.4525pt x 368.37625pt>
+[59 <./THESISPLOTS/CMS-ECAL-EB-EE.png>] [60]
+
+LaTeX Warning: Reference `cmslview' on page 61 undefined on input line 308.
+
+[61] <THESISPLOTS/CMS_Int_View.png, id=1039, 656.4525pt x 368.37625pt>
 File: THESISPLOTS/CMS_Int_View.png Graphic file (type png)
 
 <use THESISPLOTS/CMS_Int_View.png>
@@ -1491,8 +1494,11 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 315.
 See the caption package documentation for explanation.
 
+
+LaTeX Warning: Reference `cmsSLICE' on page 62 undefined on input line 321.
+
 [62 <./THESISPLOTS/CMS_Int_View.png (PNG copy)>]
-<THESISPLOTS/CMS_Slice.png, id=1046, 995.72pt x 511.9125pt>
+<THESISPLOTS/CMS_Slice.png, id=1044, 995.72pt x 511.9125pt>
 File: THESISPLOTS/CMS_Slice.png Graphic file (type png)
 
 <use THESISPLOTS/CMS_Slice.png>
@@ -1504,12 +1510,12 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 326.
 See the caption package documentation for explanation.
 
-) [63 <./THESISPLOTS/CMS_Slice.png>]
+) [63 <./THESISPLOTS/CMS_Slice.png>] [64]
 \openout2 = `simulation.aux'.
 
  (./simulation.tex
 Chapter 4.
-[64
+[65
 
 
 
@@ -1518,14 +1524,14 @@ Chapter 4.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 18.
 
-[65]
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
 
 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-seed.pn
-g, id=1065, 1100.11pt x 674.52pt>
+g, id=1067, 1100.11pt x 674.52pt>
 File: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-se
 ed.png Graphic file (type png)
 
@@ -1536,7 +1542,7 @@ TS/EB-EB-Time-of-seed.png used on input line 59.
 (pdftex.def)             Requested size: 216.81pt x 132.93578pt.
 
 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-Time-of-Seed.pn
-g, id=1066, 1100.11pt x 674.52pt>
+g, id=1068, 1100.11pt x 674.52pt>
 File: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-Time-of-Se
 ed.png Graphic file (type png)
 
@@ -1556,11 +1562,11 @@ Overfull \hbox (32.66753pt too wide) in paragraph at lines 59--60
  [] 
  []
 
-[66 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-see
+[67 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-see
 d.png> </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-Time-of-
 Seed.png>]
 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-differ
-ence-of-seed.png, id=1076, 1100.11pt x 674.52pt>
+ence-of-seed.png, id=1079, 1100.11pt x 674.52pt>
 File: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-d
 ifference-of-seed.png Graphic file (type png)
 
@@ -1571,7 +1577,7 @@ TS/EB-EB-TOF-Corr-difference-of-seed.png used on input line 68.
 (pdftex.def)             Requested size: 216.81pt x 132.93578pt.
 
 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-TOF-Corr-differ
-ence-of-seed.png, id=1077, 1100.11pt x 674.52pt>
+ence-of-seed.png, id=1080, 1100.11pt x 674.52pt>
 File: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-TOF-Corr-d
 ifference-of-seed.png Graphic file (type png)
 
@@ -1596,33 +1602,33 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 80.
 See the caption package documentation for explanation.
 
-) [67 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-
+) [68 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-
 difference-of-seed.png> </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLO
 TS/EE-EE-TOF-Corr-difference-of-seed.png>]
 \openout2 = `reconstruction.aux'.
 
  (./reconstruction.tex
 Chapter 5.
-[68
+[69
 
 
 
-] [69] [70] [71]) [72] [73]
+] [70] [71] [72]) [73] [74]
 \openout2 = `data_set.aux'.
 
  (./data_set.tex
 Chapter 6.
-) [74
+) [75
 
 
 
-] [75]
+] [76]
 \openout2 = `event_selection.aux'.
 
  (./event_selection.tex
 Chapter 7.
 
-<THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png, id=1124, 899.36pt x 875
+<THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png, id=1126, 899.36pt x 875
 .27pt>
 File: THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png Graphic file (type 
 png)
@@ -1636,17 +1642,17 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 15.
 See the caption package documentation for explanation.
 
-[76
+[77
 
 
 
-]) [77 <./THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png>]
+]) [78 <./THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png>]
 \openout2 = `analysis.aux'.
 
 
 (./analysis.tex
 Chapter 8.
-) [78
+) [79
 
 
 
@@ -1655,14 +1661,14 @@ Chapter 8.
 
  (./conclusion.tex
 Chapter 9.
-) [79
+) [80
 
 
 
 ]
 \openout2 = `thesis.aux'.
 
- (./thesis.tex [80
+ (./thesis.tex [81
 
 
 
@@ -1675,7 +1681,7 @@ Underfull \hbox (badness 1776) in paragraph at lines 30--32
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
-[81]
+[82]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ³ in font cmr10!
 
@@ -1690,7 +1696,7 @@ Missing character: There is no œ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
-[82]) [83pdfTeX warning (ext4): destination with the same identifier (name{cite
+[83]) [84pdfTeX warning (ext4): destination with the same identifier (name{cite
 .MET}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1747,7 +1753,7 @@ Overfull \hbox (24.0pt too wide) in alignment at lines 57--61
 [] []
  []
 
-) [84
+) [85
 
 
 
@@ -1760,9 +1766,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
 (./app_glossary.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
-Package rerunfilecheck Info: File `thesis_phd.out' has not changed.
-(rerunfilecheck)             Checksum: 280C917F056E7C9D4E15645610115182;4524.
 
+
+Package rerunfilecheck Warning: File `thesis_phd.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis_phd.out':
+(rerunfilecheck)             Before: 280C917F056E7C9D4E15645610115182;4524
+(rerunfilecheck)             After:  247B48A98756789375389EC52E4CE5D1;4525.
 
 LaTeX Warning: There were undefined references.
 
@@ -1777,10 +1789,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
 ### bottom level
 (\end occurred when \ifnum on line 39 was incomplete) 
 Here is how much of TeX's memory you used:
- 21072 strings out of 493307
- 362119 string characters out of 6139905
- 455202 words of memory out of 5000000
- 23645 multiletter control sequences out of 15000+600000
+ 21075 strings out of 493307
+ 362123 string characters out of 6139905
+ 455201 words of memory out of 5000000
+ 23647 multiletter control sequences out of 15000+600000
  22092 words of font info for 82 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,14n,54p,2241b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1809,10 +1821,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on thesis_phd.pdf (96 pages, 1880643 bytes).
+Output written on thesis_phd.pdf (97 pages, 1883318 bytes).
 PDF statistics:
- 1349 PDF objects out of 1440 (max. 8388607)
- 1141 compressed objects within 12 object streams
- 356 named destinations out of 1000 (max. 500000)
+ 1352 PDF objects out of 1440 (max. 8388607)
+ 1143 compressed objects within 12 object streams
+ 357 named destinations out of 1000 (max. 500000)
  647 words of extra memory for PDF output out of 10000 (max. 10000000)
 
