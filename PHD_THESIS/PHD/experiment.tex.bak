@@ -83,7 +83,7 @@ Thus, the LHC fast timing signals from the RF generators  of the machine and orb
 %triggering efficiencies for low velocity particles.
 
 \begin{center}
-\begin{minipage}[b]{1.0\linewidth}
+
 \centering
  %\setlength{\abovecaptionskip}{0pt}
   %\setlength{\belowcaptionskip}{10pt}
@@ -119,8 +119,8 @@ Thus, the LHC fast timing signals from the RF generators  of the machine and orb
  Dipole Magnet B[T] & 8.33 & 8.33 & 8.33 & 8.33 \\
  \hline  
   \end{tabular}
-  \captionof{figure}{The LHC operation parameter conditions during RUN 1:2010-2013}
- \end{minipage}
+  \captionof{table}{The LHC operation parameter conditions during RUN 1:2010-2013}
+ \label{tableLHC}
  \end{center}
 
 
@@ -154,10 +154,9 @@ This kind of background from beam is referred to as \textit{Machine Induced Back
 
 \section{Compact Muon Solenoid}
 \subsection{Overview}
-The  Compact Muon Solenoid~(CMS) apparatus is a general purpose particle detector operating about 330 feet underground at  point 5~(P5)LHC in cessy,France. Its main feature is a superconducting solenoid of 6~m internal diameter providing a field of 3.8~T necessary for good momentum resolution. 
-This field  encloses and all-silicon pixel and strip tracker, a lead-tungstate scintillating-crystals electromagnetic calorimeter (ECAL) and a brass/scintillating sampling hadron calorimeter (HCAL). 
-Very long lived particles like muons are measured in gas-ionization detectors embedded in the flux-return iron-yoke located at the outermost section of the detector.
-It has a simple cylindrical structure consisting of barrel and endcap detectors and an extensive forward calorimetry to provide a near $4\pi$ solid angle assuring good hermetic coverage
+The goal of the  Compact Muon Solenoid~(CMS) detector is to identify particles by measuring their energies, momenta and track if applicable, as they pass through the detector. It is for this reason that the CMS apparatus is a general purpose particle detector operating about 330 feet underground at  point 5~(P5)LHC in cessy,France. Its main feature is a superconducting solenoid of 6~m internal diameter providing a field of 3.8~T necessary for good momentum resolution. 
+This field  encloses and all-silicon pixel serving as a vertex detector and a strip tracker for charged particle track reconstruction, a lead-tungstate scintillating-crystals electromagnetic calorimeter (ECAL) and a brass-scintillating sampling hadron calorimeter (HCAL). Very long lived particles like muons are measured in gas-ionization detectors embedded in the flux-return iron-yoke located at the outermost section of the detector.
+It has a simple cylindrical structure consisting of barrel and endcap detectors and an extensive forward calorimetry and detectors to provide a near $4\pi$ solid angle assuring good hermetic coverage
 The CMS apparatus has an overall length of 21.6~m, a diameter of 14.6~m, and weighs 12,500 tonnes. 
 \begin{center}
 \centering
@@ -168,7 +167,6 @@ The CMS apparatus has an overall length of 21.6~m, a diameter of 14.6~m, and wei
 The CMS detector performance can be summarised as seen in table \eqref{CMSRES} with the material type in each sub-detector.
 
 \begin{center}\label{CMSRES}
-\begin{minipage}[b]{1.0\linewidth}
 \centering
  %\setlength{\abovecaptionskip}{0pt}
   %\setlength{\belowcaptionskip}{10pt}
@@ -194,263 +192,123 @@ The CMS detector performance can be summarised as seen in table \eqref{CMSRES} w
   \hline
   \hline
   \end{tabular}
-  \captionof{figure}{CMS Detector Material and Resolution(Time resolution: $N\approx 35$~ns, $\bar{C}\approx 0.020$~ns \cite{Time})}
- \end{minipage}
+  \captionof{table}{CMS Detector Material and Resolution(Time resolution: $N\approx 35$~ns, $\bar{C}\approx 0.020$~ns \cite{Time})}
+ \label{tableCMS}
  \end{center}
 
-The coordinate system used by the CMS  is such that the origin is centered at the nominal collision point inside the detector. The direction of $x,y,$ and $z$-axis pointing towards the Jura Mountains from P5 are shown in figure \eqref{CMSCORD}. However, the CMS often uses the azimuthal angle $phi$ measured from the $x$-axis in the $x-y$ plane and the radial distance in this plane. The polar angle $theta$  measured from the $z$-axis is related to the \textit{pseudo-rapidity}, $\eta$ through the relation: $$\displaystyle{\eta = -\ln \tan(\frac{\theta} {2}) } $$. The co-ordinate system $(\eta, \phi, z)$ and its radial distance $r$ defines a point in the CMS detector whose volume is a cylinder. 
+The CMS uses a coordinate system where the origin coincides with the center of the detector also known as the nominal collision or interaction point~(IP). The direction of $x,y,$ and $z$-axis with the $z$-axis pointing towards the Jura Mountains from P5 are shown in figure \eqref{CMSCORD}. A more convenient coordinate system used in expressing quantities of particles is the polar coordinates. Here, the CMS  uses the azimuthal angle $phi$ measured from the $x-y$ plane with $\phi = 0 $ being the $x$-axis and $\phi = \pi/2 $ the $y$-axis. The radial distance in this plane is denoted $R$ and the polar angle $theta$  measured from the $z$-axis is related to the \textit{pseudo-rapidity}, $\eta$ through the relation: $$\displaystyle{\eta = -\ln \tan(\frac{\theta} {2}) } $$. The co-ordinate system $(\eta, \phi, z)$ and its radial distance $R$ defines a point in the CMS detector whose volume is a cylinder. 
 \begin{center}\label{CMSCORD}
 \centering
-\mbox{\includegraphics[scale=0.4]{THESISPLOTS/cms-Dect-Cord.png}} 
+\mbox{\includegraphics[scale=0.6]{THESISPLOTS/CMS_DETECTOR.eps}} 
 \captionof{figure}{Schematic diagram of CMS detector view showing definition of cordinates as used by CMS.}
-\label{fig:CMS detector showing defination of coordinates.}
+\label{fig:CMSDCORD.}
 \end{center}
 
-CMS defines quantities such as \textit{transverse momentum}~($p_{T}$), \textit{transverse energy}~($E_{T}$) and \textit{transverse missing energy}~($\MET$ or MET ) to distinguish quantities in the transverse plane($x-y$ coordinate) from those along the longitudinal direction($z$ coordinate) or beam line. It also uses a cone-like structure where the cone radius is defined as $$\displaystyle{ \Delta R = \sqrt{ \Delta\eta^{2} + \Delta\phi^{2} } }$$ to measure the distance between two objects in the $\eta-\phi$ plane. Cone-like structures are used for particle isolation and identification purposes.
+In CMS, quantities such as \textit{transverse momentum}~($p_{T}$), \textit{transverse energy}~($E_{T}$) and \textit{transverse missing energy}~($\MET$ or MET ) are used to distinguish a particle's quantities in the transverse plane($x-y$ coordinate) from those along the longitudinal direction($z$ coordinate) or beam line. In addition to these transverse quantities, cone-like structure with the cone radius is defined as $$\displaystyle{ \Delta R = \sqrt{ \Delta\eta^{2} + \Delta\phi^{2} } }$$ are used to measure the distance between two objects in the $\eta-\phi$ plane. These cone-like structures are used for particle isolation and identification purposes. In the next sections, we describe the characteristics and functionality of each of the CMS subdetectors introducing some additional details for those used in our analysis.
 
 
 \subsection{Tracker}
-
-
-
-
+Particles produced from proton-proton collision traverse the tracker sub-detector first. The job of the tracker is to measure the trajectory of charged particles, which are curved because of the magnetic filed produced by the magnetic coils. By measuring the curvature of these particle, the particle's momentum can be measured and its charge determined. The tracker is a silicon based detector and thus operates under the concept of ionization. It occupies a volume of 2.4~m in diameter and 5.4~m in length, consisting of pixel and strip sections geometrically arrange in cylindrical layers of barrel and disc-shaped endcaps, enclosed within the calorimeters. These sub-detectors all sit inside the 6~m in diameter solenoid magnet operating at 3.8~T. Figure \eqref{fig:CMSTRAK} depicts a schematic picture of the tracker with three barrel layers covering a region of radius from 4~cm to 15~cm in radius and two endcap discs within 49~cm on either side of the collision point along the $z$ axis; ten barrels layers  and twelve endcap disks per side of silicon strip detectors covering a region with radius from 15 to 110~cm and within 280~cm on either side of the LHC beam axis. The total tracker acceptance region in pseudo-rapidity is $|\eta| < 2.5$. The pixel detector is used for identifying the primary and secondary vertices of particles while the inner tracker of strip detector is for tracker reconstruction. 
+\begin{center}\label{CMSTRAK}
+\centering
+\mbox{\includegraphics[scale=0.6]{THESISPLOTS/Tracker.pdf}} 
+\captionof{figure}{Schematic diagram of CMS Tracker showing the silicon pixel detector region~(inner closer to LHC beam) and silicon strip reigion~(outer).}
+\label{fig:CMSTRAK}
+\end{center}
 \subsubsection{Pixel}
-\subsubsection{Silicon Strip Tracker}
-Unlike calorimeters, the tracker is basically a magnetic spectrometer where the momentum resolution is linearly  proportional to the particle's momentum 
- in a given  magnetic field.
- This means very low momentum particles have better momentum resolution than their high momentum counterparts.
- The momentum of a charged particle is inversely proportional to the curvature of its trajectory in the magnetic field. 
- By reconstructing the trajectory of the particle as it moves in the tracker; through ``hits'' made at various positions,
- we are able to deduce its curvature and hence determine its momentum.
- High momentum particles are less curved by the magnetic field than low momentum particles.
-Thus, the tracker  is expected to have a very good momentum resolution for low momentum particles. The strong magnetic field and high granularity of the 
-CMS silicon tracker allows promptly produced charged particles with $\PT = 100GeV/c$ to be reconstructed with a resolution in the transverse momentum \PT  of
- about $\sim 1.5\,\%$.
- The tracker and calorimeter combine to provide good energy resolutioin for low as well as high momentum particles respectively.
-\paragraph*{} 
-At the LHC design luminocity of $10^{34}~cm^{-2}s^{-1}$ there will be on average $1000$ particles from roughly $23$ overlapping proton-proton interactions traversing
-the tracker for each bunch crossing every $25$~ns. A detector technology featuring high granularity and fast response is required such that the trajectories can be identified
-reliably and attributed  to the correct bunch crossing.
-It is for this reason that the CMS tracker opted for silicon technology. Since silicon sensors are highly suited to receive many particles in a small space 
-due to  their fast response  and spatial resolution.
-The tracker is tasked along with the ECAL and  muon chambers to identify electrons and muons. Tracking information is also heavily used in the High Level
-Trigger (HLT) system of the CMS to reduce the event rate from the LHC bunch crossing rate of $40~MHz$ to about $100~Hz$ which can be permanently stored.
-One of the most important goals of the tracker is to minimize the effects on the tracking performance of electron bremsstrahlung and hadronic interactions. For this,
-the tracker has a track isolation criteria for identifying photons and electrons from electromagnetic clusters. This criteria is applied to suppress
-$\gamma-\pi^{o}(jet)$ and $\pi^{o}-\pi^{o}(jet-jet)$ backgrounds to a level significantly below the irriducible $\gamma-\gamma $ background.
-\newline
-The CMS tracker achieves this performance by using silicon pixel and  strip trackers. It has about 1440 pixel and 15148 strip detector modules.
-The pixel tracker has 3 layers positioned at
-radii between 4.4~cm and 10.2~cm while the silicon strip tracker has 10 layers surrounding the pixel detector in the barrel and extending out ward to  a radius of 1.1~m.
-Each system is completed by endcaps which consist of 2 disks in the pixel detector and 3 plus 9 disks in the  strip tracker on each side of the barrel extending
-the acceptance of the tracker to a pseudorapidity of $\vert\eta\vert < 2.5$. The pixel detector also covers a pseudorapidity  of $ -2.5 < \eta < 2.5$ matching the acceptance of the
- central tracker. It is closest to the beam line directly surrounding the interaction vertex and has
-pixels of size $\approx 100 \times 150~\mu m^{2}$ covering a total area of $\approx 1~m^{2}$. The main function of the pixel detector is to provide  precise tracking points
-in the $ r-\phi$ and Z responsible for small impact parameter resolution of about $\sim 15~\mu m$  ~\cite{CMSTDR},which is important for
-good secondary vertex  reconstruction and position resolution. This is crucial in the identification of  displaced vertex physics objects with life-time of 
-about $\tau \approx 10^{-12}~s$. They include particles such as
-$B^{0,{\pm}}$, $D^{0,{\pm}}$, $\tau^{\pm}$, which may travel a distinguishable distance (c$\tau$ $\approx 100~\mu$m.) 
-before decaying into particles with tracks like electrons and muons. 
-In addition, it is also important for forming seed tracks for outer track reconstruction and high level triggering.
-\newline
- %The tracker consists of the Silicon Strip Tracker(SST) and Pixel Tracker.
- %Its volume consists of a first layer of pixels followed by strips extending to ~$110$~cm with a total length of 540~cm. 
- %Ecah pixel has a size $\approx 100 \times 150~\mu m^{2}$ providing good vertex and position resolution.
- %Close to the interaction vertex, in the barrel region are 3 layers of hybrid pixel detectors at a radii 4.4, 7.3, and 10.2~cm.
- The silicon strip detector covers the radii region $ 20$~cm$ < r < 110$~cm.
- The over 15,000 silicon modules occupy an active area of $200~m^{2}$ providing a coverage in pseudorapidity up to
- $\vert\eta\vert < 2.5 $. It is also known as the outer tracker and consist of almost 9.6 million silicon strips providing a 
- spatial resolution measured to be about $10~\mu$m for $r-\phi$ measurement and about
-$20~\mu$m for Z measurment necessary for particle trajectory reconstruction.
-At the intermediate radii ($ 20$~cm$ < r < 55$~cm), where the particle flux is reduced, it is instrumented with silicon micro strip in the barrel detector
-with a typical cell size of
-$10~cm \times 80~cm$ in $ r-\phi $ and Z plane. The silicon modules here have sensors of thickness about $320~\mu m$,
-while for radial distances; $ 55$~cm$ < r < 110$~cm, the strip detector uses longer strips. The strip electric noise scales linearly with its length. Thus in order
-to maintain a good signal to noise ratio well above 10, the CMS uses thicker silicon sensors of about $500~\mu m$ which has correspondingly higher signal.
-Overal the Strip detector is made of 4 subdetectors. The Inner Barrel (TIB) consists of 4 cylindrical layers while the outer barrel (TOB) has 6 cylindrical layers.
-Two endcap detectors(TEC) in the positive and negative side of the Z cordinate consist of 9 carbon fiber disks with petal structure providing support for the modules.
-Signals from  modules of both strip and pixel dectors are amplified by 4 to 6 Analogue Pipeline Voltage(APV25) read out chips mounted on the front-end hybrid(FE-hybrid).
-The hybrid provide key information such as temperature of the chips and timing information in order to match the recorded ``hits'' with collision.
- 
-%Measuring the track of charge particles in the tracker provide enough information to calculate it's momentum.
-%The inner tracker measures charged particles within the $\vert\eta\vert < 2.4$ pseudo-rapidity range.% It is located in the 3.8T field of the superconducting solenoid. 
-%It provides and impact parameter resolution of $\sim 15~\mu m$ and a $\PT$ resolutions of about $1.5\,\% $ for 100~GeV/c particles ~\cite{CMSTDR}
-%\newline
-% A detailed description of CMS  detector can be found elsewhere ~\cite{JINST}.
-\subsection{Calorimeter}
-Calorimeters have a unique property of improving relative energy resolution with increasing energy thus making them indispencable  in high energy physics experiments.
-In the decay of neutralino, we espect the photon produced to have a very high energy(above 90GeV) and the gravitino which is weakly interacting to emerge as large missing energy.
-Therefore it is imperative to describe how the calorimetry system of CMS is designed to ensure that we can detect these photons. We also provide a brief description of
- the tracking system use for calculating missing transverse energy
-\subsubsection{Electromagnetic Calorimeter}
- The Ecal consists of the Barrel(\textsc{EB}) region occupying a pseudo-rapidity of $\vert \eta \vert< 1.479 $ and two Endcaps (\textsc{EE}) regions covering $1.479 <\vert \eta \vert < 3.0$.
- Sitting right in front of the \textsc{EE}, is a Preshower(\textsc{ES}) detector made of silicon strip sensors interleaved by lead making it a few radiation length thick.
- Its main purpose is to improve in $\gamma/\pi^{0}$ descrimination in the \textsc{EE} regions.
- \paragraph*{}
- The \textsc{EB} and \textsc{EE} combined consist of 75848 lead tungstate (\pb) scintinlating crystals. At the longitudinal end of each crystal is coupled two 
- Avalanche-Photodiodes(APDs) for \textsc{EB} crystals and  Vacuum-Phototriodes(VPTs) for \textsc{EE} crystals for scintilating light collection developed in the crystals.
- VPTs are used for \textsc{EE} crystals because of their better resistance against high radiation.
- This large number of crystals provide an almost $4\pi$ coverage of solid angle which is important for missing energy calculation. 
- \newline 
- \pb  has a radiation length ($X_{0}$) of $\simeq 0.89$~cm. The total longitudinal length of a crystal in  \textsc{EB} is $ 25.8X_{0}$ and $24.7X_{0}$ in \textsc{EE}
- providing enough absorber thickness for most of the energy of the incident very energetic photon or electron to completely lose through a 
- cascade process in the crystal. This energy loss is mainly through radiation of photons(\emph{Bremsstrahlung}) and pair production. The ``amplitude'' or ``probability'' of these processes is 
- proportional to the nuclear charge or number of electrons, \text{Z} of the material. \pb is a high \text{Z} material which makes it a good choice along
- with other properties like fast scintilation time for ECAL calorimetry. Low energy electrons lose their energy through other processes like ionization and excitation. 
- Eventhough \pb is a heavy material, Compton scattering and photoelectric effect is still possible as most of the photons with energy below a few \MeV have 
- their dominant contribution to energy loss from mainly  these processes.
- \newline
- \pb crystals also have a Moliere radius of $2.4$~cm. This ensures that on average about $95$\,\% of the electromagnetic shower energy is contained within the crystal volume therefore
- reducing the transverse spread of the electromagnetic cascade arising from multiple scattering of electrons. It improves on the estimation of the transverse position
- of impact of the incident particle. This  Moliere radius implies \pb is very dense and compact therefore resistant 
- to radiation making it suitable for a high radiation environment like the LHC.
- \newline
- The crystals are  tapered and arranged in a projective goometry pointing $\approx3^{o}$ away from the mean beam collision point. The purpose
- of this is to minimize inter crystal gaps hence preventing photons or part of the photon cluster from going through these gaps undetected.
- This improves the energy calibration and reduces the contribution to the constant term in the Ecal energy resolution and is the dominant
- contribution for high energies and in missing energy calculations. 
- \newline 
- \pb has a fast( 80\,\% of the light emitted within $25$~ns) scintilation process. It peaks in the blue region ($425$~nm) making photo-detection simpler and reliable in a fast
- (bunch crossing frequency of $40$~MHz) timing requirement environment like the LHC.
-Although the light-yield for \pb is rather low ($\approx 70$photons/\MeV), the photodiodes have internal gain ( $50$ for APDs and 10 for VPTs) and good quantum efficiency
-of $75$\,\% for APDs and $20$\,\% for VPTs of the emission wavelength. This makes it possible that signals 
-from incident particles with energies from a few  to high \GeV can be recorded.
-\paragraph*{}
- This homogenous design of the ECAL provides it with a performance which is optimal(by design) in its potential to discover a Higgs in the mass region 
- less than $130$\GeV/$c^{2}$ through the decay $\displaystyle{H\rightarrow\gamma\gamma}$. 
- Homogenous design implies reduced noise in the detector  thus better resolution since only a single material type is in use.
-ECAL has a current  timing resolution better than 500~ps for large energy deposits(more than 10-20~GeV in the \text{EB})~\cite{TIME} 
-and an energy resolution of ${\displaystyle\sigma/E\approx 0.45\,\%}$ for unconverted photons with energies above 100~GeV~\cite{CMSTDR}.
- 
-% \subsubsection*{The Readout Chain}
-%The scintillation time (~25~ns), small radiation length (9 mm), and radiation hardness of PbWO$_4$ are the reasons 
-%that this material was chosen for CMS since they minimize the overlapping of signals in space as well as interactions in the 
-%adjacent bunch crossings, and they survive in a high radiation environment of the LHC.
-%ECAL consists of $75848$ lead tungstate (\pb) scintilating crystals providing a coverage in pseudo-rapidity  of $\vert \eta \vert< 1.479 $ in a barrel
-%region (\textsc{EB}) and $1.479 <\vert \eta \vert < 3.0$ in two endcap regions (\textsc{EE}) to cover a large solid angle region, which is important for minimising 
-%false missing transverse energy.
-%Because of the relatively fast scintillation decay time, we are able to measure the time of the signal very well, and we take advantage of this for our analysis of delayed photon.
-%The timing resolution of ECAL Crystals is better than 500~ps for large energy deposits(more than 10-20~GeV in the barrel)~\cite{TIME}.
- %In fact, \pb has a decay time of 25~ns which is comparable with the LHC bunch  crossing interval of 25~ns.
-%This extremely fast scintillation process makes it an excellent material in an environment like the LHC.
-% \newline
-%The signal is generated in the \pb crystals through an electromagnetic showering process.
-%This process is caused by electromagnetic interactions between  high energy photons and electrons through a process called
-%\emph{Bremsstrahlung} and pair-production. During pair production, the incoming photon, interacts with the atom to produce an electron and positron pair.
-%However, in bremsstrahlung, the energetic electron interacts with the nucleus of the atom and is then accelerated
-%such that the accelerated electron radiates off a photon continuing as a less
-%energetic  electron. The emitted photon can later pair-produce.
-%The continuous Bremsstrahlung and pair-production leads to a cascade  production of photons and electrons called the electromagnetic shower.
-%It eventually stops when the photons or electrons become less energetic enough to either pair-produce or bremsstrahlung.
-%The light produced by the crystals is collected by photo devices which converts this light into photo current and is then transmitted
-%eventually to the front end detector. %After every 25ns, through high-speed data link per crystal, all data is  transported out of the ECAL into the counting room.
-%\newline
-%In front of the \textsc{EE},
-%is a single radiation length thick lead material called, the preshower detector. It consist of two planes of silicon sensors interleaved
-%with a 9~mm thickness of lead. Its main purpose is to provide $\pi^{0}-\gamma$ separation by distinguishing converted from unconverted photons.%
+The pixel vertex detector occupies the inner most region, very closed to the interaction region. Providing high-resolution and three-dimensional patterns of space points using silicon pads as pixels, the primary vertex and secondary vertices arising from the decay of heavy and relatively long-lived particles such as B-mesons containing b-quarks can be identified. This is also known as impact parameter measurements. The pixel covering a region of pseudo-rapidity $|\eta| < 2.4$ compliments the track finding by providing additional space points to seeding hits in the inner tracker.  Each pixel has a size of $100\times150$~$\mu m^2$ 
+covering a total area of $\approx 1~m^{2}$ and there are 66 million pixels read out by 16000 readout chips on the silicon sensors. The pixel is organised in three 53~cm long barrel layers~(Pixel Barrel=PXB), positioned at radii  of 4.4, 7.3 and 10.2~cm and two disks each per side (Pixel Forward=PXF), placed at $\pm 34.5$~cm and $\pm46.5$~cm from the interaction point and covering a radii between 6 and 15~cm. This guarantees each charged particle track crosses at least two layers of pixels.
+This arrangement ensures that the pixel detector provides  precise tracking points in the $ r-\phi$ and $z$ responsible for small impact parameter resolution of about $\sim 15~\mu m$. Small impact parameter resolution is important for precise secondary vertex  reconstruction and position resolution crucial in the identification of objects produced with displaced vertices with life-time of  about $\tau \approx 10^{-12}~s$ like mesons such as $B^{0,{\pm}}$, $D^{0,{\pm}}$, $\tau^{\pm}$, which may travel a distinguishable distance (c$\tau$ $\approx 100~\mu$m before decaying. Because of very high radiation dose of about 100~Mrad absorbed by the pixel detector, there is currently upgrade of the complete pixel detector in preparation of LHC Run 2.
 
- %A  unique capability of crystal total absorption calorimetry is its excellent energy resolution. % and hermetic coverage.
-%The CMS ECAL utilizes lead tungstate (PbWO$_4$) crystals to achieve an energy resolution of ${\displaystyle\sigma/E\approx 0.45\,\%}$ 
-%for unconverted photons with transverse energies above 100~GeV~\cite{CMSTDR}.
-% 
-% \subsubsection{ECAL}
-%  A  unique capability of crystal calorimetry is its excellent energy resolution and hermetic coverage.
-% The CMS ECAL has  an energy resolution of ${\displaystyle\sigma/E(GeV)\approx 0.45\,\%}$.
-% It consist of nearly $75848$ lead tungstate (\pb) scintilating crystals providing a coverage in pseudo-rapidity  of $\vert \eta \vert< 1.479 $ in a barrel
-% region (\textsc{EB}) and $1.479 <\vert \eta \vert < 3.0$ in two endcap regions (\textsc{EE}).
-%  %The lead-tungstate crystals provides a fine granularity of $\Delta\eta\times\Delta\phi=0.0175 \times\ 0.0175$ and $\Delta\eta\times\Delta\phi=0.0175 \times\ 0.0175$ to 
-% %$\Delta\eta\times\Delta\phi=0.05 \times\ 0.05$ for \textsc{EB} and \textsc{EE} respectively. 
-% It  has a radiation length of $X_0=0.89$cm. This allows for much of the energy lost through radiation before eventual ionization.
-% The crystals are arranged with a longitudinal length of 25.8\,$X_0$ in the barrel and 24.7\,$X_0$ in the endcaps, 
-% such that the scintilation light produced from each crystal is finely collected by photodiodes glued at the end of each crystal.
-% Avalanche Photodiodes(APDs) is used for \textsc{EB} and  Vacuum Phototriodes(VPTs) for \textsc{EE}. These photodiodes have high gain and are less affected by
-% the high magnetic field. 
-% Energy from incoming particles is converted into light through a process called scintillation. 
-% The \pb have a unique property in that, in about 25ns, about 80\,\% of all the incomming particle's energy  used to excite the atoms, is released through the scintillation process.
-%  In fact, \pb has a decay time of25ns which is comparable with the LHC bunch  crossing interval of 25ns.
-% This extremely fast scintillation process makes it an excellent scintilating  material in a fast decision making and high luminosity region like the LHC.
-% The electromagnetic showering process is caused by electromagnetic interactions between  high energy photons and elections through a process called
-% \emph{Bremsstrahlung} and pair-production. During pair production, the incoming photon, interacts with the atom to produce an electron and positron pair. 
-% Where as, in bremsstrahlung, the energetic electron interacts with the nucleus of the atom and is then accelerated 
-% such that the accelerated electron radiates off a photon continuing as a less
-% energetic  electron. The emitted photon can later pair-produce. 
-% The continuous Bremsstrahlung and pair-production leads to a cascade  production of photons and electrons called the electromagnetic shower.
-% The process eventually ends when the photons or electrons become less energetic enough to either pair-produce or bremsstrahlung.
-% The scintiallated light is collected by the APDs and VPTs which converts this light into photo current and is then transmitted 
-% eventually to the front end detector. After every 25ns, through high-speed data link per crystal, all data is  transported out of the ECAL into the counting room.
-% \newline
-% In front of the \textsc{EE}, 
-% is a single radiation length thick lead material called, the preshower detector. It consist of two planes of silicon sensors interleaved 
-% with a total of 3$\,X_0$ of lead. Its main purpose is to provide $\pi^{0}-\gamma$ separation by distinguishing converted from unconverted photons.
-\subsubsection{Hadronic Calorimeter}
-The forward hadronic calorimeters placed upstream have scintillating tiles called Beam Scintillation Counters~(BSC) which in coincidence with beam pick-up monitors ~(BPTX) helps to eliminate beam background contamination at the trigger level.
-Directly behind the ECAL, is the hadronic calorimeter(HCAL).
-Unlike the homogeneous ECAL, the HCAL is an inhomogeneous sampling calorimeter. 
-The  hadronic barrel(\text{HB}) and hadronic endcap(\text{HE}) of the HCAL cover a region in pseudo-rapidity of $\vert \eta \vert < 3$. 
-The designed consist of plastic scintilating tiles with wavelength shifting fibers sandwiched between layers of brass or steel as absorber giving 
-it a repeated interleaved structure  of absorber/dead( steel or brass)  
-and active layers of tiles of  plastic scintilating material. The active material
-is used mainly for periodically sampling electromagnetic and hadronic components in the hadronic shower 
-while steel and brass act as stopping material for energetic incoming hadrons in the shower.
-The  absorber material provide fine granularity  of short  nuclear interaction length while tiles of plastic scintilator
-separates charged hadrons like protons, pions($\pi^{\pm}$), kaons($k^{\pm}$)  and neutrons from
-electromagnetic physics objects like photon and neutral pions contained in the incident hadronic shower. 
-This ability to separate different components of a hadronic shower serves as the basis for some particle reconstruction algorithms making the HCAL 
-very usefull in the reconstruction of complex physics objects 
-like jets which usually consist of hadronic as well as electromagnetic showers.
-The HCAL is thus very important in missing energy calculation.
-Quartz fibers for Cerenkov light production placed in a steal mix occupy $3 < \vert \eta \vert < 5$.
- % like Particle Flow analysis(\text{PF}).
+\subsubsection{Silicon Strip Tracker}
+CMS silicon inner tracker surrounding the pixel detector allows for the tracks of promptly produced charged particles with $\PT = 100GeV/c$ to be reconstructed with a resolution in the transverse momentum \PT  of about $\sim 1.5\,\%$. High momentum particles are less curved by the magnetic field than low momentum particles. Therefore, the tracker works complimentary with the calorimeter and muon detectors to ensure improve momentum resolution at all particle energies.
+The silicon micro strip tracker covers a tracking volume up to radius of 1.2~m with a length of 5.6~m. It is organised in three parts: The inner tracker with four barrel layers (Tracker Inner Barrel=TIB) and three disks per endcap~(Tracker Inner Disks=TID), 6 outer barrel layers~(Tracker Outer Barrel=TOB) closed by 9 wheels on both sides.~(Tracker EndCap=TEC). 
+The silicon strip is made of 15148 silicon microstrip detector modules. Each module has a set of sensors. It occupies an active area of $200~m^{2}$ providing a coverage in pseudo-rapidity up to
+ $|\eta| < 2.5 $.
+ The TIB/TID delivers up to 4 $r-\phi$ measurements on a trajectory using 320~$\mu$m thick silicon micro strip sensors arranged  parallel to the beam direction in the barrel and radial on the disks. The strip pitch is 80~$\mu$m on layer 1 and 2 and 120~$\mu$m on layer 3 and 4 of the TIB, leading to a single point resolution of 23~$\mu$m and 35~$\mu$m, respectively. The TID also have varying pitches with both the TIB/TID enclosed by the TOB. The layering structure can be seen figure \eqref{CMSTRAK}. The nearly 9.6 million silicon strips provide a spatial resolution measured to be about $10~\mu$m for $r-\phi$ measurement and about $20~\mu$m for $z$ measurement necessary for particle trajectory reconstruction.
+ The combined pixel and micro strip modules allows for nearly 75 million readout electronic channels in the tracker.
+ 
+
+\subsection{Calorimeter}
+A calorimeter is a device which absorbs a good fraction of energy of an incident particle and produces a signal with an amplitude proportional to the energy absorbed. This absorption is via a cascade production of secondary particles where the incident energy is directly proportional to the number of secondary particles. CMS uses two types of calorimeters: Electromagnetic calorimeters~(ECAL) for absorbing the energy of electromagnetic particles such as photons and electrons and a sampling calorimeter or Hadronic calorimeter~(HCAL) made of more than one type of material for absorbing the energy of hadrons such as kaons and pions through hadronic interactions. The combined calorimeter detectors of CMS covers a region in $|\eta| < 5 $ making it nearly hermitic for missing energy measurements. The ECAL and HCAL are arranged in a layered manner as seen in figure \eqref{ECAL-HCAL} such that electromagnetic particles can be distinguished from hadronic particles by comparing the depth of the particle shower penetration in both calorimeters.
+
+\begin{center}\label{ECAL-HCAL}
+\centering
+\mbox{\includegraphics[scale=0.5]{THESISPLOTS/ECAL-HCAL.eps}} 
+\captionof{figure}{Schematic diagram of CMS calorimetry system with HCAL enclosing ECAL in the Barrel and Endcap regions.}
+\label{fig:ECAL-HCAL}
+\end{center}
+
+\subsubsection{Electromagnetic Calorimeter}
+ The main particles to detect using ECAL detectors are photons and electrons. High energy photons and electrons are detected through their interaction with the material of the ECAL detector. During this interaction which can be either through electromagnetic showering also known as \textit{bremsstrahlung} or electron-positron pair production, the incoming photons or electrons deposit practically almost all of their energy. The material for the CMS ECAL detector are lead-tungstate~(\pb) crystals. There are 75848 lead-tungstate ~(\pb) crystals mounted in a barrel~(\textsc{EB}) and endcap~(\textsc{EE}) structure.   
+ % The choice of \pb is due to its high density which allows for fast scintillating time of nearly 18~ns, has a fine granularity to enhance good resolution and is radiation resistant which are important characteristics in an LHC environment.
+\pb crystal is the appropriate choice for calorimetry by CMS for operation in the LHC environment because of its a high density~(8.28~$g/cm^{3}$), short radiation length~($X_{0}$=0.89~cm) and a small Moli$\grave{e}$re radius~(22~cm). This dense nature allows for the electromagnetic shower to develop early and therefore very likely to be fully contained within a compact device.  In a high radiation dose and fast timing~(25~ns bunch spacing) environment like the LHC, the choice of \pb crystals is justified because of their high radiation resistance and short scintillation decay time of the same order of magnitude as the LHC bunch crossing time:about 80\% of the light is emitted in 25~ns.
+Since the `amplitude'' or ``probability'' of a high energy photon or electron interacting with an ECAL material through (\emph{Bremsstrahlung}) and pair production is proportional to the nuclear charge or number of electrons, \text{Z} of the material, \pb which is a high \text{Z} material is once again CMS preferred choice for calorimetry. The small Moli$\grave{e}$re radius of \pb crystals ensures that on average about $95$\,\% of the electromagnetic shower energy is contained within the crystal volume therefore reducing the transverse spread of the electromagnetic cascade arising from multiple scattering of electrons. This improves on the estimation of the transverse position of impact of the incident particle and the fine granularity provides good precision for measuring the energy of an incoming electromagnetic particle and thus better energy resolution. 
+ 
+The barrel section of the ECAL covers a pseudo-rapidity of $\vert \eta \vert< 1.479 $. The EB has 61,200 crystals providing a granularity of 360-fold in $\phi$ and $(2 \times 85)$-fold in $\eta$.The crystals are mounted in a quasi-projective geometry to avoid cracks aligned with a particle trajectories, so that their axes make an angle of 3\% with respect to a line vector from the nominal interaction vertex in $\eta$ and $phi$ directions. These EB crystals have approximately 0.0174~$\times$~0.0174  in $\eta-\phi$ or 22~$\times$ 22~$mm^{2}$ at the front face and 26~$\times$~26~$mm^{2}$ on the rear face. each crystal is 230~mm long corresponding to about 25.8~$X_{0}$ radiation length. The crystals are contained in a thin-walled aveolar structure made with aluminium called submodule with their radial distance from the center of the face of the crystals to the beam line is 1.29~m. Each submodule are arranged into 4 modules of different types according to their $\eta$ position with each module having about 400 to 500 crystals.  The four modules make one supermodule containing 1700 crystals. The aluminium surface is coated to avid oxidation hence coloration which causes decrease in transparency.  On the rear end of each EB crystals, is glued two Avalanche Photodiodes~(APD) whose purpose is to collect the scintillating light from the crystals converting light into current which is further collected by the read-out electronics.
  \newline
-This inhomogenous design gives the HCAL, an energy resolution of ${\displaystyle \Delta E/E \approx 0.5/\sqrt{E(GeV)} }$ above 250~GeV ~\cite{CMSTDR}.
-\paragraph*{}
-The HCAL calorimeter  is a sampling calorimeter which means it finds the particle's position, energy and arrival time by using the alternating layers of ``absorber''
-and fluorescent ``scintilating'' materials which produce a rapid light pulse when  a particle passes through. Some special optic fibres  collect up this light and supply it
-to readout boxes where photodetectors amplify the signal. The amount of light in a given region is summed up over many layers of tile along the 
-particle's path through the HCAL in depth called a ``tower''. The total amount of light is a measure of the particle's energy and an indicator of its type.
-This sampling is used to separate the hadronic  and energetic  electromagnetic  component of the shower which passed through the ECAL unstopped.
+The endcap sector occupy a pseudo-rapidity region of 
+$1.479 <\vert \eta \vert < 3.0$ with Preshower~(\textsc{ES}) detector made of silicon strip sensors interleaved by lead placed immediately in front of it.  The purpose of the preshower detactor is to help separate converted from unvonverted photons. There are two endcaps located in the $+z$ side of the nominal interaction and denoted \textsc{EE}$+$ and on the $-z$ side denoted as \textsc{EE}$-$. The longitudinal distance between the nominal interaction point and the center of the surface of the crystals in \textsc{EE} is 3.154~cm. Crystals in the \textsc{EE} are of identical shape group in  units of 5~$\times$~5 crystals called \textit{supercrystals or SC}. Each endcap is divided into two halves called \textit{Dees} with each Dee holding 3662 crystals. The crystals are arranged in $x-y$ grid with their front face and rear cross section of 28.62~$\times$~28.62~$mm^{2}$ and 30~$\times$~30~$mm^{2}$ respectively. Ecah crystal is 220~mm~(24.7~$X_{o}$) in length. Vacuum Phototriodes~(VPT) is glued on the rear face of each crystal for scintillating light collecting and conversion into electrical signals. These photodiodes and triodes are used because of their high gain and the fact that they are not affected by the high magnetic field. 
+Although the light-yield for \pb is rather low~($\approx 70$photons/\MeV), the photodiodes have internal gain~($50$ for APDs and 10 for VPTs) and good quantum efficiency
+of $75$\,\% for APDs and $20$\,\% for VPTs of the emission wavelength. This makes it possible that signals 
+from incident particles with energies from a few to high \GeV can be recorded.
+APDs and VPTs are the standard choice of photo-detectors by CMS because of their high resistance to radiation and smooth operation in a strong magnetic field environment. Photodiodes like APDs and VPTs are similar to silicon photodiodes, with the exception that they have a buried p-n junction reversed-biased at a very high electric field. The photo electrons arriving at the junction undergo avalanche multiplication giving the device a gain.
+The signals from the APDs and VPTs are digitized by voltage-sensitive analogue-to-digital converters are later converted to light signals which are then transported using long optical fibres to the counting room located adjacent to the experimental cavern.
 \newline
-A hadronic shower is formed when an incident hadron undergoes an inelastic collision with the nucleus of the absorber material 
-producing secondary hadrons which as they go through successive layers of
-absorber material interact inelastically with other nuclei to produce further hadrons etc. 
-The  hadronic cascade loses about 30\,\% of incident hadron energy through nuclear excitation of the nuclei of atoms of the  absorber material.
-\newline
-The HB calorimeter is an assembly of two half barrels each composed of 18 identical
-$20^{o}$ wedges in $\phi$. The wedge is made of flat brass alloy absorber plate parallel to beam axis with the innermost and outermost layers made up of
-stainless steal interleaved by plastic scintillating tiles.
-The first active layer is situated directly behind the ECAL in order to actively sample low energy showering particles from the support material between the ECAL 
-and HCAL. Each scintillating tile has a size of $\Delta\eta\times\Delta\phi=0.087 \times\ 0.087$ 
-and is instrumented with a single wave length shifting fiber(WLS) for better collection of light. The summed optical signals or light are converted into fast electronic
+The energy resolution and geometric structure of the ECAL ensures that the photon or electron's arrival position at ECAL,energy and time and even the direction and shape of its electromagnetic shower in the crystals can be measured and identified respectively with good precision.
+
+\begin{center}\label{CMSECAL}
+\centering
+\mbox{\includegraphics[scale=0.6]{THESISPLOTS/CMS-ECAL-EB-EE.png}}
+%\mbox{\includegraphics[scale=0.2]{THESISPLOTS/CMS-ECAL.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\captionof{figure}{Layout of the CMS electromagnetic calorimeter showing the arrangement of crystal modules, supermodules in the barrel with the preshower infront of endcap with supercrystals.}
+\label{fig:CMSECAL}
+\end{center}
+
+
+
+
+
+
+%This homogenous design of the ECAL provides it with a performance which is optimal(by design) in its potential to discover a Higgs in the mass region 
+% less than $130$\GeV/$c^{2}$ through the decay $\displaystyle{H\rightarrow\gamma\gamma}$. 
+% Homogenous design implies reduced noise in the detector  thus better resolution since only a single material type is in use.
+%ECAL has a current  timing resolution better than 500~ps for large energy deposits(more than 10-20~GeV in the \text{EB})~\cite{TIME} 
+%and an energy resolution of ${\displaystyle\sigma/E\approx 0.45\,\%}$ for unconverted photons with energies above 100~GeV~\cite{CMSTDR}.
+ 
+
+
+
+\subsubsection{Hadronic Calorimeter}
+Hadrons like protons, neutrons kaons and pions are unlike electromagnetic particle strongly interacting~(strong force is the force that binds nuclei together). A hadronic shower is formed when an incident hadron undergoes an inelastic collision with the nucleus of the absorber material producing secondary hadrons which as they go through successive layers of absorber material interact inelastically with other nuclei to produce further hadrons etc. 
+The  hadronic cascade loses about 30\,\% of incident hadron energy through nuclear excitation of the nuclei of atoms of the  absorber material.  Hadronic showers start to develop later with more lateral spread and and larger in the longitudinal dimensions than electromagnetic showers. This is why the hadronic calorimeter~(HCAL) is made of alternating plates of brass and plastic scintillator encompassing the ECAL. The scintiallating light is readout using wavelength shifting optical fibres by photosensors in the barrel and endcap. The photosensors are hybrid photodiodes~(HPD). The are ongoing upgrades to replacing the HPDs with silicon photon multipliers~(SiPM). 
+The  hadronic barrel(\text{HB}) and hadronic endcap(\text{HE}) of the HCAL cover a region in pseudo-rapidity of $\vert \eta \vert < 3$. While the Hadronic Forward~(\text{HF}) occupies a pseudo-rapidity region of $3 < \vert \eta \vert < 5$.
+The HB calorimeter is an assembly of two half barrels each composed of 18 identical $20^{o}$ wedges in $\phi$. Each wedge is made of flat brass alloy absorber plate parallel to beam axis with the innermost and outermost layers made up of stainless steal interleaved by plastic scintillating tiles.
+The first active layer is situated directly behind the ECAL in order to actively sample low energy showering particles from the support material between the ECAL and HCAL. Each scintillating tile has a size of $\Delta\eta\times\Delta\phi=0.087 \times\ 0.087$ and is instrumented with a single wave length shifting fiber(WLS) for better collection of light. The summed optical signals or light are converted into fast electronic
 signals by photo-sensors called  hybrid photo-diode(HPD).
-%The optical signal from the HCAL towers is detected with a pixelated
-\newline
-In the forward region in $\eta$ is the forward calorimeter (HF) made up of steel absorbers embedded in radiation hard quartz fibers running parallel to the 
+This inhomogeneous design gives the HCAL, an energy resolution of ${\displaystyle \Delta E/E \approx 0.5/\sqrt{E(GeV)} }$ above 250~GeV  much lower compared to that of homogeneous ECAL detector.
+
+The forward hadronic~(HF) calorimeters placed upstream have scintillating tiles called Beam Scintillation Counters~(BSC) which in coincidence with the beam pick-up monitors ~(BPTX) detector helps to eliminate beam background contamination at the trigger level and is also useful for detection of hadrons in the forward region. HF made up of steel absorbers embedded in radiation hard quartz fibers running parallel to the 
 beam axis and providing a fast collection of Cherenkov light. The signal results from Cherenkov light emitted in the quartz 
 fibres embedded in the steel matrix in response to charged particles.
-The Cherenkov calorimeter have long and short fibers which are positioned alternatively separated by 5~mm with readouts for better 
-sampling of the different shower components.
+The Cherenkov calorimeter have long and short fibers which are positioned alternatively separated by 5~mm with readouts for better sampling of the different shower components.
 The goal of this hardware design is to give better compensation for different shower components in the hadronic shower.
-The HF section enables the HCAL to pick up myriad of particles coming out of the collision region  at very shallow angles relative to the beam direction.
-%In fact the steel and brass alloy sandwiched with active tile of scintillator provide a great stopping power for highly energetic events as well as providing fast readout.
-\newline
-These different sections of the HCAL in $\eta-\phi$ plane give it a unique capability to measure multi-jet events revealing the fine structure of jets.
-Decaying particles may produced new particles that do not leave any record  of their presence in any part of the CMS detector.
-To spot such particles, the above HCAL sections give it an almost ``hemetic'' coverage making sure it captures  to the extend possible every particle emerging from
-collisions.  In this way, if we observe a particle in one side of the detector but not in the other, with imbalance of momentum and energy in the direction
-``transverse'' to the beam  direction, we can deduce that we are producing ``invincible''     particles. 
-This is the primary idea in missing transverse energy calculation  established as signal for very weakly interacting particles like neutrino and hopefully gravitino.
-Generally speaking, in the region $\vert \eta \vert< 1.74$, the HCAL cells have widths of 0.087 in pseudorapidity($\eta$) and 0.087\,rad in azimuth ($\phi$).
+The HF section enables the HCAL to pick up myriad of particles coming out of the collision point. Quartz fibre has high resistance to the high radiation does in the forward detectors and light production is through Chererenkov method than scintillation in HB and HE calorimeters.
+ 
+The purpose of the HF detector is to provide a full hermetic $4\pi$  phase space coverage required for missing transverse energy calculation or \text{MET}. MET is the established as signal for very weakly interacting particles like neutrino and supersymetric particles like gravitino which travel through the detector undetected.
+For $\vert \eta \vert< 1.74$ region, the HCAL cells are $0.087 0.087$\,rad  in pseudo-rapidity($\eta$) and in azimuth ($\phi$).
 In the $(\eta,\phi)$ plane, and for $\vert \eta \vert < 1.48$, 
 the HCAL cells map on to $5 \times 5$ ECAL crystals arrays to form calorimeter towers projecting radially outwards from close 
 to the nominal interaction point. At larger values of $\vert \eta \vert$, the size of the towers increases and the matching ECAL arrays contain fewer crystals. 
-Within each tower, the energy deposits in ECAL and HCAL cells are summed to define the calorimeter tower energies subsequently used to provide the energy
- and direction of hadronic jets. 
+Within each tower, the energy deposits in ECAL and HCAL cells are summed to define the calorimeter tower energies subsequently used to provide the energy and direction. The ratio of the energy deposit if a particle in the ECAL crystals to that in the HCAL towers is used to distinguished between true photons from neutral hadronic showers.
 % \newline
 % All these information is fed into the PF algorithm for particle reconstruction.
 \subsection{Muon Chambers}
+Muons are long-lived particles capable of travelling across the entire lateral section of the CMS detector into the muon chambers producing tracks in the tracker and depositing very little fraction of their energy in the calorimeters. The muon chambers uses ionization and the magnetic field from the return iron yokes to curve the tracks of charged long-live particles like muons, measuring their momentum and finally detecting them. There are three different types of muon chambers: the drift tubes~(DT) chambers in the barrel, cathode strip chambers~(CSC) n the endcaps and resistive plate chambers ~(RPC) glued to the DT and CSC chambers. Four layers or stations of DT/RPC and CSC/RPC are embedded in an interleaved  style with the iron yoke for track reconstruction and triggering. Figure \eqref{CMS-SUBD} provides a longitudinal view of the CMS detector showing the position of the stations.
+The DT and CSC record track segments characterised by the position of the track and the bending angle which is used to determine the precise transverse momentum and charge of a given particle during off-line reconstruction. The RPCs are dedicated trigger chambers used to determine the candidate muon's approximate transverse momentum ad bunch crossing number where the particle originates. The RPC has a timing resolution of about 3~ns.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-A complete picture showing CMS sub-detectors definitions in terms of coordinates can be seen in figure \eqref{CMS-SUBD}
 \begin{center}\label{CMS-SUBD}
 \centering
 \mbox{\includegraphics[scale=0.6]{THESISPLOTS/CMS_Int_View.png}} 
@@ -458,18 +316,23 @@ A complete picture showing CMS sub-detectors definitions in terms of coordinates
 \label{fig:CMS Detector Longitudinal view.}
 \end{center}
 
-
-
 \subsection{Particle Detection}
-Using the above CMS sub-detectors, particle detection is done using information from every sub-detector.
-The figure \eqref{CMSSLICE} show a  transverse slice of the CMS detectors with tracks and energy deposit showing how different particles interact with the material in different sub-detectors thus ensuring their unique identification and reconstruction in the detector.
- 
+Particle types that are identified using the CMS detector include electrons, photons, hadrons, muons, neutrinos and other weakly interacting particles. These particles depending on their charge, nature of interaction and lifetime can be identified either using some or all the sub-detectors of the CMS detector.
+The figure \eqref{CMSSLICE} show a  transverse slice of the CMS detectors with tracks in the tracker and muon sub-detectors and calorimeter energy deposit showing how different particles interact with the material in different sub-detectors thus ensuring their unique identification and reconstruction in the detector.
+
 \begin{center}\label{CMSSLICE}
 \centering
 \mbox{\includegraphics[scale=0.4]{THESISPLOTS/CMS_Slice.png}} 
 \captionof{figure}{Transverse slice of the CMS detector showing how different types of particles interact and hence identified using this detector.}
 \label{fig:CMS SLICE}
 \end{center}
+
+
+\subsection{Triggering}
+The CMS uses two layers of triggering. Level1~(L1) triggers and High Level Triggers~(HLT). L1 triggers are online triggers implemented at the hardware level while HLT triggers are offline triggers implemented using software. 
+
+
+
 
 \label{Collider_And_Detector_chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -31,30 +31,33 @@
 \BOOKMARK [2][-]{subsection.3.2.3}{Calorimeter}{section.3.2}% 31
 \BOOKMARK [2][-]{subsection.3.2.4}{Muon Chambers}{section.3.2}% 32
 \BOOKMARK [2][-]{subsection.3.2.5}{Particle Detection}{section.3.2}% 33
-\BOOKMARK [0][-]{chapter.4}{ECAL Time Reconstruction and Calibration}{}% 34
-\BOOKMARK [1][-]{subsection.4.0.6}{Electromagnetic Calorimeter Readout Chain}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.0.7}{Timing Extraction}{subsection.4.0.6}% 36
-\BOOKMARK [2][-]{subsection.4.0.8}{Calibration Procedure}{subsection.4.0.6}% 37
-\BOOKMARK [2][-]{subsection.4.0.9}{ECAL Time Performance}{subsection.4.0.6}% 38
-\BOOKMARK [0][-]{chapter.5}{Event Reconstruction and Particle Identification}{}% 39
-\BOOKMARK [1][-]{section.5.1}{ Reconstruction}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.2}{ Particle Identification Using Timing}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.3}{Photon or Electron Reco}{chapter.5}% 42
-\BOOKMARK [2][-]{subsection.5.3.1}{Supercluster Reconstruction}{section.5.3}% 43
-\BOOKMARK [1][-]{section.5.4}{Anomalous Signals}{chapter.5}% 44
-\BOOKMARK [0][-]{chapter.6}{Analysis Strategy for Long-Lived Particles }{}% 45
-\BOOKMARK [1][-]{section.6.1}{Analysis Strategy}{chapter.6}% 46
-\BOOKMARK [2][-]{subsection.6.1.1}{Signal and Background Modelling}{section.6.1}% 47
-\BOOKMARK [2][-]{subsection.6.1.2}{Event Selection}{section.6.1}% 48
-\BOOKMARK [2][-]{subsection.6.1.3}{Background Estimation}{section.6.1}% 49
-\BOOKMARK [2][-]{subsection.6.1.4}{Efficiency and Systematics Studies}{section.6.1}% 50
-\BOOKMARK [1][-]{section.6.2}{Limit Setting}{chapter.6}% 51
-\BOOKMARK [0][-]{chapter.7}{Results and Interpretation}{}% 52
-\BOOKMARK [0][-]{chapter.8}{Future Work}{}% 53
-\BOOKMARK [1][-]{section.8.1}{Beam Halo Monitoring \(BHM\)}{chapter.8}% 54
-\BOOKMARK [1][-]{section.8.2}{HCAL Upgrade-Back End Electronics}{chapter.8}% 55
-\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 56
-\BOOKMARK [0][-]{chapter*.48}{References}{}% 57
-\BOOKMARK [0][-]{appendix.A}{ Appendix A. \040Glossary and Acronyms}{}% 58
-\BOOKMARK [1][-]{section.A.1}{Glossary}{appendix.A}% 59
-\BOOKMARK [1][-]{section.A.2}{Acronyms}{appendix.A}% 60
+\BOOKMARK [2][-]{subsection.3.2.6}{Triggering}{section.3.2}% 34
+\BOOKMARK [0][-]{chapter.4}{Timing Reconstruction and Calibration}{}% 35
+\BOOKMARK [1][-]{subsection.4.0.7}{Electromagnetic Calorimeter Readout Chain}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.0.8}{Timing Extraction}{subsection.4.0.7}% 37
+\BOOKMARK [2][-]{subsection.4.0.9}{Timing Calibration Procedure}{subsection.4.0.7}% 38
+\BOOKMARK [2][-]{subsection.4.0.10}{Electromagnetic Calorimeter Timing Performance}{subsection.4.0.7}% 39
+\BOOKMARK [0][-]{chapter.5}{Event Reconstruction and Particle Identification}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Particle Reconstruction}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.1.1}{Supercluster Reconstruction}{section.5.1}% 42
+\BOOKMARK [2][-]{subsection.5.1.2}{Photon or Electron Reconstruction}{section.5.1}% 43
+\BOOKMARK [2][-]{subsection.5.1.3}{Jet Reconstruction}{section.5.1}% 44
+\BOOKMARK [2][-]{subsection.5.1.4}{Missing Transverse Energy}{section.5.1}% 45
+\BOOKMARK [1][-]{section.5.2}{Using Timing in Particle Identification}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.3}{Anomalous Signals}{chapter.5}% 47
+\BOOKMARK [0][-]{chapter.6}{Analysis Strategy for Long-Lived Particles }{}% 48
+\BOOKMARK [1][-]{section.6.1}{Analysis Strategy}{chapter.6}% 49
+\BOOKMARK [2][-]{subsection.6.1.1}{Signal and Background Modelling}{section.6.1}% 50
+\BOOKMARK [2][-]{subsection.6.1.2}{Event Selection}{section.6.1}% 51
+\BOOKMARK [2][-]{subsection.6.1.3}{Background Estimation}{section.6.1}% 52
+\BOOKMARK [2][-]{subsection.6.1.4}{Efficiency and Systematics Studies}{section.6.1}% 53
+\BOOKMARK [1][-]{section.6.2}{Limit Setting}{chapter.6}% 54
+\BOOKMARK [0][-]{chapter.7}{Results and Interpretation}{}% 55
+\BOOKMARK [0][-]{chapter.8}{Future Work}{}% 56
+\BOOKMARK [1][-]{section.8.1}{Beam Halo Monitoring \(BHM\)}{chapter.8}% 57
+\BOOKMARK [1][-]{section.8.2}{HCAL Upgrade-Back End Electronics}{chapter.8}% 58
+\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 59
+\BOOKMARK [0][-]{chapter*.44}{References}{}% 60
+\BOOKMARK [0][-]{appendix.A}{ Appendix A. \040Glossary and Acronyms}{}% 61
+\BOOKMARK [1][-]{section.A.1}{Glossary}{appendix.A}% 62
+\BOOKMARK [1][-]{section.A.2}{Acronyms}{appendix.A}% 63

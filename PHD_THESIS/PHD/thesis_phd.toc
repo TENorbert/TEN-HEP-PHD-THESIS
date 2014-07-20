@@ -34,39 +34,42 @@
 \contentsline {subsubsection}{LHC Bunch Structure}{47}{section*.37}
 \contentsline {section}{\numberline {3.2}Compact Muon Solenoid}{50}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Overview}{50}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Tracker}{53}{subsection.3.2.2}
-\contentsline {subsubsection}{Pixel}{53}{section*.39}
-\contentsline {subsubsection}{Silicon Strip Tracker}{53}{section*.40}
+\contentsline {subsection}{\numberline {3.2.2}Tracker}{54}{subsection.3.2.2}
+\contentsline {subsubsection}{Pixel}{54}{section*.39}
+\contentsline {subsubsection}{Silicon Strip Tracker}{55}{section*.40}
 \contentsline {subsection}{\numberline {3.2.3}Calorimeter}{56}{subsection.3.2.3}
-\contentsline {subsubsection}{Electromagnetic Calorimeter}{56}{section*.42}
-\contentsline {subsubsection}{Hadronic Calorimeter}{58}{section*.45}
-\contentsline {subsection}{\numberline {3.2.4}Muon Chambers}{60}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Particle Detection}{61}{subsection.3.2.5}
-\contentsline {chapter}{\numberline {4}ECAL Time Reconstruction and Calibration}{62}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.6}Electromagnetic Calorimeter Readout Chain}{63}{subsection.4.0.6}
-\contentsline {subsection}{\numberline {4.0.7}Timing Extraction}{63}{subsection.4.0.7}
-\contentsline {subsection}{\numberline {4.0.8}Calibration Procedure}{63}{subsection.4.0.8}
-\contentsline {subsection}{\numberline {4.0.9}ECAL Time Performance}{63}{subsection.4.0.9}
-\contentsline {chapter}{\numberline {5}Event Reconstruction and Particle Identification}{66}{chapter.5}
-\contentsline {section}{\numberline {5.1} Reconstruction}{66}{section.5.1}
-\contentsline {section}{\numberline {5.2} Particle Identification Using Timing}{66}{section.5.2}
-\contentsline {section}{\numberline {5.3}Photon or Electron Reco}{66}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Supercluster Reconstruction}{67}{subsection.5.3.1}
-\contentsline {section}{\numberline {5.4}Anomalous Signals}{68}{section.5.4}
-\contentsline {chapter}{\numberline {6}Analysis Strategy for Long-Lived Particles }{71}{chapter.6}
-\contentsline {section}{\numberline {6.1}Analysis Strategy}{71}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Signal and Background Modelling}{71}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Event Selection}{72}{subsection.6.1.2}
-\contentsline {subsubsection}{Higher Level Triggering and DataSet}{72}{section*.47}
-\contentsline {subsection}{\numberline {6.1.3}Background Estimation}{72}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Efficiency and Systematics Studies}{72}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Limit Setting}{72}{section.6.2}
-\contentsline {chapter}{\numberline {7}Results and Interpretation}{73}{chapter.7}
-\contentsline {chapter}{\numberline {8}Future Work}{75}{chapter.8}
-\contentsline {section}{\numberline {8.1}Beam Halo Monitoring (BHM)}{75}{section.8.1}
-\contentsline {section}{\numberline {8.2}HCAL Upgrade-Back End Electronics}{75}{section.8.2}
-\contentsline {chapter}{\numberline {9}Conclusion}{76}{chapter.9}
-\contentsline {chapter}{References}{77}{chapter*.48}
-\contentsline {chapter}{\appnumberline {A}Glossary and Acronyms}{81}{appendix.A}
-\contentsline {section}{\numberline {A.1}Glossary}{81}{section.A.1}
-\contentsline {section}{\numberline {A.2}Acronyms}{81}{section.A.2}
+\contentsline {subsubsection}{Electromagnetic Calorimeter}{57}{section*.41}
+\contentsline {subsubsection}{Hadronic Calorimeter}{60}{section*.42}
+\contentsline {subsection}{\numberline {3.2.4}Muon Chambers}{61}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Particle Detection}{62}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Triggering}{63}{subsection.3.2.6}
+\contentsline {chapter}{\numberline {4}Timing Reconstruction and Calibration}{64}{chapter.4}
+\contentsline {subsection}{\numberline {4.0.7}Electromagnetic Calorimeter Readout Chain}{65}{subsection.4.0.7}
+\contentsline {subsection}{\numberline {4.0.8}Timing Extraction}{65}{subsection.4.0.8}
+\contentsline {subsection}{\numberline {4.0.9}Timing Calibration Procedure}{65}{subsection.4.0.9}
+\contentsline {subsection}{\numberline {4.0.10}Electromagnetic Calorimeter Timing Performance}{65}{subsection.4.0.10}
+\contentsline {chapter}{\numberline {5}Event Reconstruction and Particle Identification}{68}{chapter.5}
+\contentsline {section}{\numberline {5.1}Particle Reconstruction}{68}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Supercluster Reconstruction}{68}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Photon or Electron Reconstruction}{69}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Jet Reconstruction}{70}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Missing Transverse Energy}{70}{subsection.5.1.4}
+\contentsline {section}{\numberline {5.2}Using Timing in Particle Identification}{70}{section.5.2}
+\contentsline {section}{\numberline {5.3}Anomalous Signals}{70}{section.5.3}
+\contentsline {chapter}{\numberline {6}Analysis Strategy for Long-Lived Particles }{74}{chapter.6}
+\contentsline {section}{\numberline {6.1}Analysis Strategy}{74}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Signal and Background Modelling}{74}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Event Selection}{75}{subsection.6.1.2}
+\contentsline {subsubsection}{Higher Level Triggering and DataSet}{75}{section*.43}
+\contentsline {subsection}{\numberline {6.1.3}Background Estimation}{75}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Efficiency and Systematics Studies}{75}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Limit Setting}{75}{section.6.2}
+\contentsline {chapter}{\numberline {7}Results and Interpretation}{76}{chapter.7}
+\contentsline {chapter}{\numberline {8}Future Work}{78}{chapter.8}
+\contentsline {section}{\numberline {8.1}Beam Halo Monitoring (BHM)}{78}{section.8.1}
+\contentsline {section}{\numberline {8.2}HCAL Upgrade-Back End Electronics}{78}{section.8.2}
+\contentsline {chapter}{\numberline {9}Conclusion}{79}{chapter.9}
+\contentsline {chapter}{References}{80}{chapter*.44}
+\contentsline {chapter}{\appnumberline {A}Glossary and Acronyms}{84}{appendix.A}
+\contentsline {section}{\numberline {A.1}Glossary}{84}{section.A.1}
+\contentsline {section}{\numberline {A.2}Acronyms}{84}{section.A.2}

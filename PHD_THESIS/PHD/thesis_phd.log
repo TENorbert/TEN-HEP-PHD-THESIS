@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.21)  5 JUL 2014 09:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.21)  19 JUL 2014 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,7 +910,11 @@ Abstract
 \tf@toc=\write5
 \openout5 = `thesis_phd.toc'.
 
- [6] (./thesis_phd.lot)
+ [6] (./thesis_phd.lot
+
+LaTeX Warning: Citation `Time' on page vii undefined on input line 5.
+
+)
 \tf@lot=\write6
 \openout6 = `thesis_phd.lot'.
 
@@ -923,19 +927,16 @@ Overfull \hbox (9.03448pt too wide) in paragraph at lines 6--6
  []
 
 
-Overfull \hbox (44.78812pt too wide) in paragraph at lines 11--11
+Overfull \hbox (44.78812pt too wide) in paragraph at lines 10--10
  [][] [][]\OT1/cmr/m/n/10.95 Longitudinal Pro-file taken with LDM de-tec-tor sh
 ow-ing def-i-ni-tion of Ghost/Satellite 
  []
 
 
-Overfull \hbox (10.767pt too wide) in paragraph at lines 12--12
+Overfull \hbox (10.767pt too wide) in paragraph at lines 11--11
  \OT1/cmr/m/n/10.95 (Right) Tim-ing of Clus-ters in the CMS end-cap calorime-te
 rs for fill 1089:Left: 
  []
-
-
-LaTeX Warning: Citation `Time' on page viii undefined on input line 14.
 
 [8
 
@@ -1054,7 +1055,7 @@ Overfull \hbox (3.99918pt too wide) in paragraph at lines 510--512
 he ex-is-tence of first, light gravitinos--
  []
 
-<THESISPLOTS/SinglePhoton_gluino.pdf, id=674, 876.27374pt x 410.53375pt>
+<THESISPLOTS/SinglePhoton_gluino.pdf, id=699, 876.27374pt x 410.53375pt>
 File: THESISPLOTS/SinglePhoton_gluino.pdf Graphic file (type pdf)
 
 <use THESISPLOTS/SinglePhoton_gluino.pdf>
@@ -1062,7 +1063,7 @@ Package pdftex.def Info: THESISPLOTS/SinglePhoton_gluino.pdf used on input line
  516.
 (pdftex.def)             Requested size: 180.67499pt x 84.6423pt.
 
-<THESISPLOTS/SinglePhoton_squark.pdf, id=675, 773.89125pt x 410.53375pt>
+<THESISPLOTS/SinglePhoton_squark.pdf, id=700, 773.89125pt x 410.53375pt>
 File: THESISPLOTS/SinglePhoton_squark.pdf Graphic file (type pdf)
 
 <use THESISPLOTS/SinglePhoton_squark.pdf>
@@ -1097,7 +1098,7 @@ Package pdftex.def Info: THESISPLOTS/SinglePhoton_squark.pdf used on input line
  571.
 (pdftex.def)             Requested size: 180.67499pt x 95.84276pt.
  [34]
-<THESISPLOTS/Diphoton_gluino.pdf, id=742, 876.27374pt x 406.51875pt>
+<THESISPLOTS/Diphoton_gluino.pdf, id=767, 876.27374pt x 406.51875pt>
 File: THESISPLOTS/Diphoton_gluino.pdf Graphic file (type pdf)
 
 <use THESISPLOTS/Diphoton_gluino.pdf>
@@ -1105,7 +1106,7 @@ Package pdftex.def Info: THESISPLOTS/Diphoton_gluino.pdf used on input line 574
 .
 (pdftex.def)             Requested size: 180.67499pt x 83.8145pt.
 
-<THESISPLOTS/Diphoton_squark.pdf, id=743, 768.8725pt x 406.51875pt>
+<THESISPLOTS/Diphoton_squark.pdf, id=768, 768.8725pt x 406.51875pt>
 File: THESISPLOTS/Diphoton_squark.pdf Graphic file (type pdf)
 
 <use THESISPLOTS/Diphoton_squark.pdf>
@@ -1123,14 +1124,14 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `NKINE' on page 36 undefined on input line 604.
 
 
-<THESISPLOTS/GMSB-SPS8-MODEL-Neutralinio-Pt.png, id=779, 798.985pt x 774.895pt>
+<THESISPLOTS/GMSB-SPS8-MODEL-Neutralinio-Pt.png, id=804, 798.985pt x 774.895pt>
 File: THESISPLOTS/GMSB-SPS8-MODEL-Neutralinio-Pt.png Graphic file (type png)
 <use THESISPLOTS/GMSB-SPS8-MODEL-Neutralinio-Pt.png>
 Package pdftex.def Info: THESISPLOTS/GMSB-SPS8-MODEL-Neutralinio-Pt.png used on
  input line 608.
 (pdftex.def)             Requested size: 239.69734pt x 232.47029pt.
 
-<THESISPLOTS/GMSB-SPS8-MODEL-Neutralino-Proper-DecayLength.png, id=780, 798.985
+<THESISPLOTS/GMSB-SPS8-MODEL-Neutralino-Proper-DecayLength.png, id=805, 798.985
 pt x 774.895pt>
 File: THESISPLOTS/GMSB-SPS8-MODEL-Neutralino-Proper-DecayLength.png Graphic fil
 e (type png)
@@ -1144,7 +1145,7 @@ Overfull \hbox (42.68944pt too wide) in paragraph at lines 608--608
  [] 
  []
 
-<THESISPLOTS/GMSB-SPS8-MODEL-Photon-Pt.png, id=781, 798.985pt x 774.895pt>
+<THESISPLOTS/GMSB-SPS8-MODEL-Photon-Pt.png, id=806, 798.985pt x 774.895pt>
 File: THESISPLOTS/GMSB-SPS8-MODEL-Photon-Pt.png Graphic file (type png)
 
 <use THESISPLOTS/GMSB-SPS8-MODEL-Photon-Pt.png>
@@ -1152,7 +1153,7 @@ Package pdftex.def Info: THESISPLOTS/GMSB-SPS8-MODEL-Photon-Pt.png used on inpu
 t line 611.
 (pdftex.def)             Requested size: 239.69734pt x 232.47029pt.
 
-<THESISPLOTS/GMSB-SPS8-MODEL-Photon-Arrival-Time.png, id=782, 798.985pt x 774.8
+<THESISPLOTS/GMSB-SPS8-MODEL-Photon-Arrival-Time.png, id=807, 798.985pt x 774.8
 95pt>
 File: THESISPLOTS/GMSB-SPS8-MODEL-Photon-Arrival-Time.png Graphic file (type pn
 g)
@@ -1193,7 +1194,7 @@ LaTeX Warning: Citation `ATLAS7TeV' on page 40 undefined on input line 683.
 
 LaTeX Warning: Citation `SPS8' on page 40 undefined on input line 683.
 
-<THESISPLOTS/ATLAS_Upper_Limit.png, id=808, 1138.2525pt x 821.0675pt>
+<THESISPLOTS/ATLAS_Upper_Limit.png, id=833, 1138.2525pt x 821.0675pt>
 File: THESISPLOTS/ATLAS_Upper_Limit.png Graphic file (type png)
 
 <use THESISPLOTS/ATLAS_Upper_Limit.png>
@@ -1201,7 +1202,7 @@ Package pdftex.def Info: THESISPLOTS/ATLAS_Upper_Limit.png used on input line 6
 90.
 (pdftex.def)             Requested size: 216.80864pt x 173.44406pt.
 
-<THESISPLOTS/2D_exclusion.pdf, id=810, 569.12625pt x 467.7475pt>
+<THESISPLOTS/2D_exclusion.pdf, id=835, 569.12625pt x 467.7475pt>
 File: THESISPLOTS/2D_exclusion.pdf Graphic file (type pdf)
 
 <use THESISPLOTS/2D_exclusion.pdf>
@@ -1231,7 +1232,7 @@ LaTeX Warning: Citation `CMSD' on page 41 undefined on input line 5.
 
 
 
-] <THESISPLOTS/The_LHC.png, id=866, 618.81187pt x 373.395pt>
+] <THESISPLOTS/The_LHC.png, id=892, 618.81187pt x 373.395pt>
 File: THESISPLOTS/The_LHC.png Graphic file (type png)
 
 <use THESISPLOTS/The_LHC.png>
@@ -1266,12 +1267,12 @@ See the caption package documentation for explanation.
 
 
 Overfull \hbox (61.41428pt too wide) in paragraph at lines 91--122
- [][] 
+ [] 
  []
 
 [47]
 </home/tensr/Dropbox/PHD_Thesis_HEP/PHD_THESIS/PHD/THESISPLOTS/Ghost-Satellite-
-Bunches-LDM.png, id=913, 570.63188pt x 308.65312pt>
+Bunches-LDM.png, id=938, 570.63188pt x 308.65312pt>
 File: /home/tensr/Dropbox/PHD_Thesis_HEP/PHD_THESIS/PHD/THESISPLOTS/Ghost-Satel
 lite-Bunches-LDM.png Graphic file (type png)
 
@@ -1291,7 +1292,7 @@ LaTeX Warning: Citation `ATLAST-GHOST' on page 48 undefined on input line 137.
 
 [48 </home/tensr/Dropbox/PHD_Thesis_HEP/PHD_THESIS/PHD/THESISPLOTS/Ghost-Satell
 ite-Bunches-LDM.png>]
-<THESISPLOTS/ATLAS-LDM-GHOST.png, id=919, 610.53094pt x 432.86719pt>
+<THESISPLOTS/ATLAS-LDM-GHOST.png, id=944, 610.53094pt x 432.86719pt>
 File: THESISPLOTS/ATLAS-LDM-GHOST.png Graphic file (type png)
 
 <use THESISPLOTS/ATLAS-LDM-GHOST.png>
@@ -1299,7 +1300,7 @@ Package pdftex.def Info: THESISPLOTS/ATLAS-LDM-GHOST.png used on input line 142
 .
 (pdftex.def)             Requested size: 180.67334pt x 180.67351pt.
 
-<THESISPLOTS/CMS-Ghost-Profile.png, id=920, 597.73312pt x 290.58563pt>
+<THESISPLOTS/CMS-Ghost-Profile.png, id=945, 597.73312pt x 290.58563pt>
 File: THESISPLOTS/CMS-Ghost-Profile.png Graphic file (type png)
 
 <use THESISPLOTS/CMS-Ghost-Profile.png>
@@ -1323,122 +1324,192 @@ Overfull \hbox (16.33023pt too wide) in paragraph at lines 152--153
 /cmr/m/it/10.95 Ma-chine In-duced Back-ground \OT1/cmr/m/n/10.95 (MIB)
  []
 
-[50] <THESISPLOTS/CMS-Detector.png, id=935, 642.14906pt x 411.78844pt>
+[50] <THESISPLOTS/CMS-Detector.png, id=960, 642.14906pt x 411.78844pt>
 File: THESISPLOTS/CMS-Detector.png Graphic file (type png)
 
 <use THESISPLOTS/CMS-Detector.png>
-Package pdftex.def Info: THESISPLOTS/CMS-Detector.png used on input line 164.
+Package pdftex.def Info: THESISPLOTS/CMS-Detector.png used on input line 163.
 (pdftex.def)             Requested size: 385.2924pt x 247.07495pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 165.
+(caption)                particular \caption on input line 164.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 182--182
+Underfull \hbox (badness 2376) in paragraph at lines 180--180
 []$\OML/cmm/m/it/10.95 ^^[[]=p[] \OMS/cmsy/m/n/10.95 ^^Y \OT1/cmr/m/n/10.95 1\O
 ML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 5 \OMS/cmsy/m/n/10.95 ^^B
  []
 
 
-Overfull \hbox (5.83458pt too wide) in paragraph at lines 182--183
+Overfull \hbox (5.83458pt too wide) in paragraph at lines 180--181
 [][]| 
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 184--184
+Underfull \hbox (badness 1024) in paragraph at lines 182--182
 []$\OML/cmm/m/it/10.95 ^^[=E \OMS/cmsy/m/n/10.95 ^^Y \OT1/cmr/m/n/10.95 3%\OML/
 cmm/m/it/10.95 =E \OT1/cmr/m/n/10.95 +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 []\OT1/cmr/m/n/10.95 Solenoid + Re-turn
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 [][]
  []
 
 
-Overfull \hbox (5.3784pt too wide) in paragraph at lines 193--194
+Overfull \hbox (5.3784pt too wide) in paragraph at lines 191--192
 \OT1/cmr/m/n/10.95 +[](L2+L3)| 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 197.
+(caption)                particular \caption on input line 195.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (6.78766pt too wide) in paragraph at lines 176--197
- [][] 
+Overfull \hbox (6.78766pt too wide) in paragraph at lines 174--195
+ [] 
  []
 
 
-LaTeX Warning: Citation `Time' on page 51 undefined on input line 197.
-
-
-LaTeX Warning: Citation `Time' on page 51 undefined on input line 197.
+LaTeX Warning: Citation `Time' on page 51 undefined on input line 195.
 
 [51 <./THESISPLOTS/CMS-Detector.png>]
-<THESISPLOTS/cms-Dect-Cord.png, id=942, 770.88pt x 555.07375pt>
-File: THESISPLOTS/cms-Dect-Cord.png Graphic file (type png)
 
-<use THESISPLOTS/cms-Dect-Cord.png>
-Package pdftex.def Info: THESISPLOTS/cms-Dect-Cord.png used on input line 204.
-(pdftex.def)             Requested size: 308.34654pt x 222.02556pt.
+LaTeX Warning: Citation `Time' on page 52 undefined on input line 195.
+
+[52]
+Package epstopdf Info: Source file: <THESISPLOTS/CMS_DETECTOR.eps>
+(epstopdf)                    date: 2014-07-07 13:49:13
+(epstopdf)                    size: 334176 bytes
+(epstopdf)             Output file: <THESISPLOTS/CMS_DETECTOR-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2014-07-07 13:59:09
+(epstopdf)                    size: 139572 bytes
+(epstopdf)             Command: <repstopdf --outfile=THESISPLOTS/CMS_DETECTOR-e
+ps-converted-to.pdf THESISPLOTS/CMS_DETECTOR.eps>
+(epstopdf)             \includegraphics on input line 202.
+Package epstopdf Info: Output file is already uptodate.
+
+<THESISPLOTS/CMS_DETECTOR-eps-converted-to.pdf, id=971, 646.415pt x 396.48125pt
+>
+File: THESISPLOTS/CMS_DETECTOR-eps-converted-to.pdf Graphic file (type pdf)
+ <use THESISPLOTS/CMS_DETECTOR-eps-converted-to.pdf>
+Package pdftex.def Info: THESISPLOTS/CMS_DETECTOR-eps-converted-to.pdf used on 
+input line 202.
+(pdftex.def)             Requested size: 387.85199pt x 237.89058pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 205.
+(caption)                particular \caption on input line 203.
 See the caption package documentation for explanation.
 
-[52] [53 <./THESISPLOTS/cms-Dect-Cord.png>] [54] [55]
-Overfull \hbox (25.66205pt too wide) in paragraph at lines 290--318
-\OT1/cmr/m/n/10.95 crys-tals. At the lon-gi-tu-di-nal end of each crys-tal is c
-ou-pled two Avalanche-Photodiodes(APDs)
+[53 <./THESISPLOTS/CMS_DETECTOR-eps-converted-to.pdf>]
+<THESISPLOTS/Tracker.pdf, id=979, 482.38351pt x 241.9226pt>
+File: THESISPLOTS/Tracker.pdf Graphic file (type pdf)
+
+<use THESISPLOTS/Tracker.pdf>
+Package pdftex.def Info: THESISPLOTS/Tracker.pdf used on input line 214.
+(pdftex.def)             Requested size: 289.43234pt x 145.15466pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 215.
+See the caption package documentation for explanation.
+
+[54 <./THESISPLOTS/Tracker.pdf>]
+Overfull \hbox (0.75978pt too wide) in paragraph at lines 224--230
+\OT1/cmr/m/n/10.95 CMS sil-i-con in-ner tracker sur-round-ing the pixel de-tec-
+tor al-lows for the tracks of promptly
  []
 
-[56] [57]
-Overfull \hbox (15.6703pt too wide) in paragraph at lines 386--406
-\OT1/cmr/m/n/10.95 This in-ho-moge-nous de-sign gives the HCAL, an en-ergy res-
-o-lu-tion of $[]$
+[55]
+Package epstopdf Info: Source file: <THESISPLOTS/ECAL-HCAL.eps>
+(epstopdf)                    date: 2014-07-07 13:58:15
+(epstopdf)                    size: 21903 bytes
+(epstopdf)             Output file: <THESISPLOTS/ECAL-HCAL-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2014-07-07 14:50:50
+(epstopdf)                    size: 11631 bytes
+(epstopdf)             Command: <repstopdf --outfile=THESISPLOTS/ECAL-HCAL-eps-
+converted-to.pdf THESISPLOTS/ECAL-HCAL.eps>
+(epstopdf)             \includegraphics on input line 237.
+Package epstopdf Info: Output file is already uptodate.
+
+<THESISPLOTS/ECAL-HCAL-eps-converted-to.pdf, id=1007, 440.64626pt x 249.93375pt
+>
+File: THESISPLOTS/ECAL-HCAL-eps-converted-to.pdf Graphic file (type pdf)
+ <use THESISPLOTS/ECAL-HCAL-eps-converted-to.pdf>
+Package pdftex.def Info: THESISPLOTS/ECAL-HCAL-eps-converted-to.pdf used on inp
+ut line 237.
+(pdftex.def)             Requested size: 220.32259pt x 124.96657pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 238.
+See the caption package documentation for explanation.
+
+[56] [57 <./THESISPLOTS/ECAL-HCAL-eps-converted-to.pdf>]
+Overfull \hbox (16.20206pt too wide) in paragraph at lines 248--259
+\OT1/cmr/m/n/10.95 The end-cap sec-tor oc-cupy a pseudo-rapidity re-gion of $1\
+OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 479 \OML/cmm/m/it/10.95 < \OMS/cmsy/m/n/
+10.95 j\OML/cmm/m/it/10.95 ^^Q\OMS/cmsy/m/n/10.95 j \OML/cmm/m/it/10.95 < \OT1/
+cmr/m/n/10.95 3\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 0$ with Preshower (\OT1/
+cmr/m/sc/10.95 ES\OT1/cmr/m/n/10.95 )
  []
 
-[58] [59] <THESISPLOTS/CMS_Int_View.png, id=994, 656.4525pt x 368.37625pt>
+[58] <THESISPLOTS/CMS-ECAL-EB-EE.png, id=1024, 514.92375pt x 297.36093pt>
+File: THESISPLOTS/CMS-ECAL-EB-EE.png Graphic file (type png)
+
+<use THESISPLOTS/CMS-ECAL-EB-EE.png>
+Package pdftex.def Info: THESISPLOTS/CMS-ECAL-EB-EE.png used on input line 262.
+
+(pdftex.def)             Requested size: 308.95662pt x 178.41792pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 265.
+See the caption package documentation for explanation.
+
+[59 <./THESISPLOTS/CMS-ECAL-EB-EE.png>] [60] [61]
+<THESISPLOTS/CMS_Int_View.png, id=1040, 656.4525pt x 368.37625pt>
 File: THESISPLOTS/CMS_Int_View.png Graphic file (type png)
 
 <use THESISPLOTS/CMS_Int_View.png>
-Package pdftex.def Info: THESISPLOTS/CMS_Int_View.png used on input line 456.
+Package pdftex.def Info: THESISPLOTS/CMS_Int_View.png used on input line 314.
 (pdftex.def)             Requested size: 393.87454pt x 221.02744pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 457.
+(caption)                particular \caption on input line 315.
 See the caption package documentation for explanation.
 
-[60 <./THESISPLOTS/CMS_Int_View.png (PNG copy)>]
-<THESISPLOTS/CMS_Slice.png, id=1000, 995.72pt x 511.9125pt>
+[62 <./THESISPLOTS/CMS_Int_View.png (PNG copy)>]
+<THESISPLOTS/CMS_Slice.png, id=1046, 995.72pt x 511.9125pt>
 File: THESISPLOTS/CMS_Slice.png Graphic file (type png)
 
 <use THESISPLOTS/CMS_Slice.png>
-Package pdftex.def Info: THESISPLOTS/CMS_Slice.png used on input line 469.
+Package pdftex.def Info: THESISPLOTS/CMS_Slice.png used on input line 325.
 (pdftex.def)             Requested size: 398.28094pt x 204.76137pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 470.
+(caption)                particular \caption on input line 326.
 See the caption package documentation for explanation.
 
-) [61 <./THESISPLOTS/CMS_Slice.png>]
+) [63 <./THESISPLOTS/CMS_Slice.png>]
 \openout2 = `simulation.aux'.
 
  (./simulation.tex
 Chapter 4.
-[62
+[64
 
 
 
@@ -1447,14 +1518,14 @@ Chapter 4.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 18.
 
-[63]
+[65]
 Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
 
 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-seed.pn
-g, id=1020, 1100.11pt x 674.52pt>
+g, id=1065, 1100.11pt x 674.52pt>
 File: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-se
 ed.png Graphic file (type png)
 
@@ -1465,7 +1536,7 @@ TS/EB-EB-Time-of-seed.png used on input line 59.
 (pdftex.def)             Requested size: 216.81pt x 132.93578pt.
 
 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-Time-of-Seed.pn
-g, id=1021, 1100.11pt x 674.52pt>
+g, id=1066, 1100.11pt x 674.52pt>
 File: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-Time-of-Se
 ed.png Graphic file (type png)
 
@@ -1485,73 +1556,73 @@ Overfull \hbox (32.66753pt too wide) in paragraph at lines 59--60
  [] 
  []
 
-[64 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-see
+[66 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-see
 d.png> </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-Time-of-
 Seed.png>]
 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-differ
-ence-of-seed.png, id=1031, 1100.11pt x 674.52pt>
+ence-of-seed.png, id=1076, 1100.11pt x 674.52pt>
 File: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-d
 ifference-of-seed.png Graphic file (type png)
 
 <use /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-di
 fference-of-seed.png>
 Package pdftex.def Info: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLO
-TS/EB-EB-TOF-Corr-difference-of-seed.png used on input line 91.
+TS/EB-EB-TOF-Corr-difference-of-seed.png used on input line 68.
 (pdftex.def)             Requested size: 216.81pt x 132.93578pt.
 
 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-TOF-Corr-differ
-ence-of-seed.png, id=1032, 1100.11pt x 674.52pt>
+ence-of-seed.png, id=1077, 1100.11pt x 674.52pt>
 File: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-TOF-Corr-d
 ifference-of-seed.png Graphic file (type png)
 
 <use /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-TOF-Corr-di
 fference-of-seed.png>
 Package pdftex.def Info: /home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLO
-TS/EE-EE-TOF-Corr-difference-of-seed.png used on input line 91.
+TS/EE-EE-TOF-Corr-difference-of-seed.png used on input line 68.
 (pdftex.def)             Requested size: 216.81pt x 132.93578pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 92.
+(caption)                particular \caption on input line 69.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (32.66753pt too wide) in paragraph at lines 91--92
+Overfull \hbox (32.66753pt too wide) in paragraph at lines 68--69
  [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 102.
+(caption)                particular \caption on input line 80.
 See the caption package documentation for explanation.
 
-) [65 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-
+) [67 </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-
 difference-of-seed.png> </home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLO
 TS/EE-EE-TOF-Corr-difference-of-seed.png>]
 \openout2 = `reconstruction.aux'.
 
  (./reconstruction.tex
 Chapter 5.
-[66
+[68
 
 
 
-] [67] [68] [69]) [70]
+] [69] [70] [71]) [72] [73]
 \openout2 = `data_set.aux'.
 
  (./data_set.tex
 Chapter 6.
-) [71
+) [74
 
 
 
-] [72]
+] [75]
 \openout2 = `event_selection.aux'.
 
  (./event_selection.tex
 Chapter 7.
 
-<THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png, id=1073, 899.36pt x 875
+<THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png, id=1124, 899.36pt x 875
 .27pt>
 File: THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png Graphic file (type 
 png)
@@ -1565,17 +1636,17 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 15.
 See the caption package documentation for explanation.
 
-[73
+[76
 
 
 
-]) [74 <./THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png>]
+]) [77 <./THESISPLOTS/XsecTimesBR_Uplimit_Asymptotic_65Toys.png>]
 \openout2 = `analysis.aux'.
 
 
 (./analysis.tex
 Chapter 8.
-) [75
+) [78
 
 
 
@@ -1584,14 +1655,14 @@ Chapter 8.
 
  (./conclusion.tex
 Chapter 9.
-) [76
+) [79
 
 
 
 ]
 \openout2 = `thesis.aux'.
 
- (./thesis.tex [77
+ (./thesis.tex [80
 
 
 
@@ -1604,7 +1675,7 @@ Underfull \hbox (badness 1776) in paragraph at lines 30--32
 Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
-[78]
+[81]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ³ in font cmr10!
 
@@ -1619,7 +1690,7 @@ Missing character: There is no œ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
-[79]) [80pdfTeX warning (ext4): destination with the same identifier (name{cite
+[82]) [83pdfTeX warning (ext4): destination with the same identifier (name{cite
 .MET}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1676,7 +1747,7 @@ Overfull \hbox (24.0pt too wide) in alignment at lines 57--61
 [] []
  []
 
-) [81
+) [84
 
 
 
@@ -1690,7 +1761,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
 Package rerunfilecheck Info: File `thesis_phd.out' has not changed.
-(rerunfilecheck)             Checksum: 0005A2F5C287AA954920D9A327D38AEA;4252.
+(rerunfilecheck)             Checksum: 280C917F056E7C9D4E15645610115182;4524.
 
 
 LaTeX Warning: There were undefined references.
@@ -1706,10 +1777,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
 ### bottom level
 (\end occurred when \ifnum on line 39 was incomplete) 
 Here is how much of TeX's memory you used:
- 21040 strings out of 493307
- 361401 string characters out of 6139905
- 454333 words of memory out of 5000000
- 23622 multiletter control sequences out of 15000+600000
+ 21072 strings out of 493307
+ 362119 string characters out of 6139905
+ 455202 words of memory out of 5000000
+ 23645 multiletter control sequences out of 15000+600000
  22092 words of font info for 82 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  55i,14n,54p,2241b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1738,10 +1809,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on thesis_phd.pdf (93 pages, 1505311 bytes).
+Output written on thesis_phd.pdf (96 pages, 1880643 bytes).
 PDF statistics:
- 1296 PDF objects out of 1440 (max. 8388607)
- 1097 compressed objects within 11 object streams
- 351 named destinations out of 1000 (max. 500000)
- 608 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1349 PDF objects out of 1440 (max. 8388607)
+ 1141 compressed objects within 12 object streams
+ 356 named destinations out of 1000 (max. 500000)
+ 647 words of extra memory for PDF output out of 10000 (max. 10000000)
 
