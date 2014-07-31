@@ -21,7 +21,7 @@ The ECAL electronics readout system described in detailed in \cite{ECALREADOUT} 
 Both electronics system are connected by a 100~m optical fibre links. A simple picture of the readout chain is shown in fig{FIXME:Fig readout Chain}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The on-detector electronics reads a trigger tower consisting of $5\times5$ crystals in $\eta \times \phi$ in barrel~(EB) and \textit{supercrystals} in endcap~(EE). Five Very Front End~(VFE) boards ( reading out  data from 5 crystals each), one Front End boad~(FE) two~(EB) and six~(EE) Giga Optical Hybrids~(GOH), one Low Voltage Regulator~(LVR) board and a Mother Board~(MB) make up the complete on-detector electronics. Electrical Signals from the APDs~(EB) are accepted by the VFE which is equipped with a Multi Gain Pre-Amplifier~(MGPA), a 12-bit Analogue to Digital Converter~(ADC) and a buffer. The MGPA an Application Specific Intergrated Circuit~(ASIC) developed in 0.25~$\mu$m technology, pre-amplifiers, shapes and then amplifies the signals through three amplifiers with gains of 1, 6 and 12. For VPT~(EE), these signals first pass through a High Voltage~(HV)filter card which acts as a moderator separating very high voltages caused by the increase radiation in the EE. The full scale of the APDs and VPTs are 60~pC and 12.8~pC corresponding to $\approx$ 1.5~TeV and 1.6-3.1~ TeV respectively. The full shaping of the signal takes about 40~ns. The noise for gain 12 is about 8000$e^{-}$ for APD configuration and about 4000$e^{-}$ for VPT configuration. 
+The on-detector electronics reads a trigger tower consisting of $5\times5$ crystals in $\eta \times \phi$ in barrel~(EB) and \textit{supercrystals} in endcap~(EE). Five Very Front End~(VFE) boards (reading out data from 5 crystals each), one Front End boad~(FE) two~(EB) and six~(EE) Giga Optical Hybrids~(GOH), one Low Voltage Regulator~(LVR) board and a Mother Board~(MB) make up the complete on-detector electronics. Electrical Signals from the APDs~(EB) are accepted by the VFE which is equipped with a Multi Gain Pre-Amplifier~(MGPA), a 12-bit Analogue to Digital Converter~(ADC) and a buffer. The MGPA an Application Specific Intergrated Circuit~(ASIC) developed in 0.25~$\mu$m technology, pre-amplifiers, shapes and then amplifies the signals through three amplifiers with gains of 1, 6 and 12. For VPT~(EE), these signals first pass through a High Voltage~(HV)filter card which acts as a moderator separating very high voltages caused by the increase radiation in the EE. The full scale of the APDs and VPTs are 60~pC and 12.8~pC corresponding to $\approx$ 1.5~TeV and 1.6-3.1~ TeV respectively. The full shaping of the signal takes about 40~ns. The noise for gain 12 is about 8000$e^{-}$ for APD configuration and about 4000$e^{-}$ for VPT configuration. 
 The 3 analog output signals of the MPGA are digitized in parallel by the multichannel 40~MHz, 12-bit ADC. This ADCs have an effective number of bits of 10.9. The highest non-saturated signal is selected as the output signal and reported as 12 bits of the corresponding ADC with 2 bits coding the ADC number. It is possible, that when the signal is saturated and wrong signal amplitude can be produced leading to am amplitude dependence of the readout time. This effect has been studied for Gain 1 and 6 transitions and the relevant corrections factors of timing produced and validated.
 A schematics picture of the showing the readout chain of the FE with its MPGA and ADCs showing the shaping and digitization process can be seen in figure \eqref{readout}.
 
@@ -39,25 +39,111 @@ The Off-detector electronics consist of different types of electronic boards~(th
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Timing Extraction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The MGPA of the VFE amplifies and shapes an analogue signal from the APD/VPT of a single crystal producing a typical signal pulse as seen in figure \eqref{pulse}. 
 
-
-The digital  filtering~(DF) technique is used to reconstruct the amplitude collected by the \pb crystals.
-\begin{center}\label{CMSECAL}
+\begin{center}\label{pulse}
 \centering
 \mbox{\includegraphics[scale=0.6]{THESISPLOTS/Time_Amplitude_Profile.png}}
 %\mbox{\includegraphics[scale=0.2]{THESISPLOTS/CMS-ECAL.png}}
 %\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
 \captionof{figure}{Typical pulse shape of a given signal showing signal amplitude and time.}
-\label{fig:CMSECAL}
+\label{fig:pulse}
 \end{center}
+
+This pulse is digitised into 10 samples by the ADC for data storage purposes. The pulse's amplitude  is a measure of the energy deposited in the crystal while the time from the ADC clock with a sampling frequency of 40~MHz for 10 samples is used to extract the arrival time of the physics object depositing its energy unto the crystal. The value \textbf{P} is known as the pedestal or noise read as ADC values in the absence of any signal. Using the 10 samples, a timing algorithm is employed to extract the time of arrival of particles to the ECAL. The goal of this algorithm is to use the maximum amplitude value of the pulse $A_{MAX}$, and extract its corresponding maximum value of the ADC time $A_{MAX}$ as the time of arrival of the physics object to the crystal. Thus, ECAL timing reconstruction is defined as: Using the 10 samples of the pulse amplitude to measure $T_{MAX}$. Obtaining the true $A_{MAX}$ is performed through an energy reconstruction algorithm. Extracting the arrival time is thus a matter of comparing the pulse shape obtained using the 10 samples of a scintillating channel's pulse to that of a reference shape.
+This reference shape is obtained from experimental measurements using Testbeam or synchronous LHC events. Figure \label{amplVsTmax}(a) shows a distribution of the amplitude $A$ as a function of time rather plotted for convenience as $A/A_{MAX}$ on the vertical or $y$-axis and $T - T_{MAX}$ on the horizontal or $x$-axis. $T$ is the time and $T_{MAX}$ is defined as the time when the  pulse reaches its maximum value, $A_{MAX}$ 
+
+\begin{center}\label{amplVsTmax}
+\centering
+\mbox{\includegraphics[scale=0.45]{THESISPLOTS/AmplitudeVsTMax.png}} \quad
+\mbox{\includegraphics[scale=0.45]{THESISPLOTS/TMaxPhaseVsRatio.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\captionof{figure}{left: A measured ECAL pulse shape for each channel. Right: $T - T_{MAX}$ Vs $ R(T)$ showing the distribution of $T(R)$. Solid line is reference shape or shape from testbeam while dots correspond to a 10 discrete samples corresponding to signal from a single event in a single channel or crystal. }
+\label{fig:amplVsTmax}
+\end{center}
+
+Performing an analytical fit to compare the reference pulse shape to that from the 10 samples on the $A(T)$ distribution to obtain $A_{MAX}$ and $T_{MAX}$ is rather cumbersome and technically in efficient, as the amplitude of each sample depends on the pulse shape, the $A_{MAX}$ value and also the relative position of $T_{MAX}$ between time samples. This phase is referred to as "\textit{$T_{MAX}$ phase}".
+Thus, using a new variable defined as $R(T) = A(T)/ A(T + 25~\mbox{ns})$ and instead perform an analytical fit on the distribution of $T - T_{MAX}$ Vs $ R(T)$. This  $T(R)$ distribution is independent on $A_{MAX}$ and can be very well described by a polynomial of order 7. A distribution of $T(R)$ is shown in figure \eqref{amplVsTmax}(b) with both the four to five samples(dots) obtained from the ratio $R_{i} = A_{i}/A_{i+1}$ from each consecutive pair of samples and the reference pulse shape(continuous line). Thus each point $R_{i}$ gives a quick accurate measurement of $T_{MAX,i} = T_{i} - T(R_{i})$. The uncertainty, $\sigma_{T,i}$, on each measurement is a production of the derivative of the function $T(R)$ and the uncertainty on the value of $R_{i}$. The uncertainty on the value of $R_{i}$ depends on three separate uncertainties: the noise fluctuation, $\sigma_{n}$ of each sample, the uncertainty in the estimation of the pedestal value which is always subtracted from the measured value and the truncation during 12-bit digitization. These uncertainties are uncorrelated and can thus be added in quadrature.
+The reconstructed time and its error of a hit(fraction of energy deposited on a single crystal) is determine using the following equations:
+
+
+\begin{equation}
+\displaystyle{T_{MAX} = \frac{\sum \frac{T_{MAX,i}}{\sigma^{2}_{i}}}{\sum \frac{1}{\sigma^{2}_{i}}}} \quad ; \quad\quad
+\displaystyle{\frac{1}{\sigma^{2}_{T}} =  \sum \frac{1}{\sigma^{2}_{i}} }
+\end{equation}
+
+where the sum is over all the 4 or 5 $R_{i}$ ratios and the assumption is that the weights are uncorrelated. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Timing Resolution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using the reconstructed timing for each channel, We can measure the timing resolution for ECAL.
+First, the timing resolution for ECAL can be parametrised and expressed as a sum in quadrature ~(uncorrelated) of three major terms accounting for the uncertainties in the timing measurement. These three contributions are: First, the noise~($N$) resulting from contributions from electronic noise, coherent movement of the baseline and effects due to the fact that in addition to the main or hard proton-proton collision, other soft or less energetic collisions or events are produced known as \textit{pile up}~(PU) effect. Second, the stochastic term~($S$) resulting from fluctuations in the photon collection time because of finite time for \pb scintillation. Finally the constant term~($C$) whose contribution is independent on the energy deposited but rather from effects correlated with the point of shower initiation within the crystal and systematics in the extraction of the time due to different is pulse shape for each channel.
+The equation for the timing resolution can thus be expressed as shown in equation \eqref{TimeRes}
+
+\begin{equation}\label{TimeRes}
+\sigma^{2}(t) = \left(\frac{N\sigma_{n}}{A}\right)^{2} + \left(\frac{S}{\sqrt{A}}\right)^{2} + C^{2}
+\end{equation}
+$A$ is the measured amplitude corresponding to the energy deposited and $\sigma_{n}$ is the intrinsic noise for individual sample with a value of $\approx 42$~MeV and $140$~MeV in the barrel and endcap respectively and $N = 33$~ns measured from Monte carlo simulation studies. Contribution from the stochastic term, ($S$) is considered small, with value of $S < 7.9$~ns$\cdot MeV^{1/2}$.
+\newline
+To measure the timing resolution, a simple experiment was performed in which electron beams with energies between $15$~GeV(GeV = Giga electron volts = $10^{6}$~eV, 1~eV$ = 1.602 \times 10^{-19}$~joules~(J) in energy units) and $250$~GeV was directed unto each crystal in a supermodule. The timing resolution measurement is obtained by extracting from the measured distribution of the difference in timing between two crystals sharing energy from the same electromagnetic shower. The advantage of this approach is that, the contribution from poor synchronisation is less as this synchronisation effects do not affect the spread but rather the average time. However, it is not blind to crystal-to-crystal synchronisation effects.
+Other methods used to study timing resolution is considering the timing difference between two a few group of crystals usually $5\times5$  crystals called basic clusters, between a complete electromagnetic shower or electron or photon.
+
+Using equation \eqref{TimeRes} and neglecting the stochastic term because its contributions are negligible, the timing resolution can be expressed as:
+ 
+ \begin{equation}\label{ResTime}
+ \sigma^{2}(t_{1} - t_{2}) = \left(\frac{N\sigma_{n}}{A_{eff}}\right)^{2} + 2\bar{C}^{2}
+ \end{equation}
+ 
+ where $A_{eff} = A_{1}A_{2}/\sqrt{A^{2}_{1} + A^{2}_{2}}$, $t_{1,2}$ and $A_{1,2}$ correspond to the times and amplitude measured in the two crystals and $\bar{C}$ is their residual contribution.
+Measuring the timing resolution is performed by using the standard deviation of the Gaussian fit of the distribution from each slice in $A_{eff}/\sigma_{n}$ distribution. The $\sigma(t_{1} - t_{2})$ against $A_{eff}/\sigma_{n}$ of the extracted standard deviation of each slice is plotted the resulting distribution fitted to extract the noise and constant term. The results are shown in figure \eqref{FitTimeRes} with the noise factor $N = (35.1 \pm 0.2)$~ns and $\bar{C} = (20 \pm 4)$ ~ns. 
+
+\begin{center}\label{fittimeRes}
+\centering
+\mbox{\includegraphics[scale=0.8]{THESISPLOTS/ECAL_Timing_Resolution.png}}
+%\mbox{\includegraphics[scale=0.45]{THESISPLOTS/TMaxPhaseVsRatio.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\captionof{figure}{Deviation of the timing difference as a function of $A_{eff}/\sigma_{n}$ between two crystals sharing an energy in the same electromagnetic shower obtained during electron testbeam measurements. The single crystal energy scales for barrel~(EB) and endcap~(EE) is overlaid. The fitted results give $N = (35.1 \pm 0.2)$~ns and $\bar{C} = (20 \pm 4)$ ~ns. }
+\label{fig:FitTimeRes}
+\end{center}
+A timing resolution better than $100$~ps for energy values $A_{eff}/\sigma_{n}$ greater than $400$~ADC counts is obtained. This demonstrates that for a perfectly calibrated ECAL crystals and energy deposits of $E > 20$~GeV in the barrel, we can obtain a resolution better than $100$~ps. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Timing Calibration Procedure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The Ecal time is calibrated such that the the time travel by a photon or any highly relativistic  particle  produce at the nominal region of CMS proton-proton collision is on average 0 ns. This ensures that if a particle in detected with a significantly large positive time, then it is either this particle is travelling with a very small velocity (slowly moving particles or small $\beta << 1$ particle or it was produced as the decay product of stopped particle in the detector or it is a particle which is not travelling in a straight line but rather on a curved path to reach the ECAL.
+The timing calibration is performed such that particles travelling along a straight path with speed close to the speed of light or $\beta \approx 1$ produced from proton-proton collisions happening at the CMS luminous region or IP will arrive at the surface of an ECAL crystal  with an average time of 0~ns. This means that if a particle arrives at a crystal with its arrival time significantly and positively large, then it is either because this particle is travelling with a very small velocity (slowly moving particles or  $\beta << 1$ ) or it was produced with a decay path that  significantly deviates from the obvious straight path connecting the arrived at crystal to the IP or it is a particle from the decay of a temporarily stopped particle in the detector.
+The presence of the "$T_{MAX}$ Phase", the difference in pulse shape between each crystal, variation in time of flight by a few nanosecond~(ns) and the different intrinsic delays among channels allow for timing calibration at two separate levels.
+At the level of the front end electronics ~(FE) consisting of $5\times5$ crystals, one is capable of performing an initial internal timing synchronization by adjusting in steps of 1.04~ns among these crystals. Determining these values of adjustments to be made is referred to as \textit{Hardware Synchronization}.
+
+\subsubsection{Offline Timing Calibration}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The purpose of the offline calibration is to provide additive timing adjustments values for each channel measured from reconstructed data to account for global phase shift in timing caused by shifts in CMS clock relative to the LHC bunch crossings and de-synchronizations induced by hardware interventions occurring usually during detector repairs. The global shifts due to drifting in CMS clock relative to LHC bunch crossings can be about 1~ns while that caused by hardware intervention can be about 3~ns. The calibration constants obtained for each crystal or channel are the negative values of the average time measured from the reconstructed hits of each crystals.
+These crystals are  kept in XML files which are then loaded into the online configuration database holding the hardware settings. The calibration procedure is as follows:first identify the existence of a timing shift occurrence using either the CMS or ECAL detector running electronic~(e-Log) book or the CMS or ECAL data acquisition monitoring~(DQM) results. Second, if there is a timing shift, use reconstructed crystals hits or rechits from very recently produced data to measure the calibration constants for each channel. Finally deploy the validated calibration constants in an XML format file into the online configuration database for reprocessing of CMS full datasets to be used for physics analysis.
+This process is repeated over and over until the entire LHC proton-proton collision period each year. At the end of each calibration process, the set of calibration constants developed for the hardware settings within a period of time is referred to as having an \textit{interval of validity or IOVs}. The amount of data used in measuring the timing constants is defined by the amount of event statistics available and covers a particular CMS events run range. During the entire LHC run period of 2011, a total of 17 IOVs were developed while during 2012 LHC run, a total of 44 IOVs were produced. The raw dataset used in producing the calibration constants are mostly ECAL crystals hits from Level-1 triggered events with loosely triggered electromagnetic objects including a photons, electrons and hadrons with larger electromagnetic proportions called \textit{ElectronHad} or \textit{PhotonHad}. These event rechits must pass the following selection criteria: The event time~(an average over its rechits) must be smaller than 5~ns. Event rechits must belong to a basic cluster~(cluster of about $5\times5$ crystals) with transverse energy of atleast 2~GeV. The signal amplitude must not be lower than 26(47) or 100~(in year 2012) ADC counts for rechits in EB(EE)   corresponding to an energy of about 1(3)~GeV respectively. The reconstructed rechit time must be within 5(7)~ns window in EB(EE) respectively and to reduce the presence of anomalous crystal hits, the ratio of the sum of energies of the north, south, east and west neighbouring crystals excluding a crystal with the highest energy to that of the energy of the highest energy crystal must be greater than 5\%  or equivalently $ 1 - E_{4}/E_{1} < 0.95$. This variable is known as the \textit{swiss-cross} variable and it is very useful for rejecting events with anomalous crystal energy deposits. The selected rechits are used to make a timing distribution for each channel and if each channel has at least 10 rechits, the average time measured represents the timing calibration constants or inter-calibration coefficient to be applied for correction while the spread or variance represents the spread in this measurement. For channels with less than 10 valid rechits, the average time of all the other channels is assigned to them as their inter-calibration coefficient. validation of these constants is obtained by applying the negative value of these constants to the same or a different set of events and varying that the measured average over rechits per channel is 0~ns to within the accuracy of the calibration method and event migration in the event sample. The event migration effects are of the order of 10~ps.
+The figures in figure \eqref{TimeCalib} shows a two dimensional distribution of the channel mean time for each crystal for all the 61,200 crystals in the EB and 1468 crystals in EE. Its shows the mean timing distribution prior to calibration and after the measured calibration constants have been applied.
+The full IOVs produced for the entire LHC runs 2011 and 2012 can be found here \cite{ECALTIMECALIB}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}\label{TimeCalib}
+\centering
+%\mbox{\includegraphics[scale=0.8]{THESISPLOTS/ECAL_Timing_Resolution.png}}
+%\mbox{\includegraphics[scale=0.45]{THESISPLOTS/TMaxPhaseVsRatio.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\captionof{figure}{Distribution of channel timing calibration constants prior to calibration and after calibration for crystals in EB and EE. }
+\label{fig:TimeCalib}
+\end{center}
 
 
-\subsubsection{HardWare Timing Calibration}
+
+\subsubsection{Hardware Timing Calibration}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Amplitude Dependence Timing Corrections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
