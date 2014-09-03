@@ -120,55 +120,122 @@ At the level of the front end electronics ~(FE) consisting of $5\times5$ crystal
 The purpose of the offline calibration is to provide additive timing adjustments values for each channel measured from reconstructed data to account for global phase shift in timing caused by shifts in CMS clock relative to the LHC bunch crossings and de-synchronizations induced by hardware interventions occurring usually during detector repairs. The global shifts due to drifting in CMS clock relative to LHC bunch crossings can be about 1~ns while that caused by hardware intervention can be about 3~ns. The calibration constants obtained for each crystal or channel are the negative values of the average time measured from the reconstructed hits of each crystals.
 These crystals are  kept in XML files which are then loaded into the online configuration database holding the hardware settings. The calibration procedure is as follows:first identify the existence of a timing shift occurrence using either the CMS or ECAL detector running electronic~(e-Log) book or the CMS or ECAL data acquisition monitoring~(DQM) results. Second, if there is a timing shift, use reconstructed crystals hits or rechits from very recently produced data to measure the calibration constants for each channel. Finally deploy the validated calibration constants in an XML format file into the online configuration database for reprocessing of CMS full datasets to be used for physics analysis.
 This process is repeated over and over until the entire LHC proton-proton collision period each year. At the end of each calibration process, the set of calibration constants developed for the hardware settings within a period of time is referred to as having an \textit{interval of validity or IOVs}. The amount of data used in measuring the timing constants is defined by the amount of event statistics available and covers a particular CMS events run range. During the entire LHC run period of 2011, a total of 17 IOVs were developed while during 2012 LHC run, a total of 44 IOVs were produced. The raw dataset used in producing the calibration constants are mostly ECAL crystals hits from Level-1 triggered events with loosely triggered electromagnetic objects including a photons, electrons and hadrons with larger electromagnetic proportions called \textit{ElectronHad} or \textit{PhotonHad}. These event rechits must pass the following selection criteria: The event time~(an average over its rechits) must be smaller than 5~ns. Event rechits must belong to a basic cluster~(cluster of about $5\times5$ crystals) with transverse energy of atleast 2~GeV. The signal amplitude must not be lower than 26(47) or 100~(in year 2012) ADC counts for rechits in EB(EE)   corresponding to an energy of about 1(3)~GeV respectively. The reconstructed rechit time must be within 5(7)~ns window in EB(EE) respectively and to reduce the presence of anomalous crystal hits, the ratio of the sum of energies of the north, south, east and west neighbouring crystals excluding a crystal with the highest energy to that of the energy of the highest energy crystal must be greater than 5\%  or equivalently $ 1 - E_{4}/E_{1} < 0.95$. This variable is known as the \textit{swiss-cross} variable and it is very useful for rejecting events with anomalous crystal energy deposits. The selected rechits are used to make a timing distribution for each channel and if each channel has at least 10 rechits, the average time measured represents the timing calibration constants or inter-calibration coefficient to be applied for correction while the spread or variance represents the spread in this measurement. For channels with less than 10 valid rechits, the average time of all the other channels is assigned to them as their inter-calibration coefficient. validation of these constants is obtained by applying the negative value of these constants to the same or a different set of events and varying that the measured average over rechits per channel is 0~ns to within the accuracy of the calibration method and event migration in the event sample. The event migration effects are of the order of 10~ps.
-The figures in figure \eqref{TimeCalib} shows a two dimensional distribution of the channel mean time for each crystal for all the 61,200 crystals in the EB and 1468 crystals in EE. Its shows the mean timing distribution prior to calibration and after the measured calibration constants have been applied.
+The figures in figure \ref{fig:TimeCalib} shows a two dimensional distribution of the channel mean time for each crystal for all the 61,200 crystals in the EB and 1468 crystals in EE. Its shows the mean timing distribution prior to calibration and after the measured calibration constants have been applied.
 The full IOVs produced for the entire LHC runs 2011 and 2012 can be found here \cite{ECALTIMECALIB}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}\label{TimeCalib}
 \centering
-%\mbox{\includegraphics[scale=0.8]{THESISPLOTS/ECAL_Timing_Resolution.png}}
-%\mbox{\includegraphics[scale=0.45]{THESISPLOTS/TMaxPhaseVsRatio.png}}
-%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
-\captionof{figure}{Distribution of channel timing calibration constants prior to calibration and after calibration for crystals in EB and EE. }
+\mbox{\includegraphics[scale=0.35]{THESISPLOTS/calibDiffMapEB_Before_Calibration.png}}
+\mbox{\includegraphics[scale=0.28]{THESISPLOTS/calibDiffMapEEM_Before_CALIB.png} \quad
+\includegraphics[scale=0.28]{THESISPLOTS/calibDiffMapEEP_Before_CALIB.png}
+}
+\vspace{3cm}
+
+\mbox{\includegraphics[scale=0.35]{THESISPLOTS/calibDiffMapEB_After_Calibration.png}}
+\mbox{\includegraphics[scale=0.28]{THESISPLOTS/calibDiffMapEEM_AFter_CALIB.png} \quad
+\includegraphics[scale=0.28]{THESISPLOTS/calibDiffMapEEP_After_CALIB.png}
+}
+\captionof{figure}{Top: Timing calibration maps showing the distribution of average time for each channel/\pb crystal in EB~(top) and EE~(below: EE\texttt{-}(left), EE\texttt{+}(right)) before calibration.\newline
+Bottom: Timing calibration maps showing the distribution of average time for each channel/\pb crystal in EB~(top) and EE~(below: EE\texttt{-}(left), EE\texttt{+}(right)) after calibration. 
+After calibration most crystals have an average time of zero.}
 \label{fig:TimeCalib}
 \end{center}
 
-
-
 \subsubsection{Hardware Timing Calibration}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Often, it happens that during a regular technical stop or machine development period, the hardware experts maintaining the ECAL front end electronics introduce a timing offset due to hardware intervention. These timing offsets are not easily adjusted at the event reconstruction level, offline, using software from proton-proton collisions data. These hardware settings for readout electronics with timing offsets if not properly aligned can contribute to the worsening of the timing resolution. The traditional method of correcting for this hardware timing latency during CMS data taking when the LHC is colliding protons at stable beams has been to collect enough data with the unadjusted hardware settings with timing offset during stable proton beams, stop the entire CMS data taking process while LHC proton collisions are ongoing and use the collected data to extract the hardware timing offset and finally use these extracted timing offsets to adjust the hardware settings for future collisions when CMS detector data taking has resumed. These offsets are extracted from Data Quality Monitoring~(DQM) and data certification hardware readout electronics performance histograms. However, although these procedure is quite effective, it is not very efficient as stopping the ECAL section of the CMS detector in order to adjust the settings of the hardware readout electronics requires a huge loss in data taking by the entire CMS detector. Since the goal of the CMS data taking department is to minimised the lost of data as much as possible thus reducing the difference between LHC delivered luminosity and CMS recorded luminosity, an efficient approach is needed. We have developed such an approach to investigate and adjust the hardware settings in case of a timing offset at the readout electronics after each period of technical stop or machine development.
+Rather than using collision data, we use the laser data whose initial primary objective is to adjust for crystal energy resolution due to loss of crystals transparency through radiation. 
+We use laser data to measure hardware timing offset and use these timing offsets provide new hardware settings prior to proton-proton collision. These adjustment is performed at the level of ECAL online readout electronics condition data base. The full procedure for this process can be found at \cite{LaserTiming}. The ECAL laser system comprise of two lasers, a 440~nm wavelength~( close to peak emission for \pb crystals) laser for monitoring crystal transparency lose and a 796~nm wavelength laser for monitoring readout electronics chain from APDs to ADCs. Both lasers have jitter of less than 4~ns for every 24 hours run. To account for this jittering effect, the timing from the laser is averaged over 600 event pulses. The time for each crystal from laser is expected to be the same as the time from data and is represented as $T^{APD}_{MAX} $. The ECAL laser system is also equipped with a fast acquisition card called MATACQ. The time for each channel recorded using the Matacq is also averaged over 600 event pulse denoted as $ T_{Matacq}$.
+The difference in $ T^{APD}_{MAX} - T_{Matacq} $ between these two times averaged over a clock and control unit ~(CCU) comprising of 25 crystals gives the time for each CCU denoted as $ t_{CCU} = \left\langle T^{APD}_{MAX} - T_{Matacq} \right\rangle $ average over 25 crystals.
+Thus to calculate the timing shift of 25 crystals belonging to the same front end electronics~(FE), we monitor for any changes to the this average before~($t^{B}_{CCU} $) and after~($t^{A}_{CCU} $) hardware intervention.  This difference $\Delta t_{CCU} = t^{A}_{CCU} - t^{B}_{CCU} $ after corrections due to global shift in the average timing~($\left\langle t^{A}_{CCU} - t^{B}_{CCU} \right\rangle $) for all the CCUs in an entire supermodule~(SM) or front end detector~(FED) or single readout unit from the data acquisition point of view. These global timing shift of all the crystals in a given FED is due to the laser light distribution inhomogeneity or evolution of the laser pulse due to different optical fibre supply of laser light to each CCU. Each FED or SM is made of 1,700 \pb crystals. 
+The plots in figure \ref{fig:TimeLaser} show our current observation of  monitoring for any shift in timing within each CCU using laser. It shows the distribution of the CCU timing difference $ \Delta t_{CCU}$ with its root mean squared~(RMS) value for each CCU before and after machine intervention. Considering the subtraction of the global shift per FED also reduces the possibility of false timing shift showing up by a given CCU.
 
+\begin{center}\label{TimeLaser}
+\centering
+\mbox{\includegraphics[scale=0.2]{THESISPLOTS/CCU_Mean_Time_ShiftEB_Plus8_Fed_635.png} \quad
+\includegraphics[scale=0.2]{THESISPLOTS/CCU-Mean-Time-Shift-EBMinus8-Fed617.png}}
 
+\vspace{1cm}
+\mbox{\includegraphics[scale=0.2]{THESISPLOTS/CCU_Mean_Time_Shift_EEP_Laser.png} \quad 
+\includegraphics[scale=0.2]{THESISPLOTS/CCU_Mean_Time_Shift_EEM_Laser.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\captionof{figure}{Top: Crystal mean time distribution for crystals in readout electronics EB$\pm$8. Crystal time is obtained from Laser data.
+Bottom: Distribution of CCU timing shift in readout electronics due to hardware intervention  for EB~(top) and EE~(bottom). The adjustment for global timing shift per FED due to difference in light source for each CCU can be seen to reduce the possibility of CCU showing false timing shift. The figures show the distributions of the $\Delta t_{CCU} $ with corresponding RMS values before~(left) and after~(right) the global shift has been subtracted. }
+\label{fig:TimeLaser}
+\end{center}
+
+Using the average subtraction method with the laser data, we can measure each CCU timing shift to within 0.2~(0.5)~ ns in EB~(EE) precision. This tool and procedure allow for adjusting the hardware timing settings at CMS data taking site in Point5 at Cessy, France. However some validation studies for the reliance and efficiency of this tool is yet to be performed.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Amplitude Dependence Timing Corrections}
+\subsubsection{Timing Bias}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The  Ratio algorithm described in previous sections for extracting the amplitude and time of an event from the ten digitized samples for a given crystal or channel is assumed to performed smoothly for all energies of a given initial particle impinging on the crystal. However, during collision, this is not the case, especially during gain transition points of the MGPA. An inherent bias in the timing measurement is introduced for incoming electromagnetic particles with energy above the gain transition point. The energy in GeV units deposited by an incoming particle on each crystal, $i$ is given by the signal amplitude $A_{i}$, in ADC counts and other correction and conversion factors using the equation:
+\begin{equation}
+    E_{i} =  G \cdot S_{i}(t) \cdot C_{i} \cdot A_{i} 
+\end{equation}
+where $G$ is an ADC-to-GeV factor with value equal to 0.039~(0.063) in EB~(EE). $C_{i}$ is the inter-calibration coefficients accounting for different channel response and $S_{i}(t)$ is correction term (usually from laser data) accounting for radiation-induced channel response  and changes as a function of time. The Gain 1 transition point occurs at 4096 ADC counts corresponding to 159.744~GeV in EB and 258.048~GeV in EE. The subsequent Gain 6 and 12 transitions are at energy values of TeV range.
+The bias in timing introduced as a result of these gain transitions cannot be corrected at hardware  or calibrated away rather we developed a method of applying these timing bias corrections at the standard CMS Software~(CMSSW) reconstruction package.
+Using reconstructed hits with same selection as offline timing calibration, selected hits are also required to be path of a basic cluster~(usually $9\times 9 $ or $25\times 25$ matrix of crystals) to ensure that they are electromagnetic objects produced from proton-proton collisions. These hits must have amplitude with channel noise consideration above 10 ADC counts, in order to reject hits with very large timing biased and must be overcome the swiss-cross variable selection threshold. A distribution of the hit time against its amplitude is plotted and then sliced in bins of amplitude. Each bin with having at least 7 hits is fitted using a Gaussian function constrained within $\pm 7$~ns. The average or mean and standard deviation or RMS of this distribution is extracted and plotted again its corresponding amplitude or energy bin content to give a distribution of mean against amplitude and standard deviation or resolution against amplitude. This procedure is performed for different Modules or pseudo-rapidity~($\eta$) ranges starting from $\eta = 0$ which is Module1 in barrel to $\eta = 3$ for high-eta in endcap.
+Figure \ref{fig:TimeBias} shows these distribution for different CMSSW release~(CMSSW44X) where the these bias corrections have not been applied to the software release~(CMSSW5XY) in reconstruction where they have been applied. The dataset used for this reconstruction is the \textit{DoubleElectron} and \textit{Photon} dataset processed using CMSSW44X release during LHC RUN 1 and later reprocessed using CMSSW53X with the bias corrections we developed applied. All CMSSW releases beyond CMSSW5XY now have these bias corrections applied. 
+
+\begin{center}\label{TimeBias}
+\centering
+\mbox{\includegraphics[scale=0.45]{THESISPLOTS/AmplitudeVsTimeCMSSW_Comparison.png}}
+%\mbox{\includegraphics[scale=0.45]{THESISPLOTS/TMaxPhaseVsRatio.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\vspace{4cm}
+\mbox{\includegraphics[scale=0.46]{THESISPLOTS/TimingResolutionCMSSW_Comparison.png}}
+%\mbox{\includegraphics[scale=0.45]{THESISPLOTS/TMaxPhaseVsRatio.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\captionof{figure}{Top: Distribution of mean time as a function of crystal energy for EB prior~(left) and after~(right) timing bias corrections depending on amplitude developed have been applied.\newline
+Bottom: Distribution of timing resolution as a function of crystal energy for EB prior~(left) and after~(right) timing bias corrections depending on amplitude developed have been applied.}
+\label{fig:TimeBias}
+\end{center}
+
+Figure \ref{fig:EtaDep} show the distribution of the mean and standard deviation for different modules in barrel and sections in endcap. The timing resolution do not show any dependence on pseudo-rapidity~($\eta$), however minor dependence on event run number and different electronics or trigger towers have been observed. These small effects are yet to be understood and provides a challenge in realising using proton-proton collision data, ECAL timing resolution as initially observed during tests using electron beams.
+
+\begin{center}\label{EtaDep}
+\centering
+\mbox{\includegraphics[scale=0.25]{THESISPLOTS/EB_TimeVsAmplitude_StabilityCMSSW_5_3_X.png} \quad
+\includegraphics[scale=0.25]{THESISPLOTS/EB_SigmaVsAmplitude_Stability_In_CMSSW_53X.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\vspace{0.5cm}
+\mbox{\includegraphics[scale=0.6]{THESISPLOTS/TimeResolution_Vs_Eta.png}}
+%\mbox{\includegraphics[scale=0.45]{THESISPLOTS/TMaxPhaseVsRatio.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\captionof{figure}{Top: Distribution of mean time as a function of amplitude~(left) and Resolution as a function of amplitude~(right) for different pseudo-rapidity regions in the barrel. \newline
+Bottom: All modules in EB combined timing resolution as a function against $\eta$ crystals in the same readout electronics in  barrel~(EB). }
+\label{fig:EtaDep}
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Electromagnetic Calorimeter Timing Performance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The time performance of the ECAL crystals is studied and validated using events with a Z decay  i.e $\PZ \rightarrow \Pelectron \Ppositron$. 
+Timing calibration has been performed to properly align the timing of an incoming event which might be effected due to variations of event time in different runs, poor inter-calibrations especially between different front end electronics, biased on timing due to timing dependence on energy, reduction in \pb crystal transparency due to radiation, hardware intervention during machine repairs and other yet understood causes. To ensure that the calibration procedure has improved on the timing alignment, we study the timing performance of the ECAL crystals and validate this studies using events electrons produced from the decay of a $\PZ$ boson  i.e $\PZ \rightarrow \Pelectron \Ppositron$.  The decay of a $\PZ$ boson is a very well understood signal and with effects due to poor event reconstruction or detector effects very well understood and measured. 
 \newline
-The main idea is to use two reconstructed "objects" which in principle should have the same time and then use their time difference as a measure of the timing performance. We:
+The main idea is to use these two electrons or any two reconstructed candidate "objects" which in principle should have the same ECAL crystal arrival time and then use their measured time difference as a measure of timing resolution of the \pb crystals in ECAL. These two reconstructed candidate objects can be:
 \begin{enumerate}
-\item use two crystals within the same electron super cluster.
-\item use the two electrons from the $\PZ$ decay. 
+\item Two crystals within the same electron super cluster.
+\item Neighbouring crystals with a particular supercluster and sharing the same supercluster energy. This has the advantage of minimizing shower propagation effects.
+\item Two crystals each from the different electron superclusters.
+\item Or the two well reconstructed and energy corrected superclusters from the $\PZ$ decay. 
 \end{enumerate}
-In using electron super clusters, we considered following additional contributions to the electron time:
+
+In using reconstructed electron, we considered following additional contributions to the electron time:
 \begin{enumerate}
 \item The bending of the electron path due to the presence of the 3.8~T magnetic field of the CMS detector.
-\item  Displaced collisions  because "partons"~(subparticles) in the protons of the proton-proton~(p-p) bunches did not collide at exactly the collision point or Nominal Interaction point~(IP).
-\item The collision developed over the full duration of the overlap of the proton bunches.
+\item  Displaced collisions because "partons"~(subparticles) in the protons of the proton-proton~(p-p) bunches did not collide at exactly the collision point or nominal interaction point~(IP).
+\item The collision developed over the full duration of the overlap of the proton bunches. This is known as the spread in collision timing and account for about 183~ps in worsening of timing resolution.
 \end{enumerate}
 
-The Time-Of-Flight~(TOF) of the electron from the IP is considered in the time calibration algorithm of the ECAL crystals.
-Indeed, one assumption of using photons to time calibrate the ECAL crystals in that, they travel with the speed of light and so on average the time taken for a photon to travel from the IP until it impinges on the crystal surface in on average 0. With this assumption true only for Nominal Collisions i.e collisions originating for the IP and travelling straight to the ECAL crystals.
-\newline
+The Time-Of-Flight~(TOF) of the electron from the I produced in a nominal collision is assumed to be zero on average in the time calibration algorithm since the electrons or photons travel with speed very close to on even the speed of light. However, there are slight variations due to the difference in originated point or vertex position of these electrons or photons. In the case of electrons, the true vertex position of the electron can be reconstructed and the small TOF variations corrected for, but in the case of photons, since photons do not leave in track signals in the tracker detector, it is a bit challenging to account for these variations in TOF due to no knowing the true primary vertex where the photon originated from. There are active studies ongoing to be able to use ECAL timing to reconstruct the true primary vertex of a photon using the information of its arrival time in the ECAL, cluster position and energy. This kind of studies is motivated by the Higgs decay into two photon process  i.e $H \rightarrow \gamma \gamma $, as we continue towards understanding the properties of the recently observed scalar boson particle decay into to photon process.  
 
+Thus photons are used for timing calibration of the \pb crystals while electrons or electron candidates in general are used for studying the timing performance.
+Figure \ref{fig:ZeeTimePerformance}, shows the timing resolution obtained  by extracting the timing of the seed crystal~(crystal with highest energy) within the electron suspercluster (a) and the time difference of both electrons with the corrections due to time of flight applied (b). Without contribution from the fact that proton collisions develops across the entire beam luminous region of nearly 5.5~cm referred to as proton collision time ~(corresponding to about $\sigma(t_{colision}) = \sigma(t_{Z}) = 183~ps$) removed in quadrature gives 232~ps in EB and 384~ps in EE timing measurements from $\PZ$ events. This is pretty good resolution for detecting late electromagnetic particles if produced during a new kind of particle interaction non in the SM.
+The electrons used are required to isolated to differentiate them from hadrons by using simple cluster shape  selection requirements. Each electron candidate making the $\PZ$ must have  a transverse energy bigger than 10~GeV. Both electrons must also have their invariant mass bounded from below~(above) by a 60(150)~GeV cut i.e $ 60~GeV < m_{inv}(e_{1},e_{2}) < 150~ GeV$ to make a good $\PZ$ boson candidate. 
 
-\begin{center}
+\begin{center}\label{TimeRES}
 \centering
 \mbox{
 \includegraphics[width=3in]{/home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-seed.png}\quad
@@ -178,24 +245,80 @@ Indeed, one assumption of using photons to time calibrate the ECAL crystals in t
 \end{center}
 
 \begin{center}
+%\begin{figure}
 \centering
 \mbox{
 \includegraphics[width=3in]{/home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-difference-of-seed.png}\quad
 \includegraphics[width=3in]{/home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-TOF-Corr-difference-of-seed.png}}
 \captionof{figure}{Ecal time difference between the two reconstructed electrons in $\PZ \rightarrow \Pelectron \Ppositron$ decay. The electron time is the seed~(crystal with highest energy deposit) time with additional correction due to the time of flight of the electron.(a) in in EB and (b) in EE} 
 \label{fig:ZeeTimePerformance}
-\end{center}
 %\end{figure}
-
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|c|}
-   \hline
-   %table stuff \\
-   \hline
-  \end{tabular}
- \captionof{table}{Table Comparing Timing Resolution performance of 2011 Vs 2012}
-   \label{table1} % for use in \ref{table1} if you want to refer to the table number
 \end{center}
+To compare the timing resolution obtain during test beam studies to that obtained recently at the end of LHC Run 1, a similar figure is made as shown in figure \ref{fig:ZeeTimeResolution} produced from the $\PZ \rightarrow \Pelectron \Ppositron$ decay events with the timing difference between the two electrons plotted as a function of the effective amplitude normalised to the noise in the ECAL Barrel for 2011 and 2012 data. The noise term in consistent with results obtained during test beam while the constant term is bout 150~ps much larger than that obtained from test beam studies. Its has been shown that effects such as poor inter-calibration between two different front end electrons, run dependence and radiation might be the reason for the  large constant term. There is active research ongoing towards archiving the test beam results, however the current value is good enough to use the ECAL timing as a variable to search for long-lived particles.
+\begin{center}\label{ECALTRes}
+%\begin{figure}
+\centering
+\mbox{
+\includegraphics[scale=0.5]{THESISPLOTS/NeigboMethodECALTimeRes.png}\quad
+\includegraphics[scale=0.5]{THESISPLOTS/ZeeECALTimeRes.png}}
+\captionof{figure}{Resolution of time difference between two most energetic crystals in the same readout unit of an ECAL cluster as a function of effective amplitude- The Neighbouring crystal method(left),  Resolution of time difference between the two reconstructed electrons in $\PZ \rightarrow \Pelectron \Ppositron$ decay as a function of  effective amplitude($A_{eff} = A_{1}A_{2}/\sqrt{A^{2}_{1} + A^{2}_{2}}$), for both electrons in EB; The $\PZ$ method~(right).
+The noise  term $N$ is the same as test beam for bother methods while the constant term $\bar{C}$ is better for the Neighbouring crystal method~(70~ps)  than for the $\PZ$ method ~(150~ps) indicating the effect due to different intercalibrations between two different readout of front end electronics.} \label{fig:ZeeTimeResolution}
+%\end{figure}
+\end{center}
+Table \ref{tab:TIMERes} shows Ecal timing resolution for 2011 and 2012 dataset. 
+
+\begin{center}\label{CMSRES}
+\centering
+ %\setlength{\abovecaptionskip}{0pt}
+  %\setlength{\belowcaptionskip}{10pt}
+ % \topcaption{GMSB,GGM Phenomenology and Relevant final states}
+  \begin{tabular}{cc|l|l} % p{0.1cm}|p{0.1cm}|}
+  \hline \hline
+ 
+ &  \multicolumn{1}{r}{\bfseries{ECAL Timing Resolution}} \\
+  \hline \hline
+&  \multicolumn{2}{c}{\bfseries{2011}} \\
+   \hline
+   & $\sigma_{eff}(t_{seed})$[ps]
+        Absolute time
+   & $\sigma_{eff}(t_{e1} - t_{e2})/\sqrt{2}$[ps]   Single Precision \\ \hline
+   \textbf{EB} & 376  & 190 \\
+      \textbf{EE} & 356  & 282 \\
+      \hline \hline
+& \multicolumn{2}{c}{\bfseries{2012}}  \\
+   \hline
+   & $\sigma_{eff}(t_{seed})$[ps]
+        Absolute time
+   & $\sigma_{eff}(t_{e1} - t_{e2})/\sqrt{2}$[ps]   Single Precision \\ \hline
+   \textbf{EB} & 340  & 164 \\
+      \textbf{EE} & 342  & 272 \\
+      \hline \hline
+ 
+  \end{tabular}
+   \captionof{table}{Table Comparing Timing Resolution performance of 2011 with 2012}
+ \label{tab:TIMERes} % for use in \ref{table1} if you want to refer to the table number
+ \end{center}
+%\end{table}
+
+%\begin{center}
+%\begin{tabular}{cc|c|c|c|c|l}
+%\centering
+%\cline{3-6}
+%& & \multicolumn{4}{ c| }{Primes} \\ \cline{3-6}
+%& & 2 & 3 & 5 & 7 \\ \cline{1-6}
+%\multicolumn{1}{ |c| }{\multirow{2}{*}{Powers} } &
+%\multicolumn{1}{ |c| }{504} & 3 & 2 & 0 & 1 &     \\ \cline{2-6}
+%\multicolumn{1}{ |c  }{}                        &
+%\multicolumn{1}{ |c| }{540} & 2 & 3 & 1 & 0 &     \\ \cline{1-6}
+%\multicolumn{1}{ |c  }{\multirow{2}{*}{Powers} } &
+%\multicolumn{1}{ |c| }{gcd} & 2 & 2 & 0 & 0 & min \\ \cline{2-6}
+%\multicolumn{1}{ |c  }{}                        &
+%\multicolumn{1}{ |c| }{lcm} & 3 & 3 & 1 & 1 & max \\ \cline{1-6}
+%\end{tabular}
+% \captionof{table}{Table Comparing Timing Resolution performance of 2011 Vs 2012}
+% \label{tab:TIMERes} % for use in \ref{table1} if you want to refer to the table number
+%\end{center}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{ECAL Timing Calibration_chapter}
