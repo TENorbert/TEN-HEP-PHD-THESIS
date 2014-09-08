@@ -3,15 +3,107 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Analysis Strategy for Long-Lived Particles }
 \section{Analysis Strategy}
+This analysis searches for delayed isolated photons produced with large transverse momentum. From a theoretical point of view, events containing such a photon will be a clear signal for new physics as such a photon is not expected to be produced from standard model interactions. However, from an experimental point of view, using  timing measurements from  ECAL sub-detector, there are many different sources of isolated, hight \pt photons. A few of these sources which have been identified are high \pt isolated and delayed photons due to timing miss reconstruction and miss-identification, photons produced from cosmic and other beam related effects like beam halo muons bremsstrahlung in the ECAL, and obviously, detector effects like high \pt neutrons by-passing the crystals and hitting directly the photo-detectors like APD and VPT, mimicking the behaviour of isolated, delayed and high \pt photons. The latter kind of photons are called spikes. They are normally isolated, high \pt and their ECAL time measurement show that they arrive early as well as late but with most of them arriving late compared to photons produced at the nominal proton-proton interaction region whose average arrival time at ECAL is 0~ns. These different sources of background makes it a bit challenging to distinguish a possible signal photon from true physics and background photons which are mainly instrumental.
+Thus, estimating the background contributions to possible signal sample requires using true proton-proton collision events or data rather than simulated events as is normally done in most physics  analysis. 
+Nevertheless, as it is with most hadron collider physics analysis, exploring the use of the number of jets in the event selection can most often reduce dramatically the background contamination to possible signal sample. It is not different with this analysis, as we have employed jet multiplicity both as a physics related quantity for the production of high \pt isolated and delayed photons but also as a detector variable for reducing and at times discriminating  background contribution to possible signal sample.
+Our motivation is related to the existence of physics models beyond the SM like the minimal GMSB~(mGMSB) and GGM, where the production of a high \pt isolated, delayed photon in association  with a number of jets constitutes a typical new physics event  which could be produced at the LHC.
+Thus using simulated events from mGMSB or GGM model, serves both as a guiding model for the confirmation of a new physics signature at LHC but also as an alternate hypothesis for setting upper limits based on this model in the case that no significant excess over SM prediction is observed.
+
+A typical signal event considered in this analysis for the existence of a neutral massive long-lived particle decaying into a photon is the detection of a late photon arriving at crystals in the ECAL sub-detector of CMS associated with jets with large \MET .  However, the production and decay of this long-lived neutral particle, in our case the neutralino~($\tilde{\chi}^{0}_{1}$), is associated with the production of at least two jets and a weakly interacting gravitino~($\tilde{G}$) as an additional decay product, with a late arrival photon since this is a cascade decay process from a possibly higher mass object into the neutralino and finally to the gravitino. The presence of the gravitino~($\tilde{G}$) is inferred using the transverse momentum imbalance whose magnitude is \MET .
+In the  SPS8 minimal GMSB or GGM model with R-parity conservation~(RPC) assumed, SUSY particles are  produced in pairs and so there would be an event having at least a single photon arriving late, associated with at least 2 jets and large \MET . This signal configuration helps in defining and selecting our signal region~(SR) and a control region~(CR) for estimating the contribution to this signal from standard model processes and the detector effects considered as background processes.
 \subsection{Signal and Background Modelling}
-In modern particle physics experiments, being able to do pseudo experiments which provide reliable insight into the kinematics and detector response to the physics of interest is a necessity. CMS is no exception.
-Using physics event generators like PYTHIA, Madgraph, SHERPA is very common.
-The generated events are then passed into the GEANT4 which provides a simulation of the physics of the event and the response of the CMS detector.   
-The resulting  event is known as a Monte Carlo Simulation ~(MC) events and the dataset is a MC dataset.
-In this analysis, we have used quite a number of cathegories of MC dataset for both the signal as well as the background. The following events were produced using PYTHIA and simulated using GEANT4.
-\subsection{Event Selection}
-\subsubsection{Higher Level Triggering and DataSet}
+The SPS8 GMSB and GGM signal event generation begins with the production of Supersymmetry Les Houches Accord~(SLHA) files using the SUSY ISASUSY package written by \cite{Baer}  containing the ISAJET software. The SUSY events are forced to decay according to the SPS8 GMSB and GGM model using the SDECAY decay package. These SLHA files containing information about the SUSY mass spectrum and decay rates is passed through a PYTHIA 6 \cite{pythia6} interface into the CMS software~(CMSSW), in this case CMSSW532patch7, where proton-proton collision at $\sqrt{8}$~TeV events producing SUSY particles events are generated. Their interaction with the CMS detector is simulated using the GEANT4 package \cite{geant4}. Standard Model processes like  multi-jets and $\gamma +$ jets processes produced from strong interactions described by quantum chromodynamics~(QCD) are generated and simulated at leading order cross-sections using PYTHIA 6 and GEANT4 packages respectively.
+Digitisation and event reconstruction in terms of its constituent objects like jets, photons, muons and electrons, after its passage and decay in the full CMS detector is later performed still using the CMSSW software.
+\subsection{Signal}
+The SPS8 mGMSB possible new physics parameter space used for the present physics analysis involves: $\tan\beta = 15$, $sign(\mu) = 1$, and $M_{m} = 2.\cdot \Lambda_{m}$. While $c\tau$ and $\Lambda_{m}$ is used to scan the available parameter space which maximises the sensitivity of the CMS detector to long-lived particles, in this scenario mostly neutralinos~($\tilde{\chi}^{0}_{1}$). The cascade decay of higher mass SUSY particles in the SUSY spectrum to $\tilde{\chi}^{0}_{1}$ allows for signal events with the following constituents:
+\begin{itemize}
+\item at least one energetic photon,
+\item large missing transverse momentum,
+\item a number of high transverse momentum jets.
+\end{itemize}
+\subsection{Background}
+QCD multi-jets and $\gamma +$ jet(s) events produced in leading order cross-sections with high \pt range of the photons, serves as background and also for time reconstruction and calibration and for sanity check. Events with $W$  and $Z$ decay  and $t\bar{t}$ with large missing transverse momentum are also generated for serving as sanity check for understanding momentum measurements.
+\subsection{Datasets}
+The proton-proton collision dataset used in this analysis was collected during 2012 runs at the center of mass energy of  $\sqrt{S} = 8$~TeV  and was collected using the CMS detector totalling and integrated luminosity of 19.1~\fbinv .
+\subsection{Data}
+The dataset consist is mostly containing events with at least a single photon triggered and only those selected using only luminosity-sections certified as GOOD in the CMS official run file; \textbf{JASON:Cert-8TeVPromptReco-Colllisions12-JASON.txt}. Table \ref{tab:DATA} shows the dataset used in this analysis.
+
+\begin{center}
+%\begin{table}[ht]
+%\renewcommand\arraystretch{1.2}
+\centering
+\begin{tabular}{c c}
+\hline
+Dataset Name & Recorded Luminosity $[\fbinv]$ \\
+\hline
+ \texttt{/Run2012B/SinglePhoton/EXODisplacedPhoton-PromptSkim-v1 } & 0.983 \\
+ \texttt{/Run2012C/SinglePhoton/EXODisplacedPhoton-PromptSkim-v2 } & 0.499 \\
+ \texttt{/Run2012C/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 7.360 \\
+\hline
+%\end{tabular}
+\captionof{Table}{The dataset name and corresponding integrated luminosity of the data used in the analysis}
+\label{tab:DATA}
+\end{table}
+\end{center}
+
+
+\subsubsection{Background and Signal Monte Carlo}
+The Monte carlo ~(MC) samples are produced taking into account the Summer 2012 prescriptions carrying information on the calibration and alignment status of the CMS detector with pile up~(PU) conditions at 8 TeV taking into consideration.
+ QCD events are generated with a cross -section ($\sigma$) at leading order~(LO) and normalised to the 19.1 \fbinv integrated luminosity. 50112 events were requested for GMSB signal MC, however, due to an observes reduced lifetime ($c\tau$) observed for these official CMS samples, private sample were generated and simulated covering the same line 8 of the SPS8 mGMSB proposal  while the absence of any MC signal samples for GGM model, meant that we had to privately generate our own samples. The SPS8 mGMSB MC samples are generated to scan $\tilde{\chi}^{0}_{1}$ lifetime $c\tau$ from 250~mm to 12000~mm for each $\Lambda_{m}$ point with $\Lambda_{m}$ ranging from $100$~TeV to $180$~TeV and seen in table \ref{tab:mc_GMSB_sample} while  table \ref{tab:mc_QCD_sample} show the \pt range  for the processed QCD samples.
+
+\begin{center}
+%\begin{table}[ht]
+%\renewcommand\arraystretch{1.2}
+\centering
+\begin{tabular}{c c c}
+\hline
+$c\tau$ (\unit{mm}) & $\sigma_{LO}$ (pb) & number of events\\
+\hline
+250  & 0.0145 & 50112 \\
+500  & 0.0145 & 50112 \\
+1000 & 0.0145 & 50112 \\
+2000 & 0.0145 & 50112 \\
+3000 & 0.0145 & 50112 \\
+4000 & 0.0145 & 46944 \\
+\hline
+\end{tabular}
+\captionof{The signal GMSB MC samples used in this analysis}
+\label{tab:mc_GMSB_sample}
+%\end{table}
+\end{center}
+
+\begin{center}
+%\begin{table}[ht]
+%\renewcommand\arraystretch{1.2}
+\centering
+\begin{tabular}{c c c}
+\hline
+$\hat{\pt}$ & $\sigma_{LO}$ (pb) & number of events\\
+\hline
+ 50 $\sim$ 80  & 3322.3  & 1995062 \\
+ 80 $\sim$ 120 &  558.3  & 1992627 \\
+120 $\sim$ 170 &  108.0  & 2000043 \\
+170 $\sim$ 300 &   30.1  & 2000069 \\
+300 $\sim$ 470 &    2.1  & 2000130 \\
+470 $\sim$ 800 &  0.212  & 1975231 \\
+\hline
+\end{tabular}
+\captionof{The $\gamma +$ jets samples used in this analysis}
+\label{tab:mc_QCD_sample}
+%\end{table}
+\end{center}
+
+\section{Event Selection}
+
+\subsubsection{Trigger}
+
+
+
+\subsubsection{Offline Selection}
+
 \subsection{Background Estimation}
+
+
 \subsection{Efficiency and Systematics Studies}
 
 
