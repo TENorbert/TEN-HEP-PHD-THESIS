@@ -29,6 +29,7 @@
 \usepackage{tikz}
 \input{my_definitions}
 \linespread{1.3}
+
 \begin{document}
 \bibliographystyle{hunsrt} % style of bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -36,29 +37,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title and other sections that come before the body of the document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{title}
+\include{Title}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Now lets include the body of the document...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{intro}
+%\include{intro}
+\include{Introduction_Chapter}
 
 %Base Chapters
-\include{science}
-\include{experiment}
+%\include{science}
+\include{Physics_Chapter}
 
-%Software Chapters
-\include{simulation}
-\include{reconstruction}
+%\include{experiment}
+\include{LHC_CMS_Experiment_Chapter}
 
+%LHC/CMS experiment Chapters
+%\include{simulation}
+\include{Time_Reconstruction_Chapter}
+
+%Event Reconstruction Chapter
+%\include{reconstruction}
+\include{Event_Reconstruction_Chapter}
 %Analysis Chapters
-\include{data_set}
-\include{event_selection}
-\include{analysis}
+%\include{data_set}
+\include{Analysis_Chapter}
+%Limit Chapter
+%\include{analysis}
+\include{Limit_Setting_Chapter}
+
+%Limit_Interpretation Chapters
+%\include{event_selection}
+\include{Limit_Intepretation_Chapter}
 
 %Conclusion
-\include{conclusion}
+%\include{conclusion}
+\include{Conclusion_Chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,8 +81,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\bibliography{thesis}
 \include{thesis}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Appendices

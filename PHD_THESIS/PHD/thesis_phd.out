@@ -39,7 +39,7 @@
 \BOOKMARK [2][-]{subsection.4.0.9}{Timing Resolution}{subsection.4.0.7}% 39
 \BOOKMARK [2][-]{subsection.4.0.10}{Timing Calibration Procedure}{subsection.4.0.7}% 40
 \BOOKMARK [2][-]{subsection.4.0.11}{Electromagnetic Calorimeter Timing Performance}{subsection.4.0.7}% 41
-\BOOKMARK [0][-]{chapter.5}{ Particle Identification and Event Reconstruction}{}% 42
+\BOOKMARK [0][-]{chapter.5}{Particle Identification and Event Reconstruction}{}% 42
 \BOOKMARK [1][-]{section.5.1}{Particle Reconstruction}{chapter.5}% 43
 \BOOKMARK [2][-]{subsection.5.1.1}{Supercluster Reconstruction}{section.5.1}% 44
 \BOOKMARK [2][-]{subsection.5.1.2}{Vertex and Track Reconstruction}{section.5.1}% 45
@@ -52,4 +52,21 @@
 \BOOKMARK [0][-]{chapter.6}{Analysis Strategy for Long-Lived Particles }{}% 52
 \BOOKMARK [1][-]{section.6.1}{Analysis Strategy}{chapter.6}% 53
 \BOOKMARK [2][-]{subsection.6.1.1}{Signal and Background Modelling}{section.6.1}% 54
-\BOOKMARK [2][-]{subsection.6.1.
+\BOOKMARK [2][-]{subsection.6.1.2}{Datasets}{section.6.1}% 55
+\BOOKMARK [1][-]{section.6.2}{Event Selection}{chapter.6}% 56
+\BOOKMARK [1][-]{section.6.3}{Background Estimation}{chapter.6}% 57
+\BOOKMARK [1][-]{section.6.4}{Results}{chapter.6}% 58
+\BOOKMARK [2][-]{subsection.6.4.1}{Systematics Studies}{section.6.4}% 59
+\BOOKMARK [0][-]{chapter.7}{Limit Setting}{}% 60
+\BOOKMARK [1][-]{section.7.1}{Signal Efficiency and Acceptance}{chapter.7}% 61
+\BOOKMARK [1][-]{section.7.2}{Limit Setting}{chapter.7}% 62
+\BOOKMARK [2][-]{subsection.7.2.1}{CLs Technique}{section.7.2}% 63
+\BOOKMARK [0][-]{chapter.8}{Limit and Interpretation}{}% 64
+\BOOKMARK [1][-]{section.8.1}{Future Improvements}{chapter.8}% 65
+\BOOKMARK [2][-]{subsection.8.1.1}{Beam Halo Monitoring Detector}{section.8.1}% 66
+\BOOKMARK [2][-]{subsection.8.1.2}{Back-end Electronics upgrade HCAL}{section.8.1}% 67
+\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 68
+\BOOKMARK [0][-]{chapter*.60}{References}{}% 69
+\BOOKMARK [0][-]{appendix.A}{ Appendix A. \040Glossary and Acronyms}{}% 70
+\BOOKMARK [1][-]{section.A.1}{Glossary}{appendix.A}% 71
+\BOOKMARK [1][-]{section.A.2}{Acronyms}{appendix.A}% 72
