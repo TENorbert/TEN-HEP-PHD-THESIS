@@ -105,13 +105,13 @@ Cosmic muons, beam halo muons and ECAL spikes can all produced photons large rec
 A pre-event selection requiring at least a good vertex, 2 or more jets ECAL spike cleaning, DT time cosmic muon cleaning and CSC tight halo-muon cleaning is shown to be very useful in reducing and estimating the contribution of these important background sources.
 \subsubsection{Trigger}
 Event selection process begins online using a higher level trigger~(HLT). The HLT trigger used for this analysis during the $\sqrt{S} = 8$~TeV proton-proton collision is the \textit{HLT-DisplacedPhoton65-CaloIdVL-IsoL-PFMET25} seeded by \textit{HLT-L1SingleEG12} level 1 trigger. This trigger was developed primarily for the study of displaced photons. To avoid bias in event selection towards any particular model, this trigger only requires that an accepted event must have an isolated photon with a \pt threshold of 65~GeV/c and a \MET above 25~GeV. In order to study the trigger efficiency and turn-on curve~( where the event selection efficiency becomes very close to 100\%), we avoid  any correlation between the photon and \MET objects selection, by using a single muon dataset~(HLT-IsoMu30) to study the efficiency measurements.
-The results of the trigger efficiency measurements are shown in figure \ref{fig:HLTEff} against photon \pt and \MET.
+The results of the trigger efficiency measurements are shown in figure \ref{fig:HLTEff} against photon \pt and \MET. These efficiency studies are made using the \textit{HLT-Photon50-CaloIdVL-IsoL} which has no \MET and jet multiplicity requirement  as the denominator and the  \textit{HLT-DisplacedPhoton65-CaloIdVL-IsoL-PFMET25} as the numerator. A single photon dataset is used to verify these efficiency while and GMSB and $\gamma +$ jets samples is used to derive any correction factors between data and MC events.
 
 \begin{center}
 \centering
 %\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.4]{THESISPLOTS/PhotonEfficiencyVsPhotonpt.png}
+\includegraphics[scale=0.4]{THESISPLOTS/PhotonEfficiencyVsMET.png}
 \captionof{figure}{Trigger efficiency turn-on curves for photon \pt and $\MET > 25$~GeV~(left) and for \MET with photon $pt > 80$~GeV/c~(right).}
 \label{fig:HLTEff}
 \end{center}
@@ -252,8 +252,8 @@ The assumption of the upper bound of $10^{-5}$ is verified and validated using e
 
 
 \section{Background Estimation}
-A better understanding of the different background contributions to the photon ECAL time is using a two dimensional histogram of the photon $\eta$ and $\phi$ against the photon seed time and the timing distribution for different jet multiplicity events.
-This is seen in figure \ref{fig:BKGPLOTS}
+A better understanding of the different background contributions to the photon ECAL time is shown using a two dimensional histogram of the photon $\eta$ and $\phi$ against the photon seed time and the timing distribution for different jet multiplicity events. Thus the general event selection only requires that the event has at least a photon satisfying the photon selection of the previous section.
+The photon ECAL time inclusive distribution plots are shown in figure \ref{fig:BKGPLOTS}
 
 \begin{center}
 \centering
@@ -264,9 +264,117 @@ This is seen in figure \ref{fig:BKGPLOTS}
 \captionof{figure}{ECAL time Vs $\eta$~(left) and ECAL time Vs $\phi$~(right) for photons with $\pt > 80$~GeV from data. The lower plot show the photon timing distribution for events with different jet multiplicity.}
 \label{fig:BKGPLOTS}
 \end{center}
+From the above distributions, there seems to be contributions from quite a variety of sources. The possible sources considered in this analysis include: QCD processes  which we consider to be a combination of $\gamma + $jets, multi-jets and other processes producing photons from nominal bunch collisions. Most QCD processes are expected to have minimal contribution to large timing photons and \MET with their only contributions arising from timing miss-reconstruction and \MET miss-measurements due to miss-identification of jets as photons. Events with possible or true large ECAL time with significant contributions arise from machine induce backgrounds~(MIB)(arising from ghost/satellite bunch collisions), Halo muons, cosmic muons and anomalous events like spikes. These events bring significant contributions to both large photon times and large \MET where which is our possible signal sample.
+Thus, the data driven background estimation technique employed in this analysis is as follows:
+
+\begin{itemize}
+\item Divide the dataset into individual samples peculiar to the expected kinematics and observation of each individual background source,
+\item Identify observables based on its kinematics which can be used as variables to identify or tag and reject a particular background contribution with an acceptable amount of efficiency,
+\item Used alternate samples particular to each background source to calculate and verify the event tagging and miss-tag rate or efficiency,
+\item Use the tagging and miss-tag rates to estimate the background contribution of each individual background source in a well defined control region~(CR) or sample,
+\item Use another CR as a closure test sample to verify our background estimation method.
+\end{itemize}
+
+Due to a larger contribution of ghost/satellite bunch collisions observed in the endcap~(EE)(see figure \ref{fig:TIMEECAL}) and poor timing resolutions~($\approx 3.0$~ns), the endcap is not used in this analysis. Thus events are selected if the photon in the event is in the barrel i.e $|\eta_{\gamma}| < 1.47$.
+
+In order to study the background in a data driven method, we divide the dataset into two major samples: Nominal or in-time photons whose photon ECAL time is within $\pm 1$~ns and the event must have at least 2 jets,  and Off-timing photons where the photon ECAL time is $ > 2$~ns but $ < -3$~ns with the event containing no jets. Our motivation is simply because the probability of a MIB or non-collision background producing an event with high jet multiplicity is small  and even reduces with the \pt of of the resulting photon increases while nominal photons are mostly produced in association with jets due to the nature of QCD interactions and are mostly in-time.
+
+By comparing these two samples, we can understand the difference and similarities between collision and non-collision backgrounds. 
+
+\subsection{Non-Collision Backgrounds}
+\subsubsection{Halo Photons}
+Energetic muons (energy up to 1 TeV) produced in Beam-induced backgrounds~(BIB) as a result of proton losses $z = 150$~m from the interaction point of the CMS detector and inelastic proton interaction with residual gas inside the beam pipe bremsstrahlung in ECAL crystals producing photons with very high \pt and significantly large ECAL time. The rate of these BIB depends on the beam current and the operational conditions of the LHC which include machine optics, collimator settings, residual gas densities and filling scheme. These muons which travel in a near parallel direction to normal protons in the beam pipe, referred to as halo muons are expected to leave a muons tracks  in the Endcap muon systems with a corresponding associated ECAL electromagnetic cluster in the ECAL. They are also peculiar in that they travel from one side of the detector to the other along the $z$-direction, and their  Time-Of-Flight~(TOF) with respect to a potential hit position in the ECAL sub-detector can be estimated as well as measured.
+The expected time at ECAL of a  halo muon travelling parallel along the beam line is given using a simple expression given as:
+
+\begin{equation}
+t^{\mbox{expected}}_{\mbox{ECAL}} = -1/C\left( \pm Z_{\mbox{cluster}} + \sqrt{Z^{2}_{\mbox{cluster}} + R^{2}_{\mbox{cluster}}}  \right)
+\end{equation}
+
+and $\eta$ dependence on this expression showing the different potential hit positions of the muons in ECAL can be seen by re-expressing this same expression in terms of $\eta$ and $\phi$ as:
+\begin{equation}
+t^{\mbox{expected}}_{\mbox{ECAL}} = - \frac{R_{\mbox{cluster}}}{2C} \exp{-\eta}
+\end{equation} 
+
+where, $Z$ is the cluster position or longitudinal distance along $z$-axis from nominal interaction point, $R$ is the radial distance of the cluster from the beam line; $R^{EB}_{\mbox{cluster}} = 1.29$~m and $C$ is the speed of light.
+
+With this expression compared to the value from data,we select a sample (figure \ref{ fig:HALO}) to study the halo properties in the negative timing distribution. 
+Additional identification of halo muons can be performed using the the Cathode Strip Chambers~(CSC) and the ECAL calorimeter information, Since halo muons are not bent in the azimuthal direction by the magnets and mainly located around the $y=0$ plane, measuring the difference in $\phi$ between the CSC segment position and the ECAL photon cluster. A matching of these two referred to as $CSC(Seg,\gamma)\Delta\phi$ to within $3\deg$ (figure \ref{fig:HALO}) appears to provide a clear distinction between Halo photons and true photons from collision.
+
+A distribution of the Halo photon time against the photon $\phi$ shows that most halo photon are distributed around $\phi = 0, \pm \pi$ as expected.
+
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\captionof{figure}{ECAL time Vs $\eta$~(left) and ECAL time Vs $\phi$~(right) and $CSC(Seg,\gamma)\Delta\phi$  for photons with $\pt > 80$~GeV from data. Halo photons show a clear matched between CSC segments and ECAL cluster in $\Delta\phi$  with their distribution peaking at $\phi = 0, \pm \pi$ and also the shape of their expected time.}
+\label{fig:HALO}
+\end{center} 
 
 
-\subsubsection{Selection Efficiency and Miss-Tag Rate}
+
+\subsubsection{Cosmic-Ray Photons}
+Cosmic muons like beam Halo muons produced with sufficient energy  will bremsstrahlung in the ECAL producing photons referred here as \textit{cosmic-ray photons}. Unlike halo muons, cosmic muons can arrive at ECAL from any direction. Nevertheless, they are expected to hits in the Drift Tubes~(DT) segments. Thus, using the DT and corresponding  muon photon clusters in ECAL we can match the  hit position in DT segments to ECAL clusters within $\Delta\eta$ and $\Delta\phi$ between the DT segment hit and the ECAL cluster. The two dimensional distribution for $DT\Delta\eta(DT,\gamma)$ and $DT\Delta\phi(DT,\gamma)$ shown in figure \ref{fig:COSMIC} is shown for events with photon time above $2$~ns and time below $-3$~ns. Events containing photons with small $\Delta\eta$ and $\Delta\phi$ are considered to be strong candidates for cosmic-ray photons. The same variables is used to identify cosmic-ray photons from a pure cosmic ray(data taken when there are no proton-proton collisions) sample and the distributions show very similar features as can be seen in figure 
+\ref{fig:COSMIC}.
+
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\captionof{figure}{Two dimensional plot showing $DT\Delta\phi(Seg,\gamma)$ against $DT\Delta\eta(Seg,\gamma)$ for photons with $\pt > 80$~GeV, ECAL Time $> 2$~ns and ECAL Time $< -3$~ns in proton-proton collision data~(left) and non-proton-proton collision or cosmic data~(right). Small $\Delta\eta$ and $\Delta\phi$ are cosmic-ray photon candidates.}
+\label{fig:COSMIC}
+\end{center}
+
+\subsubsection{Anomalous Photons: Spikes}
+Neutrons and some charge hadrons depositing their energy directly to the APDs instead of the crystal scintillation are referred to as \textit{anomalous signal} or \textit{spikes}. These spikes can mimic true photons from proton-proton collisions  leading to mis-identification of spikes as photons. Spikes are easily miss-identified as energetic photons and isolated. However, most spikes show a different signal pulse shape to that of photons and also have large negative ECAL time. In addition to energy topological selection cuts and ECAL cleaning that is done during online and offline event selection, ECAL clusters belonging to spikes are usually made up of very few crystals compared to photons clusters with many crystals. Thus using the number of crystals making in a reconstructed super cluster, we can distinguish true isolated photons from events with spikes. It has been observed that spike contributions increases with increase in LHC luminosity. Thus, as a selection criteria, photons with  Not identified as cosmic-ray photons or halo photons and with number of good crystals less than $7$ are considered to be spike candidates. Figure \ref{fig:SPIKES} show the distribution of the number crystals in a photon super cluster comparing photons with ECAL time $ < -3$~ns, in-time photons~( ECAL $|time| < 1$~ns and a selected spike control sample. The spike control sample is selected using the "swiss-cross" variable which is used to identify and reject events with spikes during super cluster reconstruction.
+
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\captionof{figure}{Plot showing  Number of crystals in photon super cluster for photons with $\pt > 80$~GeV, ECAL Time $< -3$~ns~(blue), control region ($|t| < 1.0$~ns~(black) and spike constrol sample~(red).}
+\label{fig:SPIKES}
+\end{center}
+
+
+\subsection{Collision Backgrounds}
+
+\subsubsection{QCD Photons and Pile Up}
+
+
+
+
+
+
+\paragraph*{\MET Re-Calculation}\mbox{}\\
+The presence of timing cuts of $|t_{RECO}| > 3.0$~ns in EB in the official CMS electromagnetic super cluster reconstruction as an "out-of-time" event cleaning procedure, results in a difference in the calculation of \MET for "in-time" events~($|t_{\gamma}| < 3.0$~ns) and "out-of-time" events~($|t_{\gamma}| > 3.0$~ns). Out-of-time photons are not taking into consideration when calculating the total transverse momentum of an event to derived the total transverse momentum imbalance, thus, we have to recalculate the \MET for events with out-of-time photons taking into consideration \pt contributions from these out-of-time photon. This results in us using two different sets of \MET whose   definition are given as follows:
+\begin{enumerate}
+\item ${\MET}_{1}$: \MET for events with in-time photon where photon \pt contributions have been taking into consideration during \MET measurements.
+\item ${\MET}_{2}$: Recalculated \MET of the event taking into consideration \pt contributions from out-of-time photons.
+\end{enumerate}
+  
+The distributions for ${\MET}_{1}$ and ${\MET}_{2}$ can be seen in figure \ref{fig:METS}.
+
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=0.4]{THESISPLOTS/CMS_Slice.png}
+%\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\captionof{figure}{Figure showing \MET distributions for events with out-of-time and in-time photons with $\pt > 80$~GeV. ${\MET}_{1}$ and ${\MET}_{2}$ definitions are given in context. }
+\label{fig:METS}
+\end{center}
+
+
+
+
+
+\subsection{Selection Efficiency and Miss-Tag Rate}
+
+
+
 
 \section{Results}
 
