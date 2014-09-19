@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Limit_Setting.tex: Limit Setting
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Limit Setting}
+\chapter{Limit Calculation}
 \label{Limit_Setting}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Signal Efficiency and Acceptance}
@@ -9,13 +9,22 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Limit Setting}
+\section{Limit Calculation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The limit setting procedure agreed by the CMS statistical committee is the CLs technique \cite{CLS}.
+The upper limit calculation procedure used in this analysis is the CLs technique. We fed carefully estimated amounts 
+of background and signal with systematics to obtain the limit.
 The variable for which the 95\% upper limit is set unlike previous experiments is based entirely on the neutralino proper decay length, $c\tau_{\tilde{\chi}^{0}_{1}}$. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{CLs Technique}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The $CL_{s}$ technique \cite{CLS} is attributed as the standard technique or framework for setting limits when determining exclusion intervals in a search and discovery experiment. It has been shown to to work during the search for the Higgs boson at LEP and recently in the discovery of the scalar boson in 2012, by both CMS and ATLAS experiments with the mass of this boson being: $m_{H} = 125.36\pm 0.37(stat.Unc)\pm0.18(syst.Unc)$.
 
+This method of limit calculation has been optimised and is combined into a single tool call \textit{HiggsCombine}.
+HiggsCombine \cite{LIMIT} is the official standard tool recommended by the CMS statistical committee and CMS Higgs group for calculating limits in any CMS search and discovery analysis.
+I takes as input estimate of the number or distribution of signal and background and with the observed number or distribution from data, produces an upper limit in the production cross section calculation.
+Higgscombine tool has advantage in that, it allows for the possibility to use several different statistical methods of calculating the upper limit. This way, once can make comparison and check for any inconsistency. In this analysis, we have employed an Asymptotic \cite{ASYMP} and Hybridnew~(a hybrid of Frequentist  and Bayesian methods),\cite{LIMIT}, to calculate out upper limits. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+

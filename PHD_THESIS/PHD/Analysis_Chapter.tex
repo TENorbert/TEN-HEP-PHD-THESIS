@@ -246,7 +246,7 @@ The ECAL timing distribution for photons with $pt > 80$~GeV in the ECAL~(barrel 
 \label{fig:TIMEECAL}
 \end{center}
 
- with a clear 2.5~ns repeated discrete pattern with most of these photons arriving in the endcap, $ 1.47 < \eta < 3.0$ compared to the barrel, $|\eta| < 1.47$. These are photons originating from collisions of \textit{Ghost} and \textit{Satellite} bunches with either the main proton collision bunch or \textit{Ghost}/\textit{Satellite}. They contribute an irreducible amount to the photon time distribution which is very challenging to reject or estimate quantitatively. A rough estimate can be obtained by looking at ratio of the proton population in the filling profile of the LHC RF cavities as mentioned in section 3.1.5 of chapter 3 which gives a factor $10^{-5}$ compared to contributions from the main proton proton collision. It is observed that their main contribution is towards the endcap crystals as very few photons from these secondary collisions are produced with enough \pt compared to those from main proton bunch collisions. And even if they do, the ratio of photons from these secondary proton collision to that of the main proton-proton collision has an upper bound of  $10^{-5}$. 
+with a clear 2.5~ns repeated discrete pattern with most of these photons arriving in the endcap, $ 1.47 < \eta < 3.0$ compared to the barrel, $|\eta| < 1.47$. These are photons originating from collisions of \textit{Ghost} and \textit{Satellite} bunches with either the main proton collision bunch or \textit{Ghost}/\textit{Satellite}. They contribute an irreducible amount to the photon time distribution which is very challenging to reject or estimate quantitatively. A rough estimate can be obtained by looking at ratio of the proton population in the filling profile of the LHC RF cavities as mentioned in section 3.1.5 of chapter 3 which gives a factor $10^{-5}$ compared to contributions from the main proton proton collision. It is observed that their main contribution is towards the endcap crystals as very few photons from these secondary collisions are produced with enough \pt compared to those from main proton bunch collisions. And even if they do, the ratio of photons from these secondary proton collision to that of the main proton-proton collision has an upper bound of  $10^{-5}$. 
 Thus, the endcap is not used in this analysis for the reason that these contributions is more in the endcap and the timing resolution in the endcap is relatively poor compared to that of the barrel.
 The assumption of the upper bound of $10^{-5}$ is verified and validated using events with $Z\rightarrow e^{+}e^{-}$ as $Z$ events must be produced from main proton-proton collisions rather than  ghost/satellite collisions by studying electron candidates with time within [-2.0, 2.0]~ns window. This will be explain in detail in the background estimation section which follows.
 
@@ -287,12 +287,12 @@ Energetic muons (energy up to 1 TeV) produced in Beam-induced backgrounds~(BIB) 
 The expected time at ECAL of a  halo muon travelling parallel along the beam line is given using a simple expression given as:
 
 \begin{equation}
-t^{\mbox{expected}}_{\mbox{ECAL}} = -1/C\left( \pm Z_{\mbox{cluster}} + \sqrt{Z^{2}_{\mbox{cluster}} + R^{2}_{\mbox{cluster}}}  \right)
+t^{\mbox{expected}}_{\mbox{ECAL}} = -1/c\left( \pm Z_{\mbox{cluster}} + \sqrt{Z^{2}_{\mbox{cluster}} + R^{2}_{\mbox{cluster}}}  \right)
 \end{equation}
 
 and $\eta$ dependence on this expression showing the different potential hit positions of the muons in ECAL can be seen by re-expressing this same expression in terms of $\eta$ and $\phi$ as:
 \begin{equation}
-t^{\mbox{expected}}_{\mbox{ECAL}} = - \frac{R_{\mbox{cluster}}}{2C} \exp{-\eta}
+t^{\mbox{expected}}_{\mbox{ECAL}} = - \frac{R_{\mbox{cluster}}}{2c} \exp{(-\eta)}
 \end{equation} 
 
 where, $Z$ is the cluster position or longitudinal distance along $z$-axis from nominal interaction point, $R$ is the radial distance of the cluster from the beam line; $R^{EB}_{\mbox{cluster}} = 1.29$~m and $C$ is the speed of light.
@@ -307,7 +307,8 @@ A distribution of the Halo photon time against the photon $\phi$ shows that most
 %\mbox{
 \includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
 \includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.5]{THESISPLOTS/CSC_Segment_Halo_data.png}
+\includegraphics[scale=0.2]{THESISPLOTS/Figure_016-c.pdf}
 \captionof{figure}{ECAL time Vs $\eta$~(left) and ECAL time Vs $\phi$~(right) and $CSC(Seg,\gamma)\Delta\phi$  for photons with $\pt > 80$~GeV from data. Halo photons show a clear matched between CSC segments and ECAL cluster in $\Delta\phi$  with their distribution peaking at $\phi = 0, \pm \pi$ and also the shape of their expected time.}
 \label{fig:HALO}
 \end{center} 
@@ -321,8 +322,8 @@ Cosmic muons like beam Halo muons produced with sufficient energy  will bremsstr
 \begin{center}
 \centering
 %\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.5]{THESISPLOTS/Cosmic_Ray_Photons_Data.png}
+\includegraphics[scale=0.5]{THESISPLOTS/Cosmic_Ray_Photons_Cosmic_dataset.png}
 \captionof{figure}{Two dimensional plot showing $DT\Delta\phi(Seg,\gamma)$ against $DT\Delta\eta(Seg,\gamma)$ for photons with $\pt > 80$~GeV, ECAL Time $> 2$~ns and ECAL Time $< -3$~ns in proton-proton collision data~(left) and non-proton-proton collision or cosmic data~(right). Small $\Delta\eta$ and $\Delta\phi$ are cosmic-ray photon candidates.}
 \label{fig:COSMIC}
 \end{center}
@@ -335,7 +336,7 @@ Neutrons and some charge hadrons depositing their energy directly to the APDs in
 %\mbox{
 \includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
 \includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Plot showing  Number of crystals in photon super cluster for photons with $\pt > 80$~GeV, ECAL Time $< -3$~ns~(blue), control region ($|t| < 1.0$~ns~(black) and spike constrol sample~(red).}
+\captionof{figure}{Plot showing  Number of crystals in photon super cluster for photons with $\pt > 80$~GeV, ECAL Time $< -3$~ns~(blue), control region ($|t| < 1.0$~ns~(black) and spike control sample~(red).}
 \label{fig:SPIKES}
 \end{center}
 
@@ -343,11 +344,14 @@ Neutrons and some charge hadrons depositing their energy directly to the APDs in
 \subsection{Collision Backgrounds}
 
 \subsubsection{QCD Photons and Pile Up}
+The LHC provides proton-proton collisions every $25$~ns, however during the 2012 LHC run, these bunch spacing time increased to $50$~ns. However, as discussed in section $3.1.5$ on LHC Bunch structure, the presence of 
+Satellite/ghost bunches spaced in $5.0$~ns or $2.5$~ns  can also contribute to producing delayed photons either from collisions between these satellite/ghost bunches or with the main proton bunch collisions.
+As observed in figure \ref{fig:TIMEECAL}, photons from these events are a serious background source to delayed photons and most of these photons will pass all the above event and photon criteria selections. Thus, a careful 
+estimation of this contribution is the major task of the background estimation in this analysis.
+The kinematics of these events are very similar and as a result, we employ the standard ABCD method to for estimating these background contribution  to the signal region.
 
-
-
-
-
+First before proceeding, we should mention another possible concern which deals with the difference in the measurement of \MET in most analysis which mostly require events to be \textit{in-time} to this
+analysis whose event selection has been extended to include \textit{Out-of-time} events.
 
 \paragraph*{\MET Re-Calculation}\mbox{}\\
 The presence of timing cuts of $|t_{RECO}| > 3.0$~ns in EB in the official CMS electromagnetic super cluster reconstruction as an "out-of-time" event cleaning procedure, results in a difference in the calculation of \MET for "in-time" events~($|t_{\gamma}| < 3.0$~ns) and "out-of-time" events~($|t_{\gamma}| > 3.0$~ns). Out-of-time photons are not taking into consideration when calculating the total transverse momentum of an event to derived the total transverse momentum imbalance, thus, we have to recalculate the \MET for events with out-of-time photons taking into consideration \pt contributions from these out-of-time photon. This results in us using two different sets of \MET whose   definition are given as follows:
@@ -356,29 +360,164 @@ The presence of timing cuts of $|t_{RECO}| > 3.0$~ns in EB in the official CMS e
 \item ${\MET}_{2}$: Recalculated \MET of the event taking into consideration \pt contributions from out-of-time photons.
 \end{enumerate}
   
-The distributions for ${\MET}_{1}$ and ${\MET}_{2}$ can be seen in figure \ref{fig:METS}.
+The distributions for ${\MET}_{1}$ and ${\MET}_{2}$  against ECAL time can be seen in figure \ref{fig:METS}.
 
 \begin{center}
 \centering
 %\mbox{
-\includegraphics[scale=0.4]{THESISPLOTS/CMS_Slice.png}
-%\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
 \captionof{figure}{Figure showing \MET distributions for events with out-of-time and in-time photons with $\pt > 80$~GeV. ${\MET}_{1}$ and ${\MET}_{2}$ definitions are given in context. }
 \label{fig:METS}
 \end{center}
 
+In order to estimating the background contribution from collision and non-collision sources, we employ a 3-dimensional space involving ${\MET}_{1}$, ${\MET}_{2}$ and ECAL time.  Our signal region is events with $t > 3.0$~ns and large \MET where by large \MET we mean events with  large  ${\MET}_{1}$ and  ${\MET}_{2}$. Non-collision events have large time as they are mostly out-of-time and by \MET calculation requirements should have large  ${\MET}_{2}$. While collision produced backgrounds events are mostly in-time and may often be measured with $t > 3.0$~ns due to either mis-reconstruction or from ghost/satellite contributions. However, these events cannot be produced with large correctly calculated \MET because for example in $\gamma +$ jets events, very small \MET due to energy miss-measurements is expected to be produced.
+ But if the collision event is produced and arrives at ECAL with $t > 3$~ns, and the \MET is not properly calculated (since events with photons ECAL time, $|t| > 3$~ns are rejected during standard super cluster reconstruction with their \pt contribution  not taken into account in the \MET calculation) which in this case is large ${\MET}_{1}$, they will fluctuate or be easily considered as additional contribution to the non-collision background estimation in our signal region.
+Therefore, we select samples or control regions~(CR) which enhances each interested background source and use that CR to estimate the enhanced background contribution taking into account the possible contamination of an alternate background source due to possible fluctuations in event rate.
+The overall estimation technique is verified through a closure test procedure and the collision background estimation verified and validated using an extra control sample of $Z \rightarrow \ell \ell$ events where the $\ell$ are electron candidates reconstructed using photon candidates extended to include out-of-time events.
+
+Signal Region: Events with ${\MET}_{2} > 60$~GeV, ${\MET}_{1} > 60$~GeV and $t > 3.0$~ns.
+\paragraph*{${\MET}_{2} > 60$~GeV } : CR in which collision~(QCD) background is suppressed while that for halo, cosmic ray and spike photon are all enhanced.
+Within this space, we define four regions representing ABCD to estimate the the background contribution:
+\begin{itemize}
+\item A: Events with ${\MET}_{1} < 60$~GeV and $t < -3.0$~ns.
+\item C: Events with ${\MET}_{1} < 60$~GeV and $t >  3.0$~ns.
+\item B: events with ${\MET}_{1} > 60$~GeV and $t < -3.0$~ns.
+\item D: events with ${\MET}_{1} > 60$~GeV and $t >  3.0$~ns.
+\end{itemize}
+Thus, the number of events expected in CR D under the assumption that $\frac{N_{D}}{N_{B}} = \frac{N_{C}}{N_{A}}$  is given as:
+
+\begin{equation}
+N_{D} = \left(\frac{N_{B}}{N_{A}} \right)\cdot N_{C}
+\end{equation}
+
+\paragraph*{${\MET}_{1} > 60$~GeV }: CR in which non-collision background~(halo, cosmic and spike photons) contribution is suppressed wheras collision~(QCD) background contribution is enhanced.
+Further dividing this CR into according to $A^{\prime}$,$B^{\prime}$,$C^{\prime}$,$D^{\prime}$ to estimate its contribution where:
+\begin{itemize}
+\item $A^{\prime}$: Events with ${\MET}_{2} < 60$~GeV and $t < -3.0$~ns.
+\item $B^{\prime}$: Events with ${\MET}_{2} > 60$~GeV and $t < -3.0$~ns.
+\item $I^{\prime}$: Events with ${\MET}_{2} < 60$~GeV and $|t| < 2.0$~ns.
+\item $I$: Events with ${\MET}_{2} > 60$~GeV and $|t| < 2.0$~ns.
+\end{itemize}
+we also define a in time CR as:
+\begin{itemize}
+\item $C^{\prime}$: Events with ${\MET}_{2} < 60$~GeV and $t >  3.0$~ns.
+ \item $D^{\prime}$: Events with ${\MET}_{2} > 60$~GeV and $t >  3.0$~ns.
+ \item $I^{\prime}$: Events with ${\MET}_{2} < 60$~GeV and $|t| < 2.0$~ns.
+\item $I$: Events with ${\MET}_{2} > 60$~GeV and $|t| < 2.0$~ns.
+\end{itemize}
+
+Now using using the above regions we can estimate the contributions of collision background in both CRs $B$ and $D$ as follows:
+\begin{equation}
+\displaystyle{N^{B}_{col} = N_{B^{\prime}}  = \left( \frac{I}{I^{\prime}} \right)\cdot N_{A^{\prime}}}, \quad \quad
+\displaystyle{N^{D}_{col} = N_{D^{\prime}}  = \left( \frac{I}{I^{\prime}} \right)\cdot N_{C^{\prime}}}
+\end{equation}
+where we have assumed that $\frac{N_{B^{\prime}}}{N_{A^{\prime}}}  = \frac{N_{I}}{N_{I^{\prime}}}$ and  $\frac{N_{D^{\prime}}}{N_{C^{\prime}}}  = \frac{N_{I}}{N_{I^{\prime}}}$.
+\newline
+
+$N^{B}_{\mbox{col}}$ and $N^{D}_{\mbox{col}}$ are collision contributions to  CRs $B$ and $A$ such that the final non-collision background estimation~(since the dominant contribution to total background  is the non-collision background source) is given as:
+
+\begin{equation}
+N^{D}_{\mbox{Total}} = \left(\frac{N_{B} - N^{B}_{col} }{N_{A}} \right)\cdot N_{C} + N^{D}_{\mbox{col}} 
+\end{equation}
+where $N^{D}_{\mbox{Total}} = N^{D}_{\mbox{non-col}} + N^{D}_{\mbox{col}}$ is the total background estimation in  our signal region.
+A diagram showing the above background estimation technique is shown in figure \ref{fig:BKGESTI}.
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\captionof{figure}{Diagrams showing background estimation technique.}
+\label{fig:BKGESTI}
+\end{center}
+
+A closure test using events with $0-\mbox{jets}$ and $1-jet$ is used to verify the above  background estimation technique and the above assumptions are cross checked using $Z\rightarrow e^{+} e^{-}$ events. 
+The underlying assumption here is that background contributions to large timing from collision source referred here as QCD is very small and must be of the order of $10^{-5}$ in comparison to in-time photons. i.e the ratio 
+$ N_{t > 3~ns}/ N_{|t| < 2.0~ns} \approx 10^{-5}$ with $N$ being the number of photons.
+
+\paragraph*{Closure Test} \mbox{}\\
 
 
 
-
-\subsection{Selection Efficiency and Miss-Tag Rate}
+ \paragraph*{Cross Check} \mbox{} \\
+ 
+\subsection{Selection Efficiency and Mis-Tagging Rate}
 
 
 
 
 \section{Results}
+We have used only the photon arrival time at ECAL to distinguish signal from SM background with our acceptance region being photons with ECAL time $|t| > 3.0$~ns. The final number of events estimated for each background component and observed from data after passing all our selection cuts is shown in table \ref{tab:RESULT}.
+
+\begin{center}
+%\begin{table}[ht]
+%\renewcommand\arraystretch{1.2}
+\centering
+\begin{tabular}{c c}
+\hline
+\bfseries{SM Background/SPS8 GMSB Signal} & \bfseries {Number of Events}\\
+\hline
+\texttt{QCD~(Collision)}  & $000.00 \pm 0.000$\\
+\texttt{Halo Photons}  & $000.00 \pm 0.000$ \\
+\texttt{Cosmic Photons} & $000.00 \pm 0.000$ \\
+\texttt{Anomalous photons/Spikes} & $000.00 \pm 0.000$\\
+\texttt{Total SM background} & $000.00 \pm 0.000$ \\
+\hline \hline
+\texttt{Data} & $000.00 \pm 0.000$ \\
+\hline 
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=93$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=185$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=368$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=500$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=733$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1000$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1076$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1444$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=2000$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=2161$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=3000$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=6000$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=12000$~mm) & $000.00 \pm 0.000$ \\
+\hline \hline
+\end{tabular}
+\captionof{table}{Final number of events estimated for each background and the number of events passing out event selection and acceptance criteria.}
+\label{tab:RESULT}
+%\end{table}
+\end{center}
+
+
 
 \subsection{Systematics Studies}
+The different sources of systematics which affect this analysis and the estimated contribution of each identified systematics is used in the calculation of the upper limit on observed signal cross-section is shown in table \ref{tab:SYST}.
+The systematic uncertainty on luminosity measurement has the recommended value of $2.2$\%. The uncertainty for the jet energy scale correction has also been measured using the standard CMSSW tool by \cite{JES}. The uncertainty on the photon energy scale in barrel was estimated to be 1.0\% and based on the final-state radiation~(FSR) in $Z\rightarrow \mu\mu\gamma$ events \cite{PES}. The uncertainty from pardon density functions~(PDF) evaluated using the re-weighting technique and Master equation of CTEQ65 model set described in \cite{PDF}. The uncertainty on the \MET resolution uses a conservative estimate from \cite{METRES}. The uncertainty on the ECAL timing obtained be comparing the peak in the timing distribution between $\gamma +$ jet sample and data events with time $|t| < 2$~ns to be of the order of 200~ps per event and from a study of high \pt photons beyond gain transitions and has been agreed by ECAL DPG to be a conservative estimate. Another important source of systematics is in the selection of the background control samples and estimation and individual systematics in the tagging and miss-tagging of non-collision background and also with the estimation of background contributions from collisions. All these separate systematics contributions have been combined into a single background estimation systematics referred to as background estimation systematics. The summary of every systematics in shown in table \ref{tab:SYST}. 
+
+
+
+\begin{center}
+%\begin{table}[ht]
+%\renewcommand\arraystretch{1.2}
+\centering
+\begin{tabular}{c c}
+\hline
+\bfseries{Source} & \bfseries {Uncertainty on} $\sigma^{Exp}_{UL}$(\%)\\
+\hline
+\texttt{Photon energy scale}~(1.0\%)  & $< 3.0$\% \\
+\texttt{Jet energy scale}  & $< 0.05$\% \\
+\texttt{Jet energy resolution}~(10\%) &$ < 1.90$\% \\
+\texttt{PDF uncertainty}~(10\%) & $< 1.70$\% \\
+\texttt{\MET resolution}~(10\%) & $ <2.8$\%  \\
+\texttt{ECAL time uncertainty}~(0.5~ns) & $<5.0$\% \\
+\hline
+\texttt{Background estimation uncertainty}~(20.0) &$<10.0$\% \\
+\hline 
+\texttt{Luminosity}~(4.5\%) & $< 2.2$\% \\
+\hline
+\end{tabular}
+\captionof{table}{Summary of systematic uncertainties on the signal~(top), background~(middle) and machine~(bottom) as used in the $\sigma_{UL}$ calculation.}
+\label{tab:SYST}
+%\end{table}
+\end{center}
+
 
 
 \label{Search_Analysis_chapter}
