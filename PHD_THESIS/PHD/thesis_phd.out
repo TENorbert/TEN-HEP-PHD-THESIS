@@ -39,8 +39,8 @@
 \BOOKMARK [2][-]{subsection.4.0.9}{Timing Resolution}{subsection.4.0.7}% 39
 \BOOKMARK [2][-]{subsection.4.0.10}{Timing Calibration Procedure}{subsection.4.0.7}% 40
 \BOOKMARK [2][-]{subsection.4.0.11}{Electromagnetic Calorimeter Timing Performance}{subsection.4.0.7}% 41
-\BOOKMARK [0][-]{chapter.5}{Particle Identification and Event Reconstruction}{}% 42
-\BOOKMARK [1][-]{section.5.1}{Particle Reconstruction}{chapter.5}% 43
+\BOOKMARK [0][-]{chapter.5}{Physics Objects Reconstruction and Identification in CMS}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Physics Objects Reconstruction}{chapter.5}% 43
 \BOOKMARK [2][-]{subsection.5.1.1}{Supercluster Reconstruction}{section.5.1}% 44
 \BOOKMARK [2][-]{subsection.5.1.2}{Vertex and Track Reconstruction}{section.5.1}% 45
 \BOOKMARK [2][-]{subsection.5.1.3}{Photon or Electron Identification}{section.5.1}% 46
@@ -54,22 +54,27 @@
 \BOOKMARK [2][-]{subsection.6.1.1}{Signal and Background Modelling}{section.6.1}% 54
 \BOOKMARK [2][-]{subsection.6.1.2}{Datasets}{section.6.1}% 55
 \BOOKMARK [1][-]{section.6.2}{Event Selection}{chapter.6}% 56
-\BOOKMARK [1][-]{section.6.3}{Background Estimation}{chapter.6}% 57
-\BOOKMARK [2][-]{subsection.6.3.1}{Non-Collision Backgrounds}{section.6.3}% 58
-\BOOKMARK [2][-]{subsection.6.3.2}{Collision Backgrounds}{section.6.3}% 59
-\BOOKMARK [2][-]{subsection.6.3.3}{Selection Efficiency and Mis-Tagging Rate}{section.6.3}% 60
-\BOOKMARK [1][-]{section.6.4}{Results}{chapter.6}% 61
-\BOOKMARK [2][-]{subsection.6.4.1}{Systematics Studies}{section.6.4}% 62
-\BOOKMARK [0][-]{chapter.7}{Limit Calculation}{}% 63
-\BOOKMARK [1][-]{section.7.1}{Signal Efficiency and Acceptance}{chapter.7}% 64
-\BOOKMARK [1][-]{section.7.2}{Limit Calculation}{chapter.7}% 65
-\BOOKMARK [2][-]{subsection.7.2.1}{CLs Technique}{section.7.2}% 66
-\BOOKMARK [0][-]{chapter.8}{Limit Interpretation}{}% 67
-\BOOKMARK [1][-]{section.8.1}{Future Improvements}{chapter.8}% 68
-\BOOKMARK [2][-]{subsection.8.1.1}{Beam Halo Monitoring Detector}{section.8.1}% 69
-\BOOKMARK [2][-]{subsection.8.1.2}{Back-end Electronics upgrade HCAL}{section.8.1}% 70
-\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 71
-\BOOKMARK [0][-]{chapter*.68}{References}{}% 72
-\BOOKMARK [0][-]{appendix.A}{ Appendix A. \040Glossary and Acronyms}{}% 73
-\BOOKMARK [1][-]{section.A.1}{Glossary}{appendix.A}% 74
-\BOOKMARK [1][-]{section.A.2}{Acronyms}{appendix.A}% 75
+\BOOKMARK [2][-]{subsection.6.2.1}{Trigger}{section.6.2}% 57
+\BOOKMARK [2][-]{subsection.6.2.2}{Offline Selection}{section.6.2}% 58
+\BOOKMARK [2][-]{subsection.6.2.3}{ECAL Time}{section.6.2}% 59
+\BOOKMARK [1][-]{section.6.3}{Background Estimation}{chapter.6}% 60
+\BOOKMARK [2][-]{subsection.6.3.1}{Non-Collision Backgrounds}{section.6.3}% 61
+\BOOKMARK [2][-]{subsection.6.3.2}{Collision Backgrounds}{section.6.3}% 62
+\BOOKMARK [2][-]{subsection.6.3.3}{Event Cleaning}{section.6.3}% 63
+\BOOKMARK [1][-]{section.6.4}{Results}{chapter.6}% 64
+\BOOKMARK [2][-]{subsection.6.4.1}{Systematics Studies}{section.6.4}% 65
+\BOOKMARK [0][-]{chapter.7}{Limit Calculation}{}% 66
+\BOOKMARK [1][-]{section.7.1}{Limit Calculation}{chapter.7}% 67
+\BOOKMARK [2][-]{subsection.7.1.1}{CLs Technique}{section.7.1}% 68
+\BOOKMARK [2][-]{subsection.7.1.2}{Statistical Test Formalism}{section.7.1}% 69
+\BOOKMARK [2][-]{subsection.7.1.3}{Test Statistics and p-values}{section.7.1}% 70
+\BOOKMARK [0][-]{chapter.8}{Limit Interpretation}{}% 71
+\BOOKMARK [1][-]{section.8.1}{Signal Efficiency and Acceptance}{chapter.8}% 72
+\BOOKMARK [1][-]{section.8.2}{Future Improvements}{chapter.8}% 73
+\BOOKMARK [2][-]{subsection.8.2.1}{Beam Halo Monitoring Detector}{section.8.2}% 74
+\BOOKMARK [2][-]{subsection.8.2.2}{Back-end Electronics upgrade HCAL}{section.8.2}% 75
+\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 76
+\BOOKMARK [0][-]{chapter*.66}{References}{}% 77
+\BOOKMARK [0][-]{appendix.A}{ Appendix A. \040Glossary and Acronyms}{}% 78
+\BOOKMARK [1][-]{section.A.1}{Glossary}{appendix.A}% 79
+\BOOKMARK [1][-]{section.A.2}{Acronyms}{appendix.A}% 80

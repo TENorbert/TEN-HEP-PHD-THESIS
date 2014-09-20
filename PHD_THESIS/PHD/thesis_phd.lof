@@ -52,9 +52,11 @@
 \contentsline {figure}{\numberline {6.11}{\ignorespaces Figure showing \ensuremath {E_{\mathrm {T}}^{\text {miss}}}\xspace distributions for events with out-of-time and in-time photons with $\ensuremath {p_{\mathrm {T}}}\xspace > 80$\nobreakspace {}GeV. ${\ensuremath {E_{\mathrm {T}}^{\text {miss}}}\xspace }_{1}$ and ${\ensuremath {E_{\mathrm {T}}^{\text {miss}}}\xspace }_{2}$ definitions are given in context. \relax }}{129}{figure.6.11}
 \contentsline {figure}{\numberline {6.12}{\ignorespaces Diagrams showing background estimation technique.\relax }}{132}{figure.6.12}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Sampling distributions for $f(t_{\mu }|\mu )$ showing how one extracts the $p$-vlaues. left: is the using a analytic of the Asymptotic method and right: is from the HybridNew method.\relax }}{140}{figure.7.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Neutralino production cross section against proper delay length upper limit interpretation in SPS8 model.\relax }}{138}{figure.8.1}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Neutralino production cross section against proper delay length upper limit at 95\% confidence levels interpretation in SPS8 model.\relax }}{139}{figure.8.2}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Neutralino two dimensional exclusion limit of neutralino mass ($\Lambda $) against proper delay length upper limit interpretation in SPS8 model in the decay $\mathaccentV {tilde}07E{\chi }^{0}_{1} \rightarrow \gamma + \mathaccentV {tilde}07E{G}$ with limits from previous experiments shown.\relax }}{140}{figure.8.3}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Signal efficiency $\times $ Acceptance for signal events passing our events selection for the SPS8(left) and GGM(right) models. The acceptance are photons with $t > 3$\nobreakspace {}ns.\relax }}{142}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Neutralino production cross section against proper delay length upper limit interpretation in SPS8 model.\relax }}{144}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Neutralino production cross section against proper delay length upper limit at 95\% confidence levels interpretation in SPS8 model.\relax }}{145}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Neutralino two dimensional exclusion limit of neutralino mass ($\Lambda $) against proper delay length upper limit interpretation in SPS8 model in the decay $\mathaccentV {tilde}07E{\chi }^{0}_{1} \rightarrow \gamma + \mathaccentV {tilde}07E{G}$ with limits from previous experiments shown.\relax }}{146}{figure.8.4}
 \addvspace {10\p@ }
 \addvspace {10pt}
