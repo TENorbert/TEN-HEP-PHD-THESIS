@@ -94,13 +94,15 @@ lying on either sides of those not rejected gives a two sided confidence interva
 
 In the background only scenario i.e $\mu = 0$, the test statistics is defined as:
 
-
 \begin{equation}\label{eq:HNULL}
  q_{\mu} = \left\lbrace  
- -2\ln \lambda(0),  \hat{\mu} \geq 0 \quad
-  0,                \hat{\mu} \leq 0
-  \right\rbrace
+  \begin{aligned}
+ -2\ln \lambda(0), \quad \hat{\mu} \geq 0 \\
+   0,                \quad  \hat{\mu} \leq 0
+  \end{aligned}
+  \right.
 \end{equation}
+
 where $\lambda(0)$ is the profilelikelihood ratio for $\mu = 0$  defined in \ref{eq:PLL}.
 and again to quantify the disagreement between the background-only hypothesis~($\mu = 0$) and the data is given by the $p$-value as:
 \begin{equation}
@@ -112,8 +114,8 @@ Figure \ref{fig:LIM} shows a sampling distributions of the test statistics and h
 \begin{center}
 \centering
 %\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[height=2.2in]{THESISPLOTS/Asymptotics_Test_Stats.png}
+\includegraphics[scale=0.6]{THESISPLOTS/TEST_STATISTICS.png}
 \captionof{figure}{Sampling distributions for $f(t_{\mu}|\mu)$ showing how one extracts the $p$-vlaues. left: is the using a analytic of the Asymptotic method and right: is from the HybridNew method.}
 \label{fig:LIM}
 \end{center}
@@ -134,4 +136,11 @@ In subtle point worth mentioning is that in the HybridNew approach, systematics 
 \par
 In summary, the hypothesis test is performed using a given statistical method on each value of a chosen parameter of interest~(POI)(usually denoted $\mu$). The $p$-value if obtained from the sampling distribution of the test statistics being used. Can either obtain this test statistics analytically or through Monte Carlo computation and  numerical integration. By plotting the p-value as a function of the POI, we obtain the p-value curve~(in this case the $CL_{s} = \frac{CL_{s+b}}{CL_{b}}$).
 The value of $\mu$ which has a p-value $\alpha$~( e.g $0.05$) is the upper limit~(for 1-dimensional limits,2-dimensional limits gives lower and upper limits) of $1 - \alpha$  confidence interval~(e.g 95\%).
- 
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=1.0]{THESISPLOTS/Limits_CLs.png}
+\captionof{figure}{Distribution of $p$-vlaues showing how upper limit on $\mu$ is extracted for a given threshold probability.}
+\label{fig:LIMITS_CLS}
+\end{center}
+

@@ -39,6 +39,9 @@ Dataset Name & Recorded Luminosity $[\fbinv]$ \\
  \texttt{/Run2012B/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 5.1 \\
  \texttt{/Run2012C/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 6.9 \\
  \texttt{/Run2012D/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 7.1 \\
+\hline\hline
+\texttt{/SingleElectron/Run2012A-22Jan2013-v1/AOD} & 5.2 \\
+\texttt{/DoubleElectron/Run2012C-22Jan2013-v1/AOD} & 4.8 \\
 \hline
 \end{tabular}
 \captionof{table}{The dataset name and corresponding integrated luminosity of the data used in the analysis}
@@ -374,11 +377,17 @@ The distributions for ${\MET}_{1}$ and ${\MET}_{2}$  against ECAL time can be se
 \subsection{Event Cleaning}
 Using the above observables for studying halo, cosmic and spike photons we reduced the contribution of these events by applying in addition to our above selections the following selections:
 \begin{itemize}
-\item 
-
+\item Veto 0-jet events as this sample is highly populated with beam halo events, 
+\item Veto events with $CSC(Seg,\gamma)\Delta\phi < 0.05$,
+\item Only photons with $|\eta_{\gamma}| < 1.45$ are considered,
+\item Photons must have Number of Good crystals $ > 7$,
+\item Photons tagged as halo and cosmic are removed,
+\item Event must have at least 1-jet.
 \end{itemize}
+Events which pass all these additional selection criteria make up the sample which is used to estimated the background to our signal.
 
-\paragraph*{•} \mbox{}\\
+\paragraph*{•} 
+\par
 In order to estimating the background contribution from collision and non-collision sources, we employ a 3-dimensional space involving ${\MET}_{1}$, ${\MET}_{2}$ and ECAL time.  Our signal region is events with $t > 3.0$~ns and large \MET where by large \MET we mean events with  large  ${\MET}_{1}$ and  ${\MET}_{2}$. Non-collision events have large time as they are mostly out-of-time and by \MET calculation requirements should have large  ${\MET}_{2}$. While collision produced backgrounds events are mostly in-time and may often be measured with $t > 3.0$~ns due to either mis-reconstruction or from ghost/satellite contributions. However, these events cannot be produced with large correctly calculated \MET because for example in $\gamma +$ jets events, very small \MET due to energy miss-measurements is expected to be produced.
  But if the collision event is produced and arrives at ECAL with $t > 3$~ns, and the \MET is not properly calculated (since events with photons ECAL time, $|t| > 3$~ns are rejected during standard super cluster reconstruction with their \pt contribution  not taken into account in the \MET calculation) which in this case is large ${\MET}_{1}$, they will fluctuate or be easily considered as additional contribution to the non-collision background estimation in our signal region.
 Therefore, we select samples or control regions~(CR) which enhances each interested background source and use that CR to estimate the enhanced background contribution taking into account the possible contamination of an alternate background source due to possible fluctuations in event rate.
@@ -427,7 +436,7 @@ $N^{B}_{\mbox{col}}$ and $N^{D}_{\mbox{col}}$ are collision contributions to  CR
 
 \begin{equation}
 N^{D}_{\mbox{Total}} = \left(\frac{N_{B} - N^{B}_{col} }{N_{A}} \right)\cdot N_{C} + N^{D}_{\mbox{col}} 
-\end{equation}
+\end{equation}\label{eq:bkg}
 where $N^{D}_{\mbox{Total}} = N^{D}_{\mbox{non-col}} + N^{D}_{\mbox{col}}$ is the total background estimation in  our signal region.
 A diagram showing the above background estimation technique is shown in figure \ref{fig:BKGESTI}.
 \begin{center}
@@ -443,24 +452,78 @@ A closure test using events with $0-\mbox{jets}$ and $1-jet$ is used to verify t
 The underlying assumption here is that background contributions to large timing from collision source referred here as QCD is very small and must be of the order of $10^{-5}$ in comparison to in-time photons. i.e the ratio 
 $ N_{t > 3~ns}/ N_{|t| < 2.0~ns} \approx 10^{-5}$ with $N$ being the number of photons.
 
-\paragraph*{Closure Test} \mbox{}\\
-Using $1-jet$ events sample, we verify the validity of our method of background estimation.
-
-
-\paragraph*{Cross Check} \mbox{} \\
-Once major assumption in our background estimation technique is that, the contribution from collision background events to our signal region is negligible.
+\paragraph*{Closure Test}\mbox{}\\
+By selecting a sample of events containing only a single jet, we verify the validity of our method of background estimation using a closure test. The closure test is simply comparing the number of events we observed in our signal region $D$ with the number we expect from using our $ABDC$ background estimation method.
+Using a equation \ref{eq:bkg}, we observed a total of $5$-events when we expected $6.44^{+2.95}_{-3.45}$ which is quite close. This gives us confidence that our  background estimation method is robust and reliable and we can now move on to do our final background estimation on dataset with events having at least $2$-jets passing our final photon, jet and \MET selection after being cleaned.
+\subsection{Background Estimation Cross Check}
+The main assumption in our background estimation technique is that, the contribution from collision background events to our signal region~($|time| > 3$~ns) is negligible.
 In order to show this we select $Z\rightarrow e^{+} e^{-}$ events from \texttt{SingleElectron/} and \texttt{DoubleElectron/} data sets of 2012.
 The selection criteria of our extended to include out-of-time $Z$ candidates events is as follows:
 \begin{itemize}
-\item 
-
-
+\item The candidate two electrons for the $Z$ bosons must have individual $\pt > 20$~GeV,
+\item The di-mass of these two electrons, $|m_{\ell_{1}, \ell_{2}} - 91| > 61$~$GeV/c^{2}$,
+\item Each electron must be in the barrel, $|\eta_{\ell_{1}}| < 1.479$ and $ |\eta_{\ell_{2}}| < 1.479$.
 \end{itemize}
- 
- 
+ At the electron super cluster level,  we used the seed crystal time adjusted accounting for the effects due to electron time of flight as the electron time, after the seed crystal has passed all the recommended crystals or rechit cleaning criteria recommended by the ECAP DPG such as \textit{kWeird}, \textit{kBad}, \textit{kPoorCalib} used in rejecting crystals showing anomalous behaviours like spikes, noisy, bad crystals and poorly calibrated crystals.
+In this cross-check, we define our signal region as $Z$-candidate events with a well defined mass from both electrons i.e  $71 < |m_{\ell_{1}, \ell_{2}} < 100$~$GeV/c^{2}$ while the Control sample consists of events which do not fall into the signal category.
+A quick look at the similar plots to figure \ref{fig:HALO} of the electron candidates from the Single/DoubleElectron data compared to the singlePhoton dataset as seen in figure \ref{fig:Elec} indicate that contribution from cosmic, halo and anomalous photon events is much reduced and thus makes the $Z$ boson candidate events sample a reliable sample to disentangle non-collision contributions and only study collision background contributions as initial objective.
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\captionof{figure}{ECAL time Vs $\eta$ and ECAL time Vs $\phi$~(left) for photons from SinglePhoton dataset~(left) similar plots from the DoubleElectron dataset~(right). Photons at $\phi = 0, \pm \pi$ which are mostly halo photons not observed in the $Z$ boson candidate sample.}
+\label{fig:Elec}
+\end{center}
+
+Figure \ref{fig:Zmass} shows the $Z$ boson mass reconstructed from the candidate electrons and timing of each electron for Signal~(left and blue) and for our control sample~(right and red).
+
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\captionof{figure}{Di-electron candidate mass distribution and the time of both electrons for the signal $71 < |m_{\ell_{1}, \ell_{2}} < 100$~$GeV/c^{2}$ $Z$ boson sample(left) and similar distributions from the Control~(outside signal region) sample~(right). Candidates events from the DoubleElectron dataset.}
+\label{fig:Zmass}
+\end{center}
 
 
+Using the control sample, we estimate its contribution  using simple scaling which can be understood as an ABCD method into the signal sample as follows:
+\begin{itemize}
+\item Using a polynomial function, we fit the di-electron candidate mass distribution of the control sample to extract a set of fit parameters,
+\item Using the fit parameters, define our polynomial fit function to be used to extract our scaling factor and hence true contribution of the control region events in our signal region which in this case are $Z$ bosons with possible large timing, $|t| > 3$~ns.
+\item Scale the control sample events~(electrons time) by this extracted scale factor i.e $$\displaystyle{\mbox{Scale Factor} = \frac{N}{M_{1} + M_{2}}}$$.
+\item By subtracting the scaled control sample event timing distribution from the signal sample electron time distribution, we are left with the true $Z$ boson events whose electron time can extend to large time.
+\item Comparing the total number of observe electron candidates with $t > 3$~ns to those with time within the required in-time $|t| < 2$~ns using a ratio i.e $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}$ gives us an estimate of the possible genuine collision electromagnetic objects with large timing. 
+\end{itemize}  
 
+A simple picture showing the above procedure with distributions is shown in figure \ref{fig:collZ}.
+
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+
+\captionof{figure}{\textit{Top}: Control sample~(left) and signal sample~(right) of di-electron candidate mass distribution. \textit{Bottom:} Figure showing definition of scale factor use in estimating the contributions from control sample in signal sample.}
+\label{fig:collZ}
+\end{center}
+
+The result of the final timing distribution of genuine $Z$ boson events  can be seen in figure \ref{fig:Ztime}. It is not difficult to see that the ratio $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}  < 10^{-5}$ confirming that indeed the contribution  of electromagnetic objects with large timing $t >3$~ns is negligible thus confirming that most collision events contain photons which are mostly in-time, $|t| \leq 2$~ns. A simple cut on the \MET, $\MET > 60$~GeV will further reduce this ratio to $0$ as assumed in our above background estimation.
+\begin{center}
+\centering
+%\mbox{
+\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+%\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\captionof{figure}{Timing distribution of genuine $Z$ bosons after background contribution has been subtracted.}
+\label{fig:Ztime}
+\end{center}
+  
 
 
 \section{Results}
@@ -482,16 +545,16 @@ We have used only the photon arrival time at ECAL to distinguish signal from SM 
 \hline \hline
 \texttt{Data} & $000.00 \pm 0.000$ \\
 \hline 
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=93$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=185$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=368$~mm) & $000.00 \pm 0.000$ \\
+%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=93$~mm) & $000.00 \pm 0.000$ \\
+%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=185$~mm) & $000.00 \pm 0.000$ \\
+%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=368$~mm) & $000.00 \pm 0.000$ \\
 \texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=500$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=733$~mm) & $000.00 \pm 0.000$ \\
+%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=733$~mm) & $000.00 \pm 0.000$ \\
 \texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1000$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1076$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1444$~mm) & $000.00 \pm 0.000$ \\
+%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1076$~mm) & $000.00 \pm 0.000$ \\
+%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1444$~mm) & $000.00 \pm 0.000$ \\
 \texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=2000$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=2161$~mm) & $000.00 \pm 0.000$ \\
+%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=2161$~mm) & $000.00 \pm 0.000$ \\
 \texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=3000$~mm) & $000.00 \pm 0.000$ \\
 \texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=6000$~mm) & $000.00 \pm 0.000$ \\
 \texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=12000$~mm) & $000.00 \pm 0.000$ \\
