@@ -1,0 +1,90 @@
+\begin{thebibliography}{9}
+
+%%% DARK MATTER/MOTIVATIONS
+\bibitem{KOlive}J.Ellis, J.Hagelin, D. Nanopoulos, K.A. Olive and M. Srednicki; \emph{Nucl. Phys.} B238~(1984) 453; H. Goldberg, \emph{Phys. Rev. Lett} 50~(1983) 1419;
+J. Ellis, T. Falk, G. Ganis, K.A. Olive and M. Srednicki, \emph{Phys. Lett.} B 510~(2001) 236, arXiv: hep-ph/0102098.
+\bibitem{g2ex}H. N. Brown et al., Muon $g_{\mu}-2$ Collaboration, \emph{Phys. Rev. Lett} 88~(2002) 2227, hep-ex/0102017; A. Czarnecki and W.J. Marciano,
+\emph{ Phys. Rev.} D 64~(2001) 013014, hep-ph/0102122.
+\bibitem{g2Theory}M. Knecht and A. Nyffeler, hep-ph/0111058; I. Blokland, A. Czarnecki and K. Melnikov \emph{Phys.Rev. Lett} 88~(2002) 071803 hep-ph/0112117
+\bibitem{BSex}CLEO Collaboration, M. S Alan et al., \emph{Phys. Rev. Lett.} 74~(1995) 2885 as updated in S. Amed et al., CLEO CONF 99-10; 
+\bibitem{BELL} BELLE Collaboration hep-ex/0103042
+
+
+%%% Theory of SUSY/GMSB
+\bibitem{SM}S.Mathin, arXiv:hep-ph/9709356
+\bibitem{SUSY}B.Allanach et al,arXiv:hep-ph/0202233v1
+
+\bibitem{PMeade}P. Meade, N. Seiberg, and D. Shih, Prog. Theor. Phys.
+Suppl. 177, 143 (2009), arXiv:0801.3278 [hep-ph]
+
+\bibitem{PMeade1}M. Buican, P. Meade, N. Seiberg, and D. Shih, J. High Energy Phys. 0903, 016 (2009), arXiv:0812.3668 [hep-ph]
+\bibitem{MDINE}M. Dine and A. E. Nelson, Phys. Rev. D 48, 1277
+(1993), arXiv:hep-ph/9303230
+\bibitem{MDINE1}M. Dine, A. E. Nelson, and Y. Shirman, Phys. Rev. D
+51, 1362 (1995), arXiv:hep-ph/9408384
+\bibitem{MDINE2}M. Dine, A. E. Nelson, Y. Nir, and Y. Shirman, Phys.
+Rev. D 53, 2658 (1996), arXiv:hep-ph/9507378
+\bibitem{DSHIH} J. T. Ruderman and D. Shih, J. High Energy Phys.
+1208, 159 (2012), arXiv:1103.6083 [hep-ph]
+\bibitem{GMSB}G.F. Giudice and R. Rattazzi ``Theories with Gauge-Mediated Supersymmetry Breaking'' arXiv:hep-ph/9801271v2
+
+%%%% Previous Experiments
+\bibitem{LEP}J.Dann et al.(LEPSUSY Working Group), Internal note LEPSUSYWG/97-04(1997), P. Janot, talk at the EPS Conference, Jerusalem, 1997.
+\bibitem{CDF}CDF Collaboration, ``Search for Supersymmetry with Gauge-Mediated Breaking in Diphoton Events with Missing Transverse Energy at CDFII ``,\emph{Phys. Rev. Lett.}
+\bibitem{ATLAS} ATLAS Collaboration ``Search for Diphoton Events with Large Missing Transverse Momentum in \text{1 $fb^{-1}$} of $\text{7TeV}$ Proton-Proton Collision Data with the ATLAS Detector'', arXiv:1111.4116v1,17th Nov 2011. 
+\bibitem{Rome}CMS Draft Analysis,``Search for Long-Lived Particles using Displaced Photons in \emph{PP} Collision at $\sqrt{S}=7TeV$ '', CMS AN AN-11-081 \emph{$104(2010) 011801,$}
+
+\bibitem{ATLASp}ATLAS Collaboration, J. High Energy Phys. 1212, 124
+(2012), arXiv:1210.4457 [hep-ex]
+
+%%% LHC & CMS EXPERIMENTS
+\bibitem{LHC} The LHC Machine, Lyndon Evans and Philip Bryant \textit{Jinst},
+\bibitem{LHCB} The CERN Brochure 2009-003-Eng
+\bibitem{JINST}CMS Collaboration, ``The CMS experiment at the CERN LHC'', JINST 0803:S08004, 2008.
+\bibitem{CORD}CMS uses a right-handed coordinate system, with the origin at the nominal interaction point, the \emph{$x$}-axis pointing to the center of the LHC, 
+the \emph{$y$}-axis pointing up (perpendicular to the LHC plane), and the \emph{$z$}-axis along the counterclockwise-beam direction. The polar angle, $\theta$, 
+is measured from the positive \emph{$z$}-axis and the azimuthal angle, $\phi$, is measured in the \emph{$x$-$y$} plane. \boldmath{$\displaystyle{\eta = -\ln\tan(\theta/2)}$}. 
+The transverse energy and momentum are defined as \boldmath{$\displaystyle{\ET=E\sin\theta}$} and \boldmath{$\displaystyle{\PT=p\sin\theta}$} where \textsc{E} is the energy measured in the 
+tracking system.\boldmath{$\displaystyle{\MET = \vert -\sum_{i}\ET^{i}\vec{n_{i}}\vert}$} where $\vec{n_{i}}$ is a unit vector that points from the interaction vertex to the transverse plane.
+
+%%%% TIMING: LHC/CMS
+\bibitem{LHCT} "Timing Distribution at the LHC",  B.G. Taylor Colmar, 9-13 September 2002
+\bibitem{LHCT1} "An FPGA based multiprocessing CPU for Beam
+Synchronous Timing in CERN’s SPS and LHC".\emph{Proceedings of ICALEPCS2003, Gyeongju, Korea
+ICALEPCS 2003}
+\bibitem{LHCT2} "Timing and Synchronization in the LHC Experiments", Varela, J. Krakóv, 11-15 September 2000.
+\bibitem{LHCT3} http://ttc.web.cern.ch/TTC/intro.html
+\bibitem{CMSTDR}CMS Collaboration,"CMS Physics: Technical design report, Volume 1" CERN-LHCC-2006-001
+\bibitem{ATLAS-GHOST} "Study of the LHC ghost charge and
+satellite bunches for luminosity calibration.", CERN-ATS-Note-2012-029 PERF
+\bibitem{CMS-GHOST} "LHC bunch current normalisation for the April-May 2010 luminosity calibration measurements.", CERN-ATS-Note-2011-004 PERF
+\bibitem{ECALTime}CMS Collaboration, "The CMS ECAL performance With examples", JINST 9 C02008, 2014.
+
+
+%% ECAL TIMING CALIBRATION
+\bibitem{ECALTDR}CMS Collaboration,``The electromagnetic calorimeter. Technical design report '',. CERN-LHCC-97-33
+\bibitem{ECAL}CMS Electromagnetic Calorimeter Collaboration, ``Energy resolution of the barrel of the CMS Electromagnetic Calorimeter'',JINST 2(2007)P04004.
+\bibitem{TIME}CMS Collaboration, "Time Reconstruction and Performance of the CMS Crystal Electromagnetic Calorimeter",CFT-09-006, 2009.
+\bibitem{ECALREADOUT} Bo Lofstedt, ``The digital readout system for the CMS electromagnetic Calorimeter``,\textit{Nucl. Inst.  Methods in Physics Research},A 453~(2000) 433-439
+\bibitem{spike} "Characterization and treatment of anomalous signals in the CMS Electromagnetic Calorimeter " CMS AN AN-10-357
+\bibitem{spike2} " Mitigation of Anomalous APD signals in the CMS ECAL",\textit{2013, JINST 8 C03020}, W.Bialas and D.A. Petyt
+
+%%%% PHYSICS OBJECT RECO
+\bibitem{cmsdata}CMS Collaboration, "CMS trigger and data taking in 2010 ",\emph{CMS CR-2011/051}.
+\bibitem{RECOAMPLI}CMS Collaboration, ``Reconstruction of the signal amplitude of the CMS electromagnetic Calorimeter'', Eur.Phys.J. C46S1(2006)23-35.
+\bibitem{Algo} D.del Re et al ``An algorithm for the determination of the flight path of long-lived particles decaying into photons'' CMS AN -2010/212.
+\bibitem{PF}CMS Collaboration,``Particle-Flow Event Reconstruction in CMS and Performance for Jets, taus and \ETslash'', CMS Physics Analysis Summary \boldmath{CMS-PAS-PFT-09-001}(2009).
+\bibitem{MET2}CMS Collaboration, “Missing Transverse Energy Performance in Minimum-Bias and Jet Events from Proton-Proton Collisions at $\sqrt{s} =7$~TeV ”, CMS Physics Analysis Summary CMS-PAS-JME-10-004 (2010).
+\bibitem{MET}MET JINST (arXiv:1106.5048)
+\bibitem{MET}CMS Collaboration, ``Missing transverse energy performance of the CMS detector''; arXiv:1106.5048v1
+\bibitem{TDR}CMS Collaboration,``CMS Physics: Technical design report, Volume 2'' CERN-LHCC-2006-001.
+\bibitem{JES} CMS Collaboration,"Determination of Jet Energy Scale in CMS with pp collisions at $\sqrt{S} = 8$~TeV",\textit{JME-10-010(2012)}
+\bibitem{PES} "https://twiki.cern.ch/twiki/bin/viewauth/CMS/EGamma2012."
+\bibitem{PDF} "Parton distributions for the LHC" Eur.Phys.J C63(2009) 189-285 or arXiv:0901.0002
+\bibitem{METRES} CMS Collaboration, "Search for ADD Extra-dimensions with Photon + MET signature", \textit{AN-11-319(2011)}
+\bibitem{CLS} "Presentation of search results: the CLs technique ",\textit{A L Read 2002 J. Phys. G: Nucl. Part. Phys. 28 2693}
+\bibitem{LIMITS} "Computation of confidence levels for search experiments with fractional event counting and the treatment of systematic errors", \textit{Peter Bock JHEP01(2007)080}
+\bibitem{LIMITS} https://twiki.cern.ch/twiki/bin/viewauth/CMS/
+\bibitem{ASYMP}  "Asymptotic formulae for likelihood-based tests of new physics" \textit{G. Cowan et al, arXiv:1007.1727v3}
+
+\end{thebibliography}
