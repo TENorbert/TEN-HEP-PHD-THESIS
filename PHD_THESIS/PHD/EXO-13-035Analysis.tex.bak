@@ -15,22 +15,10 @@
 \setbeamertemplate{navigation symbols}{}
 
 \title{Search For Displaced Photons Using Timing.}
-%\subtitle{}
-
-\author[Tambe E. Norbert] % (optional, for multiple authors)
-{Tambe E. Norbert\inst{1} \and Shih-Chuan Kao\inst{1} \and Yuichi Kubota\inst{1}}
- 
-\institute[UMN]{
-  \inst{1}%
-  University Of Minnesota 
-}
-\vspace{-2cm}
-\date{ Long-Lived Meeting,\\ \today}
- 
-
-
-
-
+\subtitle{Long-Lived Meeting}
+\author{Tambe E. Norbert} %
+\institute{University Of Minnesota}
+\date{\today}
 
 \begin{document}
 
@@ -43,15 +31,6 @@
         \end{center}
 \end{frame}
 %}% end Local TeX Group
-
-\section*{Outline}
-\begin{frame}
-\frametitle{\Huge Outline}
-\tableofcontents
-\end{frame}
-
-
-
 
 
 \section{Motivation}

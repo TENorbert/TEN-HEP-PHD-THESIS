@@ -4,27 +4,13 @@
 % Modifications by Chris Bourke
 % Last modified 3/7/05
 
-\usepackage{tikz} % very handy for all thing image, figure
-
-%% Some aliases
-\newcommand{\bi}{\begin{itemize}}
-\newcommand{\ei}{\end{itemize}}
-\newcommand{\ig}{\includegraphics}
-\newcommand{\subt}[1]{{\footnotesize \color{subtitle} {#1}}}
-
-
-%  dimension setup
+% BEGIN sidebar dimension setup
 \newdimen\beamer@sidebarwidth
 \newdimen\beamer@headheight
 \usebeamerfont{frametitle}
-\beamer@sidebarwidth=2.0\baselineskip
-\beamer@headheight=1.45\baselineskip
+\beamer@sidebarwidth=1.9\baselineskip
+\beamer@headheight=2.5\baselineskip
 \reset@font
-
-\newcommand\insertlogoii{}
-\newcommand\logoii[1]{\renewcommand\insertlogoii{#1}}
-
-
 
 \def\beamer@lefttext{left}
 
@@ -49,13 +35,6 @@
 \ifdim\beamer@headheight>0pt
 % if head height is 0pt, use default frame title
 
-% Adjust Titlefont size
-\setbeamerfont{subtitle}{size=\scriptsize,series=\bfseries,parent=sidebar}
-\setbeamerfont{title}{size=\fontsize{30pt}{10pt}, series=\bfseries,parent=structure}
-%\setbeamerfont{author}{size=\scriptsize,series=\bfseries,parent=structure}
-%\setbeamerfont{institute}{size=\scriptsize,series=\bfseries,parent=structure}
-\setbeamerfont{date}{size=\scriptsize,series=\bfseries,parent=structure}
-
 \setbeamercolor*{frametitle}{parent=sidebar}
 
 %% Beamer template for the Frame Title
@@ -65,77 +44,39 @@
     \vskip-\beamer@headheight%
      \vbox to \beamer@headheight{%
       \vfil
-      \leftskip=-\beamer@leftmargin%
+      %\leftskip=-\beamer@leftmargin%
       \advance\leftskip by 0.5cm%
-      \rightskip=-\beamer@rightmargin%
+     % \rightskip=-\beamer@rightmargin%
       \advance\rightskip by 0.5cm plus1fil%
       {\usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\insertframetitle\par}%
       {\usebeamercolor[fg]{framesubtitle}\usebeamerfont{framesubtitle}\insertframesubtitle\par}%
       \vbox{}%
-      \vskip-0.7em%
+      \vskip-1em%
       \vfil
     }%
   }
-
-% Adding a side bar
-%\setbeamertemplate{sidebar canvas right}{
-%\vspace*{-2pt}\hspace*{-29pt}%
-%{\includegraphics[height=28pt]{cmsLogo.pdf}}} 
-
-%% Adding Picture to frame title side
-%\addtobeamertemplate{frametitle}{}{%
-%\begin{tikzpicture}[remember picture,overlay]
-%\node[anchor=north east,yshift=5pt] at (current page.north east) {\includegraphics[width=01.20cm , height=0.98cm]{cmsLogo.pdf}};
-%\end{tikzpicture}}
-
-\logo{\includegraphics[width=1.20cm,height=0.98cm]{cmsLogo.pdf}}
-\logoii{\includegraphics[width=1.20cm,height=0.98cm]{UMN.pdf}}
-
-%% Define How to put Logo on both sides of top page
-\setbeamertemplate{headline}
+  
+  
+% Beamer Template for the Sidebar
+\defbeamertemplate*{headline}{sidebar theme}
   {%
     \begin{beamercolorbox}[wd=\paperwidth]{frametitle}
       \ifx\beamer@sidebarside\beamer@lefttext%
       \else%
         \hfill%
       \fi%
-      \ifdim\beamer@sidebarwidth>0pt%  
+      \ifdim\beamer@sidebarwidth>0pt%
         \usebeamercolor[bg]{logo}%
         \vrule width\beamer@sidebarwidth height \beamer@headheight%
         \hskip-\beamer@sidebarwidth%
         \hbox to \beamer@sidebarwidth{\hss\vbox to
           \beamer@headheight{\vss\hbox{\color{fg}\insertlogo}\vss}\hss}%
-        \hfill%
-        \vrule width\beamer@sidebarwidth height \beamer@headheight%
-        \hskip-\beamer@sidebarwidth%
-        \hbox to \beamer@sidebarwidth{\hss\vbox to
-          \beamer@headheight{\vss\hbox{\color{fg}\insertlogoii}\vss}\hss}%
       \else%
-        \vrule width0pt height \beamer@headheight%  
+        \vrule width0pt height \beamer@headheight%
       \fi%
     \end{beamercolorbox}
-}
-
-% Beamer Template for the Sidebar
-%\defbeamertemplate*{headline}{sidebar theme}
-%  {%
-%    \begin{beamercolorbox}[wd=\paperwidth]{frametitle}
-%      \ifx\beamer@sidebarside\beamer@lefttext%
-%      \else%
-%        \hfill%
-%      \fi%
-%      \ifdim\beamer@sidebarwidth>0pt%
-%        %\usebeamercolor[bg]{logo}%
-%        \vrule width\beamer@sidebarwidth height \beamer@headheight%
-%        \hskip-\beamer@sidebarwidth%
-%        \hbox to \beamer@sidebarwidth{\hss\vbox to
-%          \beamer@headheight{\vss\hbox{\color{fg}\insertlogo}\vss}\hss}%
-%      \else%
-%        \vrule width0pt height \beamer@headheight%
-%      \fi%
-%    \end{beamercolorbox}
-% }
-%\fi
+  }
+\fi
 
 % Beamer Template of Side bar format
 \def\beamer@sidebarformat#1#2#3{%
@@ -143,7 +84,7 @@
     \vbox{}%
     #3\par%
     \vbox{}%
-    \vskip-1.6ex%
+    \vskip-1.5ex%
   \end{beamercolorbox}
 }
 
@@ -151,7 +92,7 @@
 \defbeamertemplate*{section in sidebar}{sidebar theme}
 {%
   \vbox{%
-    \vskip 1ex%
+    \vskip1ex%
     \beamer@sidebarformat{3pt}{section in sidebar}{\insertsectionhead}%
   }%
 }
@@ -160,7 +101,7 @@
 \defbeamertemplate*{section in sidebar shaded}{sidebar theme}
 {%
   \vbox{%
-    \vskip 1ex%
+    \vskip1ex%
     \beamer@sidebarformat{3pt}{section in sidebar shaded}{\insertsectionhead}%
   }%
 }
@@ -186,27 +127,27 @@
     \beamer@tempdim=\beamer@sidebarwidth%
     \advance\beamer@tempdim by -6pt%
     {\usebeamerfont{title in sidebar}%
-      \vskip 1.5em%
-      \hskip 2pt%
+      \vskip1.5em%
+      \hskip2pt%
       \usebeamercolor[fg]{title in sidebar}%
       \insertshorttitle[width=\beamer@tempdim,center,respectlinebreaks]\par%
-      \vskip 1.20em%
+      \vskip1.25em%
     }%
     {%
        %%% For Author on sidebar
-      \hskip 3pt%
+      \hskip3pt%
       \usebeamercolor[fg]{author in sidebar}%
       \usebeamerfont{author in sidebar}%
       \insertshortauthor[width=\beamer@tempdim,center,respectlinebreaks]\par%
-      \vskip 1.25em%
+      \vskip1.25em%
     }%
     \insertverticalnavigation{\beamer@sidebarwidth}%
     \vfill
     \ifx\beamer@sidebarside\beamer@lefttext%
     \else%
       \usebeamercolor{normal text}%
-      \llap{\usebeamertemplate***{navigation symbols}\hskip 0.1cm}%
-      \vskip 2pt%
+      \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+      \vskip2pt%
     \fi%
   }%
 
@@ -214,8 +155,8 @@
     \defbeamertemplate*{sidebar right}{sidebar theme}
     {%
       \vfill%
-      \llap{\usebeamertemplate***{navigation symbols}\hskip 0.1cm}%
-      \vskip 2pt}
+      \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+      \vskip2pt}
   \fi
   % Margins Size for text to start
   \setbeamersize{text margin left=0.5cm,text margin right=0.5cm}
@@ -237,7 +178,6 @@
 \pgfdeclarehorizontalshading[frametitle.bg,frametitle right.bg]{beamer@frametitleshade}{\paperheight}{%
   color(0pt)=(frametitle.bg);
   color(\paperwidth)=(frametitle right.bg)}
-  %color(0pt)=(frametitle right.bg)}
 
 
 %%% Begining of Documents
@@ -269,7 +209,8 @@
 %    color(5.66pt)=(bg)}
 }
 
-\addtobeamertemplate{headline}{}
+\addtobeamertemplate{headline}
+{}
 {%
 %  \vskip-0.2pt
 %drop-shadow:
@@ -301,7 +242,8 @@
    \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
 }
 
-\addtobeamertemplate{sidebar \beamer@sidebarside}{}
+\addtobeamertemplate{sidebar \beamer@sidebarside}
+{}
 {
 %Want to "rewind" to the top of the sidebar, but how?
 %drop-shadow:
@@ -310,6 +252,7 @@
 }
 % End Shadow
 
+\usecolortheme[RGB={140,17,17}]{structure}
 
 % Complete color themes:
 % albatross, beetle, crane, dove, fly, seagull
@@ -323,7 +266,6 @@
 \usecolortheme{orchid} % Establishes inner, dark colors
 \usecolortheme{whale}  % Establishes outer, dark colors
 
-\usecolortheme[RGB={140,17,17}]{structure}
 % Customized Various Color elements:
 \setbeamercolor{titlelike}{fg=UMN@Gold,bg=UMN@Maroon} %
 \setbeamercolor{sidebar}{fg=UMN@Maroon}              %
@@ -336,14 +278,12 @@
 \setbeamercolor{subsection in sidebar shaded}{fg=UNL@Cream}
 
 %\setbeamertemplate{blocks}[rounded]{shadow=true}
-%\setbeamerfont{block title}{size=\scriptsize,series=\bfseries}
-\setbeamercolor{block title}{fg=UMN@Maroon,bg=UNL@Cream, series=\bfseries}
+\setbeamercolor{block title}{fg=white,bg=black}
 \setbeamercolor{block body}{fg=black,bg=UNL@VeryLightGrey}
 % Set the UNL logo, UNL.pdf must be in the latex path or working directory
 \setbeamercolor{logo}{fg=black,bg=white}
-
-
-
+%\logo{\includegraphics[height=0.55cm]{UNL.pdf}}
+\logo{\includegraphics[width=1.20cm,height=1.55cm]{UMN.pdf}}
 
 % Handout Mode - Using the default layouts, no menus, etc.
 \mode
