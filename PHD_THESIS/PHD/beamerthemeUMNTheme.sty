@@ -1,0 +1,426 @@
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/theme/beamerthemeUNLTheme.sty,v 1.10 2004/10/07 20:53:10 bourke Exp $
+
+% This theme modifies the PaloAlto, sidebar, and sidebartab beamer themes
+% Modifications by Chris Bourke
+% Last modified 3/7/05
+
+\usepackage{tikz} % very handy for all thing image, figure
+
+%% Some aliases
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\ig}{\includegraphics}
+\newcommand{\subt}[1]{{\footnotesize \color{subtitle} {#1}}}
+
+
+%  dimension setup
+\newdimen\beamer@sidebarwidth
+\newdimen\beamer@headheight
+\usebeamerfont{frametitle}
+\beamer@sidebarwidth=2.0\baselineskip
+\beamer@headheight=1.45\baselineskip
+\reset@font
+
+\newcommand\insertlogoii{}
+\newcommand\logoii[1]{\renewcommand\insertlogoii{#1}}
+
+
+
+\def\beamer@lefttext{left}
+
+% Package options
+\DeclareOptionBeamer{hideothersubsections}[]{\beamer@nav@subsectionstyle{show/show/hide}}
+\DeclareOptionBeamer{hideallsubsections}[]{\beamer@nav@subsectionstyle{hide}}
+
+\DeclareOptionBeamer{width}{\beamer@sidebarwidth=#1}
+\DeclareOptionBeamer{height}{\beamer@headheight=#1}
+\DeclareOptionBeamer{left}{\def\beamer@sidebarside{left}}
+\DeclareOptionBeamer{right}{\def\beamer@sidebarside{right}}
+\ExecuteOptionsBeamer{left}
+\ProcessOptionsBeamer
+
+% Default mode (<presentation> encompasses <beamer>, <handout>, and <trans> (transparencies))
+\mode<beamer>
+
+% All Beamer Boxes will be rounded with a drop shadow
+\useinnertheme[shadow=true]{rounded}
+
+% cut-pasted-n-hacked sidebar theme
+\ifdim\beamer@headheight>0pt
+% if head height is 0pt, use default frame title
+
+% Adjust Titlefont size
+\setbeamerfont{subtitle}{size=\scriptsize,series=\bfseries,parent=sidebar}
+\setbeamerfont{title}{size=\fontsize{30pt}{10pt}, series=\bfseries,parent=structure}
+%\setbeamerfont{author}{size=\scriptsize,series=\bfseries,parent=structure}
+%\setbeamerfont{institute}{size=\scriptsize,series=\bfseries,parent=structure}
+\setbeamerfont{date}{size=\scriptsize,series=\bfseries,parent=structure}
+
+\setbeamercolor*{frametitle}{parent=sidebar}
+
+%% Beamer template for the Frame Title
+\defbeamertemplate*{frametitle}{sidebar theme}
+  {%
+    \nointerlineskip%
+    \vskip-\beamer@headheight%
+     \vbox to \beamer@headheight{%
+      \vfil
+      \leftskip=-\beamer@leftmargin%
+      \advance\leftskip by 0.5cm%
+      \rightskip=-\beamer@rightmargin%
+      \advance\rightskip by 0.5cm plus1fil%
+      {\usebeamercolor[fg]{frametitle}\usebeamerfont{frametitle}\insertframetitle\par}%
+      {\usebeamercolor[fg]{framesubtitle}\usebeamerfont{framesubtitle}\insertframesubtitle\par}%
+      \vbox{}%
+      \vskip-0.7em%
+      \vfil
+    }%
+  }
+
+% Adding a side bar
+%\setbeamertemplate{sidebar canvas right}{
+%\vspace*{-2pt}\hspace*{-29pt}%
+%{\includegraphics[height=28pt]{cmsLogo.pdf}}} 
+
+%% Adding Picture to frame title side
+%\addtobeamertemplate{frametitle}{}{%
+%\begin{tikzpicture}[remember picture,overlay]
+%\node[anchor=north east,yshift=5pt] at (current page.north east) {\includegraphics[width=01.20cm , height=0.98cm]{cmsLogo.pdf}};
+%\end{tikzpicture}}
+
+\logo{\includegraphics[width=1.20cm,height=0.98cm]{cmsLogo.pdf}}
+\logoii{\includegraphics[width=1.20cm,height=0.98cm]{UMN.pdf}}
+
+%% Define How to put Logo on both sides of top page
+\setbeamertemplate{headline}
+  {%
+    \begin{beamercolorbox}[wd=\paperwidth]{frametitle}
+      \ifx\beamer@sidebarside\beamer@lefttext%
+      \else%
+        \hfill%
+      \fi%
+      \ifdim\beamer@sidebarwidth>0pt%  
+        \usebeamercolor[bg]{logo}%
+        \vrule width\beamer@sidebarwidth height \beamer@headheight%
+        \hskip-\beamer@sidebarwidth%
+        \hbox to \beamer@sidebarwidth{\hss\vbox to
+          \beamer@headheight{\vss\hbox{\color{fg}\insertlogo}\vss}\hss}%
+        \hfill%
+        \vrule width\beamer@sidebarwidth height \beamer@headheight%
+        \hskip-\beamer@sidebarwidth%
+        \hbox to \beamer@sidebarwidth{\hss\vbox to
+          \beamer@headheight{\vss\hbox{\color{fg}\insertlogoii}\vss}\hss}%
+      \else%
+        \vrule width0pt height \beamer@headheight%  
+      \fi%
+    \end{beamercolorbox}
+}
+
+% Beamer Template for the Sidebar
+%\defbeamertemplate*{headline}{sidebar theme}
+%  {%
+%    \begin{beamercolorbox}[wd=\paperwidth]{frametitle}
+%      \ifx\beamer@sidebarside\beamer@lefttext%
+%      \else%
+%        \hfill%
+%      \fi%
+%      \ifdim\beamer@sidebarwidth>0pt%
+%        %\usebeamercolor[bg]{logo}%
+%        \vrule width\beamer@sidebarwidth height \beamer@headheight%
+%        \hskip-\beamer@sidebarwidth%
+%        \hbox to \beamer@sidebarwidth{\hss\vbox to
+%          \beamer@headheight{\vss\hbox{\color{fg}\insertlogo}\vss}\hss}%
+%      \else%
+%        \vrule width0pt height \beamer@headheight%
+%      \fi%
+%    \end{beamercolorbox}
+% }
+%\fi
+
+% Beamer Template of Side bar format
+\def\beamer@sidebarformat#1#2#3{%
+  \begin{beamercolorbox}[wd=\beamer@sidebarwidth,leftskip=#1,rightskip=1ex plus1fil,vmode]{#2}
+    \vbox{}%
+    #3\par%
+    \vbox{}%
+    \vskip-1.4ex%
+  \end{beamercolorbox}
+}
+
+% Beamer Template of Section side bar!
+\defbeamertemplate*{section in sidebar}{sidebar theme}
+{%
+  \vbox{%
+    \vskip 1ex%
+    \beamer@sidebarformat{3pt}{section in sidebar}{\insertsectionhead}%
+  }%
+}
+
+% Shaded Sidebar!
+\defbeamertemplate*{section in sidebar shaded}{sidebar theme}
+{%
+  \vbox{%
+    \vskip 1ex%
+    \beamer@sidebarformat{3pt}{section in sidebar shaded}{\insertsectionhead}%
+  }%
+}
+
+% Subsection Side bar
+\defbeamertemplate*{subsection in sidebar}{sidebar theme}
+{%
+  \beamer@sidebarformat{5pt}{subsection in sidebar}{\insertsubsectionhead}%
+}
+
+\defbeamertemplate*{subsection in sidebar shaded}{sidebar theme}
+{%
+  \beamer@sidebarformat{3pt}{subsection in sidebar shaded}{\insertsubsectionhead}%
+}
+
+
+\ifdim\beamer@sidebarwidth>0pt
+
+% Sidebar Adjustment
+\setbeamersize{sidebar width \beamer@sidebarside=\beamer@sidebarwidth}
+  \defbeamertemplate*{sidebar \beamer@sidebarside}{sidebar theme}
+  {
+    \beamer@tempdim=\beamer@sidebarwidth%
+    \advance\beamer@tempdim by -6pt%
+    {\usebeamerfont{title in sidebar}%
+      \vskip 1.5em%
+      \hskip 2pt%
+      \usebeamercolor[fg]{title in sidebar}%
+      \insertshorttitle[width=\beamer@tempdim,center,respectlinebreaks]\par%
+      \vskip 1.20em%
+    }%
+    {%
+       %%% For Author on sidebar
+      \hskip 3pt%
+      \usebeamercolor[fg]{author in sidebar}%
+      \usebeamerfont{author in sidebar}%
+      \insertshortauthor[width=\beamer@tempdim,center,respectlinebreaks]\par%
+      \vskip 1.25em%
+    }%
+    \insertverticalnavigation{\beamer@sidebarwidth}%
+    \vfill
+    \ifx\beamer@sidebarside\beamer@lefttext%
+    \else%
+      \usebeamercolor{normal text}%
+      \llap{\usebeamertemplate***{navigation symbols}\hskip 0.1cm}%
+      \vskip 2pt%
+    \fi%
+  }%
+
+  \ifx\beamer@sidebarside\beamer@lefttext%
+    \defbeamertemplate*{sidebar right}{sidebar theme}
+    {%
+      \vfill%
+      \llap{\usebeamertemplate***{navigation symbols}\hskip 0.1cm}%
+      \vskip 2pt}
+  \fi
+  % Margins Size for text to start
+  \setbeamersize{text margin left=0.5cm,text margin right=0.5cm}
+\fi
+
+%\usecolortheme{sidebartab} cut-pasted-n-hacked:
+\setbeamercolor*{section in sidebar shaded}{parent=palette sidebar secondary}
+\setbeamercolor*{section in sidebar}
+  {parent=section in sidebar shaded,use={sidebar,section in sidebar shaded},%
+   fg=UNL@Scarlet,bg=UNL@Cream}
+\setbeamercolor*{subsection in sidebar shaded}{parent=palette sidebar primary}
+\setbeamercolor*{subsection in sidebar}
+  {parent=subsection in sidebar shaded,use=section in sidebar,%
+   bg=section in sidebar.bg, % We simply inherit the section properties
+   fg=section in sidebar.fg} % Here too.
+
+% We use *part* of the outer theme "shadow" but without the "split" theme
+% This gives us a (hacked) drop shadow on the sidebar and frametitle bar
+\pgfdeclarehorizontalshading[frametitle.bg,frametitle right.bg]{beamer@frametitleshade}{\paperheight}{%
+  color(0pt)=(frametitle.bg);
+  color(\paperwidth)=(frametitle right.bg)}
+  %color(0pt)=(frametitle right.bg)}
+
+
+%%% Begining of Documents
+\AtBeginDocument{
+  %
+  \pgfdeclareverticalshading{beamer@topborder}{\paperwidth}{%
+    color(0pt)=(black);
+    color(1pt)=(black)}
+  \pgfdeclarehorizontalshading{beamer@sideborder}{\paperheight}{%
+    color(0pt)=(black);
+    color(1pt)=(black)}
+
+  \pgfdeclareverticalshading{beamer@topshade}{\paperwidth}{%
+    color(0pt)=(bg);
+    color(4pt)=(black!50!bg)}
+  \pgfdeclareverticalshading{beamer@topshadesidebarcover}{\beamer@sidebarwidth}{%
+    color(0pt)=(UMN@Maroon);
+    color(4pt)=(UMN@Maroon)}
+  \pgfdeclareverticalshading{beamer@topshadesidebarcoverwhite}{6pt}{%
+    color(0pt)=(white);
+    color(4pt)=(white)}
+
+  \pgfdeclarehorizontalshading{beamer@sideshade}{\paperheight}{%
+    color(0pt)=(black!50!bg);
+    color(4pt)=(bg)}
+% An attempt at getting the shadings to meet nicely, FAILED
+%  \pgfdeclarehorizontalshading{beamer@sidediagshade}{5.66pt}{%
+%    color(0pt)=(green!50!bg);
+%    color(5.66pt)=(bg)}
+}
+
+\addtobeamertemplate{headline}{}
+{%
+%  \vskip-0.2pt
+%drop-shadow:
+%old: \hskip\beamer@sidebarwidth\hskip.2cm\pgfuseshading{beamer@topshade}
+\hskip\beamer@sidebarwidth\pgfuseshading{beamer@topshadesidebarcoverwhite}\pgfuseshading{beamer@topshade}
+%border: \hskip\beamer@sidebarwidth\hskip.2cm\pgfuseshading{beamer@topborder}
+% Attempted to combine two drop shadows in a transition, failed
+%*** TRY HERE INSTEAD: declare a horizontal shade, rotate it 45 degrees and clip it.
+%  \pgfmoveto{\pgfxy{0,0}}
+%  \pgflineto{\pgfxy{0,-2}}
+%  \pgflineto{\pgfxy{-2,-2}}
+%  \pgflineto{\pgfxy{2,-2}}
+%  \pgflineto{\pgfxy{2,2}}
+%  \pgflineto{\pgfxy{2,0}}
+%  \pgflineto{\pgfxy{0,0}}
+%  \pgfclip
+  \vskip-4pt
+  \pgfuseshading{beamer@topshadesidebarcover}
+  \vskip-2pt
+}
+
+% Add page numbering to bottom left.
+% simply setting it (\setbeamertemplate{footline}[page number]) defaults to lower right
+\addtobeamertemplate{footline}
+{%
+   \usebeamercolor[fg]{author in sidebar}
+   \vskip-1cm\hskip10pt
+   %\insertpagenumber\,/\,\insertpresentationendpage\kern1em\vskip2pt%
+   \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+}
+
+\addtobeamertemplate{sidebar \beamer@sidebarside}{}
+{
+%Want to "rewind" to the top of the sidebar, but how?
+%drop-shadow:
+\vskip-\paperwidth\hskip\beamer@sidebarwidth\pgfuseshading{beamer@sideshade}
+%border: \vskip-\paperwidth\hskip\beamer@sidebarwidth\pgfuseshading{beamer@sideborder}
+}
+% End Shadow
+
+
+% Complete color themes:
+% albatross, beetle, crane, dove, fly, seagull
+
+% Inner color themes:
+% lily, orchid, rose
+
+% Outer color themes:
+% whale, seahorse, dolphin(?)
+
+\usecolortheme{orchid} % Establishes inner, dark colors
+\usecolortheme{whale}  % Establishes outer, dark colors
+
+\usecolortheme[RGB={140,17,17}]{structure}
+% Customized Various Color elements:
+\setbeamercolor{titlelike}{fg=UMN@Gold,bg=UMN@Maroon} %
+\setbeamercolor{sidebar}{fg=UMN@Maroon}              %
+\setbeamercolor{frametitle}{fg=UMN@Gold}           %
+\setbeamercolor{title in sidebar}{fg=UNL@Cream}      %
+\setbeamercolor{author in sidebar}{fg=UNL@Cream}    %
+%\setbeamercolor{section in sidebar}{fg=yellow}     These two do not load (are overwritten) if
+%\setbeamercolor{subsection in sidebar}{fg=yellow}  you use the sidebartab
+\setbeamercolor{section in sidebar shaded}{fg=UNL@Cream}
+\setbeamercolor{subsection in sidebar shaded}{fg=UNL@Cream}
+
+%\setbeamertemplate{blocks}[rounded]{shadow=true}
+%\setbeamerfont{block title}{size=\scriptsize,series=\bfseries}
+\setbeamercolor{block title}{fg=UMN@Maroon,bg=UNL@Cream, series=\bfseries}
+\setbeamercolor{block body}{fg=black,bg=UNL@VeryLightGrey}
+% Set the UNL logo, UNL.pdf must be in the latex path or working directory
+\setbeamercolor{logo}{fg=black,bg=white}
+
+
+
+
+% Handout Mode - Using the default layouts, no menus, etc.
+\mode
+<handout>
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\useinnertheme{default}
+%reset shadow boxes to very light grey
+\setbeamercolor{block title}{fg=black,bg=UNL@LightGrey} %
+\setbeamercolor{block body}{fg=black,bg=UNL@VeryLightGrey} %
+
+% Settings for every mode
+\mode
+<all>
+% We like algorithms in CS, right?
+
+\newtheorem{algorithmblock}[theorem]{Algorithm}
+\newtheorem{exercise}[theorem]{Exercise}
+%\newtheorem{problem}[theorem]{Problem}
+
+%Two horrible hacks to get a "note page" after every slide.
+\newcommand{\noteframe}{
+\only<handout>{ %
+  \begin{frame}
+   \frametitle{Notes}
+   \begin{center}
+   \begin{tikzpicture}
+    \foreach \y in {0,1,2,3,4,5,6}
+     \draw[thick] (0,\y) -- (11,\y);
+   \end{tikzpicture}
+   \end{center}
+  \end{frame}
+  }%
+}
+
+\newcommand{\noteslide}{%to be used after every \framebreak
+\only<handout>{ %
+   \begin{center}
+   \begin{tikzpicture}
+    \foreach \y in {0,1,2,3,4,5,6}
+     \draw[thick] (0,\y) -- (11,\y);
+   \end{tikzpicture}
+   \end{center}
+   \framebreak
+   }%
+}
+
+% We declare the main color theme: Scarlet & Cream
+\definecolor{UNL@Scarlet}{RGB}{140,17,17}
+% Alternate UNL@Reds: 204,0,0 (unl.edu) <--seems to be the best
+%                     240,7,46 (logo)
+%                     255,25,25 (original)
+%                     140,17,17 ("scarlet")
+\definecolor{UNL@Cream}{RGB}{245,240,219}
+%Cream          245  240  219
+%Cream2         245  255  250 - Whitest
+%Dairy Cream    249  228  188 - more peachy
+%Cream Brulee   255  229  160 - peach
+%Cream Can      245  200   92 - Almost a peach
+%Coconut Cream  248  247  220 - More white
+\definecolor{UNL@DarkGrey}{RGB}{35,35,35}
+\definecolor{UNL@Grey}{RGB}{100,100,100}
+\definecolor{UNL@LightGrey}{RGB}{200,200,200}
+\definecolor{UNL@VeryLightGrey}{RGB}{225,225,225}
+\definecolor{UMN@Red}{RGB}{112,12,41}
+\definecolor{UMN@Gold}{RGB}{249,199,77}
+\definecolor{UMN@Yellow}{RGB}{254,230,184}
+\definecolor{UMN@Maroon}{RGB}{123,17,19}
+\definecolor{UMN@Gold}{RGB}{255,215,0}
+% We enforce conformity at UNL!
+% so we override example (greenish) and alerted (redish)
+\setbeamercolor{block title example}{fg=white,bg=black} %
+%\setbeamercolor{block body example}{fg=block body.fg,bg=block body.bg} %
+\setbeamercolor{block title alerted}{fg=block title.fg,bg=block title.bg} %
+\setbeamercolor{block body alerted}{fg=block body.fg,bg=block body.bg} %
+\setlength{\parskip}{.25cm}
+%\def\mathfamilydefault{\rmdefault}\beamer@sansmathfalse
+\usefonttheme[onlymath]{serif}
+\beamertemplatetheoremsunnumbered  %This suppresses theorem numbers

@@ -1,0 +1,235 @@
+% UMNGolphers(University Of Minnesota) presentation theme for Beamer
+%
+% Tambe E. Norbert <delsubdue@gmail.com>, 2014
+% 
+%
+% Changelog:
+%
+% Version 1.0:
+%   First public version.
+% This is the Theme name
+\ProvidesPackage{beamerthemeUMNGolphers}[2014/06/13]
+%\usepackage{comicsans}
+%\renewcommand{\sfdefault}{comic}
+% Ddecalre some images
+\usepackage{tikz}
+\usepackage{collcell}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\usepackage{color}
+\usepackage{topcapt}
+\usepackage[english]{babel}
+\usepackage{feynmf}
+\usepackage{feyn}
+
+
+
+ % We declare the image that will be used as the logo
+%\pgfdeclareimage[width=.15\paperwidth]{footer}{umnfooter}
+\pgfdeclareimage[width=.10\paperwidth]{small-logo}{GoldGopher}
+\pgfdeclareimage[width=.10\paperwidth]{big}{GoldGopher.pdf}
+\pgfdeclareimage[width=.20\paperwidth]{big}{cmsLogo.pdf}
+
+
+
+
+%  Define some Colors
+\definecolor{UTMRed}{RGB}{112,12,41}
+\definecolor{UTMGold}{RGB}{150,99,5}
+\definecolor{UTMYellow}{RGB}{254,230,184}
+\setbeamercolor{background canvas}{bg=UMNCream}
+\definecolor{UMNGold}{RGB}{249,199,77}
+\definecolor{Gold}{RGB}{226,178,39}
+\definecolor{UMNYellow}{RGB}{254,230,184}
+\definecolor{UMNMaroon}{RGB}{123,17,19}
+\definecolor{UMNGold}{RGB}{255,215,0}
+\definecolor{UMNScarlet}{RGB}{140,17,17}
+\definecolor{UMNLightGrey}{RGB}{200,200,200}
+\definecolor{UMNVeryLightGrey}{RGB}{225,225,225}
+\definecolor{UMNPeach}{RGB}{225,218,185}
+\definecolor{UMNSECCOL}{RGB}{249,196,95}
+\definecolor{UMNTITBG}{RGB}{51,51,51}
+\definecolor{UMNCream}{RGB}{245,240,219}
+\definecolor{UMNGrey}{RGB}{192,192,192}
+\definecolor{UMNDarkGrey}{RGB}{23,23,23}
+\usecolortheme[named=UTMRed]{structure}
+
+\definecolor{BLUE}{RGB}{0, 0, 139}
+\definecolor{StdTitle}{RGB}{26, 33, 141}
+\definecolor{StdBody}{RGB}{213,24,0}
+
+\definecolor{AlTitle}{RGB}{255, 190, 190}
+\definecolor{AlBody}{RGB}{213,24,0}
+
+\definecolor{ExTitle}{RGB}{201, 217, 217}
+\definecolor{ExBody}{RGB}{213,24,0}
+
+
+
+
+% Add or Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+%adjusting Headline
+%\setbeamertemplate{headline}{%
+%\pgftext[at=\pgfpoint{1pt}{-1pt},left,top]{\pgfuseimage{small-logo}}%
+%}
+%\setbeamertemplate{headline}{%
+%\leavevmode%
+%  \hbox{%
+%    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+%    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+%    \end{beamercolorbox}%
+%  }
+%}
+%Adjusting the Header
+\newcommand{\LogoLine}{%
+\raisebox{-12mm}[0pt][0pt]{%
+\begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
+\pgfsetlinewidth{0.7mm}
+\color{UMNMaroon}
+%\pgfline{\pgfpoint{-3mm}{1mm}}{\pgfpoint{11.0cm}{1mm}}
+\end{pgfpicture}}
+}
+% Include the line that we just created in the headline
+\setbeamertemplate{headline}[text line]{\LogoLine}
+
+% Adding a side bar
+\setbeamertemplate{sidebar canvas right}{
+\vspace*{2pt}\hspace*{-29pt}%
+{\includegraphics[height=28pt]{cmsLogo.pdf}}}
+
+\setbeamertemplate{sidebar canvas left}{
+\vspace*{2pt}\hspace*{0pt}%
+{\includegraphics[height=28pt]{GoldGopher.pdf}}}
+
+%%%%%
+% Now that we have changed the headline, we will need to orient the frame titles in a way that the come at the right stop just above the horizontal line.
+\setbeamertemplate{frametitle}{
+\vspace*{2mm}\hspace*{-2mm}\insertframetitle}
+
+
+
+
+%Adjusting footline
+%%%%%
+% Like mentioned above, we will take a similar approach to customize the footline as well and inclued FAA in it.
+%\newcommand{\Ffootline}{%
+%\insertsection % The left end of the footline
+%\hfill
+%\textit{norbert@physics.umn.edu} % The center
+%\hfill
+%\insertframenumber/\inserttotalframenumber} % And the right end
+
+%\setbeamertemplate{footline}{%
+%\usebeamerfont{structure}
+%\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex]{title in head/foot}%
+%\Tiny\hspace*{4mm} \Ffootline \hspace{4mm}
+%\end{beamercolorbox}}
+%%%%%%
+
+\setbeamertemplate{footline}{
+  % \unilogo
+  % \dsglogo
+   \begin{beamercolorbox}[ht=4ex,leftskip=1.4cm,rightskip=.3cm]{author in head/foot}
+    \hfill\usebeamercolor[fg]{structure}
+    \hrule
+    \vspace{0.1cm}
+    \insertdate 
+    \hfill \insertshortinstitute %\inserttitle
+    \hfill  \insertframenumber
+   \end{beamercolorbox}
+   \vspace*{0.1cm}
+} 
+
+%\setbeamertemplate{footline}{%
+%\hfill\usebeamercolor[fg]{structure}
+%\insertframenumber\hspace*{10pt}\strut\vskip2pt%
+%\pgfuseimage{footer}%
+%}
+%\setbeamercolor{footline}{fg=UMNMaroon}
+%\setbeamerfont{footline}{series=\bfseries}
+%\setbeamertemplate{footline}[text line]{norbert@physics.umn.edu}
+%Adjusting frame title
+\setbeamertemplate{frametitle}[default][center]
+\addtobeamertemplate{frametitle}{\vskip2pt}{}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{frametitle}{size = \Large}
+%Set some colors baby:
+\setbeamercolor{frametitle}{fg=UMNMaroon}
+\setbeamercolor{secsubsec}{fg=UMNMaroon}
+% Font for the presentation title
+\setbeamerfont{title}{size = \huge}
+\setbeamerfont{title}{series=\bfseries}
+
+%Use round for innertheme
+\useinnertheme{rounded}
+%adjust style of itemizing
+\setbeamertemplate{itemize items}[circle]
+%set Beamer Table, figure captions
+\setbeamercolor{caption}{fg = black}
+\setbeamercolor{caption name}{fg = black}
+%Adding Slide numbers
+%\addtobeamertemplate{navigation symbols}{}{%
+%    \usebeamerfont{footline}%
+%    \usebeamercolor[fg]{footline}%
+%    \hspace{1em}%
+%    \insertframenumber/\inserttotalframenumber
+%}
+
+%%%%%%
+% Now, there are three types of boxes in beamer:
+% 1. Simple, or standard block, which can be invoked using definition or theorem
+% 2. Alert block
+% 3. Example block
+% We will customize all these blocks based on our requirements
+%Adjusting Block sizes in Latex:
+\newenvironment<>{varblock}[2][.9\textwidth]{%
+  \setlength{\textwidth}{#1}
+  \begin{actionenv}#3%
+    \def\insertblocktitle{#2}%
+    \par%
+    \usebeamertemplate{block begin}}
+  {\par%
+    \usebeamertemplate{block end}%
+  \end{actionenv}}
+  
+\addtobeamertemplate{block begin}{%
+  \setlength{\textwidth}{0.7\textwidth}%
+}{}
+
+\addtobeamertemplate{block alerted begin}{%
+  \setlength{\textwidth}{0.7\textwidth}%
+}{}
+
+\addtobeamertemplate{block example begin}{%
+  \setlength{\textwidth}{0.7\textwidth}%
+}{}
+
+% Standard block
+\setbeamercolor{block title}{fg = UMNMaroon, bg =UMNDarkGrey!10!UMNVeryLightGrey}
+\setbeamercolor{block body}{bg = UMNCream!5!white}
+
+% Alert block
+\setbeamercolor{block title alerted}{fg=UMNGold, bg = UMNDarkGrey!5!white}
+\setbeamercolor{block body alerted}{bg = UMNVeryLightGrey!5!white}
+
+% Example block
+\setbeamercolor{block title example}{fg=BLUE, bg = ExTitle}
+\setbeamercolor{block body example}{bg = UMNPeach!5!white}
+
+
+
+
+\addtobeamertemplate{title page}{%
+%\begin{pgfpicture}
+%\pgf@relevantforpicturesizefalse
+%\pgftransformxshift{-\Gm@lmargin}
+%\pgftransformyshift{30pt}
+%\pgfpathrectanglecorners{\pgfpoint{0pt}{0pt}}{\pgfpoint{\paperwidth}{-.25\paperheight}}
+%\pgfsetfillcolor{UMNMaroon}
+%\pgfusepath{fill}
+%\pgftext[at=\pgfpoint{.5\paperwidth}{-.23\paperheight},left,bottom]{\pgfuseimage{large-logo}}
+%\end{pgfpicture}%
+\vskip40pt%
+}{}
