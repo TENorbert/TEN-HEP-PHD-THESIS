@@ -16,7 +16,7 @@ and using the equation as given in chapter 3 on the cross-section $\sigma = \fra
 \end{equation}
 
 where $\mathscr{L}$ is the integrated luminosity~(19\fbinv) and $\varepsilon$ and $A$ are the signal selection efficiency and Acceptance respectively.
-In addition to the observed limits~(Solid black line), the uncertainties on the expected limits at 68\%/16\%~($\pm 1\sigma$) and at 98\%/2.5\%~($\pm 2\sigma$) provide the \colorbox{green}{GREEN} and \colorbox{yellow}{YELLOW} respectively, the error from the median~(50\%) expected limits~(dashed red line) shown in figure \ref{fig:SPS8_Ctau_Ulimit}.
+In addition to the observed limits~(Solid black line), the uncertainties on the expected limits at 68\%/16\%~($\pm 1\sigma$) and at 98\%/2.5\%~($\pm 2\sigma$) provide the \textcolor{green}{GREEN} and \textcolor{yellow}{YELLOW} respectively, the error from the median~(50\%) expected limits~(dashed red line) shown in figure \ref{fig:SPS8_Ctau_Ulimit}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,10 +24,12 @@ In addition to the observed limits~(Solid black line), the uncertainties on the 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The efficiency times acceptance~($\varepsilon \times A$) combined as one is seen the figure \ref{fig:EffAcc}.
 \begin{center}
+\mbox{
 %\includegraphics[width=0.49\textwidth,height=0.5\textwidth]
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Signal efficiency $\times$ Acceptance for signal events passing our events selection for the SPS8(left) and GGM(right) models. The acceptance are photons with $t > 3$~ns.}
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/SignalReconstructionEfficiency.png}
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/SignalReconstructionAcceptance.png}
+}
+\captionof{figure}{The reconstruction and selection efficiency~(left) $\times$ Acceptance ($t>3$~ns)~(right) against transverse decay length in laboratory frame for different $c\tau$ points.}
 \label{fig:EffAcc}
 \end{center}
 
@@ -43,7 +45,8 @@ In GMSB, the neutralino $\tilde{\chi^{0}_{1}}$ is the NLSP and decays to the gra
 \begin{center}
 \centering
 \mbox{
-\includegraphics[width=5in]{THESISPLOTS/Neutralino_CrossSecTimesBR_Uplimit.pdf}}
+\includegraphics[height=0.5\textwidth, width=0.5\textwidth]{THESISPLOTS/180TeV_Neutralino_CrossSecTimesBR_Uplimit.pdf}
+\includegraphics[height=0.5\textwidth,width=0.5\textwidth]{THESISPLOTS/Neutralino_CrosSecVsMass_Exclusion_limit_11000.pdf}}
 \captionof{figure}{Neutralino production cross section against proper delay length upper limit interpretation in SPS8 model.}
 \label{fig:SPS8_Ctau_Ulimit}
 \end{center}
@@ -60,8 +63,8 @@ Using both the mass and proper lifetime of the lightest neutralino, we present p
 
 %\begin{figure}[!htb]
 \begin{center}
-\includegraphics[width=0.49\textwidth,height=0.5\textwidth]{THESISPLOTS/Neutralino_XsecVsMAss_Exclusion_limit_6000.png}
-\includegraphics[width=0.49\textwidth,height=0.5\textwidth]{THESISPLOTS/Neutralino_CrossSecTimesBR_Uplimit.png}
+\includegraphics[width=0.49\textwidth,height=0.5\textwidth]{THESISPLOTS/Neutralino_CrosSecVsMass_Exclusion_limit_12000.pdf}
+\includegraphics[width=0.49\textwidth,height=0.5\textwidth]{THESISPLOTS/180TeV_Neutralino_CrossSecTimesBR_Uplimit.pdf}
 \captionof{figure}{Neutralino production cross section against proper delay length upper limit at 95\% confidence levels interpretation in SPS8 model.}
 \label{fig:limits}
 \end{center}
@@ -71,7 +74,7 @@ Using both the mass and proper lifetime of the lightest neutralino, we present p
 \begin{center}
 \centering
 \mbox{
-\includegraphics[width=5in]{THESISPLOTS/Neutralino_2D_exclusion.pdf} }
+\includegraphics[height=0.8\textwidth, width=0.8\textwidth]{THESISPLOTS/Neutralino_Ctau-Vs-Lambda_2D_exclusion.pdf} }
 \captionof{figure}{Neutralino two dimensional exclusion limit of neutralino mass ($\Lambda$) against proper delay length upper limit interpretation in SPS8 model in the decay $\tilde{\chi}^{0}_{1} \rightarrow \gamma + \tilde{G}$ with limits from previous experiments shown.}
 \label{fig:SPS8_Ulimit}
 \end{center}

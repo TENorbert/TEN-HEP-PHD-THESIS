@@ -1,16 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Limit_Setting.tex: Limit Setting
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Limit Calculation}
+\chapter{Statistical Analysis}
 \label{Limit_Setting}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Limit Calculation}
+\section{Limit Computation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The upper limit calculation procedure used in this analysis is the CLs technique. We fed carefully estimated amounts 
-of background and signal with systematics to obtain the limit.
+of background and signal with systematic to obtain the limit.
 The variable for which the 95\% upper limit is set unlike previous experiments is based entirely on the neutralino proper decay length, $c\tau_{\tilde{\chi}^{0}_{1}}$. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -125,7 +125,7 @@ Figure \ref{fig:LIM} shows a sampling distributions of the test statistics and h
 \par In addition to the $p$-value, for expressing the disagreement between the data and a given hypothesis, the Higgscombine tool also provides a quantity known as the \textit{significance}~($\mathcal{Z}$). $\mathcal{Z}$ and the $p$-value have a very non-linear relation. Once can defined that relation using a two-sided fluctuation if a Gaussian variable $\sigma$, with $5\sigma$ significance corresponding to a $p$-value of $p = 5.7 \times 10^{-7}$ to denote a discovery. Since, we have not observed any significant excess of events over our standard model background, we will not mention a lot about significance in this thesis, but rather talk about $p$-values as they are indispensable in computing limits.
 
 The important question is always, how does one obtain an expression or a distribution of the test statistics and $f(t_{\mu}|\mu)$ from the likelihood function? To answer this question, the HiggsCombine tool was developed which consist of various ways of both analytically~(e.g the Asymptotic statistical method \cite{ASYMP}) or through numerical integration or Monte Carlo computation~( e.g the HybridNew statistical method) obtain the test statistics and $ f(t_{\mu}|\mu)$. We have shown the limit computation results of both methods as used in this analysis.
-As an example, the pdf $ f(q_{\mu}|\mu)$ of the test statistics~($q_{\mu}$) obtained though the \colorbox{blue}{Asymptotic} statistical method as given in \cite{ASYMP} is:
+As an example, the pdf $ f(q_{\mu}|\mu)$ of the test statistics~($q_{\mu}$) obtained though the \textcolor{green}{Asymptotic} statistical method as given in \cite{ASYMP} is:
 \begin{equation}\label{eq:ASYPTOTIC}
 f(t_{\mu}|{\mu}^{\prime}) = \mathbf{\Phi}\left( \frac{\mu -{\mu}^{\prime}}{\sigma}\right)\delta(t_{\mu}) +
                              \frac{1}{2}\frac{1}{\sqrt{2\pi}}\frac{1}{t_{\mu}}\exp\left[-\frac{1}{2} \left(  \sqrt{t_{\mu}} - \frac{\mu - {\mu}^{\prime}}{\sigma}\right)^{2} \right]

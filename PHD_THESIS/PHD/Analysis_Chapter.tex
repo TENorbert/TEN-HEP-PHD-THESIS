@@ -24,9 +24,9 @@ The SPS8 mGMSB possible new physics parameter space used for the present physics
 \subsubsection*{Background}
 QCD multi-jets and $\gamma +$ jet(s) events produced in leading order cross-sections with high \pt range of the photons, serves as background and also for time reconstruction and calibration and for sanity check. Events with $W$  and $Z$ decay  and $t\bar{t}$ with large missing transverse momentum are also generated for serving as sanity check for understanding momentum measurements.
 \subsection{Datasets}
-The proton-proton collision dataset used in this analysis was collected during 2012 runs at the center of mass energy of  $\sqrt{S} = 8$~TeV  and was collected using the CMS detector totalling and integrated luminosity of 19.1~\fbinv .
+The proton-proton collision dataset used in this analysis was collected during 2012 runs at the center of mass energy of  $\sqrt{S} = 8$~TeV  and was collected using the CMS detector giving a total integrated luminosity of 19.1~\fbinv .
 \subsubsection*{Data}
-The dataset consist is mostly containing events with at least a single photon triggered and only those selected using only luminosity-sections certified as GOOD in the CMS official run file; \textbf{JASON:Cert-8TeVPromptReco-Colllisions12-JASON.txt}. Table \ref{tab:DATA} shows the dataset used in this analysis.
+The dataset consist is mostly containing events with at least a single photon triggered and only those selected using only luminosity-sections certified as GOOD in the CMS official run file; JASON: \textbf{Cert\_8TeVPromptReco\_Colllisions12\_JASON.txt}. Table \ref{tab:DATA} shows the dataset used in this analysis.
 
 \begin{center}
 %\begin{table}[ht]
@@ -58,20 +58,19 @@ The Monte carlo ~(MC) samples are produced taking into account the Summer 2012 p
 %\begin{table}[ht]
 %\renewcommand\arraystretch{1.2}
 \centering
-\begin{tabular}{c c c}
-\hline
-$c\tau$ (\unit{mm}) & $\sigma_{LO}$ (pb) & number of events\\
-\hline
-250  & 0.0145 & 50112 \\
-500  & 0.0145 & 50112 \\
-1000 & 0.0145 & 50112 \\
-2000 & 0.0145 & 50112 \\
-3000 & 0.0145 & 50112 \\
-4000 & 0.0145 & 46944 \\
-6000 & 0.0145 & 50112 \\
-12000 & 0.0145 & 60000 \\
-\hline
-\end{tabular}
+\begin{tabular}{l l l l}
+     %\hline
+       %\textbf{Signal MC [mGMSB~(SPS8)]}
+        \hline
+        $\Lambda$~[TeV] & $c\tau$~(mm) & $\sigma_{LO}$~(pb) & Number of events\\
+       \hline
+       100 & 250-12,000  & 0.368  & 60,000 \\
+       120 & 250-12,000  & 0.133  & 60,000 \\
+       140 & 250-12,000  & 0.0574 & 60,000 \\
+       160 & 250-12,000  & 0.0277 & 60,000 \\
+       180 & 250-12,000  & 0.0145 & 60,000 \\
+       \hline
+       \end{tabular}  
 \captionof{table}{The signal GMSB MC samples used in this analysis}
 \label{tab:mc_GMSB_sample}
 %\end{table}
@@ -107,14 +106,15 @@ Another interested possible background contribution, in addition to QCD multi-je
 Cosmic muons, beam halo muons and ECAL spikes can all produced photons large reconstructed time and can contribute largely to \MET measurements since they contribute to \MET calculation which normally measures the \pt of all the detected particles in an event assuming all of these events arise from the nominal proton-proton collision although in practice cosmic muons, beam halo muons, spikes, ECAL and HCAL noise can all contribute to the total sum of the measurable event \pt imbalance but arising from non- nominal collision sources. 
 A pre-event selection requiring at least a good vertex, 2 or more jets ECAL spike cleaning, DT time cosmic muon cleaning and CSC tight halo-muon cleaning is shown to be very useful in reducing and estimating the contribution of these important background sources.
 \subsection{Trigger}
-Event selection process begins online using a higher level trigger~(HLT). The HLT trigger used for this analysis during the $\sqrt{S} = 8$~TeV proton-proton collision is the \textit{HLT-DisplacedPhoton65-CaloIdVL-IsoL-PFMET25} seeded by \textit{HLT-L1SingleEG12} level 1 trigger. This trigger was developed primarily for the study of displaced photons. To avoid bias in event selection towards any particular model, this trigger only requires that an accepted event must have an isolated photon with a \pt threshold of 65~GeV/c and a \MET above 25~GeV. In order to study the trigger efficiency and turn-on curve~( where the event selection efficiency becomes very close to 100\%), we avoid  any correlation between the photon and \MET objects selection, by using a single muon dataset~(HLT-IsoMu30) to study the efficiency measurements.
-The results of the trigger efficiency measurements are shown in figure \ref{fig:HLTEff} against photon \pt and \MET. These efficiency studies are made using the \textit{HLT-Photon50-CaloIdVL-IsoL} which has no \MET and jet multiplicity requirement  as the denominator and the  \textit{HLT-DisplacedPhoton65-CaloIdVL-IsoL-PFMET25} as the numerator. A single photon dataset is used to verify these efficiency while and GMSB and $\gamma +$ jets samples is used to derive any correction factors between data and MC events.
+Event selection process begins online using a higher level trigger~(HLT). The HLT trigger used for this analysis during the $\sqrt{S} = 8$~TeV proton-proton collision is the \texttt{HLT\_DisplacedPhoton65\_CaloIdVL\_IsoL\_PFMET25} seeded by \texttt{HLT\_L1SingleEG12} level 1 trigger. This trigger was developed primarily for the study of displaced photons. To avoid bias in event selection towards any particular model, this trigger only requires that an accepted event must have an isolated photon with a \pt threshold of 65~GeV/c and a \MET above 25~GeV. In order to study the trigger efficiency and turn-on curve~( where the event selection efficiency becomes very close to 100\%), we avoid  any correlation between the photon and \MET objects selection, by using a \texttt{SingleMuon} dataset~(\texttt{HLT\_IsoMu30}) to study the efficiency measurements.
+The results of the trigger efficiency measurements are shown in figure \ref{fig:HLTEff} against photon \pt and \MET. These efficiency studies are made using the \texttt{HLT\_Photon50\_CaloIdVL\_IsoL} which has no \MET and jet multiplicity requirement  as the denominator and the \newline
+\texttt{HLT\_DisplacedPhoton65\_CaloIdVL\_IsoL\_PFMET25} as the numerator. A \texttt{SinglePhoton} dataset is used to verify these efficiency while and GMSB and $\gamma +$ jets samples is used to derive any correction factors between data and MC events.
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.4]{THESISPLOTS/PhotonEfficiencyVsPhotonpt.png}
-\includegraphics[scale=0.4]{THESISPLOTS/PhotonEfficiencyVsMET.png}
+\mbox{
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/HLT-EfficiencyVsMET.png}
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/HLTEfficiencyVsPhotonpt.png}}
 \captionof{figure}{Trigger efficiency turn-on curves for photon \pt and $\MET > 25$~GeV~(left) and for \MET with photon $pt > 80$~GeV/c~(right).}
 \label{fig:HLTEff}
 \end{center}
@@ -160,7 +160,7 @@ The presence of the gravitino~($\tilde{G}$) and jets due to the cascade decay~(F
 \begin{center}
 \centering
 %\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[height=8cm, width=0.8\textwidth]{THESISPLOTS/Background_Delayed_Photon.pdf}
 \captionof{figure}{Schematic diagram showing $\tilde{\chi}^{0}_{1} \rightarrow \gamma + \tilde{G}$ decay topology within the ECAL volume of the CMS detector.}
 \label{fig:NeutDecay}
 \end{center}
@@ -206,46 +206,49 @@ Figure \ref{fig:spikeVsPhoton} shows a comparison between the pulse shape profil
 \begin{center}
 \centering
 %\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Pulse shape profile showing a spike and a real photon time from data.}
+\includegraphics[height=6cm, width=0.7\textwidth]{THESISPLOTS/spike_pulse_shape.pdf}
+\captionof{figure}{Pulse shape profile showing a spike~(solid line) and a real photon~(dashed line) from data.}
 \label{fig:spikeVsPhoton}
 \end{center}.
 
 In a study performed comparing the timing resolution obtained from cluster time to the seed time, it was observed that also the seed time method is very prone to isolated spikes, its resolution especially for large timing events is much better compared to the cluster time measurement method.
-Figure \ref{fig:TIME} shows the timing measurements of photons with $pt > 80$~GeV using either seed time or cluster time. The seed time show a timing resolution of $400$~ps with a narrow time tails compared to $600$ with a broad timing tail obtained from using cluster time.
+Figure \ref{fig:TIME} shows the timing measurements of photons using either seed time or cluster time. The seed time show a timing resolution of $400$~ps compared to $450$~ps with a broad timing tail obtained from using the method of error weighted average cluster time as defined in equation $4.2$ in Timing section.
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Timing distribution of photons with $\pt > 80$~GeV showing timing measurements using seed~(left) and that using cluster time~(right). Resolution from seed time is much better compared to that for cluster time.}
+\mbox{
+\includegraphics[height=6cm, width=0.5\textwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/THESISPLOTS/SeedTimeVsWAveBasicClusterTimeDefinitions.pdf}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Seed-Time-Chi2.png}
+}
+\captionof{figure}{Timing distribution of photons  showing timing measurements using seed crystal~(black) and that using Weighted Average basic cluster time~(blue). Resolution~($\sigma$) from seed time is better compared to that for cluster time. Together with the $\chi^{2}$, the seed time performs better in identifying anomalous timing objects.}
 \label{fig:TIME}
 \end{center}
 
 Monte Carlo simulation of ECAL timing is very challenging due to the presence of anomalous signals like spikes in data which are not available in MC samples.  Thus in order to study the timing resolution between MC and data, we select events containing only one or two jets and compare this timing distribution to the difference between the Generated time~$(T_{GEN}$) and the MC reconstructed time~($T_{RECO}$) within a timing window of [-2, 2 ]~ns. The difference in peak or mean time between the data and MC $\gamma +$ jet sample is used to smear the reconstructed time of the MC samples to be as comparable to true reconstructed time of data. A difference of about 125~ps is observed between the timing from data and that of MC, and a smearing of of the MC sample shows a close agreement between the smeared reconstructed time of the MC sample to that of data.
-Figure \ref{fig:DATAMCTime} shows the this comparison before and after the smearing is applied on the MC samples.
+Figure \ref{fig:DATAMCTime} shows the this comparison before and after timing calibration~(adjustment) is applied on the MC samples.
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Timing distribution of photons with $\pt > 80$~GeV showing timing of data and MC $\gamma +$ jets samples before~(left) and after~(right) smearing of MC is applied.}
-\label{fig:TIME}
+\mbox{
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/MC_Vs_DataTimeB4Calib.png}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/MC_Vs_DataTimeAferCalib.png}
+}
+\captionof{figure}{Timing distribution of photons showing timing of data and MC $\gamma +$ jets~(blue) samples and Data~(red) before~(left) and after~(right) timing Calibration is applied to MC.}
+\label{fig:DATAMCTime}
 \end{center}
 
 It is worth noting that the difference of 125~ps between $T^{MC}_{RECO}$ and $T^{DATA}_{RECO}$ compared to 500~ps ECAL timing resolution is not enough to influence event selection, however event distribution in the tails remains a major concern.
 \paragraph*{}
-The ECAL timing distribution for photons with $pt > 80$~GeV in the ECAL~(barrel and endcap inclusive i.e $|\eta_{\gamma}| < 3.0$) show timing distributions~(see figure \ref{fig:TIMEECAL})
+The ECAL timing distribution for photons with $pt > 50$~GeV in the ECAL~(barrel and endcap inclusive i.e $|\eta_{\gamma}| < 3.0$) show timing distributions~(see figure \ref{fig:TIMEECAL})
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{ECAL timing distribution of photons with $\pt > 80$~GeV from data showing contributions from main proton-proton collision in EB~(left), EE~(right) and all of ECAL combined~(below). A 2.5~ns timing structure is clearly seen in EE compared to EB}
+\mbox{
+%\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+%\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[height=8cm, width=0.9\textwidth]{THESISPLOTS/PhotonECALTimePtMTH50-C-D-SinglePhotonDataset.pdf}
+}
+\captionof{figure}{ECAL timing distribution of photons in barrel~(\textcolor{blue}{EB}), endcap~(\textcolor{red}{EE}) and all of ECAL~(\textcolor{black}{ALL ECAL}) with $\pt > 50$~GeV from data. A $2.5$~ns delay timing structure is observed in endcap subdetector.}
 \label{fig:TIMEECAL}
 \end{center}
 
@@ -260,11 +263,11 @@ The photon ECAL time inclusive distribution plots are shown in figure \ref{fig:B
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{ECAL time Vs $\eta$~(left) and ECAL time Vs $\phi$~(right) for photons with $\pt > 80$~GeV from data. The lower plot show the photon timing distribution for events with different jet multiplicity.}
+\mbox{
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsEta.pdf}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsPhi.pdf}}
+\includegraphics[height=8cm, width=0.8\textwidth]{THESISPLOTS/Photon_SeedXtalTime_Distribution_VsJetMultiplicity.pdf}
+\captionof{figure}{ECAL time against $\eta$~(left) and ECAL time against $\phi$~(right) for photons with $\pt > 60$~GeV from data. The lower plot shows the photon timing distribution for events with different jet multiplicity.}
 \label{fig:BKGPLOTS}
 \end{center}
 From the above distributions, there seems to be contributions from quite a variety of sources. The possible sources considered in this analysis include: QCD processes  which we consider to be a combination of $\gamma + $jets, multi-jets and other processes producing photons from nominal bunch collisions. Most QCD processes are expected to have minimal contribution to large timing photons and \MET with their only contributions arising from timing miss-reconstruction and \MET miss-measurements due to miss-identification of jets as photons. Events with possible or true large ECAL time with significant contributions arise from machine induce backgrounds~(MIB)(arising from ghost/satellite bunch collisions), Halo muons, cosmic muons and anomalous events like spikes. These events bring significant contributions to both large photon times and large \MET where which is our possible signal sample.
@@ -272,7 +275,7 @@ Thus, the data driven background estimation technique employed in this analysis 
 
 \begin{itemize}
 \item Divide the dataset into individual samples peculiar to the expected kinematics and observation of each individual background source,
-\item Identify observables based on its kinematics which can be used as variables to identify or tag and reject a particular background contribution with an acceptable amount of efficiency,
+\item Identify observable based on its kinematics which can be used as variables to identify or tag and reject a particular background contribution with an acceptable amount of efficiency,
 \item Used alternate samples particular to each background source to calculate and verify the event tagging and miss-tag rate or efficiency,
 \item Use the tagging and miss-tag rates to estimate the background contribution of each individual background source in a well defined control region~(CR) or sample,
 \item Use another CR as a closure test sample to verify our background estimation method.
@@ -287,7 +290,7 @@ By comparing these two samples, we can understand the difference and similaritie
 \subsection{Non-Collision Backgrounds}
 \subsubsection{Halo Photons}
 Energetic muons (energy up to 1 TeV) produced in Beam-induced backgrounds~(BIB) as a result of proton losses $z = 150$~m from the interaction point of the CMS detector and inelastic proton interaction with residual gas inside the beam pipe bremsstrahlung in ECAL crystals producing photons with very high \pt and significantly large ECAL time. The rate of these BIB depends on the beam current and the operational conditions of the LHC which include machine optics, collimator settings, residual gas densities and filling scheme. These muons which travel in a near parallel direction to normal protons in the beam pipe, referred to as halo muons are expected to leave a muons tracks  in the Endcap muon systems with a corresponding associated ECAL electromagnetic cluster in the ECAL. They are also peculiar in that they travel from one side of the detector to the other along the $z$-direction, and their  Time-Of-Flight~(TOF) with respect to a potential hit position in the ECAL sub-detector can be estimated as well as measured.
-The expected time at ECAL of a  halo muon travelling parallel along the beam line is given using a simple expression given as:
+The expected time at ECAL of a  halo muon traveling parallel along the beam line is given using a simple expression given as:
 
 \begin{equation}
 t^{\mbox{expected}}_{\mbox{ECAL}} = -1/c\left( \pm Z_{\mbox{cluster}} + \sqrt{Z^{2}_{\mbox{cluster}} + R^{2}_{\mbox{cluster}}}  \right)
@@ -307,11 +310,13 @@ A distribution of the Halo photon time against the photon $\phi$ shows that most
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.5]{THESISPLOTS/CSC_Segment_Halo_data.png}
-\includegraphics[scale=0.2]{THESISPLOTS/Figure_016-c.pdf}
+\mbox{
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsEta.pdf}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsPhi.pdf}}
+\mbox{
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/CSC-Segment-Halo-Tagging.pdf}
+%{THESISPLOTS/CSC_Segment_Halo_data.png}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/HALO-ECAL-TIME-Vs-ETA.png}}
 \captionof{figure}{ECAL time Vs $\eta$~(left) and ECAL time Vs $\phi$~(right) and $CSC(Seg,\gamma)\Delta\phi$  for photons with $\pt > 80$~GeV from data. Halo photons show a clear matched between CSC segments and ECAL cluster in $\Delta\phi$  with their distribution peaking at $\phi = 0, \pm \pi$ and also the shape of their expected time.}
 \label{fig:HALO}
 \end{center} 
@@ -324,22 +329,22 @@ Cosmic muons like beam Halo muons produced with sufficient energy  will bremsstr
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.5]{THESISPLOTS/Cosmic_Ray_Photons_Data.png}
-\includegraphics[scale=0.5]{THESISPLOTS/Cosmic_Ray_Photons_Cosmic_dataset.png}
+\mbox{
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Cosmic_Ray_Photons_Data.png}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Cosmic_Ray_Photons_Cosmic_dataset.png} }
 \captionof{figure}{Two dimensional plot showing $DT\Delta\phi(Seg,\gamma)$ against $DT\Delta\eta(Seg,\gamma)$ for photons with $\pt > 80$~GeV, ECAL Time $> 2$~ns and ECAL Time $< -3$~ns in proton-proton collision data~(left) and non-proton-proton collision or cosmic data~(right). Small $\Delta\eta$ and $\Delta\phi$ are cosmic-ray photon candidates.}
 \label{fig:COSMIC}
 \end{center}
 
 \subsubsection{Anomalous Photons: Spikes}
-Neutrons and some charge hadrons depositing their energy directly to the APDs instead of the crystal scintillation are referred to as \textit{anomalous signal} or \textit{spikes}. These spikes can mimic true photons from proton-proton collisions  leading to mis-identification of spikes as photons. Spikes are easily miss-identified as energetic photons and isolated. However, most spikes show a different signal pulse shape to that of photons and also have large negative ECAL time. In addition to energy topological selection cuts and ECAL cleaning that is done during online and offline event selection, ECAL clusters belonging to spikes are usually made up of very few crystals compared to photons clusters with many crystals. Thus using the number of crystals making in a reconstructed super cluster, we can distinguish true isolated photons from events with spikes. It has been observed that spike contributions increases with increase in LHC luminosity. Thus, as a selection criteria, photons with  Not identified as cosmic-ray photons or halo photons and with number of good crystals less than $7$ are considered to be spike candidates. Figure \ref{fig:SPIKES} show the distribution of the number crystals in a photon super cluster comparing photons with ECAL time $ < -3$~ns, in-time photons~( ECAL $|time| < 1$~ns and a selected spike control sample. The spike control sample is selected using the "swiss-cross" variable which is used to identify and reject events with spikes during super cluster reconstruction.
+Neutrons and some charge hadrons depositing their energy directly to the APDs instead of the crystal scintillation are referred to as \textit{anomalous signal} or \textit{spikes}. These spikes can mimic true photons from proton-proton collisions  leading to mis-identification of spikes as photons. Spikes are easily miss-identified as energetic photons and isolated. However, most spikes show a different signal pulse shape to that of photons and also have large negative ECAL time. In addition to energy topological selection cuts and ECAL cleaning that is done during online and offline event selection, ECAL clusters belonging to spikes are usually made up of very few crystals compared to photons clusters with many crystals. Thus using the number of crystals making in a reconstructed super cluster, we can distinguish true isolated photons from events with spikes. It has been observed that spike contributions increases with increase in LHC luminosity. Thus, as a selection criteria, photons with  Not identified as cosmic-ray photons or halo photons and with number of good crystals less than $7$ are considered to be spike candidates. Figure \ref{fig:SPIKES} show the distribution of the number crystals in a photon super cluster comparing photons with ECAL time $ < 0$~ns, some in-time photons~( ECAL $ -2 < t < 0$~ns and  selected spike and halo control sample. The spike control sample is selected using the "swiss-cross" variable which is used to identify and reject events with spikes during super cluster reconstruction. We observe that most spikes always have fewer($ < 7$) crystals contributing to the photon super cluster.
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Plot showing  Number of crystals in photon super cluster for photons with $\pt > 80$~GeV, ECAL Time $< -3$~ns~(blue), control region ($|t| < 1.0$~ns~(black) and spike control sample~(red).}
+\mbox{
+\includegraphics[height=7cm, width=0.7\textwidth]{THESISPLOTS/Number-Of-Crystals-In-Photon-SC.pdf}}
+%\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/swisscross_vs_time_3GeV.pdf} }
+\captionof{figure}{Plot showing  Number of crystals in photon super cluster for photons from the region with ECAL Time $ < 0$~ns. We define control regions of candidate photons(black), spike candidate photons~(magenta) and halo candidate photons~(red).}
 \label{fig:SPIKES}
 \end{center}
 
@@ -347,13 +352,13 @@ Neutrons and some charge hadrons depositing their energy directly to the APDs in
 \subsection{Collision Backgrounds}
 
 \subsubsection{QCD Photons and Pile Up}
-The LHC provides proton-proton collisions every $25$~ns, however during the 2012 LHC run, these bunch spacing time increased to $50$~ns. However, as discussed in section $3.1.5$ on LHC Bunch structure, the presence of 
+The LHC provides proton-proton collisions every $25$~ns, however during the \texttt{2012 LHC} run, these bunch spacing time increased to $50$~ns. However, as discussed in section $3.1.5$ on LHC Bunch structure, the presence of 
 Satellite/ghost bunches spaced in $5.0$~ns or $2.5$~ns  can also contribute to producing delayed photons either from collisions between these satellite/ghost bunches or with the main proton bunch collisions.
 As observed in figure \ref{fig:TIMEECAL}, photons from these events are a serious background source to delayed photons and most of these photons will pass all the above event and photon criteria selections. Thus, a careful 
 estimation of this contribution is the major task of the background estimation in this analysis.
-The kinematics of these events are very similar and as a result, we employ the standard ABCD method to for estimating these background contribution  to the signal region.
+The kinematics of these events are very similar and as a result, we employ the standard \texttt{ABCD} method to for estimating these background contribution  to the signal region.
 
-First before proceeding, we should mention another possible concern which deals with the difference in the measurement of \MET in most analysis which mostly require events to be \textit{in-time} to this
+Before proceeding, we should mention another possible concern which deals with the difference in the measurement of \MET in most analysis which mostly require events to be \textit{in-time} to this
 analysis whose event selection has been extended to include \textit{Out-of-time} events.
 
 \paragraph*{\MET Re-Calculation}\mbox{}\\
@@ -370,7 +375,7 @@ The distributions for ${\MET}_{1}$ and ${\MET}_{2}$  against ECAL time can be se
 %\mbox{
 \includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
 \includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Figure showing \MET distributions for events with out-of-time and in-time photons with $\pt > 80$~GeV. ${\MET}_{1}$ and ${\MET}_{2}$ definitions are given in context. }
+\captionof{figure}{Figure showing \MET distributions for events with out-of-time and in-time photons. ${\MET}_{1}$ and ${\MET}_{2}$ definitions are given in context. }
 \label{fig:METS}
 \end{center}
 
@@ -453,7 +458,7 @@ The underlying assumption here is that background contributions to large timing 
 $ N_{t > 3~ns}/ N_{|t| < 2.0~ns} \approx 10^{-5}$ with $N$ being the number of photons.
 
 \paragraph*{Closure Test}\mbox{}\\
-By selecting a sample of events containing only a single jet, we verify the validity of our method of background estimation using a closure test. The closure test is simply comparing the number of events we observed in our signal region $D$ with the number we expect from using our $ABDC$ background estimation method.
+By selecting a sample of events containing only a single jet, we verify the validity of our method of background estimation using a closure test. The closure test is simply comparing the number of events we observed in our signal region \texttt{D} with the number we expect from using our \texttt{ABDC} background estimation method.
 Using a equation \ref{eq:bkg}, we observed a total of $5$-events when we expected $6.44^{+2.95}_{-3.45}$ which is quite close. This gives us confidence that our  background estimation method is robust and reliable and we can now move on to do our final background estimation on dataset with events having at least $2$-jets passing our final photon, jet and \MET selection after being cleaned.
 \subsection{Background Estimation Cross Check}
 The main assumption in our background estimation technique is that, the contribution from collision background events to our signal region~($|time| > 3$~ns) is negligible.
@@ -464,17 +469,19 @@ The selection criteria of our extended to include out-of-time $Z$ candidates eve
 \item The di-mass of these two electrons, $|m_{\ell_{1}, \ell_{2}} - 91| > 61$~$GeV/c^{2}$,
 \item Each electron must be in the barrel, $|\eta_{\ell_{1}}| < 1.479$ and $ |\eta_{\ell_{2}}| < 1.479$.
 \end{itemize}
- At the electron super cluster level,  we used the seed crystal time adjusted accounting for the effects due to electron time of flight as the electron time, after the seed crystal has passed all the recommended crystals or rechit cleaning criteria recommended by the ECAP DPG such as \textit{kWeird}, \textit{kBad}, \textit{kPoorCalib} used in rejecting crystals showing anomalous behaviours like spikes, noisy, bad crystals and poorly calibrated crystals.
-In this cross-check, we define our signal region as $Z$-candidate events with a well defined mass from both electrons i.e  $71 < |m_{\ell_{1}, \ell_{2}} < 100$~$GeV/c^{2}$ while the Control sample consists of events which do not fall into the signal category.
-A quick look at the similar plots to figure \ref{fig:HALO} of the electron candidates from the Single/DoubleElectron data compared to the singlePhoton dataset as seen in figure \ref{fig:Elec} indicate that contribution from cosmic, halo and anomalous photon events is much reduced and thus makes the $Z$ boson candidate events sample a reliable sample to disentangle non-collision contributions and only study collision background contributions as initial objective.
+ At the electron super cluster level,  we used the seed crystal time adjusted accounting for the effects due to electron time of flight as the electron time, after the seed crystal has passed all the recommended crystals or rechit cleaning criteria recommended by the ECAP DPG such as \texttt{kWeird}, \texttt{kBad}, \texttt{kPoorCalib} used in rejecting crystals showing anomalous behavior like spikes, noisy, bad crystals and poorly calibrated crystals.
+In this cross-check, we define our signal region as $Z$-candidate events with a well defined mass from both electrons i.e  $76 < |m_{\ell_{1}, \ell_{2}}| < 100$~$GeV/c^{2}$ while the Control sample consists of events which do not fall into the signal category.
+A quick look at the similar plots to figure \ref{fig:HALO} of the electron candidates from the \texttt{Single/DoubleElectron} dataset compared to the \texttt{SinglePhoton} dataset as seen in figure \ref{fig:Elec} indicate that contribution from cosmic, halo and anomalous photon events is much reduced and thus makes the $Z$ boson candidate events sample a reliable sample to disentangle non-collision contributions and only study collision background contributions as initial objective.
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{ECAL time Vs $\eta$ and ECAL time Vs $\phi$~(left) for photons from SinglePhoton dataset~(left) similar plots from the DoubleElectron dataset~(right). Photons at $\phi = 0, \pm \pi$ which are mostly halo photons not observed in the $Z$ boson candidate sample.}
+\mbox{
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsEtaEB.pdf}
+\includegraphics[height=7cm, width=0.5\textwidth]
+{THESISPLOTS/ZCandidates_TimeVsEta.pdf}}
+\mbox{
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsPhiEB.pdf}
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/ZCandidates_TimeVsPhi.pdf}}
+\captionof{figure}{ECAL time Vs $\eta$ and ECAL time Vs $\phi$~(left) for photons from \texttt{SinglePhoton} dataset~(left) compared with similar plots from the \texttt{DoubleElectron} dataset~(right). All photons are in barrel subdetector with $\phi = 0, \pm \pi$ mostly halo photons are not observed in the $Z$ boson candidate sample.}
 \label{fig:Elec}
 \end{center}
 
@@ -482,12 +489,13 @@ Figure \ref{fig:Zmass} shows the $Z$ boson mass reconstructed from the candidate
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Di-electron candidate mass distribution and the time of both electrons for the signal $71 < |m_{\ell_{1}, \ell_{2}} < 100$~$GeV/c^{2}$ $Z$ boson sample(left) and similar distributions from the Control~(outside signal region) sample~(right). Candidates events from the DoubleElectron dataset.}
+\mbox{
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-SignalMass.pdf}
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-SignalTime.pdf}}
+\mbox{
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-BackgroundMass.pdf}
+\includegraphics[height=7cm, width=0.5\textwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/THESISPLOTS/Z-CandidateOverLay-BackgroundTime.pdf}}
+\captionof{figure}{Di-electron candidate mass distribution and the time of both electrons for the signal \textcolor{blue}{$76 < m_{Z} < 100$}~\GeVcc $Z$ boson sample(left) and similar distributions from the Control~(\textcolor{red}{$50 < m_{Z} < 76$}~\GeVcc and \textcolor{red}{$ 100 < m_{Z} < 130$}~\GeVcc) sample~(right). Candidates events from the DoubleElectron dataset.}
 \label{fig:Zmass}
 \end{center}
 
@@ -505,11 +513,13 @@ A simple picture showing the above procedure with distributions is shown in figu
 
 \begin{center}
 \centering
-%\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-
+\mbox{
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/Uncleaned-di-Photon-ZMass-Fit-DoubleElectron-Run2012A.pdf}
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/Background_In_ZMass-From-Di-Photon.pdf}}
+\mbox{
+\includegraphics[height=8cm, width=0.8\textwidth]{THESISPLOTS/ZBackground_SF.png}
+%\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/CMS_Slice.png}
+}
 \captionof{figure}{\textit{Top}: Control sample~(left) and signal sample~(right) of di-electron candidate mass distribution. \textit{Bottom:} Figure showing definition of scale factor use in estimating the contributions from control sample in signal sample.}
 \label{fig:collZ}
 \end{center}
@@ -518,7 +528,7 @@ The result of the final timing distribution of genuine $Z$ boson events  can be 
 \begin{center}
 \centering
 %\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+\includegraphics[height=7cm, width=0.7\textwidth]{THESISPLOTS/Seed-Time-From-Uncleaned-di-photon-Mass-Fit-DoubleElectron-Run2012A.pdf}
 %\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
 \captionof{figure}{Timing distribution of genuine $Z$ bosons after background contribution has been subtracted.}
 \label{fig:Ztime}
@@ -579,7 +589,7 @@ The systematic uncertainty on luminosity measurement has the recommended value o
 \centering
 \begin{tabular}{c c}
 \hline
-\bfseries{Source} & \bfseries {Uncertainty on} $\sigma^{Exp}_{UL}$(\%)\\
+\bfseries{Source} & \bfseries {Uncertainty on $\sigma^{Exp}_{UL}$}(\%)\\
 \hline
 \texttt{Photon energy scale}~(1.0\%)  & $< 3.0$\% \\
 \texttt{Jet energy scale}  & $< 0.05$\% \\

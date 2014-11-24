@@ -3,15 +3,34 @@
 % This theme modifies the PaloAlto, sidebar, and sidebartab beamer themes
 % Modifications by Chris Bourke
 % Last modified 3/7/05
-
+%%% Inlude Pakages for use!
 \usepackage{tikz} % very handy for all thing image, figure
+\usetikzlibrary{positioning,arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+% To Draw Fynman Diags
+\usepackage{feynmp}
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+\usepackage[english]{babel}
+\usepackage{color,mathrsfs,srcltx,amsmath,amssymb}
+%\usepackage[all]{xypic}
+\usepackage{topcapt}
+\usepackage{multicol}
+\setlength{\columnsep}{3cm}
+%\input xy
+%\xyoption{all}
+%\usepackage{feynmf}
+%\usepackage{feyn}
 
 %% Some aliases
+\newcommand\tinyv{\@setfontsize\tinyv{6pt}{6}}
+\newcommand\mytiny{\@setfontsize\tinyv{8pt}{7}}
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ei}{\end{itemize}}
 \newcommand{\ig}{\includegraphics}
 \newcommand{\subt}[1]{{\footnotesize \color{subtitle} {#1}}}
-
+\newcommand{\xRightarrow}[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}} %right arrow with text abov
 
 %  dimension setup
 \newdimen\beamer@sidebarwidth
@@ -28,10 +47,29 @@
 
 \def\beamer@lefttext{left}
 
+% Private bullet styles
+%Change Bullet style
+\setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{itemize subsubitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{enumerate subitem}{\insertenumlabel.\insertsubenumlabel}
+\setbeamertemplate{enumerate subsubitem}{\insertenumlabel.\insertsubenumlabel.\insertsubsubenumlabel}
+\setbeamertemplate{enumerate mini template}{\insertenumlabel}
+% Personal itemize style
+\def\mf{
+\begin{itemize}
+\item Item
+\end{itemize}
+}
+\usetikzlibrary{shapes.misc}
+\setbeamertemplate{itemize items}{\tikz\node[cross out, draw] {point};}
+
+
+
+
+
 % Package options
 \DeclareOptionBeamer{hideothersubsections}[]{\beamer@nav@subsectionstyle{show/show/hide}}
 \DeclareOptionBeamer{hideallsubsections}[]{\beamer@nav@subsectionstyle{hide}}
-
 \DeclareOptionBeamer{width}{\beamer@sidebarwidth=#1}
 \DeclareOptionBeamer{height}{\beamer@headheight=#1}
 \DeclareOptionBeamer{left}{\def\beamer@sidebarside{left}}
@@ -88,7 +126,7 @@
 %\node[anchor=north east,yshift=5pt] at (current page.north east) {\includegraphics[width=01.20cm , height=0.98cm]{cmsLogo.pdf}};
 %\end{tikzpicture}}
 
-\logo{\includegraphics[width=1.20cm,height=0.98cm]{cmsLogo.pdf}}
+\logo{\includegraphics[width=1.20cm,height=0.98cm]{CMScol.pdf}}
 \logoii{\includegraphics[width=1.20cm,height=0.98cm]{UMN.pdf}}
 
 %% Define How to put Logo on both sides of top page
@@ -391,6 +429,29 @@
    \framebreak
    }%
 }
+% Variable Block
+\newenvironment<>{varblock}[2][.9\textwidth]{%
+  \setlength{\textwidth}{#1}
+  \begin{actionenv}#3%
+    \def\insertblocktitle{#2}%
+    \par%
+    \usebeamertemplate{block begin}}
+  {\par%
+    \usebeamertemplate{block end}%
+  \end{actionenv}}
+  
+\addtobeamertemplate{block begin}{%
+  \setlength{\textwidth}{1.5\textwidth}%
+}{}
+
+\addtobeamertemplate{block alerted begin}{%
+  \setlength{\textwidth}{0.9\textwidth}%
+}{}
+
+\addtobeamertemplate{block example begin}{%
+  \setlength{\textwidth}{1.5\textwidth}%
+}{}
+
 
 % We declare the main color theme: Scarlet & Cream
 \definecolor{UNL@Scarlet}{RGB}{140,17,17}

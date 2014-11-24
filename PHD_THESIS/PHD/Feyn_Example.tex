@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{feynmf}
+
+\begin{document}
+
+\begin{fmffile}{diagram}
+
+Here is a simple Feynman diagram:
+
+\vspace{1em} % Not important, just adds some space
+
+\begin{fmfgraph*}(120,80)
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmf{fermion}{i1,v1,o1}
+    \fmf{fermion}{i2,v2,o2}
+    \fmf{photon}{v1,v2}
+\end{fmfgraph*}
+
+\vspace{1em}
+
+Here is the same diagram with some labels:
+
+\vspace{1em}
+
+\begin{fmfgraph*}(120,80)
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmf{fermion}{i1,v1,o1}
+    \fmf{fermion}{i2,v2,o2}
+    \fmf{photon}{v1,v2}
+    \fmflabel{$v_1$}{v1}
+    \fmflabel{$v_2$}{v2}
+\end{fmfgraph*}
+
+\vspace{1em}
+
+Here are some more complicated examples: % from http://szczypka.web.cern.ch/szczypka/guides/latex/feynmp.html
+
+\vspace{1em}
+
+\begin{fmfgraph*}(100,100)
+    \fmfleft{i1}
+    \fmfright{o1,o2}
+    \fmf{fermion,label=$u$}{i1,w1}
+    \fmf{fermion,label=$d$}{w1,o1}
+    \fmf{photon,label=$W^{+}$}{w1,o2}
+    \fmfv{lab=$V^{\ast}_{ud}$,lab.dist=0.05w}{w1}
+\end{fmfgraph*}
+    
+\begin{fmfgraph*}(200,200)
+    % bottom and top verticies
+    \fmfstraight
+    \fmfleft{i0,i1,i2,id1,id2,i3,i4,i5}
+    \fmfright{o0,o1,o2,od1,od2,o3,o4,o5}
+    % incoming proton to gluon vertices
+    \fmf{fermion,label=$d$}{i1,o1}
+    % tension shifts vertex to one side
+    \fmf{fermion,tension=1.5,label=$\overline{b}$}{v2,i4}
+    \fmf{fermion,label=$\overline{c}$}{o4,v2}
+    \fmffreeze
+    \fmf{fermion}{o2,v3,o3}
+    \fmf{fermion,label=$\overline{s}$}{o2,v3}
+    \fmf{fermion,label=$c$}{v3,o3}
+    \fmf{photon, tension=2,label=$W^{+}$}{v2,v3}
+    % phantom centres the W->cs vertex
+    \fmf{phantom,tension=1.5}{i1,v3}
+
+    \fmfv{lab=$V_{cb}^{\ast}$}{v2}
+    \fmfv{lab=$V_{cs}$,lab.dist=-.1w}{v3}
+\end{fmfgraph*}
+
+\begin{fmfgraph*}(200,200)
+    %bottom and top verticies
+    \fmfbottom{P1,P2}
+    \fmftop{P1',b,bbar,P2'}
+    %incoming protons to gluon vertices
+    \fmf{fermion,tension=2,lab=$P_1$}{P1,g1}
+    \fmf{fermion,tension=2,lab=$P_2$}{P2,g2}
+    %blobs at gluon vertices, 0.16w is the size of blob
+    \fmfblob{.16w}{g1,g2}
+    %gluon from P1 to vertex1
+    \fmf{gluon,lab.side=right,lab=$x_{1}P_{1}$}{g1,v1}
+    %gluon from P2 to vertex2 - note change of order!
+    \fmf{gluon,lab.side=right,lab=$x_{2}P_{2}$}{v2,g2}
+    %quark loop was here
+    \fmf{fermion, tension=.6, lab.side=right,lab=$b$}{v1,b}
+    \fmf{fermion, tension=1.2}{v2,v1}
+    \fmf{fermion, tension=.6, lab.side=right,lab=$\overline{b}$}{bbar,v2}
+    %outgoing protons
+    \fmf{fermion}{g1,P1'}
+    \fmf{fermion}{g2,P2'}
+    %freeze everything in place
+    \fmffreeze
+    \renewcommand{\P}[3]{\fmfi{plain}{%
+        vpath(__#1,__#2) shifted (thick*(#3))}}
+    %lines on P1
+    \P{P1}{g1}{2,0}
+    \P{P1}{g1}{-2,1}
+    %lines on p2
+    \P{P2}{g2}{2,1}
+    \P{P2}{g2}{-2,0}
+    %lines on P1'
+    \P{g1}{P1'}{-2,-1}
+    \P{g1}{P1'}{2,0}
+    %lines on P2'
+    \P{g2}{P2'}{-2,0}
+    \P{g2}{P2'}{2,-1}
+\end{fmfgraph*}
+
+\end{fmffile}
+
+\end{document}

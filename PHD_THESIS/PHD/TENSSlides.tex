@@ -7,8 +7,8 @@
 \usepackage{color}
 \usepackage{topcapt}
 \usepackage[english]{babel}
-\usepackage{feynmf}
-\usepackage{feyn}
+%\usepackage{feynmf}
+%\usepackage{feyn}
 
 
 
@@ -304,6 +304,52 @@ M1,M2 & $C_{grav},\Lambda_{S},\Lambda_{G}$ & M3, $M_{\tilde{q}}$ & $Pt_{jets}$\\
 \end{minipage}
 \end{figure}
 
+\end{frame}
+
+
+\begin{frame}
+\tikzset{
+particle/.style={thick,draw=blue, postaction={decorate},
+    decoration={markings,mark=at position .5 with {\arrow[blue]{triangle 45}}}},
+gluon/.style={decorate, draw=black,
+    decoration={coil,aspect=0}}
+ }
+
+\begin{tikzpicture}[node distance=1cm and 1.5cm]
+\coordinate[label=left:$e^{-}$] (e1);
+\coordinate[below right=of e1] (aux1);
+\coordinate[above right=of aux1,label=right:$e^{-}$] (e2);
+\coordinate[below=1.25cm of aux1] (aux2);
+\coordinate[below left=of aux2,label=left:$e^{-}$] (e3);
+\coordinate[below right=of aux2,label=right:$e^{-}$] (e4);
+
+\draw[particle] (e1) -- (aux1);
+\draw[particle] (aux1) -- (e2);
+\draw[particle] (e3) -- (aux2);
+\draw[particle] (aux2) -- (e4);
+\draw[gluon] (aux1) -- node[label=right:$\gamma$] {} (aux2);
+\end{tikzpicture}
+\end{frame}
+
+
+
+\begin{frame}
+\unitlength = 1mm
+\begin{fmffile}{gluon}
+\begin{fmfgraph*}(40,30) 
+  \fmfleft{i1,i2} 
+  \fmflabel{$e^{-}$}{i1}
+  \fmflabel{$e^{-}$}{i2}
+  \fmfright{o1,o2}
+  \fmflabel{$e^{-}$}{o1}
+  \fmflabel{$e^{-}$}{o2}
+  \fmf{fermion, fore=blue}{i1,v1,o1} 
+  \fmf{fermion, fore=blue}{i2,v2,o2}
+  \fmf{photon,label=$\gamma$}{v1,v2} 
+  \fmfdot{v1,v2}
+\end{fmfgraph*}
+\end{fmffile}
+\write18{mpost gluon}
 \end{frame}
 
 %\section*{Text}

@@ -10,7 +10,7 @@
 \usetheme[hideothersubsections,hideallsubsections]{UMNTheme}
 % Remove navigation symbols
 \setbeamertemplate{navigation symbols}{}
-\title{Search For Displaced Photons Using Timing.}
+\title{Search For Delayed Photons Using Timing.}
 %\subtitle{}
 \author[Tambe E. Norbert] % (optional, for multiple authors)
 {Tambe E. Norbert\inst{1} \and Shih-Chuan Kao\inst{1} \and Yuichi Kubota\inst{1}}
@@ -35,46 +35,470 @@ University Of Minnesota
 \frametitle{\Huge Outline}
 \tableofcontents
 \end{frame}
-\section{Motivation}
+
+%%% Intro for General Talks
+\begin{frame}
+\frametitle{\huge{Where are we now?}}
+\begin{varblock}[7cm]{\textbf{The Universe Set}}
+ The set  $S =\{ \cdots \mathbf{0}, \frac{1}{2}, 1,  \frac{3}{2}, 2  \cdots \} \cdot \hbar $ 
+ \end{varblock}
+ where $s$ is the spin of a particle. 
+ %represents our past, current and probably future understanding of the universe around us. As of the moment 
+Currently we know:
+ \begin{itemize}
+  \item $\mathbf{s = \frac{1}{2}\hbar}$ Describes all the matter in our universe.
+  \item $\mathbf{s = 1\hbar}$ Describes gauge interactions.
+  \item $\mathbf{s = 0\hbar}$ Responsible for giving mass.
+  \item $\mathbf{s = 2\hbar}$ Describes gravity~(gauged?).
+  \item $\mathbf{s = \frac{3}{2}\hbar}$ \textcolor{red}{?? \textbf{Dark Matter}?}
+ \end{itemize}
+
+However, this magic set only describes $\approx 4$\% of our total universe.
+\includegraphics[height=2cm,width=0.25\paperwidth]{THESISPLOTS/UniversePie30.jpg}
+\end{frame}
+
+
+
+%% For Pre-Approval talk Intro Page
+\section{Introduction}
 \begin{frame}
 % \tableofcontents
 % \framesubtitle{}
 % \vspace{-1cm}
-\frametitle{\Huge Motivation}
-\begin{LARGE}
-\textit{How are we measuring the neutralino Lifetime?}
-\end{LARGE}
-\begin{enumerate}
-\item Calculate time from distance travelled by Neutralino before it decays
-\begin{Definition}[Distance Travelled]
-\begin{displaymath}
-\mathrm{L} = c\tau.\gamma \beta \quad \rightarrow \quad c\tau = \frac{|\Delta\overrightarrow{r}|}{\gamma \beta}
-\end{displaymath}
-\end{Definition}
-\item 2 Extract time directly from MC
-\begin{Definition}[MC Time]
-\begin{displaymath}
-c\tau = \frac{ct}{\gamma}
-\end{displaymath}
-\end{Definition}
-\end{enumerate}
+\frametitle{\Huge Introduction}
+
+\frametitle{\Huge Introduction}
+ %\vspace{-0.5cm}
+\begin{minipage}{0.8\paperwidth} 
+     \begin{itemize}  
+       \item{\color{UMN@Maroon} \textbf{Long-Lived Particle Models}}
+      \large{
+       \setbeamertemplate{itemize items}{$\mathbb{\star}$}
+        \begin{itemize}
+        \item Gauge Mediated Supersymmetry Breaking~(GMSB)
+        \setbeamertemplate{itemize items}{$\mathbb{\triangleright}$}
+          \begin{itemize}
+            \item Next-to-lightest SUSY~(NLSP) is \alert{Neutralino}~($\tilde{\chi}^{0}_{1}$)
+            \item $eV-keV$ Lightest-SUSY particle~(LSP) is \textcolor{blue}{Gravitino}~($\tilde{G}$).
+            \item Gravitino is a Dark Matter Candidate.
+          \end{itemize}
+        \setbeamertemplate{itemize items}{$\mathbb{\star}$}  
+        \item General Gauge Mediation~(GGM)
+         \setbeamertemplate{itemize items}{$\mathbb{\triangleright}$}
+          \begin{itemize}
+            \item NLSP is a mixture of fermions~(Bino, Wino, Higssino).
+            \item Several SUSY particles can be NLSP.
+          \end{itemize}
+      \end{itemize}
+    }   
+  \item{ \color{UMN@Maroon} \textbf{ECAL Resolution}}    
+ %\end{itemize}
+%\end{minipage}%
+
+%\begin{minipage}[b]{0.8\paperwidth}
+  \begin{columns}
+    \begin{column}{0.5\textwidth} 
+     %%% Left Column
+      %\vspace{-1cm}
+      %\fboxsep=0pt  
+       %\fbox{%
+      % \begin{itemize}
+       % \item{ \color{UMN@Maroon} \textbf{ECAL Timing}}
+       \setbeamertemplate{itemize items}{$\mathbb{\dagger}$} %\otimes, \ominus etc
+           \begin{itemize}
+             \item ECAL timing resolution $\sigma_{t} < 500$~ps.
+             \item Use timing to identify photons and electrons from long-lived decay.
+           \end{itemize}
+      % \end{itemize}                 
+     \end{column}% 
+% Right Column
+     % \hspace{0.5cm}
+     \begin{column}{0.6\textwidth}
+       \includegraphics[width=0.75\textwidth]{THESISPLOTS/ECAL_Timing_Resolution.png}        
+     \end{column} 
+   \end{columns} 
+     
+  \end{itemize}
+\end{minipage}
+ 
 \end{frame}
+
+%% SUSY at LHC
+\begin{frame}
+\frametitle{LHC Supersymmetry Production}
+ % \begin{tikzpicture}[remember picture,overlay]
+ %     \node[at=(current page.center)] {
+ %     \includegraphics[width=\paperwidth]{THESISPLOTS/SUSY-XSEC.pdf}
+ %           };
+ %  \end{tikzpicture}
+% \usebackgroundtemplate{\includegraphics[width=\paperwidth]{THESISPLOTS/SUSY-XSEC.pdf}}
+ \begin{minipage}[t]{0.5\linewidth}
+   \includegraphics[height=7cm,width=0.45\paperwidth]{THESISPLOTS/SUSY-XSEC.pdf}
+   %\caption{}
+   \includegraphics[height=6.5cm,width=0.40\paperwidth]{THESISPLOTS/gmsb_Lambda180_CTau10000.pdf}
+ \end{minipage} 
+ %\caption{mGMSB:SPS8 model}
+   
+ \begin{minipage}[b]{\linewidth}
+   SUSY production mostly in strong interactions at LHC.
+ \end{minipage}
+\end{frame}
+
+%% Production and Decay
 \section{Production and Decay}
 \begin{frame}
-\frametitle{\Huge Production and Decay}
-Production and Decay Diagrams
+\frametitle{\Huge Cascade Decay Chain}
+ %\begin{columns}
+ % \begin{column}{1.\textwidth}
+   \begin{minipage}[t]{0.5\linewidth}
+ %    \centering
+      \includegraphics[width=0.80\paperwidth]{THESISPLOTS/SUSY-DECAY.pdf}
+ \end{minipage}
+ \begin{minipage}[b]{0.5\linewidth}
+ \newline \textcolor{blue} {\texttt{Y. Kats et al: arXiv:1110.6444v2}}
+ \end{minipage}
+    
+\end{frame}    
+\begin{frame}
+\frametitle{Delayed Photon Production}   
+  %  \hspace{5cm}
+   % \begin{minipage}[t]{0.5\paperwidth}
+ %     \centering 
+  \fboxsep=0pt  
+  \begin{varblock}[7cm]{Double Photon}
+  % \fbox{%
+   \centering
+    \includegraphics[width=0.50\linewidth]{THESISPLOTS/Diphoton_squark.pdf}
+       
+     \large{ \textcolor{red}{2 Photons}, \textcolor{green}{2 Jets}, \textcolor{blue}{Large MET} }   
+   %  }
+     \end{varblock}%
+     \vspace{-0.3cm}
+     \begin{varblock}[7cm]{Single Photon}
+  %\fbox{
+    \centering
+       \includegraphics[width=0.50\linewidth]{THESISPLOTS/SinglePhoton_squark.pdf}
+       \newline
+       \large{ \textcolor{red}{1 Photon}, \textcolor{green}{Jets}, \textcolor{blue}{Large MET} }
+  %     }
+    \end{varblock}
+   % \end{minipage}
+ % \end{column}
+ % \hspace{-4.5cm}
+  % Column 2 begins
+%  \begin{column}{0.9\textwidth}  
+%    \begin{minipage}[t]{0.5\textwidth}
+%     \centering
+%      \includegraphics[height=7cm,width=1.1\linewidth]{THESISPLOTS/SUSY-XSEC.pdf}
+      %\includegraphics[scale=0.4]{THESISPLOTS/SUSY-XSEC.pdf}
+%    \end{minipage}
+%    \end{column} 
+% \end{columns}     
 \end{frame}
+
+% Tranverse Decay Distance
+\begin{frame}
+\frametitle{Tranverse Decay Distance}
+\vspace{-0.70cm}
+\begin{minipage}[t]{0.4\paperwidth}
+   \begin{varblock}[6cm]{Distance Travelled}
+     \begin{displaymath}
+       \mathrm{L}_{T} = c\tau\cdot \left(\gamma \beta_{T} \right)  = c\tau \cdot \left(\frac{p_{T}}{m} \right)
+      \end{displaymath}
+    \end{varblock}
+  
+   \begin{varblock}[6cm]{Proper Decay Length}
+    \begin{displaymath}
+    c\tau_{\texttt{NLSP}} = C^{2}_{\texttt{grav}}\frac{1}{\kappa}\left(\frac{m_{\texttt{NLSP}}}{ GeV}\right)^{-5}\left(\frac{\sqrt{\texttt{F}}}{TeV}\right)^{4}
+     \end{displaymath}
+    \end{varblock}    
+\end{minipage} 
+  
+\begin{minipage}[b]{0.65\paperwidth}
+    \includegraphics[width=0.75\paperwidth]{THESISPLOTS/DECAY-RATES.pdf}
+     \newline \texttt{\textcolor{blue}{J. Ruderman, D. Shih arXiv:1103.6083}}
+\end{minipage} 
+   
+ % begin{minipage}[b]{0.5\textwidth}
+  %\texttt{Y. Kats et al}: arXiv:1110.6444v2
+ %\end{minipage}
+\end{frame}
+
+
+%DataSet and Trigger Section
 \section{Dataset and Trigger}
 \begin{frame}
-\frametitle{\Huge Dataset and Trigger}
-Datasets and HLT Triggers used.
+\frametitle{\Huge Datasets}
+%\hspace{-0.2cm}
+\begin{minipage}[b]{0.7\paperwidth}
+\begin{itemize}
+ \item  \textcolor{UMN@Maroon}{\textbf{Data~($19.1 fb^{-1} $)}}
+  %\begin{varblock}[7cm]{Data~($19.1 fb^{-1}$) and Signal MC}
+   %\centering
+   \tinyv{
+   \begin{tabular}{l l p{1.2cm}|p{1.9cm}|}
+    \hline
+       \bfseries{Dataset Name} & \bfseries{Recorded Luminosity} $ [fb^{-1}]$ \\ %$[\fbinv]$ \\
+       \hline
+       \texttt{/Run2012B/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 5.1 \\
+       \texttt{/Run2012C/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 6.9 \\
+       \texttt{/Run2012D/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 7.1 \\
+       \hline\hline
+       \texttt{/Run2012C/Cosmics/Run2012C-22Jan2013-v1/RECO } & 3130384(\texttt{events}) \\
+       \texttt{/Run2012D/Cosmics/Run2012C-22Jan2013-v1/RECO } & 52430 (\texttt{events}) \\
+       \hline\hline
+       \texttt{/SingleElectron/Run2012A-22Jan2013-v1/AOD} & 5.2 \\
+       \texttt{/DoubleElectron/Run2012C-22Jan2013-v1/AOD} & 4.8 \\ 
+       \hline \hline     
+   \end{tabular}
+       }
+   \end{itemize}
+ \end{minipage}
+   % \vspace{1cm}
+   % \hspace{0.5cm}
+    
+ \begin{minipage}[b]{0.7\paperwidth}
+ \begin{itemize}
+    \item  \textcolor{UMN@Maroon}{\textbf{Signal MC [GMSB~(SPS8)]}}
+    %\centering
+    \tiny{
+    
+%     \begin{tabular}{l l l l}
+%     %\hline
+%       %\textbf{Signal MC [mGMSB~(SPS8)]}
+%        \hline
+%        \bfseries{$\Lambda$}~[TeV] & \bfseries{$c\tau$}~(mm) & \bfseries{$\sigma_{LO}$}~(pb) & \bfseries{Number of events}\\
+%       \hline
+%       100 & 250-12,000  & 0.368  & 60,000 \\
+%       120 & 250-12,000  & 0.133  & 60,000 \\
+%       140 & 250-12,000  & 0.0574 & 60,000 \\
+%       160 & 250-12,000  & 0.0277 & 60,000 \\
+%       180 & 250-12,000  & 0.0145 & 60,000 \\
+%       \hline \hline
+%       \end{tabular} 
+%\renewcommand\arraystretch{1.2}
+%\centering
+\begin{tabular}{c c c c c c c}
+\hline \hline
+$\Lambda$~[TeV] & 100  &   120  &  140  &  160  &  180  &  300  \\
+\hline
+$M_{\tilde{\chi}^{0}_{1}}$~[$GeV/c^{2}$] & 140 &   169  &  198  &  227  &  256  &  430  \\
+\hline
+$c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
+ (mm)     &  425   &   645  &   515 &   490 &   365 &   495 \\
+                 &  1700  &  1290  &  1030 &   975 &   730 &       \\
+                 &  3400  &  1935  &  2060 &  1945 &  1100 &   995 \\
+                 &  5100  &  2955  &  2920 &  2930 &  2195 &  2960 \\
+                 &  6000  &  3870  &  3985 &  3910 &  3950 &       \\
+                 &  9300  &  5985  &  6000 &  5875 &  5980 &  6000 \\
+                 &        &  9825  & 10450 &  9815 & 10450 & 10450 \\
+\hline \hline
+    \end{tabular}
+    
+}
+        
+    \end{itemize} 
+
+\end{minipage} 
+ 
+ \begin{minipage}[b]{0.7\paperwidth}
+ \begin{itemize}
+   \item \textcolor{UMN@Maroon}{ \textbf{$\gamma +$ Jets MC}}
+     \mytiny{  
+     \begin{tabular}{l l l}
+        %\hline
+         %
+       \hline
+        $\hat{p}_{T}$~[GeV\ /c] & $\sigma_{LO}$~(pb) & \bfseries{Number of events}\\
+       \hline
+       $50 - 80$ & 3322.3  & 1995062 \\
+       $80 - 120$ &  558.3  & 1992627 \\
+       $120 - 170$  &  108.0 & 2000043 \\
+       $170 - 300$  &  30.1 & 2000069 \\
+       $300 - 470$  &  2.1  & 2000130 \\
+       $470 - 800$  & 0.212 & 1975231 \\
+       \hline \hline
+       \end{tabular}  
+       }
+    \end{itemize}
+     
+    \end{minipage}
+% \end{varblock} 
+ \end{frame}
+ 
+ % HLT Trigger
+ \begin{frame}
+ \frametitle{\huge{HLT Trigger}}
+  \begin{minipage}[b]{\linewidth}
+  %\begin{varblock}[7.2cm]{HLT-Trigger Efficiency}
+    \begin{itemize}
+     \item \textbf{HLT\_DisplacedPhoton65\_CaloIdVL\_IsoL\_PFMET25}%~(\texttt{Main Trigger})
+     \begin{itemize}
+        \item  HLT\_Photon50\_CaloIdVL\_IsoL (\texttt{Study Trigger})
+     \end{itemize}
+   \end{itemize}  
+  %\end{varblock}
+  \end{minipage}
+  
+  
+ \vspace{-0.2cm}
+ \begin{minipage}[b]{0.7\paperwidth}
+ %\begin{itemize}
+ %\centering{
+ % \textcolor{UMN@Maroon}{\textbf{HLT-Trigger Efficiency}} }
+  %\vspace{-0.5cm}
+\flushleft
+    \begin{figure}[htbp]
+ \mbox{
+   \includegraphics[height=4.0cm,width=0.55\textwidth]{THESISPLOTS/Photon_EffAsym.png}
+   \includegraphics[height=4.0cm,width=0.55\textwidth]{THESISPLOTS/PFMET_EffAsym.png} }
+  %  \vspace{-0.80cm}
+ %\caption{\tiny{\alert{(LEFT)}: $c\tau=6000$~mm, \alert{(RIGHT)}: $c\tau=12000$~mm}}
+   \end{figure}    
+ % \end{itemize}
+\end{minipage}  
+\centering
+\includegraphics[height=3.5cm,width=0.70\textwidth]{THESISPLOTS/Eff2D.png} 
+  
+  
+ % \end{itemize}
 \end{frame}
+
+
+% ECAL Timing
+%\section{ECAL Timing}
+\begin{frame}
+\frametitle{\huge{ECAL Timing}}
+ \begin{minipage}[b]{0.8\paperwidth}
+  \begin{itemize}
+   \item\textcolor{UMN@Maroon}{\textbf{Time Reconstruction}} 
+      \begin{itemize}
+        \item 10 digitized samples used.
+        \item Fit and Weighted methods used to extract time.
+      \end{itemize}   
+   \item \textcolor{UMN@Maroon}{\textbf{Time Measurement}}
+      %\begin{equation*}\label{eq:avetime}
+ $$  T_{MAX} = \frac{{\displaystyle\sum_{i}} \frac{T_{MAX,i} }{\sigma_i^2} }{ {\displaystyle\sum_{i}} \frac{1}{\sigma_i^2} } $$
+     %\end{equation}
+  \end{itemize}   
+\end{minipage}
+ 
+ \begin{minipage}[b]{0.8\paperwidth}
+   \begin{itemize}
+    \item \textcolor{UMN@Maroon}{\textbf{Time Performance}}
+    \begin{itemize}
+     \item  Time resolution better than $200$~ps for $E > 30$ ~GeV
+    \end{itemize}
+     
+   \end{itemize}
+ \end{minipage}
+ \mbox{\includegraphics[height=3.0cm,width=0.50\textwidth]            {THESISPLOTS/AmplitudeVsTMax.png}
+      \includegraphics[height=3.0cm,width=0.50\textwidth]            {THESISPLOTS/NeigboMethodECALTimeRes.png}}
+\end{frame}
+
+%continuation of Timing
+\begin{frame}
+\frametitle{\huge{ECAL Timing(2)}}
+  \begin{minipage}[b]{0.8\paperwidth}
+   \begin{itemize}
+    \item \textcolor{UMN@Maroon}{\textbf{Photon Timing}}
+        \begin{itemize}
+         \item $T_{\gamma} =$ Average Time of all Crystals.
+         \item $T_{\gamma} =$ Seed (most energetic) Crystal Time.
+        \end{itemize}
+      
+       \includegraphics[height=5.0cm,width=0.70\textwidth]            {THESISPLOTS/AverageVsSeedTime_ECAL.png}   
+  \end{itemize}
+  \begin{itemize}
+   \item  Similar behavior seen in Seed and Average Time.
+   \item  We use seed time as Photon Measured Time in this analysis.
+  \end{itemize}
+  
+ \end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{\huge{ECAL Timing(3): MC Vs Data}}
+  \begin{minipage}[b]{0.7\paperwidth}
+    \begin{figure}[htbp]
+    \mbox{\includegraphics[height=5.0cm,width=0.61\textwidth]            {THESISPLOTS/SeedTime_data-mc.png}
+          \includegraphics[height=5.0cm,width=0.61\textwidth]            {THESISPLOTS/SeedTime_data-mc_Calib.png}}
+    \caption{\alert{(LEFT)}: Before \alert{(RIGHT)}: After}
+   \end{figure} 
+ \end{minipage}
+ 
+ \begin{minipage}[b]{0.8\paperwidth}
+  \begin{itemize}
+     \item Timing corrections from data applied to $\gamma +$ Jets MC.
+     \item $\gamma +$ Jets MC timing aligns better with data after corrections are applied.
+  \end{itemize}
+\end{minipage}
+\end{frame}
+
+
+%% Diagram of Why Long-Live Decay Kinematics
+\begin{frame}
+\frametitle{\huge {Long-Lived Decay}}
+%\vspace{-1cm}
+\begin{minipage}[t]{0.5\paperwidth}
+  % \begin{varblock}[7cm]{Why Long-Lived?}
+   \begin{itemize}
+    \item \textcolor{UMN@Maroon}{\textbf{Why Long-Lived?}}
+     \begin{itemize}
+      \item Slow moving particle; $\beta << 1$,
+      \item Non-nominal flight path,
+      \item Stopped in subdetectors,
+      %\item $\cdots$
+     \end{itemize}
+      
+ \end{itemize}  
+  % \end{varblock}
+\end{minipage}
+
+\begin{minipage}[t]{0.7\paperwidth}
+\centering
+  % \includegraphics[height=9cm, width=0.45\paperwidth, angle=-90]{THESISPLOTS/Neutralino-Delayed-Photon-ECAL.pdf}
+   \includegraphics[height=6cm, width=0.8\paperwidth]{THESISPLOTS/DelayedPhoton-ECAL.png}
+\end{minipage}
+\end{frame}
+
+%Long-Lived Or Offpoint
+\begin{frame}
+\frametitle{\huge{Slow Vs Off-Pointing Decay}}
+  \begin{minipage}[t]{0.7\paperwidth}
+    \begin{multicols}{2}
+      \begin{varblock}[3.5cm]{Photon Arrival Time}
+         
+          $$\Delta t_{1} = (L1/c\beta) - (L1/c)$$
+    
+          $$\Delta t_{2} = (L1 + L2 - L3)/c $$   
+           
+      \end{varblock}
+     \columnbreak
+     \includegraphics[height=3.30cm, width=0.4\paperwidth]{THESISPLOTS/DelayedPhoton-ECAL.png}
+     
+    \end{multicols} 
+  \end{minipage}
+  
+  \begin{minipage}[t]{0.8\paperwidth}
+    \includegraphics[height=3.8cm, width=0.7\paperwidth]{THESISPLOTS/dt1_dt2_late.png}
+  \end{minipage}
+  \vspace{-0.1cm}
+  Delayed photons mostly from slow moving neutralino decays.
+
+\end{frame}
+
+
+
+
+
+% Event Selection
 \section{Event Selection}
 \begin{frame}
 \frametitle{\Huge Event Selection}
-\subsection{Pre-Event Selection}
-\subsection{Event Cleaning}
-\subsection{Final Event Selection}
+%\subsection{Pre-Event Selection}
+%\subsection{Event Cleaning}
+%\subsection{Final Event Selection}
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -97,19 +521,80 @@ Datasets and HLT Triggers used.
 \vspace{-1cm}
 \alert{\textbf{Sample is $c\tau= 6000$ mm but we measure $c\tau \approx 3000$ mm}}
 \end{frame}
+
+%% Decay Kinematics Distribution
+\begin{frame}
+\frametitle{Kinematics Distribution}
+\end{frame}
+
+
+
+
+
 \section{Background Estimation}
 \begin{frame}
 \frametitle{\Huge Background Estimation}
-Have fun lets see!
+ \begin{figure}[ht]
+  \begin{minipage}[t]{0.5\linewidth}
+    %\mbox{
+  \centering
+  \includegraphics[width=0.60\paperwidth]{THESISPLOTS/Background_Delayed_Photon.pdf}
+    %\vspace{-1cm}
+    %\caption{Background}
+  \end{minipage}
+ \end{figure}
 \end{frame}
+
 \section{Systematics}
 \begin{frame}
 \frametitle{\Huge Systematics}
 \end{frame}
+
+
+%limits
 \section{Limits}
 \begin{frame}
 \frametitle{\Huge Limits}
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\mbox{
+\includegraphics[height=6cm,width=\textwidth]{THESISPLOTS/180TeV_Neutralino_CrossSecTimesBR_Uplimit.pdf}}
+\vspace{-1cm}
+\caption{$c\tau$ Limits }
+\label{fig:ctaulimit}
+\end{minipage}
+\hspace{0.1cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\mbox{
+\includegraphics[height=6cm, width=\textwidth]{THESISPLOTS/Neutralino_CrosSecVsMass_Exclusion_limit_12000.pdf}}
+\vspace{-1cm}
+\caption{Mass Limit }
+\label{fig:masslimit}
+\end{minipage}
+\end{figure}
+\vspace{-1cm}
+\alert{\textbf{sample is $c\tau= 12000$ mm but we measure $c\tau \approx 10500$ mm}}
 \end{frame}
+
+\begin{frame}
+\frametitle{\Huge{$c\tau$-Mass Limits}}
+ \begin{minipage}[t]{0.5\linewidth}
+ %    \centering
+      \includegraphics[height= 8cm,width=0.85\paperwidth]{THESISPLOTS/Neutralino_Ctau-Vs-Lambda_2D_exclusion.pdf}
+%   \end{minipage}
+% \begin{minipage}[t]{\linewidth}
+% \newline \textcolor{blue} {\texttt{Y. Kats et al: arXiv:1110.6444v2}}
+
+ \end{minipage}
+
+
+\end{frame}
+
+
+
+%others
 \begin{frame} %---------------------------------------------------------------
 \frametitle{Are these measurements correct?}
 % \framesubtitle{}
@@ -237,4 +722,16 @@ Factor is \alert{The SAME} for different neutralino $c\tau$ with same $\Lambda$ 
 \end{large}
 \end{itemize}
 \end{frame}
+
+%\begin{frame}
+%\frametitle{Introduction}
+%\begin{varblock}[7cm]{Hybrid Linear Modeling}
+%Suppose $\textbf{X} = \left( \mathbf{x}_{1}, \cdots, \mathbf{x}_{N} \right)$.
+%sampled from a mixture of $\kappa$ subspaces or flats with dimension $d$
+%\end{varblock}
+%\begin{itemize}
+%\item Assumptions:
+%\end{itemize}
+%\end{frame}
+
 \end{document}

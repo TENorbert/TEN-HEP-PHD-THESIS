@@ -12,25 +12,38 @@
 %\usepackage{comicsans}
 %\renewcommand{\sfdefault}{comic}
 % Ddecalre some images
-\usepackage{tikz}
+
+
+
 \usepackage{collcell}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
-\usepackage{color}
+\usepackage{color,mathrsfs,srcltx,amsmath,amssymb}
+%\usepackage[curve]{xypic}
 \usepackage{topcapt}
 \usepackage[english]{babel}
-\usepackage{feynmf}
+%\usepackage{feynmf}
+\usepackage{feynmp}
+\DeclareGraphicsRule{*}{mps}{*}{}
 \usepackage{feyn}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
 
-
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usepackage{rotating}
 
  % We declare the image that will be used as the logo
 %\pgfdeclareimage[width=.15\paperwidth]{footer}{umnfooter}
 \pgfdeclareimage[width=.10\paperwidth]{small-logo}{GoldGopher}
 \pgfdeclareimage[width=.10\paperwidth]{big}{GoldGopher.pdf}
-\pgfdeclareimage[width=.10\paperwidth]{big}{cmsLogo.pdf}
+\pgfdeclareimage[width=.10\paperwidth]{big}{CMScol.pdf}
 
+% new commands
+\newcommand{\xRightarrow}[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}}
 
 
 
@@ -108,7 +121,26 @@
 \setbeamertemplate{frametitle}{
 \vspace*{2mm}\hspace*{-2mm}\insertframetitle}
 
+%Change Bullet style
+\setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{itemize subsubitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{enumerate subitem}{\insertenumlabel.\insertsubenumlabel}
+\setbeamertemplate{enumerate subsubitem}{\insertenumlabel.\insertsubenumlabel.\insertsubsubenumlabel}
+\setbeamertemplate{enumerate mini template}{\insertenumlabel}
+% Personal itemize style
+\def\mf{
+\begin{itemize}
+\item Item
+\end{itemize}
+}
+\usetikzlibrary{shapes.misc}
 
+%\frame{
+%\setbeamertemplate{itemize items}{\tikz\node[cross out, draw] {point};}
+%\mf
+%\setbeamertemplate{itemize items}{$\odot$} %\uplus
+%\mf
+%}
 
 
 %Adjusting footline
