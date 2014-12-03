@@ -13,7 +13,7 @@
 \title{Search For Delayed Photons Using Timing.}
 %\subtitle{}
 \author[Tambe E. Norbert] % (optional, for multiple authors)
-{Tambe E. Norbert\inst{1} \and Shih-Chuan Kao\inst{1} \and Yuichi Kubota\inst{1}}
+{Shih-Chuan Kao\inst{1} \and Yuichi Kubota\inst{1} \and Tambe E. Norbert\inst{1} \and Roger Rusack\inst{1}}
 \institute[UMN]{
 \inst{1}%
 University Of Minnesota
@@ -37,25 +37,25 @@ University Of Minnesota
 \end{frame}
 
 %%% Intro for General Talks
-\begin{frame}
-\frametitle{\huge{Where are we now?}}
-\begin{varblock}[7cm]{\textbf{The Universe Set}}
- The set  $S =\{ \cdots \mathbf{0}, \frac{1}{2}, 1,  \frac{3}{2}, 2  \cdots \} \cdot \hbar $ 
- \end{varblock}
- where $s$ is the spin of a particle. 
+%\begin{frame}
+%\frametitle{\huge{Where are we now?}}
+%\begin{varblock}[7cm]{\textbf{The Universe Set}}
+% The set  $S =\{ \cdots \mathbf{0}, \frac{1}{2}, 1,  \frac{3}{2}, 2  \cdots \} \cdot \hbar $ 
+% \end{varblock}
+% where $s$ is the spin of a particle. 
  %represents our past, current and probably future understanding of the universe around us. As of the moment 
-Currently we know:
- \begin{itemize}
-  \item $\mathbf{s = \frac{1}{2}\hbar}$ Describes all the matter in our universe.
-  \item $\mathbf{s = 1\hbar}$ Describes gauge interactions.
-  \item $\mathbf{s = 0\hbar}$ Responsible for giving mass.
-  \item $\mathbf{s = 2\hbar}$ Describes gravity~(gauged?).
-  \item $\mathbf{s = \frac{3}{2}\hbar}$ \textcolor{red}{?? \textbf{Dark Matter}?}
- \end{itemize}
+%Currently we know:
+% \begin{itemize}
+%  \item $\mathbf{s = \frac{1}{2}\hbar}$ Describes all the matter in our universe.
+%  \item $\mathbf{s = 1\hbar}$ Describes gauge interactions.
+%  \item $\mathbf{s = 0\hbar}$ Responsible for giving mass.
+%  \item $\mathbf{s = 2\hbar}$ Describes gravity~(gauged?).
+%  \item $\mathbf{s = \frac{3}{2}\hbar}$ \textcolor{red}{?? \textbf{Dark Matter}?}
+% \end{itemize}
 
-However, this magic set only describes $\approx 4$\% of our total universe.
-\includegraphics[height=2cm,width=0.25\paperwidth]{THESISPLOTS/UniversePie30.jpg}
-\end{frame}
+%However, this magic set only describes $\approx 4$\% of our total universe.
+%\includegraphics[height=2cm,width=0.25\paperwidth]{THESISPLOTS/UniversePie30.jpg}
+%\end{frame}
 
 
 
@@ -150,13 +150,13 @@ However, this magic set only describes $\approx 4$\% of our total universe.
 \frametitle{\Huge Cascade Decay Chain}
  %\begin{columns}
  % \begin{column}{1.\textwidth}
-   \begin{minipage}[t]{0.5\linewidth}
+   \begin{minipage}[t]{0.7\linewidth}
  %    \centering
       \includegraphics[width=0.80\paperwidth]{THESISPLOTS/SUSY-DECAY.pdf}
  \end{minipage}
- \begin{minipage}[b]{0.5\linewidth}
+ %\begin{minipage}[b]{0.7\linewidth}
  \newline \textcolor{blue} {\texttt{Y. Kats et al: arXiv:1110.6444v2}}
- \end{minipage}
+ %\end{minipage}
     
 \end{frame}    
 \begin{frame}
@@ -443,7 +443,7 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
 \begin{minipage}[t]{0.5\paperwidth}
   % \begin{varblock}[7cm]{Why Long-Lived?}
    \begin{itemize}
-    \item \textcolor{UMN@Maroon}{\textbf{Why Long-Lived?}}
+    \item \textcolor{UMN@Maroon}{\textbf{Source of Delayed Photon?}}
      \begin{itemize}
       \item Slow moving particle; $\beta << 1$,
       \item Non-nominal flight path,
@@ -499,62 +499,281 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
 %\subsection{Pre-Event Selection}
 %\subsection{Event Cleaning}
 %\subsection{Final Event Selection}
-\begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
+%\begin{center}
+%\begin{table}[ht]
 \centering
-\mbox{
-\includegraphics[height=6cm,width=\textwidth]{Dist_TravDL.png}}
-\vspace{-1cm}
-\caption{1/Slope = 3065.60 mm }
-\label{fig:Neutralino Distance}
+\small{
+\begin{tabular}[2cm]{l l}
+\multicolumn{2}{c}{\bfseries{Object Selection Criteria}} \\
+  \hline 
+  \bfseries{Variable} & \bfseries{Selection Cuts} \\
+   \hline 
+ % \texttt{primary vertex number of tracks(vnof)}& $>= 4$ \\
+ % \texttt{primary vertex transverse distance to beam}~($d0$) & $ < 2$~cm from CMS center \\
+%  \texttt{primary vertex longitudinal distance to beam}~($|z|$) & $ < 24$~cm from CMS center \\
+  \texttt{Photon} $p_{T}(\gamma^{1(2)})$  & $ > 80(45)$~GeV \\
+  %\texttt{Sub-Leading photon must have} $p_{T}(\gamma^{2})$  & $ > 45$~ GeV \\
+ $|\eta_{\gamma}|$,(\texttt{EB only}),  &$ < 3.0$($ < 1.5$) \\
+ \texttt{Semi-minor axis}($S_{Minor}$)  &$0.12 \leq S_{Minor} \leq 0.38$ \\
+ \texttt{H/E}  & $ < 0.05$ \\
+ \texttt{Track Vito},$\Delta R(\gamma, track)$  & $ > 0.6 $ \\
+ \texttt{HCAL,ECAL, Track, Isolation}  & $ < 4.0 $,$ < 4.5 $,$ < 0.2 $ \\
+ \texttt{Cone Size(Iso $\gamma$)} $\Delta R(\gamma, SC)$ & $< 0.4$ \\
+ \texttt{Spike Swiss-Cross} & $1-E_{4}/E_{1})< 0.98$ \\ 
+ %\texttt{Spike Swiss-Cross} & $1-E_{6}/E_{2} $,($1-E_{4}/E_{1})< 0.98$ \\ 
+ % \hline 
+%\end{tabular}
+%\label{tab:PhotonSel}
+%\end{table}
+%\end{center}
+%%\end{minipage}
+
+%%\begin{minipage}[b]{0.55\linewidth}
+%%\begin{center}
+%\begin{table}[ht]
+%%\centering
+%%\begin{tabular}{ll}
+%%\multicolumn{2}{c}{\bfseries{PF Jet Selection Criteria}} \\
+  \hline 
+  \hline
+%%  \bfseries{Variable} & \bfseries{Selection Cuts} \\
+%%   \hline 
+ \texttt{Jets must satisfy} & \texttt{JetID Requirements} \\
+ \texttt{Leading Jet} $p_{T}$ & $ > 35$~GeV \\
+ \texttt{Number Of Constituents} & $ > 1$ \\
+%% \texttt{Charge EM energy fraction~(CEF)}& $ < 0.99$ \\
+%% \texttt{Neutral Hadron energy fraction~(NHF)}& $ < 0.99$ \\
+%% \texttt{Neutral EM energy fraction~(NEF)}& $ < 0.99$ \\
+% \texttt{If} $|\eta|$ \texttt{of jet is} $ >2.4$, \texttt{Charge Hadron energy fraction~(CHF) } & $ > 0$ \\
+% \texttt{If} $|\eta|$ \texttt{of jet is} $ >2.4$, \texttt{Charge multiplicity~(NCH) } & $ > 0$ \\
+ $\Delta R(\gamma, jet) = \sqrt{(\phi_{\gamma}-\phi_{jet})^{2} + (\eta_{\gamma}-\eta_{jet})^{2}}$ & $ > 0.3$ \\
+\hline \hline
+ $E^{\mbox{miss}}_{T}$&  $> 25$~GeV \\
+ \hline
+\end{tabular}
+%\label{tab:JetSel}
+%\end{table}
+%\end{center}
+}
 \end{minipage}
-\hspace{0.1cm}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\mbox{
-\includegraphics[height=6cm, width=\textwidth]{MC_TimeDL.png}}
-\vspace{-1cm}
-\caption{1/Slope = 3083.56 mm }
-\label{fig:From_MC}
-\end{minipage}
-\end{figure}
-\vspace{-1cm}
-\alert{\textbf{Sample is $c\tau= 6000$ mm but we measure $c\tau \approx 3000$ mm}}
+
+
+%\centering
+%\mbox{
+%\includegraphics[height=6cm,width=\textwidth]{Dist_TravDL.png}}
+%\vspace{-1cm}
+%\caption{1/Slope = 3065.60 mm }
+%\label{fig:Neutralino Distance}
+%\end{minipage}
+%\hspace{0.1cm}
+%\begin{minipage}[b]{0.45\linewidth}
+%\centering
+%\mbox{
+%\includegraphics[height=6cm, width=\textwidth]{MC_TimeDL.png}}
+%\vspace{-1cm}
+%\caption{1/Slope = 3083.56 mm }
+%\label{fig:From_MC}
+%\end{minipage}
+%\end{figure}
+%\vspace{-1cm}
+%\alert{\textbf{Sample is $c\tau= 6000$ mm but we measure $c\tau \approx 3000$ mm}}
 \end{frame}
 
 %% Decay Kinematics Distribution
 \begin{frame}
 \frametitle{Kinematics Distribution}
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\mbox{
+\includegraphics[height=6cm,width=\textwidth]{THESISPLOTS/GMSB_PhotPt.png}}
+\vspace{-1cm}
+\caption{Photon $p_{T}$}
+%\label{fig:ctaulimit}
+\end{minipage}
+\hspace{0.1cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\mbox{
+\includegraphics[height=6cm, width=\textwidth]{THESISPLOTS/GMSB_MET.png}}
+\vspace{-1cm}
+\caption{$E^{\mbox{miss}}_{T}$}
+%\label{fig:masslimit}
+\end{minipage}
+\end{figure}
+\begin{itemize}
+ \item Different $\Lambda$ values with the same $c\tau$(10~m). Photon $p_{T}$ is harder with higher values of $\Lambda$.
+\end{itemize}
+
+\end{frame}
+
+% Signal Efficiency & Acceptance
+\begin{frame}
+ \frametitle{Signal Efficiency and Acceptance}
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\mbox{
+\includegraphics[height=6cm,width=\textwidth]{THESISPLOTS/Eff_ctbgT.png}}
+\vspace{-1cm}
+\caption{Efficiency}
+%\label{fig:ctaulimit}
+\end{minipage}
+\hspace{0.1cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\mbox{
+\includegraphics[height=6cm, width=\textwidth]{THESISPLOTS/Accp_ctbgT.png}}
+\vspace{-1cm}
+\caption{Acceptance}
+%\label{fig:masslimit}
+\end{minipage}
+\end{figure}
+ Sharp drop in efficiency immediately beyond ECAL radius for slow moving neutralino decay as source of delayed photon.
+
 \end{frame}
 
 
+\begin{frame}
+ \frametitle{Signal Efficiency and Acceptance(II)}
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\mbox{
+\includegraphics[height=6cm,width=\textwidth]{THESISPLOTS/Accp_ctbgT1.png}}
+\vspace{-1cm}
+\caption{Slow Moving}
+%\label{fig:ctaulimit}
+\end{minipage}
+\hspace{0.1cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\mbox{
+\includegraphics[height=6cm, width=\textwidth]{THESISPLOTS/Accp_ctbgT2.png}}
+\vspace{-1cm}
+\caption{Off-Pointing}
+%\label{fig:masslimit}
+\end{minipage}
+\end{figure} 
+ Acceptance peaks at transverse decay length 800~mm with delayed photons from off-pointing neutralino decays.
+\end{frame}
 
+\begin{frame}
+\frametitle{Signal Efficiency and Acceptance(III)}
+  \begin{figure}[ht]
+   \begin{minipage}[b]{0.7\linewidth}
+    \mbox{
+  \centering
+  \includegraphics[height=7.5cm, width=0.65\paperwidth]{THESISPLOTS/Eff180_xPt_ct.png} }
+    \vspace{-0.5cm}
+    \caption{2 Dim Efficiency}
+  \end{minipage}
+ \end{figure}
+\end{frame}
 
 
 \section{Background Estimation}
 \begin{frame}
 \frametitle{\Huge Background Estimation}
- \begin{figure}[ht]
-  \begin{minipage}[t]{0.5\linewidth}
+ %\begin{figure}[ht]
+  %\begin{minipage}[t]{0.5\linewidth}
     %\mbox{
-  \centering
-  \includegraphics[width=0.60\paperwidth]{THESISPLOTS/Background_Delayed_Photon.pdf}
+  %\centering
+  %\includegraphics[width=0.60\paperwidth]{THESISPLOTS/Background_Delayed_Photon.pdf}
     %\vspace{-1cm}
     %\caption{Background}
-  \end{minipage}
- \end{figure}
+  %\end{minipage}
+ %\end{figure}
 \end{frame}
 
+%%Systematic Uncertainties
 \section{Systematics}
 \begin{frame}
 \frametitle{\Huge Systematics}
+ \begin{minipage}[t]{0.8\linewidth}
+  Background estimation is Data driven.
+  Thus, most of a systematics come from signal,including:
+  \begin{varblock}[7cm]{Experimental Systematics}
+   \begin{itemize}
+    \item Definition of Absolute or Zero time,
+    \item ECAL time Resolution,    
+    \item Unclustered Energy,
+    \item Jet energy scale,
+    \item Jets energy resolution,
+    \item Photon energy scale,
+    \item Luminosity. We use standard CMS luminosity uncertainty.
+   \end{itemize}
+  \end{varblock}  
+  \begin{varblock}[7cm]{Theoretical Systematics}
+   \begin{itemize}   
+   \item Choice of PDF.
+   \item Re-normalization group equations.
+   \end{itemize}
+  \end{varblock} 
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{\Huge Systematics(II)}
+\begin{minipage}[t]{0.8\textwidth}
+\centering
+\begin{tabular}{l l}
+\multicolumn{2}{c}{\bfseries{Systematic Uncertainties}} \\
+  \hline 
+   \bfseries{Source} & \bfseries{Uncertainty(\%)} \\
+   \hline
+   \texttt{Absolute time(Zero time)}& $10\sim 6$  \\
+   \texttt{Unclustered Energy}&  $10 \sim 4 $  \\
+   \texttt{Photon Energy Scale}& $ 4 \sim 2$  \\
+   \texttt{ECAL Time Resolution}& $ 5 \sim 2 $   \\
+   \texttt{Jet Energy Scale}& $9 \sim 3$   \\
+   \texttt{Jet Energy Resolution}& $ 9 \sim 2 $  \\
+   \hline
+   \texttt{Luminosity} & 2.6    \\
+   \texttt{Choice of PDF} & $ < 1$ \\
+  \hline \hline
+ \end{tabular} 
+ \end{minipage}
+ 
+ \begin{minipage}[b]{0.8\textwidth}
+ \begin{itemize}
+  \item Systematics is obtained by studying the effects of varying by a few amount of a particular source of systematic on the total number of objects passing object selection cuts.
+   \end{itemize}
+ \end{minipage}
+\end{frame}
+
+%Results
+\section{Results}
+\begin{frame}
+\frametitle{Results}
+\begin{minipage}[t]{0.8\textwidth}
+\centering
+\begin{tabular}{l l l}
+\multicolumn{3}{c}{\bfseries{Events Passing Final Selection}} \\
+  \hline
+   \bfseries{Sample} &\bfseries{Lifetime($c\tau$)[mm]} &\bfseries{Number Of Events} \\
+   \hline
+   \texttt{GMSB $\Lambda=180$ TeV}& $10500$ & \\
+   \texttt{GMSB $\Lambda=180$ TeV}& $ 6000$ &  \\
+   \texttt{GMSB $\Lambda=180$ TeV}& $ 4000$&  \\
+   \texttt{GMSB $\Lambda=180$ TeV}& $ 3000 $&   \\
+   \texttt{GMSB $\Lambda=180$ TeV}& $ 2000$&   \\
+   \texttt{GMSB $\Lambda=180$ TeV}& $ 1000$&  \\
+   \texttt{GMSB $\Lambda=180$ TeV}& $ 500$&  \\
+   \hline
+   \texttt{Data} & 1.00 &    \\
+   \texttt{Background Total} & $0.014$ & \\
+  \hline \hline
+ \end{tabular} 
+ \end{minipage}
+
 \end{frame}
 
 
-%limits
-\section{Limits}
+
 \begin{frame}
-\frametitle{\Huge Limits}
+\frametitle{\Huge CLs Upper Limits}
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -580,149 +799,146 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
 
 \begin{frame}
 \frametitle{\Huge{$c\tau$-Mass Limits}}
- \begin{minipage}[t]{0.5\linewidth}
+ \begin{minipage}[t]{0.8\linewidth}
  %    \centering
-      \includegraphics[height= 8cm,width=0.85\paperwidth]{THESISPLOTS/Neutralino_Ctau-Vs-Lambda_2D_exclusion.pdf}
+      \includegraphics[height= 8cm,width=0.8\paperwidth]{THESISPLOTS/Neutralino_Ctau-Vs-Lambda_2D_exclusion.pdf}
 %   \end{minipage}
 % \begin{minipage}[t]{\linewidth}
 % \newline \textcolor{blue} {\texttt{Y. Kats et al: arXiv:1110.6444v2}}
-
  \end{minipage}
-
-
 \end{frame}
 
 
 
 %others
-\begin{frame} %---------------------------------------------------------------
-\frametitle{Are these measurements correct?}
+%\begin{frame} %---------------------------------------------------------------
+%\frametitle{Are these measurements correct?}
 % \framesubtitle{}
-\begin{LARGE}
-\textbf{Are we measuring the original $c\tau$ of the neutralino?}
-\end{LARGE}
-\vspace{-0.5cm}
-\begin{table}
-\begin{minipage}[b]{1.0\linewidth}
-\centering
-\begin{tabular}{|l||l||l||l|l|l|}
-\hline
-\multicolumn{5}{|c|}{\bfseries{CMS Official GMSB Samples}} \\
-\hline
-\bfseries{$\Lambda$[TeV]} & \bfseries{mass[GeV]} & \bfseries{$C_{grav}$} & \bfseries{c$\tau$[mm]} & \bfseries{Fit Value[mm]} \\
-\hline
-120 & 169 & 93.5 & 1000 & 657.89 \\
-120 & 169 & 162 & 3000 &1942.12 \\
-\hline
-\hline
-140 & 198 & 162 & 3000 & 1550.38 \\
-140 & 198 & 187 & 4000 & 2064.83 \\
-140 & 198 & 229 & 6000 & 3083.56 \\
-\hline
-\hline
-180 & 256 & 93.5 & 1000 & 378.64 \\
-180 & 256 & 132 & 2000 & 749.45 \\
-180 & 256 & 162 & 3000 & 1104.85 \\
-180 & 256 & 229 & 6000 & 2203.61 \\
-\hline
-\end{tabular}
-\end{minipage}
-\end{table}
-\vspace{-0.5cm}
-\alert{\textbf{We seem to be measuring neutralino $c\tau$ by some factor off.}}
-\end{frame}
-\begin{frame}
+%\begin{LARGE}
+%\textbf{Are we measuring the original $c\tau$ of the neutralino?}
+%\end{LARGE}
+%\vspace{-0.5cm}
+%\begin{table}
+%\begin{minipage}[b]{1.0\linewidth}
+%\centering
+%\begin{tabular}{|l||l||l||l|l|l|}
+%\hline
+%\multicolumn{5}{|c|}{\bfseries{CMS Official GMSB Samples}} \\
+%\hline
+%\bfseries{$\Lambda$[TeV]} & \bfseries{mass[GeV]} & \bfseries{$C_{grav}$} & \bfseries{c$\tau$[mm]} & \bfseries{Fit Value[mm]} \\
+%\hline
+%120 & 169 & 93.5 & 1000 & 657.89 \\
+%120 & 169 & 162 & 3000 &1942.12 \\
+%\hline
+%\hline
+%140 & 198 & 162 & 3000 & 1550.38 \\
+%140 & 198 & 187 & 4000 & 2064.83 \\
+%140 & 198 & 229 & 6000 & 3083.56 \\
+%\hline
+%\hline
+%180 & 256 & 93.5 & 1000 & 378.64 \\
+%180 & 256 & 132 & 2000 & 749.45 \\
+%180 & 256 & 162 & 3000 & 1104.85 \\
+%180 & 256 & 229 & 6000 & 2203.61 \\
+%\hline
+%\end{tabular}
+%\end{minipage}
+%\end{table}
+%\vspace{-0.5cm}
+%\alert{\textbf{We seem to be measuring neutralino $c\tau$ by some factor off.}}
+%\end{frame}
+%\begin{frame}
 %--------------------------------------------------------------------
-\frametitle{GMSB Sample $c\tau$ Vs Measured $c\tau$}
-\begin{LARGE}
-\textbf{By how much are we off in neutralino $c\tau$ measurements?}
-\end{LARGE}
-\begin{table}
-\begin{minipage}[b]{1.0\linewidth}
-\centering
-\begin{tabular}{|l||l||l||l|}
-\hline
-\multicolumn{4}{|c|}{\bfseries{CMS Official GMSB Samples}} \\
-\hline
-\bfseries{$\Lambda$[TeV]} & \bfseries{c$\tau$[mm]} & \bfseries{Fit Value[mm]} &\bfseries{Factor Off} \\
-\hline
-120 & 3000 & 1942.12 & 1.54 \\
-140 & 3000 & 1550.38 & 1.93 \\
-180 & 3000 & 1104.85 & 2.71 \\
-\hline
-\hline
-140 & 6000 & 3083.56 & 1.9 \\
-180 & 6000 & 2203..61 & 2.7 \\
-\hline
-\end{tabular}
-\end{minipage}
-\end{table}
-\vspace{-0.5cm}
-Factor is \alert{The SAME} for different neutralino $c\tau$ with same $\Lambda$ value. However, factor is \alert{NOT THE SAME} for the same $c\tau$ with different $\Lambda$ values.
-\end{frame}
-\begin{frame}
+%\frametitle{GMSB Sample $c\tau$ Vs Measured $c\tau$}
+%\begin{LARGE}
+%\textbf{By how much are we off in neutralino $c\tau$ measurements?}
+%\end{LARGE}
+%\begin{table}
+%\begin{minipage}[b]{1.0\linewidth}
+%\centering
+%\begin{tabular}{|l||l||l||l|}
+%\hline
+%\multicolumn{4}{|c|}{\bfseries{CMS Official GMSB Samples}} \\
+%\hline
+%\bfseries{$\Lambda$[TeV]} & \bfseries{c$\tau$[mm]} & \bfseries{Fit Value[mm]} &\bfseries{Factor Off} \\
+%\hline
+%120 & 3000 & 1942.12 & 1.54 \\
+%140 & 3000 & 1550.38 & 1.93 \\
+%180 & 3000 & 1104.85 & 2.71 \\
+%\hline
+%\hline
+%140 & 6000 & 3083.56 & 1.9 \\
+%180 & 6000 & 2203..61 & 2.7 \\
+%\hline
+%\end{tabular}
+%\end{minipage}
+%\end{table}
+%\vspace{-0.5cm}
+%Factor is \alert{The SAME} for different neutralino $c\tau$ with same $\Lambda$ value. However, factor is \alert{NOT THE SAME} for the same $c\tau$ with different $\Lambda$ values.
+%\end{frame}
+%\begin{frame}
 %---------------------------------------------------------------------
-\frametitle{Cause of this difference in $c\tau$ values?}
-\begin{LARGE}
-\textbf{Is this due to how sample is generated?}
-\end{LARGE}
-\vspace{-0.3cm}
-\begin{figure}[ht]
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\mbox{
-\includegraphics[height=2.5cm, width=\textwidth]{MC_TimeDL.png}}
-\vspace{-1cm}
-\caption{1/Slope = 3083.56 mm }
-\label{fig:OffFrom_MC}
-\end{minipage}
-\hspace{0.1cm}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\mbox{
-\includegraphics[height=2.5cm,width=\textwidth]{Priv_MC_TimeDL.png}}
-\vspace{-1cm}
-\caption{1/Slope = 3067.48 mm }
-\label{fig:Priv_MCTime}
-\end{minipage}
-\end{figure}
-\vspace{-1.0cm}
-\begin{figure}[ht]
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\mbox{
-\includegraphics[height=2.5cm, width=\textwidth]{Dist_TravDL.png}}
-\vspace{-1cm}
-\caption{1/Slope = 3065.60 mm }
-\label{fig:Off_DL}
-\end{minipage}
-\hspace{0.1cm}
-\begin{minipage}[b]{0.45\linewidth}
-\centering
-\mbox{
-\includegraphics[height=2.5cm,width=\textwidth]{Priv_DistTravDL.png}}
-\vspace{-1cm}
-\caption{1/Slope = 3037.66 mm }
-\label{fig:Priv_DL}
-\end{minipage}
-\end{figure}
-\vspace{-1.0cm}
-\alert{\textit{Private GMSB sample seems to show same offset measurements}}
-\end{frame}
-\section{Remaining Completion}
+%\frametitle{Cause of this difference in $c\tau$ values?}
+%\begin{LARGE}
+%\textbf{Is this due to how sample is generated?}
+%\end{LARGE}
+%\vspace{-0.3cm}
+%\begin{figure}[ht]
+%\begin{minipage}[b]{0.45\linewidth}
+%\centering
+%\mbox{
+%\includegraphics[height=2.5cm, width=\textwidth]{MC_TimeDL.png}}
+%\vspace{-1cm}
+%\caption{1/Slope = 3083.56 mm }
+%\label{fig:OffFrom_MC}
+%\end{minipage}
+%\hspace{0.1cm}
+%\begin{minipage}[b]{0.45\linewidth}
+%\centering
+%\mbox{
+%\includegraphics[height=2.5cm,width=\textwidth]{Priv_MC_TimeDL.png}}
+%\vspace{-1cm}
+%\caption{1/Slope = 3067.48 mm }
+%\label{fig:Priv_MCTime}
+%\end{minipage}
+%\end{figure}
+%\vspace{-1.0cm}
+%\begin{figure}[ht]
+%\begin{minipage}[b]{0.45\linewidth}
+%\centering
+%\mbox{
+%\includegraphics[height=2.5cm, width=\textwidth]{Dist_TravDL.png}}
+%\vspace{-1cm}
+%\caption{1/Slope = 3065.60 mm }
+%\label{fig:Off_DL}
+%\end{minipage}
+%\hspace{0.1cm}
+%\begin{minipage}[b]{0.45\linewidth}
+%\centering
+%\mbox{
+%\includegraphics[height=2.5cm,width=\textwidth]{Priv_DistTravDL.png}}
+%\vspace{-1cm}
+%\caption{1/Slope = 3037.66 mm }
+%\label{fig:Priv_DL}
+%\end{minipage}
+%\end{figure}
+%\vspace{-1.0cm}
+%\alert{\textit{Private GMSB sample seems to show same offset measurements}}
+%\end{frame}
+\section{Summary}
 \begin{frame}
-\frametitle{\Huge To Be Completed}
-\begin{itemize}
-\begin{large}
-\item Offset in neutralino $c\tau$ seems to have a more subtle origin than expected. Probably how mass enters into the lifetime definition and implementation at MC generation level.
-\item GMSB samples with the same sample $c\tau$, hence $C_{grav}$, but with different $\Lambda$ values have different offset factor.
-\item The observation that the $c\tau$ value for a given sample with $\Lambda$ is different from the measured value is very unclear, even without looking at samples with different $\Lambda$ values.
-\item Our next step involves understanding cause of this offset.
+\frametitle{\Huge Summary}
+%\begin{itemize}
+%\begin{large}
+%\item Offset in neutralino $c\tau$ seems to have a more subtle origin than expected. Probably how mass enters into the lifetime definition and implementation at MC generation level.
+%\item GMSB samples with the same sample $c\tau$, hence $C_{grav}$, but with different $\Lambda$ values have different offset factor.
+%\item The observation that the $c\tau$ value for a given sample with $\Lambda$ is different from the measured value is very unclear, even without looking at samples with different $\Lambda$ values.
+%\item Our next step involves understanding cause of this offset.
 %However,due to time constraints, we might continue with upper limit setting considering this difference.
-\end{large}
-\end{itemize}
+%\end{large}
+%\end{itemize}
 \end{frame}
-
+\end{document}
 %\begin{frame}
 %\frametitle{Introduction}
 %\begin{varblock}[7cm]{Hybrid Linear Modeling}
@@ -734,4 +950,3 @@ Factor is \alert{The SAME} for different neutralino $c\tau$ with same $\Lambda$ 
 %\end{itemize}
 %\end{frame}
 
-\end{document}
