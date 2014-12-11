@@ -1,4 +1,4 @@
-\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/theme/beamerthemeUNLTheme.sty,v 1.10 2004/10/07 20:53:10 bourke Exp $
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/theme/beamerthemeUMNTheme.sty,v 1.10 2004/10/07 20:53:10 bourke Exp $
 
 % This theme modifies the PaloAlto, sidebar, and sidebartab beamer themes
 % Modifications by Chris Bourke
@@ -8,6 +8,8 @@
 \usetikzlibrary{positioning,arrows}
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{decorations.markings}
+\usepackage{tcolorbox}
+\usepackage{lipsum}
 % To Draw Fynman Diags
 \usepackage{feynmp}
 \DeclareGraphicsRule{*}{mps}{*}{}
@@ -18,6 +20,7 @@
 \usepackage{topcapt}
 \usepackage{multicol}
 \setlength{\columnsep}{3cm}
+\usepackage{ragged2e}
 %\input xy
 %\xyoption{all}
 %\usepackage{feynmf}
@@ -43,10 +46,33 @@
 \newcommand\insertlogoii{}
 \newcommand\logoii[1]{\renewcommand\insertlogoii{#1}}
 
+%important color definitions
+
+% We declare the main color theme: Scarlet & Cream
+\definecolor{UNL@Scarlet}{RGB}{140,17,17}
+% Alternate UNL@Reds: 204,0,0 (unl.edu) <--seems to be the best
+%                     240,7,46 (logo)
+%                     255,25,25 (original)
+%                     140,17,17 ("scarlet")
+\definecolor{UNL@Cream}{RGB}{245,240,219}
+%Cream          245  240  219
+%Cream2         245  255  250 - Whitest
+%Dairy Cream    249  228  188 - more peachy
+%Cream Brulee   255  229  160 - peach
+%Cream Can      245  200   92 - Almost a peach
+%Coconut Cream  248  247  220 - More white
+\definecolor{UNL@DarkGrey}{RGB}{35,35,35}
+\definecolor{UNL@Grey}{RGB}{100,100,100}
+\definecolor{UNL@LightGrey}{RGB}{200,200,200}
+\definecolor{UNL@VeryLightGrey}{RGB}{225,225,225}
+\definecolor{UMN@Red}{RGB}{112,12,41}
+\definecolor{UMN@Gold}{RGB}{249,199,77}
+\definecolor{UMN@Yellow}{RGB}{254,230,184}
+\definecolor{UMN@Maroon}{RGB}{123,17,19}
+\definecolor{UMN@Gold}{RGB}{255,215,0}
 
 
 \def\beamer@lefttext{left}
-
 % Private bullet styles
 %Change Bullet style
 \setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
@@ -375,7 +401,7 @@
 
 %\setbeamertemplate{blocks}[rounded]{shadow=true}
 %\setbeamerfont{block title}{size=\scriptsize,series=\bfseries}
-\setbeamercolor{block title}{fg=UMN@Maroon,bg=UNL@Cream, series=\bfseries}
+\setbeamercolor{block title}{fg=UMN@Maroon,bg=UNL@Cream} %series=\bfseries}
 \setbeamercolor{block body}{fg=black,bg=UNL@VeryLightGrey}
 % Set the UNL logo, UNL.pdf must be in the latex path or working directory
 \setbeamercolor{logo}{fg=black,bg=white}
@@ -453,28 +479,6 @@
 }{}
 
 
-% We declare the main color theme: Scarlet & Cream
-\definecolor{UNL@Scarlet}{RGB}{140,17,17}
-% Alternate UNL@Reds: 204,0,0 (unl.edu) <--seems to be the best
-%                     240,7,46 (logo)
-%                     255,25,25 (original)
-%                     140,17,17 ("scarlet")
-\definecolor{UNL@Cream}{RGB}{245,240,219}
-%Cream          245  240  219
-%Cream2         245  255  250 - Whitest
-%Dairy Cream    249  228  188 - more peachy
-%Cream Brulee   255  229  160 - peach
-%Cream Can      245  200   92 - Almost a peach
-%Coconut Cream  248  247  220 - More white
-\definecolor{UNL@DarkGrey}{RGB}{35,35,35}
-\definecolor{UNL@Grey}{RGB}{100,100,100}
-\definecolor{UNL@LightGrey}{RGB}{200,200,200}
-\definecolor{UNL@VeryLightGrey}{RGB}{225,225,225}
-\definecolor{UMN@Red}{RGB}{112,12,41}
-\definecolor{UMN@Gold}{RGB}{249,199,77}
-\definecolor{UMN@Yellow}{RGB}{254,230,184}
-\definecolor{UMN@Maroon}{RGB}{123,17,19}
-\definecolor{UMN@Gold}{RGB}{255,215,0}
 % We enforce conformity at UNL!
 % so we override example (greenish) and alerted (redish)
 \setbeamercolor{block title example}{fg=white,bg=black} %

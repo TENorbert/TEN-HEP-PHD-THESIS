@@ -37,25 +37,25 @@ University Of Minnesota
 \end{frame}
 
 %%% Intro for General Talks
-%\begin{frame}
-%\frametitle{\huge{Where are we now?}}
-%\begin{varblock}[7cm]{\textbf{The Universe Set}}
-% The set  $S =\{ \cdots \mathbf{0}, \frac{1}{2}, 1,  \frac{3}{2}, 2  \cdots \} \cdot \hbar $ 
-% \end{varblock}
-% where $s$ is the spin of a particle. 
- %represents our past, current and probably future understanding of the universe around us. As of the moment 
-%Currently we know:
-% \begin{itemize}
-%  \item $\mathbf{s = \frac{1}{2}\hbar}$ Describes all the matter in our universe.
-%  \item $\mathbf{s = 1\hbar}$ Describes gauge interactions.
-%  \item $\mathbf{s = 0\hbar}$ Responsible for giving mass.
-%  \item $\mathbf{s = 2\hbar}$ Describes gravity~(gauged?).
-%  \item $\mathbf{s = \frac{3}{2}\hbar}$ \textcolor{red}{?? \textbf{Dark Matter}?}
-% \end{itemize}
+\begin{frame}
+\frametitle{\huge{Where are we now?}}
+\begin{varblock}[7cm]{\textbf{The Universe Set}}
+ The set  $S =\{ \cdots \mathbf{0}, \frac{1}{2}, 1,  \frac{3}{2}, 2  \cdots \} \cdot \hbar $ 
+ \end{varblock}
+ where $s$ is the spin of a particle. 
+ represents our past, current and probably future understanding of the universe around us. As of the moment 
+Currently we know:
+ \begin{itemize}
+  \item $\mathbf{s = \frac{1}{2}\hbar}$ Describes all the matter in our universe.
+  \item $\mathbf{s = 1\hbar}$ Describes gauge interactions.
+  \item $\mathbf{s = 0\hbar}$ Responsible for giving mass.
+  \item $\mathbf{s = 2\hbar}$ Describes gravity~(gauged?).
+  \item $\mathbf{s = \frac{3}{2}\hbar}$ \textcolor{red}{?? \textbf{Dark Matter}?}
+ \end{itemize}
 
-%However, this magic set only describes $\approx 4$\% of our total universe.
-%\includegraphics[height=2cm,width=0.25\paperwidth]{THESISPLOTS/UniversePie30.jpg}
-%\end{frame}
+However, this magic set only describes $\approx 4$\% of our total universe.
+\includegraphics[height=2cm,width=0.25\paperwidth]{THESISPLOTS/UniversePie30.jpg}
+\end{frame}
 
 
 
@@ -673,19 +673,171 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
 \end{frame}
 
 
+
 \section{Background Estimation}
+%%%  Tagging and Efficiency
+\begin{frame}
+\frametitle{\Huge Sources Of Background}
+  \begin{minipage}[t]{0.8\linewidth}
+   \includegraphics[width=\textwidth]{THESISPLOTS/Background_Delayed_Photon.pdf}
+  \end{minipage}
+% \begin{minipage}[t]{0.8\linewidth}
+%  A combination of collision and non-collision events makes up delayed photon background sources.
+% \end{minipage}
+\end{frame}
+
+
 \begin{frame}
 \frametitle{\Huge Background Estimation}
  %\begin{figure}[ht]
-  %\begin{minipage}[t]{0.5\linewidth}
-    %\mbox{
-  %\centering
-  %\includegraphics[width=0.60\paperwidth]{THESISPLOTS/Background_Delayed_Photon.pdf}
+  \begin{minipage}[t]{\linewidth}
+   Main sources of background to delayed photons are:   
+   \begin{itemize}
+    \item Photons of events produced from Non-collision,
+    \item Photons of events produced from collision with mis-measured ECAL time.
+   \end{itemize}
+  \end{minipage}
+  
+  \begin{minipage}[t]{\linewidth}
+  %\begin{figure}[ht]
+    %\centering
+    \mbox{
+ \includegraphics[width=0.40\paperwidth]{THESISPLOTS/h_Phi_Time.png}
+ \includegraphics[width=0.40\paperwidth]{THESISPLOTS/h_Eta_Time.png} }
     %\vspace{-1cm}
     %\caption{Background}
-  %\end{minipage}
+   \end{minipage}
+\begin{minipage}[b]{\linewidth}
+Features around $\phi = 0, \pm \pi$ and $\eta$-dependence shows that background sources originate from both collision and non-collision events.
+\end{minipage} 
  %\end{figure}
 \end{frame}
+
+\begin{frame}
+\frametitle{In-Time Vs Out-Of-Time Events}
+We estimate these background by defining two Control samples.
+\begin{flushleft}
+ \begin{description}
+   \item[In-time] events Control Sample~(IT-CS)
+   \item[Out-of-time] events Control Sample (OT-CS)
+ \end{description} 
+ \end{flushleft}
+\begin{tcolorbox}[colback=blue!5,colframe=UMN@Maroon!40!black,title=Control Sample (In-time Events)]
+%\lipsum[2]
+\textbf{IT-CS}: $> 2$ Jets Events with photon ECAL time, $t \in [-1, 1]$~ns.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=blue!5,colframe=UMN@Maroon!40!black,title=Control Sample (Out-Of-time Events)]
+%\lipsum[2]
+\textbf{OT-CS}: $0$ Jet Events with photon ECAL time, $ t < -3$~ns or $t > 2$~ns.
+\end{tcolorbox}
+ 
+ \begin{minipage}[t]{0.8\linewidth}
+ Events from above CSs provide a unique approach to estimate possible background contribution in signal.
+ \end{minipage}
+\end{frame}
+
+
+
+
+%% Halo Photon
+\begin{frame}
+\frametitle{Halo Photon (HP)}
+ \begin{tcolorbox}[colback=blue!5,colframe=UMN@Maroon!40!black,title=Beam Halo Muons]
+\begin{itemize}
+ \item Proton beam interacting with gas/air particles in the beam pipe,
+ \item Proton beam colliding with the collimators upstream prior to entering the CMS detector.
+\end{itemize}
+will produce energetic muons traveling parallel with main proton beam and showering in the Calorimeters.
+\end{tcolorbox}
+ \begin{minipage}[t]{0.8\linewidth}
+  \mbox{
+   \includegraphics[height=3.7cm,width=0.40\paperwidth]{THESISPLOTS/Beam_Halo-CandidateEvent24186728-Run122314.png}\quad
+   \includegraphics[height=3.7cm,width=0.40\paperwidth]{THESISPLOTS/beam_halo_csc.png}
+  }   
+ \end{minipage}
+\end{frame}
+
+%halo Photons
+\begin{frame}
+\frametitle{Halo Photon (II)}
+   \begin{minipage}[t]{\linewidth}
+    Using Halo kinematics, We can tag and estimate halo photons produced from halo muons showering in ECAL as follows:
+    \begin{columns}
+      \column{0.5\textwidth}
+       \includegraphics[height=3.7cm,width=0.40\paperwidth]{THESISPLOTS/Halo-Schematic-Diagram.jpg}
+      \column{0.5\textwidth}
+      \begin{varblock}[3.7cm]{Halo Expected Time}
+          \begin{eqnarray*}
+              t_{0} &=& \frac{\rho}{c} = \frac{R}{\sin\theta}.\frac{1}{c}\\
+              t_{halo} &=& \frac{Z}{c} = \frac{R}{\tan\theta}.\frac{1}{c} \\
+          \Delta t^{H}_{ECAL} &=& t_{halo}- t_{0} = \frac{Z}{c} - \frac{\rho}{c} \\
+                    \Delta t^{exp}_{H}      &=&-\frac{R}{2c}\exp^{-\eta}
+         \end{eqnarray*}
+        \end{varblock}     
+      \end{columns}
+   \end{minipage}
+   
+   \begin{minipage}[t]{0.8\linewidth}
+   \mbox{
+     \includegraphics[height=3.4cm,width=0.40\paperwidth]{THESISPLOTS/HaloFunction.png} \quad
+     \includegraphics[height=3.4cm,width=0.40\paperwidth]{THESISPLOTS/cs_side_cscdPhi.png}
+    }
+   \end{minipage}
+\end{frame}
+%% Halo Photon Efficiency & Mis-tagging rate
+\begin{frame}
+\frametitle{HP Tagging Efficiency/mis-Tag Rate}
+
+\end{frame}
+
+
+
+%% Cosmic Muons
+\begin{frame}
+\frametitle{Cosmic Muons}
+ \begin{minipage}[t]{0.8\linewidth}
+
+ \end{minipage}
+\end{frame}
+
+%% Anomalous Events
+\begin{frame}
+\frametitle{Anomalous ECAL Spike}
+ \begin{minipage}[t]{0.8\linewidth}
+
+ \end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{ABCD Technique: Non-Collision Background}
+\end{frame}
+
+\begin{frame}
+\frametitle{ABCD Technique: Collision Background}
+\end{frame}
+
+\begin{frame}
+\frametitle{ABCD Technique: Total Background Estimation}
+  Equations and Results.
+ \begin{minipage}[t]{0.8\linewidth}
+
+ \end{minipage}
+ 
+ \textbf{Closure Test}: Events with $1-jet$.
+ \begin{minipage}[t]{0.8\linewidth}
+
+ \end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Background Estimation Cross-Check}
+Using $Z \rightarrow ee$ events.
+\end{frame}
+
+
+
+
 
 %%Systematic Uncertainties
 \section{Systematics}
