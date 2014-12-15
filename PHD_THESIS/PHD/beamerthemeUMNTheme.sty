@@ -5,6 +5,7 @@
 % Last modified 3/7/05
 %%% Inlude Pakages for use!
 \usepackage{tikz} % very handy for all thing image, figure
+\usepackage[tikz]{bclogo}  % for fancy framed boxes.
 \usetikzlibrary{positioning,arrows}
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{decorations.markings}
@@ -12,6 +13,8 @@
 \usepackage{lipsum}
 % To Draw Fynman Diags
 \usepackage{feynmp}
+\usepackage{xcolor} % color equations
+\usepackage{amsmath} %,empheq}
 \DeclareGraphicsRule{*}{mps}{*}{}
 
 \usepackage[english]{babel}
@@ -21,6 +24,8 @@
 \usepackage{multicol}
 \setlength{\columnsep}{3cm}
 \usepackage{ragged2e}
+\usepackage{framed, color}
+\usepackage{fancybox}
 %\input xy
 %\xyoption{all}
 %\usepackage{feynmf}
@@ -34,7 +39,6 @@
 \newcommand{\ig}{\includegraphics}
 \newcommand{\subt}[1]{{\footnotesize \color{subtitle} {#1}}}
 \newcommand{\xRightarrow}[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}} %right arrow with text abov
-
 %  dimension setup
 \newdimen\beamer@sidebarwidth
 \newdimen\beamer@headheight

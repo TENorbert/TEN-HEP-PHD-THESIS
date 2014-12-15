@@ -722,12 +722,12 @@ We estimate these background by defining two Control samples.
    \item[Out-of-time] events Control Sample (OT-CS)
  \end{description} 
  \end{flushleft}
-\begin{tcolorbox}[colback=blue!5,colframe=UMN@Maroon!40!black,title=Control Sample (In-time Events)]
+\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{UMN@Gold}{\textbf{Control Sample (In-time Events)}}]
 %\lipsum[2]
 \textbf{IT-CS}: $> 2$ Jets Events with photon ECAL time, $t \in [-1, 1]$~ns.
 \end{tcolorbox}
 
-\begin{tcolorbox}[colback=blue!5,colframe=UMN@Maroon!40!black,title=Control Sample (Out-Of-time Events)]
+\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{UMN@Gold}{\textbf{Control Sample (Out-Of-time Events)}}]
 %\lipsum[2]
 \textbf{OT-CS}: $0$ Jet Events with photon ECAL time, $ t < -3$~ns or $t > 2$~ns.
 \end{tcolorbox}
@@ -743,7 +743,7 @@ We estimate these background by defining two Control samples.
 %% Halo Photon
 \begin{frame}
 \frametitle{Halo Photon (HP)}
- \begin{tcolorbox}[colback=blue!5,colframe=UMN@Maroon!40!black,title=Beam Halo Muons]
+ \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{UMN@Gold}{\textbf{Beam Halo Muons}}]
 \begin{itemize}
  \item Proton beam interacting with gas/air particles in the beam pipe,
  \item Proton beam colliding with the collimators upstream prior to entering the CMS detector.
@@ -761,42 +761,186 @@ will produce energetic muons traveling parallel with main proton beam and shower
 %halo Photons
 \begin{frame}
 \frametitle{Halo Photon (II)}
-   \begin{minipage}[t]{\linewidth}
+   \begin{minipage}[t]{\textwidth}
     Using Halo kinematics, We can tag and estimate halo photons produced from halo muons showering in ECAL as follows:
     \begin{columns}
-      \column{0.5\textwidth}
-       \includegraphics[height=3.7cm,width=0.40\paperwidth]{THESISPLOTS/Halo-Schematic-Diagram.jpg}
-      \column{0.5\textwidth}
-      \begin{varblock}[3.7cm]{Halo Expected Time}
-          \begin{eqnarray*}
-              t_{0} &=& \frac{\rho}{c} = \frac{R}{\sin\theta}.\frac{1}{c}\\
-              t_{halo} &=& \frac{Z}{c} = \frac{R}{\tan\theta}.\frac{1}{c} \\
-          \Delta t^{H}_{ECAL} &=& t_{halo}- t_{0} = \frac{Z}{c} - \frac{\rho}{c} \\
-                    \Delta t^{exp}_{H}      &=&-\frac{R}{2c}\exp^{-\eta}
-         \end{eqnarray*}
-        \end{varblock}     
+      \column{0.3\textwidth}
+      \includegraphics[height=3.0cm,width=0.25\paperwidth]{THESISPLOTS/Halo-Schematic-Diagram.jpg}
+      \column{0.60\textwidth}
+      %\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40!black,title=Halo Expected Time]
+      \begin{varblock}[5.1cm]{\textbf{Halo Expected ECAL Time}}
+      %\ovalbox{
+      %\begin{bclogo}
+      %\begin{itemize}
+     % \item \textcolor{UMN@Maroon}{\textbf{Halo Expected ECAL Time}}           
+         \begin{eqnarray*}                      
+              t_{0} &=& \frac{\rho}{c} = \frac{R}{\sin\theta}\frac{1}{c}, \quad 
+              t_{halo} = \frac{Z}{c} = \frac{R}{\tan\theta}\frac{1}{c} \\
+              \Delta t^{exp}_{H} &=& t_{halo}- t_{0}=-\frac{R}{2c}\exp^{-\eta}                         
+         \end{eqnarray*}              
+      %\end{itemize}
+      %\end{bclogo}  
+        %}      
+      \end{varblock}                   
       \end{columns}
-   \end{minipage}
-   
-   \begin{minipage}[t]{0.8\linewidth}
+   \end{minipage}  
+   \begin{minipage}[t]{\linewidth} 
    \mbox{
-     \includegraphics[height=3.4cm,width=0.40\paperwidth]{THESISPLOTS/HaloFunction.png} \quad
-     \includegraphics[height=3.4cm,width=0.40\paperwidth]{THESISPLOTS/cs_side_cscdPhi.png}
-    }
+     \includegraphics[height=3.8cm,width=0.82\paperwidth]{THESISPLOTS/HaloFunction.png}
+    }  
+   \end{minipage}  
+\end{frame}
+
+\begin{frame}
+\frametitle{Halo Photon (III)}
+ \begin{minipage}[t]{\linewidth}
+  Additionally, using halo muon hits from CSC segment matched in $\phi$ to Superclusters in ECAL, we can in additionally identify, tag and remove halo photon events with large timing.
+    \begin{columns}
+      \column{0.42\textwidth}
+         \mbox{
+            \includegraphics[height=3cm,width=0.35\paperwidth]{THESISPLOTS/CSC_Beam-Halo-Muon_ev62604_836.png}
+          }
+      \column{0.55\textwidth}
+        \begin{varblock}[4.0cm]{\textbf{Halo Photon Matching}}
+          \begin{eqnarray*}
+             \Delta \phi (CSC Seg, \gamma) = | \phi_{CSC Seg} - \phi_{\gamma} |
+           \end{eqnarray*}
+        \end{varblock}     
+    \end{columns}
+  \end{minipage}
+  \begin{minipage}[t]{\linewidth}
+  \includegraphics[height=3.6cm,width=0.80\paperwidth]{THESISPLOTS/cs_side_cscdPhi.png} 
    \end{minipage}
 \end{frame}
+
+
 %% Halo Photon Efficiency & Mis-tagging rate
 \begin{frame}
-\frametitle{HP Tagging Efficiency/mis-Tag Rate}
+\frametitle{Halo Photon (IV)}
+ \begin{minipage}[t]{0.85\paperwidth}
+   %\begin{columns}
+    %\column{0.60\textwidth}
+    \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{ \textbf{Satellite/Ghost Beam Halos}}]
+      \begin{itemize}
+       \item Fill empty RF buckets.
+       \item Trail main bunches by $\approx 5$~ns.
+       \item $10^{-5}$ protons to main bunches.
+       \item Can contribute to main collision photons.
+       \item Show a $2.5$~ns pattern in EE,
+       \item Tagged using $\Delta\phi(CSC seg, \gamma)$.
+      \end{itemize} 
+      \end{tcolorbox}
+ \end{minipage}
+ \begin{minipage}[t]{0.95\paperwidth}
+    %\column{0.35\textwidth}  
+    %\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=LHC LDM Profile] 
+    \centering
+    \begin{varblock}[6cm]{LHC LDM Proton Beam Profile}
+    \centering
+    \mbox{
+     \includegraphics[height=2.1cm,width=0.8\linewidth]{THESISPLOTS/Ghost-Satellite-Bunches-LDM.png} 
+     }
+     %\end{tcolorbox}  
+     \end{varblock}  
+     %\end{columns}
+ \end{minipage}
+ 
+\end{frame}
 
+\begin{frame}
+\frametitle{Halo Photon (V)}
+ \begin{minipage}[t]{0.85\paperwidth}
+  %\begin{columns}
+   % \column{0.50\textwidth}
+      \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40 ,title=\textcolor{black}{\textbf{Halo Photon Event Properties}}]
+       \begin{itemize}
+          \item Halo photons populate around $phi=0, \pm \pi$
+          \item ECAL time mostly $ < -3$~ns but can also arrive late(ghosts).
+          \item Halo events most contain no jets ($0$-jet events).
+          \item Rare cases can be associated with "pile-up" events.     
+       \end{itemize}  
+      \end{tcolorbox}
+  \end{minipage}
+  \begin{minipage}[t]{0.9\paperwidth}
+     \begin{columns}
+       \column{0.60\textwidth}
+        \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Halo Photon Tagging Criteria}}] 
+        \begin{itemize}
+         \item Use $\Delta\phi(CSC seg, \gamma) < 0.05$ randians.
+         \item Shower shape( $0.8 < S_{Major} < 1.65 $ and $ S_{minor} < 0.2 $)
+        \end{itemize}
+        \end{tcolorbox}
+       \column{0.40\textwidth}
+        \begin{varblock}[2.5cm]{Ghost/Satellite EE}
+        \centering      
+        \includegraphics[height=2.95cm,width=0.29\paperwidth]{THESISPLOTS/halo_EE_Time.png} 
+        \end{varblock}
+     \end{columns} 
+  \end{minipage}   
 \end{frame}
 
 
+\begin{frame}
+\frametitle{HP Tagging Efficiency/mis-Tag Rate}
+  %\begin{columns}
+   %\column{0.50\textwidth}
+   \begin{minipage}[t]{\linewidth}
+     \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Halo Photon Tagging Efficiency}}]
+        \begin{itemize}
+         \item Control Sample Selection,
+           \begin{itemize}
+            \item $\Delta\phi(CSC seg, \gamma) < 0.05$ randians
+            \item Same $ \Delta t^{exp}_{H}= -\frac{R}{2c}\exp^{-\eta} $ ECAL time Vs $\eta$ dependence.
+           \end{itemize}
+         \item Efficiency eveluated in 5$\eta$ bins for $S_{major}$ $\eta$ dependence.
+        \end{itemize}
+      \end{tcolorbox} 
+   \end{minipage}
+   \begin{minipage}[t]{\linewidth} 
+    %\column{0.50\textwidth}
+     \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Halo Photon mis-Tag Rate}}]
+      \begin{itemize}
+         \item Control Sample Selection:
+           \begin{itemize}
+            \item $ >= 2$-jets events with $E^{miss}_{T} < 60$~GeV
+            \item ECAL time, $|t| < 1$~ns.
+           \end{itemize}
+          \item mis-tag rate eveluated in 5$\eta$ bins for $S_{major}$ $\eta$ dependence.         
+        \end{itemize}
+      \end{tcolorbox}
+  %\end{columns}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{HP Tagging Efficiency/mis-Tag Rate(I)}
+\begin{columns}
+   \column{0.50\linewidth}
+%\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=Tagging Efficiency]
+ \begin{varblock}[3.5cm]{Tagging Efficiency}
+ \includegraphics[height=6.5cm,width=0.40\paperwidth]{THESISPLOTS/Efficiency_Halo.png}
+ \begin{itemize}
+  \item Tagging Efficiency $\approx 98$\%
+ \end{itemize}
+ \end{varblock}
+ %\end{tcolorbox}
+ \column{0.50\linewidth}
+ %\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=mis-Tag Rate]
+ \begin{varblock}[3.5cm]{mis-Tag Rate}
+\includegraphics[height=6.5cm,width=0.40\paperwidth]{THESISPLOTS/MisTagging_Halo.png}
+ \begin{itemize}
+  \item mis-tag rate $\approx 3$\%
+ \end{itemize}
+ \end{varblock}
+ %\end{tcolorbox}
+  \end{columns}
+\end{frame}
 
 %% Cosmic Muons
 \begin{frame}
 \frametitle{Cosmic Muons}
  \begin{minipage}[t]{0.8\linewidth}
+ 
 
  \end{minipage}
 \end{frame}
