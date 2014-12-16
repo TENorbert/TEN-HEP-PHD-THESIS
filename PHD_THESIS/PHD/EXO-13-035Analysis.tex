@@ -1055,12 +1055,88 @@ As a result our signal selection criteria is defined as:
 
 \begin{frame}
 \frametitle{ABCD Technique: Non-Collision Background}
+ \begin{minipage}[t]{0.8\paperwidth}
+%\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textcolor{blue}{\textbf{Assume similar distribution in ECAL time for untagged non-collision events .}}}]
+\vspace{-0.75cm}
+  \begin{varblock}[7.2cm]{\textbf{Assume similar distribution in earlier and delayed ECAL time for untagged non-collision events.}}
+   \begin{columns}
+     \column{0.72\linewidth}
+      \centering
+        \begin{tabular}{|c || c|| c|}
+        \multicolumn{3}{c}{\bfseries{$E^{\mbox{miss}}_{T} > 60$~GeV}} \\
+        \hline \hline
+          & $ E^{\mbox{miss}}_{T}(\gamma) < 60$ & $E^{\mbox{miss}}_{T}(\gamma) > 60$ \\       
+          \hline \hline
+          $ t < -3$~ns & A &  B \\
+          \hline \hline \hline         
+          $ t > 3$~ns & C &  D \\
+        \hline \hline
+        \end{tabular} 
+     \column{0.25\linewidth}
+     \centering{
+      $\frac{D}{C} = \frac{B}{A}, \Rightarrow $
+      }
+      \begin{tcolorbox}[colback=blue!5,colframe=UMN@Gold!40]
+      \begin{equation*}
+      \mathbf{D = \frac{B}{A}\cdot C }
+     \end{equation*}
+     \end{tcolorbox}
+    \end{columns}
+\end{varblock}
+%\end{tcolorbox}
+\end{minipage}
+\begin{minipage}[b]{\paperwidth}
+Picture Explaining non-collision untagged background estimation. 
+\mbox{
+ \includegraphics[height=4.30cm,width=0.7\paperwidth]{THESISPLOTS/TimeForAll.png}
+ } 
+\end{minipage}
 \end{frame}
 
+% ABCD Collision
 \begin{frame}
 \frametitle{ABCD Technique: Collision Background}
+ \begin{minipage}[t]{0.8\paperwidth}
+%\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textcolor{blue}{\textbf{Assume similar distribution in ECAL time for untagged non-collision events .}}}]
+\vspace{-0.75cm}
+  \begin{varblock}[7.2cm]{\textbf{Assume similar distribution in earlier and in-time, in-time and delayed ECAL time for collision events.}}
+   \begin{columns}
+     \column{0.65\linewidth}
+      \centering
+        \begin{tabular}{|c || c|| c|}
+        \multicolumn{3}{c}{\bfseries{$E^{\mbox{miss}}_{T}(\gamma) < 60$~GeV}} \\
+        \hline \hline
+          & $ E^{\mbox{miss}}_{T} < 60$ & $E^{\mbox{miss}}_{T} > 60$ \\       
+          \hline \hline
+          $ t < -3$~ns & $B^{\prime}$ &  B \\
+          \hline \hline \hline    
+          $ |t| < 2$~ns & $F^{\prime}$ &  $F$ \\
+          \hline \hline \hline
+          $ t > 3$~ns & $D^{\prime}$ &  $D$ \\
+        \hline \hline
+        \end{tabular} 
+     \column{0.3\linewidth}
+     \centering{
+      $\frac{Q}{D^{\prime}} = \frac{F}{F^{\prime}}, \Rightarrow $
+      }
+      \begin{tcolorbox}[colback=blue!5,colframe=UMN@Gold!40]
+      \begin{equation*}
+      \mathbf{Q_{d} = \frac{F}{F^{\prime}}\cdot D^{\prime} }
+     \end{equation*}
+     \end{tcolorbox}
+    \end{columns}
+\end{varblock}
+%\end{tcolorbox}
+\end{minipage}
+\begin{minipage}[b]{\paperwidth}
+Picture Explaining collision background estimation. 
+\mbox{
+ \includegraphics[height=3.30cm,width=0.7\paperwidth]{THESISPLOTS/TimeForAll.png}
+ } 
+\end{minipage}
 \end{frame}
 
+% ABCD Combined 
 \begin{frame}
 \frametitle{Combined ABCD Background Estimation}
   Equations and Results.
@@ -1068,7 +1144,7 @@ As a result our signal selection criteria is defined as:
 
  \end{minipage}
  
- \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Closure Test Results: $1$-Jet Events}}]
+ \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Closure Test Results: $0$,$1$-Jet Events}}]
  
  
  \end{tcolorbox}
@@ -1076,6 +1152,13 @@ As a result our signal selection criteria is defined as:
 
  \end{minipage}
 \end{frame}
+
+\begin{frame}
+\frametitle{Results Of Background Estimation}
+
+\end{frame}
+
+
 
 \begin{frame}
 \frametitle{Background Estimation Cross-Check}
@@ -1118,7 +1201,7 @@ Using $Z \rightarrow ee$ events.
 \begin{minipage}[t]{0.8\textwidth}
 \centering
 \begin{tabular}{l l}
-\multicolumn{2}{c}{\bfseries{Systematic Uncertainties}} \\
+  \multicolumn{2}{c}{\bfseries{Systematic Uncertainties}} \\
   \hline 
    \bfseries{Source} & \bfseries{Uncertainty(\%)} \\
    \hline
