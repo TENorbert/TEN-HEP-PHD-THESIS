@@ -54,7 +54,7 @@ Currently we know:
  \end{itemize}
 
 However, this magic set only describes $\approx 4$\% of our total universe.
-\includegraphics[height=2cm,width=0.25\paperwidth]{THESISPLOTS/UniversePie30.jpg}
+\includegraphics[height=1.7cm,width=0.25\paperwidth]{THESISPLOTS/UniversePie30.jpg}
 \end{frame}
 
 
@@ -168,9 +168,10 @@ However, this magic set only describes $\approx 4$\% of our total universe.
   \begin{varblock}[7cm]{Double Photon}
   % \fbox{%
    \centering
-    \includegraphics[width=0.50\linewidth]{THESISPLOTS/Diphoton_squark.pdf}
+    %\includegraphics[width=0.50\linewidth]{THESISPLOTS/Diphoton_squark.pdf}
+    \includegraphics[width=0.50\linewidth]{THESISPLOTS/Diphoton_gluino.pdf}
        
-     \large{ \textcolor{red}{2 Photons}, \textcolor{green}{2 Jets}, \textcolor{blue}{Large MET} }   
+     \large{ \textcolor{red}{2 Photons}, \textcolor{green}{Jets}, \textcolor{blue}{Large MET} }   
    %  }
      \end{varblock}%
      \vspace{-0.3cm}
@@ -672,6 +673,7 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
  \end{figure}
 \end{frame}
 
+\section{Analysis Strategy}
 \begin{frame}
 \frametitle{\Huge{Analysis Strategy}}
 \begin{itemize}
@@ -693,8 +695,6 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
 \end{frame}
 
 
-
-\section{Background Estimation}
 %%%  Tagging and Efficiency
 \begin{frame}
 \frametitle{Sources Of Background}
@@ -708,22 +708,26 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
 
 
 \begin{frame}
-\frametitle{\Huge Background Estimation}
+\frametitle{Events Cleaning}
  %\begin{figure}[ht]
   \begin{minipage}[t]{\linewidth}
-   Main sources of background to delayed photons are:   
-   \begin{itemize}
-    \item Photons of events produced from Non-collision,
-    \item Photons of events produced from collision with mis-measured ECAL time.
-   \end{itemize}
+ \setbeamertemplate{itemize items}[triangle]
+  \begin{itemize}
+  \item Non-collision events like proton Beam Induced Background~(BIM or     Halos)/Cosmic/Anomalous spikes contribute towards delayed photons ECAL timing. 
+  \item Need to defined a cleaning mechanism for identifying and rejecting non-collision events.
+  \end{itemize}
   \end{minipage}
   
   \begin{minipage}[t]{\linewidth}
   %\begin{figure}[ht]
     %\centering
-    \mbox{
- \includegraphics[width=0.40\paperwidth]{THESISPLOTS/h_Phi_Time.png}
- \includegraphics[width=0.40\paperwidth]{THESISPLOTS/h_Eta_Time.png} }
+ %   \mbox{
+ %\includegraphics[width=0.40\paperwidth]{THESISPLOTS/h_Phi_Time.png}
+ %includegraphics[width=0.40\paperwidth]{THESISPLOTS/h_Eta_Time.png} }
+ \mbox{
+ \includegraphics[height=4cm,width=0.40\paperwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsPhi.pdf}
+ \includegraphics[height=4cm,width=0.40\paperwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsEta.pdf}
+ }
     %\vspace{-1cm}
     %\caption{Background}
    \end{minipage}
@@ -844,7 +848,7 @@ will produce energetic muons traveling parallel with main proton beam and shower
       \begin{itemize}
        \item Fill empty RF buckets.
        \item Trail main bunches by $\approx 5$~ns.
-       \item $10^{-5}$ protons to main bunches.
+       \item $10^{-5}$ protons compared to main bunches.
        \item Can contribute to main collision photons.
        \item Show a $2.5$~ns pattern in EE,
        \item Tagged using $\Delta\phi(CSC seg, \gamma)$.
@@ -874,7 +878,7 @@ will produce energetic muons traveling parallel with main proton beam and shower
    % \column{0.50\textwidth}
       \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40 ,title=\textcolor{black}{\textbf{Halo Photon Event Properties}}]
        \begin{itemize}
-          \item Halo photons populate around $phi=0, \pm \pi$
+          \item Halo photons populate around $\phi=0, \pm \pi$
           \item ECAL time mostly $ < -3$~ns but can also arrive late(ghosts).
           \item Halo events most contain no jets ($0$-jet events).
           \item Rare cases can be associated with "pile-up" events.     
@@ -912,7 +916,7 @@ will produce energetic muons traveling parallel with main proton beam and shower
             \item $\Delta\phi(CSC seg, \gamma) < 0.05$ randians
             \item Same $ \Delta t^{exp}_{H}= -\frac{R}{2c}\exp^{-\eta} $ ECAL time Vs $\eta$ dependence.
            \end{itemize}
-         \item Efficiency eveluated in 5$\eta$ bins for $S_{major}$ $\eta$ dependence.
+         \item Efficiency evaluated in 5$\eta$ bins for $S_{Major}$ $\eta$ dependence.
         \end{itemize}
       \end{tcolorbox} 
    \end{minipage}
@@ -959,19 +963,95 @@ will produce energetic muons traveling parallel with main proton beam and shower
 %% Cosmic Muons
 \begin{frame}
 \frametitle{Cosmic Muons}
- \begin{minipage}[t]{0.8\linewidth}
+\small{
+% \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Cosmic Muons}}] 
+ \begin{varblock}[7cm]{\textbf{Cosmic Muons}}
+ \begin{itemize}
+  \item Muons from cosmic rays in CMS detector.
+  \item Hits in muon detectors~(DT/CSC) and shower in ECAL.
+  \item Produce energetic photons with out-of-time.
+  \item Using DT segment matched to ECAL cluster position in $\delta \eta$ and $\delta \phi$ can eliminate cosmic events.
+ \end{itemize}
+ \end{varblock}
+ %\end{tcolorbox}
+ }
+ \vspace{-0.2cm}
+%\begin{minipage}[t]{0.9\paperwidth} 
+ \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{$DT(\delta \eta, \delta \phi)$\textbf{Cosmic Muon dataset(left) and Data(Right)}}]
+ %\begin{varblock}[7cm]{$DT(\delta \eta, \delta \phi)$\textbf{Cosmic dataset(left) and Data(Right)}}
+ \mbox{ 
+ \includegraphics[height=2.50cm,width=0.3\paperwidth]{THESISPLOTS/Cosmic_Ray_Photons_Cosmic_dataset.png} \quad \quad
+ \includegraphics[height=2.50cm,width=0.3\paperwidth]{THESISPLOTS/cosmics_dPhidEta.png}
+ } 
+ \end{tcolorbox}
+  %\end{varblock}
+ %\end{minipage} 
+ \vspace{-0.2cm}
+ $DT(\delta \eta, \delta \phi)$ tagging of cosmic muons in data and a pure cosmic sample(without LHC proton beam) is comparable.
  
-
- \end{minipage}
+ 
 \end{frame}
 
 %% Anomalous Events
 \begin{frame}
 \frametitle{Anomalous ECAL Spike}
- \begin{minipage}[t]{0.8\linewidth}
-
- \end{minipage}
+ %\begin{minipage}[t]{\paperwidth}
+ \small{
+% \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Cosmic Muons}}] 
+ \begin{varblock}[7cm]{\textbf{ECAL Spikes}}
+ \begin{itemize}
+  \item Energetic particles(neutrons) from proton collision directly hitting APDs/VPTs.
+  \item Associated with hadronic activity.
+  \item Observed as photons with early time due to no crystal scintillation.
+  \item Can produced late ECAL timing photons with small shower shape.
+  \item ID and rejected requiring $1 - \frac{E_{4}}{E_{1}} < 0.9$ of crystal energy deposit and $\chi^{2}$ from pulse shape fitting.
+ \end{itemize}
+ \end{varblock}
+ %\end{tcolorbox}
+ }
+ \vspace{-0.2cm}
+%\begin{minipage}[t]{0.9\paperwidth} 
+ \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Spike Identification and Rejection}}]
+ %\begin{varblock}[7cm]{$DT(\delta \eta, \delta \phi)$\textbf{Cosmic dataset(left) and Data(Right)}}
+ \mbox{ 
+ \includegraphics[height=2.20cm,width=0.3\paperwidth]{THESISPLOTS/seedTime_Chi2.png} \quad \quad
+ \includegraphics[height=2.20cm,width=0.3\paperwidth]{THESISPLOTS/swissX.png}
+ } 
+ \end{tcolorbox}
+  %\end{varblock}
+ %\end{minipage}
+% \end{minipage}
 \end{frame}
+
+
+%% Here we Estimate Background.
+\section{Background Estimation}
+\begin{frame}
+\frametitle{\Huge{Background Estimation}}
+\small{
+After tagging and cleaning Halo/Cosmic/Spike events, We apply \alert{ABCD} background estimation technique on residual Non-collision background events to estimate their contribution to possible signal.}
+\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Event Tagging and Cleaning Performance}}]
+
+\mbox{
+ \includegraphics[height=5.30cm,width=0.7\paperwidth]{THESISPLOTS/TimeForAll.png}
+ } 
+ \end{tcolorbox}
+\end{frame}
+
+\begin{frame}
+\frametitle{PF-$E^{\mbox{miss}}_{T}$(PF-MET) Adjustment}
+
+\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{$E^{\mbox{miss}}_{T}(\gamma)$}]
+PF-MET calculation fails to take into consideration $E_{T}$ from out-of-time photons.
+We make PF-MET adjustment by taking into account the $E_{T}$ of out-of-time photons for $E^{\mbox{miss}}_{T}$ measurements. This new  PF-MET is called \textcolor{blue}{$E^{\mbox{miss}}_{T}( \gamma)$}.
+\end{tcolorbox}
+As a result our signal selection criteria is defined as:
+
+\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textcolor{green}{\textbf{Signal Selection Criteria}}}]
+\textcolor{UMN@Maroon}{\textbf{SIGNAL}}: \textcolor{red}{$\geq 1 \gamma$}  + \textcolor{green}{$\geq 2 Jets$} + \textcolor{blue}{$E^{\mbox{miss}}_{T} > 60, E^{\mbox{miss}}_{T}(\gamma) > 60$}~GeV
+\end{tcolorbox}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{ABCD Technique: Non-Collision Background}
@@ -982,13 +1062,16 @@ will produce energetic muons traveling parallel with main proton beam and shower
 \end{frame}
 
 \begin{frame}
-\frametitle{ABCD Technique: Total Background Estimation}
+\frametitle{Combined ABCD Background Estimation}
   Equations and Results.
  \begin{minipage}[t]{0.8\linewidth}
 
  \end{minipage}
  
- \textbf{Closure Test}: Events with $1-jet$.
+ \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Closure Test Results: $1$-Jet Events}}]
+ 
+ 
+ \end{tcolorbox}
  \begin{minipage}[t]{0.8\linewidth}
 
  \end{minipage}
@@ -1062,7 +1145,7 @@ Using $Z \rightarrow ee$ events.
 %Results
 \section{Results}
 \begin{frame}
-\frametitle{Results}
+\frametitle{\Huge{Results}}
 \begin{minipage}[t]{0.8\textwidth}
 \centering
 \begin{tabular}{l l l}
@@ -1083,13 +1166,29 @@ Using $Z \rightarrow ee$ events.
   \hline \hline
  \end{tabular} 
  \end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{\Huge{Observed Event}}
+\begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{3-D View}}]
+ \centering
+\mbox{
+\includegraphics[height=3cm,width= 0.7\paperwidth]{THESISPLOTS/Observed-Event-3D-Delayed-Photon.png}} 
+ \end{tcolorbox}
+ 
+ \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Transverse~(left) and $\rho-Z$ (Right) View}}]
+ \centering
+\mbox{
+\includegraphics[height=2.5cm,width=0.35\paperwidth]{THESISPLOTS/Transverse-View-Delayed-Photn-Event.png}
+ \quad
+\includegraphics[height=2.5cm,width=0.35\paperwidth]{THESISPLOTS/Delayedphotonrho-Z-view.png}
+} 
+ \end{tcolorbox}
 
 \end{frame}
 
-
-
 \begin{frame}
-\frametitle{\Huge CLs Upper Limits}
+\frametitle{\Huge Exclusion Limits}
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -1123,9 +1222,6 @@ Using $Z \rightarrow ee$ events.
 % \newline \textcolor{blue} {\texttt{Y. Kats et al: arXiv:1110.6444v2}}
  \end{minipage}
 \end{frame}
-
-
-
 %others
 %\begin{frame} %---------------------------------------------------------------
 %\frametitle{Are these measurements correct?}
@@ -1254,6 +1350,13 @@ Using $Z \rightarrow ee$ events.
 %\end{large}
 %\end{itemize}
 \end{frame}
+
+
+\begin{frame}
+
+\frametitle{Back Up}
+\end{frame}
+
 \end{document}
 %\begin{frame}
 %\frametitle{Introduction}
