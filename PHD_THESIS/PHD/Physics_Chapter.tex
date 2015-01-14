@@ -15,6 +15,27 @@ However, there are some theoretical and experimental difficulties with the model
 %\paragraph{}
 The following section briefly describes the SM giving its major  components, its strengths and its limitations.
 \subsection{Main Components}
+Fundamental particles are characterized in terms of their Mass, Charge and Spin and lifetime. Spin is a non-spatial or \textit{internal} quantum number unlike mass and charge. The spin of a particle can be integer or half-integer.
+Fermions are ordinary matter, half-integer spin~($\frac{1}{2} \hbar$) particles distributed in a \textit{Fermi-Dirac} distribution, meaning no two identical fermions can occupy the same state. They can be massive or massless, charged or be neutral. Anti-fermions have the same mass as fermions but have an opposite charge.
+
+Recent advances in theory and experimental discoveries especially after the observation of a recent spin-0 boson on the 4th of July 2012, has provided a a unique set of classifying fundamental particles and their role in the description of the universe. This is referred to as the universe set given as:
+
+\begin{equation*}
+S =\{ \cdots \mathbf{0}, \frac{1}{2}, 1,  \frac{3}{2}, 2  \cdots \}\hbar 
+\end{equation*}
+where $s$ is the spin of a particle. 
+ represents our past, current and probably future understanding of the universe around us. Our current understanding can be summarized as follows:
+ \begin{itemize}
+  \item $\mathbf{s = \frac{1}{2}\hbar}$ Describes all the matter in our universe.
+  \item $\mathbf{s = 1\hbar}$ Describes principally gauge interactions.
+  \item $\mathbf{s = 0\hbar}$ Responsible for giving mass.
+  \item $\mathbf{s = 2\hbar}$ Describes gravity~(gauged?).
+  \item $\mathbf{s = \frac{3}{2}\hbar}$ \textcolor{red}{?? \textbf{Dark Matter}?}
+ \end{itemize}
+It is understood that this magic set only describes $\approx 4$\% of our total universe.
+%\includegraphics[height=1.7cm,width=0.25\paperwidth]{THESISPLOTS/UniversePie30.jpg}
+%\end{frame}
+\newline
 The mathematics used to formulate the SM is \textit{relativistic quantum field theory} in which particles are represented as \textit{quantum fields} and their dynamics and interaction is expressed (using the Lagrangian formalism) in a Lagrangian density; $\mathcal{L}$, describing fermions, interactions and Higgs Mechanism.
 
 \begin{itemize}
@@ -24,10 +45,7 @@ The mathematics used to formulate the SM is \textit{relativistic quantum field t
 
 \end{itemize}
 \subsection*{Fermions}
-Fundamental particles are characterized in terms of 3 quantities: Mass, Charge and Spin, where spin is a non-spatial or internal quantum number unlike mass and charge. The spin of a particle can be integer or half-integer.
-Fermions are ordinary matter, half-integer spin~($\frac{1}{2} \hbar$) particles distributed in a \textit{Fermi-Dirac} distribution, meaning no two identical fermions can occupy the same state. They can be massive or massless, charged or be neutral. Anti-fermions have the same mass as fermions but have an opposite charge.
-\newline
-In the SM, the dynamics of fermions and their possible interactions is described by the \textit{Dirac} equation given as:
+Fermions or spin-$\frac{1}{2}$ particles in the SM with their possible interactions is well described by the \textit{Dirac} equation given as:
 \begin{equation}
 \mathcal{L}(\bar{\Psi},\Psi, G^{\mu}) = \bar{\Psi}\left(i \gamma^{\mu}\mathcal{D}_{\mu} - m \right)\Psi 
 \end{equation}
@@ -47,7 +65,7 @@ Electro-weak interactions allows for the distinction of fermions as being either
 %Infact, the SM, does not provide any understanding of why only 3 generations of elementary particles have been discovered.
 From the SM, we understand that one generation of leptons --the electron and the electron neutrino~($e$,$\nu$) and one generation of quarks --the up-quark and the down quark~($u$,$d$) is enough to describe all the visible matter around us.
 \subsection*{Interactions}
-The interaction between matter~(fermions) is mediated by force-mediating particles called \textit{bosons}. Bosons have an integer spin~($n\hbar$, where $n$ is an integer). The SM describes three different forces and their carriers. The electromagnetic force is described under the mathematical frame work of \textit{Quantum Electrodynamics}~(QED), the force carrier is a massless boson called the \textit{photon}~($\gamma$). The two nuclear force; the weak force which was developed later in the 1960s in a combined electro-weak framework by Sidney Glashow, Abdus Salam and Steven Weinberg~\cite{SM} have 3 massive vector bosons $W^{\pm}$, $Z^{o}$ discovered at CERN in 1983 as the force-mediators. The strong force described under the frame work of \textit{Quantum Chromodynamics}~(QCD), not unified with the other two forces, is mediated by massless \textit{gluon}~($g$).  It remains an open question whether at a much higher energy scale, all these forces unify behaving as a single force.
+The interaction between matter~(fermions) is mediated by integer spin or force-mediating particles called \textit{bosons}; i.e the spin of a bosonic particle can only be of the form $n\hbar$, where $n$ is an integer. The SM describes three different forces and their carriers. The electromagnetic force is described under the mathematical frame work of \textit{Quantum Electrodynamics}~(QED), the force carrier is a massless boson called the \textit{photon}~($\gamma$). The two nuclear force; the weak force which was developed later in the 1960s in a combined electro-weak framework by Sidney Glashow, Abdus Salam and Steven Weinberg~\cite{SM} have 3 massive vector bosons $W^{\pm}$, $Z^{o}$ discovered at CERN in 1983 as the force-mediators. The strong force described under the frame work of \textit{Quantum Chromodynamics}~(QCD), not unified with the other two forces, is mediated by massless \textit{gluon}~($g$).  It remains an open question whether at a much higher energy scale, all these forces unify behaving as a single force. It is also understood~(at least in theory) that \textit{gravitational} interaction is mediated by a spin-2 particle called the \textit{graviton}. There are experiments being performed searching  for gravitons.
 %The table below show some the property of the force mediating particles in SM.
 
 %\begin{equation}
@@ -105,7 +123,7 @@ This angle also allows for the mixing of different quark flavors. On the contrar
 
 \hline \hline
 \end{tabular}
-\captionof{table}{Table shows representation of SM particles as multiplets and their quantum numbers.}
+\captionof{table}{Table showing representation of SM particles as multiplets with quantum numbers.}
 \label{tab:SM} 
 \end{center}
 
@@ -230,96 +248,113 @@ It is important to note that there is no fundamental reason given by the SM why 
 
 
 \subsection{Decay Rate and Life Time}
-Fundamental particles in the SM with the exception of the electron~($e$), \textbf{up}~($u$) and \textbf{down}~($d$) quarks, can transform from one particle or generation to the other either through disintegration or oscillation. As a result most particles are understood to be \textit{meta-stable}. This stability is measured with respect to the age of the universe which is understood to be about 13.7 billion years old. Composite particles are even more unstable and easily decay into lower generation particles. The proton consisting of two $u$ and one $d$ valence quarks seemingly very stable can also disintegrate with some theories beyond the SM predicting the proton to remain stable in a time period of about $10^{33}$ years.
-Particle disintegration is understood as the interaction between a given particle and its daughter particle(s). This interaction could be electromagnetic, weak, strong, any pair or maybe all three types of interactions. 
+Almost all particles disintegrate or \textit{decay}, most very rapidly. Collectively particles which disintegrate are said to be unstable while the few which do not are said to be stable. Those which take a long time to disintegrate are termed meta-stable or "\textit{long-lived}" particles. The length of the decay time and context will tell whether a particle is meta-stable or long-lived. The stability of a given particle is measured with respect to the age of the universe~(13.7 billion years). The only understood stable particles in nature are the \textsf{electron}(and \textsf{anti-electron})~($e$), \textsf{up}~($u$) and \textsf{down}~($d$) quarks and their anti-quarks, the \textit{photon}~($\gamma$), the lightest \text{neutrino}~($\nu_{e}$) and the \textit{graviton}. 
+Particles decay by transforming from one type of particle or generation unto another either through interactions, radiation or oscillation.  This decay, in analogous to our everyday experience depends on the their interaction strength with possible particles they can decay into. For example, strongly interacting particles will decay almost immediately while weakly interacting particles will naturally take some time. However, this is not the whole story, as quantum effects will also determine the particles nature of decay.
+%which is understood to be about 13.7 billion years old. 
+Meta-stable particles which are composite~(bound states of elementary particles), are more unstable and easily decay into particles with smaller mass. An example of a meta-stable particle is the \textit{neutron}~(\textsf{$udd$}) which on its own, outside the atomic nucleus can remain stable for about 15 or so minutes. While, neutrons living inside some atomic neuclei can live for a period of time comparable to the age of the universe. Another meta-stable particle like the proton~(\textsf{$uud$}) seem very stable but can possibly decay after a very long period of time. It is speculated that the proton can remain stable for up to a period of about $10^{33}$ years. Atomic nuclei can also be considered as meta-stable living for about a tiny fraction of a second. Thus for all practical purposes, the proton is considered a stable particle while the neutron is considered a \textit{long-lived} particle.  It is believed that if \textit{dark matter} is made of particles then those particles  must be very, very, very long-lived with time also comparable  to or beyond  the age of the universe.
 
-The stability of a particle is related to the conservation of a quantum number or conserved quantity such as energy, spin, angular momentum and charge. Other factors may also play an important role such as phase space~(availability of lighter particles to decay into), violation of some property such as strangeness or the mediating particle usually a boson being very massive compared to the momentum transfer between the parent and the daughter particle. 
-\newline
-The decay rate, \textbf{$\Gamma$}, can be computed in some theory and can also be measured from experiment. Its measurement provide access to the underlying type of interaction or mediating particles involved in the decay and thus can be used as a direct tool to search for other interactions beyond the current known ones. 
-A single particle can decay into more than one type of particles. As long as the conditions for decay are set, a decay into any potential particle whose mass is less than the mass of the parent particle is possible. The decay into a particular set of particle(s) is known as a \textit{decay channel}. Different decay channels can be quantified with respect to the overall \textit{total decay rate}  of the parent particle. This quantification is expressed as a \textit{ branching ratio~(BR) }. Thus the BR gives quantitative estimate of the possibility of a parent particle decaying to specific daughter particles or through that channel.
+%Particle disintegration is understood as the interaction between a given particle and its daughter particle(s). This interaction could be electromagnetic, weak, strong, any pair or maybe all three types of interactions. 
+The stability of a particle is determined by the properties of the particle combined with  conservation laws of a quantum number or conserved quantity like energy, spin, momentum, angular momentum and charge. Other factors may also play an important role such as phase space~(availability of lighter particles to decay into), violation of some fundamental property like \textit{strangeness} or the mediating particle usually a boson being very massive compared to the momentum transfer between the parent and the daughter particle. These laws combined with particle's properties leads to a set of rules which are (almost) entirely determine whether a particle can decay or not or at most decay very rarely.  
+These set of rules can be summarized as follows:
+\begin{itemize}
+\item All particles must and should decay to two or more particles.
+\item The mass of the decaying~(parent) particle must exceed the sum of the mass  of the particles produced~(daughter particles) in its decay.
+\item There must be charge conservation i.e, the total electric charge of the parent particle must equal or match the total electric charge of the daughter particles.
+\item The total number of fermions or spin-1/2 particle before and after the decay must change only by an \textit{even} number.
+\item The total number of quarks minus the total number of anti-quarks must not change in any decay.
+\item The nature of of interaction and degree of phase space available must all be satisfied in order for any decay to take place.
+\end{itemize}
+
+The rate at which a given particle disintegrate  is known as it's \textit{decay rate}, symbolized as \textbf{$\Gamma$}. It is an experimentally measurable quantity which can also be computed in theory. A particle's decay rate $\Gamma$ can depend on the strength of a given interaction involved in the decay.As such the experimental measurement of decay rate provides access towards understanding the type of interaction involved and important parameters governing the underlying interaction or mediating particles involved in a given decay. Thus, measuring a particle's decay rate can be used as a direct access to search for other interactions beyond the known interaction and thus provide evidence for new physics. 
+
+A single particle can decay into more than one type of particles. Provided the conditions for decay are satisfied, its decay into potential particles is possible. The decay into a specific set of particles is known as a \textit{decay channel}. Different decay channels can be quantified with respect to the overall \textit{total decay rate}  of the parent particle. This quantification is expressed as a \textit{ branching ratio~(BR)}. Thus the BR gives quantitative estimate of the possibility or probability of a parent particle decaying to specific daughter particles or through a given channel.
 \newline
 The inverse of a decay rate is the \textit{proper life time}, denoted as $\tau$.
-
 \begin{equation}{\label{eq:RATE}}
   \tau = \frac{\hbar}{\Gamma}
 \end{equation}
 
- A convenient way to express life time is using the distance traveled by a particle before it decays. $c\tau$, where $c$ is the speed of light in vacuum and $\tau$ is the \textit{proper life time} is the \textit{decay length} of the particle measured in the frame with respect to the center of mass of a moving particle. It is called the \textit{proper decay length}. However, laboratory measurements are not done in the center of mass of the moving particle; as this would be near impossible to do. Therefore since the particle is moving with some speed with respect to a stationary laboratory, we have to take into consideration this difference in motion of frames~(the moving particle frame and the stationary Laboratory frame) in understanding our measurement of the decay length in the laboratory and translate this into the true decay length of the particle. %The effect we need to consider is known in special relativity as \textit{time dilation} and the decay length is a measure of the distance between the position where the particle was produced to where it decayed.
-The laboratory measured decay length can be expressed as:
+$\tau$ is a measure of the time lived as measured in the frame of reference of the decaying particle ~(rest frame) by a particle before disintegrating.
+ A convenient way to express life time is by instead of the time lived use the distance traveled by a particle before it decays denoted by  $c\tau$, where $c$ is the speed of light in vacuum and $\tau$ is the \textit{proper life time}.
+This is called the \textit{proper decay length}. However, nearly impossible to measure the proper decay length inside a particle's rest frame, thus  laboratory measurements are  performed while the decaying particle is moving with some velocity, $v$ with respect to a stationary laboratory. In making these measurements,  we take into consideration this difference in motion of frames~(the moving particle frame and the stationary laboratory frame)  or relativistic effect in understanding our measurement of the decay length in the laboratory translated into the proper decay length of the particle. %The effect we need to consider is known in special relativity as \textit{time dilation} and the decay length is a measure of the distance between the position where the particle was produced to where it decayed.
+The laboratory measured decay length is expressed as:
 \begin{equation}{\label{eq:DECAY}}
- L = \beta \gamma c\tau
+ \vec{L} = \vec{\beta} \gamma c\tau
 \end{equation}
-where $\beta = \frac{v}{c} $ , $v$, the speed of the moving particle and $\gamma = \frac{1}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}$ is a factor accounting for the relative motion between the two frames.
-Equation \ref{eq:DECAY} can also be expressed as $L = \frac{p}{m}c\tau$, in terms of the particle's momentum $p$ and mass, $m$.
+where $\vec{\beta} = \frac{\vec{v}}{c} $ , $\vec{v}$, the velocity of the moving particle and $\gamma = \frac{1}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}$ is a factor accounting for the relative motion between the two frames.
+Equation \ref{eq:DECAY} can also be expressed in as $\vec{L} = \frac{\vec{p}}{m}c\tau$, in terms of the particle's momentum $p$ and mass, $m$.
 Thus, the larger the particle's momentum, the further is it's distance traveled from its point of production as measured in the laboratory frame. On the other hand, the larger the particle's mass, the slower it's traveling speed and hence shorter its distance traveled.
-\newline
-A particle's decay rate $\Gamma$ which determines its $c\tau$ depends on quite a number of the particle's properties. The type of interaction between the particle and its daughter particles specifies its decay length. For example, the decay length for electromagnetic interaction, can be very different to that of weak and strong interactions. The decay length due to strong interactions leads to the shortest particle's decay length due to the strong nature~(coupling constant $\approx 1$ or high decay rates) of the interaction. The weak and electromagnetic interactions have much smaller coupling constants thus often leads to shorter decay length. There are some exceptions to this due to other factors playing a key role than interactions alone as we mentioned.
-The table and graph below show the mass and decay length of SM particles and their interaction.
+
+Because particle's decay rate $\Gamma$ can depend on the strength of a given interaction involved in the decay. Thus the decay length, $c\tau$  for electromagnetic interaction, can be very different to that of weak and strong interactions. The decay length for strong interactions is the shortest because of the strong nature~(coupling constant $\approx 1$) of strong interaction. The weak and electromagnetic interactions have much smaller coupling constants thus often leads to longer decay length. There are some exceptions to this due to other factors playing a key role than only the strngth of a given interaction such as the size of the available phase space and the difference in mass between the parent and the sum of the mass of the daughter particles.
+%The table and graph below show the mass and decay length of SM particles and their interaction.
 %\begin{equation}
 % TABLE SHOWING SM particle decay rates and interactions involed as well as mass Vs decay length.
 %\end{equation}
- In particle physics experiments it is very challenging to measure the  life time or decay length or a particle  by measuring the time it travels from where it was produced to where it decayed. Rather, the number of events present initially and that observed after a time period t is used to measure the lifetime of a particle. The decay rate ( or life time) of a particle is related to the number of particles observed though the equation:
- \begin{equation}
- N(t) = N_{0}\exp\left(\frac{-t}{\tau}\right) = N_{0}\exp\left(\frac{-\Gamma t}{\hbar}\right) 
- \end{equation}
-where \textit{N(t)} is the number of particles observed at an arbitrary time \textit{t} and $N_{0}$ is the number of particles observed at an initial time where it is assumed no particle has decayed yet usually at $ t = 0 $.
-A distribution of the observed number of particles( usually a Poisson distribution) can be plotted with time measured. The resulting distribution if fitted with a Poisson distribution faction and the parameter of the Poisson distribution function extracted  to give us the decay rate or life time of a particle.
-\newline
-Particles with large decay length or long life time are commonly referred to as \textit{Long-Live}~(LL) particles. Many models beyond the SM predict the existence of such particle. They are also understood to be prime candidates for particles making up DM.
-Before we dive into such models, it is necessary to understand in detail the decay of particles and factors which determine a particle's decay length as well as the kind of LL particles considered detectable in a multi-particle physics detector such as those at the Large Hadron Collider~(LHC) CERN pursued in this thesis.
-\paragraph*{}
-Particles described by the SM come in different types of long-lived.  First, we have the stable elementary (as we currently believe) such as the electron and neutrinos. Second, we have the meta-stable elementary such as the muon and finally the (very) long-lived composite particles such as the neutrons and protons. By referring to the different classes of particles according to their life time, we can asked the question, what properties of a particle makes it stable, meta-stable or long-lived?
-\newline
-There are three possible answers to this question:
-\begin {itemize}
-\item A particle could be the lightest state carrying a conserved quantum number and as such remain entirely stable e.g the electron and proton.
-\item The decay of a particle to another lighter particle could only be  made possible through some suppressed or effective coupling and as a result ends up being meta-stable e.g the muon
-\item If the mass of a particle is relatively close in quantity to the particle it is decaying into such that their difference in mass is quite small, the decay will be eventually suppressed. This goes by the name lack of phase space for decay e.g decay of neutron ($ n \rightarrow p + e^{-} + \bar{\nu}_{e} $). In this scenario the difference in mass between the neutron (n) and the proton (p) is $\approx 1.293$ MeV and as a result determines the type of associated particle produced in this decay as observed.
-\end{itemize}
+%In particle physics experiments it is very challenging to measure the  life time or decay length or a particle  by measuring the time it travels from where it was produced to where it decayed. Rather, the number of events present initially and that observed after a time period t is used to measure the lifetime of a particle. The decay rate ( or life time) of a particle is related to the number of particles observed though the equation:
+ %\begin{equation}
+% N(t) = N_{0}\exp\left(\frac{-t}{\tau}\right) = N_{0}\exp\left(\frac{-\Gamma t}{\hbar}\right) 
+ %\end{equation}
+%where \textit{N(t)} is the number of particles observed at an arbitrary time \textit{t} and $N_{0}$ is the number of particles observed at an initial time where it is assumed no particle has decayed yet usually at $ t = 0 $.
+%A distribution of the observed number of particles( usually a Poisson distribution) can be plotted with time measured. The resulting distribution if fitted with a Poisson distribution faction and the parameter of the Poisson distribution function extracted  to give us the decay rate or life time of a particle.
+%\newline
+%Particles with large decay length or long life time are commonly referred to as \textit{Long-Live}~(LL) particles. Many models beyond the SM predict the existence of such particle. They are also understood to be prime candidates for particles making up DM.
+%Before we dive into such models, it is necessary to understand in detail the decay of particles and factors which determine a particle's decay length as well as the kind of LL particles considered detectable in a multi-particle physics detector such as those at the Large Hadron Collider~(LHC) CERN pursued in this thesis.
+%\paragraph*{}
+%Particles described by the SM come in different types of long-lived.  First, we have the stable elementary (as we currently believe) such as the electron and neutrinos. Second, we have the meta-stable elementary such as the muon and finally the (very) long-lived composite particles such as the neutrons and protons. By referring to the different classes of particles according to their life time, we can asked the question, what properties of a particle makes it stable, meta-stable or long-lived?
+%\newline
+%There are three possible answers to this question:
+%\begin {itemize}
+%\item A particle could be the lightest state carrying a conserved quantum number and as such remain entirely stable e.g the electron and proton.
+%\item The decay of a particle to another lighter particle could only be  made possible through some suppressed or effective coupling and as a result ends up being meta-stable e.g the muon
+%\item If the mass of a particle is relatively close in quantity to the particle it is decaying into such that their difference in mass is quite small, the decay will be eventually suppressed. This goes by the name lack of phase space for decay e.g decay of neutron ($ n \rightarrow p + e^{-} + \bar{\nu}_{e} $). In this scenario the difference in mass between the neutron (n) and the proton (p) is $\approx 1.293$ MeV and as a result determines the type of associated particle produced in this decay as observed.
+%\end{itemize}
 
 \paragraph*{}
-In this thesis, we will only be  interested in Meta-Stable (MS) particles, and in particular focus on Massive Neutral Meta-Stable
-particles which we refer to as Neutral Massive Long-Lived Particles (NMLLP). A rather more descriptive name would be Neutral Massive Meta-Stable Particles(NMMP) since these particles are not  LL in the real sense but might decay into other elementary particles which are observable at detectors and how long-lived you refer to them depends on the possible lifetime of this particle your detector is sensitive to. As their lifetime might range from a few nanoseconds ($10^{-9}$s) to the age of the universe (13.7 billion years) likewise from a few  $\mu$m to billions of km.
-Thus, our interpretation of LL particles will be those whose decay length range from a few $\mu$m to few meters or detectable size of the LHC detectors and in particular electromagnetic sector of LHC detectors.
-\newline
-We have restricted ourselves to electromagnetic (local U(1) gauge symmetry) neutral particles as their charge counterparts can be studied using conventional magnetic spectrometer and ionization methods as shown in this studies for Heavy Stable Charge Particles (HSCP).
+In order to avoid misunderstanding of what we mean by long-lived particles in this thesis, we cover mostly \textit{massive neutral meta-stable} particles  referred here as \textsf{Neutral Massive Long-Lived Particles}~(NMLLP). These are either elementary or composite neutral particles with life-time within the detectable range of a collider detector i.e few nanoseconds. In general, 
+%A rather more descriptive name would be Neutral Massive Meta-Stable Particles(NMMP) since these particles are not very long-lived in the real sense but might decay into other elementary particles which for all practical purposes can be observable at collider detectors.
+long lived could mean life-times from a few nanoseconds ($10^{-9}$s) to the age of the universe or equivalently from a few  $\mu$m to billions of km.
+Thus, our interpretation of neutral long-lived particles will be particles whose decay length ranges from a few $\mu$m to few meters or decay length is within the detectable size of the LHC detectors and in particular electromagnetic calorimeter sector of LHC detectors.
+%\newline
+%We have restricted ourselves to electromagnetic (local U(1) gauge symmetry) neutral particles as their charge counterparts can be studied using conventional magnetic spectrometer and ionization methods as shown in this studies for Heavy Stable Charge Particles (HSCP).
 
 
 
 \subsection{Limitations Of the Standard Model}
-The SM~(Glashow, 1961; Weinberg, 1967; Salam, 1968) currently describes almost entirely all of the observed phenomena and fundamental particles of nature with unmatched precision.
-However, as indicated from previous sections, there is more to be understood such as:
+The SM~(Glashow, 1961; Weinberg, 1967; Salam, 1968) describes almost entirely all of the observed phenomena and fundamental particles of nature with unmatched precision.
+However, more concerning our universe is yet to be understood. A few of this include:
 \begin{itemize}
-\item \textbf{General Formalism: } There are way too many parameters in the SM which are not derived within the theory but rather measured experimentally such as the Weinberg angle and the CKM matrix elements. The SM does not account for the multiplet structure of fields as well as why there are only three observed generations of particles. Currently observed neutrino masses are not required in the SM as neutrinos are considered massless in the SM. Even the Electroweak symmetry breaking is not very well understood.
-\item \textbf{Astrophysical: }
-Why is there so much matter and not anti-matter? If the Big Bang is suppose to be the correct theory about the universe existence, then matter and anti-matter must be observed in equal composition, however, Baryon asymmetry ratio show that there is more matter than anti-matter, where is all the expected anti-matter? This could be explained as charge-parity violation in weak interactions of the SM but this is quite small( not strong enough) to explain for all the observed discrepancy. Baryonic Acoustic Oscillation results also known as CMB as well as WMAP results all indicate the presence of excess matter which does not interact with light and is collision less called Dark Matter~(DM) as well as increase energy density responsible for the rapid accelerated expansion of the universe called Dark Energy~(DE). All these observations cannot be explained within the SM.
-\item \textbf{Theory: }
-The SM is seen as some low energy theory of some much deeper underlying theory(SM as an effective theory) due to the fact that it cannot describe gravity. In Addition  to this, the coupling constants in the SM all vary with energy and so the definite question if whether there is a much higher scale where all these couplings become a single coupling( Unification of forces). Supersymmetric extensions of the SM show unification of forces at Grand Unified Theories~(GUT) energy scale of $\approx 10^{15}$ \GeV.
+\item \textbf{General Formalism} \mbox{}\\ Many important parameters in the SM like the Weinberg angle and the CKM matrix elements for example cannot not be derived within the theory but rather measured or provided by experiment. This is not a desirable quality for a self-sufficient and consistent theoretical description of nature. The SM cannot account for the multiplet structure of fields as the basic field representation in the SM and why there are only three observed generations of elementary particles. Neutrinos according to the SM are described as massless neutral spin-1/2 particles, however experiments involving neutrino oscillations observed neutrinos to have a finite tiny mass around eV range. The Electro-weak symmetry breaking which is central to the SM is not very well understood as the SM does not provide an explanation of whether there are more than one spin-0 boson responsible for particles masses or not.
 
-\item \textbf{Mass Hierarchy and Fine-tuning: }
-Why are particles masses in the standard model arranged in such a hierarchy? from neutrino masses of few eV to top mass of 173~\GeV.
-In terms of energy scale, from the electro-weak symmetry breaking scale of $\approx 100$~\GeV to Planck scale, $M_{p} = 10^{19}$~\GeV, there are no other particles and especially scalers  or any known interactions.
-The Higgs mass  incredible precise  contributions from higher order (loop) effects to its mass in order to maintained its experimentally observed value of $\approx 125$~\GeV. Understanding this precise contributions and cancellations to arrived at the expected value is referred to as the fine-tuning problem and extensions of the SM like supersymmetry provide a very natural answer as we will see later.
+\item \textbf{Astrophysical} \mbox{}\\
+Why is the universe made of so much matter and not anti-matter? If the Big Bang theory which describes the creation and existence of the universe is assumed to be the correct theory, then matter and anti-matter should be observed in equal composition. However, astrophysical measurements of the ratio of barons to anti-baryons referred as the \textit{Baryon asymmetry ratio} shows that there is more matter than anti-matter in the universe. Where is all the expected anti-matter? This could fairly be explained through charge-parity violation in weak interactions of the SM but this contribution is not enough to explain the entire observed baryonic matter discrepancy. Observations through \textit{Baryonic Acoustic Oscillation}~(BAO) or \textit{Cosmic Microwave Background}~(CMB) and the \textit{Wilkinson Microwave Anisotropy Probe}~(WMAP) results indicate the presence of excess matter which does not interact with light called Dark Matter~(DM) and Dark Energy~(DE) responsible for an increase energy density causing rapid accelerated expansion of the universe. These observations cannot be explained using the current SM.
+\item \textbf{Theory} \mbox{}\\
+From a theoretical standpoint, the SM is considered a low energy theory of a much deeper underlying theory describing nature(i.e the SM is an effective field theory). This is because the SM description of nature does not include gravitational interactions. In addition, the SM coupling constants vary with energy. This begs the question; is there  a much higher energy scale where all these couplings behaves as single more fundamental single coupling constant~(Unification of forces)?. Other theories like \textit{Supersymmetry} which is an extension of the SM towards a higher energy scale, show the possibility of unifying the known coupling constants or forces at \textit{Grand Unified Theories}~(GUT) energy scale which is about $\approx 10^{15}$ \GeV.
+
+\item \textbf{Mass Hierarchy or Naturalness} \mbox{}\\
+The observed masses  for fundamental particles ranges from neutrino masses of a few eV to the \textsf{top} particle's mass of 173~\GeV. The SM only accounts for how particles obtain their mass through their interaction with a scalar field~(spin-0), the Higgs boson. However, the experimental observation of this particles mass hierarchy is not understood. Infact according to the SM, neutrinos have no mass. 
+From an energy scale point of view, this lack of our understand also known as the \textit{hierarchy} "\textit{problem}" can be posed as follows; why do experiments observed such a huge energy gap between the electro-weak symmetry breaking energy scale~( $\approx 246$~\GeV) and the Planck energy scale~(reduced Planck mass, $M_{p} = 10^{18}$~\GeV)?
+A consequence of this, is on the experimentally observed value of the mass of the Higgs boson, $\approx 125$~\GeV. The Higg's mass is stable and does not grow to very large values as the energy scale increases towards $M_{p}$ as one would expect from theoretical calculations.  \textit{Supersymmetry}, an extension of the SM, allowing for the possibility of more than a single Higgs boson, provides an explanation for why the  Higg's mass remains stable at all energy scale. Its main idea, is the existence of fundamental new particles with masses within the weak and gravity energy scale and through their interaction with the higgs keeps its mass stable. We will see more of this in the next section.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Beyond Standard Model Physics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The Higgs boson's mass as understood from theoretical calculations should receive contributions from higher order~(loop interactions as is known) inorder to observe the experimentally measured mass of possibly 125~\GeV or of order \textit{O}(100~\GeV). However, all these corrections are said to cancel out such that the experimentally observed mass is as it is measured. The question of where these additional loop corrections disappeared into cannot be understood within the context of the SM. However, theories beyond the SM such as supersymmetry provide a natural understanding of how these loop effects cancel out to arrive at the observed mass. To go a step further with this; the mass of a particle can be expressed as 
+The SM predictions of the value of the Higgs boson's mass recommend additional contributions from \textit{quantum fluctuations}~(higher order or loop corrections) which are very large~(can as well be infinite). However, the observed experimentally measured value of the Higgs mass~($m_{H} \approx 125$~\GeV). This unobserved large corrections to the experimentally measured value requires some understanding. A possible explanation is that these various contributions cancel on average producing a net zero effect on the true Higgs mass such that the physically observed mass is as measured. If such cancellation is a true phenomenon in nature, then it is only logical to inquire the origin of this cancellations. Obviously this cannot be understood within the frame work of the SM. 
+
+Consequently, theories beyond the SM like \textit{supersymmetry} provide a natural understanding of how these various contributions cancel on average arriving at the physically observed and measured Higgs mass. To expand further, the mass of a particle can be expressed as 
 \begin{equation}
- m^{2}_{physical} = m^{2}_{Bare} + \delta m^{2}_{1}
+ m^{2}_{\mbox{physical}} = m^{2}_{\mbox{bare}} + \delta m^{2}_{1}
 \end{equation}
 
-where $m^{2}_{Physical}$ is the true mass of the particle measured in the laboratory; in the case of the Higgs boson of order \textit{O}(100~\GeV) while $m^{2}_{Bare}$ is the true mass of the particle which cannot be calculated or measured. $\delta m^{2}_{1}$ is the quantum one loop corrections to the true mass which can be calculated. Thus from the measured mass and the calculated  one loop quantum effect mass, one can get the true mass of the particle. The quantum loop contributions can come from bosons as well as fermions. For the Higgs scenario, the Higgs can couple or interact with every particle through interactions like $\lambda_{f}H\bar{f}f$ for fermions and $\lambda_{S}|H|^{2}S^{2}$ for scalar or bosons  with $\lambda_{f}$ and $\lambda_{S}$ the coupling constants and not necessarily equal. The quantum one loop corrections as calculated from the following diagrams:
+where $m^{2}_{\mbox{physical}}$ is the physically measured mass of the Higgs boson,  $m^{2}_{\mbox{bare}}$ is the true  universe given mass of the particle which cannot be calculated or measured. $\delta m^{2}_{1}$ are corrections from quantum fluctuations to the true mass which can be calculated. Using the measured mass and the calculated  quantum corrections, one can obtain the true Higgs mass. These contributions from quantum fluctuations can arise from both bosons and fermions. Since the Higgs boson can interact~(by coupling) with every particle through interactions of the general form $\lambda_{f}H\bar{f}f$ for fermions and $\lambda_{S}|H|^{2}S^{2}$ for scalar or bosons;  with $\lambda_{f}$ and $\lambda_{S}$ representing the coupling constants which need not be equal. The Feynman diagrams in \ref{fig:Hmass} represents a few of such quantum fluctuations with both fermion and boson contributions computed as:
 
 \begin{center}
-\centering
+%\centering
 %\mbox{
-\includegraphics[scale=0.7]{THESISPLOTS/Higgs_Hirrachy_Problem.png}
+\includegraphics[height=5cm,width=0.5\linewidth]{THESISPLOTS/Higgs_Hirrachy_Problem.png}
 \captionof{figure}{Higgs self energy diagrams showing how the higgs boson mass is computed from both Higgs field and supersymmetric partner particle contributions.}
 \label{fig:Hmass}
 \end{center}
-is given as:
 
 \begin{equation}
 \delta m^{2}_{1,f} = \frac{1}{16\pi^{2}}|\lambda_{f}|^{2}\left(-2\Lambda^{2} + 6m^{2}_{f}\ln\left(\frac{\Lambda}{m_{f}}\right) + ...\right) 
@@ -328,36 +363,52 @@ is given as:
 \begin{equation}
 \delta m^{2}_{1,S} = \frac{1}{16\pi^{2}}|\lambda_{S}|^{2}\left(\Lambda^{2} - 2m^{2}_{S}\ln\left(\frac{\Lambda}{m_{S}}\right) + ...\right) 
 \end{equation}
-where $\Lambda$ is understood to be some cut-off scale where new kind of interaction at a much higher energy scale is needed to regulate the low energy behavior of the SM. $\Lambda$ could be the Planck scale(~ $10^{19}$~\GeV) where this new kind of interaction if gravity. The two things to observe from this calculations is that first, corrections to the higgs bare mass $m^{2}_{Bare}$ are not proportional to the Higgs mass as is the case with other SM particles like the electron\cite{}.
-Second, these corrections are of the order of $\approx 10^{38}~\GeV^{2}$  with the signs reverse for fermions or scalar corrections.
-Despite this expected  corrections to the true Higgs mass, the measured or physical Higgs mass squared $m^{2}_{H,Physical}$ is of the order $\approx 10^{4}~\GeV^{2}$.
-The only way there is an agreement between this correction and physical Higgs mass is if the true Higgs mass, $m^{2}_{H,Bare}$ is fine-tuned with a precision of about 1 in $10^{17}$. This enormous fine-tuning is considered a fundamental problem with the Higgs mechanism of the SM and is referred to as not \textit{natural}. Infact, since in the SM, there is only once scalar particle which is the Higgs boson, this fine-tuning cannot be understood. However, in other models beyond the SM such as suppersymmetry, the fermion one loop quantum correction which comes with an opposite sign to the scalar one loop quantum correction with $\lambda_{f} = \lambda_{S}$ ,there is a cancellation and this fine-tuning can be understood. Another interpretation of this issue is through the question of why there is so much difference in energy scale between the electroweak scale \textit{O}(100~\GeV) and the Planck energy scale \textit{O}($10^{19}$~\GeV) where gravity effects to particle interaction becomes significant?. This is referred to as the \textit{Hierarchy problem} stated above as one of the motivation to go beyond SM.
+$\Lambda$ is some \textit{cut-off} energy scale where a another kind of physics interaction like gravity at a much higher energy scale is needed to regulate the low energy behavior of the SM. $\Lambda$ could be the reduced Planck scale(~ $10^{18}$~\GeV).  A quick observation from this calculations is that; first, corrections to the higgs bare mass, $m^{2}_{\mbox{bare}}$ are not proportional to the Higgs mass.
+%( in other cases like as is the case with other SM particles like the electron\cite{}.
+Second, these corrections are of the order of $\approx 10^{36}~\GeV^{2}$  bringing positive and negative contributions from fermions or scalar bosons respectively.
+Even with these corrections to the true Higgs mass, the measured~(physical) Higgs mass squared, $m^{2}_{H,\mbox{physical}}$, is of the order $\approx 10^{4}~\GeV^{2}$.
+Since the true Higgs mass, $m^{2}_{H,\mbox{bare}}$, is never measured or known, an agreement between these quantum fluctuation contributions and physical Higgs mass is realized  if only the true Higgs mass, $m^{2}_{H,\mbox{bare}}$,  is \textit{fine-tuned} with a precision of about 1 in $10^{17}$. This enormous fine-tuning is considered a fundamental issue of not enough understanding of the Higgs mechanism of the SM and is considered \textit{unnatural}. 
+%The fact that, among the numerous SM predictions, no other scalar particle except the possible Higgs boson candidate has been observed so far, further makes such a fine-tuning difficult to understood. 
+On the other hand, in suppersymmetry, the fermion one loop quantum correction which comes with an opposite sign to the scalar quantum fluctuation corrections and $\lambda_{f} = \lambda_{S}$ ,there is a complete  cancellation and this discrepancy of the unobserved effects of these quantum fluctuations to the $m^{2}_{H,\mbox{bare}}$ in the $m^{2}_{H,\mbox{physical}}$ is understood. 
+% Another interpretation of this issue is through the question of why there is so much difference in energy scale between the electroweak scale \textit{O}(100~\GeV) and the Planck energy scale \textit{O}($10^{19}$~\GeV) where gravity effects to particle interaction becomes significant?. This is referred to as the \textit{Hierarchy problem} stated above as one of the motivation to go beyond SM.
 \paragraph*{}
-Another drawback with the SM is that of unification. It is believed that at a higher energy scale since SM seems to be describing the low energy behavior of some parent theory, the electromagnetic, weak and strong interactions all become one interaction just as the electromagnetic and weak interaction unified into the electro-weak interaction as the electro-weak energy scale $\approx 100$~\GeV. i.e
-\begin{equation}
-SU(3)_{C} \otimes SU(2)_{L} \otimes U(1)_{Y} \subset \mathcal{G}
-\end{equation}
-where $\mathcal{G}$ is some larger symmetry group. In SM, this does not happen at any higher energy scale. However, in suppersymmetry, there is a clear unification of individual coupling constants or electromagnetic, weak and strong interactions at the GUT energy scale of $\approx 10^{15}$~\GeV.
-This effect can be seen in the following figures as taken from \cite{}.
-\begin{equation}
-Plot showing Unification of Coupling Constants.
-\end{equation}
+In addition to explaining the origin of this perceived \textit{fine-tuning} issue, supersymmetry also provides a natural framework for the unification of fundamental forces, not possible in the SM.
+If the SM is believed to be an incomplete and low energy description of nature of a possible parent and more fundamental theory like supersymmetry, then one would expect that the symmetry groups of the SM be a subset of some larger parent group, $\mathcal{G}$; i.e $\displaystyle{SU(3)_{C} \otimes SU(2)_{L} \otimes U(1)_{Y} \subset \mathcal{G}}$.
+%It is believed that at a higher energy scale since SM seems to be describing the  behavior of some parent theory, the electromagnetic, weak and strong interactions all become one interaction just as the electromagnetic and weak interaction unified into the electro-weak interaction as the electro-weak energy scale $\approx 100$~\GeV. i.e
+%$\mathcal{G}$ is some larger symmetry group. In SM, this does not happen at any higher energy scale. However, in 
+In suppersymmetry, This unification of forces or couplings of electromagnetic, weak and strong interactions occur at the \textit{Grand Unified Energy}~(GUT) energy scale of $\approx 10^{15}$~\GeV \cite{SM}.
+%This effect can be seen in the following figures as taken from \cite{}.
+%\begin{equation}
+%Plot showing Unification of Coupling Constants.
+%\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Supersymmetry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In relativistic Quantum Field Theory~(QFT), the idea of symmetry is used to provide a better understanding of a particle and its possible interaction with other particles. Symmetries can be classified into two broad categories: Space-Time or external symmetries known as Poincar\'{e}(rotational and translational) symmetries also known as groups and internal or gauge (which as we saw earlier; $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$ describing the quantum numbers-- color, weak and hypercharge respectively) symmetries. In a quest to include gravitational interaction along with all the other forces of nature into a unique frame work called unification, it was thought that one could combine these two classes of symmetries into a bigger class of symmetry. However, Coleman and Mandula in their so-called "\textit{no-go}" theorem in 1967 \cite{SUSY} showed that the direct product nature of super groups; a direct approach to extending symmetries to bigger symmetries, is not possible. Thus these two class of symmetries cannot be combined into a bigger parent symmetry. This produced a challenge of finding a scenario where $ \left[M^{\mu\nu}, T^{a}\right] \neq 0$,  considering  that the generators of these groups; $P^{\mu}, M^{\mu\nu}$ and $T^{a}$ corresponding to these symmetries have a direct product;  Poincar\'{e} $\times$Gauge group, for which $ \left[P^{\mu}, T^{a}\right] = \left[M^{\mu\nu}, T^{a}\right] = 0$. 
+In relativistic Quantum Field Theory~(QFT), the idea of symmetry or group theory is used to provide a better understanding of fundamental particles and their properties. These symmetries belong to two broad categories: space-time symmetries known as Poincar\'{e}(i.e rotation and translation) symmetries and gauge ( such as $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$ with quantum numbers; color, weak and hypercharge respectively of the SM) symmetries. With the SM viewed as a low energy version of a more large and unified theory,  
+%that all fundamental forces including gravity could be unified 
+%In a quest to include gravitational interaction along with all the other forces of nature into a unique frame work called unification, 
+it was believed that combining these two classes of symmetries into one big class of symmetry could lead the way towards the development of this unified theory. However, Coleman and Mandula\cite{SUSY}, in their so-called "\textit{no-go}" theorem in 1967  showed that pursuing the \textit{direct product} of super group approach  was not possible. %Thus these two class of symmetries cannot be combined into a bigger parent symmetry. 
+The challenge was finding a scenario where the generators of both space-time $P^{\mu}$, $M^{\mu\nu} $  and these gauge groups $T^{a}$, do not commute with each other; i.e $ \left[M^{\mu\nu}, T^{a}\right] \neq 0$ and yet remains a direct product of both symmetry groups, considering that the direct product of these groups do commute; i.e
+%the generators of these groups; $P^{\mu}, M^{\mu\nu}$ and $T^{a}$ corresponding to these symmetries have a direct product;  Poincar\'{e} $\times$Gauge group, for which
+$ \left[P^{\mu}, T^{a}\right] = \left[M^{\mu\nu}, T^{a}\right] = 0$. 
 \newline
-Because of this \textit{no-go} theorem, such a parent symmetry group is not possible if one used generators of Lorentz tensors. The only way out is to find a symmetry which is generated by spinoral(particle's spin) charges instead of tensorial ( space-time ) charges. Such a theorem was found in 1975 by Haag, Lapuszanski and Sohnius \cite{MSUSY}  called the  \textit{Haag-Lapuszanski-Sohnius} theorem with its corresponding algebra called the \textit{Lie-superalgebra}. 
+This \textit{no-go} theorem prevents the possibility of finding a parent group where its generators are generators constructed from \textit{Lorentz} tensors. Thus only symmetries  generated by \textit{spinoral}~(particle's spin) charges instead of \textit{tensorial}~( space-time)charges were possible. In 1975, Haag, Lapuszanski and Sohnius \cite{MSUSY} found such a group theorem known as the \textit{Haag-Lapuszanski-Sohnius} theorem with its corresponding generator algebra called the \textit{Lie-superalgebra} or the \textit{supersymmetry algebra}.  This supersymmetry algebra extended the commutative aspect of the Poincar\'{e} algebra to include \textit{anticommuting} symmetry generators.
 \newline
-The generators of these \textit{Lie-superalgebra}, $\mathrm{Q^{\alpha}}$, with $\alpha = 1,...,\mathrm{N}$. $\mathrm{N}$ is the number of generators for the supersymmetry. In this Thesis we will only be considering the case where $\mathrm{N} = 1$ i.e only one supersymmetry generator. This is known as the minimal supersymmetry. If you are interested in  learning more about extensions of this minimal version see this excellent text \cite{SUSYText}. The generators $\mathrm{Q^{\alpha}}$ can be expressed in terms of Weyl Spinors $\mathrm{Q_{a}}$ where $a=1,2$ and must satisfy anti-commutation relation with its conjugate. This is the major aspect of introducing supersymmetry.
-Thus for these generators to be supersymmetric, they must satisfy the following relations:
+The generators of these \textit{Lie-superalgebra}, $\mathrm{Q^{\alpha}}$, $\alpha = 1,...,\mathrm{N}$ with $\mathrm{N}$ being the number of generators for the supersymmetry, anticummute with the group and space-time generators as shown in equation \ref{eq:SUSYGEN}. 
+Supersymmetry is a well developed and advanced branch for theoretical physics where the number of supersymmetry generators can be any number. However, this thesis only considers the case where there is only one generator of suppersymmetry; i.e $\mathrm{N} = 1$. This is the minimal  version of supersymmetry. 
+ The generators $\mathrm{Q^{\alpha}}$ and its conjugate $\mathrm{Q_{a}}$ where $a=1,2$ in the  \textit{Weyl spinors} formalism. Both generators must satisfy  a anti-commutation relation.
+These generators are supersymmetric in nature because they satisfy the relations as given in equation \ref{eq:SUSYGEN}.
 
-\begin{eqnarray}
+\begin{eqnarray}{\label{SUSYGEN}}
 \left\lbrace\mathrm{Q_{a}}, \mathrm{\bar{Q}_{b}}\right\rbrace =  2\left(\gamma^{\mu}\right)_{ab}P^{\mu}, &
 \left[\mathrm{Q_{a}},P^{\mu}\right] = 0, &
 \left[\mathrm{Q_{a}}, M^{\mu\nu}\right] =\frac{1}{2}\left(\Sigma^{\mu\nu}\right)_{a}^{b}\mathrm{Q_{b}}
 \end{eqnarray}
 
-where $\gamma^{\mu}$ is define such that $\left\lbrace \gamma^{\mu}, \gamma^{\nu}\right\rbrace = 2\mathrm{g^{\mu\nu}}$ and  $\Sigma^{\mu\nu} = \frac{i}{2}\left[\gamma^{\mu},\gamma^{\nu}\right]$ and $\mathrm{\bar{Q}_{a}}$ 
+$\gamma^{\mu}$ is define such that $\left\lbrace \gamma^{\mu}, \gamma^{\nu}\right\rbrace = 2\mathrm{g^{\mu\nu}}$ and  $\Sigma^{\mu\nu} = \frac{i}{2}\left[\gamma^{\mu},\gamma^{\nu}\right]$ and $\mathrm{\bar{Q}_{a}}$ 
 is the Hermitian conjugate to $\mathrm{Q}$ and is also a generator.
 From these relations, two very fundamental consequences arise:
 \begin{itemize}
