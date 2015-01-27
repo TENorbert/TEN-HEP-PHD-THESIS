@@ -414,7 +414,7 @@ estimate delayed photon contributions from satellite/ghost bunches is it is not 
 
 
 \subsection{Event Cleaning, Veto Performance and Fake Rate}
-Using the derived kinematics variables for halo, cosmic and spike photons, we apply the following cuts in these variables to tag and reject contributions from these events. These cuts are applied in addition to our above selections cuts. We apply the following cuts for non-collision background tagging:
+Using the derived kinematic variables for halo, cosmic and spike photons, we apply selection cuts on these variables for tagging and rejecting contributions from non-collision events. These cuts are applied in addition to our above event selections cuts to perform the following event cleaning:
 \begin{itemize}
 \item Veto 0-jet events as this sample is highly populated with beam halo events, 
 \item Veto events with $CSC\Delta\phi(Seg,\gamma) < 0.05$,
@@ -442,6 +442,8 @@ Our measured fake rates are shown in table \ref{tab:EVTC}.
 \captionof{table}{Fake rates for different non-collision cleaning.}
 \label{tab:EVTC} 
 \end{center}
+After performing our event cleaning criteria, tagging and rejection of most of halo, cosmic and spike events, our residual background photon timing distribution is shown in figure \ref{fig:RESIDUAL} with the different sources of our background tags.
+We now perform an \textsf{ABCD} background estimation technique on this residual background to estimate possible contamination of the remaining non-collision background to signal.
 
 \begin{center}
 \centering
@@ -456,56 +458,95 @@ Our measured fake rates are shown in table \ref{tab:EVTC}.
 
 
 \subsubsection*{Residual Background Estimation Using ABDC Technique}
-In order to estimating the background contribution from collision and non-collision sources, we employ a 3-dimensional space involving ${\ETslash}$~~, ${\ETslash}^{\gamma}$~~ and ECAL time.  Our signal region is events with $t > 3.0$~ns and large \MET where by large \MET we mean events with  large  ${\ETslash}$~~ and  ${\ETslash}^{\gamma}$. Non-collision events have large time as they are mostly out-of-time and by \MET calculation requirements should have large  ${\ETslash}^{\gamma}$~~. While collision produced backgrounds events are mostly in-time and may often be measured with $t_{\gamma} > 3.0$~ns due to either miss-reconstruction or from ghost/satellite contributions. However, these events cannot be produced with large correctly calculated $\ETslash$~~ because for example in $\gamma +$ jets events, very small $\ETslash$~~ due to energy miss-measurements is expected to be produced.
- But if the collision event is produced and arrives at ECAL with $t_{\gamma} > 3$~ns, and the \MET is not properly calculated (since events with photons ECAL time, $|t_{\gamma}| > 3$~ns are rejected during standard super cluster reconstruction with their \pt contribution  not taken into account in the \MET calculation) which in this case is large ${\ETslash}$~~, they will fluctuate or be easily considered as additional contribution to the non-collision background estimation in our signal region.
-Therefore, we select samples or control regions~(CR) which enhances each interested background source and use that CR to estimate the enhanced background contribution taking into account the possible contamination of an alternate background source due to possible fluctuations in event rate.
-The overall estimation technique is verified through a closure test procedure and the collision background estimation verified and validated using an extra control sample of $Z \rightarrow \EE$ events for electron candidates reconstructed from photon candidates extended to include out-of-time events.
+In order to estimating the background contribution from collision and non-collision sources, we employ a 3-dimensional space involving ${\ETslash}$~~, ${\ETslash}^{\gamma}$~~ and photon ECAL time, $t_{\gamma}$.  Our signal events are those with $3.0 < t_{\gamma} < 13.0$~ns with large \MET , and by large \MET , we mean events with ${\ETslash}^{\gamma} > 60$~GeV, ${\ETslash}$~~$ > 60$~GeV. Non-collision events as already seen can also have large time, since they are mostly out-of-time and by \MET calculation and corrections(see discussion above) should have large  ${\ETslash}^{\gamma}$~~ and small ${\ETslash}^{\gamma}$~~. Events from collision on the other hand are produced mostly in-time~($ -2.0 < t_{\gamma} < 2.0$~ns) except in cases of timing mis-measurements or ghost/satellite contributions where $t_{\gamma} > 3.0$~ns. Collision events, mostly produced through SM interactions, cannot be produced with large correctly calculated \MET, \eg $\gamma +$ jets events are produced with very small \MET, however due to timing mis-measurements, they may appear out-of-time and assigned large \MET. Thus we conclude that collision events will generally have small $\ETslash$~~ but large ${\ETslash}^{\gamma}$~~. 
+ %But if the collision event is produced and arrives at ECAL with $t_{\gamma} > 3$~ns, and the \MET is not properly calculated (since events with photons ECAL time, $|t_{\gamma}| > 3$~ns are rejected during standard super cluster reconstruction with their \pt contribution  not taken into account in the \MET calculation) which in this case is large ${\ETslash}$~~, they will fluctuate or be easily considered as additional contribution to the non-collision background estimation in our signal region.
+ 
+We select control samples~(CS) defined by ${\ETslash}$~~, ${\ETslash}^{\gamma}$~~ and $t_{\gamma}$ according to the \textsf{ABCD} technique to estimate our background contributions while remaining vigilant and taking into account the possible contamination to each background source from possible fluctuations in event rate as a result of our selection cuts in defining these CRs.
+The overall estimation technique is verified through a closure test procedure and the collision background estimation is validated using an extra control sample of $Z \rightarrow \EE$ events for $Z$ candidates reconstructed from photon candidates extended to include out-of-time events.
+\begin{enumerate}
+\item $\mathbf{{\ETslash}^{\gamma}}$~~$ > 60$~\textbf{GeV}: CS in which collision~(QCD) background is suppressed while halo, cosmic ray and spike photon is enhanced since most non-collision background photons are produced with high \pt hence large ${\ETslash}^{\gamma}$~~.
+Using this CS, we define four regions for estimating the non-collision background contribution using the \textsf{ABCD} recipe.
+\begin{center}
+\centering
+\begin{tabular}{||c| c| c||}
+\hline \hline
 
-Signal Region: Events with ${\ETslash}^{\gamma} > 60$~GeV, ${\ETslash} > 60$~GeV and $t_{\gamma} > 3.0$~ns.
-\paragraph*{${\ETslash}^{\gamma} > 60$~GeV } : CR in which collision~(QCD) background is suppressed while that for halo, cosmic ray and spike photon are all enhanced.
-Within this space, we define four regions representing ABCD to estimate the the background contribution:
-\begin{itemize}
-\item A: Events with ${\ETslash} < 60$~GeV and $ -10.0 < t_{\gamma} < -3.0$~ns.
-\item C: Events with ${\ETslash} < 60$~GeV and $3.0 < t_{\gamma} < 13.0$~ns.
-\item B: events with ${\ETslash} > 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
-\item D: events with ${\ETslash} > 60$~GeV and $3.0 < t_{\gamma} <  13.0$~ns.
-\end{itemize}
-Thus, the number of events expected in CR D under the assumption that $\frac{N_{D}}{N_{B}} = \frac{N_{C}}{N_{A}}$  is given as:
+\bfseries{Non-Collision} & \bfseries{${\ETslash}$~~$ < 60$~GeV} &  \bfseries{${\ETslash}$~~$ > 60$~GeV}\\
+      
+\hline \hline
+$3.0 < t_{\gamma} < 13.0$~ns. &  \textsf{$C$} &  \textsf{$D$} \\
+\hline
+$ -10.0 < t_{\gamma} < -3.0$~ns & \textsf{$A$} &  \textsf{$B$} \\
+\hline\hline 
+\end{tabular}
+\captionof{table}{\textsf{ABCD} Control Regions~(CRs) for estimating non-collision background.}
+\label{tab:NON-COLLISION} 
+\end{center}
+
+%\begin{itemize}
+%\item \textbf{A}: Events with ${\ETslash}$~~$ < 60$~GeV and $ -10.0 < t_{\gamma} < -3.0$~ns.
+%\item \textbf{C}: Events with ${\ETslash}$~~$ < 60$~GeV and $3.0 < t_{\gamma} < 13.0$~ns.
+%\item \textbf{B}: events with ${\ETslash}$~~$ > 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
+%\item \textbf{D}: events with ${\ETslash}$~~$ > 60$~GeV and $3.0 < t_{\gamma} <  13.0$~ns.
+%\end{itemize}
+
+Thus, the number of events expected in Control Region~(CR) \textbf{$D$} using table \ref{tab:NON-COLLISION} with the assumption that $\frac{N_{D}}{N_{B}} = \frac{N_{C}}{N_{A}}$  is given as:
 
 \begin{equation}
 N_{D} = \left(\frac{N_{B}}{N_{A}} \right)\cdot N_{C}
 \end{equation}
 
-\paragraph*{${\ETslash} > 60$~GeV }: CR in which non-collision background~(halo, cosmic and spike photons) contribution is suppressed while collision~(QCD) background contribution is enhanced.
-Further dividing this CR into according to $A^{\prime}$,$B^{\prime}$,$C^{\prime}$,$D^{\prime}$ to estimate its contribution where:
-\begin{itemize}
-\item $A^{\prime}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
-\item $B^{\prime}$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
-\item $I^{\prime}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
-\item $I$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
-\end{itemize}
-we also define a in time CR as:
-\begin{itemize}
-\item $C^{\prime}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $ 3.0 < t_{\gamma} <  13.0$~ns.
- \item $D^{\prime}$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $3.0 < t_{\gamma} <  13.0$~ns.
- \item $I^{\prime}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
-\item $I$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
-\end{itemize}
+\item $\mathbf{\ETslash}$~~$ > 60$~\textbf{GeV}: CS where non-collision background~(halo, cosmic and spike photons) contribution is suppressed while collision~(QCD) background contribution is enhanced.
+Further dividing this CS and applying \textsf{$A^{\prime}$ $B^{\prime}$ $C^{\prime}$  $D^{\prime}$} method to estimated collision contribution is shown in table \ref{tab:COLLISION}.
 
-Now using using the above regions we can estimate the contributions of collision background in both CRs $B$ and $D$ as follows:
+\begin{center}
+\centering
+\begin{tabular}{||c| c| c||}
+\hline \hline
+
+\bfseries{Collision}       & \bfseries{${\ETslash}^{\gamma} < 60$~GeV} &  \bfseries{${\ETslash}^{\gamma} > 60$~GeV}\\
+      
+\hline \hline
+$3.0 < t_{\gamma} < 13.0$~ns. &  \textsf{$C^{\prime}$} &  \textsf{$D^{\prime}$} \\
+\hline
+$ -2.0 < t_{\gamma} < 2.0$~ns & \textsf{$I^{\prime}$} &  \textsf{$I$} \\
+\hline 
+$ -10.0 < t_{\gamma} < -3.0$~ns & \textsf{$A^{\prime}$} &  \textsf{$B^{\prime}$} \\
+\hline\hline 
+\end{tabular}
+\captionof{table}{\textsf{$A^{\prime}$ $B^{\prime}$ $C^{\prime}$ $D^{\prime}$} and \textsf{$I$ $I^{\prime}$} CRs for estimating collision background.}
+\label{tab:COLLISION} 
+\end{center}
+
+\end{enumerate}
+%\begin{itemize}
+%\item $\mathbf{A^{\prime}}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
+%\item $\mathbf{B^{\prime}}$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
+%\item $\mathbf{I^{\prime}}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
+%\item $\mathbf{I}$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
+%\end{itemize}
+%we also define a in time CR as:
+%\begin{itemize}
+%\item $\mathbf{C^{\prime}}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $ 3.0 < t_{\gamma} <  13.0$~ns.
+% \item $\mathbf{D^{\prime}}$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $3.0 < t_{\gamma} <  13.0$~ns.
+% \item $\mathbf{I^{\prime}}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
+%\item $\mathbf{I}$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
+%\end{itemize}
+
+Using CRs defined in table \ref{tab:COLLISION}, we can estimate the contributions of collision background in both CRs $B$ and $D$ of our non-collision background CS as follows:
 \begin{equation}
-\displaystyle{N^{B}_{col} = N_{B^{\prime}}  = \left( \frac{I}{I^{\prime}} \right)\cdot N_{A^{\prime}}}, \quad \quad
-\displaystyle{N^{D}_{col} = N_{D^{\prime}}  = \left( \frac{I}{I^{\prime}} \right)\cdot N_{C^{\prime}}}
+\displaystyle{N_{B}^{col} = N_{B^{\prime}}  = \left( \frac{I}{I^{\prime}} \right)\cdot N_{A^{\prime}}}, \quad \quad
+\displaystyle{N_{D}^{col} = N_{D^{\prime}}  = \left( \frac{I}{I^{\prime}} \right)\cdot N_{C^{\prime}}}
 \end{equation}
 where we have assumed that $\frac{N_{B^{\prime}}}{N_{A^{\prime}}}  = \frac{N_{I}}{N_{I^{\prime}}}$ and  $\frac{N_{D^{\prime}}}{N_{C^{\prime}}}  = \frac{N_{I}}{N_{I^{\prime}}}$.
 \newline
 
-$N^{B}_{\mbox{col}}$ and $N^{D}_{\mbox{col}}$ are collision contributions to  CRs $B$ and $A$ such that the final non-collision background estimation~(since the dominant contribution to total background  is the non-collision background source) is given as:
+$N_{B}^{col}$ and $N_{D}^{col}$ are collision contributions to  CRs $B$ and $A$. The  final combined background estimation is given by equation \ref{eq:FBKG}.
 
-\begin{equation}
-N^{D}_{\mbox{Total}} = \left(\frac{N_{B} - N^{B}_{col} }{N_{A}} \right)\cdot N_{C} + N^{D}_{\mbox{col}} 
-\end{equation}\label{eq:bkg}
-where $N^{D}_{\mbox{Total}} = N^{D}_{\mbox{non-col}} + N^{D}_{\mbox{col}}$ is the total background estimation in  our signal region.
+\begin{equation}{\label{eq:FBKG}}
+N_{D}^{Total} = \left(\frac{N_{B} - N_{B}^{col} }{N_{A}} \right)\cdot N_{C} + N_{D}^{col} 
+\end{equation}
+where $N_{D}^{Total} = N_{D}^{non-col} + N_{D}^{col}$ is the total background estimation in  our signal region.
 %\begin{center}
 %\centering
 %\mbox{
@@ -518,82 +559,81 @@ where $N^{D}_{\mbox{Total}} = N^{D}_{\mbox{non-col}} + N^{D}_{\mbox{col}}$ is th
 
 
 \paragraph*{Closure Test}\mbox{}\\
-We performed closure test of our background estimation method by selecting events with $0$-jets and $1$-jet. We also perform a cross-check on the assumptions used in our background estimations for small contributions for collision background using $Z\rightarrow \EE$ events. 
+Selecting events with $0$-jets and $1$-jet,  we performed closure test of our background estimation method. We also perform a cross-check on the assumptions used in our background estimations for small contributions for collision background using $Z\rightarrow \EE$ events. 
 Our underlying assumption here is that background contributions to large timing from collision source referred here as QCD is very small and must be of the order of $10^{-5}$ in comparison to in-time photons. i.e the ratio 
 $ N_{t_{\gamma} > 3~ns}/ N_{|t_{\gamma}| < 2.0~ns} \approx 10^{-5}$ with $N$ being the number of photons.
-By selecting a sample of events containing only a single jet, we verify the validity of our method of background estimation using a closure test. The closure test is simply comparing the number of events we observed in our signal region \texttt{D} with the number we expect from using our \texttt{ABDC} background estimation method.
-Using a equation \ref{eq:bkg}, we observed a total of $5$-events when we expected $6.44^{+2.95}_{-3.45}$ which is quite close. This gives us confidence that our  background estimation method is robust and reliable and we can now move on to do our final background estimation on dataset with events having at least $2$-jets passing our final photon, jet and \MET selection after being cleaned.
+ The closure test compares the number of events observed in CR \textsf{$D$} to the number  expected using our \textsf{ABCD} background estimation method in the same CR \textsf{$D$}.
+ We observed $10$ events while from using equation \ref{eq:FBKG}, we expected $16.78^{+2.95}_{-3.45}$. We argue that within our statistical uncertainties, there is quite an agreement between our expectation and observed events. The complete result from our closure test is shown in table \ref{tab:EVTC}. This gives us confidence that our  background estimation method is robust and reliable. We apply the same \textsf{ABCD} to estimate the background contribution in our signal sample. Our signal sample consist of events with at least $2$-jets, at least a single photon and ${\ETslash}^{\gamma} > 60$~GeV, ${\ETslash}$~~$ > 60$~GeV..
 
 \begin{center}
 \centering
 \begin{tabular}{|c| c| c|}
 %\mbox{Fake Rate }
 \hline
-\bfseries{Non-Collision} & \bfseries{ ${\ETslash}^{\gamma} < 60$~\GeV} & \bfseries {${\ETslash}^{\gamma} > 60$~\GeV} \\
+\bfseries{Non-Collision} & \bfseries{ ${\ETslash}^{\gamma}$~~$ < 60$~\GeV} & \bfseries {${\ETslash}^{\gamma}$~~$ > 60$~\GeV} \\
 \hline
- $3.0 < t_{\gamma} < 13.0$~ns & \textsf{C}($405$) & ~\textsf{D}($10$) \\
+ $3.0 < t_{\gamma} < 13.0$~ns & \textsf{C}($405$) & ~\textsf{D}($10$) \textcolor{blue}{16.78} \\
  $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{A}($871$) & ~\textsf{B}($36$) \\
 \hline \hline
 
-\bfseries{Collision} & \bfseries{ ${\ETslash} < 60$~\GeV} & \bfseries {${\ETslash} > 60$~\GeV} \\
+\bfseries{Collision} & \bfseries{ ${\ETslash}$~~$ < 60$~\GeV} & \bfseries {${\ETslash}$~~$ > 60$~\GeV} \\
 \hline 
  $3.0 < t_{\gamma} < 13.0$~ns & \textsf{$D^{\prime}$}($4$) & ~\textsf{D}($10$) \\
  $-2.0 < t_{\gamma} < 2.0$~ns & \textsf{$F^{\prime}$}($1353685$) & ~\textsf{F}($34543$) \\
  $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{$B^{\prime}$}($5$) & ~\textsf{B}($36$) \\
 \hline\hline 
 \end{tabular}
-\captionof{table}{Result from closure test of background estimation technique using $0$ and $1$-jet events.}
+\captionof{table}{Result from closure test of background estimation technique using $0$ and $1$-jet events. Numbers in bracket represent our expected background estimate using \textsf{ABCD} method.}
 \label{tab:EVTC} 
 \end{center}
 
-
 \subsection{Background Estimation Cross Check}
-The main assumption in our background estimation technique is that, the contribution from collision background events to our signal region~($|t_{\gamma}| > 3$~ns) is negligible.
-In order to show this we select $Z\rightarrow \EE$ events from \texttt{SingleElectron/} and \texttt{DoubleElectron/} data sets of 2012.
-The selection criteria of our extended to include out-of-time $Z$ candidates events is as follows:
+The main assumption in our background estimation technique is that, the contribution from collision background events to out-of-time regions~($3.0 < t_{\gamma} < 13.0$~ns) is negligible.
+In order to show that this assumption is correct, we select $Z\rightarrow \EE$ events from \texttt{SingleElectron} and \texttt{DoubleElectron} data sets of 2012. Our motivation is to use a control sample where contributions from non-collision events is very small.
+We select $Z$ candidate events from an extended photon sample including out-of-time photon events according to the following selection criteria:
 \begin{itemize}
-\item The candidate two electrons for the $Z$ bosons must have individual $\pt > 20$~GeV,
-\item The di-mass of these two electrons, $|m_{\ell_{1}, \ell_{2}} - 91| > 61$~$GeV/c^{2}$,
-\item Each electron must be in the barrel, $|\eta_{\ell_{1}}| < 1.479$ and $ |\eta_{\ell_{2}}| < 1.479$.
+\item The candidate two electrons for the $Z$ bosons must have individual $\pt > 25$~GeV,
+\item The di-mass of these two electrons, $|m_{\EE} - 91| > 61$~$GeV/c^{2}$,
+\item Each electron must be in the barrel, $|\eta_{e^{-}}| < 1.479$ and $ |\eta_{e^{+}}| < 1.479$.
 \end{itemize}
- At the electron super cluster level,  we used the seed crystal time adjusted accounting for the effects due to electron time of flight as the electron time, after the seed crystal has passed all the recommended crystals or rechit cleaning criteria recommended by the ECAP DPG such as \texttt{kWeird}, \texttt{kBad}, \texttt{kPoorCalib} used in rejecting crystals showing anomalous behavior like spikes, noisy, bad crystals and poorly calibrated crystals.
-In this cross-check, we define our signal region as $Z$-candidate events with a well defined mass from both electrons i.e  $76 < |m_{\ell_{1}, \ell_{2}}| < 100$~$GeV/c^{2}$ while the Control sample consists of events which do not fall into the signal category.
-A quick look at the similar plots to figure \ref{fig:HALO} of the electron candidates from the \texttt{Single/DoubleElectron} dataset compared to the \texttt{SinglePhoton} dataset as seen in figure \ref{fig:Elec} indicate that contribution from cosmic, halo and anomalous photon events is much reduced and thus makes the $Z$ boson candidate events sample a reliable sample to disentangle non-collision contributions and only study collision background contributions as initial objective.
+ At the electron super cluster level,  we used the seed crystal time adjusted to account for the electron time of flight, as the electron time. The seed crystal must satisfy the recommended crystals or rechit cleaning criteria by the ECAL group which include \texttt{kWeird}, \texttt{kBad}, \texttt{kPoorCalib} used for rejecting crystals showing anomalous behavior like spikes, noisy, bad crystals or poorly calibrated crystals.
+In this cross-check, we define our signal region as $Z$-candidate events with a well defined mass from both electrons i.e  $76 < |m_{\EE}| < 100$~$GeV/c^{2}$ while the non $Z$ events control sample are events which do not fall into this signal category.
+A quick look at photon $t_{\gamma}$ vs $\eta_{\gamma}$ and $\phi_{\gamma}$ plots as previously shown for halo photons in figure \ref{fig:HALO}, shows that the electron candidates from the \texttt{Single/DoubleElectron} dataset when compared to the \texttt{SinglePhoton} dataset in figure \ref{fig:Elec} show no or very little contribution from cosmic, halo and anomalous photon events. This confirms our choice of the $Z$ candidate events sample as a reliable sample to study collision events as it is free from non-collision events.
 \begin{center}
 \centering
 \mbox{
-\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsEtaEB.pdf}
-\includegraphics[height=7cm, width=0.5\textwidth]
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsEtaEB.pdf}
+\includegraphics[height=6cm, width=0.5\textwidth]
 {THESISPLOTS/ZCandidates_TimeVsEta.pdf}}
 \mbox{
-\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsPhiEB.pdf}
-\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/ZCandidates_TimeVsPhi.pdf}}
-\captionof{figure}{ECAL time Vs $\eta$ and ECAL time Vs $\phi$~(left) for photons from \texttt{SinglePhoton} dataset~(left) compared with similar plots from the \texttt{DoubleElectron} dataset~(right). All photons are in barrel subdetector with $\phi = 0, \pm \pi$ mostly halo photons are not observed in the $Z$ boson candidate sample.}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsPhiEB.pdf}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/ZCandidates_TimeVsPhi.pdf}}
+\captionof{figure}{ECAL time, $t_{\gamma}$ Vs $\eta_{\gamma}$(top) and $t_{\gamma}$ Vs $\phi$~(bottom) for photons from \texttt{SinglePhoton} dataset~(left) compared to electron candidates from the \texttt{DoubleElectron} dataset~(right). All photons or electron candidates are in barrel subdetector. Most of the photons with $\phi = 0, \pm \pi$ are halo photons which are not observed in the $Z$ boson candidate sample.}
 \label{fig:Elec}
 \end{center}
 
-Figure \ref{fig:Zmass} shows the $Z$ boson mass reconstructed from the candidate electrons and timing of each electron for Signal~(left and blue) and for our control sample~(right and red).
+Figure \ref{fig:Zmass} shows the $Z$ boson mass reconstructed from the candidate electrons and timing of each electron for Signal~(\textit{top and blue}) and for our control sample~(\textit{bottom and red}).
 
 \begin{center}
 \centering
 \mbox{
-\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-SignalMass.pdf}
-\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-SignalTime.pdf}}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-SignalMass.pdf}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-SignalTime.pdf}}
 \mbox{
-\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-BackgroundMass.pdf}
-\includegraphics[height=7cm, width=0.5\textwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/THESISPLOTS/Z-CandidateOverLay-BackgroundTime.pdf}}
+\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-BackgroundMass.pdf}
+\includegraphics[height=6cm, width=0.5\textwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/THESISPLOTS/Z-CandidateOverLay-BackgroundTime.pdf}}
 \captionof{figure}{Di-electron candidate mass distribution and the time of both electrons for the signal \textcolor{blue}{$76 < m_{Z} < 100$}~\GeVcc $Z$ boson sample(left) and similar distributions from the Control~(\textcolor{red}{$50 < m_{Z} < 76$}~\GeVcc and \textcolor{red}{$ 100 < m_{Z} < 130$}~\GeVcc) sample~(right). Candidates events from the DoubleElectron dataset.}
 \label{fig:Zmass}
 \end{center}
 
 
-Using the control sample, we estimate its contribution  using simple scaling which can be understood as an ABCD method into the signal sample as follows:
+Using the background $Z$ control sample, we estimate its contribution to out-of-time events using a simple scaling methods which can also be understood as an ABCD method. The method is applied as follows:
 \begin{itemize}
-\item Using a polynomial function, we fit the di-electron candidate mass distribution of the control sample to extract a set of fit parameters,
-\item Using the fit parameters, define our polynomial fit function to be used to extract our scaling factor and hence true contribution of the control region events in our signal region which in this case are $Z$ bosons with possible large timing, $|t| > 3$~ns.
-\item Scale the control sample events~(electrons time) by this extracted scale factor i.e $$\displaystyle{\mbox{Scale Factor} = \frac{N}{M_{1} + M_{2}}}$$.
-\item By subtracting the scaled control sample event timing distribution from the signal sample electron time distribution, we are left with the true $Z$ boson events whose electron time can extend to large time.
-\item Comparing the total number of observe electron candidates with $t > 3$~ns to those with time within the required in-time $|t| < 2$~ns using a ratio i.e $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}$ gives us an estimate of the possible genuine collision electromagnetic objects with large timing. 
+\item Using a polynomial function, we fit the di-electron candidate mass distribution of the background control sample to extract a set of fit parameters,
+\item Using these fit parameters to define our polynomial function, we use this function  to extract a scaling factor use to determine the true contribution of the background control region events in the signal region which in this case are $Z$ bosons with possible large ECAL timing, $|t| > 3$~ns.
+\item We scale the background control sample timing distribution~(electrons time) using the extracted scale factor. This scale factor is defined as,   $$\displaystyle{\mbox{Scale Factor} = \frac{N}{M_{1} + M_{2}}}$$
+\item By subtracting the scaled background control sample $Z$ candidates timing distribution from the signal sample $Z$ candidate timing distribution, we are left with the real $Z$ boson events whose electron time can fluctuate into larger timing region.
+\item Comparing the total number of observe electron candidates with $t > 3$~ns to those  in-time, $|t| < 2$~ns, their ratio i.e $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}$ gives us an estimate of the possible genuine electromagnetic objects from collision with large ECAL timing. 
 \end{itemize}  
 
 A simple picture showing the above procedure with distributions is shown in figure \ref{fig:collZ}.
@@ -620,11 +660,36 @@ The result of the final timing distribution of genuine $Z$ boson events  can be 
 \captionof{figure}{Timing distribution of genuine $Z$ bosons after background contribution has been subtracted.}
 \label{fig:Ztime}
 \end{center}
-  
 
 
 \section{Results}
-We have used only the photon arrival time at ECAL to distinguish signal from SM background with our acceptance region being photons with ECAL time $|t| > 3.0$~ns. The final number of events estimated for each background component and observed from data after passing all our selection cuts is shown in table \ref{tab:RESULT}.
+Finally, we perform our background estimation on our true signal samples which are events with at least 2 jets, at least one high $\pt > 80~GeV/c$ isolated photon with ECAL time  $ 3.0 < t_{\gamma} < 13.0$~ns or $ -10.0 < t_{\gamma} < -3.0$~ns and ${\ETslash}^{\gamma}$~~$ > 60$~GeV, ${\ETslash}$~~$ > 60$~GeV.
+
+We observed $1$ event and expected $0.0888 ^{+0.1869}_{-0.0444}$ background events within our statistical uncertainties. The complete result is shown in table \ref{tab:RF} and in table \ref{tab:RESULT} we show the number of GMSB SPS8 signal events  passing our final selection for $\Lambda=180$~\TeV and different $c\tau$ values of the neutralino.
+
+\begin{center}
+\centering
+\begin{tabular}{|c| c| c|}
+%\mbox{Fake Rate }
+\hline
+\bfseries{Non-Collision} & \bfseries{ ${\ETslash}^{\gamma}$~~$ < 60$~\GeV} & \bfseries {${\ETslash}^{\gamma}$~~$ > 60$~\GeV} \\
+\hline
+ $3.0 < t_{\gamma} < 13.0$~ns & \textsf{$C$}($0$) & ~\textsf{$D$}(\textcolor{blue}{$1$}) \\
+ $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{$A$}($5$) & ~\textsf{$B$}($1$) \\
+\hline \hline
+
+\bfseries{Collision} & \bfseries{ ${\ETslash}$~~$ < 60$~\GeV} & \bfseries {${\ETslash}$~~$ > 60$~\GeV} \\
+\hline 
+ $3.0 < t_{\gamma} < 13.0$~ns & \textsf{$D^{\prime}$}($5$) & ~\textsf{D} \textcolor{red}{$0.0888 ^{+0.1869}_{-0.0444}$} \\
+ $-2.0 < t_{\gamma} < 2.0$~ns & \textsf{$F^{\prime}$}($657663$) & ~\textsf{$F$}($30242$) \\
+ $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{$B^{\prime}$}($1$) & ~\textsf{$B$} $0.23 ^{+0.092}_{-0.118}$) \\
+\hline\hline 
+\end{tabular}
+\captionof{table}{Result of observed events and estimated background from signal sample, events with at least $2$-jets. Numbers in bracket represent our observed events while numbers not is bracket are our expected background events using \textsf{ABCD} method.}
+\label{tab:RF} 
+\end{center}
+
+
 
 \begin{center}
 %\begin{table}[ht]
@@ -632,32 +697,23 @@ We have used only the photon arrival time at ECAL to distinguish signal from SM 
 \centering
 \begin{tabular}{c c}
 \hline
-\bfseries{SM Background/SPS8 GMSB Signal} & \bfseries {Number of Events}\\
-\hline
-\texttt{QCD~(Collision)}  & $000.00 \pm 0.000$\\
-\texttt{Halo Photons}  & $000.00 \pm 0.000$ \\
-\texttt{Cosmic Photons} & $000.00 \pm 0.000$ \\
-\texttt{Anomalous photons/Spikes} & $000.00 \pm 0.000$\\
-\texttt{Total SM background} & $000.00 \pm 0.000$ \\
+\bfseries{SPS8 GMSB Signal} & \bfseries {Number of Events}\\
 \hline \hline
-\texttt{Data} & $000.00 \pm 0.000$ \\
-\hline 
 %\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=93$~mm) & $000.00 \pm 0.000$ \\
 %\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=185$~mm) & $000.00 \pm 0.000$ \\
-%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=368$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=500$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=250$~mm) & $0.2096$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=500$~mm) & $4.5423$ \\
 %\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=733$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1000$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1000$~mm) & $6.3646$ \\
 %\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1076$~mm) & $000.00 \pm 0.000$ \\
 %\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1444$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=2000$~mm) & $000.00 \pm 0.000$ \\
-%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=2161$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=3000$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=6000$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=12000$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=2000$~mm) & $6.3968$ \\ %\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=3000$~mm) & $000.00 \pm 0.000$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=4000$~mm) & $6.1442$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=6000$~mm) & $4.6498$ \\
+\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=12000$~mm) & $2.918$ \\
 \hline \hline
 \end{tabular}
-\captionof{table}{Final number of events estimated for each background and the number of events passing out event selection and acceptance criteria.}
+\captionof{table}{Final number for $\Lambda = 180$~\TeV GMSB SPS8 MC signal events  events passing our selection cuts.}
 \label{tab:RESULT}
 %\end{table}
 \end{center}
@@ -685,7 +741,7 @@ The systematic uncertainty on luminosity measurement has the recommended value o
 \texttt{\MET resolution}~(10\%) & $ <2.8$\%  \\
 \texttt{ECAL time uncertainty}~(0.5~ns) & $<5.0$\% \\
 \hline
-\texttt{Background estimation uncertainty}~(20.0) &$<10.0$\% \\
+\texttt{Background estimation uncertainty}~(50.0) &$<41.0$\% \\
 \hline 
 \texttt{Luminosity}~(4.5\%) & $< 2.2$\% \\
 \hline
