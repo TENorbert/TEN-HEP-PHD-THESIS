@@ -236,7 +236,7 @@ There are different ways to measure the photon time using ECAL.  The reference t
 \item \textit{Cluster Time}: Error weighted average time of all the crystals in the seed basiccluster of the photon supercluster.
 \end{itemize} 
 
-Timing reconstruction described in chapter 4 is extracted from the pulse shape through a fitting method. The $\chi^{2}$ obtained from the fit determines how well the time is reconstructed. One way of rejecting fake photons which are either jets miss-identified as photons or spikes is to use the fitted $\chi^{2}$. Studies performed have shown that a  $\chi^{2} < 4 $ cut when applied improves the ECAL timing resolution by rejecting as many spikes and anomalous photon events as possible. Figure \ref{fig:spikeVsPhoton} shows a comparison between the pulse shape profile of a spike and that of a normal event from data.
+Timing reconstruction as described in chapter 4 is the extraction of time from the pulse shape through a fitting method. The $\chi^{2}$ obtained from the fit determines how well the time is reconstructed. One way of rejecting fake photons which are either jets miss-identified as photons or spikes is to use the fitted $\chi^{2}$. Studies performed have shown that a  $\chi^{2} < 4 $ cut improves the ECAL timing resolution by rejecting  spikes and anomalous photon events as possible. Figure \ref{fig:spikeVsPhoton} shows a comparison between the pulse shape profile of a spike and that of a good event.
 
 \begin{center}
 \centering
@@ -246,8 +246,8 @@ Timing reconstruction described in chapter 4 is extracted from the pulse shape t
 \label{fig:spikeVsPhoton}
 \end{center}.
 
-We have performed a number of independent timing analysis comparing the timing resolution obtained from cluster time to the seed time. We observed the cluster timing method to be very biased towards the time of an isolated spike especially when the spike is embedded in a photon object. The timing resolution especially for large timing events is much better compared to the cluster time measurement method which is an essential region when searching for new long-lived particles.
-Figure \ref{fig:TIME} shows the timing measurements of photons using either seed time or cluster time. The seed time show a approximate timing resolution of $400$~ps compared to $450$~ps with a broad timing tail from using the error weighted average cluster time.
+In this thesis, we measure time using the seed crystal time approach. Our choice of seed time is based on a number of independent timing analysis performed comparing the timing resolution obtained from cluster time to the seed time. We observed the cluster timing method to be very biased towards the time of an isolated spike especially when the spike is embedded in a photon object. The timing resolution especially for large timing events is much better compared to the cluster time measurement method which is an essential region when searching for new long-lived particles.
+Figure \ref{fig:TIME} shows the timing measurements of photons using either seed time or cluster time. The seed time show an approximate timing resolution of $400$~ps compared to $450$~ps with a broad timing tail from using the error weighted average cluster time. The cluster time method is also computational time and resource consuming.
 
 \begin{center}
 \centering
@@ -256,14 +256,14 @@ Figure \ref{fig:TIME} shows the timing measurements of photons using either seed
 %\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Seed-Time-Chi2.png}
 \includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/seedTime_Chi2.png}
 }
-\captionof{figure}{Timing distribution of photons  showing timing measurements using seed crystal~(black) and that using Weighted Average basic cluster time~(blue). Resolution~($\sigma$) from seed time is better compared to that for cluster time. Together with the $\chi^{2}$, the seed time performs better in identifying anomalous timing objects.}
+\captionof{figure}{Timing distribution of photons  showing timing measurements using seed crystal~(black) and using Weighted Average basic cluster time~(blue). Resolution~($\sigma$) from seed time is better compared to that for cluster time which is computationally intensive. Together with the $\chi^{2}$, the seed time performs better in identifying anomalous timing objects.}
 \label{fig:TIME}
 \end{center}
 
-Monte Carlo simulation of ECAL timing is challenging  as the time of anomalous events such as spikes and noisy crystal channel on present during data taking 
-aren't well simulated.  To account for this MC and data timing measurement differences, 
-We use QCD simulated $\gamma + jets$ events and select events containing only one or two jets and and study the distribution of the difference between the generated time~$(T_{GEN}$) and the reconstructed MC event time~($T_{RECO}$) in a timing window of [-2, 2 ]~ns. Comparing this difference to data, the difference in the mean time between the data and MC $\gamma +$ jet sample is used to smear the reconstructed time of the MC samples to be comparable to true reconstructed time of data. A difference of about 125~ps is observed between the timing from data and MC.  Timing from the smeared MC sample show a close agreement with data.
-Figure \ref{fig:DATAMCTime} shows the this comparison before and after timing calibration~(adjustment) is applied on the MC samples.
+Monte Carlo simulation of ECAL timing is challenging  as the time of anomalous events such as spikes and noisy crystal channel  present during data taking 
+aren't well simulated.  To account for MC and data timing measurement differences, 
+We use QCD simulated $\gamma + jets$ events and select events containing only one or two jets and study the distribution of the difference between the generated time~$(T_{GEN}$) and the reconstructed MC event time~($T_{RECO}$) in a timing window of [-2, 2 ]~ns. Comparing this difference to data, the difference in the mean time between the data and MC $\gamma +$ jet sample is used to smear the reconstructed time of the MC samples to be comparable to true reconstructed time in data. A difference of about 125~ps is observed between the timing from data and MC.  Timing from the smeared MC sample show a close agreement with data.
+Figure \ref{fig:DATAMCTime} show this comparison before and after timing calibration~(smearing adjustment) is applied on the MC samples.
 
 \begin{center}
 \centering
@@ -271,10 +271,9 @@ Figure \ref{fig:DATAMCTime} shows the this comparison before and after timing ca
 \includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/MC_Vs_DataTimeB4Calib.png}
 \includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/MC_Vs_DataTimeAferCalib.png}
 }
-\captionof{figure}{Timing distribution of photons showing timing of data and MC $\gamma +$ jets~(blue) samples and Data~(red) before~(left) and after~(right) timing Calibration is applied to MC.}
+\captionof{figure}{Timing distribution of photons showing timing of data and MC $\gamma +$ jets~(blue) samples and data~(red) before~(left) and after~(right) timing Calibration is applied to MC.}
 \label{fig:DATAMCTime}
 \end{center}
-
 It is worth noting that the difference of 125~ps between $T^{MC}_{RECO}$ and $T^{DATA}_{RECO}$ compared to 500~ps ECAL timing resolution is not enough to influence event selection, however event distribution in the tails remains a major concern.
 \paragraph*{}
 The ECAL timing distribution for photons with $pt > 50$~GeV in the ECAL~(barrel and endcap inclusive i.e $|\eta_{\gamma}| < 3.0$) show timing distributions~(see figure \ref{fig:TIMEECAL})
@@ -289,13 +288,12 @@ The ECAL timing distribution for photons with $pt > 50$~GeV in the ECAL~(barrel 
 \captionof{figure}{ECAL timing distribution of photons in barrel~(\textcolor{blue}{EB}), endcap~(\textcolor{red}{EE}) and all of ECAL~(\textcolor{black}{ALL ECAL}) with $\pt > 50$~GeV from data. A $2.5$~ns delay timing structure is observed in endcap subdetector.}
 \label{fig:TIMEECAL}
 \end{center}
-
-with a clear 2.5~ns repeated discrete pattern with most of these photons arriving in the endcap, $ 1.47 < \eta < 3.0$ compared to the barrel, $|\eta| < 1.47$. These are photons originating from collisions of \textit{Ghost} and \textit{Satellite} bunches with either the main proton collision bunch or \textit{Ghost}/\textit{Satellite}. They contribute an irreducible amount to the photon time distribution which is very challenging to reject or estimate quantitatively. A rough estimate can be obtained by looking at ratio of the proton population in the filling profile of the LHC RF cavities as mentioned in section 3.1.5 of chapter 3 which gives a factor $10^{-5}$ compared to contributions from the main proton proton collision. It is observed that their main contribution is towards the endcap crystals as very few photons from these secondary collisions are produced with enough \pt compared to those from main proton bunch collisions. And even if they do, the ratio of photons from these secondary proton collision to that of the main proton-proton collision has an upper bound of  $10^{-5}$. 
-Thus, the endcap is not used in this analysis for the reason that these contributions is more in the endcap and the timing resolution in the endcap is relatively poor compared to that of the barrel.
-The assumption of the upper bound of $10^{-5}$ is verified and validated using events with $Z\rightarrow e^{+}e^{-}$ as $Z$ events must be produced from main proton-proton collisions rather than  ghost/satellite collisions by studying electron candidates with time within [-2.0, 2.0]~ns window. This will be explain in detail in the background estimation section which follows.
+with a clear 2.5~ns discrete pattern with most of these photons arriving in the endcap, $ 1.47 < \eta < 3.0$ compared to the barrel, $|\eta| < 1.47$. These are photons produced from collisions of \textit{Ghost} and \textit{Satellite} bunches with either the main proton collision bunch or \textit{Ghost}/\textit{Satellite}. They contribute an irreducible amount to the photon time distribution which is very challenging to reject or estimate quantitatively. A rough estimate can be obtained by looking at ratio of the proton population in the filling profile of the LHC RF cavities as mentioned in section 3.1.5 of chapter 3 which gives a factor $10^{-5}$ compared to contributions from the main proton-proton bunch collision. It is observed that contribution from ghost bunches is in the endcap crystals, since very few these photons are produced with enough \pt compared to those from main proton bunch collisions. And even if they dis, the ratio of photons from these secondary proton collision to that of the main proton-proton collision is of the order of $10^{-5}$ at most. 
+As a result of this, we do not used the endcap in this analysis in addition to the fact that timing resolution in the endcap is relatively poor compared to the barrel.
+We check and validate this factor $10^{-5}$ using events with $Z\rightarrow \EE$ since $Z$ events do not require high \pt during production and must should capture the 2.5~ns timing pattern if present from ghost/satellite collisions. We study electron candidates with time within [-2.0, 2.0]~ns window. We use this in our background estimation method testing as will be discussed in future sections.
 
 \paragraph*{Delayed Photon Source} \mbox{}\\
-There are two possible sources for delayed photons from neutralino decay.
+With a well time calibrated ECAL and good  MC to data time agreement, we can study the source of delayed photons from neutralino decay in ECAL using its decay kinematics. There are two possible sources for delayed photon from neutralino decay.
 From Figure \ref{fig:NeutDecay}, an estimated photon arrival time at ECAL can be given by the following methods:
 \begin{itemize}
   \item From slow moving neutralinos: $\Delta t_1$ = (L1/c$\beta$) - (L1/c)
@@ -305,7 +303,7 @@ From Figure \ref{fig:NeutDecay}, an estimated photon arrival time at ECAL can be
 \end{itemize}
  
 Figure \ref{fig:DELAY} shows the distribution of $\Delta t_{1}$ and $\Delta t_{2}$
-indicating that most of our late arrival photons are produced from the decay of slow moving neutralinos, i.e $\beta << 1$. as opposed to photons from non-direct travel path to ECAL. These neutralinos are produced with low \pt such that the ratio $\frac{\pt}{m_{\tilde{\chi}^{o}_{1}}} << 1$.
+indicating that most of our late arrival photons are produced from the decay of slow moving neutralinos, \ie $\beta << 1$,  as opposed to photons from non-direct flight or travel path to ECAL. These neutralinos are produced with low \pt such that the ratio $\frac{\pt}{m_{\tilde{\chi}^{o}_{1}}} << 1$.
 
 
 \begin{center}
@@ -317,9 +315,8 @@ indicating that most of our late arrival photons are produced from the decay of 
 \end{center}
 
 \section{Background Estimation}
-A better understanding of the different background contributions to the photon ECAL time is shown using a two dimensional histogram of the photon $\eta$ and $\phi$ against the photon seed time and the timing distribution for different jet multiplicity events. Thus the general event selection only requires that the event has at least a photon satisfying the photon selection of the previous section.
-The photon ECAL time inclusive distribution plots are shown in figure \ref{fig:BKGPLOTS}
-
+Our background estimation strategy is to first identify and reject as much non-collision background and anomalous events as possible then perform an ABCD background estimation technique on the irreducible residual background. We do this by comparing photon kinematic properties for in-time and off-time photon events. Separating our data sample into jet multiplicity and negative, in-time and positive time enable our approach to be possible. To better understand the different background sources and their contribution we make a two dimensional histogram of the photon $\eta$ and $\phi$ against the photon seed time  and a one dimensional histogram of the timing distribution for different jet multiplicity events. These events pass the loose selection criteria for photons, jets and $\ETslash$~~ already described in the previous section.
+The photon ECAL time  Vs $\eta$ and $\phi$ inclusive 2-D distributions are shown in figure \ref{fig:BKGPLOTS}
 \begin{center}
 \centering
 \mbox{
@@ -329,8 +326,9 @@ The photon ECAL time inclusive distribution plots are shown in figure \ref{fig:B
 \captionof{figure}{ECAL time against $\eta$~(left) and ECAL time against $\phi$~(right) for photons with $\pt > 60$~GeV from data. The lower plot shows the photon timing distribution for events with different jet multiplicity.}
 \label{fig:BKGPLOTS}
 \end{center}
-From the above distributions, there seems to be contributions from quite a variety of sources. The possible sources considered in this analysis include: QCD processes  which we consider to be a combination of $\gamma + $jets, multi-jets and other processes producing photons from nominal bunch collisions. Most QCD processes are expected to have minimal contribution to large timing photons and \MET with their only contributions arising from timing miss-reconstruction and \MET miss-measurements due to miss-identification of jets as photons. Events with possible or true large ECAL time with significant contributions arise from machine induce backgrounds~(MIB)(arising from ghost/satellite bunch collisions), Halo muons, cosmic muons and anomalous events like spikes. These events bring significant contributions to both large photon times and large \MET where which is our possible signal sample.
-Thus, the data driven background estimation technique employed in this analysis is as follows:
+The histograms in figure \ref{fig:BKGPLOTS} show contributions from quite a variety of sources. The possible sources considered in this analysis include: QCD processes which we consider to be a combination of $\gamma + $jets, multijets and other processes producing photons from nominal proton-proton main bunch collisions. Most of the QCD processes are expected to have minimal contribution to large timing photons and $\ETslash$~~ except due to timing miss-reconstruction and $\ETslash$~~ miss-measurements or miss-identification of jets as photons.
+The events with significant contributions of possible or true large ECAL time measurements are produced from machine induce backgrounds~(MIB)(arising from ghost/satellite bunch collisions) or beam halo muons, cosmic muons and anomalous events like spikes. These event do not only contribution significantly large photon times but also to large $\ETslash$~~ which is our signal selection sample.
+We employ a data driven background estimation technique in this analysis described briefly as follows:
 
 \begin{itemize}
 \item Divide the dataset into individual samples peculiar to the expected kinematics and observation of each individual background source,
@@ -339,33 +337,31 @@ Thus, the data driven background estimation technique employed in this analysis 
 \item Use the tagging and miss-tag rates to estimate the background contribution of each individual background source in a well defined control region~(CR) or sample,
 \item Use another CR as a closure test sample to verify our background estimation method.
 \end{itemize}
+All events are selected to be in the barrel i.e $|\eta_{\gamma}| < 1.47$ as the
+the overwhelming contribution of ghost/satellite bunch collisions observed in the endcap~(EE)(see figure \ref{fig:TIMEECAL}) and poor timing resolutions~($\approx 3.0$~ns) make it very challenging to extend this analysis to include the endcap~(EE). 
+Our data driven method background estimation strategy involves splitting our single photon dataset into two major samples: Events with \textit{Nominal or in-time} photons whose photon ECAL time is within $\pm 2$~ns containing at least $2$ jets,  and events with \textit{off-timing} photons where the photon ECAL time is $ 2.0 < t_{\gamma} < 13.0$~ns and $ -10.0 < t_{\gamma} < -3$~ns with containing $0$ or $1$ jets.  Our signal events are events containing photon(s) with ECAL time, $ 2.0 < t_{\gamma} < 13.0$~ns, with at least $2$ jets and large $\ETslash$~~. Our motivation is to avoid the observed spike overpopulated region with photon time , $t_{\gamma} \approx -12$~ns and because high jet multiplicity events are not usually MIB or non-collision events produced with \pt.
+On the other hand, nominal photons from QCD interaction are mostly produced in-time in association with more than $0$ jets.
 
-Due to a larger contribution of ghost/satellite bunch collisions observed in the endcap~(EE)(see figure \ref{fig:TIMEECAL}) and poor timing resolutions~($\approx 3.0$~ns), the endcap is not used in this analysis. Thus events are selected if the photon in the event is in the barrel i.e $|\eta_{\gamma}| < 1.47$.
-
-In order to study the background in a data driven method, we divide the dataset into two major samples: Nominal or in-time photons whose photon ECAL time is within $\pm 1$~ns and the event must have at least 2 jets,  and Off-timing photons where the photon ECAL time is $ > 2$~ns but $ < -3$~ns with the event containing no jets. Our motivation is simply because the probability of a MIB or non-collision background producing an event with high jet multiplicity is small  and even reduces with the \pt of of the resulting photon increases while nominal photons are mostly produced in association with jets due to the nature of QCD interactions and are mostly in-time.
-
-By comparing these two samples, we can understand the difference and similarities between collision and non-collision backgrounds. 
+By comparing these two samples, we develop kinematics variables for studying and reducing contributions from collision and non-collision backgrounds. 
 
 \subsection{Non-Collision Backgrounds}
 \subsubsection{Halo Photons}
-Energetic muons (energy up to 1 TeV) produced in Beam-induced backgrounds~(BIB) as a result of proton losses $z = 150$~m from the interaction point of the CMS detector and inelastic proton interaction with residual gas inside the beam pipe bremsstrahlung in ECAL crystals producing photons with very high \pt and significantly large ECAL time. The rate of these BIB depends on the beam current and the operational conditions of the LHC which include machine optics, collimator settings, residual gas densities and filling scheme. These muons which travel in a near parallel direction to normal protons in the beam pipe, referred to as halo muons are expected to leave a muons tracks  in the Endcap muon systems with a corresponding associated ECAL electromagnetic cluster in the ECAL. They are also peculiar in that they travel from one side of the detector to the other along the $z$-direction, and their  Time-Of-Flight~(TOF) with respect to a potential hit position in the ECAL sub-detector can be estimated as well as measured.
-The expected time at ECAL of a  halo muon traveling parallel along the beam line is given using a simple expression given as:
+Muons with energy up to 1 TeV are produced when proton beam collides with collimators at $z = 150$~m from the CMS detector interaction point or when proton beams collide with residual beam gas in the beam pipes. These are referred to as  Beam-Induced Backgrounds~(BIB). These muons through the process of bremsstrahlung produce high \pt photons with significantly large ECAL time, deposit their energy in ECAL crystals. The rate of BIB produced photons depend on the beam current and the operational conditions of the LHC such as machine optics, collimator settings, residual gas densities and filling scheme. These muons which travel in a near parallel flight path to the direction of main proton bunch in the beam pipe are referred to as \textit{halo muons}. We expect halo muons to produced muon tracks in the Endcap muon systems~(CSC and RPCs) with corresponding associated ECAL electromagnetic cluster in the ECAL. Halo muons can travel from one side of the detector, along the $z$-direction, to the other side of the detector if produced with sufficient energy. Their Time-Of-Flight~(TOF) with respect to a potential hit position in the ECAL sub-detector can be estimated and measured.
+The expected arrival time at ECAL of a halo muon traveling parallel along the beam line is estimated using it kinematics given in equation \ref{eq:HALOPATH}.
 
-\begin{equation}
+\begin{equation}{\label{eq:HALOPATH}}
 t^{\mbox{expected}}_{\mbox{ECAL}} = -1/c\left( \pm Z_{\mbox{cluster}} + \sqrt{Z^{2}_{\mbox{cluster}} + R^{2}_{\mbox{cluster}}}  \right)
 \end{equation}
 
-and $\eta$ dependence on this expression showing the different potential hit positions of the muons in ECAL can be seen by re-expressing this same expression in terms of $\eta$ and $\phi$ as:
-\begin{equation}
+$Z_{\mbox{cluster}}$ is the photon supercluster position or longitudinal distance along $z$-axis from nominal interaction point, $R$ is the radial distance of the cluster from the beam line which is equal to $R_{EB, ECAL} = 1.29$~m and $c$ is the speed of light.
+One can further show that their expected arrival time in ECAL  entirely depends on potential hit positions in ECAL and hence $\eta$. This is by reducing equation \ref{eq:HALOPATH} to \ref{eq:HALOPATH2}.
+\begin{equation}{\label{eq:HALOPATH2}}
 t^{\mbox{expected}}_{\mbox{ECAL}} = - \frac{R_{\mbox{cluster}}}{2c} \exp{(-\eta)}
 \end{equation} 
+Using this expression, we can compared halo flight path $\eta$-dependence as expected to what is observed from data. Our result in figure \ref{fig:HALO}(\textit{bottom, right}) confirm our expectation that most of the halo muons are produced from BIBs and tend to always produced photons with earlier~(negative) arrival time in ECAL. 
+In addition to using halo flight path to tag photons produced from halo muons, we also use halo muon hit positions in the Cathode Strip Chambers~(CSC) matched to photon supercluster positions in the ECAL calorimeter. This is possible since halo muons are not bent in the azimuthal~($\phi$) direction by the magnets and are mainly located around the $y=0$ plane. By measuring the difference in $\phi$ between the CSC segment position and the ECAL photon cluster, we can associated with high percentage halo muons to photons produced from halo muons in ECAL. We call these photons \textit{Halo Photons} and their matching to these halo muons is represented by a variable we call $CSC(Seg,\gamma)\Delta\phi$. A matching to within $3\deg$ shown in figure \ref{fig:HALO}(\textit{bottom, left}) provide a clear method of separating Halo photons from true photons from collision.
 
-where, $Z$ is the cluster position or longitudinal distance along $z$-axis from nominal interaction point, $R$ is the radial distance of the cluster from the beam line; $R^{EB}_{\mbox{cluster}} = 1.29$~m and $C$ is the speed of light.
-
-With this expression compared to the value from data,we select a sample (figure \ref{ fig:HALO}) to study the halo properties in the negative timing distribution. 
-Additional identification of halo muons can be performed using the the Cathode Strip Chambers~(CSC) and the ECAL calorimeter information, Since halo muons are not bent in the azimuthal direction by the magnets and mainly located around the $y=0$ plane, measuring the difference in $\phi$ between the CSC segment position and the ECAL photon cluster. A matching of these two referred to as $CSC(Seg,\gamma)\Delta\phi$ to within $3\deg$ (figure \ref{fig:HALO}) appears to provide a clear distinction between Halo photons and true photons from collision.
-
-A distribution of the Halo photon time against the photon $\phi$ shows that most halo photon are distributed around $\phi = 0, \pm \pi$ as expected.
+A distribution of the Halo photon time against the photon $\phi_{\gamma}$ shown in figure \ref{fig:HALO}(\textit{top, right}) shows that most halo photon are distributed around $\phi = 0, \pm \pi$ in agreement with our expectation since, the magnetic field in ECAL does not affect the flight path of Halo muons.
 
 \begin{center}
 \centering
@@ -382,28 +378,27 @@ A distribution of the Halo photon time against the photon $\phi$ shows that most
 
 
 
-\subsubsection{Cosmic-Ray Photons}
-Cosmic muons like beam Halo muons produced with sufficient energy  will bremsstrahlung in the ECAL producing photons referred here as \textit{cosmic-ray photons}. Unlike halo muons, cosmic muons can arrive at ECAL from any direction. Nevertheless, they are expected to hits in the Drift Tubes~(DT) segments. Thus, using the DT and corresponding  muon photon clusters in ECAL we can match the  hit position in DT segments to ECAL clusters within $\Delta\eta$ and $\Delta\phi$ between the DT segment hit and the ECAL cluster. The two dimensional distribution for $DT\Delta\eta(DT,\gamma)$ and $DT\Delta\phi(DT,\gamma)$ shown in figure \ref{fig:COSMIC} is shown for events with photon time above $2$~ns and time below $-3$~ns. Events containing photons with small $\Delta\eta$ and $\Delta\phi$ are considered to be strong candidates for cosmic-ray photons. The same variables is used to identify cosmic-ray photons from a pure cosmic ray(data taken when there are no proton-proton collisions) sample and the distributions show very similar features as can be seen in figure 
-\ref{fig:COSMIC}.
+\subsubsection{Cosmic Photons}
+Cosmic muons like beam Halo muons with sufficient energy  will also bremsstrahlung in the ECAL producing photons referred here as \textit{cosmic photons}. Unlike halo muons, cosmic muons can arrive at ECAL from any direction. Barrel cosmic photons  are expected to be produced from cosmic muons with hits in the Drift Tubes~(DT) segments. Using the DT hits and their corresponding  photon supercluster $\eta-\phi$ position in ECAL, we can match this  hit position in DT segments to ECAL photon superclusters within $\Delta\eta$ and $\Delta\phi$. The two dimensional distribution for $DT\Delta\eta(DT,\gamma)$ and $DT\Delta\phi(DT,\gamma)$ for this matching for events with photon time above, $t_{\gamma} > 2$~ns and time below, $t_{\gamma} < -3$~ns is shown in figure \ref{fig:COSMIC}. We conclude that events containing photons with small $\Delta\eta$ and $\Delta\phi$ to be candidate cosmic photons. Comparing this to $\Delta\eta$  and $\Delta\phi$ 2-dimensional distributions of photons from a pure cosmic muons sample~(data taken when no proton-proton collisions is happening) show these distributions to be very similar as seen in figure \ref{fig:COSMIC}.
 
 \begin{center}
 \centering
 \mbox{
 \includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Cosmic_Ray_Photons_Data.png}
 \includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Cosmic_Ray_Photons_Cosmic_dataset.png} }
-\captionof{figure}{Two dimensional plot showing $DT\Delta\phi(Seg,\gamma)$ against $DT\Delta\eta(Seg,\gamma)$ for photons with $\pt > 80$~GeV, ECAL Time $> 2$~ns and ECAL Time $< -3$~ns in proton-proton collision data~(left) and non-proton-proton collision or cosmic data~(right). Small $\Delta\eta$ and $\Delta\phi$ are cosmic-ray photon candidates.}
+\captionof{figure}{2 dimensional plot showing $DT\Delta\eta(Seg,\gamma)$ against $DT\Delta\phi(Seg,\gamma)$ for photons with $\pt > 80$~GeV, ECAL Time, $ t_{\gamma} > 2$~ns and ECAL Time $t_{\gamma} < -3$~ns from proton-proton collision data~(left) and  pure cosmic muon data~(right). Small $\Delta\eta$ and $\Delta\phi$ are cosmic photon candidates.}
 \label{fig:COSMIC}
 \end{center}
 
 \subsubsection{Anomalous Photons: Spikes}
-Neutrons and some charge hadrons depositing their energy directly to the APDs instead of the crystal scintillation are referred to as \textit{anomalous signal} or \textit{spikes}. These spikes can mimic true photons from proton-proton collisions  leading to mis-identification of spikes as photons. Spikes are easily miss-identified as energetic photons and isolated. However, most spikes show a different signal pulse shape to that of photons and also have large negative ECAL time. In addition to energy topological selection cuts and ECAL cleaning that is done during online and offline event selection, ECAL clusters belonging to spikes are usually made up of very few crystals compared to photons clusters with many crystals. Thus using the number of crystals making in a reconstructed super cluster, we can distinguish true isolated photons from events with spikes. It has been observed that spike contributions increases with increase in LHC luminosity. Thus, as a selection criteria, photons with  Not identified as cosmic-ray photons or halo photons and with number of good crystals less than $7$ are considered to be spike candidates. Figure \ref{fig:SPIKES} show the distribution of the number crystals in a photon super cluster comparing photons with ECAL time $ < 0$~ns, some in-time photons~( ECAL $ -2 < t < 0$~ns and  selected spike and halo control sample. The spike control sample is selected using the "swiss-cross" variable which is used to identify and reject events with spikes during super cluster reconstruction. We observe that most spikes always have fewer($ < 7$) crystals contributing to the photon super cluster.
+Neutrons and some charge hadrons which deposit their energy directly to the APDs instead of the crystal scintillation are referred to as \textit{anomalous signal} or \textit{spikes}. Spikes can mimic the kinematics of true photons from proton-proton collisions  leading to the miss-identification of spikes as true photons. Spikes like true energetic photons can be isolated and so easily pass photon isolation cuts without being identified. A spike supercluster usually consists of very few crystals and most of the time single or double crystals except when embedded in a true photon of high electromagnetic fraction jets where they consist of may crystals and are difficult to identify. However, most spikes show a different signal pulse shape to that of true photons and also have large negative ECAL time especially at $t_{\gamma} \approx -12.0$~ns region. In addition to using energy topological selection cuts, which are based on the spike crystal energy deposits, during ECAL cleaning one can also use the $\chi^{2}$ fit value of the timing reconstruction to identify and reject spikes. Spike cleaning is performed during online and offline super cluster reconstruction. However, this online cleaning is not entire very efficient. Since ECAL clusters belonging to spikes are usually made up of very few crystals compared to photons clusters with many crystals, using the number of crystals in a reconstructed super cluster can be used to distinguish true isolated photons from events with spikes. It has been observed that spike contributions increases with increase in LHC luminosity. Thus, as a selection criteria, photons passing our cosmic photons and halo photons identification and with number of good crystals less than $7$ are considered to be spike candidates. Figure \ref{fig:SPIKES} show the distribution of the number crystals in a photon super cluster comparing photons with ECAL time, $ t_{\gamma} < 0$~ns, in-time photons~(ECAL $ -2.0 < t_{\gamma} < 0$~ns and  selected spike and halo control sample. The spike control sample is selected using the spike energy topological cut "\textit{swiss-cross}" variable in the region with $t_{\gamma} \approx -12.0$~ns where it is observed that spike concentration is high, is used to identify and reject events with spikes during super cluster reconstruction. We observe as shown in figure \ref{fig:SPIKES}(\textit{left}) that most spikes always have fewer($ < 7$) crystals is their photon supercluster.
 
 \begin{center}
 \centering
 \mbox{
-\includegraphics[height=7cm, width=0.7\textwidth]{THESISPLOTS/Number-Of-Crystals-In-Photon-SC.pdf}}
-%\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/swisscross_vs_time_3GeV.pdf} }
-\captionof{figure}{Plot showing  Number of crystals in photon super cluster for photons from the region with ECAL Time $ < 0$~ns. We define control regions of candidate photons(black), spike candidate photons~(magenta) and halo candidate photons~(red).}
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/Number-Of-Crystals-In-Photon-SC.pdf}
+\includegraphics[height=7cm, width=0.5\textwidth]{THESISPLOTS/swissX.png} }
+\captionof{figure}{Plot showing  \textit{number of crystals} in photon supercluster for photons from the region with ECAL Time, $t_{\gamma} < 0$~ns. Figure shows the timing distribution of candidate true photons(black), spike candidate photons~(magenta) and halo candidate photons~(red). The toplogical swiss-cross variable~($1- E_{4}/E_{1}$) distribution is shown comparing true photons~($|t_{\gamma}| < 1.0 $) to spike populated sample.}
 \label{fig:SPIKES}
 \end{center}
 
@@ -411,41 +406,69 @@ Neutrons and some charge hadrons depositing their energy directly to the APDs in
 \subsection{Collision Backgrounds}
 
 \subsubsection{QCD Photons and Pile Up}
-The LHC provides proton-proton collisions every $25$~ns, however during the \texttt{2012 LHC} run, these bunch spacing time increased to $50$~ns. However, as discussed in section $3.1.5$ on LHC Bunch structure, the presence of 
-Satellite/ghost bunches spaced in $5.0$~ns or $2.5$~ns  can also contribute to producing delayed photons either from collisions between these satellite/ghost bunches or with the main proton bunch collisions.
-As observed in figure \ref{fig:TIMEECAL}, photons from these events are a serious background source to delayed photons and most of these photons will pass all the above event and photon criteria selections. Thus, a careful 
-estimation of this contribution is the major task of the background estimation in this analysis.
-The kinematics of these events are very similar and as a result, we employ the standard \texttt{ABCD} method to for estimating these background contribution  to the signal region.
+%The LHC is designed to collide proton bunches every $25$~ns, but during the \texttt{2012 LHC} run, $50$~ns proton bunch collisions occurred. 
+Collisions from the main proton bunches happening every $50$ns during \texttt{2012 LHC Run I} are not the only collisions that can occur at the LHC. The presence of  satellite/ghost bunches spaced in $5.0$~ns or $2.5$~ns discussed in section $3.1.5$ along LHC bunch structure can also collide producing delayed photons either from collisions between these satellite/ghost bunches or with the main proton bunch.
+As observed in figure \ref{fig:TIMEECAL}, photons from these events are a serious background source to delayed photons and most of these photons will pass all the above event and photon selection criteria. Thus, it is imperative to 
+estimate delayed photon contributions from satellite/ghost bunches is it is not negligible. Since these background source is non-reducible and the kinematics of these events are very similar, we employ the standard \texttt{ABCD} method to for estimating these background contribution to the signal region. However, we only perform this estimation after cleaning for possibly non-collision event contamination.
 
 
 
-\subsection{Event Cleaning}
-Using the above observables for studying halo, cosmic and spike photons we reduced the contribution of these events by applying in addition to our above selections the following selections:
+\subsection{Event Cleaning, Veto Performance and Fake Rate}
+Using the derived kinematics variables for halo, cosmic and spike photons, we apply the following cuts in these variables to tag and reject contributions from these events. These cuts are applied in addition to our above selections cuts. We apply the following cuts for non-collision background tagging:
 \begin{itemize}
 \item Veto 0-jet events as this sample is highly populated with beam halo events, 
-\item Veto events with $CSC(Seg,\gamma)\Delta\phi < 0.05$,
+\item Veto events with $CSC\Delta\phi(Seg,\gamma) < 0.05$,
+\item Veto events with $\Delta\eta(DT Seg,\gamma) < 0.1$ and $\Delta\phi(DT Seg,\gamma) < 0.1$ .
 \item Only photons with $|\eta_{\gamma}| < 1.45$ are considered,
-\item Photons must have Number of Good crystals $ > 7$,
-\item Photons tagged as halo and cosmic are removed,
-\item Event must have at least 1-jet.
+\item Veto events with photons with Number of Good crystals $ < 7$ and $ 1-E_{4}/E_{1} > 0.98$.
+\item Remove photons tagged as halo and cosmic photons,
+\item Veto events with less than $2$-jets.
 \end{itemize}
-Events which pass all these additional selection criteria make up the sample which is used to estimated the background to our signal.
+Events which pass all these additional selection criteria make up the sample which is used to estimated our final background to our signal.
+Since it is very challenging to define pure control samples for each non-collision background source without possible contamination, we estimate the fake rates from the above veto or rejection conditions using in-time~($|t_{\gamma}| < 2.0$~ns) photon sample where we believe non-collision contribution is small compared to true photons from collision.
+Our measured fake rates are shown in table \ref{tab:EVTC}.
+\begin{center}
+\centering
+\begin{tabular}{|c| c|}
+%\mbox{Fake Rate }
+\hline
+\bfseries{Background Source} & \bfseries {Fake Rate}(\%)\\
+\hline\hline
+\textit{Halo Photons} & ~$\approx 3$ \\
+\textit{Cosmic Muons} & ~$\approx 1.4$ \\
+\textit{Spikes} & $\approx 0.4$ \\
+\hline
+\end{tabular}
+\captionof{table}{Fake rates for different non-collision cleaning.}
+\label{tab:EVTC} 
+\end{center}
 
-\paragraph*{•} 
-\par
-In order to estimating the background contribution from collision and non-collision sources, we employ a 3-dimensional space involving ${\MET}_{1}$, ${\MET}_{2}$ and ECAL time.  Our signal region is events with $t > 3.0$~ns and large \MET where by large \MET we mean events with  large  ${\MET}_{1}$ and  ${\MET}_{2}$. Non-collision events have large time as they are mostly out-of-time and by \MET calculation requirements should have large  ${\MET}_{2}$. While collision produced backgrounds events are mostly in-time and may often be measured with $t > 3.0$~ns due to either mis-reconstruction or from ghost/satellite contributions. However, these events cannot be produced with large correctly calculated \MET because for example in $\gamma +$ jets events, very small \MET due to energy miss-measurements is expected to be produced.
- But if the collision event is produced and arrives at ECAL with $t > 3$~ns, and the \MET is not properly calculated (since events with photons ECAL time, $|t| > 3$~ns are rejected during standard super cluster reconstruction with their \pt contribution  not taken into account in the \MET calculation) which in this case is large ${\MET}_{1}$, they will fluctuate or be easily considered as additional contribution to the non-collision background estimation in our signal region.
+\begin{center}
+\centering
+\mbox{
+\includegraphics[height=8cm, width=0.8\textwidth]{THESISPLOTS/TimeForAll.png}
+%\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Cosmic_Ray_Photons_Cosmic_dataset.png} 
+}
+\captionof{figure}{Residual Background after tagging the different non-collision background sources using the methods described in text.}
+\label{fig:RESIDUAL}
+\end{center}
+
+
+
+\subsubsection*{Residual Background Estimation Using ABDC Technique}
+In order to estimating the background contribution from collision and non-collision sources, we employ a 3-dimensional space involving ${\ETslash}$~~, ${\ETslash}^{\gamma}$~~ and ECAL time.  Our signal region is events with $t > 3.0$~ns and large \MET where by large \MET we mean events with  large  ${\ETslash}$~~ and  ${\ETslash}^{\gamma}$. Non-collision events have large time as they are mostly out-of-time and by \MET calculation requirements should have large  ${\ETslash}^{\gamma}$~~. While collision produced backgrounds events are mostly in-time and may often be measured with $t_{\gamma} > 3.0$~ns due to either miss-reconstruction or from ghost/satellite contributions. However, these events cannot be produced with large correctly calculated $\ETslash$~~ because for example in $\gamma +$ jets events, very small $\ETslash$~~ due to energy miss-measurements is expected to be produced.
+ But if the collision event is produced and arrives at ECAL with $t_{\gamma} > 3$~ns, and the \MET is not properly calculated (since events with photons ECAL time, $|t_{\gamma}| > 3$~ns are rejected during standard super cluster reconstruction with their \pt contribution  not taken into account in the \MET calculation) which in this case is large ${\ETslash}$~~, they will fluctuate or be easily considered as additional contribution to the non-collision background estimation in our signal region.
 Therefore, we select samples or control regions~(CR) which enhances each interested background source and use that CR to estimate the enhanced background contribution taking into account the possible contamination of an alternate background source due to possible fluctuations in event rate.
-The overall estimation technique is verified through a closure test procedure and the collision background estimation verified and validated using an extra control sample of $Z \rightarrow \ell \ell$ events where the $\ell$ are electron candidates reconstructed using photon candidates extended to include out-of-time events.
+The overall estimation technique is verified through a closure test procedure and the collision background estimation verified and validated using an extra control sample of $Z \rightarrow \EE$ events for electron candidates reconstructed from photon candidates extended to include out-of-time events.
 
-Signal Region: Events with ${\MET}_{2} > 60$~GeV, ${\MET}_{1} > 60$~GeV and $t > 3.0$~ns.
-\paragraph*{${\MET}_{2} > 60$~GeV } : CR in which collision~(QCD) background is suppressed while that for halo, cosmic ray and spike photon are all enhanced.
+Signal Region: Events with ${\ETslash}^{\gamma} > 60$~GeV, ${\ETslash} > 60$~GeV and $t_{\gamma} > 3.0$~ns.
+\paragraph*{${\ETslash}^{\gamma} > 60$~GeV } : CR in which collision~(QCD) background is suppressed while that for halo, cosmic ray and spike photon are all enhanced.
 Within this space, we define four regions representing ABCD to estimate the the background contribution:
 \begin{itemize}
-\item A: Events with ${\MET}_{1} < 60$~GeV and $ -10.0 < t < -3.0$~ns.
-\item C: Events with ${\MET}_{1} < 60$~GeV and $3.0 < t < 12.0$~ns.
-\item B: events with ${\MET}_{1} > 60$~GeV and $-10.0 < t < -3.0$~ns.
-\item D: events with ${\MET}_{1} > 60$~GeV and $3.0 < t <  12.0$~ns.
+\item A: Events with ${\ETslash} < 60$~GeV and $ -10.0 < t_{\gamma} < -3.0$~ns.
+\item C: Events with ${\ETslash} < 60$~GeV and $3.0 < t_{\gamma} < 13.0$~ns.
+\item B: events with ${\ETslash} > 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
+\item D: events with ${\ETslash} > 60$~GeV and $3.0 < t_{\gamma} <  13.0$~ns.
 \end{itemize}
 Thus, the number of events expected in CR D under the assumption that $\frac{N_{D}}{N_{B}} = \frac{N_{C}}{N_{A}}$  is given as:
 
@@ -453,20 +476,20 @@ Thus, the number of events expected in CR D under the assumption that $\frac{N_{
 N_{D} = \left(\frac{N_{B}}{N_{A}} \right)\cdot N_{C}
 \end{equation}
 
-\paragraph*{${\MET}_{1} > 60$~GeV }: CR in which non-collision background~(halo, cosmic and spike photons) contribution is suppressed wheras collision~(QCD) background contribution is enhanced.
+\paragraph*{${\ETslash} > 60$~GeV }: CR in which non-collision background~(halo, cosmic and spike photons) contribution is suppressed while collision~(QCD) background contribution is enhanced.
 Further dividing this CR into according to $A^{\prime}$,$B^{\prime}$,$C^{\prime}$,$D^{\prime}$ to estimate its contribution where:
 \begin{itemize}
-\item $A^{\prime}$: Events with ${\MET}_{2} < 60$~GeV and $-10.0 < t < -3.0$~ns.
-\item $B^{\prime}$: Events with ${\MET}_{2} > 60$~GeV and $-10.0 < t < -3.0$~ns.
-\item $I^{\prime}$: Events with ${\MET}_{2} < 60$~GeV and $|t| < 2.0$~ns.
-\item $I$: Events with ${\MET}_{2} > 60$~GeV and $|t| < 2.0$~ns.
+\item $A^{\prime}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
+\item $B^{\prime}$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
+\item $I^{\prime}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
+\item $I$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
 \end{itemize}
 we also define a in time CR as:
 \begin{itemize}
-\item $C^{\prime}$: Events with ${\MET}_{2} < 60$~GeV and $ 3.0 < t <  12.0$~ns.
- \item $D^{\prime}$: Events with ${\MET}_{2} > 60$~GeV and $3.0 < t <  12.0$~ns.
- \item $I^{\prime}$: Events with ${\MET}_{2} < 60$~GeV and $|t| < 2.0$~ns.
-\item $I$: Events with ${\MET}_{2} > 60$~GeV and $|t| < 2.0$~ns.
+\item $C^{\prime}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $ 3.0 < t_{\gamma} <  13.0$~ns.
+ \item $D^{\prime}$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $3.0 < t_{\gamma} <  13.0$~ns.
+ \item $I^{\prime}$: Events with ${\ETslash}^{\gamma} < 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
+\item $I$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
 \end{itemize}
 
 Now using using the above regions we can estimate the contributions of collision background in both CRs $B$ and $D$ as follows:
@@ -483,26 +506,50 @@ $N^{B}_{\mbox{col}}$ and $N^{D}_{\mbox{col}}$ are collision contributions to  CR
 N^{D}_{\mbox{Total}} = \left(\frac{N_{B} - N^{B}_{col} }{N_{A}} \right)\cdot N_{C} + N^{D}_{\mbox{col}} 
 \end{equation}\label{eq:bkg}
 where $N^{D}_{\mbox{Total}} = N^{D}_{\mbox{non-col}} + N^{D}_{\mbox{col}}$ is the total background estimation in  our signal region.
-A diagram showing the above background estimation technique is shown in figure \ref{fig:BKGESTI}.
-\begin{center}
-\centering
+%\begin{center}
+%\centering
 %\mbox{
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Diagrams showing background estimation technique.}
-\label{fig:BKGESTI}
-\end{center}
+%\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+%\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
+%\captionof{figure}{Diagrams showing background estimation technique.}
+%\label{fig:BKGESTI}
+%\end{center}
 
-A closure test using events with $0-\mbox{jets}$ and $1-jet$ is used to verify the above  background estimation technique and the above assumptions are cross checked using $Z\rightarrow e^{+} e^{-}$ events. 
-The underlying assumption here is that background contributions to large timing from collision source referred here as QCD is very small and must be of the order of $10^{-5}$ in comparison to in-time photons. i.e the ratio 
-$ N_{t > 3~ns}/ N_{|t| < 2.0~ns} \approx 10^{-5}$ with $N$ being the number of photons.
+
 
 \paragraph*{Closure Test}\mbox{}\\
+We performed closure test of our background estimation method by selecting events with $0$-jets and $1$-jet. We also perform a cross-check on the assumptions used in our background estimations for small contributions for collision background using $Z\rightarrow \EE$ events. 
+Our underlying assumption here is that background contributions to large timing from collision source referred here as QCD is very small and must be of the order of $10^{-5}$ in comparison to in-time photons. i.e the ratio 
+$ N_{t_{\gamma} > 3~ns}/ N_{|t_{\gamma}| < 2.0~ns} \approx 10^{-5}$ with $N$ being the number of photons.
 By selecting a sample of events containing only a single jet, we verify the validity of our method of background estimation using a closure test. The closure test is simply comparing the number of events we observed in our signal region \texttt{D} with the number we expect from using our \texttt{ABDC} background estimation method.
 Using a equation \ref{eq:bkg}, we observed a total of $5$-events when we expected $6.44^{+2.95}_{-3.45}$ which is quite close. This gives us confidence that our  background estimation method is robust and reliable and we can now move on to do our final background estimation on dataset with events having at least $2$-jets passing our final photon, jet and \MET selection after being cleaned.
+
+\begin{center}
+\centering
+\begin{tabular}{|c| c| c|}
+%\mbox{Fake Rate }
+\hline
+\bfseries{Non-Collision} & \bfseries{ ${\ETslash}^{\gamma} < 60$~\GeV} & \bfseries {${\ETslash}^{\gamma} > 60$~\GeV} \\
+\hline
+ $3.0 < t_{\gamma} < 13.0$~ns & \textsf{C}($405$) & ~\textsf{D}($10$) \\
+ $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{A}($871$) & ~\textsf{B}($36$) \\
+\hline \hline
+
+\bfseries{Collision} & \bfseries{ ${\ETslash} < 60$~\GeV} & \bfseries {${\ETslash} > 60$~\GeV} \\
+\hline 
+ $3.0 < t_{\gamma} < 13.0$~ns & \textsf{$D^{\prime}$}($4$) & ~\textsf{D}($10$) \\
+ $-2.0 < t_{\gamma} < 2.0$~ns & \textsf{$F^{\prime}$}($1353685$) & ~\textsf{F}($34543$) \\
+ $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{$B^{\prime}$}($5$) & ~\textsf{B}($36$) \\
+\hline\hline 
+\end{tabular}
+\captionof{table}{Result from closure test of background estimation technique using $0$ and $1$-jet events.}
+\label{tab:EVTC} 
+\end{center}
+
+
 \subsection{Background Estimation Cross Check}
-The main assumption in our background estimation technique is that, the contribution from collision background events to our signal region~($|time| > 3$~ns) is negligible.
-In order to show this we select $Z\rightarrow e^{+} e^{-}$ events from \texttt{SingleElectron/} and \texttt{DoubleElectron/} data sets of 2012.
+The main assumption in our background estimation technique is that, the contribution from collision background events to our signal region~($|t_{\gamma}| > 3$~ns) is negligible.
+In order to show this we select $Z\rightarrow \EE$ events from \texttt{SingleElectron/} and \texttt{DoubleElectron/} data sets of 2012.
 The selection criteria of our extended to include out-of-time $Z$ candidates events is as follows:
 \begin{itemize}
 \item The candidate two electrons for the $Z$ bosons must have individual $\pt > 20$~GeV,
