@@ -651,7 +651,7 @@ A simple picture showing the above procedure with distributions is shown in figu
 \label{fig:collZ}
 \end{center}
 
-The result of the final timing distribution of genuine $Z$ boson events  can be seen in figure \ref{fig:Ztime}. It is not difficult to see that the ratio $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}  < 10^{-5}$ confirming that indeed the contribution  of electromagnetic objects with large timing $t >3$~ns is negligible thus confirming that most collision events contain photons which are mostly in-time, $|t| \leq 2$~ns. A simple cut on the \MET, $\MET > 60$~GeV will further reduce this ratio to $0$ as assumed in our above background estimation.
+The result of the final timing distribution for genuine $Z$ boson events is shown in figure \ref{fig:Ztime}. It is not difficult to see that the ratio $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}  < 10^{-5}$ confirming that indeed the contribution of electromagnetic objects with large timing $t >3$~ns is negligible and in agreement with our assumption that most collision events contain photons which are mostly in-time, $|t| \leq 2$~ns. Its important to not that, we have not applied any \MET selection cuts here. A simple cut, $\MET > 60$~GeV could further reduce this ratio to an even smaller number as assumed in our above background estimation.
 \begin{center}
 \centering
 %\mbox{
@@ -663,9 +663,9 @@ The result of the final timing distribution of genuine $Z$ boson events  can be 
 
 
 \section{Results}
-Finally, we perform our background estimation on our true signal samples which are events with at least 2 jets, at least one high $\pt > 80~GeV/c$ isolated photon with ECAL time  $ 3.0 < t_{\gamma} < 13.0$~ns or $ -10.0 < t_{\gamma} < -3.0$~ns and ${\ETslash}^{\gamma}$~~$ > 60$~GeV, ${\ETslash}$~~$ > 60$~GeV.
+Finally, we perform our background estimation on signal samples which are events with at least 2 jets, at least one high $\pt > 80~GeV/c$ isolated photon with ECAL time  $ 3.0 < t_{\gamma} < 13.0$~ns or $ -10.0 < t_{\gamma} < -3.0$~ns and ${\ETslash}^{\gamma}$~~$ > 60$~GeV, ${\ETslash}$~~$ > 60$~GeV.
 
-We observed $1$ event and expected $0.0888 ^{+0.1869}_{-0.0444}$ background events within our statistical uncertainties. The complete result is shown in table \ref{tab:RF} and in table \ref{tab:RESULT} we show the number of GMSB SPS8 signal events  passing our final selection for $\Lambda=180$~\TeV and different $c\tau$ values of the neutralino.
+We observed $1$ event and expected $0.0888 ^{+0.1869}_{-0.0444}$ background events within our statistical uncertainties. Our complete result is shown in table \ref{tab:RF} and in table \ref{tab:RESULT}, we show the number of GMSB SPS8 signal events  passing our final selection for $\Lambda=180$~\TeV with different $c\tau$ values of the neutralino.
 
 \begin{center}
 \centering
@@ -685,7 +685,7 @@ We observed $1$ event and expected $0.0888 ^{+0.1869}_{-0.0444}$ background even
  $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{$B^{\prime}$}($1$) & ~\textsf{$B$} $0.23 ^{+0.092}_{-0.118}$) \\
 \hline\hline 
 \end{tabular}
-\captionof{table}{Result of observed events and estimated background from signal sample, events with at least $2$-jets. Numbers in bracket represent our observed events while numbers not is bracket are our expected background events using \textsf{ABCD} method.}
+\captionof{table}{Result of observed events and estimated background from signal sample, events with at least $2$-jets. Numbers in bracket represent our observed number of events while numbers not is bracket are our expected number of background events estimated using \textsf{ABCD} method.}
 \label{tab:RF} 
 \end{center}
 
@@ -720,9 +720,10 @@ We observed $1$ event and expected $0.0888 ^{+0.1869}_{-0.0444}$ background even
 
 
 
-\subsection{Systematics Studies}
-The different sources of systematics which affect this analysis and the estimated contribution of each identified systematics is used in the calculation of the upper limit on observed signal cross-section is shown in table \ref{tab:SYST}.
-The systematic uncertainty on luminosity measurement has the recommended value of $2.2$\%. The uncertainty for the jet energy scale correction has also been measured using the standard CMSSW tool by \cite{JES}. The uncertainty on the photon energy scale in barrel was estimated to be 1.0\% and based on the final-state radiation~(FSR) in $Z\rightarrow \mu\mu\gamma$ events \cite{PES}. The uncertainty from pardon density functions~(PDF) evaluated using the re-weighting technique and Master equation of CTEQ65 model set described in \cite{PDF}. The uncertainty on the \MET resolution uses a conservative estimate from \cite{METRES}. The uncertainty on the ECAL timing obtained be comparing the peak in the timing distribution between $\gamma +$ jet sample and data events with time $|t| < 2$~ns to be of the order of 200~ps per event and from a study of high \pt photons beyond gain transitions and has been agreed by ECAL DPG to be a conservative estimate. Another important source of systematics is in the selection of the background control samples and estimation and individual systematics in the tagging and miss-tagging of non-collision background and also with the estimation of background contributions from collisions. All these separate systematics contributions have been combined into a single background estimation systematics referred to as background estimation systematics. The summary of every systematics in shown in table \ref{tab:SYST}. 
+\section{Systematic Studies}
+The different sources of systematic which affect this analysis and the estimated contribution of each identified source of systematic is shown in table \ref{tab:SYST}.
+These systematic is also used in the calculation of the upper limit on observed signal cross-section. We obtained these systematic percentage by varying each individual source and see how that affects the number of events passing our selection cuts.
+The systematic uncertainty on luminosity measurement has the recommended value of $2.2$\% provided by CMS and LHC luminosity measurements. The uncertainty for the jet energy corrections~(JEC) and jet energy scale~(JES) has also been measured using the standard CMSSW tool by \cite{JES} and provided by the CMS JEMET working group. The uncertainty on the photon energy scale in barrel was estimated to be 1.0\% and based on the final-state radiation~(FSR) in $Z\rightarrow \mu\mu\gamma$ events \cite{PES}. The uncertainty from pardon density functions~(PDF) evaluated using the re-weighting technique using the Master Equation of CTEQ65 model set described in \cite{PDF}. The uncertainty on the \MET resolution uses a conservative estimate from \cite{METRES}. The uncertainty on the ECAL timing obtained be comparing the peak in the timing distribution between $\gamma +$ jet sample and data events with time $|t| < 2$~ns is found to be of the order of 200~ps per event and from a study of high \pt photons beyond gain transitions has agreed by ECAL DPG to be a conservative estimate. Another important source of systematic is in the selection of the background control samples and our background estimation and individual systematic in the tagging and miss-tagging of non-collision background and estimating background contributions from collisions. We combined these separate systematic contributions into a single background estimation systematic referred here as our background estimation systematic. This is our largest source of uncertainty in our analysis which we estimate to vary from 50\% to 200\%. 
 
 
 
@@ -741,12 +742,12 @@ The systematic uncertainty on luminosity measurement has the recommended value o
 \texttt{\MET resolution}~(10\%) & $ <2.8$\%  \\
 \texttt{ECAL time uncertainty}~(0.5~ns) & $<5.0$\% \\
 \hline
-\texttt{Background estimation uncertainty}~(50.0) &$<41.0$\% \\
+\texttt{Background estimation uncertainty}~(50.0) &$<51.0$\% \\
 \hline 
 \texttt{Luminosity}~(4.5\%) & $< 2.2$\% \\
 \hline
 \end{tabular}
-\captionof{table}{Summary of systematic uncertainties on the signal~(top), background~(middle) and machine~(bottom) as used in the $\sigma_{UL}$ calculation.}
+\captionof{table}{Summary of systematic uncertainties used in this analysis and applied to our cross-section upper limit, $\sigma_{UL}$ calculation.}
 \label{tab:SYST}
 %\end{table}
 \end{center}
