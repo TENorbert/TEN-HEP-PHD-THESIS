@@ -8,17 +8,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{beamer}
 \usetheme[hideothersubsections,hideallsubsections]{UMNTheme}
+\newcommand {\framedgraphic}[2] {
+    \begin{frame}{#1}
+        \begin{center}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{#2}
+        \end{center}
+    \end{frame}
+}
 % Remove navigation symbols
 \setbeamertemplate{navigation symbols}{}
-\title{Search For Delayed Photons Using Timing with CMS Detector.}
+\title{Search For Delayed Photons Using Timing With CMS}
 \subtitle{PhD Oral Exam}
-\author[Tambe E. Norbert] % (optional, for multiple authors)
+%\vspace{-5cm}
+\author[Tambe E. Norbert]{Tambe E. Norbert \\ University Of Minnesota} % (optional, for multiple authors)
 %{Shih-Chuan Kao\inst{1} \and Yuichi Kubota\inst{1} \and Tambe E. Norbert\inst{1} \and Roger Rusack\inst{1}}
-{Tambe E. Norbert\int{1}}
-\institute[UMN]{ \inst{1} University Of Minnesota}
-\vspace{-2cm}
+%\institute[UMN]{ \inst{1} University Of Minnesota}
+\vspace{-8cm}
 %\date{ Long-Lived Meeting,\\ \today}
-\date{University Of Minnesota, \\ \today}
+\date{ \\ \today}
 
 \begin{document}
 %{% open a Local TeX Group
@@ -29,49 +36,138 @@
 \href{mailto:norbe072@umn.edu}{\color{cyan}{\texttt{norbert@physics.umn.edu.edu}}}
 \end{center}
 \end{frame}
-%}% end Local TeX Group
-\section*{Outline}
+
+
+
+
+\section*{OUTLINE}
+{
+\usebackgroundtemplate{%
+\tikz\node[opacity=0.3] {\includegraphics[height=\paperheight,width=\paperwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/PLOTS/CMS_DET.png}};}
 \begin{frame}
-\frametitle{\Huge Outline}
+\frametitle{\huge{Outline}}
 \tableofcontents
 \end{frame}
+}
+%%% Intro to Talk
+\section{INTRODUCTION}
 
-%%% Intro for General Talks
+{
+\usebackgroundtemplate{%
+\tikz\node[opacity=0.35] {\includegraphics[height=\paperheight,width=\paperwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/PLOTS/CMS_DET.png}};}
 \begin{frame}
-\frametitle{\huge{Where are we now?}}
-\begin{varblock}[7cm]{\textbf{The Universe Set}}
- The set  $S =\{ \cdots \mathbf{0}, \frac{1}{2}, 1,  \frac{3}{2}, 2  \cdots \} \cdot \hbar $ 
- \end{varblock}
- where $s$ is the spin of a particle. 
- represents our past, current and probably future understanding of the universe around us. As of the moment 
-Currently we know:
- \begin{itemize}
-  \item $\mathbf{s = \frac{1}{2}\hbar}$ Describes all the matter in our universe.
-  \item $\mathbf{s = 1\hbar}$ Describes gauge interactions.
-  \item $\mathbf{s = 0\hbar}$ Responsible for giving mass.
-  \item $\mathbf{s = 2\hbar}$ Describes gravity~(gauged?).
-  \item $\mathbf{s = \frac{3}{2}\hbar}$ \textcolor{red}{?? \textbf{Dark Matter}?}
- \end{itemize}
+  \begin{center}
+   \textcolor{UMN@Maroon}{\Huge{\textbf{INTRODUCTION}}}
+  \end{center}
+\end{frame}
+}
 
-However, this magic set only describes $\approx 4.6$\% of our total universe.
-\includegraphics[height=1.7cm,width=0.25\paperwidth]{THESISPLOTS/WMAPUniversePie.pdf}
+\begin{frame}
+\frametitle{Modern Particle Physics}
+\begin{itemize}
+\item Use of Mass, Charge, Lifetime, Spin.
+\item Explain the numerous parameters in the SM.
+\item Use lifetime and spin to Search for New Physics.
+\end{itemize}
 \end{frame}
 
 
 
-%% For Pre-Approval talk Intro Page
-\section{Introduction}
+%Why New Physics?
+%New Physics Observation
 \begin{frame}
-% \tableofcontents
-% \framesubtitle{}
-% \vspace{-1cm}
-\frametitle{\Huge Introduction}
+\frametitle{New Physics: Observation?}
+ \textbf{Why still expect New Physics?}
+\begin{minipage}[t]{0.8\paperwidth}
+\mbox{
+\includegraphics[height=0.20\textwidth,width=0.15\paperwidth]{THESISPLOTS/New-Physics-PLOTS/neutrino-Mass.png} \quad
+\includegraphics[height=0.20\textwidth,width=0.25\paperwidth]{THESISPLOTS/New-Physics-PLOTS/VanAlbada-Dark-Matter-Rot-Curves.jpg} \quad
+\includegraphics[height=0.20\textwidth,width=0.15\paperwidth]{THESISPLOTS/New-Physics-PLOTS/X-ray-Signature-DM-2014.png} \quad
+\includegraphics[height=0.20\textwidth,width=0.15\paperwidth]{THESISPLOTS/New-Physics-PLOTS/SigmaR_v5.pdf}
+}
+\end{minipage}
 
-\frametitle{\Huge Introduction}
+\begin{minipage}[b]{0.8\paperwidth}
+\mbox{
+\includegraphics[height=0.20\textwidth,width=0.15\paperwidth]{THESISPLOTS/New-Physics-PLOTS/AMS-ON-ISS.jpg} \quad
+\includegraphics[height=0.20\textwidth,width=0.20\paperwidth]{THESISPLOTS/New-Physics-PLOTS/AMS-Electron-Positron-Flux-Difference.png} \quad
+\includegraphics[height=0.20\textwidth,width=0.25\paperwidth]{THESISPLOTS/New-Physics-PLOTS/CMB_Multiple_Moments.png}
+}
+
+\end{minipage}
+
+
+\end{frame}
+
+
+
+%% New Physics Theory
+\begin{frame}
+\frametitle{New Physics: Theory?}
+\textbf{Why still expect New Physics?}
+  %\begin{columns}
+  \begin{minipage}[b]{0.75\linewidth}
+    \begin{multicols}{2}
+     \begin{varblock}[3.5cm]{\textbf{The Universe  Spin Set}}
+     \huge{
+       $S =\{\textcolor{blue}{\mathbf{0}}, \frac{1}{2}, 1,  \frac{3}{2}, 2  \cdots \} \hbar $ 
+       }
+     \end{varblock}
+     \columnbreak
+     \includegraphics[height=0.45\textwidth,width=0.40\paperwidth]{THESISPLOTS/New-Physics-PLOTS/Big_Bang.jpg}
+ \end{multicols}
+ \end{minipage}
+\begin{minipage}[b]{\linewidth}
+Our current understanding:
+ \begin{columns}
+    \begin{column}{0.65\linewidth} 
+     \begin{itemize}
+     \item $\mathbf{s = \frac{1}{2}\hbar}$ Describes all the matter in our universe.
+     \item $\mathbf{s = 1\hbar}$ Describes gauge interactions.
+     \item $\mathbf{s = \textcolor{blue}{0}\hbar}$ Responsible for mass.
+     \item $\mathbf{s = 2\hbar}$ Describes gravity~(gauged?).
+    \end{itemize}
+    This \textit{magic} set describes  only $\approx 4.6$\% of our total universe
+   \end{column}
+     \begin{column}{0.35\linewidth}
+      \begin{itemize}
+       \item $\mathbf{s = \frac{3}{2}\hbar}$ \textcolor{red}{?? \textbf{Dark Matter}?}
+      \end{itemize}
+    \mbox{
+    \includegraphics[height=0.5\textwidth,width=0.30\paperwidth]      {THESISPLOTS/WMAPUniversePie.pdf}}
+    \end{column}
+\end{columns}
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Supersymmetry?}
+\begin{minipage}[t]{\linewidth}
+Supersymmetry or SUSY allows for \textbf{Bosons} $\Longleftrightarrow $ \textbf{Fermions}.
+\begin{equation*}
+ \mathsf{Q}|\mathbf{Bosons}\right\rangle = | \mathbf{Fermions} \right\rangle, \mathsf{Q}| \mathbf{Fermions}\right\rangle = |\mathbf{Bosons}\right\rangle
+\end{equation*}
+
+\end{minipage}
+\begin{minipage}[t]{\linewidth}
+  \begin{varblock}[7cm]{\textbf{SUSY Benefits}}
+  \begin{itemize}
+   \item Stabilizes the Higgs mass and explains energy scale hierarchy.
+   \item Allows for unification of fundamental forces.
+   \item Predicts long-lived and stable particles which could describe Dark Matter.
+   \item Natural frame work for unifying gravity and Quantum Mechanics.
+  \end{itemize}
+  \end{varblock}
+\end{minipage}
+\end{frame}
+
+%% Motivation for Long-Lived Particle Search
+\begin{frame}
+\frametitle{Motivation}
  %\vspace{-0.5cm}
 \begin{minipage}{0.8\paperwidth} 
      \begin{itemize}  
-       \item{\color{UMN@Maroon} \textbf{Long-Lived Particle Models}}
+       \item{\color{UMN@Maroon} \textbf{Models: Long-Lived Particle}}
       \large{
        \setbeamertemplate{itemize items}{$\mathbb{\star}$}
         \begin{itemize}
@@ -91,7 +187,7 @@ However, this magic set only describes $\approx 4.6$\% of our total universe.
           \end{itemize}
       \end{itemize}
     }   
-  \item{ \color{UMN@Maroon} \textbf{ECAL Resolution}}    
+  \item{ \color{UMN@Maroon} \textbf{ECAL Time Resolution}}    
  %\end{itemize}
 %\end{minipage}%
 
@@ -120,9 +216,92 @@ However, this magic set only describes $\approx 4.6$\% of our total universe.
      
   \end{itemize}
 \end{minipage}
- 
 \end{frame}
 
+%%% Previous Experiments
+\begin{frame}
+\frametitle{Previous Search Experiments}
+\end{frame}
+
+
+
+
+% ECAL Timing
+\section{ECAL TIMING}
+{
+\usebackgroundtemplate{%
+\tikz\node[opacity=0.35] {\includegraphics[height=\paperheight,width=\paperwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/PLOTS/CMS_DET.png}};}
+\begin{frame}
+   \begin{center}
+    \textcolor{UMN@Maroon}{\huge{\textbf{ECAL TIMING}}}
+   \end{center}
+\end{frame}
+}
+
+% ECAL Timing
+\begin{frame}
+\frametitle{ECAL Timing}
+ \begin{minipage}[b]{0.8\paperwidth}
+  \begin{itemize}
+   \item\textcolor{UMN@Maroon}{\textbf{Time Reconstruction}} 
+      \begin{itemize}
+        \item 10 digitized samples used.
+        \item Fit and Weighted methods used to extract time.
+      \end{itemize}   
+   \item \textcolor{UMN@Maroon}{\textbf{Time Measurement}}
+      %\begin{equation*}\label{eq:avetime}
+ $$  T_{MAX} = \frac{{\displaystyle\sum_{i}} \frac{T_{MAX,i} }{\sigma_i^2} }{ {\displaystyle\sum_{i}} \frac{1}{\sigma_i^2} } $$
+     %\end{equation}
+  \end{itemize}   
+\end{minipage}
+ 
+ \begin{minipage}[b]{0.8\paperwidth}
+   \begin{itemize}
+    \item \textcolor{UMN@Maroon}{\textbf{Time Performance}}
+    \begin{itemize}
+     \item  Time resolution better than $200$~ps for $E > 30$ ~GeV
+    \end{itemize}
+     
+   \end{itemize}
+ \end{minipage}
+ \mbox{\includegraphics[height=3.0cm,width=0.50\textwidth]            {THESISPLOTS/AmplitudeVsTMax.png}
+      \includegraphics[height=3.0cm,width=0.50\textwidth]            {THESISPLOTS/NeigboMethodECALTimeRes.png}}
+\end{frame}
+
+%continuation of Timing
+\begin{frame}
+\frametitle{ECAL Timing(2)}
+  \begin{minipage}[b]{0.8\paperwidth}
+   \begin{itemize}
+    \item \textcolor{UMN@Maroon}{\textbf{Photon Timing}}
+        \begin{itemize}
+         \item $T_{\gamma} =$ Average Time of all Crystals.
+         \item $T_{\gamma} =$ Seed (most energetic) Crystal Time.
+        \end{itemize}
+      
+       \includegraphics[height=5.0cm,width=0.70\textwidth]            {THESISPLOTS/AverageVsSeedTime_ECAL.png}   
+  \end{itemize}
+  \begin{itemize}
+   \item  Similar behavior seen in Seed and Average Time.
+   \item  We use seed time as Photon Measured Time in this analysis.
+  \end{itemize}
+  
+ \end{minipage}
+\end{frame}
+
+
+
+
+\section{SEARCH ANALYSIS}
+{
+\usebackgroundtemplate{%
+\tikz\node[opacity=0.35] {\includegraphics[height=\paperheight,width=\paperwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/PLOTS/CMS_DET.png}};}
+\begin{frame}
+   \begin{center}
+    \textcolor{UMN@Maroon}{\Huge{\textbf{SEARCH ANALYSIS}} }
+   \end{center}
+\end{frame}
+}
 %% SUSY at LHC
 \begin{frame}
 \frametitle{LHC Supersymmetry Production}
@@ -144,10 +323,9 @@ However, this magic set only describes $\approx 4.6$\% of our total universe.
  \end{minipage}
 \end{frame}
 
-%% Production and Decay
-\section{Production and Decay}
+%Production & Decay
 \begin{frame}
-\frametitle{\Huge Cascade Decay Chain}
+\frametitle{Production and Decay }
  %\begin{columns}
  % \begin{column}{1.\textwidth}
    \begin{minipage}[t]{0.7\linewidth}
@@ -155,7 +333,7 @@ However, this magic set only describes $\approx 4.6$\% of our total universe.
       \includegraphics[width=0.80\paperwidth]{THESISPLOTS/SUSY-DECAY.pdf}
  \end{minipage}
  %\begin{minipage}[b]{0.7\linewidth}
- \newline \textcolor{blue} {\texttt{Y. Kats et al: arXiv:1110.6444v2}}
+ %\newline \textcolor{blue} {\texttt{Y. Kats et al: arXiv:1110.6444v2}}
  %\end{minipage}
     
 \end{frame}    
@@ -227,9 +405,9 @@ However, this magic set only describes $\approx 4.6$\% of our total universe.
 
 
 %DataSet and Trigger Section
-\section{Dataset and Trigger}
+%\section{Dataset and Trigger}
 \begin{frame}
-\frametitle{\Huge Datasets}
+\frametitle{Datasets}
 %\hspace{-0.2cm}
 \begin{minipage}[b]{0.7\paperwidth}
 \begin{itemize}
@@ -329,7 +507,7 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
  
  % HLT Trigger
  \begin{frame}
- \frametitle{\huge{HLT Trigger}}
+ \frametitle{HLT Trigger}
   \begin{minipage}[b]{\linewidth}
   %\begin{varblock}[7.2cm]{HLT-Trigger Efficiency}
     \begin{itemize}
@@ -365,61 +543,8 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
  % \end{itemize}
 \end{frame}
 
-
-% ECAL Timing
-%\section{ECAL Timing}
 \begin{frame}
-\frametitle{\huge{ECAL Timing}}
- \begin{minipage}[b]{0.8\paperwidth}
-  \begin{itemize}
-   \item\textcolor{UMN@Maroon}{\textbf{Time Reconstruction}} 
-      \begin{itemize}
-        \item 10 digitized samples used.
-        \item Fit and Weighted methods used to extract time.
-      \end{itemize}   
-   \item \textcolor{UMN@Maroon}{\textbf{Time Measurement}}
-      %\begin{equation*}\label{eq:avetime}
- $$  T_{MAX} = \frac{{\displaystyle\sum_{i}} \frac{T_{MAX,i} }{\sigma_i^2} }{ {\displaystyle\sum_{i}} \frac{1}{\sigma_i^2} } $$
-     %\end{equation}
-  \end{itemize}   
-\end{minipage}
- 
- \begin{minipage}[b]{0.8\paperwidth}
-   \begin{itemize}
-    \item \textcolor{UMN@Maroon}{\textbf{Time Performance}}
-    \begin{itemize}
-     \item  Time resolution better than $200$~ps for $E > 30$ ~GeV
-    \end{itemize}
-     
-   \end{itemize}
- \end{minipage}
- \mbox{\includegraphics[height=3.0cm,width=0.50\textwidth]            {THESISPLOTS/AmplitudeVsTMax.png}
-      \includegraphics[height=3.0cm,width=0.50\textwidth]            {THESISPLOTS/NeigboMethodECALTimeRes.png}}
-\end{frame}
-
-%continuation of Timing
-\begin{frame}
-\frametitle{\huge{ECAL Timing(2)}}
-  \begin{minipage}[b]{0.8\paperwidth}
-   \begin{itemize}
-    \item \textcolor{UMN@Maroon}{\textbf{Photon Timing}}
-        \begin{itemize}
-         \item $T_{\gamma} =$ Average Time of all Crystals.
-         \item $T_{\gamma} =$ Seed (most energetic) Crystal Time.
-        \end{itemize}
-      
-       \includegraphics[height=5.0cm,width=0.70\textwidth]            {THESISPLOTS/AverageVsSeedTime_ECAL.png}   
-  \end{itemize}
-  \begin{itemize}
-   \item  Similar behavior seen in Seed and Average Time.
-   \item  We use seed time as Photon Measured Time in this analysis.
-  \end{itemize}
-  
- \end{minipage}
-\end{frame}
-
-\begin{frame}
-\frametitle{\huge{ECAL Timing(3): MC Vs Data}}
+\frametitle{MC Vs Data ECAL Timing}
   \begin{minipage}[b]{0.7\paperwidth}
     \begin{figure}[htbp]
     \mbox{\includegraphics[height=5.0cm,width=0.61\textwidth]            {THESISPLOTS/SeedTime_data-mc.png}
@@ -439,7 +564,7 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
 
 %% Diagram of Why Long-Live Decay Kinematics
 \begin{frame}
-\frametitle{\huge {Long-Lived Decay}}
+\frametitle{Long-Lived Decay}
 %\vspace{-1cm}
 \begin{minipage}[t]{0.5\paperwidth}
   % \begin{varblock}[7cm]{Why Long-Lived?}
@@ -465,7 +590,7 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
 
 %Long-Lived Or Offpoint
 \begin{frame}
-\frametitle{\huge{Slow Vs Off-Pointing Decay}}
+\frametitle{Slow Vs Off-Pointing Decay}
   \begin{minipage}[t]{0.7\paperwidth}
     \begin{multicols}{2}
       \begin{varblock}[3.5cm]{Photon Arrival Time}
@@ -494,9 +619,9 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
 
 
 % Event Selection
-\section{Event Selection}
+%\section{Event Selection}
 \begin{frame}
-\frametitle{\Huge Event Selection}
+\frametitle{Event Selection}
 %\subsection{Pre-Event Selection}
 %\subsection{Event Cleaning}
 %\subsection{Final Event Selection}
@@ -673,9 +798,9 @@ $c\tau$         &  215   &   325  &   130 &   245 &   185 &       \\
  \end{figure}
 \end{frame}
 
-\section{Analysis Strategy}
+%\section{Analysis Strategy}
 \begin{frame}
-\frametitle{\Huge{Analysis Strategy}}
+\frametitle{Analysis Strategy}
 \begin{itemize}
  \item \textcolor{UMN@Maroon}{\textbf{Background Source}}
   \begin{itemize}
@@ -738,7 +863,7 @@ Features around $\phi = 0, \pm \pi$ and $\eta$-dependence shows that background 
 \end{frame}
 
 \begin{frame}
-\frametitle{In-Time Vs Out-Of-Time Events}
+\frametitle{Background Control Samples}
 We estimate these background by defining two Control samples.
 \begin{flushleft}
  \begin{description}
@@ -1025,7 +1150,7 @@ will produce energetic muons traveling parallel with main proton beam and shower
 
 
 %% Here we Estimate Background.
-\section{Background Estimation}
+%\section{Background Estimation}
 \begin{frame}
 \frametitle{\Huge{Background Estimation}}
 \small{
@@ -1170,9 +1295,9 @@ Using $Z \rightarrow ee$ events.
 
 
 %%Systematic Uncertainties
-\section{Systematics}
+%\section{Systematics}
 \begin{frame}
-\frametitle{\Huge Systematics}
+\frametitle{ Systematics}
  \begin{minipage}[t]{0.8\linewidth}
   Background estimation is Data driven.
   Thus, most of a systematics come from signal,including:
@@ -1197,7 +1322,7 @@ Using $Z \rightarrow ee$ events.
 \end{frame}
 
 \begin{frame}
-\frametitle{\Huge Systematics(II)}
+\frametitle{ Systematics(II)}
 \begin{minipage}[t]{0.8\textwidth}
 \centering
 \begin{tabular}{l l}
@@ -1220,15 +1345,28 @@ Using $Z \rightarrow ee$ events.
  
  \begin{minipage}[b]{0.8\textwidth}
  \begin{itemize}
-  \item Systematics is obtained by studying the effects of varying by a few amount of a particular source of systematic on the total number of objects passing object selection cuts.
+  \item We obtained our systematics by studying the effects of varying by a few amount of a particular source of systematic on the total number of objects passing object selection cuts.
    \end{itemize}
  \end{minipage}
 \end{frame}
 
+
+
+
 %Results
-\section{Results}
+\section{RESULTS}
+{
+\usebackgroundtemplate{%
+\tikz\node[opacity=0.35] {\includegraphics[height=\paperheight,width=\paperwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/PLOTS/CMS_DET.png}};}
 \begin{frame}
-\frametitle{\Huge{Results}}
+  \begin{center}
+   \textcolor{UMN@Maroon}{\Huge{\textbf{RESULTS}}}
+  \end{center}
+\end{frame}
+}
+
+\begin{frame}
+\frametitle{Results}
 \begin{minipage}[t]{0.8\textwidth}
 \centering
 \begin{tabular}{l l l}
@@ -1252,26 +1390,26 @@ Using $Z \rightarrow ee$ events.
 \end{frame}
 
 \begin{frame}
-\frametitle{\Huge{Observed Event}}
+\frametitle{Observed Event}
 \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{3-D View}}]
  \centering
 \mbox{
-\includegraphics[height=3cm,width= 0.7\paperwidth]{THESISPLOTS/Observed-Event-3D-Delayed-Photon.png}} 
+\includegraphics[height=3cm,width= 0.7\paperwidth]{THESISPLOTS/Delayed_photon-Event-3D.png}} 
  \end{tcolorbox}
  
  \begin{tcolorbox}[colback=UNL@Cream!5,colframe=UMN@Maroon!40,title=\textcolor{black}{\textbf{Transverse~(left) and $\rho-Z$ (Right) View}}]
  \centering
 \mbox{
-\includegraphics[height=2.5cm,width=0.35\paperwidth]{THESISPLOTS/Transverse-View-Delayed-Photn-Event.png}
+\includegraphics[height=2.5cm,width=0.35\paperwidth]{THESISPLOTS/Delayed_photon_Event-Rho-Phi.png}
  \quad
-\includegraphics[height=2.5cm,width=0.35\paperwidth]{THESISPLOTS/Delayedphotonrho-Z-view.png}
+\includegraphics[height=2.5cm,width=0.35\paperwidth]{THESISPLOTS/Delayed_photon_Event-Rho-Z.png}
 } 
  \end{tcolorbox}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{\Huge Exclusion Limits}
+\frametitle{Exclusion Limits}
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -1296,7 +1434,7 @@ Using $Z \rightarrow ee$ events.
 \end{frame}
 
 \begin{frame}
-\frametitle{\Huge{$c\tau$-Mass Limits}}
+\frametitle{$c\tau$-mass Limits}
  \begin{minipage}[t]{0.8\linewidth}
  %    \centering
       \includegraphics[height= 8cm,width=0.8\paperwidth]{THESISPLOTS/Neutralino_Ctau-Vs-Lambda_2D_exclusion.pdf}
@@ -1305,6 +1443,74 @@ Using $Z \rightarrow ee$ events.
 % \newline \textcolor{blue} {\texttt{Y. Kats et al: arXiv:1110.6444v2}}
  \end{minipage}
 \end{frame}
+
+\section{SUMMARY}
+{
+\usebackgroundtemplate{%
+\tikz\node[opacity=0.35] {\includegraphics[height=\paperheight,width=\paperwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/PLOTS/CMS_DET.png}};}
+\begin{frame}
+  \begin{center}
+    \textcolor{UMN@Maroon}{\Huge{\textbf{SUMMARY}}}
+  \end{center}
+\end{frame}
+}
+
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+\item Discuss Motivation for New Physics.
+\item Discuss ECAL Timing.
+\item Discuss Search for Long-Lived Particles using ECAL Time.
+\item Looking forward to LHC Run II Results on this Analysis.
+\end{itemize}
+\end{frame}
+
+
+
+
+
+%%% Thank you Page
+{
+\usebackgroundtemplate{%
+\tikz\node[opacity=0.35] {\includegraphics[height=\paperheight,width=\paperwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/PLOTS/CMS_DET.png}};}
+\begin{frame}
+ \begin{center}
+   \textcolor{UMN@Maroon}{\Huge{\textsl{Merci Beaucoup!}} }
+ \end{center}
+ 
+ \begin{minipage}[b]{0.65\textwidth}
+\mbox{
+\includegraphics[height=0.65\textwidth,width=0.65\textwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/THESISPLOTS/darkMatter_Particle.jpg} \quad \quad
+\includegraphics[height=0.65\textwidth,width=0.65\textwidth]{THESISPLOTS/New-Physics-PLOTS/ElusiveParticles.png}
+}
+ \end{minipage}
+\end{frame}
+}
+
+
+%%% Back-Up
+{
+\usebackgroundtemplate{%
+\tikz\node[opacity=0.35] {\includegraphics[height=\paperheight,width=\paperwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/PLOTS/CMS_DET.png}};}
+\begin{frame}
+  \begin{center}
+   \textcolor{UMN@Maroon}{\Huge{\textbf{BACK UP}} }
+  \end{center}
+\end{frame}
+}
+
+\end{document}
+
+%%%-------------------------------------------------------------------------------------
+%\begin{itemize}
+%\begin{large}
+%\item Offset in neutralino $c\tau$ seems to have a more subtle origin than expected. Probably how mass enters into the lifetime definition and implementation at MC generation level.
+%\item GMSB samples with the same sample $c\tau$, hence $C_{grav}$, but with different $\Lambda$ values have different offset factor.
+%\item The observation that the $c\tau$ value for a given sample with $\Lambda$ is different from the measured value is very unclear, even without looking at samples with different $\Lambda$ values.
+%\item Our next step involves understanding cause of this offset.
+%However,due to time constraints, we might continue with upper limit setting considering this difference.
+%\end{large}
+%\end{itemize}
 %others
 %\begin{frame} %---------------------------------------------------------------
 %\frametitle{Are these measurements correct?}
@@ -1420,27 +1626,6 @@ Using $Z \rightarrow ee$ events.
 %\vspace{-1.0cm}
 %\alert{\textit{Private GMSB sample seems to show same offset measurements}}
 %\end{frame}
-\section{Summary}
-\begin{frame}
-\frametitle{\Huge Summary}
-%\begin{itemize}
-%\begin{large}
-%\item Offset in neutralino $c\tau$ seems to have a more subtle origin than expected. Probably how mass enters into the lifetime definition and implementation at MC generation level.
-%\item GMSB samples with the same sample $c\tau$, hence $C_{grav}$, but with different $\Lambda$ values have different offset factor.
-%\item The observation that the $c\tau$ value for a given sample with $\Lambda$ is different from the measured value is very unclear, even without looking at samples with different $\Lambda$ values.
-%\item Our next step involves understanding cause of this offset.
-%However,due to time constraints, we might continue with upper limit setting considering this difference.
-%\end{large}
-%\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-
-\frametitle{Back Up}
-\end{frame}
-
-\end{document}
 %\begin{frame}
 %\frametitle{Introduction}
 %\begin{varblock}[7cm]{Hybrid Linear Modeling}
