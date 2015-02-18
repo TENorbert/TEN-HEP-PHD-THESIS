@@ -9,23 +9,30 @@
 \usetikzlibrary{positioning,arrows}
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{decorations.markings}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor} %% or \usepackage{color}
 \usepackage{tcolorbox}
-\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\tcbuselibrary{skins}
+
 \usepackage{booktabs}
+\usepackage{braket}
 % To Draw Fynman Diags
 \usepackage{feynmp}
-\usepackage{xcolor} % color equations
+%\usepackage{xcolor} % color equations
 \usepackage{amsmath} %,empheq}
 \DeclareGraphicsRule{*}{mps}{*}{}
 
 \usepackage[english]{babel}
-\usepackage{color,mathrsfs,srcltx,amsmath,amssymb}
+\usepackage{mathrsfs,srcltx,amsmath,amssymb}
 %\usepackage[all]{xypic}
 \usepackage{topcapt}
 \usepackage{multicol}
 \setlength{\columnsep}{3cm}
 \usepackage{ragged2e}
-\usepackage{framed, color}
+\usepackage{framed}
 \usepackage{fancybox}
 %\input xy
 %\xyoption{all}
@@ -40,6 +47,13 @@
 \newcommand{\ig}{\includegraphics}
 \newcommand{\subt}[1]{{\footnotesize \color{subtitle} {#1}}}
 \newcommand{\xRightarrow}[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}} %right arrow with text abov
+\newcommand\myeq{\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny def}}}{=}}}
+% Physics symbols ...
+\providecommand{\ET}{\ensuremath{E_{\mathrm{T}}}}
+\newcommand{\ETm}{\ensuremath{E^{\mbox{miss}}_{\mathrm{T}}}}
+\newcommand{\met}{\ensuremath{{\not\mathrel{E}}_T}}
+%\newcommand{\metG}{\ensuremath{{\met}^{\gamma}}\xspace}
+\newcommand{\METG}{\ensuremath{{\ETm}^{\gamma}}}
 %  dimension setup
 \newdimen\beamer@sidebarwidth
 \newdimen\beamer@headheight
@@ -76,6 +90,10 @@
 \definecolor{UMN@Maroon}{RGB}{123,17,19}
 \definecolor{UMN@Gold}{RGB}{255,215,0}
 
+
+\tcbset{tab2/.style={enhanced,fonttitle=\bfseries,fontupper=\normalsize\sffamily,
+colback=UNL@LightGrey!10!white,colframe=black!50!black,colbacktitle=UNL@LightGrey!40!white,
+coltitle=black,center title}}
 
 \def\beamer@lefttext{left}
 % Private bullet styles
