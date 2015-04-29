@@ -290,7 +290,7 @@ Observation of SM coupling constants varying with energy begs the question of wh
 
 \item \textbf{Mass Hierarchy or Naturalness} \mbox{}\\
 Particle masses ranges from neutrino masses, a few eV to the \textsf{top} particle's mass of 173~\GeVcc.
-The SM does not provide and answer for this mass hierarchy.
+The SM does not explain this mass hierarchy.
 To some physicist, the energy gap between the electro-weak symmetry breaking energy scale~( $\approx 246$~\GeV) and the Planck energy scale~(reduced Planck mass, $M_{p} = 10^{18}$~\GeV) seems unnatural.
 
 % The SM only accounts for how particles obtain their mass through their interaction with a scalar field~(spin-0), the Higgs boson. However, the experimental observation of this particles mass hierarchy is not understood. Infact according to the SM, neutrinos have no mass. 
@@ -301,91 +301,126 @@ To some physicist, the energy gap between the electro-weak symmetry breaking ene
 
 \section{Beyond Standard Model Physics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The SM predictions of the value of the Higgs boson's mass recommend additional contributions from \textit{quantum fluctuations}~(higher order or loop corrections) which are very large~(can as well be infinite). However, the observed experimentally measured value of the Higgs mass~($m_{H} \approx 125$~\GeV). This unobserved large corrections to the experimentally measured value requires some understanding. A possible explanation is that these various contributions cancel on average producing a net zero effect on the true Higgs mass such that the physically observed mass is as measured. If such cancellation is a true phenomenon in nature, then it is only logical to inquire the origin of this cancellations. Obviously this cannot be understood within the frame work of the SM. 
+%The SM predictions of the value of the Higgs boson's mass recommend additional contributions from \textit{quantum fluctuations}~(higher order or loop corrections) which are very large~(can as well be infinite). However, the observed experimentally measured value of the Higgs mass~($m_{H} \approx 125$~\GeV). This unobserved large corrections to the experimentally measured value requires some understanding. A possible explanation is that these various contributions cancel on average producing a net zero effect on the true Higgs mass such that the physically observed mass is as measured. If such cancellation is a true phenomenon in nature, then it is only logical to inquire the origin of this cancellations. Obviously this cannot be understood within the frame work of the SM. 
 
-Consequently, theories beyond the SM like \textit{supersymmetry} provide a natural understanding of how these various contributions cancel on average arriving at the physically observed and measured Higgs mass. To expand further, the mass of a particle can be expressed as 
-\begin{equation}
- m^{2}_{\mbox{physical}} = m^{2}_{\mbox{bare}} + \delta m^{2}_{1}
+%Consequently, theories beyond the SM like \textit{supersymmetry} provide a natural understanding of how these various contributions cancel on average arriving at the physically observed and measured Higgs mass. To expand further, the mass of a particle can be expressed as 
+%\begin{equation}
+% m^{2}_{\mbox{physical}} = m^{2}_{\mbox{bare}} + \delta m^{2}_{1}
+%\end{equation}
+
+%where $m^{2}_{\mbox{physical}}$ is the physically measured mass of the Higgs boson,  $m^{2}_{\mbox{bare}}$ is the true  universe given mass of the particle which cannot be calculated or measured. $\delta m^{2}_{1}$ are corrections from quantum fluctuations to the true mass which can be calculated. Using the measured mass and the calculated  quantum corrections, one can obtain the true Higgs mass. These contributions from quantum fluctuations can arise from both bosons and fermions. Since the Higgs boson can interact~(by coupling) with every particle through interactions of the general form $\lambda_{f}H\bar{f}f$ for fermions and $\lambda_{S}|H|^{2}S^{2}$ for scalar or bosons;  with $\lambda_{f}$ and $\lambda_{S}$ representing the coupling constants which need not be equal. The Feynman diagrams in \ref{fig:Hmass} represents a few of such quantum fluctuations with both fermion and boson contributions computed as:
+%Putting Figures side by side.
+The Higgs boson mass from SM predictions include additional corrections,$\delta m^{2}$, to the higgs mass through its couplings with fermions such as that shown in figure \ref{fig:HM}(a). These additional corrections are given as shown in equation \ref{eq:HFermion}.
+
+\begin{equation}{\label{eq:HFermion}}
+\delta m^{2}_{f} = \frac{1}{16\pi^{2}}|\lambda_{f}|^{2}\left(-2\Lambda^{2} + 6m^{2}_{f}\ln\left(\frac{\Lambda}{m_{f}}\right) + ...\right) 
 \end{equation}
-
-where $m^{2}_{\mbox{physical}}$ is the physically measured mass of the Higgs boson,  $m^{2}_{\mbox{bare}}$ is the true  universe given mass of the particle which cannot be calculated or measured. $\delta m^{2}_{1}$ are corrections from quantum fluctuations to the true mass which can be calculated. Using the measured mass and the calculated  quantum corrections, one can obtain the true Higgs mass. These contributions from quantum fluctuations can arise from both bosons and fermions. Since the Higgs boson can interact~(by coupling) with every particle through interactions of the general form $\lambda_{f}H\bar{f}f$ for fermions and $\lambda_{S}|H|^{2}S^{2}$ for scalar or bosons;  with $\lambda_{f}$ and $\lambda_{S}$ representing the coupling constants which need not be equal. The Feynman diagrams in \ref{fig:Hmass} represents a few of such quantum fluctuations with both fermion and boson contributions computed as:
-
+Where $\lambda_{f}$ is the Higgs to fermion coupling, $\lambda_{f}H\bar{f}f$ and $\Lambda$ is an arbitrarily large energy scale~(can be of order $10^{18}$\GeV) called the \textit{cut-off} energy scale. 
+ As a result of this cut-off scale being very large, these corrections can also be very large.
+However, large corrections to the higgs boson's mass are not observed in experimental measurements of the higgs boson's mass which is only, $m_{H} \approx 125$~\GeVcc.
+The SM provide no explanation why these corrections are not observed.
 \begin{center}
+%\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=0.70\textwidth]{THESISPLOTS/Higgs_MassFermion.png}
+%\captionof{figure}{Higgs fermion coupling}
+%\label{fig:HMassL}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=0.70\textwidth]{THESISPLOTS/Higgs_MassScalar.png}
+%\caption{Higgs scalar coupling}
+%\label{fig:HMassL}
+\end{minipage}
+%\end{figure}
+\captionof{figure}{Higgs mass contributions from its coupling to fermions~(a) and scalar~(b) fields.}
+\label{fig:HM}
+\end{center}
+%\begin{center}
 %\centering
 %\mbox{
-\includegraphics[height=5cm,width=0.5\linewidth]{THESISPLOTS/Higgs_Hirrachy_Problem.png}
-\captionof{figure}{Higgs self energy diagrams showing how the higgs boson mass is computed from both Higgs field and supersymmetric partner particle contributions.}
-\label{fig:Hmass}
-\end{center}
-
-\begin{equation}
-\delta m^{2}_{1,f} = \frac{1}{16\pi^{2}}|\lambda_{f}|^{2}\left(-2\Lambda^{2} + 6m^{2}_{f}\ln\left(\frac{\Lambda}{m_{f}}\right) + ...\right) 
+%\includegraphics[height=5cm,width=0.5\linewidth]{THESISPLOTS/Higgs_Hirrachy_Problem.png}
+%\captionof{figure}{Higgs self energy diagrams showing how the higgs boson mass is computed from both Higgs field and supersymmetric partner particle contributions.}
+%\label{fig:Hmass}
+%\end{center}
+Models beyond the SM like \textit{supersymmetry}, provide a plausible explanation as to why these corrections are not observed in experiments.  The explanations is that, there are in addition to the higgs boson being the only scalar particle in the SM,
+new  scalar particles, yet to be observed, which can also couple to the higgs field as shown in the diagram in figure \ref{fig:HM}(b). These scalar coupling contribution, given in equation \ref{eq:HScalar}, unlike fermion coupling contribution, is of the opposite sign and and thus cancel the fermion contribution to the higgs boson's mass. As a result cannot be oberved experimentally.
+\begin{equation}{\label{eq:HScalar}}
+\delta m^{2}_{S} = \frac{1}{16\pi^{2}}|\lambda_{S}|^{2}\left(\Lambda^{2} - 2m^{2}_{S}\ln\left(\frac{\Lambda}{m_{S}}\right) + ...\right) 
 \end{equation}
-
-\begin{equation}
-\delta m^{2}_{1,S} = \frac{1}{16\pi^{2}}|\lambda_{S}|^{2}\left(\Lambda^{2} - 2m^{2}_{S}\ln\left(\frac{\Lambda}{m_{S}}\right) + ...\right) 
-\end{equation}
-$\Lambda$ is some \textit{cut-off} energy scale where a another kind of physics interaction like gravity at a much higher energy scale is needed to regulate the low energy behavior of the SM. $\Lambda$ could be the reduced Planck scale(~ $10^{18}$~\GeV).  A quick observation from this calculations is that; first, corrections to the higgs bare mass, $m^{2}_{\mbox{bare}}$ are not proportional to the Higgs mass.
+This problem is known as the \textit{Hierarchy problem} and is explained using suppersymmetry. This cancellation is provided
+at all levels of the higgs boson interaction and for whatever energy scale the cut-off value can be.
+%$\Lambda$ is some \textit{cut-off} energy scale where a another kind of physics interaction like gravity at a much higher energy scale is needed to regulate the low energy behavior of the SM. $\Lambda$ could be the reduced Planck scale(~ $10^{18}$~\GeV).  A quick observation from this calculations is that; first, corrections to the higgs bare mass, $m^{2}_{\mbox{bare}}$ are not proportional to the Higgs mass.
 %( in other cases like as is the case with other SM particles like the electron\cite{}.
-Second, these corrections are of the order of $\approx 10^{36}~\GeV^{2}$  bringing positive and negative contributions from fermions or scalar bosons respectively.
-Even with these corrections to the true Higgs mass, the measured~(physical) Higgs mass squared, $m^{2}_{H,\mbox{physical}}$, is of the order $\approx 10^{4}~\GeV^{2}$.
-Since the true Higgs mass, $m^{2}_{H,\mbox{bare}}$, is never measured or known, an agreement between these quantum fluctuation contributions and physical Higgs mass is realized  if only the true Higgs mass, $m^{2}_{H,\mbox{bare}}$,  is \textit{fine-tuned} with a precision of about 1 in $10^{17}$. This enormous fine-tuning is considered a fundamental issue of not enough understanding of the Higgs mechanism of the SM and is considered \textit{unnatural}. 
+%Second, these corrections are of the order of $\approx 10^{36}~\GeV^{2}$  bringing positive and negative contributions from fermions or scalar bosons respectively.
+%Even with these corrections to the true Higgs mass, the measured~(physical) Higgs mass squared, $m^{2}_{H,\mbox{physical}}$, is of the order $\approx 10^{4}~\GeV^{2}$.
+%Since the true Higgs mass, $m^{2}_{H,\mbox{bare}}$, is never measured or known, an agreement between these quantum fluctuation contributions and physical Higgs mass is realized  if only the true Higgs mass, $m^{2}_{H,\mbox{bare}}$,  is \textit{fine-tuned} with a precision of about 1 in $10^{17}$. This enormous fine-tuning is considered a fundamental issue of not enough understanding of the Higgs mechanism of the SM and is considered \textit{unnatural}. 
 %The fact that, among the numerous SM predictions, no other scalar particle except the possible Higgs boson candidate has been observed so far, further makes such a fine-tuning difficult to understood. 
-On the other hand, in suppersymmetry, the fermion one loop quantum correction which comes with an opposite sign to the scalar quantum fluctuation corrections and $\lambda_{f} = \lambda_{S}$ ,there is a complete  cancellation and this discrepancy of the unobserved effects of these quantum fluctuations to the $m^{2}_{H,\mbox{bare}}$ in the $m^{2}_{H,\mbox{physical}}$ is understood. 
+%On the other hand, in suppersymmetry, the fermion one loop quantum correction which comes with an opposite sign to the scalar quantum fluctuation corrections and $\lambda_{f} = \lambda_{S}$ ,there is a complete  cancellation and this discrepancy of the unobserved effects of these quantum fluctuations to the $m^{2}_{H,\mbox{bare}}$ in the $m^{2}_{H,\mbox{physical}}$ is understood. 
 % Another interpretation of this issue is through the question of why there is so much difference in energy scale between the electroweak scale \textit{O}(100~\GeV) and the Planck energy scale \textit{O}($10^{19}$~\GeV) where gravity effects to particle interaction becomes significant?. This is referred to as the \textit{Hierarchy problem} stated above as one of the motivation to go beyond SM.
-\paragraph*{}
-In addition to explaining the origin of this perceived \textit{fine-tuning} issue, supersymmetry also provides a natural framework for the unification of fundamental forces, not possible in the SM.
-If the SM is believed to be an incomplete and low energy description of nature of a possible parent and more fundamental theory like supersymmetry, then one would expect that the symmetry groups of the SM be a subset of some larger parent group, $\mathcal{G}$; i.e $\displaystyle{SU(3)_{C} \otimes SU(2)_{L} \otimes U(1)_{Y} \subset \mathcal{G}}$.
+Supersymmetry does not only provide an explanation to the Hierarchy problem, but also provide a good framework for
+the unification of fundamental forces. Supersymmetry also predicts the existence of additional particles to the SM which are
+non interacting with ordinary matter and having very long lifetime making these particles exceptional candidates as dark matter
+particles. These properties motivates the study of supersymmetry as an interesting extension of the SM for understanding
+physics beyond the SM~(BSM).
+%In addition to explaining the origin of this perceived \textit{fine-tuning} issue, supersymmetry also provides a natural framework for the unification of fundamental forces, not possible in the SM.
+%If the SM is believed to be an incomplete and low energy description of nature of a possible parent and more fundamental theory like supersymmetry, then one would expect that the symmetry groups of the SM be a subset of some larger parent group, $\mathcal{G}$; i.e $\displaystyle{SU(3)_{C} \otimes SU(2)_{L} \otimes U(1)_{Y} \subset \mathcal{G}}$.
 %It is believed that at a higher energy scale since SM seems to be describing the  behavior of some parent theory, the electromagnetic, weak and strong interactions all become one interaction just as the electromagnetic and weak interaction unified into the electro-weak interaction as the electro-weak energy scale $\approx 100$~\GeV. i.e
 %$\mathcal{G}$ is some larger symmetry group. In SM, this does not happen at any higher energy scale. However, in 
-In suppersymmetry, This unification of forces or couplings of electromagnetic, weak and strong interactions occur at the \textit{Grand Unified Energy}~(GUT) energy scale of $\approx 10^{15}$~\GeV \cite{SM}.
+%In suppersymmetry, This unification of forces or couplings of electromagnetic, weak and strong interactions occur at the \textit{Grand Unified Energy}~(GUT) energy scale of $\approx 10^{15}$~\GeV \cite{SM}.
 %This effect can be seen in the following figures as taken from \cite{}.
 %\begin{equation}
 %Plot showing Unification of Coupling Constants.
 %\end{equation}
-
-\clearpage
-
+%%\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Supersymmetry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In relativistic Quantum Field Theory~(QFT), the idea of symmetry or group theory is used to provide a better understanding of fundamental particles and their properties. These symmetries belong to two broad categories: space-time symmetries known as Poincar\'{e}(i.e rotation and translation) symmetries and gauge ( such as $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$ with quantum numbers; color, weak and hypercharge respectively of the SM) symmetries. With the SM viewed as a low energy version of a more large and unified theory,  
-%that all fundamental forces including gravity could be unified 
-%In a quest to include gravitational interaction along with all the other forces of nature into a unique frame work called unification, 
-it was believed that combining these two classes of symmetries into one big class of symmetry could lead the way towards the development of this unified theory. However, Coleman and Mandula\cite{SUSY}, in their so-called "\textit{no-go}" theorem in 1967  showed that pursuing the approach of \textit{direct product} of the two super groups  was not possible. %Thus these two class of symmetries cannot be combined into a bigger parent symmetry. 
-The challenge was finding a scenario where the generators of both space-time $P^{\mu}$, $M^{\mu\nu} $  and gauge groups $T^{a}$, do not commute with each other; i.e $ \left[M^{\mu\nu}, T^{a}\right] \neq 0$ and yet remains a direct product of both symmetry groups, considering that the direct product of these groups do commute; i.e
-%the generators of these groups; $P^{\mu}, M^{\mu\nu}$ and $T^{a}$ corresponding to these symmetries have a direct product;  Poincar\'{e} $\times$Gauge group, for which
-$ \left[P^{\mu}, T^{a}\right] = \left[M^{\mu\nu}, T^{a}\right] = 0$. 
-\newline
-This \textit{no-go} theorem prevents the possibility of finding a parent group where its generators are constructed from \textit{Lorentz} tensors. Thus, only symmetries  generated from \textit{spinoral}~(particle's spin) charges instead of \textit{tensorial}~(space-time) charges were possible. In 1975, Haag, Lapuszanski and Sohnius \cite{MSUSY} found such a group theorem known as the \textit{Haag-Lapuszanski-Sohnius} theorem with its corresponding generator algebra called the \textit{Lie-superalgebra} or the \textit{supersymmetry algebra}.  This supersymmetry algebra extended the commutative aspect of the Poincar\'{e} algebra to include \textit{anticommuting} symmetry generators.
-\newline
-\textit{Lie-superalgebra} generators, $\mathrm{Q}_{i}$, $i = 1,...,\mathrm{N}$, where $\mathrm{N}$ is the number of supersymmetry generators, anti-cummute with the group and space-time generators.  % as shown in equation \ref{eq:SUSYGEN}. 
-Supersymmetry is a well developed and advanced branch in theoretical physics where the number of supersymmetry generators can be any number. However, this thesis only considers the case where there is only one generator of supersymmetry; i.e $\mathrm{N} = 1$. This is the minimal  version of supersymmetry. 
- The generators $\mathrm{Q_{1}} \equiv \mathrm{Q^{\alpha}}$, where $\alpha=1,2$ is labeling \textit{Weyl or two spinor} components,  and its hermitian conjugate, $\mathrm{\bar{Q}_{\alpha}}$, must satisfy the relations given in equation \ref{eq:SUSYGEN}.
-\begin{eqnarray}{\label{eq:SUSYGEN}}             
-\left\lbrace\mathrm{Q_{\alpha}}, \mathrm{\bar{Q}_{\beta}}\right\rbrace =  2\left(\gamma^{\mu}\right)_{\alpha\beta}P^{\mu}, &
-\left[\mathrm{Q_{\alpha}},P^{\mu}\right] = 0, &
-\left[\mathrm{Q_{\alpha}}, M^{\mu\nu}\right] =\frac{1}{2}\left(\Sigma^{\mu\nu}\right)_{\alpha}^{\beta}\mathrm{Q_{\beta}}
-\end{eqnarray}
-
-%$\gamma^{\mu}$ is define such that 
-Where $\left\lbrace \gamma^{\mu}, \gamma^{\nu}\right\rbrace = 2\mathrm{g^{\mu\nu}}$ and  $\Sigma^{\mu\nu} = \frac{i}{2}\left[\gamma^{\mu},\gamma^{\nu}\right]$ 
-. %and $\mathrm{\bar{Q}_{\alpha}}$ is the Hermitian conjugate to $\mathrm{Q}$.
-These relations in equation \ref{eq:SUSYGEN} reveal two very fundamental consequences of supersymmetry:
-\begin{itemize}
-\item  Particles in a given state~(\textit{supermultiplet}) have the same mass but differ in their spin by half $\hbar$ unit.
-\item In every irreducible representation of supersymmetry, there is an equal number of fermionic and bosonic degrees of freedom. 
-\end{itemize}
-Thus, supersymmetry is the symmetry which transforms particles from one spin into another with the same mass. As a consequence, supersymmetry generators transform fermions into bosons and bosons into fermions with the same mass.
-\begin{eqnarray}
+Suppersymmetry is a relativistic Quantum Field Theory~(QFT), relating space-time symmetries~(rotation and translation) and 
+gauge symmetries~($SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$).
+Its breakthrough understanding resulted from the \textit{Haag-Lapuszanski-Sohnius} theorem, Ref.\cite{MSUSY}, by Haag, Lapuszanski and Sohnius 
+in 1975. This let to the introduction of supersymmetry generators called \textit{Lie-superalgebra} generators, $\mathrm{Q}_{i}$, $i = 1,...,\mathrm{N}$, where $\mathrm{N}$ is the number of supersymmetry generators, which anti-cummute with the group and space-time generators. The consequence is that fermions can be transformed into bosons and vice-versa according to the 
+equations \ref{eq:SUSY}.
+\begin{eqnarray}{\label{eq:SUSY}}
 \mathrm{Q}|\textbf{Fermion}\rangle =|\textbf{Boson}\rangle,    &
 \mathrm{Q}|\textbf{Boson}\rangle  =|\textbf{Fermion} \rangle 
 \end{eqnarray}
-This reveals that, in supersymmetry, every particle has a supersymmetric partner with the same mass lying in the same representation or supermultiplets.
+Thus, in supersymmetry, particles in a given state  have the \textit{same} mass but differ in their spin by half $\hbar$ unit and in every irreducible representation of supersymmetry, there is an equal number of fermionic and bosonic degrees of freedom. Every particle has a supersymmetric partner with the same mass belonging to the same  state representation or \textit{supermultiplet}.
+
+%In relativistic Quantum Field Theory~(QFT), the idea of symmetry or group theory is used to provide a better understanding of fundamental particles and their properties. These symmetries belong to two broad categories: space-time symmetries known as Poincar\'{e}(i.e rotation and translation) symmetries and gauge ( such as $SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$ with quantum numbers; color, weak and hypercharge respectively of the SM) symmetries. With the SM viewed as a low energy version of a more large and unified theory,  
+%that all fundamental forces including gravity could be unified 
+%In a quest to include gravitational interaction along with all the other forces of nature into a unique frame work called unification, 
+%it was believed that combining these two classes of symmetries into one big class of symmetry could lead the way towards the development of this unified theory. However, Coleman and Mandula\cite{SUSY}, in their so-called "\textit{no-go}" theorem in 1967  showed that pursuing the approach of \textit{direct product} of the two super groups  was not possible. %Thus these two class of symmetries cannot be combined into a bigger parent symmetry. 
+%The challenge was finding a scenario where the generators of both space-time $P^{\mu}$, $M^{\mu\nu} $  and gauge groups $T^{a}$, do not commute with each other; i.e $ \left[M^{\mu\nu}, T^{a}\right] \neq 0$ and yet remains a direct product of both symmetry groups, considering that the direct product of these groups do commute; i.e
+%the generators of these groups; $P^{\mu}, M^{\mu\nu}$ and $T^{a}$ corresponding to these symmetries have a direct product;  Poincar\'{e} $\times$Gauge group, for which
+%$ \left[P^{\mu}, T^{a}\right] = \left[M^{\mu\nu}, T^{a}\right] = 0$. 
+%\newline
+%This \textit{no-go} theorem prevents the possibility of finding a parent group where its generators are constructed from \textit{Lorentz} tensors. Thus, only symmetries  generated from \textit{spinoral}~(particle's spin) charges instead of \textit{tensorial}~(space-time) charges were possible. In 1975, Haag, Lapuszanski and Sohnius \cite{MSUSY} found such a group theorem known as the \textit{Haag-Lapuszanski-Sohnius} theorem with its corresponding generator algebra called the \textit{Lie-superalgebra} or the \textit{supersymmetry algebra}.  This supersymmetry algebra extended the commutative aspect of the Poincar\'{e} algebra to include \textit{anticommuting} symmetry generators.
+%\newline
+%\textit{Lie-superalgebra} generators, $\mathrm{Q}_{i}$, $i = 1,...,\mathrm{N}$, where $\mathrm{N}$ is the number of supersymmetry generators, anti-cummute with the group and space-time generators.  % as shown in equation \ref{eq:SUSYGEN}. 
+%Supersymmetry is a well developed and advanced branch in theoretical physics where the number of supersymmetry generators can be any number. However, this thesis only considers the case where there is only one generator of supersymmetry; i.e $\mathrm{N} = 1$. This is the minimal  version of supersymmetry. 
+% The generators $\mathrm{Q_{1}} \equiv \mathrm{Q^{\alpha}}$, where $\alpha=1,2$ is labeling \textit{Weyl or two spinor} components,  and its hermitian conjugate, $\mathrm{\bar{Q}_{\alpha}}$, must satisfy the relations given in equation \ref{eq:SUSYGEN}.
+%\begin{eqnarray}{\label{eq:SUSYGEN}}             
+%\left\lbrace\mathrm{Q_{\alpha}}, \mathrm{\bar{Q}_{\beta}}\right\rbrace =  2\left(\gamma^{\mu}\right)_{\alpha\beta}P^{\mu}, &
+%\left[\mathrm{Q_{\alpha}},P^{\mu}\right] = 0, &
+%\left[\mathrm{Q_{\alpha}}, M^{\mu\nu}\right] =\frac{1}{2}\left(\Sigma^{\mu\nu}\right)_{\alpha}^{\beta}\mathrm{Q_{\beta}}
+%\end{eqnarray}
+%$\gamma^{\mu}$ is define such that 
+%Where $\left\lbrace \gamma^{\mu}, \gamma^{\nu}\right\rbrace = 2\mathrm{g^{\mu\nu}}$ and  $\Sigma^{\mu\nu} = \frac{i}{2}\left[\gamma^{\mu},\gamma^{\nu}\right]$ 
+%. %and $\mathrm{\bar{Q}_{\alpha}}$ is the Hermitian conjugate to $\mathrm{Q}$.
+%These relations in equation \ref{eq:SUSYGEN} reveal two very fundamental consequences of supersymmetry:
+%\begin{itemize}
+%\item  Particles in a given state~(\textit{supermultiplet}) have the same mass but differ in their spin by half $\hbar$ unit.
+%\item In every irreducible representation of supersymmetry, there is an equal number of fermionic and bosonic degrees of freedom. 
+%\end{itemize}
+%Thus, supersymmetry is the symmetry which transforms particles from one spin into another with the same mass. As a consequence, supersymmetry generators transform fermions into bosons and bosons into fermions with the same mass.
+
+%This reveals that, in supersymmetry, 
 % chosen such that every SM particle with spin 0,$\frac{1}{2}$, 1, 2 have a partner with spin $\frac{1}{2}$,0,$\frac{1}{2}$,$\frac{3}{2}$ respectively in the same supermultiplets.
-These supermultiplets are either \textit{Chiral}, \textit{Vector} or \textit{Gravity} multiplets. The minimal supersymmetric extension of SM uses Chiral and Vector supermultiplets. 
-The following table shows the different supermultiplets as encountered in supersymmetry.
+These supermultiplets are either \textit{Chiral}, \textit{Vector} or \textit{Gravity} multiplets. The minimal supersymmetric extension of SM uses Chiral and Vector supermultiplets shown in Table \ref{tab:SUSYM}.
 
 \begin{center}
 \centering
@@ -399,44 +434,40 @@ The following table shows the different supermultiplets as encountered in supers
 \textit{Chiral} &$\frac{1}{2}$ & $0$ \\   \hline
 \textit{Vector} & $1$ & $\frac{1}{2} $ \\ \hline
 \textit{Gravity} & $2$ & $\frac{3}{2} $ \\
-
 \hline \hline
 \end{tabular}
 \captionof{table}{Supermultiplets and particle spin in SM and Supersymmetry.}
 \label{tab:SUSYM} 
 \end{center}
 
-
-
-In addition to an algebraic approach to supersymmetry described so far, in order to build models~(supersymmetric Lagrangians) and make predictions, we return to the idea of fields as used in supersymmetry. Supersymmetric fields are called \textit{superfields}~( proposed and realized by Abdus Salam and Strathdee \cite{SALAM, SUSYBOOK}) are fields defined on a superspace; an ordinary Minkowski space-time, $x^{\mu}$ and four anti-commuting \textit{Grassmann} numbers, $\theta$. More on this can be seen in  \cite{SUSYBOOK}.
-These superfields are operator-valued functions, \textbf{$\Phi$}, on a superspace represented by, \textbf{$\Phi\left(x^{\mu},\theta,\bar{\theta}\right)$}.
-Its components consist of ordinary scalar fields~(real or complex), Lorentz vector fields and Left-handed or Right-Handed Weyl(2 degrees of freedom) spinor fields, \textbf{$\Phi\left(x^{\mu},\theta,\bar{\theta}\right) \supset (\phi, \psi, A_{\mu}, F)$}.
-Table \ref{tab:SUSYF} shows an example of the components which make up the  superfield~( or supermultiplets) with each component representing a SM particle and its super partner with the same mass. Only the Chiral and Vector  superfields are used in constructing the minimal supersymmetric version of standard model
-
-\begin{center}
-\centering
-\begin{tabular}{|c| c|}
+Models in supersymmetry are build using \textit{superfields},\textbf{$\Phi$}. A given superfield consists of
+ordinary scalar real or complex fields~($\phi$), a Lorentz vector field~($ A_{\mu} $) and Left-handed or Right-Handed Weyl(2 degrees of freedom) spinor fields~($\psi$). \textit{Chiral} and \textit{Vector} superfields are used in constructing the minimal supersymmetric standard model.
+%In addition to an algebraic approach to supersymmetry described so far, in order to build models~(supersymmetric Lagrangians) and make predictions, we return to the idea of fields as used in supersymmetry. Supersymmetric fields are called \textit{superfields}~( proposed and realized by Abdus Salam and Strathdee \cite{SALAM, SUSYBOOK}) are fields defined on a superspace; an ordinary Minkowski space-time, $x^{\mu}$ and four anti-commuting \textit{Grassmann} numbers, $\theta$. More on this can be seen in  \cite{SUSYBOOK}.
+%These superfields are operator-valued functions, \textbf{$\Phi$}, on a superspace represented by, \textbf{$\Phi\left(x^{\mu},\theta,\bar{\theta}\right)$}.
+%Its components consist of ordinary scalar fields~(real or complex), Lorentz vector fields and Left-handed or Right-Handed Weyl(2 degrees of freedom) spinor fields, \textbf{$\Phi\left(x^{\mu},\theta,\bar{\theta}\right) \supset (\phi, \psi, A_{\mu}, F)$}.
+%Table \ref{tab:SUSYF} shows an example of the components which make up the  superfield~( or supermultiplets) with each component representing a SM particle and its super partner with the same mass. Only the Chiral and Vector  superfields are used in constructing the minimal supersymmetric version of standard model
+%\begin{center}
+%\centering
+%\begin{tabular}{|c| c|}
 %\mbox{Supersymmetry multipletes and spin }
-\hline
-\bfseries{Superfields or supermultipltes } & \bfseries {Components}\\
-\hline
-\textit{Chiral} & $(\psi, \phi, F)$ \\
-\textit{Vector} & $(A_{\mu},\lambda, D)$ \\
-\textit{Gravity} & $ (G_{\mu\nu}, ... ) $ \\
-
-\hline \hline
-\end{tabular}
-\captionof{table}{Supermultiplets and components in Supersymmetry.}
-\label{tab:SUSYF} 
-\end{center}
+%\hline
+%\bfseries{Superfields or supermultipltes } & \bfseries {Component Fields}\\
+%\hline
+%\textit{Chiral} & $(\psi, \phi, F)$ \\
+%\textit{Vector} & $(A_{\mu},\lambda, D)$ \\
+%\textit{Gravity} & $ (G_{\mu\nu}, ... ) $ \\
+%\hline \hline
+%\end{tabular}
+%\captionof{table}{Supermultiplets and components in Supersymmetry.}
+%\label{tab:SUSYF} 
+%\end{center}
+The simplest supersymmetric model is an extendsion of the SM to include supersymmetric particles with the same mass
+as their standard model partners. It is called the \textit{Minimal Supersymmetric Standard Model} because it only involves the 
+use of a single supersymmetry generator.
 
 \subsection{Minimal Supersymmetric Standard Model}
-The Minimal Supersymmetric Standard Model~(MSSM) is an extension of the SM to include supersymmetric particles. Supersymmetric particles have almost the same name as SM particles with the only difference being the addition of an s in front of the SM particles's name e.g a \textit{selectron} is the supersymmetric particle of and electron, \textit{squarks} are the supersymmetric particles of SM quarks. There are exceptions to this nomenclature. In order for supersymmetry~(SUSY) predictions to be agreement with observations from experiments, SUSY must be realized as a broken symmetry in nature.
-%As a result, the already 19 free parameters of the SM is increased with more additional 105 free parameters. These are a lot of parameters for any fundamental theory describing elementary particle  interactions and thus undermines its predictive power. Thus, a generic or parent theory must be preferred in which the number of free parameters for the theory to predict is much reduced. Through this way, it is much easier to study the  phenomenological aspect of the theory. 
-The type is which SUSY is broken allows for different models with different phenomenology to be expected from predictions made by these models. If the SUSY breaking is communicated through gravitational interaction, such class of models are called \textit{Gravity Breaking SUSY Models}~(mSUGRA) with instead of the 19 fundamental parameters as in the SM, only 6 parameters are needed to explain all our observed particle phenomenology. If instead SUSY breaking is purely  because of gauge interactions, this class of models are \textit{Gauge Mediated Supersymmetry Breaking}~(GMSB) models with only 5 fundamental parameters. Other SUSY models like \text{Anomalous Supersymmetry Breaking}~(ASB) having 6 parameters have been proposed.
-\newline
-This thesis only discusses GMSB models as they have favorable theoretical benefits like being flavor blind as well as predict the existence of long lived particles which opens up a whole new technique to search for supersymmetric particles in hadron collider or related particle physics experiments.
-Table \ref{tab:SUSYP} and \ref{tab:SUSYG} shows SM particles and their supersymmetric counterparts as understood through the MSSM framework.
+In the Minimal Supersymmetric Standard Model~(MSSM), the number of fundamental particles is increased.
+The full particle content in MSSM with this extension from SM is shown in Table \ref{tab:SUSYP} and \ref{tab:SUSYG}.
 \begin{center}
 \centering
 \begin{tabular}{|l |l| l| l| l|}
@@ -444,7 +475,6 @@ Table \ref{tab:SUSYP} and \ref{tab:SUSYG} shows SM particles and their supersymm
 \hline
 \bfseries{Particle Names} &\bfseries{Symbol}  & \bfseries {spin 0} & \bfseries{spin 1/2} & \bfseries{$SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$} \\
 \hline \hline
-
 squarks, quarks
 ($ \times 3$ families) & $Q$ & $(\tilde{u_{L}}, \tilde{d_{L}})$ & $(u_{L}, d_{L})$ & $(\mathbf{3}, \mathbf{2}, \frac{1}{6})$ \\
     & $\bar{u}$ & $\tilde{u}^{\star}_{R}$ & $u^{\dagger}_{R}$ &
@@ -471,7 +501,7 @@ higgsinos, Higgs & $H_{u}$ & $(H^{+}_{u}, H^{\circ}_{u})$ & $(\tilde{H}^{+}_{u},
 \begin{tabular}{|l|l| l| l|}
 %\mbox{Supersymmetry multipletes and spin }
 \hline
-\bfseries{Particle Names} & \bfseries {spin 1/2} & \bfseries{spin 0} & \bfseries{$SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$} \\
+\bfseries{Particle Names} & \bfseries {spin 1/2} & \bfseries{spin 1} & \bfseries{$SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$} \\
 \hline \hline
 gluino, gluon & $\tilde{g}$  & $g$ &  $(\mathbf{8}, \mathbf{1}, 0)$ \\
 \hline
@@ -484,116 +514,140 @@ bino, $B$ boson & $\tilde{B}^{\circ}$ & $ B^{\circ}$  & $(\mathbf{1}, \mathbf{1}
 \label{tab:SUSYG} 
 \end{center}
 
+The nomenclature of supersymmetric particles in derived from their SM counterparts by adding an s in front of the SM particles's name e.g a \textit{selectron} is the supersymmetric particle of the electron, \textit{squarks} are the supersymmetric particles of SM quarks. There are exceptions to this nomenclature which we will mentioned later. Both supersymmetry particles and their SM partners must have the same mass, however,
+there have been no experimental evidence for such supersymmetric particles having the same mass as SM particles. Thus,
+Supersymmetry is definitely not a fundamental symmetry in nature and must be broken. 
 
-In SUSY, the superpotential which allows for SUSY breaking defines the phenomenology and particle mass spectrum in any given SUSY model.
-In MSSM, this superpotential is given as seen in eqn \ref{eq:SUSYEQ}.
+%In order for supersymmetry~(SUSY) predictions to be agreement with observations from experiments, SUSY must be realized as a broken symmetry in nature.
+%As a result, the already 19 free parameters of the SM is increased with more additional 105 free parameters. These are a lot of parameters for any fundamental theory describing elementary particle  interactions and thus undermines its predictive power. Thus, a generic or parent theory must be preferred in which the number of free parameters for the theory to predict is much reduced. Through this way, it is much easier to study the  phenomenological aspect of the theory. 
+%The type is which SUSY is broken allows for different models with different phenomenology to be expected from predictions made by these models. If the SUSY breaking is communicated through gravitational interaction, such class of models are called \textit{Gravity Breaking SUSY Models}~(mSUGRA) with instead of the 19 fundamental parameters as in the SM, only 6 parameters are needed to explain all our observed particle phenomenology. If instead SUSY breaking is purely  because of gauge interactions, this class of models are \textit{Gauge Mediated Supersymmetry Breaking}~(GMSB) models with only 5 fundamental parameters. Other SUSY models like \text{Anomalous Supersymmetry Breaking}~(ASB) having 6 parameters have been proposed.
+%\newline
+%This thesis only discusses GMSB models as they have favorable theoretical benefits like being flavor blind as well as predict the existence of long lived particles which opens up a whole new technique to search for supersymmetric particles in hadron collider or related particle physics experiments.
+
+
+%One of the ways in which supersymmetry 
+%Table \ref{tab:SUSYP}  shows SM particles and their supersymmetric counterparts as understood through the MSSM framework.
+In a similar fashion to the Higgs mechanism, supersymmetry breaking is also spontaneous. One of the ways in which supersymmetry
+is broken is though gauge interactions. Supersymmetric models build using such supersymmetry breaking are called 
+\textit{Gauge Mediated Supersymmetry Breaking}~(GMSB) models. These models are interesting because they allow for only $5$
+fundamental parameters and provide phenomenological consequences like provides candidate dark matter particles.
+
+Supersymmetry breaking is realized in each model through a \textit{superpotential} and the breaking defines the phenomenology and particle mass spectrum.
+In MSSM, eqn \ref{eq:SUSYEQ}, shows the interaction of particles and Higgs bosons through this superpontential.
 \begin{align}{\label{eq:SUSYEQ}}
-W_{\mbox{mssm}} = \bar{u}\mathbf{y_{u}}\mathcal{Q}H_{u}   -   \bar{d}\mathbf{y_{d}}\mathcal{Q}H_{d}   -  \bar{e}\mathbf{y_{e}}\mathcal{L}H_{d}  -  \mu H_{d}H_{u}
+W_{\mbox{mssm}} = \bar{u}\mathbf{y_{u}}QH_{u}   -   \bar{d}\mathbf{y_{d}}QH_{d}   -  \bar{e}\mathbf{y_{e}}LH_{d}  -  \mu H_{d}H_{u}
 \end{align}
-Where the objects $H_{u}$, $H_{d}$, $\mathcal{Q}$, $\mathcal{L}$, $\bar{u}$, $\bar{d}$, $\bar{e}$ are Chiral superfields corresponding to the Chiral supermultiplets given in table \ref{tab:SUSYF} above.
-The dimensionless couplings $\mathbf{y_{u}}$,$\mathbf{y_{d}}$,$\mathbf{y_{e}}$ are $3 \times 3$ matrices known as the Yukawa couplings. rather than a single Higgs double as in  the SM, SUSY breaking allows for two Higgs double to be present; $H_{u}$ and $H_{d}$ to provide masses to \textsf{up}-type and \textsf{down}-type quarks and leptons. The superpartners of these Higgs particles which are fermions and those of the gauge bosons called \textit{gauginos} mix to produce new neutral and charged fermions called \textit{Neutralinos} and \textit{Charginos} respectively.
-\paragraph*{R-Parity Symmetry}\mbox{}\\
-In MSSM, a combination of baryon~(B) and lepton number~(L) symmetries is combined to give a fundamental symmetry called  \textit{Matter Parity} or \textit{R-Parity}.
-From a multiplicative combination of B and L numbers, we get R-parity expressed as:
-\begin{align}
-R_{P} = \left(-1\right)^{3(B-L) + 2S}
-\end{align} 
-where $S$ is the spin of the particle.
-R-parity is a conserved quantum number which originates from a discrete $Z_{2}$-symmetry \cite{SM}. R-parity symmetry commutes with supersymmetry. Therefore, particles in a given supermultiplet do not have the same R parity.
-SM particles like quarks have an even parity $R_{P} = 1$ while SUSY particles like squarks have odd parity $R_{P} = -1$.
-R-parity has important phenomenological consequences such as the following:
-\begin{itemize}
-\item In the decay of SUSY particles, the lightest SUSY particle~(LSP) have odd parity $R_{P} =-1$ and thus are considered absolutely stable. If in addition to being stable, the LSP is neutral an interacts only very weakly with ordinary matter, then it is a good candidate for non-baryonic dark matter as required by cosmology\cite{LSPDM}.
-\item Every SUSY particle produced which is not the LSP, will eventually decay into the LSP or an odd number of LSPs.
-\item SUSY particles can only be produced in pairs in a collider experiment.
-\end{itemize}
-Thus in generic SUSY models with minimal particle content, where the superpontential include terms which violate Lepton~(L) and baryon~(B) numbers; R-parity conservation can be imposed giving rise to \textit{R-parity Conserving}~(RPC) models with the LSP stable while R-parity can be violated resulting to \textit{R-parity Violating}~(RPV) models where the LSP is unstable and decays to SM particles.
-\newline
-RPC models are those discussed in this thesis as our search is motivated towards the search for neutral stable particles as possible candidates particles for dark matter~(DM).
-\paragraph*{•}
-If SUSY is a theory which describes nature, then its prediction of components within the same supermultiplets with the same mass, i.e $m_{B}= m_{F}$ is not realistic, since  experiments are yet to find a selectron~(SUSY partner of electron) with a mass of 0.512\MeV for example. Therefore, SUSY must be realized through a spontaneously broken way. Spontaneous Supersymmetry Breaking~(SSB) means the lowest energy state or vacuum expectation value of a scalar field~(or auxiliary field as is the case with SUSY) must be non-zero. The type of breaking  determines the phenomenology of any given model. We focus on models with gauge interactions responsible for communicating SUSY breaking from a higher energy level to our observable collider experiments energy levels. Gauge Mediated SUSY breaking models~(GMBS) can be Pure, General or minimal Gauge Mediation~(GGM)depending on the model parameters.
-The presence of the hadron collider in CERN, has encouraged the development of SUSY models whose predictions are about a few \TeV for the mass range of some of these SUSY particles and also the energy scale which the most powerful particle colliders can probe for new particles. These kind of models are called Soft SUSY Breaking models. We would focus on such models in particular the \textit{Snowmass Point and Slopes}~(SPS8) \cite{SUSY} models with phenomenology within the reach of the LHC. Soft breaking mean the SUSY breaking terms in the SUSY potential~(eqn \ref{eq:SUSYEQ}) consists of only masses and terms whose couplings have positive mass dimension. This ensures the existence of sparticles with masses around a few \TeV where they can possibly be produced at current particle colliders such as the large hadron collider~(LHC).
-\subsection{Soft Supersymmetry Breaking}
-Soft SUSY breaking is such that the spontaneous breaking must be caused by couplings with positive mass dimension and not dimensionless coupling. This allows for the alredy observed hierarchy between the Electro-Weak energy scale of $\approx 100$\GeV and the reduced Planck energy scale $ \approx 10^{18}$\GeV .
-The Lagrangian for soft SUSY breaking terms  can be written as thus:
-\begin{align}
-\mathcal{L}^{\mbox{mssm}}_{\mbox{soft}} &= -\frac{1}{2}\left( M_{3}\tilde{g}\tilde{g} + M_{2}\tilde{W}\tilde{W} + M_{1}\tilde{B}\tilde{B}\right) + c.c + \cdots \\
-& -\left(a_{u}\tilde{\bar{u}}\tilde{Q}H_{u} - a_{d}\tilde{\bar{d}}\tilde{Q}H_{d} - a_{e}\tilde{\bar{e}}\tilde{L}H_{d} + c.c \right)
-\end{align}
+The objects $H_{u}$, $H_{d}$, $ Q$, $L$, $\bar{u}$, $\bar{d}$, $\bar{e}$ are chiral superfields of the chiral supermultiplets given in Table \ref{tab:SUSYP} above.
+
+The dimensionless couplings $\mathbf{y_{u}}$,$\mathbf{y_{d}}$,$\mathbf{y_{e}}$ are $3 \times 3$ matrices of the Yukawa couplings. 
+Rather than a single Higgs \textit{doublet} in the SM, supersymmetry breaking requires two Higgs doublets; $H_{u}$ and $H_{d}$. 
+They give mass to \textsf{up}-type and \textsf{down}-type quarks and leptons respectively.
+The superpartners of these Higgses are fermions and those of the gauge bosons called \textit{gauginos} mix to produce new neutral and charged fermions called \textit{Neutralinos} and \textit{Charginos} respectively.
+%\paragraph*{R-Parity Symmetry}\mbox{}\\
+In order for GMSB models to agree with experiments in the prediction of the proton lifetime $> 10^{32}$ years,
+an additional symmetry relating the quarks ad leptons through the \textit{baryon}~($B$) and \textit{lepton} numbers~($L$) symmetries
+called \textit{R-Parity} or \textit{Matter Parity} is introduced.
+R-parity is defined as; $R_{P} = \left(-1\right)^{3(B-L) + 2S} $ with $S$ being the spin of the particle.
+%R-parity is a conserved quantum number which originates from a discrete $Z_{2}$-symmetry \cite{SM}. R-parity symmetry commutes with supersymmetry.
+% Therefore, particles in a given supermultiplet do not have the same R parity.
+SM particles like quarks have an \textit{even} R-parity, $R_{P} = 1$, while supersymmetry particles like squarks have odd parity $R_{P} = -1$.
+The phenomenological consequence of R-parity is that, first, in the decay of supersymmetry particles, the lightest SUSY particle~(LSP) have odd parity $R_{P} =-1$ and is thus considered absolutely stable. Second, every supersymmetry particle produced and is not the LSP, will eventually decay into the LSP or an odd number of LSPs. Third, supersymmetry particles can only be produced in pairs in a collider experiment.
+If in addition to being stable, the LSP is neutral and interacts only very weakly with ordinary matter, then this makes it a good candidate for non-baryonic dark matter as required by cosmology, Ref. \cite{SUSYDM},\cite{LSPDM}, \cite{KOlive}.
+
+%Thus in generic SUSY models with minimal particle content, where the superpontential include terms which violate Lepton~(L) and baryon~(B) numbers; R-parity conservation can be imposed giving rise to 
+Models with the condition of conserving R-parity are called \textit{R-parity Conserving}~(RPC) models with the LSP stable while 
+those without the condition of R-parity being conserved are called \textit{R-parity Violating}~(RPV) models. In RPV models
+the LSP is unstable and decays to SM particles.
+A simplified version of GMSB models studied in this thesis is the \textit{Snowmass Point and Slopes}~(SPS8), Ref.\cite{SPS8}, models whose phenomenology predictions is within the reach of the large hadron collider. It is possible to produce supersymmetry particles with mass
+of about a few \TeV at the large hadron collider~(LHC).
+%These are Soft breaking mean the SUSY breaking terms in the SUSY potential~(eqn \ref{eq:SUSYEQ}) consists of only masses and terms whose couplings have positive mass dimension. This ensures the existence of sparticles with masses around a few \TeV where they can possibly be produced at current particle colliders such as the large hadron collider~(LHC).
+%\newline
+%RPC models are those discussed in this thesis as our search is motivated towards the search for neutral stable particles as possible candidates particles for dark matter~(DM).
+%\paragraph*{•}
+%If SUSY is a theory which describes nature, then its prediction of components within the same supermultiplets with the same mass, i.e $m_{B}= m_{F}$ is not realistic, since  experiments are yet to find a selectron~(SUSY partner of electron) with a mass of 0.512\MeV for example. Therefore, SUSY must be realized through a spontaneously broken way. Spontaneous Supersymmetry Breaking~(SSB) means the lowest energy state or vacuum expectation value of a scalar field~(or auxiliary field as is the case with SUSY) must be non-zero. The type of breaking  determines the phenomenology of any given model. We focus on models with gauge interactions responsible for communicating SUSY breaking from a higher energy level to our observable collider experiments energy levels. Gauge Mediated SUSY breaking models~(GMBS) can be Pure, General or minimal Gauge Mediation~(GGM)depending on the model parameters.
+%The presence of the hadron collider in CERN, has encouraged the development of SUSY models whose predictions are about a few \TeV for the mass range of some of these SUSY particles and also the energy scale which the most powerful particle colliders can probe for new particles. These kind of models are called Soft SUSY Breaking models. We would focus on such models in particular the 
+%\subsection{Soft Supersymmetry Breaking}
+%Soft SUSY breaking is such that the spontaneous breaking must be caused by couplings with positive mass dimension and not dimensionless coupling. This allows for the alredy observed hierarchy between the Electro-Weak energy scale of $\approx 100$\GeV and the reduced Planck energy scale $ \approx 10^{18}$\GeV .
+%The Lagrangian for soft SUSY breaking terms  can be written as thus:
+%\begin{align}
+%\mathcal{L}^{\mbox{mssm}}_{\mbox{soft}} &= -\frac{1}{2}\left( M_{3}\tilde{g}\tilde{g} + M_{2}\tilde{W}\tilde{W} + M_{1}\tilde{B}\tilde{B}\right) + c.c + \cdots \\
+%& -\left(a_{u}\tilde{\bar{u}}\tilde{Q}H_{u} - a_{d}\tilde{\bar{d}}\tilde{Q}H_{d} - a_{e}\tilde{\bar{e}}\tilde{L}H_{d} + c.c \right)
+%\end{align}
 %&- m^{2}_{H_{u}}H^{*}_{u}H_{u} - m^{2}_{H_{d}}H^{*}_{d}H_{d} - \left( bH_{u}H_{d} + c.c. \right) \\
 %&- m^{2}_{Q}\tilde{Q}^{+}\tilde{Q} - m^{2}_{L}\tilde{L}^{+}\tilde{L} - m^{2}_{\bar{u}}\tilde{\bar{u}}^{+}\tilde{u}-m^{2}_{\bar{d}}\tilde{\bar{d}}^{+}\tilde{d} -m^{2}_{\bar{e}}\tilde{\bar{e}}^{+}\tilde{e}\\
 
 
-where $M_{1}$, $M_{2}$ and $M_{3}$ are the superpartners of the gauge bosons of the SM symmetry group. They are referred to as the \textit{Bino}~($\tilde{B}$), \textit{Wino}~($\tilde{W}$) and \textit{gluinos}~(8 gluinos because there are 8 gluons in the SM). I have intentionally omitted  scalar mass terms in this Lagrangian, if interested in the rest of the terms see \cite{SM}.
+%where $M_{1}$, $M_{2}$ and $M_{3}$ are the superpartners of the gauge bosons of the SM symmetry group. They are referred to as the \textit{Bino}~($\tilde{B}$), \textit{Wino}~($\tilde{W}$) and \textit{gluinos}~(8 gluinos because there are 8 gluons in the SM). I have intentionally omitted  scalar mass terms in this Lagrangian, if interested in the rest of the terms see \cite{SM}.
 
-The SUSY particle mass spectrum for particles within the SPS8 and GGM benchmark models framework after SSB is shown in figure \ref{fig:spectra}.
+Figure \ref{fig:spectra} shows the supersymmetry particle mass spectrum for particles within the SPS8 model also known as the minimal GMSB~(mGMSB). 
+%and GGM benchmark models framework after SSB is shown in figure \ref{fig:spectra}.
 \begin{center}
 \centering
-\mbox{\includegraphics[height=2.5in]{THESISPLOTS/gmsb_Lambda180_CTau10000.pdf} \quad 
-\includegraphics[height=2.5in]{THESISPLOTS/M3_1015_M1_255.pdf} }
-\captionof{figure}{SUSY Mass spectra in the mGMSB SPS8 model~(left) and GGM Model~(right) with mass of gluino ($M_{\tilde{g}} = 1.0$~ TeV)}
+%\mbox{
+\includegraphics[scale=0.35]{THESISPLOTS/gmsb_Lambda180_CTau10000.pdf}  
+%\includegraphics[height=2.5in]{THESISPLOTS/M3_1015_M1_255.pdf} }
+\captionof{figure}{Supersymmetry particle mass spectra in the SPS8 or minimal GMSB~(mGMSB)model.}
+%~(left) and GGM Model~(right) with mass of gluino ($M_{\tilde{g}} = 1.0$~ TeV)}
 \label{fig:spectra}
 \end{center}
 
-In summary, MSSM in addition to SM particles, contains new particles whose spin~(S) differ from their SM counterparts by half-integer. Bosons~(fermions) in the SM have superpartners which are fermions~(bosons) respectively.
+In summary, MSSM in addition to SM particles, contains new particles whose spin~(S) differ from their SM counterparts by half-integer. Bosons~(fermions) in the SM have superpartners which are fermions~(bosons).
 The superpartners of SM fermions are scalars called \textit{sfermions}~($\tilde{l}$), sneutrinos~($\tilde{\nu}$) and squarks~($\tilde{q}$) while \textit{gluinos}~{$\tilde{g}$) being fermions are the superpartners of the massless gauge bosons of strong interaction, gluons. The scalar Higgs~(2 needed) bosons and the vector gauge bosons of Electro-Weak interaction have fermionic superpartners called \textit{higgsinos}, \textit{Winos} and \textit{Binos}. These can mix to form a pair of mass eigenstates called \textit{charginos}~($\tilde{\chi}^{\pm}_{j}, j=1,2$) i.e 
 $\tilde{\chi}^{\pm}_{1,2}$ is a from mixing $\tilde{W}^{+}, \tilde{W}^{-}, \tilde{H}^{+}, \tilde{H}^{-} $ and a quartet of mass  eigenstates called \textit{neutralinos}~($\tilde{\chi}^{0}_{i}, i=1,...,4$), i.e $\tilde{\chi}^{0}_{1-4}$ is from mixing $\tilde{B}^{\circ}, \tilde{W}^{\circ}, \tilde{h}^{\circ}, \tilde{H}^{\circ} $.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Gauge Mediated Supersymmetry Breaking and Phenomenology}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{General Model}
-\paragraph*{•}
-Constructing a SUSY model requires that the model has gauge group describing the nature of particle interaction, a superpotential, and since the SUSY prediction of equal masses of boson and fermions is not observable, one must provide explicitly the method for spontaneously breaking supersymmetry. We have in the MSSM scenario seen the gauge groups to be exactly those of the SM, the superpontential with soft terms, however, we are yet to understand how supersymmetry is broken. SUSY breaking means that we find the lowest energy state for which the vacuum expectation values of the  SUSY generators $\mathrm{Q}_{\alpha} \ket 0 \neq 0$ or $\bar{\mathrm{Q}}_{\alpha}\ket 0 \neq 0$. Since one can always express the Hamiltonian of the system, $\mathrm{H}$ in terms of the SUSY generators, SUSY breaking can also be equally expressed as $\mathrm{H}\ket 0 \neq 0$. Neglecting spacetime-dependent effects and condensates, SUSY breaking is equivallently expressed as $\mathrm{V}\ket 0 \neq 0$, where $\mathrm{V}$ is the standard superpontential expressed in terms of the $\mathrm{F}$ and $\mathrm{D}$ terms. Thus, spontaneously breaking SUSY is equivalent to finding superpotentials for which neither $\mathrm{F}$ nor $\mathrm{D}$ terms simultaneously vanish in the lowest energy state. Suoerpotentials with non vanishing $\mathrm{F}$ terms are called  \textit{O'Raifeartaigh} or $\mathrm{F}$-term SUSY breaking models while those with nonvanishing $\mathrm{D}$ terms are called \textit{Fayet-Illiopoulus} or $\mathrm{D}$-term SUSY breaking models. Since in GMSB models, it is the $\mathrm{F}$ term which has a non-vanishing lowest energy state expectation value or vacuum expectation, this thesis only considers  \textit{O'Raifeartaigh} SUSY breaking models.
-\newline
-In GMSB models, this superpotential is termed the \textit{Hidden Sector}~(hidden because it couples only indirectly and very weakly to our "observable sector" of SM particles and their superpartners) and it is its dynamics which spontaneously breaks supersymmetry. The nature of this breaking is not relevant for phenomenology but rather the "\textit{mediators}" which communicate the effects of this breaking to the superpartners of the SM particles. Therefore, these mediators or agents must couple to this "Hidden Sector" as well as the "observable sector".
-This \textit{Messenger fields} in GMSB, have the usual SM gauge interactions  and through loops couple with the SM superpartners. As a result MSSM particles~(gauginos and sfermions) obtain SUSY breaking masses referred to as \textit{soft terms} through loop level interactions. This procedure allows for the observed mass and energy scale hierarchy is maintained. The mass of these messenger fields, $\displaystyle{\mathrm{M}_{\mbox{mess}}}$, along with $\left\langle\mathrm{F}\right\rangle$  defines the energy scale at which supersymmetry breaking is felt at the MSSM energy scale. If $\displaystyle{\mathrm{M}_{mess} \ll \mathrm{M}_{\mbox{Planck}}}$, $\mathrm{M}_{\mbox{Planck}} \approx 10^{19}$\GeV, then supersymmetry breaking occurs at a much lower energy scale instead at the Planck energy scale where gravitational interactions become very significant and the effects of the breaking is first felt by these Messenger fields and later communicated to the observable sector through SM gauge interactions.
-In terms of energy scales, the picture is such that spontaneous supersymmetry breaking occurs at an energy scale, $\left\langle\mathrm{F}\right\rangle$ which we denote as $\mathbf{F}$, for simplicity. This energy scale defines the mass, as seen in equation \ref{eq:GMass}, of the \textit{gravitino} which is the supersymmetric partner of gravity mediating particle, the \textit{graviton}. The gravitino has the same quantum number as the Nambu-Goldstone particle, the massless neutral Weyl fermion, the \textit{goldstino}, originating from supersymmetry breaking. 
-\begin{equation}{\label{eq:GMass}}
- m_{3/2} = \frac{\mathbf{F}}{{\sqrt{3}\mathrm{M}_{Pl}}}
-\end{equation}
-where $\displaystyle{\mathrm{M}_{Pl} = 1.3 \times 10^{19}}$~GeV.
 
-In GMSB models, the energy scale for which supersymmetry breaking is transmitted to the Hidden sector, $\mathbf{F}_{s}$ might not be the same as the original or fundamental sypersymmetry breaking energy scale, $\mathbf{F}$. If $\displaystyle{\mathbf{F}_{s} < \mathbf{F}}$ then the interaction between the hidden sector and the fundamental SUSY breaking is weak interaction and if $\displaystyle{\mathbf{F}_{s} \approx \mathbf{F}}$ and the interaction is strong.  It is necessary that this interaction is weak, as in this case GMSB models do not surfer from flavor violating interactions which are not observed in nature.
+%\paragraph{General Model}
+%\paragraph*{•}
+%Constructing a SUSY model requires that the model has gauge group describing the nature of particle interaction, a superpotential, and since the SUSY prediction of equal masses of boson and fermions is not observable, one must provide explicitly the method for spontaneously breaking supersymmetry. We have in the MSSM scenario seen the gauge groups to be exactly those of the SM, the superpontential with soft terms, however, we are yet to understand how supersymmetry is broken. SUSY breaking means that we find the lowest energy state for which the vacuum expectation values of the  SUSY generators $\mathrm{Q}_{\alpha} \ket 0 \neq 0$ or $\bar{\mathrm{Q}}_{\alpha}\ket 0 \neq 0$. Since one can always express the Hamiltonian of the system, $\mathrm{H}$ in terms of the SUSY generators, SUSY breaking can also be equally expressed as $\mathrm{H}\ket 0 \neq 0$. Neglecting spacetime-dependent effects and condensates, SUSY breaking is equivallently expressed as $\mathrm{V}\ket 0 \neq 0$, where $\mathrm{V}$ is the standard superpontential expressed in terms of the $\mathrm{F}$ and $\mathrm{D}$ terms. Thus, spontaneously breaking SUSY is equivalent to finding superpotentials for which neither $\mathrm{F}$ nor $\mathrm{D}$ terms simultaneously vanish in the lowest energy state. Suoerpotentials with non vanishing $\mathrm{F}$ terms are called  \textit{O'Raifeartaigh} or $\mathrm{F}$-term SUSY breaking models while those with nonvanishing $\mathrm{D}$ terms are called \textit{Fayet-Illiopoulus} or $\mathrm{D}$-term SUSY breaking models. Since in GMSB models, it is the $\mathrm{F}$ term which has a non-vanishing lowest energy state expectation value or vacuum expectation, this thesis only considers  \textit{O'Raifeartaigh} SUSY breaking models.
+%\newline
+%In GMSB models, this superpotential is termed the \textit{Hidden Sector}~(hidden because it couples only indirectly and very weakly to our "observable sector" of SM particles and their superpartners) and it is its dynamics which spontaneously breaks supersymmetry. The nature of this breaking is not relevant for phenomenology but rather the "\textit{mediators}" which communicate the effects of this breaking to the superpartners of the SM particles. Therefore, these mediators or agents must couple to this "Hidden Sector" as well as the "observable sector".
+%This \textit{Messenger fields} in GMSB, have the usual SM gauge interactions  and through loops couple with the SM superpartners. As a result MSSM particles~(gauginos and sfermions) obtain SUSY breaking masses referred to as \textit{soft terms} through loop level interactions. This procedure allows for the observed mass and energy scale hierarchy is maintained. The mass of these messenger fields, $\displaystyle{\mathrm{M}_{\mbox{mess}}}$, along with $\left\langle\mathrm{F}\right\rangle$  defines the energy scale at which supersymmetry breaking is felt at the MSSM energy scale. If $\displaystyle{\mathrm{M}_{mess} \ll \mathrm{M}_{\mbox{Planck}}}$, $\mathrm{M}_{\mbox{Planck}} \approx 10^{19}$\GeV, then supersymmetry breaking occurs at a much lower energy scale instead at the Planck energy scale where gravitational interactions become very significant and the effects of the breaking is first felt by these Messenger fields and later communicated to the observable sector through SM gauge interactions.
+%In terms of energy scales, the picture is such that spontaneous supersymmetry breaking occurs at an energy scale, $\left\langle\mathrm{F}\right\rangle$ which we denote as $\mathbf{F}$, for simplicity. This energy scale defines the mass, as seen in equation \ref{eq:GMass}, of the \textit{gravitino} which is the supersymmetric partner of gravity mediating particle, the \textit{graviton}. The gravitino has the same quantum number as the Nambu-Goldstone particle, the massless neutral Weyl fermion, the \textit{goldstino}, originating from supersymmetry breaking. 
+%\begin{equation}{\label{eq:GMass}}
+% m_{3/2} = C_{grav}\cdot\frac{\mathbf{F_{s}}}{{\sqrt{3}\mathrm{M}_{Pl}}}
+%\end{equation}
+%where $\displaystyle{\mathrm{M}_{Pl} = 1.3 \times 10^{19}}$~GeV.
+
+%In GMSB models, the energy scale for which supersymmetry breaking is transmitted to the Hidden sector, $\mathbf{F}_{s}$ might not be the same as the original or fundamental sypersymmetry breaking energy scale, $\mathbf{F}$. If $\displaystyle{\mathbf{F}_{s} < \mathbf{F}}$ then the interaction between the hidden sector and the fundamental SUSY breaking is weak interaction and if $\displaystyle{\mathbf{F}_{s} \approx \mathbf{F}}$ and the interaction is strong.  It is necessary that this interaction is weak, as in this case GMSB models do not surfer from flavor violating interactions which are not observed in nature.
 %The induced SUSY breaking scale in the hidden sector ${\mathrm{F}}_{S}$ and the mass of the messenger particles  defines the mass spectrum of the particles in the MSSM sector.
-The consequences of this is that one would no longer expect the mass of the gravitino $m_{3/2}$ to be given as in equation \ref{eq:GMass} but rather suppressed by $\mathrm{M}_{\mbox{mess}}/\mathrm{M}_{Pl}$ in GMSB models. In this mass spectrum scenario, the gravitino mass can be varied to a very small value only bounded by cosmological results, thus making it the lightest supersymmetric particle~(LSP). Spanning the gravitino mass is expressed as a fundamental parameter in GMSB modles, $C_{grav}$ which directly determines the lifetime of the next-to-lightest supersymmetry sparticle  decaying to the gravitino. We will see more of this ahead. Thus the parameters $\mathbf{F}_{s}$ and  $\mathrm{M}_{\mbox{mess}}$, determines the masses of the gauginos and sfermions of the MSSB in GMSB models.
-\newline
-A minimal GMSB model is one where the messenger sector consists of chiral supermultiplets of leptons and quark with the same quantum numbers $SU(3)_{C}\times SU(2)_{L}\times U(1)_{Y}$ as the SM gauge groups. That is, the messenger fields belong to some $SU(5)$ gauge group. The representations of these messengers fields are given in equation \ref{eq:MESS}.
-\begin{align}{\label{eq:MESS}}
-\tilde{\ell} \sim (1,2,1) \quad \tilde{\ell^{\prime}} \sim (1, 2^{\star}, -1) \\
-\tilde{q} \sim (3,1,-\frac{2}{3}) \quad \tilde{q}^{\prime} \sim (3^{\star}, 1, \frac{2}{3} )
-\end{align}
-These messenger fields, via a superpotential as in equation \ref{eq:WMESS} of a gauge singlet chiral supermultiplet $\mathrm{S}$, couple with an $\mathrm{F}$-term as in the O'Raifeartaigh model \cite{SM}. 
-\begin{equation}{\label{eq:WMESS}}
-W_{\mbox{mess}} = \lambda_{\ell}\mathrm{S}\tilde{q}\tilde{q}^{\prime} + \lambda_{q}\mathrm{S}\tilde{\ell}\tilde{\ell^{\prime}}
-\end{equation}
-We thus obtain SUSY breaking by allowing vacuum expectation values~(VEV) for both $\mathrm{S}$ and its auxiliary component $\mathrm{F}$ term as $\left\langle \mathrm{S} \right\rangle$ and $\left\langle \mathrm{F}_{s} \right\rangle = \mathbf{F}_{s}$, where the $\mathbf{F}_{s}$ does not have to coincided with $\mathbf{F}$ as mentioned earlier. The parameter representing this non equivalence,$C_{grav}$ is defined as shown in equation \ref{eq:CGRAV}. It is one of the fundamental parameters in GMSB models responsible for the lifetime of NLSP particle.
-\begin{equation}{\label{eq:CGRAV}}
-\mathbf{F} = C_{grav}\cdot\mathbf{F}_{s}
-\end{equation}
-This equation indicates that the non-zero VEV for the $\mathrm{F}$ term is responsible for fundamental SUSY breaking which is transferred to the messenger particles through radiative interactions as $C_{grav}$ is a dimensionless parameter.
-Leptons and fermions masses(\ref{eq:MMass}) of the messenger particles together with their scalar superpartners are obtained from diagonalizing the mass matrix.
-\begin{align}{\label{eq:MMass}}
-m^{2}_{\tilde{\ell}\tilde{\ell^{\prime}}} &= |\lambda_{\ell}\left\langle \mathrm{S} \right\rangle|^{2}, \quad \quad  m^{2}_{\tilde{\ell}_{\mbox{scalars}}} = |\lambda_{\ell}\left\langle \mathrm{S} \right\rangle|^{2} \pm |\lambda_{\ell}\left\langle \mathrm{F_{s}} \right\rangle |
-\\
-m^{2}_{\tilde{q}\tilde{q^{\prime}}} &= |\lambda_{q}\left\langle \mathrm{S} \right\rangle|^{2}, \quad \quad  m^{2}_{\tilde{q}_{\mbox{scalars}}} = |\lambda_{q}\left\langle \mathrm{S} \right\rangle|^{2} \pm |\lambda_{q}\left\langle \mathrm{F_{s}} \right\rangle |
-\end{align}
-By observing equation \ref{eq:MMass}, a general energy scale, $\mathbf{M}_{\mbox{mess}}$, for messenger particle's masses which is also an additional fundamental parameter in GMSB models can be defined as shown in equation \ref{eq:Mmess}.
-\begin{equation}{\label{eq:Mmess}}
-\mathbf{M}_{\mbox{mess}} = (\lambda_{q},\lambda_{\ell}) \left\langle \mathrm{S} \right\rangle 
-\end{equation}
+%The consequences of this is that one would no longer expect the mass of the gravitino $m_{3/2}$ to be given as in equation \ref{eq:GMass} but rather suppressed by $\mathrm{M}_{\mbox{mess}}/\mathrm{M}_{Pl}$ in GMSB models. In this mass spectrum scenario, the gravitino mass can be varied to a very small value only bounded by cosmological results, thus making it the lightest supersymmetric particle~(LSP). Spanning the gravitino mass is expressed as a fundamental parameter in GMSB modles, $C_{grav}$ which directly determines the lifetime of the next-to-lightest supersymmetry sparticle  decaying to the gravitino. We will see more of this ahead. Thus the parameters $\mathbf{F}_{s}$ and  $\mathrm{M}_{\mbox{mess}}$, determines the masses of the gauginos and sfermions of the MSSB in GMSB models.
+%\newline
+%A minimal GMSB model is one where the messenger sector consists of chiral supermultiplets of leptons and quark with the same quantum numbers $SU(3)_{C}\times SU(2)_{L}\times U(1)_{Y}$ as the SM gauge groups. That is, the messenger fields belong to some $SU(5)$ gauge group. The representations of these messengers fields are given in equation \ref{eq:MESS}.
+%\begin{align}{\label{eq:MESS}}
+%\tilde{\ell} \sim (1,2,1) \quad \tilde{\ell^{\prime}} \sim (1, 2^{\star}, -1) \\
+%\tilde{q} \sim (3,1,-\frac{2}{3}) \quad \tilde{q}^{\prime} \sim (3^{\star}, 1, \frac{2}{3} )
+%\end{align}
+%These messenger fields, via a superpotential as in equation \ref{eq:WMESS} of a gauge singlet chiral supermultiplet $\mathrm{S}$, couple with an $\mathrm{F}$-term as in the O'Raifeartaigh model \cite{SM}. 
+%\begin{equation}{\label{eq:WMESS}}
+%W_{\mbox{mess}} = \lambda_{\ell}\mathrm{S}\tilde{q}\tilde{q}^{\prime} + \lambda_{q}\mathrm{S}\tilde{\ell}\tilde{\ell^{\prime}}
+%\end{equation}
+%We thus obtain SUSY breaking by allowing vacuum expectation values~(VEV) for both $\mathrm{S}$ and its auxiliary component $\mathrm{F}$ term as $\left\langle \mathrm{S} \right\rangle$ and $\left\langle \mathrm{F}_{s} \right\rangle = \mathbf{F}_{s}$, where the $\mathbf{F}_{s}$ does not have to coincided with $\mathbf{F}$ as mentioned earlier. The parameter representing this non equivalence,$C_{grav}$ is defined as shown in equation \ref{eq:CGRAV}. It is one of the fundamental parameters in GMSB models responsible for the lifetime of NLSP particle.
+%\begin{equation}{\label{eq:CGRAV}}
+%\mathbf{F} = C_{grav}\cdot\mathbf{F}_{s}
+%\end{equation}
+%This equation indicates that the non-zero VEV for the $\mathrm{F}$ term is responsible for fundamental SUSY breaking which is transferred to the messenger particles through radiative interactions as $C_{grav}$ is a dimensionless parameter.
+%Leptons and fermions masses(\ref{eq:MMass}) of the messenger particles together with their scalar superpartners are obtained from diagonalizing the mass matrix.
+%\begin{align}{\label{eq:MMass}}
+%m^{2}_{\tilde{\ell}\tilde{\ell^{\prime}}} &= |\lambda_{\ell}\left\langle \mathrm{S} \right\rangle|^{2}, \quad \quad  m^{2}_{\tilde{\ell}_{\mbox{scalars}}} = |\lambda_{\ell}\left\langle \mathrm{S} \right\rangle|^{2} \pm |\lambda_{\ell}\left\langle \mathrm{F_{s}} \right\rangle |
+%\\
+%m^{2}_{\tilde{q}\tilde{q^{\prime}}} &= |\lambda_{q}\left\langle \mathrm{S} \right\rangle|^{2}, \quad \quad  m^{2}_{\tilde{q}_{\mbox{scalars}}} = |\lambda_{q}\left\langle \mathrm{S} \right\rangle|^{2} \pm |\lambda_{q}\left\langle \mathrm{F_{s}} \right\rangle |
+%\end{align}
+%By observing equation \ref{eq:MMass}, a general energy scale, $\mathbf{M}_{\mbox{mess}}$, for messenger particle's masses which is also an additional fundamental parameter in GMSB models can be defined as shown in equation \ref{eq:Mmess}.
+%\begin{equation}{\label{eq:Mmess}}
+%\mathbf{M}_{\mbox{mess}} = (\lambda_{q},\lambda_{\ell}) \left\langle \mathrm{S} \right\rangle 
+%\end{equation}
 
-A common assumption in GMSB models according to~\cite{GMSB, SUSYBOOK} is that $\lambda_{q} \simeq \lambda_{\ell} \simeq \lambda $ and so $\mathbf{M}_{\mbox{mess}} = \lambda \left\langle \mathrm{S} \right\rangle$. However, in  Pure gauge mediated SUSY breaking models~(PGGM), $\lambda_{q} \neq \lambda_{\ell}$ \cite{PGGM}.
-In the MSSM sector, gauginos and scalars obtained their mass through one-loop and two-loop level interactions respectively given according to equation \ref{eq:MSSMMasses}.
-\begin{align}{\label{eq:MSSMMasses}}
-\mathbf{M}_{a} &= \frac{\alpha_{a}}{4\pi}\mathrm{N_{5}}\mathbf{\Lambda} \\ 
-\mathbf{m}^{2}_{\phi_{i}} &= 2\mathbf{\Lambda}^{2}\mathrm{N_{5}}\sum_{a=1}^{3}C_{a}(i) ( \frac{\alpha_{a}}{4\pi})^{2}
-\end{align}
-where $C_{a}(i)$ are constants of $\mathsf{O}(1)$, $\alpha_{a}$ are coupling constants and 
-\begin{equation}{\label{eq:Lambda}}
-\mathbf{\Lambda} = \frac{\mathbf{F}_{s}}{\lambda \left\langle \mathrm{S} \right\rangle } = \frac{\mathbf{F}_{s}}{\mathbf{M}_{\mbox{mess}}}
-\end{equation} 
-$\mathrm{N_{5}}$ is an additional parameter in GMSB models, specifying the number of messenger vector-like supermultiplets transforming under $SU(5)$. A motivation for $SU(5)$ is for the unification of gauge couplings at the GUT energy scale($M_{GUT} \approx 10^{16}$~GeV which is one of the major predictions of supersymmetry in unifying fundamental forces.
-$\mathrm{N_{5}}$ is chosen to be not very large so as to avoid gauge couplings diverging before GUT scale. In the minimal GMSB models such as the SPS8 benchmark working point model $\mathrm{N_{5}} = 1$.
+%A common assumption in GMSB models according to~\cite{GMSB, SUSYBOOK} is that $\lambda_{q} \simeq \lambda_{\ell} \simeq \lambda $ and so $\mathbf{M}_{\mbox{mess}} = \lambda \left\langle \mathrm{S} \right\rangle$. However, in  Pure gauge mediated SUSY breaking models~(PGGM), $\lambda_{q} \neq \lambda_{\ell}$ \cite{PGGM}.
+%In the MSSM sector, gauginos and scalars obtained their mass through one-loop and two-loop level interactions respectively given according to equation \ref{eq:MSSMMasses}.
+%\begin{align}{\label{eq:MSSMMasses}}
+%\mathbf{M}_{a} &= \frac{\alpha_{a}}{4\pi}\mathrm{N_{5}}\mathbf{\Lambda} \\ 
+%\mathbf{m}^{2}_{\phi_{i}} &= 2\mathbf{\Lambda}^{2}\mathrm{N_{5}}\sum_{a=1}^{3}C_{a}(i) ( \frac{\alpha_{a}}{4\pi})^{2}
+%\end{align}
+%where $C_{a}(i)$ are constants of $\mathsf{O}(1)$, $\alpha_{a}$ are coupling constants and 
+%\begin{equation}{\label{eq:Lambda}}
+%\mathbf{\Lambda} = \frac{\mathbf{F}_{s}}{\lambda \left\langle \mathrm{S} \right\rangle } = \frac{\mathbf{F}_{s}}{\mathbf{M}_{\mbox{mess}}}
+%\end{equation} 
+%$\mathrm{N_{5}}$ is an additional parameter in GMSB models, specifying the number of messenger vector-like supermultiplets transforming under $SU(5)$. A motivation for $SU(5)$ is for the unification of gauge couplings at the GUT energy scale($M_{GUT} \approx 10^{16}$~GeV which is one of the major predictions of supersymmetry in unifying fundamental forces.
+%$\mathrm{N_{5}}$ is chosen to be not very large so as to avoid gauge couplings diverging before GUT scale. In the minimal GMSB models such as the SPS8 benchmark working point model $\mathrm{N_{5}} = 1$.
 %A simple diagrams for these corrections can be seen in figure \ref{fig:figMass}.
 
 %\begin{figure}[ht]{\label{figMass}
@@ -613,98 +667,126 @@ $\mathrm{N_{5}}$ is chosen to be not very large so as to avoid gauge couplings d
 %\end{figure}
 
 
-On the other hand in PGGM models~(\cite{PGGM}), gauge and scalar particles have separate mass definitions~(eqn:\ref{eq:MPGGM}) since $\lambda_{q} \neq \lambda_{\ell}$.
-\begin{align}{\label{eq:MPGGM}}
-\mathbf{\Lambda}_{G} &= \frac{\mathrm{F}_{s}}{\lambda_{q} \left\langle \mathrm{S} \right\rangle } \\
-\mathbf{\Lambda}_{S} &= \frac{\mathrm{F}_{s}}{\lambda_{\ell} \left\langle \mathrm{S} \right\rangle } 
-\end{align}
+%On the other hand in PGGM models~(\cite{PGGM}), gauge and scalar particles have separate mass definitions~(eqn:\ref{eq:MPGGM}) since $\lambda_{q} \neq \lambda_{\ell}$.
+%\begin{align}{\label{eq:MPGGM}}
+%\mathbf{\Lambda}_{G} &= \frac{\mathrm{F}_{s}}{\lambda_{q} \left\langle \mathrm{S} \right\rangle } \\
+%\mathbf{\Lambda}_{S} &= \frac{\mathrm{F}_{s}}{\lambda_{\ell} \left\langle \mathrm{S} \right\rangle } 
+%\end{align}
 
-$\mathbf{\Lambda}$ is the energy scale defining SUSY breaking at the MSSM level. It is known as the \textit{effective supersymmetry breaking scale} and determines the mass spectrum of gauginos and scalars in the MSSM.
-$\mathbf{\Lambda}$ as defined in equation \ref{eq:Lambda} is considered to be a model parameter in GMSB models especially in minimal GMSB modles like the SPS8 bench mark model.
+%$\mathbf{\Lambda}$ is the energy scale defining SUSY breaking at the MSSM level. It is known as the \textit{effective supersymmetry breaking scale} and determines the mass spectrum of gauginos and scalars in the MSSM.
+%$\mathbf{\Lambda}$ as defined in equation \ref{eq:Lambda} is considered to be a model parameter in GMSB models especially in minimal GMSB modles like the SPS8 bench mark model.
 
-It is important to not that GGM models, \cite{GGM, GGM1, GGM2,MDINE1,MDINE2}, the mass of the gauginos $\mathbf{M}_{a}, a = 1,2,3$ defines the parameter space for these models.
-Using equation \ref{eq:CGRAV}, the fundamental SUSY breaking scale $\mathbf{F}$ can be redefined in terms of the effective SUSY breaking scale $\mathbf{\Lambda}$  and the Messenger particle mass scale $\mathbf{M}_{\mbox{mess}}$:
-\begin{align}{\label{eq:scale}}
-\mathbf{F} = C_{grav}\cdot \mathbf{\Lambda}\cdot\mathbf{M}_{\mbox{mess}} 
-\end{align}
-and from equation \ref{eq:GMass}, the gravitino mass is re-written shown in equation \ref{eq:GMass2}
-\begin{align}{\label{eq:GMass2}}
+%It is important to not that GGM models, \cite{GGM, GGM1, GGM2,MDINE1,MDINE2}, the mass of the gauginos $\mathbf{M}_{a}, a = 1,2,3$ defines the parameter space for these models.
+%Using equation \ref{eq:CGRAV}, the fundamental SUSY breaking scale $\mathbf{F}$ can be redefined in terms of the effective SUSY breaking scale $\mathbf{\Lambda}$  and the Messenger particle mass scale $\mathbf{M}_{\mbox{mess}}$:
+%\begin{align}{\label{eq:scale}}
+%\mathbf{F} = C_{grav}\cdot \mathbf{\Lambda}\cdot\mathbf{M}_{\mbox{mess}} 
+%\end{align}
+%and from equation \ref{eq:GMass}, the gravitino mass is re-written shown in equation \ref{eq:GMass2}
+%\begin{align}{\label{eq:GMass2}}
+%m_{\tilde{G}} & = C_{grav}\cdot \frac{\mathbf{\Lambda}\mathbf{M}_{\mbox{mess}}}{\sqrt{3}\mathrm{M}_{pl}}
+%\end{align}
+
+%In summary, the parameters $\mathbf{\Lambda}$, $\mathrm{N_{5}}$, and  $C_{grav}$  determines the phenomenology of GMSB models.The gravitino can become very light with its mass bounded only by cosmological observations and as such is identified as  the least stable supersymmetry particle~(LSP). By changing the value of $C_{grav}$, which is equivalent to scaling the induced supersymmetry breaking energy scale, allowing for weak interactions between the hidden sector and the messenger particles, the mass of the gravitino, $m_{\tilde{G}}$, is changed. This influences the decay rate and lifetime of the next-to-lightest supersymmetry particle~(NLSP) decaying to the gravitino which can vary from being an instantaneous or prompt decay to being a long-lived particle decay.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Gauge Mediated Supersymmetry Breaking Models}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+GMSB models have $5$ main parameters:
+\begin{equation}{\label{eq:mGMSB}}
+\left\{ \mathbf{\Lambda}, \quad \mathbf{M}_{\mbox{mess}},\quad \mathbf{N}_{5}, \quad \tan(\beta), \quad sgn(\mu),\quad C_{grav}\right\}
+\end{equation}
+where $\mathbf{\Lambda}$ is the effective supersymmetry breaking scale, $\mathbf{M}_{\mbox{mess}}$ is the mass of the messenger particle
+involved in mediating supersymmetry breaking to the MSSM energy scale, $\mathbf{N}_{5}$ is the number of messenger particles.
+The other parameters, $\tan\beta$ and $sgn(\mu)$ are related to the two Higgs bosons necessary for supersymmetry breaking with $\tan\beta$ being the ratio of the vacuum expectations values for both Higgs bosons. The sign of the Higgs potential is defined by
+$sgn(\mu)$.
+In these models, the gravitino can become very light with its mass bounded only by cosmological observations and as such is identified as  the least stable supersymmetry particle~(LSP).
+The mass of the gravitino is expressed in terms of the parameter $C_{grav} $ according to equation \ref{eq:GRAV}.
+\begin{align}{\label{eq:GRAV}}
 m_{\tilde{G}} & = C_{grav}\cdot \frac{\mathbf{\Lambda}\mathbf{M}_{\mbox{mess}}}{\sqrt{3}\mathrm{M}_{pl}}
 \end{align}
-
-In summary, the parameters $\mathbf{\Lambda}$, $\mathrm{N_{5}}$, and  $C_{grav}$  determines the phenomenology of GMSB models.The gravitino can become very light with its mass bounded only by cosmological observations and as such is identified as  the least stable supersymmetry particle~(LSP). By changing the value of $C_{grav}$, which is equivalent to scaling the induced supersymmetry breaking energy scale, allowing for weak interactions between the hidden sector and the messenger particles, the mass of the gravitino, $m_{\tilde{G}}$, is changed. This influences the decay rate and lifetime of the next-to-lightest supersymmetry particle~(NLSP) decaying to the gravitino which can vary from being an instantaneous or prompt decay to being a long-lived particle decay.
-
-
-\paragraph{Phenomenology of GMSB Models}
-\paragraph*{•}
-The presence of light gravitinos and a unique gravitino-scalar-chiral fermion and gravitino-gaugino-gauge boson interactions as shown in figure \ref{fig:feynman_grav}  in GMSB models attract a lot interests in GMSB phenomenology as gravitino masses can be allowed to be as low as a few eV and only bounded by cosmological models making them an excellent candidate particle for Dark Matter~(DM).
-
+where $\displaystyle{\mathrm{M}_{Pl} = 1.3 \times 10^{19}}$~GeV.
+This means, $C_{grav}$ is a scaling parameter, which determines the lifetime of the Next-to-Lightest-Supersymmetry particle~(NLSP) 
+as its decay rate  to the gravitino will depend on its mass difference with the gravitino.
+\subsection{Phenomenology}
+%\paragraph*{•}
+Light gravitinos with unique gravitino-scalar-chiral fermion and gravitino-gaugino-gauge boson interactions shown in figure \ref{fig:feynman_grav} in GMSB models allow for the gravitino mass to be as low as a few eV and up to an upper bounded for them to
+provide the right amount of dark matter observed in the early universe. In addition to this, being neutral and stable makes them an excellent candidate particle for Dark Matter~(DM).
 \begin{center}
 \centering
 \mbox{\includegraphics[height=0.3\textwidth, width=0.5\textwidth]{THESISPLOTS/Gravitino-GauginoCoupling.png}} 
 %\quad \quad
 %\includegraphics[height=0.3\textwidth, width=0.4\textwidth]{THESISPLOTS/SinglePhoton_squark.pdf}}
-\captionof{figure}{Feynman diagrams of gravitino/golstino, $\tilde{G}$, gaugino and scalar interactions with superpartner pairs $(\psi, \phi)$scalar~(a)  and $(\lambda, \mathrm{A})$gaugino~(b) decay to gravitino.}
+\captionof{figure}{Feynman diagrams of gravitino/golstino, $\tilde{G}$, gaugino and scalar interactions with superpartner pairs $(\psi, \phi)$scalar~(a)  and $(\lambda, \mathrm{A})$ gaugino~(b) decay to gravitino.}
 \label{fig:feynman_grav}
 \end{center}
-
- These light gravitinos with weak gravitino-gaugino or gravitino-scalar interactions allows for the decay of any next-to-lightest MSSM particle to a gravitino. This decay rate depends on the mass of the gravitino $m_{\tilde{G}}$ as long as R-parity is conserved. Thus, in the decay of every MSSM particle, the gravitino will likely or eventually be included in its final states. We can  parametrised this decay rate by using $C_{grav}$. It is easy to see that $C_{grav} \geq 1$. It is important to note that there are other GMSB phenomenological observations which do not entirely considered the gravitino as the lightest supersymmetric particle.
-Thus in order to study the phenomenology of GMSB models, one can define a parameter space using the following parameters given in equation \ref{eq:mGMSB}. 
-\begin{equation}{\label{eq:mGMSB}}
-\left\{ \mathbf{\Lambda}, \quad \mathbf{M}_{\mbox{mess}},\quad \mathbf{N}_{5}, \quad \tan(\beta), \quad sgn(\mu),\quad C_{grav}\right\}
-\end{equation}
-Where the additional parameters  $\tan\beta$ and $sgn(\mu)$ are related to the two Higgs bosons necessary for supersymmetry breaking. $\tan\beta$ is the ratio of the vacuum expectations values for both Higgs bosons and $sgn(\mu)$ defines the sign of the Higgs potential.
-These sets of parameters given in equation \ref{eq:mGMSB} are those we will be studying  within the minimal GMSB~(mGMSB). In the SPS8 benchmark model $\mathbf{M}_{\mbox{mess}} = 2\mathbf{\Lambda}$, $ \tan(\beta)=15$, $\mathbf{N}_{5}=1$, $\mathbf{\Lambda}$
-and $C_{grav}$ are allowed to vary,\cite{SUSY}.
- In other gauge mediating supersymmetry models like the General Gauge Mediation SUSY breaking~(GGM), $\left\{M_{3}(\mbox{gluino mass}), M_{2}(\mbox{Wino mass}), M_{1}(\mbox{Bino mass}),\tan(\beta), sgn(\mu), c\tau_{NLSP}\right\}$
-is the parameter space,\cite{GGM1,GGM2}.
-In GGM models, colored sparticles are not required to be heavier than their Electro-Weak sparticles allowing for greater discovery potential at hadron collider\cite{DSHIH}. Thus, allowing for possibility of many candidates NLSP particles and not only the neutralino as in the case with mGMSB models like the SPS8 model.
-For Pure General Gauge Mediation SUSY breaking~(PGGM), the parameter space is rather scan using $\displaystyle{\left\{\Lambda_{G},\Lambda_{S}, \mathrm{M}_{\mbox{mess}}\right\} }$ parameter set.
- 
-Of all other possible decay modes in GMSB models, this thesis is interested only in decays where eventually, the Next-To-Lightest SUSY particle~(NLSP) decays to the lightest SUSY particle~(LSP) which is the gravitino and its SM partner; i.e if particle, $\tilde{p}$ is the NLSP, then it will decay is given according to equation \ref{eq:NLSPDECAY}.
-\begin{equation}{\label{eq:NLSPDECAY}}
-\tilde{p}\rightarrow p + \tilde{G}
-\end{equation}
-In the SPS8 model, $\tilde{p}$ is the lightest neutralino~($\tilde{\chi}^{0}_{1}$). There are four types of neutralinos which are a mixture of the supersymmetric particles Bino~($\tilde{B}^{\circ}$),Wino~($\tilde{W}^{\circ}$), higgsino~($\tilde{H}^{\circ}_{u},\tilde{H}^{\circ}_{d}$), depending on the choice of parameters $M_{1},M_{2},M_{3}$, or $\Lambda$, $\tan\beta$, and $sgn(\mu)$.
-While particle $p$ could be a photon~($\gamma$), Z boson~$(Z)$ (or $Z^{\prime}$) and a higgs boson~($h$).
+%These light gravitinos with weak gravitino-gaugino or gravitino-scalar interactions allows for the decay of any next-to-lightest MSSM particle to a gravitino. 
+%This decay rate depends on the mass of the gravitino $m_{\tilde{G}}$ as long as R-parity is conserved. Thus, in the decay of every MSSM particle, the gravitino will likely or eventually be included in its final states. We can  parametrised this decay rate by using $C_{grav}$. It is easy to see that $C_{grav} \geq 1$. It is important to note that there are other GMSB phenomenological observations which do not entirely considered the gravitino as the lightest supersymmetric particle.
+%Thus in order to study the phenomenology of GMSB models, one can define a parameter space using the following parameters given in equation \ref{eq:mGMSB}. 
+%\begin{equation}{\label{eq:mGMSB}}
+%\left\{ \mathbf{\Lambda}, \quad \mathbf{M}_{\mbox{mess}},\quad \mathbf{N}_{5}, \quad \tan(\beta), \quad sgn(\mu),\quad C_{grav}\right\}
+%\end{equation}
+%These sets of parameters given in equation \ref{eq:mGMSB} are those we will be studying  within the minimal GMSB~(mGMSB).
+% In other gauge mediating supersymmetry models like the General Gauge Mediation SUSY breaking~(GGM), $\left\{M_{3}(\mbox{gluino mass}), M_{2}(\mbox{Wino mass}), M_{1}(\mbox{Bino mass}),\tan(\beta), sgn(\mu), c\tau_{NLSP}\right\}$
+%is the parameter space,\cite{GGM1,GGM2}.
+%In GGM models, colored sparticles are not required to be heavier than their Electro-Weak sparticles allowing for greater discovery potential at hadron collider\cite{DSHIH}. Thus, allowing for possibility of many candidates NLSP particles and not only the neutralino as in the case with mGMSB models like the SPS8 model.
+%For Pure General Gauge Mediation SUSY breaking~(PGGM), the parameter space is rather scan using $\displaystyle{\left\{\Lambda_{G},\Lambda_{S}, \mathrm{M}_{\mbox{mess}}\right\} }$ parameter set.
+%Of all other possible decay modes in GMSB models, this thesis is interested only in decays where eventually, the Next-To-Lightest SUSY particle~(NLSP) decays to the lightest SUSY particle~(LSP) which is the gravitino and its SM partner; i.e if particle, $\tilde{p}$ is the NLSP, then it will decay is given according to equation \ref{eq:NLSPDECAY}.
+%\begin{equation}
+%%\tilde{p}\rightarrow p + \tilde{G}
+%\end{equation}
+The decay of the NLSP to the gravitino as LSP is always accompanied by the SM partner of the LSP, so as to conserve R-Parity.
+Thus if $\tilde{p}$ is the NLSP, it decay to gravitino and SM particle $p$, $ \tilde{p}\rightarrow p + \tilde{G}$
+In the SPS8 benchmark model, the gravitino is the LSP and the neutralino is the NLSP,
+the choice of parameters is  $\mathbf{M}_{\mbox{mess}} = 2\mathbf{\Lambda}$, $ \tan(\beta)=15$, $\mathbf{N}_{5}=1$.
+Only $\mathbf{\Lambda}$ and $C_{grav}$ are allowed to vary, Ref.\cite{SUSY}.
+The NLSP, $\tilde{p}$ is the lightest neutralino~($\tilde{\chi}^{0}_{1}$). 
+There are four types of neutralinos which are a mixture of the supersymmetric particles Bino~($\tilde{B}^{\circ}$),Wino~($\tilde{W}^{\circ}$), higgsino~($\tilde{H}^{\circ}_{u},\tilde{H}^{\circ}_{d}$), depending on the choice of parameters  $\Lambda$, $\tan\beta$, and $sgn(\mu)$.
+The particle $p$ could be a photon~($\gamma$), Z boson~$(Z)$ (or $Z^{\prime}$) and a higgs boson~($h$).
 This thesis, for experimental convenience, will focus on the parameter space for which the the particle $p$ is a photon~($\gamma$) and $C_{grav} > 1$.
-This ensures that the lifetime of the NLSP is long enough such that its decay happens within the detector volume and the resulting photon is delayed or non-prompt on length scales of the detector.
-
-The decay rate for a NLSP to its SM partner and a gravitino can be approximated as in equation \ref{eq:drate}(More details can be found in \cite{SM, GMSB, NLSP}).
+This ensures that the lifetime of the NLSP is long enough such that its decay happens within the detector volume and the resulting photon is delayed or non-prompt on length scales of size of the detector.
+The decay rate for a NLSP to its SM partner and a gravitino can be approximated using only the mass of the
+NLSP and the effective supersymmetry breaking scale, $\mathbf{F} = C_{grav}\cdot \mathbf{\Lambda}\cdot\mathbf{M}_{\mbox{mess}}$
+giving in equation \ref{eq:drate}.
+%(More details can be found in \cite{SM, GMSB, NLSP}).
 \begin{equation}{\label{eq:drate}}
 \Gamma(\tilde{NLSP} \rightarrow \gamma\tilde{G}) \approx  \frac{m^{5}_{\tilde{NLSP}}}{\mathbf{F}^{4}}
 \end{equation}
-This approximation is almost the same for the non-minimal GMSB models except that additional  parameters are present showing explicit dependence of the neutralino life time on neutralino mixing.
+This approximation is almost the same for the non-minimal GMSB models except that additional parameters are present showing explicit dependence of the neutralino life time on neutralino mixing.
 %It is important to observe here that, the decay rate is large for smaller values of the fundamental SUSY breaking scale or equivalently smaller gravitino mass for a fixed neutralino mass. Thus if $m_{NLSP}$ is of the $\mathrm{O}(100$~\GeV) or more and $\sqrt{\mathbf{F}} \ll 1000$~\TeV, meaning $m_{\tilde{G}} \leq 1$~\KeV, then the above decay rate is of the order than can be observed at hadron collider detectors.
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Long-Lived Particles in GMSB Models}
+\subsection{Long-Lived Particles in GMSB Models}
 \paragraph*{}
 In addition to mass, charge and spin being experimental handles use in the search for new physics, a particle's life time or decay length is a very relevant for discovering new fundamental interactions. Since through life time measurements, one has direct access to measuring and understanding and in some cases excluding the energy scale and fundamental parameters involved in a new interaction.
-\subsection{Production of supersymmetric particles at Hadron Colliders}
+\subsubsection{Production of supersymmetric particles at Hadron Colliders}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Producing a supersymmetric particle at a hadron collider like the LHC is a probabilistic process. This process is quantitatively expressed as the production cross-section. The production cross-section expresses the probability of a given process happening. 
+The production of a given particle in a particle collider is a probabilistic process.
+This probability is expressed as a measurable quantity called \textit{cross-section}. For example,
+the cross-section of producing a a particle in proton-proton collider such as the LHC, is the probability 
+that the proton-beams will collide and interact in a certain way to produce the given particle. Although this
+cross-section~($\sigma$) is measured in units of area as \textit{barns}~($1b = 10^{-24}cms^{2}$), usually it has 
+very little relation to the physical interpretation of area as used in everyday life. It is rather a technical
+term for counting the number of a given particle produced when these proton beams collide.
+The cross-section of producing a given particle depends on the available energy of the 
+proton-beams compared to the mass of the particle, the nature of the interactions of the proton beams 
+when they collide which depends on the coupling constants and also on the flux of the proton beams.
+The rate or number per unit time of the given particle produced at a specific particle collider is
+given as a product of its cross-section times the instantaneous luminosity~($\mathscr{L}$).
+The instantaneous luminosity is number of incident particles per unit area per unit time 
+times the opacity of the target.
+\newline
+Producing a supersymmetric particle at a hadron collider like the LHC depends on the mass of supersymmetric particles. 
 The mass of supersymmetric particles is much higher than those of SM particles and as a result, the cross-section for producing supersymmetric particles at a hadron collider is much smaller than that for SM particles.
 %This probability depends on the distribution of type of incoming particles inside the colliding protons with enough proton energy fraction to create a supersymmetric particle. Since the mass of the supersymmetric particle being create depends on the available center of mass energy of the colliding partons. In a hadron collider like the LHC, gluons are the one of these partons with the highest probability of proton energy fraction distribution. Sea quarks such as up and down quarks which make up the proton as well as valence quark which can exist inside the proton provide their energy fraction is large enough can also collide to create SUSY particles. The figure \eqref{PDFs} show the parton distribution function against its energy fraction on the horizontal axis within a proton. The probability of creating a SUSY particle depends on the momentum transfer $Q$ of these partons.
-
 The cross-section of a given process in supersymmetry~(SUSY) happening at the particle collider can be computed and compared with experimental measurements. The cross-section depends on the type of processes involved. Each process can be expressed in diagrammatic forms called \textit{feynman} diagrams and the probability of that process happening is computed using its represented feynman diagrams.
-
 Supersymmetric processes that can lead to neutralino production and decay at a proton collider at the LHC can involve Electro-Weak and strong interactions. SUSY production through strong processes have larger cross-sections compared to Electro-Weak processes as can be shown in figure \ref{fig:SUSYPROD}. 
-
 \begin{center}
 \mbox{\includegraphics[height=0.5\textwidth,width=0.5\textwidth]{THESISPLOTS/SUSY_Xsec.png}}
 %\includegraphics[width=2.5in]{THESISPLOTS/SinglePhoton_squark.pdf}} \\
 \captionof{figure}{Supersymmetry production cross-section against sparticle mass for different modes of supersymmetry production at a proton-proton collider. $pp \rightarrow \tilde{g}\tilde{g}$ processes have the dorminant production cross-section. }
 \label{fig:SUSYPROD}
 \end{center}
-
-
 Electro-Weak production of neutralinos through Electro-Weak interactions are known as \textit{direct} production of neutralinos while those due to strong interactions which is the dominant mode of supersymmetry production at the LHC, produce neutralinos through the production and decay of much heavier supersymmetric particles like squarks~($\tilde{q}$) and gluinos~($\tilde{g}$). This is referred to as \textit{indirect} or \textit{cascade decay} production of neutralinos. Examples of strong interaction processes include $pp \rightarrow \tilde{g}\tilde{g}$, $\tilde{q}\tilde{q}^{\star}$ and their feynman diagrams are shown in figure \ref{fig:feynman_gsDiag}. The produced squarks and gluinos do not decay directly into the gravitino but through a cascade decay process eventually decay to the gravitino through the neutralino. This is because, first, in R-parity conserving GMSB models, due to conservation of R-parity, SUSY particles are produced in pairs, and secondly because in GMSB models, as we saw in figure \ref{fig:feynman_grav}, they are no gravitino-gluino-gauge boson or gravitino-squark-gauge boson interactions but rather gravitino-gaugino-gauge boson or gravitino-scalar-chiral fermion interactions. Thus, the squark or gluino do not directly couple with the gravitino and so cannot directly decay into the gravitino but rather through a cascade decay. 
-
 \begin{center}
 \centering
 \mbox{\includegraphics[height=0.3\textwidth, width=0.4\textwidth]{THESISPLOTS/SinglePhoton_gluino.pdf} \quad \quad
@@ -716,48 +798,73 @@ Electro-Weak production of neutralinos through Electro-Weak interactions are kno
 \label{fig:feynman_gsDiag}
 \end{center}
 The list of feynman diagrams presented for SUSY processes in figure \ref{fig:feynman_gsDiag} is not exhaustive. As previously mentioned, SUSY production cross-sections are very small compared to SM production processes. A production cross-section is express in term of a unit called a \textit{barns}~(b). ($1~b = 10^{-28}$~$m^{2}$). Because this number is quite small it is usually further express with suffix in front of the unit barn such as \textit{nano}~(n) or \textit{pico}~(p) or \textit{femto}~(f). The typical cross-section of producing a SUSY particle at the LHC is of the order of $1~pb =10^{-12}\times 10^{-28}~m^{2}$ or at times $1~fb = 10^{-15}\times 10^{-28}~cm^{2}$ for extremely rare SUSY processes. While a typical production of a standard model process such as the production of the $Z$ or $W$ bosons is of the order of a few $nb = 10^{-9}\times 10^{-28}~m^{2}$. Thus, finding a SUSY particle in an environment such as the LHC is very challenging, since most SUSY production cross-section are very small compared to an overwhelming high cross-section processes from the standard model.
-
-
 %%%%%%%% DECAY %%%% LONG-LIVED%%%%%%%
-\subsection{Particle Production Cross-section and Decay Rate}
-Almost all particles disintegrate or \textit{decay}, most very rapidly. Collectively particles which disintegrate are said to be unstable while the few which do not are said to be stable. Those which take a long time to disintegrate are termed meta-stable or "\textit{long-lived}" particles. The length of the decay time and context will tell whether a particle is meta-stable or long-lived. The stability of a given particle is measured with respect to the age of the universe~(13.7 billion years). The only understood stable particles in nature are the \textsf{electron}(and \textsf{anti-electron})~($e$), \textsf{up}~($u$) and \textsf{down}~($d$) quarks and their anti-quarks, the \textit{photon}~($\gamma$), the lightest \text{neutrino}~($\nu_{e}$) and the \textit{graviton}. 
-Particles decay by transforming from one type of particle or generation unto another either through interactions, radiation or oscillation.  This decay, in analogous to our everyday experience depends on the their interaction strength with possible particles they can decay into. For example, strongly interacting particles will decay almost immediately while weakly interacting particles will naturally take some time. However, this is not the whole story, as quantum effects will also determine the particles nature of decay.
+\subsubsection{Particle Decay Rate}
+When a particle is produced, say particle $\mathbf{A}$, its coupling to other particles, say particles
+ $\mathbf{B_{1}}\cdots \mathbf{B_{n}}$, where $n$ is total number of particles particle, 
+allows for it to transform into these other particles. 
+In addition its coupling, if the mass of particle $\mathbf{A}$ is greater than
+the total sum of mass of particles $\mathbf{B_{1}}\cdots \mathbf{B_{n}}$, i.e $m_{\mathbf{A}} > m_{\mathbf{B_{1}}} + \cdots 
++ m_{\mathbf{B_{n}}}$, then we say, particle $\mathbf{A}$ \textit{decays} to particles $\mathbf{B_{1}}\cdots \mathbf{B_{n}}$.
+Particle for which no such channel for decay is possible are termed \textit{stable}. Our current understanding is that
+only the electron~($\Pe$) and the proton~($\Pproton$) are stable( although there are theories which predict the
+proton to decay after $10^{34}$ years and also theories where stable heavy or light particles 
+will explain the nature of Dark Matter. This time through which a particle must live before
+it decays is called it's \textit{lifetime}. Particle decays in which the particle decays instantly as soon as they are produced
+are called \textit{prompt} decays while particle decays with observable lifetime are \textit{non-prompt} decays.
+Non-prompt decays might range from a few fraction of a second lifetimes in \textit{nanoseconds}~($1$~ns $= 10^{-9}$~s) to
+a few minutes. At particle detector length or size scales(of the order of a few minutes), such particles are termed
+\textit{long-live}.  
+%Almost all particles disintegrate or \textit{decay}, most very rapidly. Collectively particles which disintegrate are said to be unstable while the few which do not are said to be stable. Those which take a long time to disintegrate are termed meta-stable or "\textit{long-lived}" particles. The length of the decay time and context will tell whether a particle is meta-stable or long-lived. The stability of a given particle is measured with respect to the age of the universe~(13.7 billion years). The only understood stable particles in nature are the \textsf{electron}(and \textsf{anti-electron})~($e$), \textsf{up}~($u$) and \textsf{down}~($d$) quarks and their anti-quarks, the \textit{photon}~($\gamma$), the lightest \text{neutrino}~($\nu_{e}$) and the \textit{graviton}. 
+%Particles decay by transforming from one type of particle or generation unto another either through interactions, radiation or oscillation.  This decay, in analogous to our everyday experience depends on the their interaction strength with possible particles they can decay into. For example, strongly interacting particles will decay almost immediately while weakly interacting particles will naturally take some time. However, this is not the whole story, as quantum effects will also determine the particles nature of decay.
 %which is understood to be about 13.7 billion years old. 
-Meta-stable particles which are composite~(bound states of elementary particles), are more unstable and easily decay into particles with smaller mass. An example of a meta-stable particle is the \textit{neutron}~(\textsf{$udd$}) which on its own, outside the atomic nucleus can remain stable for about 15 or so minutes. While, neutrons living inside some atomic neuclei can live for a period of time comparable to the age of the universe. Another meta-stable particle like the proton~(\textsf{$uud$}) seem very stable but can possibly decay after a very long period of time. It is speculated that the proton can remain stable for up to a period of about $10^{33}$ years. Atomic nuclei can also be considered as meta-stable living for about a tiny fraction of a second. Thus for all practical purposes, the proton is considered a stable particle while the neutron is considered a \textit{long-lived} particle.  It is believed that if \textit{dark matter} is made of particles then those particles  must be very, very, very long-lived with time also comparable  to or beyond  the age of the universe.
-
+%Meta-stable particles which are composite~(bound states of elementary particles), are more unstable and easily decay into particles with smaller mass. An example of a meta-stable particle is the \textit{neutron}~(\textsf{$udd$}) which on its own, outside the atomic nucleus can remain stable for about 15 or so minutes. While, neutrons living inside some atomic neuclei can live for a period of time comparable to the age of the universe. Another meta-stable particle like the proton~(\textsf{$uud$}) seem very stable but can possibly decay after a very long period of time. It is speculated that the proton can remain stable for up to a period of about $10^{33}$ years. Atomic nuclei can also be considered as meta-stable living for about a tiny fraction of a second. Thus for all practical purposes, the proton is considered a stable particle while the neutron is considered a \textit{long-lived} particle.  It is believed that if \textit{dark matter} is made of particles then those particles  must be very, very, very long-lived with time also comparable  to or beyond  the age of the universe.
 %Particle disintegration is understood as the interaction between a given particle and its daughter particle(s). This interaction could be electromagnetic, weak, strong, any pair or maybe all three types of interactions. 
-The stability of a particle is determined by the properties of the particle combined with  conservation laws of a quantum number or conserved quantity like energy, spin, momentum, angular momentum and charge. Other factors may also play an important role such as phase space~(availability of lighter particles to decay into), violation of some fundamental property like \textit{strangeness} or the mediating particle usually a boson being very massive compared to the momentum transfer between the parent and the daughter particle. These laws combined with particle's properties leads to a set of rules which are (almost) entirely determine whether a particle can decay or not or at most decay very rarely.  
-These set of rules can be summarized as follows:
-\begin{itemize}
-\item All particles must and should decay to two or more particles.
-\item The mass of the decaying~(parent) particle must exceed the sum of the mass  of the particles produced~(daughter particles) in its decay.
-\item There must be charge conservation i.e, the total electric charge of the parent particle must equal or match the total electric charge of the daughter particles.
-\item The total number of fermions or spin-1/2 particle before and after the decay must change only by an \textit{even} number.
-\item The total number of quarks minus the total number of anti-quarks must not change in any decay.
-\item The nature of of interaction and degree of phase space available must all be satisfied in order for any decay to take place.
-\end{itemize}
-
-The rate at which a given particle disintegrate  is known as it's \textit{decay rate}, symbolized as \textbf{$\Gamma$}. It is an experimentally measurable quantity which can also be computed in theory. A particle's decay rate $\Gamma$ can depend on the strength of a given interaction involved in the decay.As such the experimental measurement of decay rate provides access towards understanding the type of interaction involved and important parameters governing the underlying interaction or mediating particles involved in a given decay. Thus, measuring a particle's decay rate can be used as a direct access to search for other interactions beyond the known interaction and thus provide evidence for new physics. 
-
-A single particle can decay into more than one type of particles. Provided the conditions for decay are satisfied, its decay into potential particles is possible. The decay into a specific set of particles is known as a \textit{decay channel}. Different decay channels can be quantified with respect to the overall \textit{total decay rate}  of the parent particle. This quantification is expressed as a \textit{ branching ratio~(BR)}. Thus the BR gives quantitative estimate of the possibility or probability of a parent particle decaying to specific daughter particles or through a given channel.
+%The stability of a particle is determined by the properties of the particle combined with  conservation laws of a quantum number or conserved quantity like energy, spin, momentum, angular momentum and charge. Other factors may also play an important role such as phase space~(availability of lighter particles to decay into), violation of some fundamental property like \textit{strangeness} or the mediating particle usually a boson being very massive compared to the momentum transfer between the parent and the daughter particle. These laws combined with particle's properties leads to a set of rules which are (almost) entirely determine whether a particle can decay or not or at most decay very rarely.  
+%These set of rules can be summarized as follows:
+%\begin{itemize}
+%\item All particles must and should decay to two or more particles.
+%\item The mass of the decaying~(parent) particle must exceed the sum of the mass  of the particles produced~(daughter particles) in its decay.
+%\item There must be charge conservation i.e, the total electric charge of the parent particle must equal or match the total electric charge of the daughter particles.
+%\item The total number of fermions or spin-1/2 particle before and after the decay must change only by an \textit{even} number.
+%\item The total number of quarks minus the total number of anti-quarks must not change in any decay.
+%\item The nature of of interaction and degree of phase space available must all be satisfied in order for any decay to take place.
+%\end{itemize}
+In particle decay, the stronger the \textit{coupling} and the larger the \textit{mass difference}, the faster the decay. This is 
+expressed mathematically as; $N(t) = N(0)e^{-t/\tau}$, where both $N(t)$ and $N(0)$ are the number of the particle present
+at time $t$ and the beginning, $t=0$ and $\tau$ is the particle's \textit{lifetime}.
 \newline
+The rate at which a particle decays is it's \textit{decay rate}~(\textbf{$\Gamma$}).
+Particle decay rate depends on the availability of other particles it couples to and with
+mass less than the particle's mass. It is therefore possible that a given particle, $\mathbf{A}$
+would rather decay to other particles  $\mathbf{C_{1}}\cdots \mathbf{C_{n}}$ preferred to
+if its its coupling to these and mass condition is satisfied.
+% It is an experimentally measurable quantity which can also be computed in theory. A particle's decay rate $\Gamma$ can depend on the strength of a given interaction involved in the decay.As such the experimental measurement of decay rate provides access towards understanding the type of interaction involved and important parameters governing the underlying interaction or mediating particles involved in a given decay. Thus, measuring a particle's decay rate can be used as a direct access to search for other interactions beyond the known interaction and thus provide evidence for new physics. 
+The decay into a specific set of particle(s) or \textit{decay channel} can be express as a ratio
+of its total decay rate to all particles possible.
+This ratio is called \textit{ branching ratio}~(BR). Decay rate, (\textbf{$\Gamma$}) is related to lifetime, $\tau$
+according to expression \ref{eq:RATE}.
+
 The inverse of a decay rate is the \textit{proper life time}, denoted as $\tau$.
 \begin{equation}{\label{eq:RATE}}
   \tau = \frac{\hbar}{\Gamma}
 \end{equation}
-
-$\tau$ is a measure of the time lived as measured in the frame of reference of the decaying particle ~(rest frame) by a particle before disintegrating.
- A convenient way to express life time is by instead of the time lived use the distance traveled by a particle before it decays denoted by  $c\tau$, where $c$ is the speed of light in vacuum and $\tau$ is the \textit{proper life time}.
-This is called the \textit{proper decay length}. However, nearly impossible to measure the proper decay length inside a particle's rest frame, thus  laboratory measurements are  performed while the decaying particle is moving with some velocity, $v$ with respect to a stationary laboratory. In making these measurements,  we take into consideration this difference in motion of frames~(the moving particle frame and the stationary laboratory frame)  or relativistic effect in understanding our measurement of the decay length in the laboratory translated into the proper decay length of the particle. %The effect we need to consider is known in special relativity as \textit{time dilation} and the decay length is a measure of the distance between the position where the particle was produced to where it decayed.
-The laboratory measured decay length is expressed as:
+$\tau$ is the particle's lifetime where the particle is not moving.
+It is convenient to express lifetime in terms of its distance traveled before it decays.
+This distance is expressed as  $c\tau$, where $c$ is the speed of light in vacuum.
+Since most particles have mass and travel with velocity $\vec{v}$ not equal to $c$,
+this distance travel considering $|\vec{v}| \neq c$ is fully expressed using equation \ref{eq:DECAY}.
 \begin{equation}{\label{eq:DECAY}}
  \vec{L} = \vec{\beta} \gamma c\tau
 \end{equation}
-where $\vec{\beta} = \frac{\vec{v}}{c} $ , $\vec{v}$, the velocity of the moving particle and $\gamma = \frac{1}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}$ is a factor accounting for the relative motion between the two frames.
-Equation \ref{eq:DECAY} can also be expressed in as $\vec{L} = \frac{\vec{p}}{m}c\tau$, in terms of the particle's momentum $p$ and mass, $m$.
-Thus, the larger the particle's momentum, the further is it's distance traveled from its point of production as measured in the laboratory frame. On the other hand, the larger the particle's mass, the slower it's traveling speed and hence shorter its distance traveled.
+where $\vec{\beta} = \frac{\vec{v}}{c} $, $\vec{v}$ is the particle's traveling velocity and $\gamma = \frac{1}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}$ is a factor relating the motion when it is not moving~(rest frame) to a frame where it is moving.
+Equation \ref{eq:DECAY} can also be expressed in as $\vec{L} = \frac{\vec{p}}{m}c\tau$, in terms of the particle's momentum $p$ and mass, $m$. Particles with larger mass and produced with a small momentum travel slow and thus might have large distance traveled 
+before it decays.
+Since decay rate, $\Gamma$, depends on the coupling, particle decaying through electromagnetic, weak and strong interactions
+have very different decay rates. Particles decaying through strong interactions 
+have the largest decay rate and thus shortest lifetime of about $10^{-17}$ to $10^{-25}$~seconds.
 
-Because particle's decay rate $\Gamma$ can depend on the strength of a given interaction involved in the decay. Thus the decay length, $c\tau$  for electromagnetic interaction, can be very different to that of weak and strong interactions. The decay length for strong interactions is the shortest because of the strong nature~(coupling constant $\approx 1$) of strong interaction. The weak and electromagnetic interactions have much smaller coupling constants thus often leads to longer decay length. There are some exceptions to this due to other factors playing a key role than only the strngth of a given interaction such as the size of the available phase space and the difference in mass between the parent and the sum of the mass of the daughter particles.
+% Thus the decay length, $c\tau$  for electromagnetic interaction, can be very different to that of weak and strong interactions. The decay length for strong interactions is the shortest because of the strong nature~(coupling constant $\approx 1$) of strong interaction. The weak and electromagnetic interactions have much smaller coupling constants thus often leads to longer decay length. There are some exceptions to this due to other factors playing a key role than only the strength of a given interaction such as the size of the available phase space and the difference in mass between the parent and the sum of the mass of the daughter particles.
 %The table and graph below show the mass and decay length of SM particles and their interaction.
 %\begin{equation}
 % TABLE SHOWING SM particle decay rates and interactions involed as well as mass Vs decay length.
@@ -780,18 +887,19 @@ Because particle's decay rate $\Gamma$ can depend on the strength of a given int
 %\item The decay of a particle to another lighter particle could only be  made possible through some suppressed or effective coupling and as a result ends up being meta-stable e.g the muon
 %\item If the mass of a particle is relatively close in quantity to the particle it is decaying into such that their difference in mass is quite small, the decay will be eventually suppressed. This goes by the name lack of phase space for decay e.g decay of neutron ($ n \rightarrow p + e^{-} + \bar{\nu}_{e} $). In this scenario the difference in mass between the neutron (n) and the proton (p) is $\approx 1.293$ MeV and as a result determines the type of associated particle produced in this decay as observed.
 %\end{itemize}
-
-\paragraph*{}
-In order to avoid misunderstanding of what we mean by long-lived particles in this thesis, we cover mostly \textit{massive neutral meta-stable} particles  referred here as \textsf{Neutral Massive Long-Lived Particles}~(NMLLP). These are either elementary or composite neutral particles with life-time within the detectable range of a collider detector i.e few nanoseconds. In general, 
+Particle lifetime may vary from a few femtoseconds~(1~fs $1 = 10^{-15}$~s) to the age of the universe or equivalently 
+its measured distance travelled  may vary from a few $\mu$m to billions of km. 
+Terms to refer to each range in lifetime are unfortunately few.
+Here, we use the term \textit{long-lived} particles to refer to particles whose distance traveled
+might range from a few $\mu$m to few meters or  within the detectable size of an LHC particle detector.
+%long-lived particles in this thesis, we cover mostly \textit{massive neutral meta-stable} particles  referred here as \textsf{Neutral Massive Long-Lived Particles}~(NMLLP). These are either elementary or composite neutral particles with life-time within the detectable range of a collider detector i.e few nanoseconds. In general, 
 %A rather more descriptive name would be Neutral Massive Meta-Stable Particles(NMMP) since these particles are not very long-lived in the real sense but might decay into other elementary particles which for all practical purposes can be observable at collider detectors.
-long lived could mean life-times from a few nanoseconds ($10^{-9}$s) to the age of the universe or equivalently from a few  $\mu$m to billions of km.
-Thus, our interpretation of neutral long-lived particles will be particles whose decay length ranges from a few $\mu$m to few meters or decay length is within the detectable size of the LHC detectors and in particular electromagnetic calorimeter sector of LHC detectors.
 %\newline
 %We have restricted ourselves to electromagnetic (local U(1) gauge symmetry) neutral particles as their charge counterparts can be studied using conventional magnetic spectrometer and ionization methods as shown in this studies for Heavy Stable Charge Particles (HSCP).
 
 
-\subsection{Decay of supersymmetric particles in CMS detector}
-\paragraph{Neutralino as NLSP Decay Length}\mbox{}\\
+%\subsection{Decay of supersymmetric particles in CMS detector}
+\paragraph{Neutralino as Next-To-Lightest-Supersymmetry-Particle}\mbox{}\\
 The neutralinos produced from the cascade decay of squarks and gluinos can decay into a gravitino and a gauge boson or scalar particle. This decay is also a probabilistic process and can be expressed and quantified as a single real number. 
  There are always many options for a given particle to decay into and each of these options is quantified by a number known as the \textit{Branching  Fraction} or \textit{Branching Ratio}. Summing all the branching ratios for all the different decay processes gives the total \textit{Decay Width}. The total decay width, can also be computed and expressed as a single real number in units of \GeV or \MeV (\GeV = giga electron volt $=10^{9}$~eV). 
  %In the case of the neutralino as the NLSP, the decay width depends on the nature of its interaction with the gravitino and an associated gauge boson or scalar field.
