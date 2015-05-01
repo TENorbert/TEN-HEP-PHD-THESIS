@@ -2,73 +2,99 @@
 % experiment.tex: Chapter describing the experiment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Hadron Collider and Detector}
-This section describes the particle accelerator and detectors that are used to produced and detect particles at colliders. The first section describes the particle accelerator while the following section describes the CMS detectors with emphasis to those sections which are directly relevant to this analysis. A detailed description of the LHC and detectors can be found in \cite{LHC} and \cite{CMSD}.
+This section describes the particle collider and detector. The first section describes the particle accelerator which is the Large Hadron Collider~(LHC) and the next section describes the Compact Muon Solenoid~(CMS) detector with emphasis to those sections directly relevant to this analysis. A detailed description of the LHC and CMS detector is found in Ref.\cite{LHC} and Ref.\cite{CMSTDR}.
 \section{Large Hadron Collider}
 \subsection{Overview}
-The Large Hadron collider~(LHC) is a proton-proton and heavy ion collider designed to achieve a center of mass $\displaystyle{\sqrt{S}}$ energy of 14~TeV. It is hosted and controlled by the European Organisation for Nuclear Research~(CERN). Unlike linear colliders, the LHC is a circular collider with nearly 27~km in circumference located at the border between France and Switzerland. It is designed to smash protons and ions against each other controlled by powerful magnets at officially four main locations. At each major collision point are multi-purpose particle detectors ranging from A Toroidal LHC Apparatus~(ATLAS) and Compact Muon Solenoid~(CMS) both non-fixed target detectors, A Large Ion Collider Experiment~(ALICE) for colliding heavy ions and finally Large Hadron Collider beauty~(LHCb), a fixed target experiment for investigating the properties of B-Hadrons. We  give a full description of the important parts of the LHC in the following subsections, detail discussion of other interesting parts can be found here \cite{LHC}.
-There are three main steps prior to colliding protons or ions at the LHC.  The first is ramping up the energy of the beams followed by squeezing the beams at interaction points( CMS or ATLAS) and finally remove the separator bumps that are formed by local corrector magnets.
-Thus our description of the LHC will follow this three stages.
+The LHC is a proton-proton and heavy ion collider designed to achieve a center of mass $\displaystyle{\sqrt{S}}$ energy of 14~TeV. It is hosted by the European Organisation for Nuclear Research~(CERN). Unlike linear colliders, the LHC is a circular collider with nearly 27~km in circumference located at the border between France and Switzerland. It is designed to smash protons and ions against each other controlled by powerful magnets at four main points. The Compact Muon Solenoid~(CMS) is one of the multi-purpose particle detectors at each collision point.
+%ranging from A Toroidal LHC Apparatus~(ATLAS) and
+%both non-fixed target detectors, A Large Ion Collider Experiment~(ALICE) for colliding heavy ions and finally Large Hadron Collider beauty~(LHCb), a fixed target experiment for investigating the properties of B-Hadrons.
+% We  give a full description of the important parts of the LHC in the following subsections, detail discussion of other interesting parts can be found here \cite{LHC}.
+%There are three main steps prior to colliding protons or ions at the LHC.  The first is ramping up the energy of the beams followed by squeezing the beams at interaction points( CMS or ATLAS) and finally remove the separator bumps that are formed by local corrector magnets.
+Fig. \ref{fig:LHC} shows the LHC and the different stages before particle collision.%Thus our description of the LHC will follow this three stages.
 \begin{center}
 \centering
 \mbox{
 \includegraphics[width=6in]{THESISPLOTS/The_LHC.png}}
-\captionof{figure}{Schematic diagram showing the full Large hadron Collider. Image taken from \cite{LHCB}}
+\captionof{figure}{Schematic diagram showing the full Large hadron Collider.} %Image taken from \cite{LHCB}}
 \label{fig:LHC}
 \end{center}
 \subsection{Colliding Energy}
-Hydrogen gas is inserted into a linear accelerator called Linac2 where they are stripped off of their orbiting electrons to become hydrogen ions or protons. Under the influence of electric fields, these protons are accelerated to an energy of 50~\MeV creating a stream of particles called \textit{particle beams}. These beams are arranged in packets known as \textit{bunches}. Particle acceleration if provided through the use of Radio-Frequency~(RF) cavities containing electromagnetic fields which oscillate at a particular frequency. The protons surf this electromagnetic fields and are group in troughs of the electromagnetic waves called RF~\textit{buckets}. The circular nature of the synchrotron accelerator ensures that the protons pass many times through a cavity and during each time their energy can be slowly increase to reach the design energy.
-The 50~\MeV protons from the Linac2 are injected into the proton synchrotron Booster~(PSB). The PSB accelerates the protons to up to 1.4~\GeV and inject them into the Proton Synchrotron~(PS) which pushes the protons energy to 25~\GeV. These protons travelling at 99.93\% the speed of light are sent to the Super Proton Synchrotron~(SPS) and accelerated to an energy of 450~\GeV. They are finally transferred into the LHC ring(both in a clockwise and anti-clockwise direction) and accelerated for about 20 minutes to their norminal energy of 7~\TeV. As this point these protons are travelling with the speed of 99.9999\% the speed of light. Powerful magnets are used to keep the beeps travelling in the circular LHC ring. The advantage of circular particle colliders such as the LHC over fix target colliders is that, the energy available to make new particles called the center of mass energy denoted as $\sqrt{S}$ is simply the sum of the energy of the two beams i.e $\sqrt{S} = \mathit{E}_{\mbox{beam1}} +   \mathit{E}_{\mbox{beam2}}$ compared to $\sqrt{\mathit{E}_{\mbox{beam}}}$ for fix target experiments. In the case of the LHC, each beam is designed to have energy of 7~\TeV and that makes $\sqrt{S} = 14$~\TeV. Although in circular collider, an accelerating charge particles like the proton would loose energy in for the form of radiation which is inversely proportional to the mass of the charge particle to the fourth power requiring  the need for continuous addition of energy after each turn to maintain the beam energy to a stable value. Since the proton's mass is  about $0.938$~\GeV which is close to 1~\GeV, this lost of energy is not very significant unlike  electrons  whose mass of about $0.000511$~\GeV making their energy lose through radiation more and thus less preferable to use as the main particles for a circular hadron collider. However, the debris of particles produced when electrons collide is much less compared to that of hadrons making analysis in a hadron collider more challenging. 
+Hydrogen ions also known as protons from hydrogen gass where the orbiting electron has been striped away is inserted into a linear 
+accelerator called \textit{Linac 2}.
+Using electromagnetic fields in Radio Frequency~(RF) cavities, these protons are accelerated to an energy of 50~\MeV creating a stream of particles called \textit{particle beams} arranged in packets known as \textit{bunches}.
+Protons from the Linac2 are injected into the circular synchrotron Booster~(PSB).
+% The protons surf this electromagnetic fields and are group in troughs of the electromagnetic waves called RF~\textit{buckets}.
+The circular synchrotron accelerator ensures that the protons pass many times through a cavity with their energy slowly increasing each time to reach the design energy.
+The PSB accelerates the protons up to 1.4~\GeV and inject them into the Proton Synchrotron~(PS) which increases their energy to 25~\GeV. These protons travelling at 99.93\% the speed of light are sent to the Super Proton Synchrotron~(SPS) and accelerated to an energy of 450~\GeV. They are finally transferred into the LHC ring(accelerating in a clockwise and anti-clockwise direction) and accelerated for about 20 minutes to their nominal energy of 7~\TeV.By now the protons are traveling with the speed of 99.9999\% the speed of light.
+Powerful bending magnets are used to keep the beams traveling in the circular LHC ring. The advantage of circular particle colliders  over fix target colliders is that, the energy available to make new particles called the \textit{center of mass}~(COM) energy, denoted as $\sqrt{S}$ is simply the sum of the energy of the two beams \ie $\sqrt{S} = \mathit{E}_{\mbox{beam1}} + \mathit{E}_{\mbox{beam2}}$ compared to $\sqrt{\mathit{E}_{\mbox{beam}}}$ for fix target experiments. For the LHC, each beam is designed to have energy of 7~\TeV 
+making $\sqrt{S} = 14$~\TeV. In circular colliders, the is synchrotron radiation~(is inversely proportional to the mass of the charge particle to the fourth power) by an accelerating charge particle contributing to lose in its energy. This would require a continuous addition of energy after each turn to maintain the beam energy to a stable value. However, since the proton's mass is  about $0.938$~\GeV, and are to be accelerated to about $7$~\TeV, this lost of energy is not very significant unlike for electrons whose mass is about $0.000511$~\GeV and the energy lost is  more. Thus protons are preferred to electrons for a circular hadron collider.
+Then again, the debris of particles produced when electrons collide is much less compared to that of protons making analysis in a hadron collider very challenging. 
 \subsection{Luminosity}
-Luminosity is the measurement of the number of collisions that can be produced in a collider per squared area per second. This is known as the instantaneous luminosity and it is related to the cross-section(a probabilistic measure of the possibility of a given collision process happening) through the equation:
+In colliding beams experiments, the center of mass energy available for the production of new effects is very important.
+However, the number of useful interactions producing effects~(events) is equally important, especially
+in cases where the probability~(also known as cross section,$\sigma$) of producing rare events is very small.
+The quantity which measures the ability of a particle accelerator to produce the events from the required number of 
+interactions is called \textit{luminosity}. The luminosity is also the proportionality factor between
+the number of events per second and the cross section. Luminosity~($\mathscr{L}$) is therefore a measure of the number of collisions that can be produced in a collider per squared area per second. 
+The cross section is calculated from theory while the luminosity depends on factors ranging from
+the flux \ie number of particles per second  of the beams, the beam sizes at collision, and the frequency of collision.
+For physics experiments, the integrated luminosity which is total luminosity over a given period of time
+usually a year. 
+%This is known as the instantaneous luminosity and it is related to the cross-section(a probabilistic measure of the possibility of a given collision process happening) through the equation:
 
+Using the luminosity~($\mathscr{L}$) and the cross section~($\sigma_{p}$) of a given process, we can calculate
+event rate ~($\mathscr{R}$) or the number of events per second produced in proton collisions by the given interaction process. 
 \begin{equation}
-N_{\mbox{events/sec}} = \mbox{Luminosity} \cdot \mbox{Cross Section}
+\mathscr{R} = \mathscr{L} \cdot \sigma_{p}
 \end{equation}
-where the luminosity $\mathscr{L}$ is related to the total integrated luminosity(delivered luminosity over time) $\mathrm{L} = \int \mathscr{L}dt$ and is defined in terms of accelerator(assuming round beams and equal values of beta function) parameters as:
-\begin{equation}\label{eq:lumi}
-\mathscr{L} = \frac{1}{4\pi}\cdot\left(f_{rev}\mathit{n}_{b}\mathit{N}_{b}\right)\cdot\frac{\mathit{N}_{b}}{\varepsilon_{N}}\cdot \frac{\gamma}{\beta^{\ast}}\cdot \mathscr{R}(\theta_{c},\varepsilon,\beta^{\ast},\sigma_{z} )
-\end{equation}
-
-where $\mathit{N}_{b}$ is the number of particles per bunch, $\mathit{n}_{b}$ is the number of bunches, $f_{rev}$ is the revolutionary frequency, $\gamma = E/m_{p}$ is the relativistic factor, $\varepsilon_{N}$ is the normalised beam emittance which along with $\beta^{\ast}$, the value of the amplitude or beta function at interaction point, determines the size of the beam. $\mathscr{R}$ is the geometrical reduction factor arising from the fact that the beams to not collide head-on but at a non-zero angle called the crossing angle or \textit{"Piwinski angle"}( $\phi \equiv \frac{\theta_{c}\sigma_{z}}{2\sigma_{x}}$). This effect is known as the \textit{hour-glass effect}.
-From the above definition \ref{eq:lumi}, it is evident that keeping the emittance (meaning particles in beam are confined to a small distance and have nearly the same momentum ) means the likelihood of particle interaction will be greater and thus higher luminosity. However this is often not easy to archive as increasing the beam energy means reducing the beam emittance. The normalized emittance $\varepsilon_{N}$ is often used as its dependence on beam energy is a squared root dependence.
-In the same way, lower beta values implies the width of beam is narrower or properly \textit{"squeezed"} at interaction point resulting to an increase in number of collisions hence higher luminosity.
-This squeezing of depends on the quadruple magnet configuration and powering. 
-In addition to low beam emittance and lowest value of beta function at interaction point($\beta^{\ast}$), one can also archive higher luminosity by using high population bunches($\mathit{N}_{b}$) and collide them at high frequency.
-\paragraph*{Luminosity Measurement}
-\par
-Obviously using equation \ref{eq:lumi} to determine the instantaneous and integrated luminosity would involve a lot of uncertainty in the measurements of about 20-30\%, as there are so many parameters whose value need to be measured precisely in a normal LHC operation. Rather specialised LHC runs known as \textit{"Van der Meer Scans"}\cite{lhclumi} are used to calibrate specialized equipments used for determining luminosity.
-%The method employed by CMS(using TOTEM) is to use the total proton-proton~(\textit{p-p} cross section. 
-The method employed by CMS is using the Hadronic Foward~(HF) calorimeter to make luminosity measurements.
-Using production rates or cross sections of well and precisely calculable processes and rewriting \ref{eq:lumi} as:
-\begin{equation}\label{eq:LInt}
- \mathscr{L} \equiv \frac{Rate_{tot}}{\sigma_{tot}}    = \frac{\mu \mathit{n}_{b} f_{rev}}{\sigma_{tot}} 
-\end{equation}
-where $\mu = \left\langle \mathit{N}_{tot}/ \mathit{n}_{b} \right\rangle $ is the \textit{average number of interactions per bunch crossing}.
-CMS keeps track of "recorded" and "delivered" luminosity. Delivered luminosity refers to the luminosity delivered by LHC to CMS and one would expect this to be equal to  the amount recorded. However, there are instances where the CMS detector is unable to take data either because the data acquisition chain~(DAC) is busy or one of the CMS sub-detectors is temporarily down. Part of my job as a sub-detector expert during CMS data taking of LHC Run 1 was to make sure that the period of temporal unavailability of the ECAL sub-detector is as minimal as possible.
+In CMS we have a "recorded" and "delivered" luminosity. Delivered luminosity refers to the luminosity delivered by LHC to CMS and one would expect this to be equal to  the amount recorded. However, there are instances where the CMS detector is unable to take data either because the data acquisition chain~(DAC) or one of the CMS sub-detectors is temporarily down.% Part of my job as a sub-detector expert 
+ Figure \ref{fig:cmslumi} shows the total integrated luminosity recorded using the CMS detector during the $8$~\TeV proton-proton collision by the LHC.
 \begin{center}
 \centering
-\mbox{\includegraphics[width=3in]{THESISPLOTS/int_lumi_per_day_cumulative_pp_2012.pdf}
+\mbox{\includegraphics[scale=0.5]{THESISPLOTS/int_lumi_per_day_cumulative_pp_2012.pdf}
 }
 \captionof{figure}{Cumulative luminosity versus day delivered to (blue), and recorded by CMS (orange) during stable beams and for p-p collisions at 8 TeV centre-of-mass energy in 2012.}
 \label{fig:cmslumi}
 \end{center}
 
+%where the luminosity $\mathscr{L}$ is related to the total integrated luminosity(delivered luminosity over time) $\mathrm{L} = \int \mathscr{L}dt$ and is defined in terms of accelerator(assuming round beams and equal values of beta function) parameters as:
+
+%\begin{equation}\label{eq:lumi}
+%\mathscr{L} = \frac{1}{4\pi}\cdot\left(f_{rev}\mathit{n}_{b}\mathit{N}_{b}\right)\cdot\frac{\mathit{N}_{b}}{\varepsilon_{N}}\cdot \frac{\gamma}{\beta^{\ast}}\cdot \mathscr{R}(\theta_{c},\varepsilon,\beta^{\ast},\sigma_{z} )
+%\end{equation}
+
+%where $\mathit{N}_{b}$ is the number of particles per bunch, $\mathit{n}_{b}$ is the number of bunches, $f_{rev}$ is the revolutionary frequency, $\gamma = E/m_{p}$ is the relativistic factor, $\varepsilon_{N}$ is the normalised beam emittance which along with $\beta^{\ast}$, the value of the amplitude or beta function at interaction point, determines the size of the beam. $\mathscr{R}$ is the geometrical reduction factor arising from the fact that the beams to not collide head-on but at a non-zero angle called the crossing angle or \textit{"Piwinski angle"}( $\phi \equiv \frac{\theta_{c}\sigma_{z}}{2\sigma_{x}}$). This effect is known as the \textit{hour-glass effect}.
+%From the above definition \ref{eq:lumi}, it is evident that keeping the emittance (meaning particles in beam are confined to a small distance and have nearly the same momentum ) means the likelihood of particle interaction will be greater and thus higher luminosity. However this is often not easy to archive as increasing the beam energy means reducing the beam emittance. The normalized emittance $\varepsilon_{N}$ is often used as its dependence on beam energy is a squared root dependence.
+%In the same way, lower beta values implies the width of beam is narrower or properly \textit{"squeezed"} at interaction point resulting to an increase in number of collisions hence higher luminosity.
+%This squeezing of depends on the quadruple magnet configuration and powering. 
+%In addition to low beam emittance and lowest value of beta function at interaction point($\beta^{\ast}$), one can also archive higher luminosity by using high population bunches($\mathit{N}_{b}$) and collide them at high frequency.
+%\%paragraph*{Luminosity Measurement}
+%\par
+%Obviously using equation \ref{eq:lumi} to determine the instantaneous and integrated luminosity would involve a lot of uncertainty in the measurements of about 20-30\%, as there are so many parameters whose value need to be measured precisely in a normal LHC operation. Rather specialised LHC runs known as \textit{"Van der Meer Scans"}\cite{lhclumi} are used to calibrate specialized equipments used for determining luminosity.
+%The method employed by CMS(using TOTEM) is to use the total proton-proton~(\textit{p-p} cross section. 
+%The method employed by CMS is using the Hadronic Foward~(HF) calorimeter to make luminosity measurements.
+%Using production rates or cross sections of well and precisely calculable processes and rewriting \ref{eq:lumi} as:
+%\begin{equation}\label{eq:LInt}
+% \mathscr{L} \equiv \frac{Rate_{tot}}{\sigma_{tot}}    = \frac{\mu \mathit{n}_{b} f_{rev}}{\sigma_{tot}} 
+%\end{equation}
+%where $\mu = \left\langle \mathit{N}_{tot}/ \mathit{n}_{b} \right\rangle $ is the \textit{average number of interactions per bunch crossing}.
+
   
 %of well understood and calculable processes such as the production of $\mathrm{W}$ and $\mathrm{Z}$ bosons or di-leptons via  two photon exchange. 
-\subsection{Superconducting Electromagnets}
-The LHC design and operation uses a total of 9593 powerful magnets of different types for different purposes. Since there are two beams of protons running in clock-wise and anti-clock wise directions, the LHC uses an ingenious technique design  of the magnetic field in every dipole magnet generates a vector field $\mathbb{B}$ in each pipe pointing in opposite direction to that of the other but both always perpendicular to the beam directions. The Lorentz or magnetic force acting on the protons in both pipes always point towards the center thus keeping the beams in circular motion. In circular accelerators as the LHC and its smaller synchrotron rings, given the accelerator radius,$R$, the beam energy $p$ is determined by the strength $\mathbf{B}$ of the magnetic field. This can be easily understood using the Lorentz force  such that $\displaystyle{p[TeV] = 0.3\mathbf{B}[T]\cdot R[km] }$.
-The LHC is is a 26.659~km in circumference machine using powerful dipole magnets with magnetic field strength of about 8.33~Tesla(T) are 7~TeV to keep the protons circulating in their curved path or orbits. The LHC operates using superfluid helium for heat transport at 1.4~K(-271.3~$^{\circ}C$)  temperature to prevent these near 1232 dipole magnets, 858 quadruple and 6208 correcting magnets from overheating due to the energy stored in these magnets. Conventional magnetics aren't convenient for modern particle accelerators with high center of mass energy for both performance and economic reason. Rather, superconducting magnets made with modern technology using  niobium-tantanium~(Nb-Ti) filaments strands or cables are used to provide the high magnetic field required. 
+%\subsection{Superconducting Electromagnets}
+%The LHC design and operation uses a total of 9593 powerful magnets of different types for different purposes. Since there are two beams of protons running in clock-wise and anti-clock wise directions, the LHC uses an ingenious technique design  of the magnetic field in every dipole magnet generates a vector field $\mathbb{B}$ in each pipe pointing in opposite direction to that of the other but both always perpendicular to the beam directions. The Lorentz or magnetic force acting on the protons in both pipes always point towards the center thus keeping the beams in circular motion. In circular accelerators as the LHC and its smaller synchrotron rings, given the accelerator radius,$R$, the beam energy $p$ is determined by the strength $\mathbf{B}$ of the magnetic field. This can be easily understood using the Lorentz force  such that $\displaystyle{p[TeV] = 0.3\mathbf{B}[T]\cdot R[km] }$.
+%The LHC is is a 26.659~km in circumference machine using powerful dipole magnets with magnetic field strength of about 8.33~Tesla(T) are 7~TeV to keep the protons circulating in their curved path or orbits. The LHC operates using superfluid helium for heat transport at 1.4~K(-271.3~$^{\circ}C$)  temperature to prevent these near 1232 dipole magnets, 858 quadruple and 6208 correcting magnets from overheating due to the energy stored in these magnets. Conventional magnetics aren't convenient for modern particle accelerators with high center of mass energy for both performance and economic reason. Rather, superconducting magnets made with modern technology using  niobium-tantanium~(Nb-Ti) filaments strands or cables are used to provide the high magnetic field required. 
 %These magnetics provide a magnetic field strength of about 8.33~T and are kept at about 1.4K in temperature during LHC operation.
 
-Quadrupole electromagnet and correcting magnets are  used to keep the particles in the beam and archive the required focus and de-focusing needed. At interaction point, the quadrupole magnets are held symmetrically around the beam pipe to help squeeze the proton beams to very low values of beta function thus ensuring that many particle collisions as possible necessary for higher luminosity.
+%Quadrupole electromagnet and correcting magnets are  used to keep the particles in the beam and archive the required focus and de-focusing needed. At interaction point, the quadrupole magnets are held symmetrically around the beam pipe to help squeeze the proton beams to very low values of beta function thus ensuring that many particle collisions as possible necessary for higher luminosity.
 
 
-\subsection{Timing}
-The Large Hadron Collider (LHC) is designed to collide proton-proton (pp) bunches every  24.95~ns at designed luminosity. This means, the distance between each proton bunch is about 7.5~m compared to the nearly 100~m of optical fibre length which is required to transport readout information from the very front end electronics on the detectors to the back end  electronics at Point 5 for processing.
-It is therefore imperative to have a data synchronisation system for the trigger and readout systems of the LHC experiments in order that events from every proton-proton collision are properly assigned to the particular bunch crossing ~(BX) which produced them.
-The LHC is equipped with a Timing, Trigger and Control~(TTC) system with a bunch clock frequency of 40.07897~MHz whose function is to distribute synchronized LHC time to all the detectors including CMS.
-Timing synchronisation in the LHC is achieved using a Beam Synchronous Timing ~(BST) system which distributes timing using the LHC revolution frequency(at 11.246~kHz) or LHC orbit  and the RF bunch crossing frequency(40.07897~MHz at 7~\TeV). 
-Thus, the LHC fast timing signals from the RF generators  of the machine and orbit signals are distributed from the Prevessin Control Room~(PCR) through single-mode optical fibers(about 10.1~km in length for CMS) to all LHC experiments,  test beam areas, beam instrumentation around the ring and the SPS transfer lines.  At CMS counting room, the LHC clock and orbit signals  are recovered in the TTC Machine Interface crate~(TTCmi) and later distributed to the Trigger Control and sub-detector master TTC crates. All Level1~(L1) trigger and Data Acquisition~(DAQ) pipelines are driven with a 24.95~ns cycle clock locked to the LHC machine clock. The phase difference between the LHC 40~MHz clock and the arrival of detector signals from collision to the front-end electronics must be determined and adjusted for and monitored. The determination and assignment of pulses to bunch crossings depends critically on this initial clock phase adjustments and stability. This amplitude or pattern(also known as trigger primitives) for each trigger and bunch crossing is transmitted to the regional trigger logic in digital form every crossing and is synchronised with the LHC clock. Each trigger primitive digital data is then assigned to clock cycle in a process known as bunch crossing assignment. a   Detail expert description of LHC unified timing distribution system can be found here \cite{LHCT, LHCT1, LHCT2, LHCT3}.
+%\subsection{Timing}
+%The Large Hadron Collider (LHC) is designed to collide proton-proton (pp) bunches every  24.95~ns at designed luminosity. This means, the distance between each proton bunch is about 7.5~m compared to the nearly 100~m of optical fibre length which is required to transport readout information from the very front end electronics on the detectors to the back end  electronics at Point 5 for processing.
+%It is therefore imperative to have a data synchronisation system for the trigger and readout systems of the LHC experiments in order that events from every proton-proton collision are properly assigned to the particular bunch crossing ~(BX) which produced them.
+%The LHC is equipped with a Timing, Trigger and Control~(TTC) system with a bunch clock frequency of 40.07897~MHz whose function is to distribute synchronized LHC time to all the detectors including CMS.
+%Timing synchronisation in the LHC is achieved using a Beam Synchronous Timing ~(BST) system which distributes timing using the LHC revolution frequency(at 11.246~kHz) or LHC orbit  and the RF bunch crossing frequency(40.07897~MHz at 7~\TeV). 
+%Thus, the LHC fast timing signals from the RF generators  of the machine and orbit signals are distributed from the Prevessin Control Room~(PCR) through single-mode optical fibers(about 10.1~km in length for CMS) to all LHC experiments,  test beam areas, beam instrumentation around the ring and the SPS transfer lines.  At CMS counting room, the LHC clock and orbit signals  are recovered in the TTC Machine Interface crate~(TTCmi) and later distributed to the Trigger Control and sub-detector master TTC crates. All Level1~(L1) trigger and Data Acquisition~(DAQ) pipelines are driven with a 24.95~ns cycle clock locked to the LHC machine clock. The phase difference between the LHC 40~MHz clock and the arrival of detector signals from collision to the front-end electronics must be determined and adjusted for and monitored. The determination and assignment of pulses to bunch crossings depends critically on this initial clock phase adjustments and stability. This amplitude or pattern(also known as trigger primitives) for each trigger and bunch crossing is transmitted to the regional trigger logic in digital form every crossing and is synchronised with the LHC clock. Each trigger primitive digital data is then assigned to clock cycle in a process known as bunch crossing assignment. a   Detail expert description of LHC unified timing distribution system can be found here \cite{LHCT, LHCT1, LHCT2, LHCT3}.
 %This means that there is the possibility of producing a LL particle when two protons collide every 25~ns.
 %Thus it becomes a serious challenge  for triggering, data acquisition and associating the correct emerging particle to
 %the correct bunch crossing (BX).
@@ -82,23 +108,56 @@ Thus, the LHC fast timing signals from the RF generators  of the machine and orb
 %which looked at LL particle with different velocities~ $\beta$ and showed that it is important to enlarge triggering windows so as to increase
 %triggering efficiencies for low velocity particles.
 
+\subsection{LHC Bunch Structure}
+%An LHC orbit is made of about 3564 \textit{bunch} places. However only 2808 are occupied with protons. The bunch structure is archived by  breaking a continuous proton beam into pulsed beam of separate bunches using an electromagnetic field  with oscillating frequency of 400~MHz(LHC ring) in the SPS and LHC RF cavity. Thus each bunch is in an RF bucket. 
+Each LCH proton bunch is placed inside an RF buckets during beam filling. % with where each RF bucket has an energy against time profile as can be seen in figure below.
+The filling scheme is such that not all RF buckets have proton bunches. 
+Those empty buckets or beam gaps are necessary to make room for beam dump and cleaning.%the rise/fall times at the SPS/LHC injection and ejection and to abort kickers magnets during
+The separation in time between two buckets/bunches filled or unfilled is approximately $2.5$~ns. There are  about $10^{11}$ protons per bunch during filling and acceleration.
+ %Filling and acceleration at each RF cavity point is performed so that there are 
+However, during filling and eventual bunch splitting at PS, it is possible that some empty buckets are filled with a much smaller proton population compared to the main bunch. These less proton populated buckets can be either trailing the main bunch by $\Delta t$ = 2.5, 5.0, 7.5, $\ldots$~ns, or leading the main bunch by $\Delta t$ = -2.5, -5.0, -7.5, $\ldots$~ns. If these less populated bunches are $2.5$ to $3.0$~ns spaced in time from each other, they are referred to as \textit{satellite} bunches and if $5.0$~ns, they are referred to as \textit{ghost} bunches. Figure \ref{fig:LDM-Ghost} shows ghost and satellite bunches and a main proton bunch.
 \begin{center}
-
 \centering
+\mbox{
+\includegraphics[width=4.5in]{/home/tensr/Dropbox/PHD_Thesis_HEP/PHD_THESIS/PHD/THESISPLOTS/Ghost-Satellite-Bunches-LDM.png}} 
+\captionof{figure}{Longitudinal Profile taken with LDM detector showing definition of Ghost/Satellite bunches with respect to main bunches.}
+\label{fig:LDM-Ghost}
+\end{center}
+The presence of ghost/satellite bunches increase the uncertainty in LHC luminosity measurements and can also generate proton-proton interactions in the collision region. Effects on ghost/satellite bunches on instantaneous luminosity measurements have been studied 
+using CMS, ATLAS and ALICE detectors.  Their results showing clear observation of physics events produced from
+ghost and satellite bunch collisions is shown in figure \ref{fig:CMS-ATLAS-Ghost}.
+ CMS uses energy deposits in the endcap calorimeters with time space equivalent to those of ghost/satellite bunches while in ATLAS
+ uses the Longitudinal Density Monitor~(LDM)detector to study ghost/satellite bunches. 
+\begin{center}
+\centering
+\mbox{\includegraphics[height=3.0in,width=2.5in]{THESISPLOTS/ATLAS-LDM-GHOST.png} \quad \quad
+\includegraphics[height=3.0in,width=3.0in]{THESISPLOTS/CMS-Ghost-Profile.png}} 
+\captionof{figure}{(left)Arrival time distribution(red) of ATLAS MBTS  for LHC fill 1533 during 2010 Pb-Pb run and LDM profile(black) for Beam2(same for Beam1).\newline
+(Right) Timing of Clusters in the CMS endcap calorimeters for fill 1089:Left: EEP detector(left side of IP $z> 0$) Right: EEM detector( right side of IP, $z<0$).  Plots from ATLAS Ref.\cite{ATLAS-GHOST} and CMS, Ref.\cite{CMS-GHOST}}
+\label{fig:CMS-ATLAS-Ghost}
+\end{center}
+%There is the possibility that ghost/satellite - ghost/satellite and ghost - Beam1/Beam2 collisions will happen generating events at the CMS detector. This is a major background in the search for delayed photons or objects in general as these collisions can occur \textit{in-time}(Beam1- Beam2) collisions or \textit{out-of-time} collisions. It is thus imperative to be able to quantify this contributions in any search analysis. We will show in future studies we have performs to both \textit{"guestimate"} and quantify these contributions in our search analysis.
+We provide in table \ref{tab:tableLHC}, a summary, showing LHC design conditions and operation conditions during the LHC RUN 1. 
+\begin{center}
+%\begin{sidewaystable}
+ \begin{table}[H]
+  \begin{turn}{90}
+  \centering
  %\setlength{\abovecaptionskip}{0pt}
   %\setlength{\belowcaptionskip}{10pt}
  % \topcaption{GMSB,GGM Phenomenology and Relevant final states}
+ %\rotatebox{90}{%
   \begin{tabular}{|l|l|l|l|l|}
   \hline \hline
   \multicolumn{5}{|c|}{\bfseries{LHC Operation Parameters 2010-2013}} \\
   \hline \hline
   \bfseries{Parameter} & \bfseries{2010 value} & \bfseries{2011 Value} & \bfseries{2012/13 Value} & \bfseries{Design Value} \\
    \hline \hline
- Beam energy[Te] & 3.5  & 3.5  & 4.0  & 7 \\ 
+   Beam energy[Te] & 3.5  & 3.5  & 4.0  & 7 \\ 
   \hline
   $\beta^{\ast}$ in IP 5[m] & 3.5 & 1.0 & 0.6  & 0.55 \\
   \hline
-  Bunch spacing [ns]& 150 & 75/50 & 50 & 25 \\
+   Bunch spacing [ns]& 150 & 75/50 & 50 & 25 \\
   \hline
   Number of bunches & 368 & 1380 & 1380 & 2808 \\
   \hline
@@ -119,38 +178,15 @@ Thus, the LHC fast timing signals from the RF generators  of the machine and orb
  Dipole Magnet B[T] & 8.33 & 8.33 & 8.33 & 8.33 \\
  \hline  
   \end{tabular}
-  \captionof{table}{The LHC operation parameter conditions during RUN 1:2010-2013}
- \label{tableLHC}
- \end{center}
-
-
-\subsubsection{LHC Bunch Structure}
-An LHC orbit is made of about 3564 \textit{bunch} places. However only 2808 are occupied with protons. The bunch structure is archived by  breaking a continuous proton beam into pulsed beam of separate bunches using an electromagnetic field  with oscillating frequency of 400~MHz(LHC ring) in the SPS and LHC RF cavity. Thus each bunch is in an RF bucket. Each RF bucket has an energy against time profile as can be seen in figure below. The LHC filling scheme is arranged such that not all RF buckets have proton bunches. Thus there are empty buckets or beam gaps with missing bunches. These gaps are necessary to make  room for the rise/fall times at SPS/LHC injection and ejection and abort kickers magnets during say LHC beam dump. The time separation between two buckets/bunches filled or unfilled is about 2.5~ns. Filling and acceleration at each RF cavity point is performed so that there are about $10^{11}$protons/bunch. However, during filling and eventual bunch splitting at the PS, it is possible that some empty buckets are filled with a much smaller proton population compared to the main bunch. These less proton populated buckets can be $\Delta t$ = 2.5, 5.0, 7.5, $\ldots$~ns, trailing the main bunch labelled as Beam1 or Beam2 otherwise leading the main bunch with $\Delta t$ = -2.5, -5.0s, -7.5, $\ldots$~ns. If these less populated bunches are 2.5~ns spaced in time from each other, they are referred to as \textit{Ghost} bunches and if 5.0~ns, they are referred to as \textit{satellite} bunches see figure \eqref{fig:LDM-Ghost}.
-
-\begin{center}
-\centering
-\mbox{
-\includegraphics[width=4.5in]{/home/tensr/Dropbox/PHD_Thesis_HEP/PHD_THESIS/PHD/THESISPLOTS/Ghost-Satellite-Bunches-LDM.png}} 
-\captionof{figure}{Longitudinal Profile taken with LDM detector showing definition of Ghost/Satellite bunches with respect to main bunches.}
-\label{fig:LDM-Ghost}
+   \caption{LHC operation parameter conditions during RUN 1:2010-2013}
+   \label{tab:tableLHC}
+ %\end{sidewaystable}
+   \end{turn}
+  \end{table}
 \end{center}
-The presence of ghost/satellite bunches increase the uncertainty in LHC luminosity measurements and can also generate proton-proton interactions in the collision region. Effects on ghost/satellite bunches on instantaneous luminosity measurements have been studied by both CMS, ATLAS and ALICE detectors \cite{ATLAST-GHOST} 
-with their profile compared to main bunch bunches. CMS uses energy deposits in the endcap calorimeters with time space equivalent to those of ghost/satellite bunches while in ATLAS, they have also introduced a new detector called the Longitudinal Density Monitor~(LDM) to study ghost/satellite bunches. The results are shown in the figure \eqref{fig:CMS-ATLAS-Ghost}.
-\begin{center}
-\centering
-\mbox{\includegraphics[height=2.5in,width=2.5in]{THESISPLOTS/ATLAS-LDM-GHOST.png} \quad \quad
-\includegraphics[height=2.5in,width=3.0in]{THESISPLOTS/CMS-Ghost-Profile.png}} 
-\captionof{figure}{(left) Arrival time distribution(red) of ATLAS MBTS  for LHC fill 1533 during 2010 Pb-Pb run and LDM profile(black) for Beam2(same for Beam1).\newline
-(Right) Timing of Clusters in the CMS endcap calorimeters for fill 1089:Left: EEP detector(left side of IP $z< 0$) Right: EEM detector( right side of IP, $z>0$). NB: Plots taken from \cite{ATLAS-GHOST} and \cite{CMS-GHOST}}
-\label{fig:CMS-ATLAS-Ghost}
-\end{center}
-There is the possibility that ghost/satellite - ghost/satellite and ghost - Beam1/Beam2 collisions will happen generating events at the CMS detector. This is a major background in the search for delayed photons or objects in general as these collisions can occur \textit{in-time}(Beam1- Beam2) collisions or \textit{out-of-time} collisions. It is thus imperative to be able to quantify this contributions in any search analysis. We will show in future studies we have performs to both \textit{"guestimate"} and quantify these contributions in our search analysis.
-\paragraph*{Beam Halo}\mbox{}\\
-In addition to ghost/satellite bunches generating collisions events during collision, protons in ghost/satellite bunches can interact with collimators or gases such as H2, $CO_{2}$ and others in the beam pipe leading to the production of high energy muons which later bremsstrahlung and shower directly in the calorimeter detectors. 
-Main bunches due to betatron oscillations(departure of particles from nominal orbit in the transverse direction) can also through inelastic scattering with gas molecules in beam pipe about 550~m up from interaction  point~(IP)(since beam cleaning in not being 100\% efficient), scattering on tertiary collimators~(TCT) about $z = 150$~m from IP and beam dump at about 150~m upstream CMS detector, produce through cascade decay energetic muons(sometimes muons with about 1~\TeV) which bremsstrahlung in calorimeter detectors. 
 
-This kind of background from beam is referred to as \textit{Machine Induced Background}~(MIB) or \textit{Beam-Induced Background}~(BIB) and its contribution is called non-collision backgrounds as these are events observed in the detectors but not produced from the interaction point~(IP). Throughout these thesis, we will refer to this kind of events as \textit{Beam Halos or halos}. Because, they produce very high transverse momentum photons which can also be miss-identified as jets arriving in-time of out-of-time, they are a very important background in any analysis. In the later section, we will also show how we have developed new methods to identify and reject these kind of events and estimate its possible contribution to our analysis.
 
+\clearpage
 
 \section{Compact Muon Solenoid}
 \subsection{Overview}
