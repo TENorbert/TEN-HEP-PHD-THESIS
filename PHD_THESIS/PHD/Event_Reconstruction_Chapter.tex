@@ -1,12 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Event_Reconstruction_Chapter.tex:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Physics Objects Reconstruction and Identification in CMS}
+\chapter{Event Reconstruction}
 \label{Reconstruction_and Particle_ID_chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Physics Objects Reconstruction}
-Reconstruction is the operation of constructing physics quantities from raw data collected in the experiment. It is a software process whose objective is data reduction to higher-level objects use for data analysis.
-An event observed by the CMS detector is reconstructed using information from the different sub-detectors. This information represents the raw data from the DAQ which is in a format called digitised hits or \textit{digis}. A local reconstruction is performed with the output from these reconstruction units called \textit{RecHits}. The local reconstruction algorithm search for pixel or strips with a signal exceeding a threshold  and use these as seeds for clusters. RecHits are typically position measurements~(from times or clusters of strips or pixels) in tracking type detectors~(Muon and Tracker systems) and energy deposits or hits from Calorimetry systems. For example in the Muon Cathode Strip Chambers~(CSCs),local reconstruction provides position and time of arrival of muon hit from the distribution of charge induced on the cathode strips. For  the case of the Electromagnetic Calorimeter~(ECAL) and Hadronic Calorimeter~(HCAL), local reconstruction identifies, the position, time of arrival and energy of localised electromagnetic and hadronic energy depositions respectively. The typical software package for local reconstruction is label as RecoLocalTracker as in the case of tracks indicating only local modules of the sub-detector have been used. Global reconstruction takes these rechits as input to produced higher-level objects like charge particle tracks. This is where information from different modules in the same sub-detectors are combined. Clustering, tracking and fitting algorithms are used at this stage. For example, in ECAL and HCAL, global reconstruction provides a Calorimetric Tower~(CaloTower) links matching clusters in ECAL and HCAL   to produced a projective tower in the calorimetric system.  These towers have a definite position in $(\eta, \phi)$ plane and are used as basis for Jet reconstruction as described later in the sub-sections. In the Tracker, global reconstruction uses tracker hits and track segments and use the seeds for Kalman fitter which builds trajectories  with a $\chi^{2}$ cut applied to reject hits unlikely to be associated with tracks. The typical software packaged is label RecoTracker again as in the case of full charge particle tracks. The final reconstruction combined reconstructed objects from individual sub-detectors to produced  higher-level reconstructed objects  suitable for high-level triggering or physics analysis. Further selection requirements may be further applied until the final physics objects such as electron, photon or jet belonging to the event is fully reconstructed.
+\section{Physics Object Reconstruction}
+Event reconstruction is the process of constructing physics candidate objects like electrons, photons, muons, jets using raw data in the form of digitized hits or \textit{digis} from the DAQ. An event together with its constituent physics objects is reconstructed using information from all CMS subdetectors with some selection requirements. The reconstruction is implemented in a software.
+%The end product are physics "objects" which further selections can be applied during data analysis.
+%An event observed by the CMS detector consist of several physics objects.
+Reconstruction begins with local reconstruction performed with hits from a particular subdetector called \textit{rechits}
+then proceeds to a global and final reconstructions where rechit information from the entire CMS detector is used. Rechits are typically position measurements~(from  hits in strips or pixels) in tracking type subdetectors~(Muon chamber and Tracker) and energy deposits or hits from calorimetry subdetectors~(ECAL and HCAL). For example, in the tracker, the local reconstruction algorithm search for pixel or strips with hits exceeding a threshold and use them as seeds for clusters in the calorimeters while in the Muon Cathode Strip Chambers~(CSCs),local reconstruction provides position and time of arrival of muon hits from the distribution of charge induced on the cathode strips. For Electromagnetic~(ECAL) and Hadronic~(HCAL) calorimeters, local reconstruction identifies, the position, arrival time and energy of localized electromagnetic and hadronic energy depositions respectively. The typical software package for local reconstruction in the tracker is the \textit{RecoLocalTracker} since for reconstructing tracks only local modules of the tracker subdetector are used. During global reconstruction, rechits from several subdetectors combined serves as input for producing higher-level objects like charge particle tracks using clustering, tracking and fitting algorithms.  For example, in ECAL and HCAL, global reconstruction provides tracks  links matching to clusters in ECAL and HCAL energy clusters to produced Calorimetric Towers~(CaloTower) which have definite position in $(\eta, \phi)$ plane in the calorimetric systems. These calotowers are fed into Jet reconstruction for reconstructed \textit{jets}. In the Tracker, global reconstruction uses tracker hits and track segments for \textit{Kalman fitter} algorithm which builds praticle trajectories  with selections in the form of a $\chi^{2}$ cut applied to reject hits unlikely to be associated with tracks. 
+%The typical software packaged is label RecoTracker again as in the case of full charge particle tracks. 
+The final and full reconstruction combines these reconstructed objects from individual subdetectors to produced  higher-level reconstructed objects used for high-level triggering and physics analysis. Additional selection requirements may be applied to arrive at candidate physics objects like an electron, a photon  and jet(s) belonging to a proton-proton collision event.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Supercluster Reconstruction}
 The basis of all object reconstruction is the supercluster or basic cluster. Electromagnetic showers of photons and electrons are deposited in several crystals. Usually about 94\%~(97\%) of the incident energy is deposited in a $3\times3$~($5\times5$) matrix crystals in the $(\eta, \phi)$ plane. The presence of $3.8$~T magnetic field, material in front of the calorimeter causes bremssrahlung electrons and converted photons to deposit their energy in calorimeter in the form of small clusters spread in $\phi$.  This energy is recovered using clustering algorithms  where by starting with a seed crystal containing the maximum  of energy, superclusters~(clusters of cluster) are build within a narrow window in $\eta$ by is summing  the crystal energy along the $\phi$ which is the direction of energy spread due to the magnetic field. Figure \ref{fig:CLUSTER} shows a simple picture how these super clusters are build.
@@ -124,10 +129,10 @@ In the case of electrons reconstructed using the PF algorithm, tracks, electron 
  %\setlength{\abovecaptionskip}{0pt}
   %\setlength{\belowcaptionskip}{10pt}
  % \topcaption{GMSB,GGM Phenomenology and Relevant final states}
-\begin{tabular}{|l|l|p{3.2cm}|p{3.9cm}|}
-  \hline \hline
-  \multicolumn{3}{|c|}{\bfseries{Simple Cut Based Electron Photon Identification}} \\
-  \hline \hline
+\begin{tabular}{l|l|p{3.2cm}} %p{3.9cm}}
+ 
+  \multicolumn{3}{c}{\bfseries{Simple Cut Based Electron Photon Identification}} \\
+  \toprule
   \bfseries{ID Variable} & \bfseries{Electron} & \bfseries{Photon} \\
    \hline \hline 
   $H/E$ & 0.05(EB), 0.10(EE)  & 0.05 \\
@@ -155,7 +160,8 @@ In the case of electrons reconstructed using the PF algorithm, tracks, electron 
      \hline
      Rho corrected PF photon isolation & N/A & $1.3 + 0.005*p^{\gamma}_{T}$(EB) \\     
      
-   \hline  \hline
+   \hline
+   \bottomrule
   \end{tabular}
    \captionof{table}{ Simple Cut-Based criteria for High energy electron and photon identification in CMS}
  \label{tab:EgammaID} % for use in \ref{table1} if you want to refer to the table number

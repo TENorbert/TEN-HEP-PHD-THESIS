@@ -116,9 +116,9 @@ This angle also allows for the transformation of a quark from one flavor into an
 \clearpage
 \begin{center}
 \centering
- \bfseries{Particle and Their Gauge Group Representation}
-\begin{tabular}{|c|c|c|c|}
-\hline
+\bfseries{Particle and Their Gauge Group Representation}
+\begin{tabular}{c|c|c|c}
+ \toprule
 \bfseries{Particle Name(Symbol)} & \bfseries{Spin} & \bfseries{Multiplet} & \bfseries {$SU(3)_{C} \otimes SU(2)_{L} \otimes U(1)_{Y}$}\\
 \hline\hline
  Quarks ($Q$) & 1/2 & $(\Pup_{L}, \Pdown_{L})$  & $(\mathbf{3}, \mathbf{2}, \frac{1}{6})$\\
@@ -140,7 +140,8 @@ Higgs($\PHiggs_{d}$)   & 0 & $(\PSHiggsplus_{d}, \PSHiggsminus_{d})$ &  $(\mathb
  $\PW$ bosons & 1 & $\PWpm$ & $(\mathbf{1}, \mathbf{3}, 0)$ \\
  $\PB$ boson & 1 & $\PBzero$ & $(\mathbf{1}, \mathbf{1}, 0)$ \\
  (Electro-Weak Force) & & & \\
-\hline \hline
+\hline 
+ \bottomrule
 \end{tabular}
 \captionof{table}{SM particles and their gauge multiplets(representation) with quantum numbers.
 the numbers for example $(\mathbf{3}, \mathbf{2}, \frac{1}{6})$ means (\textit{triplet},\textit{doublet}, $Y = 1/6$) representations. }
@@ -424,17 +425,17 @@ These supermultiplets are either \textit{Chiral}, \textit{Vector} or \textit{Gra
 
 \begin{center}
 \centering
-\begin{tabular}{|c |c|c|}
-%\mbox{Supersymmetry multipletes and spin }
-\hline
+%\bfseries{Supersymmetry multipletes and spin }
+\begin{tabular}{c |c|c}
+\toprule
 \bfseries{Supermultiplets} & \bfseries {Spin in SM}, & \bfseries{Spin in Supersymmetry}\\
-\hline \hline
-
+\hline
 \textit{Chiral} & $0$ & $\frac{1}{2}$ \\ 
 \textit{Chiral} &$\frac{1}{2}$ & $0$ \\   \hline
 \textit{Vector} & $1$ & $\frac{1}{2} $ \\ \hline
 \textit{Gravity} & $2$ & $\frac{3}{2} $ \\
-\hline \hline
+\hline 
+\bottomrule
 \end{tabular}
 \captionof{table}{Supermultiplets and particle spin in SM and Supersymmetry.}
 \label{tab:SUSYM} 
@@ -468,29 +469,34 @@ use of a single supersymmetry generator.
 \subsection{Minimal Supersymmetric Standard Model}
 In the Minimal Supersymmetric Standard Model~(MSSM), the number of fundamental particles is increased.
 The full particle content in MSSM with this extension from SM is shown in Table \ref{tab:SUSYP} and \ref{tab:SUSYG}.
+\newline
+The nomenclature of supersymmetric particles in derived from their SM counterparts by adding an s in front of the SM particles's name e.g a \textit{selectron} is the supersymmetric particle of the electron, \textit{squarks} are the supersymmetric particles of SM quarks. There are exceptions to this nomenclature which we will mentioned later. Both supersymmetry particles and their SM partners must have the same mass, however,
+there have been no experimental evidence for such supersymmetric particles having the same mass as SM particles. Thus,
+Supersymmetry is definitely not a fundamental symmetry in nature and must be broken. 
 \begin{center}
 \centering
-\begin{tabular}{|l |l| l| l| l|}
+\begin{tabular}{l |l| l| l| l}
 %\mbox{Supersymmetry multipletes and spin }
-\hline
+\toprule
 \bfseries{Particle Names} &\bfseries{Symbol}  & \bfseries {spin 0} & \bfseries{spin 1/2} & \bfseries{$SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$} \\
 \hline \hline
-squarks, quarks
-($ \times 3$ families) & $Q$ & $(\tilde{u_{L}}, \tilde{d_{L}})$ & $(u_{L}, d_{L})$ & $(\mathbf{3}, \mathbf{2}, \frac{1}{6})$ \\
+\vtop{\hbox{\strut{ squarks, quarks}}
+\hbox{\strut{($ \times 3$ families)}}} & $Q$ & $(\tilde{u_{L}}, \tilde{d_{L}})$ & $(u_{L}, d_{L})$ & $(\mathbf{3}, \mathbf{2}, \frac{1}{6})$ \\
     & $\bar{u}$ & $\tilde{u}^{\star}_{R}$ & $u^{\dagger}_{R}$ &
    $(\bar{\mathbf{3}}, \mathbf{1}, -\frac{2}{3})$ \\
      &  $\bar{d}$ & $\tilde{d}^{\star}_{R}$ & $d^{\dagger}_{R}$ &
    $(\bar{\mathbf{3}}, \mathbf{1}, \frac{1}{3})$ \\
    \hline
-   sleptons, leptons
-($ \times 3$ families) & $L$ & $(\tilde{\nu}, \tilde{e_{L}})$ & $(\nu, e_{L})$ & $(\mathbf{1}, \mathbf{2}, -\frac{1}{2})$ \\
+ \vtop{\hbox{\strut{ sleptons, leptons}}
+\hbox{\strut{($ \times 3$ families)}}} & $L$ & $(\tilde{\nu}, \tilde{e_{L}})$ & $(\nu, e_{L})$ & $(\mathbf{1}, \mathbf{2}, -\frac{1}{2})$ \\
 
 & $\bar{e}$ & $\tilde{e}^{\star}_{R}$ & $e^{\dagger}_{R}$ &
    $(\bar{\mathbf{1}}, \mathbf{1}, 1)$  \\
    \hline 
 higgsinos, Higgs & $H_{u}$ & $(H^{+}_{u}, H^{\circ}_{u})$ & $(\tilde{H}^{+}_{u}, \tilde{H}^{\circ}_{u})$ & $(\mathbf{1}, \mathbf{2}, +\frac{1}{2})$ \\   
    & $H_{d}$ & $(H^{\circ}_{d}, H^{-}_{d})$ & $(\tilde{H}^{\circ}_{d}, \tilde{H}^{-}_{d})$ & $(\mathbf{1}, \mathbf{2}, -\frac{1}{2})$  \\ 
-\hline \hline
+\hline
+\bottomrule
 \end{tabular}
 \captionof{table}{Chiral supermultiplets and representation in Minimal Supersymmetric SM~(MSSM). Super symmetric particles~(sparticles) have a $\tilde{•}$ on them. Spin -0 fields are complex scalars while spin-1/2 fields are left-handed two component Weyl fermions.}
 \label{tab:SUSYP} 
@@ -498,9 +504,9 @@ higgsinos, Higgs & $H_{u}$ & $(H^{+}_{u}, H^{\circ}_{u})$ & $(\tilde{H}^{+}_{u},
 
 \begin{center}
 \centering
-\begin{tabular}{|l|l| l| l|}
+\begin{tabular}{l|l| l| l}
 %\mbox{Supersymmetry multipletes and spin }
-\hline
+\toprule
 \bfseries{Particle Names} & \bfseries {spin 1/2} & \bfseries{spin 1} & \bfseries{$SU(3)_{C}\otimes SU(2)_{L}\otimes U(1)_{Y}$} \\
 \hline \hline
 gluino, gluon & $\tilde{g}$  & $g$ &  $(\mathbf{8}, \mathbf{1}, 0)$ \\
@@ -508,15 +514,12 @@ gluino, gluon & $\tilde{g}$  & $g$ &  $(\mathbf{8}, \mathbf{1}, 0)$ \\
 winos, $W$ bosons & $\tilde{W}^{\pm}, \tilde{W}^{\circ}$ & $W^{\pm}, W^{\circ}$ & $(\mathbf{1}, \mathbf{3}, 0)$ \\
 \hline
 bino, $B$ boson & $\tilde{B}^{\circ}$ & $ B^{\circ}$  & $(\mathbf{1}, \mathbf{1}, 0)$ \\
-\hline \hline
+\hline 
+\bottomrule
 \end{tabular}
 \captionof{table}{Gauge supermultiplets and representation in Minimal Supersymmetric SM~(MSSM). Super symmetric particles~(sparticles) have a $\tilde{•}$ on them.}
 \label{tab:SUSYG} 
 \end{center}
-
-The nomenclature of supersymmetric particles in derived from their SM counterparts by adding an s in front of the SM particles's name e.g a \textit{selectron} is the supersymmetric particle of the electron, \textit{squarks} are the supersymmetric particles of SM quarks. There are exceptions to this nomenclature which we will mentioned later. Both supersymmetry particles and their SM partners must have the same mass, however,
-there have been no experimental evidence for such supersymmetric particles having the same mass as SM particles. Thus,
-Supersymmetry is definitely not a fundamental symmetry in nature and must be broken. 
 
 %In order for supersymmetry~(SUSY) predictions to be agreement with observations from experiments, SUSY must be realized as a broken symmetry in nature.
 %As a result, the already 19 free parameters of the SM is increased with more additional 105 free parameters. These are a lot of parameters for any fundamental theory describing elementary particle  interactions and thus undermines its predictive power. Thus, a generic or parent theory must be preferred in which the number of free parameters for the theory to predict is much reduced. Through this way, it is much easier to study the  phenomenological aspect of the theory. 
