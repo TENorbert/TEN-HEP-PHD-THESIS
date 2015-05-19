@@ -85,58 +85,60 @@ An estimate of the energy deposited by an electron or photon in the ECAL, $E_{e/
 \begin{equation}\label{eq:eEnergy}
 E_{e/\gamma} = F_{e/\gamma} \cdot [ G \cdot \sum_{i} S_{i}(t) \cdot C_{i} \cdot A_{i} ]
 \end{equation}
-where $A_{i}$ is the signal amplitude in ADC counts, $C_{i}$ is the inter-calibration coefficient,  $S_{i}(t)$ is the time-dependent corrections  for response variable usually obtain from laser, $G$ is the global scale calibration allowing one to move form energy in ADC counts to GeV and $F_{e/\gamma}$ is the particle energy corrections for geometric, clustering and other effects. The sum is over all the crystals belonging to the photon or electron super-cluster. In order to measure and reconstruct the true energy of the detected particle, energy corrections depending on $\eta$ such as $F_{e/\gamma}$ are applied at the level of super-cluster reconstruction to account for detector effects hence better identification of particles, in this case electrons and photons. Figure \ref{fig:EnergyCorr} shows energy scale and resolution obtained when these energy corrections are applied compared with when no corrections are applied. Figure \ref{fig:SCEnergyCorr}, shows the scenario for applying these corrections at the level of super-cluster reconstruction which at this stage are only electromagnetic objects.
+where $A_{i}$ is the signal amplitude in ADC counts, $C_{i}$ is the inter-calibration coefficient,  $S_{i}(t)$ is the time-dependent corrections  for response variable, usually obtain from laser, $G$ is the global scale calibration allowing one to move form energy in ADC counts to \GeV and $F_{e/\gamma}$ is the particle energy corrections for geometric, clustering and other effects. The sum is over all the crystals belonging to the photon or electron supercluster. In order to measure the true energy of the incident particle, energy adjustments which depend on $\eta$ through $F_{e/\gamma}$ is applied during supercluster reconstruction to account for detector mis- measurements caused by cracks between crystals and electronic noise. In figure \ref{fig:EnergyCorr}, we show comparisons between cases where no energy adjustments is made to those where energy adjustments is made using the measurement of the mass of the $\PZ$ boson. We see improvements on measuring the $\PZ$  mass, $91$\GeV/cc, when the energy adjustment is performed. Figure \ref{fig:SCEnergyCorr}, shows the scenario for applying these corrections at the level of supercluster reconstruction.
 \begin{center}
 \centering
-\mbox{\includegraphics[height=2.0in]{THESISPLOTS/propaganda_noIC_noLaser-regrCorr_ele-EB.pdf} \quad 
-\includegraphics[height=2.0in]{THESISPLOTS/propaganda_noIC_noLaser-regrCorr_ele-EE.pdf} }
-\captionof{figure}{$Z\rightarrow e^{+}e^{-}$  mass plot showing resolution and energy scale that is obtained from applying energy scale corrections to account for intrinsic spread in crystal and photo-detector response and time-dependent corrections to compensate for channel response loss for EB~(right) and EE~(left)}
+\mbox{\includegraphics[height=0.35\textwidth, width=0.50\textwidth]{THESISPLOTS/propaganda_noIC_noLaser-regrCorr_ele-EB.pdf} \quad 
+\includegraphics[height=0.35\textwidth, width=0.50\textwidth]{THESISPLOTS/propaganda_noIC_noLaser-regrCorr_ele-EE.pdf} }
+\captionof{figure}{$\PZ\rightarrow e^{+}e^{-}$  mass showing improvement in $\PZ$ mass after performing energy adjustments to account for intrinsic spread in crystal and photo-detector response and time-dependent corrections to compensate for channel response loss for EB~(right) and EE~(left)}
 \label{fig:EnergyCorr}
 \end{center}
 
 \begin{center}
 \centering
-\mbox{\includegraphics[height=2.0in]{THESISPLOTS/E_corr-EB.pdf} \quad 
-\includegraphics[height=2.0in]{THESISPLOTS/E_corr-EE.pdf} }
-\captionof{figure}{Super-clusters showing resolution and energy scale that is obtained from applying energy scale corrections for EB~(right) and EE~(left)}
+\mbox{\includegraphics[height=0.35\textwidth, width=0.50\textwidth]{THESISPLOTS/E_corr-EB.pdf} \quad 
+\includegraphics[height=0.35\textwidth, width=0.50\textwidth]{THESISPLOTS/E_corr-EE.pdf} }
+\captionof{figure}{\PZ mass from superclusters showing improvement in \PZ mass measurement after applying energy adjustment at supercluster level for EB~(right) and EE~(left).}
 \label{fig:SCEnergyCorr}
 \end{center}
 
-With these electron or photon candidates, further selections using variables constructed from information on the spread of the electromagnetic shower in $\eta$ and $\phi$, the ratio of the energy deposited in ECAL and HCAL, the track $\PT$ and  ECAL $\ET$ to further identify photons and electrons.  Pre-electron candidates based on cut elections such as minimum transverse energy, $E_{T} > 4$~ GeV, $\eta$ and $\phi$ geometrical matching; $\Delta Eta < 0.02$, $\Delta \phi < 0.1$  and a cut on Ratio of hadronic to electromagnetic energy cluster: $H/E < 0.2$ is enough to suit physics analysis, however, additional elections and identification criteria are added depending on the purpose of the particular analysis to fully defined an electron or photon.
-These identifications and isolation criteria can also be categorised in terms of flavours as being very loose~(VL), loose~(L), medium ~(M) and tight~(T).
-The typical variables used for electron and photon identification are defined as follows:
-\begin{itemize}
-\item Ratio of energy of HCAL behind super cluster to super cluster energy: $H/E$
-\item Energy momentum matching variables between energy of the super cluster  or of the super cluster seed and electron track  measured momentum  at the vertex or  at the calorimeter: $E/p_{in}$, $E_{seed}/p_{in}$, $E_{seed}/p_{out}$
-\item Geometrical matching between the electron track parameters at the vertex  extrapolated  to the super cluster  and the measured  super cluster position: $\Delta \eta_{in}$, $\Delta \phi_{in}$.
-\item Calorimeter shower shape  variables: the width of  the ECAL cluster  along the $\eta$  direction  computed  for all  the crystals  in the $5\times 5$  block of crystals centered  on the highest energy crystal  of the seed cluster ,$\sigma_{i\eta,i\eta}$ and the ratios of the energy sums over $3\times 3$ and $5\times 5$ matrices centered  on the highest energy  crystal of  the seed cluster: $R_{9} = E_{3\times3}/E_{5\times 5}$ or $R_{9} = \sum E_{9}/\sum E_{Supercluster}$. This $R_{9}$ variable makes a good separation between  unconverted photons~(energy not spread in tracker) and converted photons~(energy spread by B-field before reaching ECAL).
-\item Bremsstrahlung fraction: (track momentum at vertex -  track momentum at  ECAL)/ track momentum at vertex.
-\item 1/E(Super cluster) - 1/p(track at vertex)
-\end{itemize}
+To further select good electron and photon candidates, we use selection variables created from 
+%With these electron or photon candidates, further selections using variables constructed from 
+information on the spread of the electromagnetic shower in $\eta$ and $\phi$, the ratio of the energy deposited in  HCAL to ECAL, the track $\PT$ and  ECAL $\ET$  and isolation in ECAL, HCAL and tracker.
+%to further identify photons and electrons.  
+%Additional pre-electron candidates based on cut elections such as minimum transverse energy, $E_{T} > 4$~ GeV, $\eta$ and $\phi$ geometrical matching; $\Delta Eta < 0.02$, $\Delta \phi < 0.1$  and a cut on Ratio of hadronic to electromagnetic energy cluster: $H/E < 0.2$ is enough to suit physics analysis, however, additional elections and identification criteria are added depending on the purpose of the particular analysis to fully defined an electron or photon.
+%These identifications and isolation criteria can also be categorised in terms of flavours as being very loose~(VL), loose~(L), medium ~(M) and tight~(T).
+%The typical variables used for electron and photon identification are defined as follows:
+%\begin{itemize}
+%\item Ratio of energy of HCAL behind super cluster to super cluster energy: $H/E$
+%\item Energy momentum matching variables between energy of the super cluster  or of the super cluster seed and electron track  measured momentum  at the vertex or  at the calorimeter: $E/p_{in}$, $E_{seed}/p_{in}$, $E_{seed}/p_{out}$
+%\item Geometrical matching between the electron track parameters at the vertex  extrapolated  to the super cluster  and the measured  super cluster position: $\Delta \eta_{in}$, $\Delta \phi_{in}$.
+%\item Calorimeter shower shape  variables: the width of  the ECAL cluster  along the $\eta$  direction  computed  for all  the crystals  in the $5\times 5$  block of crystals centered  on the highest energy crystal  of the seed cluster ,$\sigma_{i\eta,i\eta}$  This $R_{9}$ variable makes a good separation between  unconverted photons~(energy not spread in tracker) and converted photons~(energy spread by B-field before reaching ECAL).
+%\item Bremsstrahlung fraction: (track momentum at vertex -  track momentum at  ECAL)/ track momentum at vertex.
+%\item 1/E(Super cluster) - 1/p(track at vertex)
+%\end{itemize}
 
-Due to the very high photon conversion rate s as a result of the tracker material in front of the ECAL  cuts like: 
-\begin{itemize}
-\item  Calorimeter shower shape:$R_{9}$
-\item Impact parameter: $d0$, minimum separation of the electron track computed with respect to the  reconstruction vertex.
-\item Missing Hits: Number of cross layers  without a compatible hits in the back-propagation of the track to the beam-line.
-\end{itemize}
- Isolation variables in addition to the identification variables are used to improve on the performance of identification. Below are the following isolation variables as defined and used by the CMS:
-\paragraph*{ Electron Photon Isolation} 
- \begin{itemize}
- \item Tracker Isolation: sum of $p_{T}$ of tracks  with $p_{T} > 0.7~GeV/c$ and maximum distance to the vertex  of 0.2~cm in  a cone of 0.3 with an inner veto cone of 0.04.
- \item ECAL Isolation: sum of energy  of ECAL RecHits with a Jurassic footprint removal ~(Jurassic width of about 1.5 crystals) in a cone  of 0.4  with veto cone of 3 crystals. A RecHit noise cut of 0.08~GeV in energy~(E) in barrel and 0.1~GeV in transverse energy~($E_{T}$) in the endcap is applied.
- \item HCAL Isolation: sum of HCAL Calorimeter Towers in a 0.4 cone with a 0.15 veto cone.
- \end{itemize}
-In general the major difference between an electron and a photon as identified by the CMS detector is that electrons which have no pixel strip hits are automatically  classified as photon candidates and further isolation and shower shape variables are used to arrive at the ultimate photon as required by a given analysis.
- Table \ref{tab:EGammaID} shows the Simple Cut-based selection criteria variables and cut thresholds used to identify electrons and photons in the CMS detector.
+As an improvement on the photon and identification, the ratio of the energy sums over $3\times3$ and $5\times5$ matrices centered on the highest energy  crystal of the seed cluster: $R_{9} = E_{3\times3}/E_{5\times 5}$ or $R_{9} = \sum E_{9}/\sum E_{Supercluster}$, also serves as additional isolated photon and electron selections. Separating true photons from collision arriving at ECAL from converted photons,  additional selections on variables like impact parameter,  $d0$, which is the minimum separation of the electron track computed with respect to the  reconstruction vertex and track transverse momentum, $p_{T}$, are used.
+%\begin{itemize}
+%\item  Calorimeter shower shape:$R_{9}$
+%\item Impact parameter: $d0$, minimum separation of the electron track computed with respect to the  reconstruction vertex.
+%\item Missing Hits: Number of cross layers  without a compatible hits in the back-propagation of the track to the beam-line.
+%\end{itemize}
+% Isolation variables in addition to the identification variables are used to improve on the performance of identification. Below are the following isolation variables as defined and used by the CMS:
+%\paragraph*{ Electron Photon Isolation} 
+% \begin{itemize}
+% \item Tracker Isolation: sum of $p_{T}$ of tracks  with $p_{T} > 0.7~GeV/c$ and maximum distance to the vertex  of 0.2~cm in  a cone of 0.3 with an inner veto cone of 0.04.
+% \item ECAL Isolation: sum of energy  of ECAL RecHits with a Jurassic footprint removal ~(Jurassic width of about 1.5 crystals) in a cone  of 0.4  with veto cone of 3 crystals. A RecHit noise cut of 0.08~GeV in energy~(E) in barrel and 0.1~GeV in transverse energy~($E_{T}$) in the endcap is applied.
+ %\item HCAL Isolation: sum of HCAL Calorimeter Towers in a 0.4 cone with a 0.15 veto cone.
+ %\end{itemize}
+%In general the major difference between an electron and a photon as identified by the CMS detector is that electrons which have no pixel strip hits are automatically  classified as photon candidates and further isolation and shower shape variables are used to arrive at the ultimate photon as required by a given analysis.
+%The full table using simple selection cuts on these variables used for standard electron and photon identification and isolation which is also used in our analysis is shown in table \ref{tab:EgammaID}.
+ Table \ref{tab:EGammaID} is a summary of the simple cut-based selection criteria on variables and their selection thresholds used for identifying isolated electrons and photons in CMS which has also be used in our search analysis for event selection.
 
 \paragraph*{Particle Flow Algorithm} \mbox{}\\
-An alternative criteria for reconstructing and identifying physics objects in the CMS detector which is now widely acceptable is the \textit{particle flow}~(PF) algorithm.
-
-The particle flow algorithm takes into consideration  information from every sub-detectors like the tracker, ECAL, HCAL and muon section before identifying a particular physics objects.
-The goal of this algorithm is to reconstruct higher  level physics objects  like Jets, missing transverse energy~(MET),  and the identification of tau~($\tau$) and b-jets by making use of the content of these objects in terms of more fundamental objects like electrons and photons or super clusters and tracks.
-The algorithm constitutes of steps like calorimeter clustering,  tracking and extrapolation to calorimeters, muon identification, electron pre-identification, linking of topological elements and finally particle identification and reconstruction. The result is a list of reconstructed particles consisting of photon, charge hadron, neutral hadron, muon and electron. From this list high level objects such as jets, MET and taus can be reconstructed.
-In the case of electrons reconstructed using the PF algorithm, tracks, electron energy seeds, 4-momentum, super cluster energy calibration, Bremsstrahlung tracks are used as base objects to reconstruct the entire electron. The PF is very useful in MET reconstruction where information about all the particles making up a single event is necessary to calculate MET.
+An algorithm which combines tracker, ECAL, HCAL  and muon chambers information in reconstructing and identifying physics objects in the CMS detector is called the \textit{particle flow}~(PF) algorithm.
+%PF algorithm takes into consideration  information from every sub-detectors like the tracker, ECAL, HCAL and muon section before identifying a particular physics objects.
+The goal of this algorithm is to reconstruct higher  level physics objects like Jets, missing transverse energy~(\MET) with higher efficiency. It is also used for identifying tau~($\tau$) and b-jets though using information about objects like electrons and photons or superclusters and tracks that might be the constituents of the object.
 
 \begin{center}
 \centering
@@ -144,7 +146,6 @@ In the case of electrons reconstructed using the PF algorithm, tracks, electron 
   %\setlength{\belowcaptionskip}{10pt}
  % \topcaption{GMSB,GGM Phenomenology and Relevant final states}
 \begin{tabular}{l|l|p{3.2cm}} %p{3.9cm}}
- 
   \multicolumn{3}{c}{\bfseries{Simple Cut Based Electron Photon Identification}} \\
   \toprule
   \bfseries{ID Variable} & \bfseries{Electron} & \bfseries{Photon} \\
@@ -172,47 +173,62 @@ In the case of electrons reconstructed using the PF algorithm, tracks, electron 
      \hline
      TRACK Isolation & same  & $2.0 + 0.001*E^{\gamma}_{T} + 0.0167*\rho$ \\
      \hline
-     Rho corrected PF photon isolation & N/A & $1.3 + 0.005*p^{\gamma}_{T}$(EB) \\     
-     
+     Rho corrected PF photon isolation & N/A & $1.3 + 0.005*p^{\gamma}_{T}$(EB) \\      
    \hline
    \bottomrule
   \end{tabular}
-   \captionof{table}{ Simple Cut-Based criteria for High energy electron and photon identification in CMS}
+   \captionof{table}{ Simple cut-based selection criteria for electron and photon identification.}
  \label{tab:EgammaID} % for use in \ref{table1} if you want to refer to the table number
  \end{center}
 %\end{table}
 
+PF algorithm combines different algorithms like calorimeter clustering,  tracking and extrapolation to calorimeters, muon identification, electron pre-identification, linking of topological elements for particle identification and reconstruction. Using the list of reconstructed particles like photons, charge hadrons, neutral hadrons, muon and electron, composite objects like jets, \MET and taus are well reconstructed.
+In the case of electron and photon reconstruction, the PF algorithm uses tracks, electron energy seeds, 4-momentum, super cluster energy calibration, Bremsstrahlung tracks. PF is very useful in \MET reconstruction where information of all the particles of the event is necessary to accurately calculate \MET.
+
+
+
 
 \subsection{Muon Reconstruction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The are three different types of muons reconstructed using the muon system detection all making up one huge collection of muons. They are Stand-alone, Global and  Tracker Muons.
-Reconstructed hit positions within each DT and CSC  are matched to form "segments" which are then collected and matched to generate seeds used as starting point for actual track fit of DT, CSC, and RPC hits. The resulting product of the fit in the muon spectrometer is a "stand-alone muon". "Global muons are formed when these stand-alone muon tracks and matched to tracker tracks in the tracker while "tracker muons" are muon objects reconstructed starting form silicon tracker tracks compatible with segments in the muon chambers. Using muon isolation variables defined using the calorimeter and tracker tracks, a collection of muon objects is identified in CMS. Thus is summary, stand-alone muons contain only hit position information from the muon chambers, global muons contain this information in addition to tracker information while Tracker muons are muons reconstructed starting with information from the inner tracker which is matched with calorimeter and muon chamber information. Using the beam spot as a constraint ensures that muons produced from proton-proton collision are distinguished from those produce from cosmic rays known as \textit{cosmic muons} or from beam splash/gas 150~m upstream proton beam dump known as \textit{beam Halos}. The 2~T \textbf{B}-field with a multi-stage flux-return yoke shields the muon detectors from hadrons ensuring  that the measured  particles can be identified as minimum ionizing muons. The barrel muon detector  consists of 4 stations forming concentric cylinders $|\eta| < 1.2$ around the beam line while the endcaps system consists of 468 cathode strip chambers~(CSC) arranged in groups as 72~ME1/1, 72~ME1/2, 72~ME1/3, 36~ME2/1, 72~ME2/2, 36~ME3/1, 72~ME3/2and 36~ME4/1 and the 72~ME4/2. A muon in pseudo-rapidity range of $1.2 < |\eta| < 2.4 $ crosses a total of 4 CSCs. Muons in the encaps-barrel overlap region;  $0.9 < |\eta| < 1.2 $ are detected by both the barrel drift tubes~(DT) and endcaps CSCs while in bother barrel and endcaps RPSc are used for triggering. RPCs are capable of tagging the time of an ionizing event in a much shorter time than the 25~ns between 2 consecutive LHC Bunch Crossings as a result triggering based on RPC can be used  to unambiguously identify the relevant Bunch Crossing  to which a muon track is associated even in the presence of high rate and background  expected in the LHC.
-\paragraph*{Cosmic and Halo Muons}\mbox{}\\
-Muons produced centrally or from proton-proton collision are reconstructed a bit different from other muons. Halo muons originating from machine-induced particles travelling along the beam line and cosmic muons originating from cosmic rays require global information in order to distinguish them from centrally produced muons. Both cosmic and halo muons are considered to be background muons in most physics analysis. The stand-alone muon reconstruction software suited from reconstructed muons from proton-proton collision assumes these muons to be moving radially outward in seen in figure \ref{fig:cmsSLICE} while cosmic muons originate from the outside of the CMS detector and can traverse only a small part of a detector depending on its energy and direction.
-Figure \ref{fig:Muons} show an illustration of different trajectories for the different types of muons. 
+Muons are particles produced from proton-proton collision at beam spot which travel all the way across the tracker and calorimeters into 
+the DT, CSC and RPC sub detectors. They are reconstructed using hits positions in the DT, CSC and RPCs.
+They are two types of reconstructed muons, "stand-alone muons" and "Global Muons". Stand-alone muons are reconstructed using hits from RPC, DT and CSC forming segments alone while global muons are stand-alone muons matched to tracker tracks in the tracker. There is also tracker muons which use hits in the inner tracker matched to calorimeters and muon chamber information.
+Using the beam spot as a constraint, we can distinguish between muons produced from proton-proton collisions from those produced from
+cosmic rays called \textit{cosmic muons} and those produced from proton beams interacting with gas in beam pipe and splash events produced from 150~m upstream during proton beam dump. These muons from proton beams are known as \textit{beam Halo Muons}.
+Figure \ref{fig:Muons} show an illustration of different trajectories for cosmic muons produced from cosmic rays and interacting with CMS detector. % the different types of muons. 
+%The are three different types of muons reconstructed using the muon system detection all making up one huge collection of muons. They are Stand-alone, Global and  Tracker Muons.
+%Reconstructed hit positions within each DT and CSC  are matched to form "segments" which are then collected and matched to generate seeds used as starting point for actual track fit of DT, CSC, and RPC hits. The resulting product of the fit in the muon spectrometer is a "stand-alone muon". "Global muons are formed when these stand-alone muon tracks and matched to tracker tracks in the tracker while "tracker muons" are muon objects reconstructed starting form silicon tracker tracks compatible with segments in the muon chambers. Using muon isolation variables defined using the calorimeter and tracker tracks, a collection of muon objects is identified in CMS. Thus is summary, stand-alone muons contain only hit position information from the muon chambers, global muons contain this information in addition to tracker information while Tracker muons are muons reconstructed starting with information from the inner tracker which is matched with calorimeter and muon chamber information. 
 
+%Using the beam spot as a constraint ensures that muons produced from proton-proton collision are distinguished from those produce from cosmic rays known as \textit{cosmic muons} or from beam splash/gas 150~m upstream proton beam dump known as \textit{beam Halos}. The 2~T \textbf{B}-field with a multi-stage flux-return yoke shields the muon detectors from hadrons ensuring  that the measured  particles can be identified as minimum ionizing muons. The barrel muon detector  consists of 4 stations forming concentric cylinders $|\eta| < 1.2$ around the beam line while the endcaps system consists of 468 cathode strip chambers~(CSC) arranged in groups as 72~ME1/1, 72~ME1/2, 72~ME1/3, 36~ME2/1, 72~ME2/2, 36~ME3/1, 72~ME3/2and 36~ME4/1 and the 72~ME4/2. A muon in pseudo-rapidity range of $1.2 < |\eta| < 2.4 $ crosses a total of 4 CSCs. Muons in the encaps-barrel overlap region;  $0.9 < |\eta| < 1.2 $ are detected by both the barrel drift tubes~(DT) and endcaps CSCs while in bother barrel and endcaps RPSc are used for triggering. RPCs are capable of tagging the time of an ionizing event in a much shorter time than the 25~ns between 2 consecutive LHC Bunch Crossings as a result triggering based on RPC can be used  to unambiguously identify the relevant Bunch Crossing  to which a muon track is associated even in the presence of high rate and background  expected in the LHC.
+%%\paragraph*{Cosmic and Halo Muons}\mbox{}\\
+%Muons produced centrally or from proton-proton collision are reconstructed a bit different from other muons. Halo muons originating from machine-induced particles travelling along the beam line and cosmic muons originating from cosmic rays require global information in order to distinguish them from centrally produced muons. Both cosmic and halo muons are considered to be background muons in most physics analysis. The stand-alone muon reconstruction software suited from reconstructed muons from proton-proton collision assumes these muons to be moving radially outward in seen in figure \ref{fig:cmsSLICE} while cosmic muons originate from the outside of the CMS detector and can traverse only a small part of a detector depending on its energy and direction.
 \begin{center}
 \centering
-\mbox{
-\includegraphics[height=4.0in]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/THESISPLOTS/Cosmic_Halo_Muons.png} }
-\captionof{figure}{Illustration of the differences between proton-proton collision muons, cosmic and halo muons. (a) Muons from collision propagating from the center and moving outwards in a well defined pattern, (b) Cosmic muons penetrating the detector and leaving signals in opposite hemispheres of the muon system, (c) Cosmic muons leaving signals in the tracker and opposite hemispheres, (d) cosmic muons entering and leaving the detector without passing through the muon detector layers, (e) beam halo muons penetrating the detector and leaving signals in the endcaps and (f) Cosmic muons entering the detector through the endcap and leaving through the barrel and which can happen in a vice-versa manner. }
+\includegraphics[height=0.40\textwidth, width=0.80\textwidth]{THESISPLOTS/Cosmic_Halo_Muons.png}
+\captionof{figure}{Illustration of muons from proton-proton collision, cosmic rays and beam halo. (a) Muons from collision propagating from the center and moving outwards, (b) Cosmic muons traveling through the detector and leaving signals in opposite hemispheres of the muon system, (c) Cosmic muons leaving signals in the tracker and opposite hemispheres, (d) cosmic muons entering and leaving the detector without passing through the muon detector layers, (e) beam halo muons penetrating the detector and leaving signals in the endcaps and (f) Cosmic muons entering the detector through the endcap and leaving through the barrel and which can happen in a vice-versa manner.}
 \label{fig:Muons}
 \end{center}
-
-A new stand-alone and global muon reconstruction software with the assumption that muons originate from outside the CMS detector and according to the properties of cosmic and halo muons has been optimised to reconstruct and identify both cosmic and halo muons which are used studies involving calibration and aligning the muon detectors.
+%A new stand-alone and global muon reconstruction software with the assumption that muons originate from outside the CMS detector and according to the properties of cosmic and halo muons has been optimised to reconstruct and identify both cosmic and halo muons which are used studies involving calibration and aligning the muon detectors.
 \subsection{Jet Reconstruction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Jets are experimental signatures of quarks and gluons produced in high energetic processes such as hard partons scattering in proton-proton collisions or gluon radiation processes.
-CMS reconstructs four types of jets which each combine individual contributions from sub-detectors  to form inputs to a jet clustering algorithm. The four types of jets include Calorimeter jets, Jet-Plus-Track~(JPT) jets, Particle-Flow~(PF) jets and track jets. The clustering algorithm is the Anti-$k_{T}$ clustering algorithm with a size parameter of $R = 0.5$.
-Calorimeter jets are reconstructed using energy deposits in the combine ECAL and HCAL calorimeter cells called calorimeter towers. A calorimeter tower is a single or group of HCAL cells with their geometrically corresponding ECAL crystals. In order to suppress both noise and and contributions from event pile-up~(additional proton collisions within the same bunch crossing), thresholds are applied to both the individual cells when building the calorimeter towers as well as a transverse energy~($E_{T}$) cut on the calorimeter tower energy. Typical $E^{towers}_{T} > 0.3 - 0.7$~ GeV is often used.
-Of particular importance to our analysis is the Particle Flow jets~(PFJ).  PFJ are reconstructed using the PF algorithm. The PF algorithm uses as input a list of reconstructed particles which include charge hadrons from tracks  in central tracker, photons and neutral  hadrons reconstructed from energy clusters in the HCAL and ECAL, neutral particles as clusters separated from extrapolated position of tracks in calorimeters  and electrons from tracks matched to clusters in the calorimeters.
-The PF algorithm exploits the high granularity in ECAL to precisely measure charge hadrons and photons inside jets, which makes up a larger portion of the jet energy.
-The quality of the jet is determined by variables making up the "Jet ID". For example,  a high quality jet is required to have an electromagnetic energy fraction~(EMF), $EMF > 0.01$,  within the ECAL fiducial region $|\eta| < 2.6$; the number of calorimeter cells containing more than 90\% of jet energy  must be $n^{90}_{jet} > 1$; and the fraction of jet energy in the hottest  Hybrid Photo Detector~(HPD) unit  of HCAL readout within a jet must be $f_{HPD} > 0.98$; the charge  hadron fraction $CHF >0.0$ if within $|\eta| < 2.4$, neutral hadron fraction $NHF < 1.0$ , charge electromagnetic fraction $CEF < 1.0$, and neutral electromagnetic fraction $NEF < 1.0 $. These requirements are used to remove fake jets arising from spurious energy deposition in a sub-detectors.
-Because the measured jet energy is usually different~(usually unwanted energy) from the true corresponding particle jet energy due to miss-reconstruction, non-linear response of the calorimeters, electronic noise and additional energy contributions from PU, jet energy corrections during jet energy calibration~(JEC) are applied to correct for this energy miss-match between the reconstructed measured jet energy and the true energy of the jet particle. This JEC to determine the jet absolute response is a source of systematic uncertainties in a given physics analysis.
+Jets are composite objects consisting of quarks, gluons and electromagnetic objects observed in particle colliders during hadron collisions. CMS reconstruct jets produced during proton-proton collisions using clustering and particle flow algorithms.
+The clustering algorithm is the Anti-$k_{T}$ clustering algorithm with a standard cone size of $R = 0.5$.
+We use jets produced using the PF algorithm called particle flow jets~(PFJ) due to their high reconstruction efficiency and background rejection.
+The quality of a reconstructed jet depends on the jet identification selection criteria also known as \textit{JetID}.
+High quality jets are required to have an electromagnetic energy fraction~(EMF), $EMF > 0.01$,  within the ECAL fiducial region $|\eta| < 2.6$, the number of calorimeter cells containing more than 90\% of jet energy  must be $N^{90}_{jet} > 1$, the fraction of jet energy in the hottest  Hybrid photodetector~(HPD) unit  in HCAL readout within a jet must be $f_{HPD} > 0.98$, the charge  hadron fraction~(CHF) $CHF >0.0$ if within $|\eta| < 2.4$, the neutral hadron fraction $NHF < 1.0$ , the charge electromagnetic fraction~(CEF) $CEF < 1.0$, and neutral electromagnetic fraction $NEF < 1.0 $. These selections threshold has been proven to help remove mis-reconstructed jets arising from spurious energy deposition in a sub detectors with good efficiency.
+Adjustment for mis-measured jet energy due to contributions from non-linear response of the calorimeters, electronic noise and additional energy from PU, is applied as jet energy corrections during jet energy calibration~(JEC). This adjustments correct for any miss-match between the measured reconstructed jet energy and the true energy of the jet. 
+%CMS reconstructs four types of jets which each combine individual contributions from sub-detectors  to form inputs to a jet clustering algorithm. The four types of jets include Calorimeter jets, Jet-Plus-Track~(JPT) jets, Particle-Flow~(PF) jets and track jets. 
+%Calorimeter jets are reconstructed using energy deposits in the combine ECAL and HCAL calorimeter cells called calorimeter towers. A calorimeter tower is a single or group of HCAL cells with their geometrically corresponding ECAL crystals. In order to suppress both noise and and contributions from event pile-up~(additional proton collisions within the same bunch crossing), thresholds are applied to both the individual cells when building the calorimeter towers as well as a transverse energy~($E_{T}$) cut on the calorimeter tower energy. Typical $E^{towers}_{T} > 0.3 - 0.7$~ GeV is often used.
+
+
+%PFJ are reconstructed using the PF algorithm. The PF algorithm uses as input a list of reconstructed particles which include charge hadrons from tracks  in central tracker, photons and neutral  hadrons reconstructed from energy clusters in the HCAL and ECAL, neutral particles as clusters separated from extrapolated position of tracks in calorimeters  and electrons from tracks matched to clusters in the calorimeters.
+%The PF algorithm exploits the high granularity in ECAL to precisely measure charge hadrons and photons inside jets, which makes up a larger portion of the jet energy.
+
+%This JEC to determine the jet absolute response is a source of systematic uncertainties in a given physics analysis.
 \subsection{Missing Transverse Energy Reconstruction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In CMS, quantities such as \textit{transverse momentum}~($p_{T}$), \textit{transverse energy}~($E_{T}$) and \textit{transverse missing energy}~($\MET$ or MET ) are used to distinguish a particle's quantities in the transverse plane($x-y$ coordinate) from those along the longitudinal direction($z$ coordinate) or beam line. In addition to these transverse quantities, cone-like structure with the cone radius is defined as $$\displaystyle{ \Delta R = \sqrt{ \Delta\eta^{2} + \Delta\phi^{2} } }$$ are used to measure the distance between two objects in the $\eta-\phi$ plane. These cone-like structures are used for particle isolation and identification purposes.
+In CMS, quantities such as \textit{transverse momentum}~($p_{T}$), \textit{transverse energy}~($E_{T}$) and \textit{transverse missing energy}~(MET) or \MET are used to distinguish a particle's quantities in the transverse plane($x-y$ coordinate) from those along the longitudinal direction($z$ coordinate) or beam line. In addition to these transverse quantities, cone-like structure with the cone radius is defined as $$\displaystyle{ \Delta R = \sqrt{ \Delta\eta^{2} + \Delta\phi^{2} } }$$ are used to measure the distance between two objects in the $\eta-\phi$ plane. These cone-like structures are used for particle isolation and identification purposes.
 \newline
 A typical collider detector can only be nearly hermetic despite its nearly $4\pi$ solid angle coverage as there is always room for passage of the colliding beams. As a result the use of the total energy balance constraint is not very useful since low \pt energetic interaction products moving in the forward direction can always escape detection.
 Thus, although these forward moving particles can carry significant longitudinal momentum~(momentum along the direction of the beams), their transverse momentum~(momentum transverse to the direction of the beam), \pt is always smaller than their total momentum. In the case of the CMS detector which has pseudo-rapidity $|\eta| < 5.0$, therefore only particles with $|\eta| > 5.0$ can escape detection, as we can easily find that the \pt of any given particle in CMS detector given as $\pt = E/\cosh\eta < E/\cos(5)  < 0.013\times E $. Thus even if the particle carried the whole 7~TeV energy of a single proton beam, its  $\pt < 100$~GeV/c.
