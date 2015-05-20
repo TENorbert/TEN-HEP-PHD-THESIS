@@ -39,9 +39,10 @@ These datasets contain events with at least a single photon triggered. Only data
 %\begin{table}[ht]
 %\renewcommand\arraystretch{1.2}
 \centering
-\begin{tabular}{|c c|}
+\begin{tabular}{l l}
+\toprule
 \hline
-\bfseries{Dataset}& \bfseries{Recorded Luminosity} $[\fbinv]$ \\
+\bfseries{Dataset}& \vtop{\hbox{\strut{\bfseries{Recorded Luminosity}}}  \hbox{\strut{ $[\fbinv]$ }}} \\
 \hline
  \texttt{/Run2012B/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 5.1 \\
  \texttt{/Run2012C/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 6.9 \\
@@ -50,6 +51,7 @@ These datasets contain events with at least a single photon triggered. Only data
 \texttt{/SingleElectron/Run2012A-22Jan2013-v1/AOD} & 5.2 \\
 \texttt{/DoubleElectron/Run2012C-22Jan2013-v1/AOD} & 4.8 \\
 \hline
+\bottomrule
 \end{tabular}
 \captionof{table}{Dataset and corresponding integrated luminosity totaling 19.1~\fbinv used in this analysis}
 \label{tab:DATA}
@@ -66,9 +68,10 @@ We generate QCD events at leading order~(LO) cross-section~($\sigma$) and normal
 %\begin{table}[ht]
 %\renewcommand\arraystretch{1.2}
 \centering
-\begin{tabular}{|c c c c c|}
+\begin{tabular}{c c c c c}
      %\hline
        %\textbf{Signal MC [mGMSB~(SPS8)]}
+       \toprule
         \hline
         $\Lambda$~[TeV] & $c\tau$~(mm) & $\sigma_{LO}$~(pb) & \bfseries{Number of Events} & \bfseries{Branching Ratio}\\
        \hline
@@ -81,6 +84,7 @@ We generate QCD events at leading order~(LO) cross-section~($\sigma$) and normal
        260 & 250-12,000  & 0.0015 & 50,000 & 0.8282\\
        300 & 250-12,000  & 0.0008 & 50,000 & 0.8282\\
        \hline
+       \bottomrule
        \end{tabular}  
 \captionof{table}{The signal GMSB SPS8 MC samples for difference $\mathbf{\Lambda}$ and Branching Ratios used in this analysis}
 \label{tab:mc_GMSB_sample}
@@ -91,7 +95,8 @@ We generate QCD events at leading order~(LO) cross-section~($\sigma$) and normal
 %\begin{table}[ht]
 %\renewcommand\arraystretch{1.2}
 \centering
-\begin{tabular}{|c c c|}
+\begin{tabular}{c c c}
+\toprule
 \hline
 $\hat{\pt}$ & $\sigma_{LO}$ (pb) & \bfseries{Number of Events}\\
 \hline
@@ -102,6 +107,7 @@ $\hat{\pt}$ & $\sigma_{LO}$ (pb) & \bfseries{Number of Events}\\
 300 $\sim$ 470 &    2.1  & 2000130 \\
 470 $\sim$ 800 &  0.212  & 1975231 \\
 \hline
+\bottomrule
 \end{tabular}
 \captionof{table}{The $\gamma +$ jets samples used in this analysis}
 \label{tab:mc_QCD_sample}
