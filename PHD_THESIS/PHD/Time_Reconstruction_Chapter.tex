@@ -4,28 +4,8 @@
 \chapter{Time Reconstruction and Resolution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{ECAL Time Overview}
-The ECAL was designed to precisely measure the energy for electrons and photons produced in proton-proton collisions, with a target barrel resolution of 0.5\% for photons with energies larger than 50\GeV. In addition to energy measurements, the combination of fast scintillation for \pb crystals, the electronic pulse shaping and sampling rate of 40~MHz allow for excellent time measurements to be made with ECAL. A pulse shape matching of less than 1\% non-linearity by the pulse shaping chip in each channel, ensures a linear and uniform pulse height from among all the channels in the ECAL. 
-\par  
+The ECAL was designed to precisely measure the energy of electrons and photons produced in proton-proton collisions, with a target barrel resolution of 0.5\% for photons with energies larger than 50\GeV. In addition to energy measurements, the combination of fast scintillation for \pb crystals, the electronic pulse shaping and sampling rate of 40~MHz allow for excellent time measurements to be made with ECAL. A pulse shape matching of less than 1\% non-linearity by the pulse shaping chip in each channel, ensures a linear and uniform pulse height from among all the channels in the ECAL.  
 The time measured by each channel is reconstructed from 10 discrete samples of the digitized analog pulse height of the electronics, using a time reconstruction algorithm. 
-\newline 
-Since the electromagnetic shower of the electromagnetic particle normally spreads across several crystals~(meaning several channels involved), a cluster of about 25 crystals~(or \textit{supercluster}) after reconstruction contains all of the particle's energy. As a result the arrival time of an electromagnetic particle is defined either using the reconstructed time~($ t_{reco}$) of a single channel, which is the crystal with the highest energy~(\textit{seed crystal}), or an error~($\sigma$) weighted average of all the individual reconstructed time of each crystal belonging to the supercluster. A supercluster can be made of many smaller clusters called \textit{basic clusters}, and the seed basic cluster~(cluster with highest energy) time can equally be used as the particle's measured arrival time. We write $t_{seed}$ for the seed time and $t_{Ave}$ for the average time defined in Equation \ref{eq:AVETIME}.
-
-%Algorithms for extracting and calibrating ECAL crystals using the reconstructed hit~(\textit{rechit}) time have been developed
-%and we describe them in detail in the coming sections.
-%We use $t_{reco}$ to denote the reconstructed time of each hit or crystal.
-
-%We will denote the calibrated reconstructed time of an electromagnetic object as, $T_{reco}$. 
-%Measuring the difference of the ECAL measured time between any two reconstructed objects~(which can be individual crystals or electromagnetic objects) arriving from the same nominal point, which in principle are both expected to have the same time, gives a reliable measurement of the timing resolution of the sub-detector including the crystal-to-crystal synchronization factor.  In ECAL timing, the photon reconstructed time, $t_{reco}$, can be calculated using either of the following methods:
-%%\begin{enumerate}
-%%\item \textbf{seed time}: The time of the highest energy crystal or hit in the highest energy basic cluster~(about $9$ crystals) of the photon super cluster~(about $25$ crystals). It is denoted $t_{seed}$.
-%%\item \textbf{Average or mean time}: This is the error weighted average time of all the crystals in the photon seed basic cluster.
-%%It is denoted as $t_{Ave}$ or $t_{mean}$.
-%%\end{enumerate}
-%Therefore, the arrival time of a photon or an electromagnetic object, $t_{\gamma}$ or $t_{\Pepm}$, can either be given as $t_{seed}$ or $t_{Ave}$.
-\begin{equation}{\label{eq:AVETIME}}
-t_{Ave} = \frac{\sum_{i=1}^N\frac{t_{reco, i}}{\sigma_{i}^{2}}}{\sum_{i=1}^{N}\frac{1}{\sigma_{i}^{2}}},
-\end{equation}
-Where $N$ is the number of crystals of the supercluster, $t_{reco,i}$  and $\sigma_{i}$ are the time and uncertainty on the reconstructed time of each channel, respectively. 
 
 
 %The definitions $t_{seed}$ and $t_{Ave}$ have similar performances and also advantages and disadvantages. We explore these in the analysis section of this thesis.
@@ -35,24 +15,23 @@ Where $N$ is the number of crystals of the supercluster, $t_{reco,i}$  and $\sig
 %The ECAL electronics readout system fully described in \cite{ECALREADOUT} is a light-to-light system.
 The scintillating light from the \pb crystals is readout and converted into electric current using Avalanche Photo-Diodes~(APD) and Vacuum Photo-Triodes~(VPT) in the barrel and endcap detector regions, respectively. %These Photo-Diodes~(APD and VPT) convert the scintillating light into electric current which is readout by the readout electronics system.
 \newline
-The ECAL electronics readout and control system is made of the Front End~(FE) electronics~( board consists of radiation hard ASIC chips) installed inside the detector volume at the back of ECAL and the Off Detector~(OD) electronics in the upper counting room. Both electronics systems are connected by 100~m radiation hard Gigabit Optical fiber Links~(GPOL) for transporting the optical data stream. 
+The ECAL electronics readout and control system comprise of the Front End~(FE) electronics~( mainly consisting of radiation hard ASIC chips) installed inside the detector volume at the back of ECAL and the Off Detector~(OD) electronics in the upper counting room. the FE electronics is connected to the OD electronics by 100~m radiation hard Gigabit Optical fiber Links~(GOL) for transporting the optical data stream. 
 \par
-The FE follows the crystal arrangement in matrixes of $5\times5$ crystals called \textit{Trigger Towers} in barrel and \textit{Super-Crystals} in the endcap. Each FE board hosts five Very Front End~(VFE) boards with each holding five analog channels. Each channel consists of a Multi-Gain Pre-Amplifier~(MGPA) and a 12 bit Analog-to-Digital Converted~(ADC) used to amplify, shape and digitize the signal coming from the Photo-Diodes.
+The FE has a crystal arrangement in matrixes of $5\times5$ crystals called \textit{Trigger Towers} in barrel, which is  based on the electronics arrangement and a  $5\times5$ mechanical arrangement of crystals called \textit{Super-Crystals} in the endcaps. Each FE board hosts five Very Front End~(VFE) boards with each holding five analog channels shown in right schematic diagram of Figure \ref{fig:readout}. Each channel, shown in the left schematic diagram of Figure \ref{fig:readout}, consists of a Multi-Gain Pre-Amplifier~(MGPA) and a 12 bit Analog-to-Digital Converted~(ADC) used to amplify, shape and digitize the signal coming from the Photo-Diodes.
 \newline
 The MGPA chip uses 3 gain ranges with gain ratios of 1,6 and 12 to span the overall dynamic range of the signal. Equipped with a CR-RC filter  with a pulse shaping time of 40~ns and less than 1\% of non-linearity, the MGPA ensures a linearity and pulse shape matching across all three ranges which allows for precise pulse shape reconstruction.
 \newline
 The readout and precision performance requires a multi range 12-bit ADC chip with a sampling frequency of 40~MHz to digitize the analog pulse signal of the highest unsaturated range into 10 discrete samples, with an electronic noise  of about 40~MeV.
+\newline
+The FE board also is also equipped with a Clock and Control Unit~(CCU) chip which enables the exchange of control information between the OD and the FE electronics through a Clock and Control link.
 %from each VFE is typically 1.1, 0.75, 0.6 ADC counts for gains 12, 6 and 1 respectively. This would be about 40~MeV for gain 12.
 \newline
-The digitized data  are stored in pipeline buffers until a Trigger Level 1~(LV1) accept decision is made. At the same time the digitized data are sent to a digital signal processing FERNIX chip which performs trigger primitive generation~(TPG) for the LV1 trigger system. The TPGs are sent to the Trigger Concentration Card~(TCC) on the OD electronics at a rate of 1 word/25~ns.
-Upon a positive trigger LV1 decision, the data samples corresponding to a single event are transferred to primary event buffers which are eventually merged and sent to the Data Concentration Card~(DCC) through Readout links at 800~Mbps.
-\par
-The FE board also is also equipped with a Clock and Control Unit~(CCU) chip which enables the exchange of control information between the OD and the FE electronics through a Clock and Control link.
+The digitized data  are stored in pipeline buffers until a Trigger Level 1~(LV1) accept decision is made. At the same time the digitized data are sent to a digital signal processing FERNIX chip which performs Trigger Primitive Generation~(TPG) for the LV1 trigger system. The TPs are sent to the Trigger Concentration Card~(TCC) on the OD electronics at a rate of 1 word/25~ns.
+Upon a positive trigger LV1 decision, the data samples corresponding to a single event are transferred to primary event buffers which are eventually merged and sent to the Data Concentration Card~(DCC) through Readout links at 800~Mbps. The crystal readout data from the FE board is collected by the OD electronics DCC.
 \par 
-The crystal readout data from the FE board is collected by the OD electronics DCC.
-In addition to the DCC is the TCC and a Clock and Control System card~(CCS). The TCC finalizes the trigger primitives and transmit them to the regional Calorimeter Trigger system while the CCS is primarily task with distributing fast timing signals~(LHC 40~MHz clock and trigger commands) to the FE and OD electronics and to synchronize their operation. 
+  The OD board hosts the DCC, TCC and a Clock and Control System card~(CCS). The TCC completes TPG process by combining the TPs generated and transmit them to the regional Calorimeter Trigger system while the CCS is primarily task with distributing fast timing signals~(LHC 40~MHz clock and trigger commands) to the FE and OD electronics and to synchronize their operation. 
 A common clock distribution serving $5\times5$ readout unit of the FE helps minimize channel-to-channel synchronization.
-Figure \ref{fig:readout} shows a schematic view of the ECAL signal readout electronics.
+%Figure \ref{fig:readout} shows a schematic view of the ECAL signal readout electronics.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%\newline
 %%The on-detector electronics reads a trigger tower consisting of $5\times5$ crystals arranged in $\eta \times \phi$ grid in barrel~(EB) and $x-y$ grid in endcap~(EE).  Five Very Front End~(VFE) boards~(reading out data from 5 crystals each), one Front End board~(FE), two~(EB) and six~(EE) Giga Optical Hybrids~(GOH), one Low Voltage Regulator~(LVR) board and a Mother Board~(MB) make up the complete on-detector electronics. Electrical Signals from the APDs are accepted by the VFE equipped with a Multi-Gain Pre-Amplifier~(MGPA), a 12-bit Analogue to Digital Converter~(ADC) and a buffer. The MGPA~(an Application Specific Integrated Circuit~(ASIC) developed in 0.25~$\mu$m technology), pre-amplifies, shapes and then amplifies the signals through three amplifiers with gains of 1, 6 and 12. For the VPT~(EE), these signals first pass through a High Voltage~(HV) filter card which acts as a moderator separating very high voltages caused by the increase radiation in the EE. The full scale of the APDs and VPTs are 60~pC and 12.8~pC corresponding to $\approx$ 1.5~\TeV and 1.6-3.1~\TeV respectively. The full shaping of the signal takes about 40~ns. The noise for gain 12 is about 8000$e^{-}$ for APD configuration and about 4000$e^{-}$ for VPT configuration. 
@@ -71,24 +50,41 @@ Figure \ref{fig:readout} shows a schematic view of the ECAL signal readout elect
 \begin{center}
 \centering
 \mbox{
-\includegraphics[height=0.5\textwidth, width=0.50\textwidth]{THESISPLOTS/CMS-ECAL-READOUT-CHAIN.png} \quad
 \includegraphics[height=0.5\textwidth, width=0.450\textwidth]{THESISPLOTS/ReadOut.png}
+\includegraphics[height=0.5\textwidth, width=0.50\textwidth]{THESISPLOTS/ECAL-FRONT-END-ELECTRONICS.jpg}
+%\includegraphics[height=0.5\textwidth, width=0.50\textwidth]{THESISPLOTS/CMS-ECAL-READOUT-CHAIN.png} \quad
 } 
-\captionof{figure}{Schematic diagram of the CMS ECAL electronics readout.}
+\captionof{figure}{Schematic diagram of the CMS ECAL electronics readout for a single channel(Left) and the entire Trigger Tower or Front End~(FE) Card(Right).}
 \label{fig:readout}
 \end{center}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Time Reconstruction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Anlog signals from the APD/VPT of a single crystal is preamplified producing a typical signal pulse shown in figure \ref{fig:pulse}. 
-A typical analog pulse shape from a single channel is shown in Figure \ref{fig:amplVsTmax}(a). 
-Overlaying the pulse shape are the 10 digitized  samples in red. 
-The first three samples is attributed to the pedestal noise or ADC counts read in the absence of a signal. 
-The maximum amplitude value of the pulse, $\mathbf{A_{MAX}}$, and its corresponding time value, $\mathbf{T_{MAX}}$, is used to reconstruct the time recorded by the channel. 
-\newline
-We define time reconstruction as the measurement of $\mathbf{T_{MAX}}$ using the 10 digitized samples of the pulse amplitude. The time reconstruction procedure is implemented using an algorithm which starts by first finding the maximum amplitude of the pulse. %Thus, ECAL timing reconstruction is using the 10 samples of the pulse amplitude to measure $\mathbf{T_{MAX}}$.
-Finding the true $\mathbf{A_{MAX}}$ using this representation of the pulse is not straight forward since  the amplitude of each channel depends on $\mathbf{A_{MAX}}$, the relative position of $\mathbf{T_{MAX}}$ between the time samples referred to as the "\textit{$T_{MAX}$ phase}" and the pulse shape itself. As a result, an alternative representation of the pulse shape using a ratio variable defined as $R(T) = A(T)/ A(T + 25~\mbox{ns})$ is used, as $R(T)$ is independent of $\mathbf{A_{MAX}}$.
-The $ R(T)$ representation of the pulse shown in figure \ref{fig:amplVsTmax}(b), can easily be described with a polynomial function. %where the distribution of $T - \mathbf{T_{MAX}}$ as a function of $ R(T)$ is presented. This representation can easily be well described using a polynomial function.
+An analog pulse shape from a single channel is shown in Figure \ref{fig:amplVsTmax}(a). 
+Overlaying the pulse shape are typical 10 digitized  samples in red. The first three samples are taken in the absence of a signal and correspond to the pedestal.
+The ADC chip responsible for the digitization, has a sampling frequency of 40~MHz, \ie one sample is made every 25~ns, which is the same rate as the LHC proton-proton bunch collision frequency of one bunch crossing every 25~ns.
+In addition, the timing phase between each sample and the next is adjusted so that the maximum of the signal pulse shape corresponds to one of the samplings within 1~ns.
+A time reconstruction algorithm uses these 10 digitized samples to measure the time of a single channel by finding the precise time corresponding to the maximum of the pulse shape, $\mathbf{T_{max}}$. 
+% To measure the time, $\mathbf{T_{max}}$, corresponding to the maximum of the pulse shape,$\mathbf{A_{max}}$, a time reconstruction algorithm is used.
+
+\begin{center}
+\centering
+\mbox{\includegraphics[height=0.50\textwidth, width=0.90\textwidth]{THESISPLOTS/AmplitudeVsTMax.png}}
+%%\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/TMaxPhaseVsRatio.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\captionof{figure}{(a) A measured ECAL pulse shape for a single channel. (b) $\mathbf{T-T_{max}}$ Vs $ R(T)$ relationship whose inverse is $T(R)$. Solid line is pulse shape from test beam while dots are typical 10 discrete samples corresponding to signal from proton-proton collision.}
+\label{fig:amplVsTmax}
+\end{center}
+
+
+\par
+  Precise measurement of $\mathbf{T_{max}}$ relies on good knowledge of the pulse shape. To find $\mathbf{T_{max}}$ using the pulse shape, a ratio algorithm uses the ratio  
+\begin{equation}{\label{eq:TREC}}
+   R_{i} = A(T_{i})/A(T_{i+1}),
+\end{equation}  
+where $T_{i}$ is the time of the time of the beam crossing that the $i^{th}$ pulse height sample is taken. Each pulse height ratio is uniquely determined from the pulse shape as shown in Figure \ref{fig:amplVsTmax}(b) which shows the the pulse height ratio,$R_{i}$, as a function of the time that the pulse height of the first of a pair of samples is taken relative to the time of the maximum height of the pulse, $\mathbf{T_{i}-T_{max}}$. Using the inverse of this function, $T(R)$, we can obtained $\mathbf{T_{max}} = T_{i} - T(R_{i})$ and the uncertainty, $\sigma_{i}$, for each $R_{i}$ point. 
+ %%where $\mathbf{T}$ indicates the time of an arbitrary ADC sample, depends on $\mathbf{A_{max}}$, the relative position of $\mathbf{T_{max}}$ between the time samples and the pulse shape itself and this  makes the time algorithm less precise when extracting $\mathbf{T_{max}}$ in this representation~($A(T)$) of the pulse shape. As a result, another representation of the pulse shape measured a function of a ratio variable, $R(T) = A(T)/ A(T + 25~\mbox{ns})$, which is independent of $\mathbf{A_{max}}$, is rather used in the time algorithm. The representation of the pule shape as a function of $R(T)$ is shown in \ref{fig:amplVsTmax}(b) and can be  modeled easily with a simple polynomial function.The parameters of the polynomial were measured during electron test beam experiments by fitting to the pulse shape of the test beam data.% can be used to model the pulse shape as a function of $R(T)$ favors using the pulse shape as a function of $R(T)$ in the time extraction algorithm. %where the distribution of $T - \mathbf{T_{MAX}}$ as a function of $ R(T)$ is presented. This representation can easily be well described using a polynomial function.
 %Extracting of the arrival time is by comparing the pulse shape of a channel obtained during proton-proton collision to a reference pulse shape obtained during early LHC \textit{test beam} results.
 %This reference pulse shape has been obtained from  measurements using synchronous LHC events. Figure \ref{fig:amplVsTmax}(\textit{Left}) shows a distribution of $A/\mathbf{A_{MAX}}$ on the vertical axis against $T - \mathbf{T_{MAX}}$ on the horizontal axis obtained from test beam experiments. $T$ is an arbitrary time  measurement and $\mathbf{T_{MAX}}$ is the time when the  pulse reaches its maximum value, $\mathbf{A_{MAX}}$.
 %%\begin{center}
@@ -99,27 +95,18 @@ The $ R(T)$ representation of the pulse shown in figure \ref{fig:amplVsTmax}(b),
 %%\captionof{figure}{Typical pulse shape of a given signal showing crystal signal.}
 %%\label{fig:pulse}
 %%\end{center}
-
-\begin{center}
-\centering
-\mbox{\includegraphics[height=0.50\textwidth, width=0.90\textwidth]{THESISPLOTS/AmplitudeVsTMax.png}}
-%%\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/TMaxPhaseVsRatio.png}}
-%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
-\captionof{figure}{(a) A measured ECAL pulse shape for a single channel. (b) $T - T_{MAX}$ Vs $ R(T)$ showing the distribution of $T(R)$. Solid line is pulse shape from test beam while dots are the 10 discrete samples corresponding to signal from proton-proton collision.}
-\label{fig:amplVsTmax}
-\end{center}
-%The test beam comparison is realized through an analytic fit to the 10 digitized samples. However, performing this fit directly on the $A(T)$ distribution to obtain $\mathbf{A_{MAX}}$ and $\mathbf{T_{MAX}}$ is cumbersome and technically inefficient since the amplitude of each sample depends on the pulse shape, the $\mathbf{A_{MAX}}$ value and also the relative position of $\mathbf{T_{MAX}}$ between each sample point. This relative position or phase is referred to as "\textit{$T_{MAX}$ phase}".
-% the analytic fit is performed on the distribution of $T - T_{MAX}$ against $ R(T)$. 
-%This  $T(R)$ distribution is independent of $A_{MAX}$ and can be very well described using a polynomial of order $7$.
-
-The distribution of $T - \mathbf{T_{MAX}}$ as a function of $ R(T)$, which we will refer to as $T(R)$, shows the 6 sample points~(dots) obtained from the ratio $R_{i} = A_{i}/A_{i+1}$, of each consecutive pair of samples and the reference pulse shape~(continuous line). Each $R_{i}$ point gives a quick accurate measurement of $T_{MAX,i} = T_{i} - T(R_{i})$. The uncertainty, $\sigma_{i}$, on each measurement is a product of the derivative of the function $T(R)$ and the uncertainty on the value of $R_{i}$. The uncertainty on the value of $R_{i}$ depends on three separate uncertainties: the noise fluctuation, $\sigma_{n}$ of each sample, the uncertainty in the estimation of the pedestal value which is always subtracted from the measured value and the truncation during 12-bit digitization. These uncertainties are uncorrelated and can be added in quadrature.
-The reconstructed time and uncertainty of a single  channel or crystal is determine according to the expression given in Equation \ref{eq:TMAX} after taking into consideration the different uncertainties, $\sigma_{i}$ of each $R_{i}$ point.
+%\par
+%This representation~($T(R)$) of the pulse shape as a function of $ R(T)$, usually consist of 5 or 6 sample points~(dots) obtained from the ratio of consecutive pair of samples, $R_{i} = A(T + i\cdot25~ns)/A(T + (i+1)\cdot25~ns)$, of a typical reference pulse shape~(continuous line). 
+%From each $R_{i}$ point we obtain a quick accurate measurement of $T_{max,i} = T_{i} - T(R_{i})$ and the uncertainty, $\sigma_{i}$. 
+\newline
+The uncertainty on each measurement is a product of the derivative of the function $T(R)$ and the uncertainty on the value of $R_{i}$ which itself depends on three separate uncertainties: the noise fluctuation~($\sigma_{n}$) of each sample, the uncertainty in the estimation of the pedestal value which is always subtracted from the measured value and the truncation during 12-bit digitization. These uncertainties are uncorrelated and can be added in quadrature,\cite{TIME}.
+\newline
+A more precise value of $T_{max}$ is obtained by using the ratios $R_{4}$ through $R_{7}$. The other ratios are not used  for the estimation of $T_{max}$ because their associated uncertainties are large due to the large slope of the $T(R)$ function.  A weighted average of each $T_{max}$ and $\sigma$ obtained from ratios $R_{4}$ through $R_{7}$ as expressed in Equation \ref{eq:TMAX} gives the best estimate of $T_{max}$ and uncertainty.
 \begin{equation}{\label{eq:TMAX}}
-\displaystyle{T_{MAX} = \frac{\sum \frac{T_{MAX,i}}{\sigma^{2}_{i}}}{\sum \frac{1}{\sigma^{2}_{i}}}} \quad ; \quad\quad
+\displaystyle{T_{max} = \frac{\sum \frac{T_{max,i}}{\sigma^{2}_{i}}}{\sum \frac{1}{\sigma^{2}_{i}}}} \quad , \quad\quad
 \displaystyle{\frac{1}{\sigma^{2}_{T}} =  \sum \frac{1}{\sigma^{2}_{i}} }
 \end{equation}
-The sum is over all the 6 $R_{i}$ ratios and the assumption is that the weights are uncorrelated. 
-The polynomial paramterization of the pulse shape and its parameters were obtained during electron test beam experiments by fitting to the pulse shape of the test beam data. These parameters obtained are subsequently use by the ECAL time algorithm to reconstruct time during proton-proton collisions.
+The sum is from  $i = 4,\cdots,7$.% and the assumption is that the weights are uncorrelated. % These parameters obtained are subsequently use by the ECAL time algorithm to reconstruct time during proton-proton collisions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ECAL Time Performance from Test Beam}
@@ -134,57 +121,55 @@ The polynomial paramterization of the pulse shape and its parameters were obtain
 %%Thus, if a crystal is properly calibrated, then the average time for hits belonging to the same event
 %%must be zero, \ie, $\left\langle t \right\rangle_{\mbox{many hits}} \approx 0$. 
 \subsection{ECAL Time Resolution}
-In order to quantify the performance of precise time measurement in ECAL, we study the total uncertainty or \textit{time resolution}, $\sigma(t)$, in time measurement.% the time of electromagnetic objects by the crystals.
-The time resolution is expressed as a sum in quadrature~(uncorrelated) of three major terms contributing to the uncertainty in time measurement. These three contributions are the noise, stochastic and constant terms. The \textit{Noise}~($N$) term consists of the electronic noise, coherent movement of the baseline and effects arising in addition to the main or hard proton-proton collision, other soft or less energetic collision producing events called \textit{pile up}~(PU) events. The \textit{Stochastic} term~($S$) is from fluctuations in the photon collection time because of the finite time during \pb scintillation. Lastly, the \textit{Constant} term~($C$) whose contribution is independent of the energy deposited but rather from effects correlated with the point of shower initiation within the crystal and systematics in the extraction of the time due to different pulse shape for each channel.
-The full expression for time resolution with all three contributions is given in equation \ref{eq:TimeRes},
+The intrinsic time resolution of ECAL, $\sigma(t)$, measured during test beam, consist of three main contributions which can be summed in quadrature since they are uncorrelated. These three contributions are the noise, stochastic and constant terms. The \textit{Noise}~($N$) term arises from the electronic noise, coherent movement of the baseline and effects overlapping hits some of which come from other soft proton-proton collisions called \textit{pile up}~(PU) events. The \textit{Stochastic} term~($S$) is from fluctuations in the number of photons collected during the sample times. Lastly, the \textit{Constant} term~($C$), whose contribution is independent of the energy deposited and arises from variations in the point of shower initiation within the crystal and variations in the pulse shape for each channel.
+The full expression for time resolution with all three contributions is given in Equation \ref{eq:TimeRes},
 
 \begin{equation}{\label{eq:TimeRes}}
 \sigma^{2}(t) = \left(\frac{N}{A/ \sigma_{n}}\right)^{2} + \left(\frac{S}{\sqrt{A}}\right)^{2} + C^{2},
 \end{equation}
-where $A$ is the measured amplitude corresponding to the energy deposited and $\sigma_{n}$ is the intrinsic noise for individual channel. $\sigma_{n}$ has a value of $42$~MeV and $140$~MeV in the barrel and endcap, respectively. $N = 33$~ns has been measured from Monte Carlo~(MC) simulation studies. Contribution from the stochastic term, ($S$) is considered small, with value of $S < 7.9$~ns$\cdot MeV^{1/2}$.
-\paragraph*{}
-To determine the intrinsic time resolution of ECAL and study the pulse shape, H2 and H4 test beam facilities at CERN were used.
-Prior to installation at the CMS detector, about 25\% of the barrel and endcap crystals were exposed to electron beams with energy  between 15\GeV and 250\GeV. The time resolution was obtained from the distribution of the difference in time of two crystals sharing energy and belonging to the same electromagnetic shower. The advantage of this approach is that, the contribution from poor crystal-to-crystal synchronization is minimized. If we neglect the stochastic term because its contribution to time resolution is negligible, equation \ref{eq:TimeRes} of the time resolution measured using the two crystals~(in general, two superclusters can equally be used) reduces to equation \ref{eq:TIMERES}.  From now on, we will be using equation \ref{eq:TIMERES} to expressed the time resolution  as it allows for a convenient comparison to results from test beam.
-% It is this approach which we employ in future studies of the ECAL timing resolution.
- 
- \begin{equation}{\label{eq:TIMERES}}
+where $A$ is the measured amplitude corresponding to the energy deposited and $\sigma_{n}$ is the intrinsic noise in the amplitude for individual channel. $\sigma_{n}$ has a value of $42$~MeV and $140$~MeV in the barrel and endcap, respectively. $N = 33$~ns has been estimated from Monte Carlo~(MC) simulation studies. Contribution from the stochastic term, ($S$) is small, with a value of $S < 7.9$~ns$\cdot MeV^{1/2}$.
+\par
+    To measure the intrinsic time resolution of ECAL and study the pulse shape, H2 and H4 test beam facilities at CERN were used.
+Prior to installation at the CMS detector, about 25\% of the barrel and endcap crystals were exposed to electron beams with energy  between 15\GeV and 250\GeV. The time resolution was obtained from the Gaussian distribution of the difference in time of two crystals sharing energy and belonging to the same electromagnetic shower. Note that the contribution from crystal-to-crystal synchronization  does not contribute to the constant term in this study. Neglecting the stochastic term because its contribution is negligible, Equation \ref{eq:TimeRes} reduces to:
+\begin{equation}{\label{eq:TIMERES}}
  \sigma^{2}(t_{1} - t_{2}) = \left(\frac{N}{A_{eff}/ \sigma_{n}}\right)^{2} + 2\bar{C}^{2}
  \end{equation}
- 
-In equation \ref{eq:TIMERES}, $A_{eff} = A_{1}A_{2}/\sqrt{A^{2}_{1} + A^{2}_{2}}$, while $t_{1,2}$ and $A_{1,2}$ are the times and amplitudes of the two crystals. $\bar{C}$ is their residual constant term contribution.
+where $A_{eff} = A_{1}A_{2}/\sqrt{A^{2}_{1} + A^{2}_{2}}$, while $t_{1,2}$ and $A_{1,2}$ are the times and amplitudes of the two crystals. $\bar{C}$ is their residual constant term contribution. 
 The time resolution is measured from the standard deviation of a Gaussian fit to the time distribution from each slice of $A_{eff}/\sigma_{n}$ of the $A_{eff}/\sigma_{n}$ distribution. The resulting distribution of $\sigma(t_{1} - t_{2})$  of these standard deviations plotted against $A_{eff}/\sigma_{n}$ is used to extract the noise and residual constant terms.  The result presented in Figure \ref{fig:FitTimeRes} gives a noise factor $N = (35.1 \pm 0.2)$~ns and $\bar{C} = (20 \pm 4)$ ~ns  obtained from test beam experiment. 
+\newline 
+The value of the $N$ in this study agrees with our Monte Carlo estimate to within 6\%.
+% It is this approach which we employ in future studies of the ECAL timing resolution.
 \newline
-The average time definition was not used as it is easily affected by synchronization effects.
-Other studies using the time difference between two basic clusters of separate electromagnetic shower was used and the results were similar
-
+Other studies of the timing resolutions using the time difference between two basic clusters of separate electromagnetic shower was used and the results gave similar values of $N$.
 \begin{center}
 \centering
-\mbox{\includegraphics[height=0.6\textwidth, width=0.85\textwidth]{THESISPLOTS/ECAL_Timing_Resolution.png}}
+\mbox{\includegraphics[height=0.60\textwidth, width=0.85\textwidth]{THESISPLOTS/ECAL_Timing_Resolution.png}}
 %\mbox{\includegraphics[scale=0.45]{THESISPLOTS/TMaxPhaseVsRatio.png}}
 %\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
-\captionof{figure}{Deviation of the time difference as a function of $A_{eff}/\sigma_{n}$ of two crystals sharing an energy and belonging to the same electromagnetic shower obtained during electron testbeam measurements. The single crystal energy scales for barrel~(EB) and endcap~(EE) is overlaid. The fitted results give $N = (35.1 \pm 0.2)$~ns and $\bar{C} = (20 \pm 4)$ ~ns. }
+\captionof{figure}{Difference in the time measurements as a function of $A_{eff}/\sigma_{n}$ of two crystals sharing an energy and belonging to the same electromagnetic shower obtained during electron testbeam measurements. The single crystal energy scales for barrel~(EB) and endcap~(EE) is overlaid. The fitted results give $N = (35.1 \pm 0.2)$~ns and $\bar{C} = (20 \pm 4)$ ~ns. }
 \label{fig:FitTimeRes}
 \end{center}
 \paragraph{} %% Need for Timing resolution from collision
-A time resolution obtained from test beam experiment is better than $100$~ps for energy $A_{eff}/\sigma_{n}$ greater than $400$~ADC counts. This demonstrates that for perfectly calibrated ECAL crystals and energy deposits of $E > 20$~GeV in the barrel, a time resolution better than 100~ps can be realized during proton-proton collisions. %we can obtain a resolution better than $100$~ps. 
+An intrinsic time resolution  better than $0.1$~ns for energy $E > 20$\GeV in EB is realized from test beam. Knowing that it takes on average 4.3~ns for a photon to reach the ECAL surface produced from proton-proton interaction point, this demonstrates an intrinsic time resolution of 2\% for photons with energy $E > 20$~GeV in the barrel.%, a time resolution better than 100~ps can be realized during proton-proton collisions. %we can obtain a resolution better than $100$~ps. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ECAL Time Performance from Collision}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-It is imperative to archive very precise time measurement with ECAL during proton-proton collision.
-As precise time measurement can be used to reject particles like cosmic rays, beam halo muons, electronic noise and out-of-time proton-proton interactions, with broad time distribution. Precise time can equally be used as a search variable for electromagnetic particles produced from the decay of trapped or long-lived particles. During proton-proton collisions, there are factors like crystal time variations over the entire LHC run, timing bias with energy, crystal-to-crystal synchronization and possibly lose in crystal transparency due to radiation, which can limit precise time measurements. Thus, a robust crystal time calibration procedure is required if we are to match the time resolution realized from test beam experiments.
+Ofcourse, we do not expect the ECAL time resolution in the LHC proton-proton collision environment to be as precised as test beams studies show. Therefore, it is imperative to determine the ECAL time resolution in an LHC environment as knowing the ECAL time resolution in LHC operation can be used for other purposes like eliminating particles such as cosmic rays, beam halo muons, electronic noise and out-of-time proton-proton interactions with broad time distributions. There are factors like clock time variations over extended time, timing bias with energy and looses in crystal transparency due to radiation which would lead to different pulse shapes which worsen the ECAL time resolution. Thus, a robust crystal time calibration procedure is required if we are to match the intrinsic time resolution realized in test beam studies that we mentioned above. In addition, precise ECAL time during collision can be use in the search for photons with late arrival time produced from the decay of slow moving particles with $\beta << 1$, photons traveling along a path which significantly deviates from the obvious straight path from the proton interaction point.% indicating the presence of a highly boosted particle or could be photons and electrons produced in the decay of a temporarily stopped particle inside the CMS detector.
 \subsection{Time Calibrations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Variations in crystal time maybe caused by the non-uniform response to electromagnetic showers  by every crystal or time shifts introduced during machine interventions in technical shutdowns for repairs. These variations can be about 1 to 3 ns on average. To reduce these contributions, we continuously time align all 75,848 \pb crystals in ECAL by performing crystal \textit{time calibration} once or twice every month. 
-Time calibrating these crystals ensures that there is a uniform response by all the crystals to photons produced from proton-proton collisions, at interaction point, and traveling along a straight path with speeds close to the speed of light to the surface of ECAL. It equally guarantees the synchronization of all the component particles of an event and assigns each event to the correct LHC proton bunch crossing. 
+Variations in the crystal time maybe caused by the non-uniform response to electromagnetic showers of each crystal causing difference in pulse shapes or by clock time shifts introduced by interventions during technical shutdowns for machine repairs. These variations can be about 1 to 3 ns on average. To reduce these contributions, we continuously time align all 75,848 \pb crystals in ECAL by performing crystal \textit{time calibration} once or twice every month. 
+Time calibrating these crystals ensures that there is a uniform response by all the crystals to photons produced from proton-proton collisions, at interaction point, and traveling along a straight path with speeds close to the speed of light to ECAL. It equally guarantees the synchronization of most particles of an event and assigns each event to the correct LHC proton bunch crossing. 
 \newline
-The presence of the "$T_{MAX}$ Phase", the difference in pulse shape between each crystal, variation in time of flight by a few nanosecond~(ns) and the different intrinsic delays in each channel allow for time calibration at two separate levels. At the level of the front end electronics ~(FE) consisting of $5\times5$ crystals, We perform an initial internal time synchronization by adjusting in steps of 1.04~ns among these block of crystals. Determining the values of adjustments to be made and immediately~(online) performing this adjustments is done during \textit{Hardware Synchronization}. Offline, we assign time constants to each crystal, during event reconstruction, such that the time of flight for photons traveling along a straight path directly from the proton-proton interaction point to the crystals is the absolute measured time by all the crystals.
-The time adjustments constants are developed separately for the barrel and endcaps.
-There are significant benefits to having a uniform time alignment by all the crystals. With a better time calibrated detector, it is possible to distinguished between photons or electrons with significantly large arrival time from normal in-time photons produced in collisions. Large arrival time photons can be produced from the decay of slow moving particles; $\beta << 1$, or could be photons traveling along a path which significantly deviates from the obvious straight path from the proton interaction point, indicating the presence of a highly boosted particle or could be photons and electrons produced in the decay of a temporarily stopped particle inside the CMS detector. 
+The presence of the "$T_{max}$ Phase", the difference in pulse shape between each crystal, variation in time of flight by a few nanosecond~(ns) and the different intrinsic delays in each channel motivates a time calibration at two separate levels. At the level of the front end electronics ~(FE) consisting of $5\times5$ crystals, We perform an initial internal time synchronization by adjusting the time measured by each trigger tower in steps of 1.04~ns among all the trigger towers. Determining the trigger tower time constants needed for time aligning these trigger towers takes place during the process of \textit{Hardware Synchronization}. Offline, we assign time constants to each crystal, during hit reconstruction using the CMS reconstruction software during the transition from uncalibrated hits to calibrated hits.
+%such that the time of flight for photons traveling along a straight path directly from the proton-proton interaction point to the crystals is the absolute measured time by all the crystals.
+%The time adjustments constants are developed separately for the barrel and endcaps.
+%There are significant benefits to having a uniform time alignment by all the crystals. With a better time calibrated detector, it is possible to distinguished between photons or electrons with significantly large arrival time from normal in-time photons produced in collisions. 
+ 
 
 \subsubsection{Offline Time Calibration}
-The purpose of the offline calibration is to provide time adjustments~(calibration) constants for each channel~(crystal) during event reconstruction. These constants are derived from data recorded during  proton-proton collisions and are used to adjust for any global time shift in time measurements that might have occurred. The global phase shift ob about 1~ns is caused by time shifts in the CMS clock relative to the LHC clock and time shifts of about 3~ns to 5~ns is caused by de-synchronizations introduced during hardware interventions.
-The calibration constants for each crystal is the reverse sign of the average time of all the reconstructed energy deposits~(rechits) of the crystal.
+The purpose of the offline calibration is to provide time calibration constants for each crystal during event reconstruction. These constants are derived from data recorded during  proton-proton collisions and are used to adjust for any clock time shift. A crystal time shift of about 1~ns is caused by the relative time shift between the CMS and the LHC clocks and time shift of about 3~ns to 5~ns is caused by time offsets in the local CMS clock introduced during hardware interventions. The local time offsets is specific only to certain regions of the ECAL detector.
+The calibration constants for each crystal is the reverse sign of the average time of all the reconstructed energy deposits~(rechits) in the crystal.
 New sets of calibration constants are produced each month throughout the entire LHC run period.
 Each set of time constants produced has an \textit{interval of validity}~(IOV).
 A total of 17 IOV time constants were produced for the entire LHC run in 2011 and 44 IOV time constants for 2012.
@@ -192,8 +177,7 @@ A total of 17 IOV time constants were produced for the entire LHC run in 2011 an
 %This process is performed throughout the entire LHC proton-proton collision period each year. At the end of each calibration process, the set of calibration constants developed for that period of time is called its . The data used in measuring the timing constants is specified by run range of events signifying a period over which proton-proton collisions occurred. During the entire LHC run period in 2011, a total of 17 IOVs were developed while during 2012 LHC run, a total of 44 IOVs were produced. The raw dataset used in producing the calibration constants consists of mostly superclusters with crystal hits from Level-1 triggered events of loosely triggered  photons, electrons and hadrons with large electromagnetic contributions. Datasets with such events are called \textit{ElectronHad} or \textit{PhotonHad}. Rechits from these events must pass a selection criteria which include, the event time~(an average over it's rechits) must be smaller than 5~ns, rechits must belong to a basic cluster whose transverse energy is atleast 2~\GeV, the signal amplitude must not be lower than 26(47) or 100~(in LHC 2012) ADC counts~(corresponding to an energy of about 1(3)~GeV ) for rechits in EB(EE), the reconstructed rechit time must be within 5(7)~ns from either side of zero in EB(EE) and to reduce the presence of anomalous crystal hits, the ratio of the sum of energies of the north, south, east and west neighboring crystals excluding the crystal with the highest energy to that of the energy of the highest energy crystal must be greater than 5\%  or equivalently $ 1 - E_{4}/E_{1} < 0.95$~(the \textit{swiss-cross} variable). This swiss-cross variable is very useful for rejecting events with anomalous crystal energy deposits. The selected rechits are used to make a timing distribution for each channel requiring each channel to have at least 10 rechits.
 %After extracting the average time per crystal, the reverse of its value measured is the time calibration constants or inter-calibration coefficient used for timing alignment. The variance represents the spread in the measurement of the calibration constant. For channels with less than 10 valid rechits, the average time of all the other channels is assigned to them as their inter-calibration coefficient. We validate these constants obtained by performing a closure test which involves  applying the reversed values of these constants to the same or different set of events and showing that the measured average time over rechits per channel is 0~ns to within the accuracy of the calibration method and small event migration in the event sample. The event migration effects are of the order of 10~ps.
 \newline
-In keeping with using mostly electromagnetic objects for producing the calibration time constants, datasets from proton-proton collisions containing mostly loosely triggered photon, electron and hadrons with large electromagnetic shower contribution events are used.
-These events are required to undergo a rigorous event selection process in order to minimize contamination from events not produced from proton-proton collisions like cosmic muons, beam halos and electronic noise. The produced constants are validated using a closure test procedure and used during event reconstruction.
+The data sample use for producing the calibration time constants contains mostly electromagnetic particles of mostly loosely triggered photon, electron and hadrons with large electromagnetic shower which travel with nearly the speed of light and largely deposit  most of their energy at ECAL. Events of these data samples undergo a rigorous event selection process in order to minimize contamination from events not produced from proton-proton collisions like cosmic muons, beam halos and electronic noise. The produced constants are validated through a full cycle hit reconstruction-time adjustment-hit re-reconstruction procedure of a chosen sub data sample. The validate constants are then used during full event reconstruction.
 The maps in Figure \ref{fig:TimeCalib}, show two dimensional distribution maps of the average time~(time calibration constants) for each of the 61,200 crystals in EB and 14648 crystals in EE. The figure shows each crystal average time before~(\textit{top 3 plots}) and after~(\textit{bottom 3 plots}) calibration. More information about crystal time calibration for the entire LHC Run 1 is found in \cite{ECALCAL}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}
@@ -216,43 +200,44 @@ After calibration most crystals have an average time of zero(\textcolor{green}{G
 \label{fig:TimeCalib}
 \end{center}
 
-\subsubsection{Online Time Calibration}
-Time offsets are introduced during hardware interventions for ECAL front end electronics repairs. 
-To minimize the impact of these time offsets and reduce additional rounds of required event re-reconstruction, it is efficient and effective to adjust the time offsets or time latency directly online during CMS data recording. This adjustment can be performed using data from proton-proton collision or from laser. 
+\subsubsection{Hardware Time Calibration}
+Time offsets introduced during hardware interventions for ECAL front end electronics repairs are calibrated at the level of trigger towers. Most often the adjustment of the hardware time latency happen during the process of CMS data recording. These time alignments can be done using either data from proton-proton collision or from laser. 
  %timing offsets are not easily adjustable during offline reconstruction as our method of offline timing calibration simply adjusts for the timing latency settings of the front end electronics using the online database. Hardware settings for readout electronics with timing offsets not properly aligned or calibrated can contribute to worsening of the timing resolution.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\paragraph{Time Calibration With Collision} \mbox{}\\
-The approach for adjusting hardware time offsets immediately during data recording by CMS ECAL with stable proton-proton collision beams is to temporarily stop the entire data recording process, use the fraction of data recorded, and adjust the hardware time offsets. Data recording is resumed once the time offsets has been adjusted. The  Data Quality Monitoring~(DQM) and
-data certification services are used during this process. Stopping the CMS data recording process during LHC stable proton beams evidently leads to data lost which is one of the reasons for the large difference between the luminosity recorded by CMS detector compared to luminosity delivered by the LHC.
-As a result, although online or hardware time adjustment using collision data approach is efficient, however, the large CMS data recording downtime and lost of luminosity makes it unreliable especially during frequent machine interventions.
-To remedy the situation, a laser based time latency adjustment approach is encouraged.
+\paragraph{Hardware Time Calibration With Collision} \mbox{}\\
+The approach for adjusting hardware time offsets during CMS data data recording with ECAL for stable proton-proton collision beams involves interfering with the data recording process in order for the hardware time adjustments to be made. This interference during stable proton beams causes frequent data recording downtimes leading to data lost. Frequent down times is one of the causes for the difference between the luminosity recorded by CMS detector compared to luminosity delivered by the LHC.
+Even though we can argue that this procedure for adjusting the observed trigger tower time shifts using collision data is self efficient, the large CMS data recording downtime and lost of luminosity makes it less dependable especially during frequent machine interventions.
+To remedy the situation, a laser based time latency adjustment approach can be used.
 %f correcting for this hardware timing offsets or latency during LHC stable proton beam collision has been, in cases of an observed timing offset is to record enough data with the maladjusted hardware settings with timing offset, stop the entire CMS data taking process while LHC proton collisions are still ongoing, use the collected data to extract the hardware timing offsets, use these extracted timing offsets to adjust the hardware settings and finally continue with recording data with the CMS detector. These timing offsets are spotted and extracted during Data Quality Monitoring~(DQM) and data certification hardware readout electronics performance routines. Although this method is reliable, it encourages long and intermittent data recording downtime as stopping the ECAL section of the CMS detector in order to adjust the settings of the hardware readout electronics leads to lost in data recording time which in some cases if the reason for reduced luminosity recorded by CMS compared to luminosity delivered by the LHC during LHC stable proton beams. To reduce this lost, we need an alternative method of adjusting the hardware timing offsets while reducing CMS data recording downtime. 
 %Our alternative approach to investigating and adjusting the hardware latency settings for timing offsets after the CMS or LHC machine maintenance intervention during technical stop or machine development was to use laser data instead of proton-proton collision data for performing timing adjustment. ECAL uses lasers to study and adjust for depreciated crystal energy resolution caused by loss in crystal transparency due to radiation. 
-\paragraph{Time Calibration With Laser}\mbox{}\\
-The ECAL laser system comprise of two lasers, a 440~nm wavelength~(close to peak emission for \pb crystals) laser for monitoring crystal transparency lose and a 796~nm wavelength laser for monitoring readout electronics chain from photodetectors to the electronics~(\ie APDs to ADCs). Both lasers have a jitter of less than 4~ns every 24 hours run and as a result, the time from the lasers is averaged over 600 event pulses. The time for each crystal from the laser is expected to be the same as the time from collision data and is represented as $\mathbf{T^{APD}_{MAX}}$. The laser system is also equipped with a fast acquisition card called MATACQ. The time for each channel recorded using the Matacq is also averaged over 600 event pulse and denoted  $\mathbf{T_{MATACQ}}$.
+\paragraph{Hardware Time Calibration With Laser}\mbox{}\\
+The ECAL laser system comprise of two lasers, a 440~nm wavelength~(close to peak emission for \pb crystals) laser for monitoring crystal transparency losses and a 796~nm wavelength laser for monitoring readout electronics chain from photodetectors to the electronics~(\ie APDs to ADCs). Both lasers have a jitter of less than 4~ns and as a result, the time from the lasers is averaged over 600 event pulses. The time for each crystal from the laser is expected to be the same as the time from collision data and is represented as $\mathbf{T^{APD}_{MAX}}$. The laser system is also equipped with a fast acquisition card called MATACQ. The time for each channel recorded using the Matacq is also averaged over 600 event pulse and denoted  $\mathbf{T_{MATACQ}}$.
 The difference, $ \mathbf{T^{APD}_{MAX}} - \mathbf{T_{MATACQ}}$, of the two times, averaged over the  25 crystals of a Clock and Control Unit ~(CCU) is used as the time for each CCU, $ t_{CCU} = \left\langle \mathbf{T^{APD}_{MAX} - T_{MATACQ}} \right\rangle $. 
 To obtain the time shift of 25 crystals belonging to the same Front End~(FE) electronics, we monitor for change of this time average  before~($\mathbf{t^{B}_{CCU}} $) and after~($\mathbf{t^{A}_{CCU}} $) hardware intervention during detector maintenance.  
-The time difference, $\Delta t_{CCU} = t^{A}_{CCU} - t^{B}_{CCU}$, after correcting for any global shift, and averaging over all the 25 crystals, \ie ~$\left\langle t^{A}_{CCU} - t^{B}_{CCU} \right\rangle $, is the time shift, and the time calibration constant for the CCU is of opposite sign so that after correcting, the average time of the CCU is zero. This is done for all the 68 CCUs in a given supermodule~(SM) or front end detector~(FED). The global time shift of a given FED is caused by the laser light distribution in-homogeneity  or evolution of the laser pulse due to different optical fiber supply of laser light to each CCU. Each FED has 1,700 \pb crystals and we produced laser based time calibration constant for all its crystals. 
-The plots in Figure \ref{fig:TimeLaser} show the current observation status after monitoring for time shift within each CCU using laser. It shows the distribution of the CCU time difference before and after machine intervention, $\Delta t_{CCU}$, with the Root Mean Squared~(RMS) error for each CCU. We have subtracted the global time shift per FED to reduce the possibility of a false alarm of a time shift in a given CCU.
-Using laser data, we are able to measure the time shift of each CCU to within 0.2~(0.5)~ ns EB~(EE) in precision. Compared to calibration using collision data, there are no downtime as we can adjust for any hardware time shift prior to stable proton beams.
+The time difference, $\Delta t_{CCU} = t^{A}_{CCU} - t^{B}_{CCU}$, is averaged over all the 25 crystals, \ie ~$\left\langle t^{A}_{CCU} - t^{B}_{CCU} \right\rangle $, is the time shift, and the time calibration constant for the CCU is of opposite sign so that after correcting, the average time of the CCU is zero. This is done for all the 68 CCUs in a given supermodule~(SM) or front end detector~(FED). The global time shift of a given FED is caused by the non-homogeneous laser light distribution on all CCU or trigger towers. Each FED has 1,700 \pb crystals and we produced laser based time calibration constants for all its crystals. 
+Using laser data, we are able to measure the time shift of each CCU to within 0.2~(0.5)~ ns EB~(EE) in precision. Compared to calibration using collision data, there are no downtime in CMS data recording as we can adjust for any hardware time shift prior to stable proton beams.
 The full procedure including technical details for performing hardware latency adjustments online using collision data or laser data is well described in \cite{ECALHW}.
+
+%%The plots in Figure \ref{fig:TimeLaser} show the current observation status after monitoring for time shift within each CCU using laser. It shows the distribution of the CCU time difference before and after machine intervention, $\Delta t_{CCU}$, with the Root Mean Squared~(RMS) error for each CCU. We have subtracted the global time shift per FED to reduce the possibility of a false alarm of a time shift in a given CCU.
+%%
+
  %This tool and procedure allow for adjusting the hardware timing settings during CMS data  recording without the need for collision data. However some validation studies for this method is yet to be performed.  
 %In summary, we use crystal time from laser data to measure possible hardware timing offsets and use these timing offsets to provide new hardware settings prior to proton-proton collision. 
 %This adjustment can be performed online or \textit{in-situ} by using the ECAL readout electronics condition database system. 
-\begin{center}
-\centering
-\mbox{\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/CCU_Mean_Time_ShiftEB_Plus8_Fed_635.png} \quad
-\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/CCU-Mean-Time-Shift-EBMinus8-Fed617.png}}
+%%\begin{center}
+%%\centering
+%%\mbox{\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/CCU_Mean_Time_ShiftEB_Plus8_Fed_635.png} \quad
+%%\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/CCU-Mean-Time-Shift-EBMinus8-Fed617.png}}
 
-\vspace{1cm}
-\mbox{\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/CCU_Mean_Time_Shift_EEP_Laser.png} \quad 
-\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/CCU_Mean_Time_Shift_EEM_Laser.png}}
+%%\vspace{1cm}
+%%\mbox{\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/CCU_Mean_Time_Shift_EEP_Laser.png} \quad 
+%%\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/CCU_Mean_Time_Shift_EEM_Laser.png}}
 %\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
-\captionof{figure}{\textit{Top}: The mean time distribution obtained from laser of crystals in a single FED \ie EB$\pm$8. 
-\textit{Bottom}: Clock and Control Unit ~(CCU) mean time shift distribution of FEDs EE$+$ and EE$-$. 
-$\Delta t_{CCU}$ distributions after the global shift has been removed. The adjustment for global time shift per FED due to difference in light source for each CCU has been shown to reduce the possibility of CCU showing false time shift. }
-\label{fig:TimeLaser}
-\end{center}
+%%\captionof{figure}{\textit{Top}: The mean time distribution obtained from laser of crystals in a single FED \ie EB$\pm$8. 
+%%\textit{Bottom}: Clock and Control Unit ~(CCU) mean time shift distribution of FEDs EE$+$ and EE$-$. 
+%%$\Delta t_{CCU}$ distributions after the global shift has been removed. The adjustment for global time shift per FED due to difference in light source for each CCU has been shown to reduce the possibility of CCU showing false time shift. }
+%%\label{fig:TimeLaser}
+%%\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Time Bias}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -261,8 +246,8 @@ An additional source contributing to poor time measurement arise from energy rel
 The full conversion of the energy of a particle recorded by a crystal in ADC counts to \GeV is expressed as; $    E_{i} =  G \cdot S_{i}(t) \cdot C_{i} \cdot A_{i}$, where $A$ is the amplitude from the pulse shape in ADC counts, $G$ is the ADC-to-GeV conversion factor equal to $0.039$($0.063$) in EB(EE), $C_{i}$ is the inter-calibration coefficients accounting for individual channel response to the electromagnetic shower and $S_{i}(t)$ is the correction term obtained from laser accounting for radiation-induced channel response.  $S_{i}$ changes over time.
 The first gain transition point~(Gain-1) of the multi-gain pre-amplifier occurs at $4096$~ADC counts corresponding to $159.744$~\GeV in EB and $258.048$~\GeV in EE. The subsequent Gain~6 and 12 transitions occur at energy values of \TeV.
 \newline
-At these gain transition points, the ratio algorithm introduces a time bias in the time reconstruction.
-We correct the time bias in an energy dependent manner during event reconstruction. The corrections are made on a CMS event reconstruction software~(CMSSW) release basis. Figure \ref{fig:TimeBias} shows the comparison between two CMS event reconstruction software releases, CMSSW44X, where these time bias corrections have not been  made and CMSSW53X, where the the corrections have been made. Evidently, the average time displayed in both CMSS44X and CMSS53X show the disappearance of the time bias for all particle energy in CMSSW53X after the time bias corrections were made.
+The ratio algorithm introduced time bias at gain transition points which need to be adjusted.
+These adjustments are made on an energy dependent basis during event reconstruction for a particular CMS event reconstruction software~(CMSSW) release. Figure \ref{fig:TimeBias} shows the comparison between two CMS event reconstruction software releases, CMSSW44X, where these time bias corrections have not been  made and CMSSW53X, where the the corrections have been made. Evidently, the average time displayed in both CMSS44X and CMSS53X show the disappearance of the time bias for all particle energy in CMSSW53X after the time bias corrections were made.
 %The bias in timing introduced by these gain transitions cannot be calibrated at hardware, so we developed a method of adjusting the
 %timing measurements for the timing bias at the CMS event reconstruction level.
 %Using reconstructed hits with similar selection as our offline timing calibration, selected hits are also required to be part of a basic cluster~(usually $3\times 3 $ or $5\times 5$ matrix of crystals). These hits must have amplitude with channel noise consideration above $10$ ADC counts. We reject hits with very large timing biased and large swiss-cross variable beyond our selection threshold~(0.99). A distribution of the hit time against its amplitude is plotted and then sliced in bins of amplitude. Bins containing at least 7 hits are fitted using a Gaussian function constrained within $\pm 7$~ns. The average(mean) and standard deviation(RMS) from these distributions is plotted against their corresponding amplitude or energy to give a distribution of mean and standard deviation  against amplitude. This procedure is performed for different \textit{Modules} or pseudo-rapidity~($\eta$) range starting from $\eta = 0$ which is \textit{Module}~1 in barrel to $\eta = 3$ for high-eta in endcap.
