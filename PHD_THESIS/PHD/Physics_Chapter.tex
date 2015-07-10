@@ -752,7 +752,7 @@ This approximation is almost the same for the non-minimal GMSB models except tha
 %It is important to observe here that, the decay rate is large for smaller values of the fundamental SUSY breaking scale or equivalently smaller gravitino mass for a fixed neutralino mass. Thus if $m_{NLSP}$ is of the $\mathrm{O}(100$~\GeV) or more and $\sqrt{\mathbf{F}} \ll 1000$~\TeV, meaning $m_{\tilde{G}} \leq 1$~\KeV, then the above decay rate is of the order than can be observed at hadron collider detectors.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Long-Lived Particles in GMSB Models}
+\subsection{Long-Lived Particles in GMSB Models}\label{long-lived}
 %\paragraph*{}
 %In addition to mass, charge and spin being experimental handles use in the search for new physics, a 
 Measuring a particle's life time or distance traveled before it decays can be a useful method to uncover new fundamental interactions.
@@ -899,8 +899,8 @@ This distance traveled might range from a few $\mu$m to meters.
 
 
 %\subsection{Decay of supersymmetric particles in CMS detector}
-\paragraph{Neutralino as a Long-Lived Particle}\mbox{}\\
-The neutralino as the next-to-lightest-supersymmetry particle~(NLSP), can decay into a photon~(\Pphoton), Higgssino~(\PSHiggszero), \PZ boson and gravitino~($\tilde{G}$) \cite{NLSP, GMSB}.
+\subsubsection*{Neutralino as Long-Lived Neutral Particle}\label{NeutralinoDecay}
+The neutralino being the next-to-lightest-supersymmetry particle~(NLSP), can decay into a photon~(\Pphoton), Higgssino~(\PSHiggszero), \PZ boson and gravitino~($\tilde{G}$) \cite{NLSP, GMSB}.
 % produced from the cascade decay of squarks and gluinos can decay into a gravitino and a gauge boson or scalar particle. This decay is also a probabilistic process and can be expressed and quantified as a single real number. 
 % There are always many options for a given particle to decay into and each of these options is quantified by a number known as the \textit{Branching  Fraction} or \textit{Branching Ratio}. Summing all the branching ratios for all the different decay processes gives the total \textit{Decay Width}. The total decay width, can also be computed and expressed as a single real number in units of \GeV or \MeV (\GeV = giga electron volt $=10^{9}$~eV). 
  %In the case of the neutralino as the NLSP, the decay width depends on the nature of its interaction with the gravitino and an associated gauge boson or scalar field.
@@ -940,29 +940,14 @@ the neutralino. Therefore the neutralino momentum, $p_{\PSneutralinoOne}$ is det
 If the gluino or squark decays to the neutralino in association with a many gluons and quarks seen in the detector as \textit{jets},
 then the neutralino momentum is small with the ratio $p_{\PSneutralinoOne}/m_{\PSneutralinoOne} \ll 1$, this means the neutralino is slow and therefore long-lived. However, if the gluino or squark is decays with less number of jets, then the neutralino momentum is
 not so small and the neutralino is not very long-lived.
-Therefore, the nuetralino kinematic properties like its momentum, arrival time at the CMS detector as well as the number of associated jets can be influenced by the gluino or squark decay kinematics.
-
+It is worth nothing that kinematic properties of the neutralino like momentum, arrival time at the CMS ECAL and the number of associated jets can be influenced by the gluino or squark decay properties.
+The gluino or squark is produced during proton-proton~($pp$) collisions at the LHC and the data recorded by the CMS detector is analyzed to search for events with neutralino decay.
 %Since mass of SUSY particles like gluino, squarks and also neutralino is kept fixed by the SUSY effective breaking scale $\mathbf{\Lambda}$ as shown in equations \ref{eq:MSSMMasses}, the neutralino $\pt$ will depend o the number of associated quarks observed as \textit{jets} produced during the gluino or squark decay. Gluino or squark decays with very low jet multiplicity will lead to the production of large $\pt$ neutralinos which eventually leads to more boost factor while high jet multiplicity will lead to low $\pt$ neutralinos and hence low boost or $\beta$ factor. It is important to note that in either case, this depends also on the measured $\pt$ of the jets whether is low or high jet multiplicity cases. It is also worth mentioning that the photon produced from neutralino decay can also be arrived with large delayed time in situations where the photon arrival path to the detector is not a direct straight path but rather deviated as a result of a highly boosted neutralino produced from gluino or squark decay.
 
 %In addition to the boost factor, the inherent proper decay length, $c\tau$,  will also determine the extend to which a long-lived neutralino is detectable at a particle detector. Neutralino with very long lifetime, $c\tau$, beyond the detectable length of the particle detector will obviously travel out of the detector before decay and as a result are often not detectable while neutralinos with very short lifetime may also be undetectable  as their decay length travel is not enough to be able to separate them for background events in a detector environment like the LHC unless other methods are employed like using its impact parameter distance travelled. However, this is only applicable in scenarios where the neutralino decays into a charged particle with tracks in the detector such that its decay production vertex can be used to correctly calculate and extracts the neutralino impact parameter or in other sophisticated detectors which the direction of the particle from neutralino decay is accessible. This the is case with ATLAS particle detector and not so with CMS detector.
 
 %With $C_{grav}$, one could  one could change the decay length of the NLSP such that its decay occurs within the volume of the detector such that the resulting photon is delayed. This gives a unique signature for discovering SUSY in hadron colliders as photons produced from SM interactions are prompt.
-Using the LHC as the proton-proton collider and the CMS detector as the instrument for detecting and measuring the lifetime of delayed photons produced from long-lived neutralino decays. We have simulated neutralino production and decay according to the SPS8 benchmark model, where the neutralino is the NLSP decaying into a photon and the gravitino as LSP. 
-In Figure \ref{fig:NKINE} we show some
-distributions of kinematic properties like the momentum in the transverse plane of the CMS detector~(transverse momentum~($\pt$), since particles produced with enough momentum travel and are detected along the transverse plane of the CMS detector) of the neutralino~($\pt^{\PSneutralinoOne}$) and its measured lifetime~($c\tau_{\PSneutralinoOne}$) in the CMS detector. %the number of associated jets in its decay~($N_{jets}$).
-We also made distribution showing transverse momentum of the photon~($\pt^{\Pphoton}$) and the measured arrival time of the photon~($T_{\Pphoton}$). These distributions are made for different model parameters $\mathbf{\Lambda}$ and $C_{grav}$. The CMS Software~(CMSSW) package has been used to simulate and study the neutralino production and decay in CMS detector while the root data analysis framework was used to performed some fit analysis on the generated and simulated distributions of the distance traveled by neutralino before decay to extract its $c\tau_{\PSneutralinoOne}$ produced during the MC generation. The extracted $c\tau_{\PSneutralinoOne}$ value  is compared to theoretical prediction values for consistency check of the simulation process. 
-%Our choice of parton distribution function is CTEQ6L1 with LHAPDF for producing GSMB MC samples from SLHA files. Most studies are performed by varying $\mathbf{\Lambda}$ and $C_{grav}$ or the neutralino proper decay length, $c\tau$. The results are expressed in a two dimensional $\mathbf{\Lambda}$ or $m_{\tilde{\chi}^{0}_{1}}$ against $c\tau$ for a particular model.
-%\clearpage
-\begin{center}
-\centering
-\mbox{\includegraphics[height=0.5\textwidth,width=0.5\textwidth]{THESISPLOTS/GMSB-SPS8-MODEL-Neutralinio-Pt.png} \hspace{-1cm}
-\includegraphics[height=0.5\textwidth,width=0.5\textwidth]{THESISPLOTS/GMSB-SPS8-MODEL-Neutralino-Proper-DecayLength.png}} \\
-\hspace{0.5cm}
-\mbox{\includegraphics[height=0.5\textwidth,width=0.5\textwidth]{THESISPLOTS/GMSB-SPS8-MODEL-Photon-Pt.png} \hspace{-1cm}
-\includegraphics[height=0.5\textwidth,width=0.5\textwidth]{THESISPLOTS/GMSB-SPS8-MODEL-Photon-Arrival-Time.png}}
-\captionof{figure}{Neutralino transverse momentum distribution(top left) and proper decay length(top right) with its decayed photon transverse momentum distribution(bottom left) and time of arrival at ECAL(Bottom right) for GMSB SPS8 model.}
-\label{fig:NKINE}
-\end{center}
+
 
 
 
@@ -1030,7 +1015,7 @@ We also made distribution showing transverse momentum of the photon~($\pt^{\Ppho
 % The SM of particle physics in all its glory is the most precise and well developed model describing and providing our understanding of how energy, space and time interact with each other. We will begin by describing the current status of the SM highlighting areas where there could be need for further development in the format of questions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Previous Search Experiments}
+\section{Previous Search Experiments} \label{PrevResults}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The have been previously other search experiments for neutral long-live particles decaying to photons. Obviously, negative findings  from these experiments led to possible search exclusion regions in terms of the lifetime, mass and cross section of the existence of supersymmetry particles in different supersymmetry models. Results from experiments(DO, CDF, CMS and ATLAS) \cite{LEP,CDF,ATLAS, CMS, ATLAS1} of the search for Neutralino NLSP decaying to photon and gravitino interpreted using the SPS8 benchmark model is
  shown in \ref{fig:UpperLimits}. These results show that within the SPS8 model, neutralinos with mass $m_{\PSneutralinoOne} \leq 245$~\GeV and proper decay length $c\tau_{\PSneutralinoOne} \leq 6000$~mm have not been found at hadron colliders.

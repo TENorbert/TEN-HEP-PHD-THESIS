@@ -2,8 +2,7 @@
 % Event_Reconstruction_Chapter.tex:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Event Reconstruction}
-\label{Reconstruction_and Particle_ID_chapter}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Event Reconstruction Overview}
 An event is comprise of one or more particles produced in a particular proton-proton collision.
 Event reconstruction is the process of constructing particles and their four momenta using raw data read from the electronics of the different CMS subdetectors. The process begins in each subdetector using a local reconstruction algorithm and eventually extends to all subdetectors. In the calorimeter subdetectors, an energy clustering algorithm is used to produced energy clusters and in the tracker and muon chambers, a combination of tracking algorithms is used to construct particle tracks. By matching selected tracks to energy clusters, particles like photons, electrons, muons, jets and missing transverse energy~(\MET) are reconstructed.
@@ -311,3 +310,4 @@ It has also been shown that applying selection cuts on the rechit time of $ \pm 
 %However, for physics analysis like our case of searching for long-lived particles, this cleaning procedure is not useful. As rejecting RecHits with time more than 3~ns also known as \textit{Out-Of-Time} RecHits will remove super clusters from potentially delayed electrons and photons which defines the signal for new physics.
 %Thus in this analysis, we combined all classes of RecHits, and do not reject RecHits with large reconstructed time except if the time is well beyond expected time for physics objects produced in proton-proton collisions within the required Bunch Crossing time spacing of 25~ns or 50~ns.
 %The electromagnetic objects in this analysis are reconstructed from the combined sample of time cleaned and unclean RecHits. All other RecHit cleaning is applied except that which involves RecHit timing information.
+\label{Reconstruction_and Particle_ID_chapter}
