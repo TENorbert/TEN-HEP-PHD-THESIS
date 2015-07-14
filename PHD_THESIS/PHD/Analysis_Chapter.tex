@@ -797,7 +797,7 @@ Using the yields in Table \ref{tab:EVTYIELD} for each CS and Equations \ref{eq:C
  N_{D}^{col} &= \frac{35464}{1446522} \times 2 = 0.05^{+0.05}_{-0.02} \\
  N_{D}^{Total} &= \left( \frac{39 - 0.20}{852}\times 359\right) +  0.05 = 16.40^{+3.04}_{-2.63}.
 \end{align*}
-The uncertainty are all systematic uncertainties which is based on the event statistics in each CS. Our expected number of background events in signal CS \textsf{D} is $6.40^{+3.04}_{-2.63}$  which is within statistical uncertainties agreeable with the 10 events we observed satisfying all our event selection requirements and belonging to the CS \textsf{D}. 
+The uncertainty are statistical uncertainties based on the event statistics in each CS. Our expected number of background events in signal CS \textsf{D} is $6.40^{+3.04}_{-2.63}$  which is, within the statistical uncertainties, agreeable with the 10 events we observed satisfying all our event selection requirements and belonging to the CS \textsf{D}. 
 This give us confidence to now apply our background estimation method for our true data sample.
 % We observed $10$ events while from using Equation \ref{eq:FBKG}, we expected $16.78^{+2.95}_{-3.45}$. We argue that within our statistical uncertainties, there is quite an agreement between our expectation and observed events. The complete result from our closure test is shown in Table \ref{tab:EVTC}. This gives us confidence that our  background estimation method is robust and reliable. We apply the same \textsf{ABCD} to estimate the background contribution in our signal sample. Our signal sample consist of events with at least $2$-jets, at least a single photon and ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, $\ETslash\hspace{0.15cm} > 60$\GeV
 %\paragraph*{}\mbox{}\\
@@ -823,21 +823,12 @@ This give us confidence to now apply our background estimation method for our tr
 %\end{center}
 %\end{minipage}
 \subsection{Background Estimation Cross Check}
- We also perform a cross-check on the assumptions used in our background estimations for small contributions for collision background using $\PZ \rightarrow \EE$ events. 
-Our underlying assumption here is that background contributions to large timing from collision source referred here as QCD is very small and must be of the order of $10^{-5}$ in comparison to in-time photons. i.e the ratio 
-$ N_{t_{\gamma} > 3~ns}/ N_{|t_{\gamma}| < 2.0~ns} \approx 10^{-5}$ with $N$ being the number of photons. 
-The main assumption in our background estimation technique is that, the contribution from collision background events to out-of-time regions~($3.0 < t_{\gamma} < 13.0$~ns) is negligible.
-In order to show that this assumption is correct, we select $Z\rightarrow \EE$ events from \texttt{SingleElectron} and \texttt{DoubleElectron} data sets of 2012. Our motivation is to use a control sample where contributions from non-collision events is very small.
-We select $Z$ candidate events from an extended photon sample including out-of-time photon events according to the following selection criteria:
-\begin{itemize}
-\item The candidate two electrons for the $Z$ bosons must have individual $\pt > 25$~GeV,
-\item The di-mass of these two electrons, $|m_{\EE} - 91| > 61$~$GeV/c^{2}$,
-\item Each electron must be in the barrel, $|\eta_{e^{-}}| < 1.479$ and $ |\eta_{e^{+}}| < 1.479$.
-\end{itemize}
- At the electron super cluster level,  we used the seed crystal time adjusted to account for the electron time of flight, as the electron time. The seed crystal must satisfy the recommended crystals or rechit cleaning criteria by the ECAL group which include \texttt{kWeird}, \texttt{kBad}, \texttt{kPoorCalib} used for rejecting crystals showing anomalous behavior like spikes, noisy, bad crystals or poorly calibrated crystals.
-In this cross-check, we define our signal region as $Z$-candidate events with a well defined mass from both electrons i.e  $76 < |m_{\EE}| < 100$~$GeV/c^{2}$ while the non $Z$ events control sample are events which do not fall into this signal category.
-A quick look at photon $t_{\gamma}$ vs $\eta_{\gamma}$ and $\phi_{\gamma}$ plots as previously shown for halo photons in figure \ref{fig:HALO}, shows that the electron candidates from the \texttt{Single/DoubleElectron} dataset when compared to the \texttt{SinglePhoton} dataset in figure \ref{fig:Elec} show no or very little contribution from cosmic, halo and anomalous photon events. This confirms our choice of the $Z$ candidate events sample as a reliable sample to study collision events as it is free from non-collision events.
-
+We do a cross-check on the estimation of background events from collision using $\PZ \rightarrow \EE$ events. Since the electrons from \PZ decay are mostly in-time due to the prompt decay of the \PZ boson, we select events with atleast two electrons from a \texttt{SingleElectron} and \texttt{DoubleElectron} data of 2012 where contributions from non-collision events is very small. The events are selected such that \PZ candidate events with out-of-time energy deposits in ECAL are included. Out-of-time background events are mostly events from the Drell-Yan process and poorly reconstructed out-of-time  energy deposits in ECAL. To minimize out-of-time contributions from beam halo and cosmic events which can occur simultaneously with true $pp$ collision events, we require that the \PZ candidate event satisfy the following event selection requirements: the two electron candidates of the \PZ boson must each have a $\pt > 30$\GeV/c, di-electron mass, $|m_{\EE} - 91| > 61$\GeV/cc, and both electrons must be in the barrel, \ie $|\eta_{e^{-}}| < 1.479$ and $ |\eta_{e^{+}}| < 1.479$.
+The electron ECAL arrival time is taken to be the seed crystal time adjusted to account for the electron time of flight. The seed crystal must satisfy the recommended crystal(reconstructed hit) cleaning criteria which requires that the seed crystal is not a spike, is not noisy and has been properly time calibrated.
+\newline
+From these selected \PZ candidate events, we define a signal event sample where the \PZ candidates have a well defined di-electron mass \ie  $76 < |m_{\EE}| < 100$~$GeV/c^{2}$ and the background events and the sideband where the di-electron mass satisfies either of the conditions, $50\GeVcc < m_{\EE} < 76$\GeVcc or $100\GeVcc < m_{\EE} < 130$\GeVcc. 
+A scatter plot of the \PZ candidate electron arrival ECAL time against its position in the $(\eta, \phi)$ plane, shown in Figure \ref{fig:Elec}, show a clear difference between the events from \texttt{Single/DoubleElectron} data sample~(plots in the right) which do not have the familiar features~(the X-shape and increase event population around $\phi = 0,\pm \pi$) of beam halo events with the events from \texttt{SinglePhoton} data sample~(plots in the left). 
+This confirms that the \PZ event sample, is a good sample for estimating out-of-time event contributions from collisions without contamination from non-collision events.
 \paragraph*{}\mbox{}\\
 \begin{minipage}{\linewidth} 
 \begin{center}
@@ -849,39 +840,33 @@ A quick look at photon $t_{\gamma}$ vs $\eta_{\gamma}$ and $\phi_{\gamma}$ plots
 \mbox{
 \includegraphics[height=0.340\textwidth, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsPhiEB.pdf}
 \includegraphics[height=0.340\textwidth, width=0.5\textwidth]{THESISPLOTS/ZCandidates_TimeVsPhi.pdf}}
-\captionof{figure}{ECAL time, $t_{\gamma}$ Vs $\eta_{\gamma}$(top) and $t_{\gamma}$ Vs $\phi$~(bottom) for photons from \texttt{SinglePhoton} dataset~(left) compared to electron candidates from the \texttt{DoubleElectron} dataset~(right). All photons or electron candidates are in barrel subdetector. Most of the photons with $\phi = 0, \pm \pi$ are halo photons which are not observed in the $Z$ boson candidate sample.}
+\captionof{figure}{ECAL time, $t$ Vs $\eta$(top) and $t$ Vs $\phi$~(bottom) for photons from \texttt{SinglePhoton} dataset~(left) compared to electron candidates from the \texttt{DoubleElectron} dataset~(right). All photons or electron candidates are in barrel subdetector. Most of the photons with $\phi = 0, \pm \pi$ are halo photons which are not observed in the $\PZ$ boson candidate sample.}
 \label{fig:Elec}
 \end{center}
 \end{minipage}
 \paragraph*{}\mbox{}\\
-Figure \ref{fig:Zmass} shows the $Z$ boson mass reconstructed from the candidate electrons and timing of each electron for Signal~(\textit{top and blue}) and for control sample~(\textit{bottom and red}).
-
+The di-electron mass(left) and electron arrival time(left) for signal~(blue) and background~(red) events is shown in Figure \ref{fig:Zmass}. The out-of-time background contribution to the \PZ event sample is estimated using a \textit{sideband subtraction method} described as follows:
+\begin{itemize}
+\item we fit the di-electron candidate mass distribution of the background control sample with a polynomial function(see top plots of Figure  \ref{fig:collZ}) to extract the background template.
+\item using the background template, we obtain a scale factor $$\displaystyle{\mbox{Scale Factor} = \frac{N}{M_{1} + M_{2}}}$$~(see bottom plot of \ref{fig:collZ}) which is use to determine the correct contribution of the background events to the the signal event sample.
+\item After scaling the background control sample electron arrival ECAL time distribution~(red distribution of right plot in Figure \ref{fig:Zmass}) using the extracted scale factor and subtracting the scaled sideband control sample electron ECAL time distribution from the signal sample  electron ECAL time distribution~(blue distribution of right plot in Figure \ref{fig:Zmass}), the resulting distributions shown in Figure \ref{fig:Ztime} gives an estimate for out-of-time candidate events from collision.
+\item The ratio of the total number of events with the electron ECAL time $t > 3$~ns to those with electron ECAL time, $|t| < 2$~ns, \ie $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}$, gives an estimated fraction of out-of-time background events from collision. 
+\end{itemize}  
 \paragraph*{}\mbox{}\\
 \begin{minipage}{\linewidth} 
 \begin{center}
-\centering
 \mbox{
 \includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-SignalMass.pdf}
 \includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-SignalTime.pdf}}
 \mbox{
 \includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-BackgroundMass.pdf}
 \includegraphics[height=0.55\textwidth, width=0.5\textwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/THESISPLOTS/Z-CandidateOverLay-BackgroundTime.pdf}}
-\captionof{figure}{Di-electron candidate mass distribution and the time of both electrons for the signal \textcolor{blue}{$76 < m_{Z} < 100$}~\GeVcc $Z$ boson sample(left) and similar distributions from the Control~(\textcolor{red}{$50 < m_{Z} < 76$}~\GeVcc and \textcolor{red}{$ 100 < m_{Z} < 130$}~\GeVcc) sample~(right). Candidates events from the DoubleElectron dataset.}
+\captionof{figure}{Di-electron candidate mass distribution~(left) and the time~(right) of the two electrons for the signal \textcolor{blue}{$76 < m_{\EE} < 100$}\GeVcc $\PZ$ boson sample and for Control Samples~(\textcolor{red}{$50 < m_{\EE} < 76$}\GeVcc and \textcolor{red}{$ 100 < m_{\EE} < 130$}\GeVcc). Candidates events are from the \texttt{DoubleElectron} data sample.}
 \label{fig:Zmass}
 \end{center}
 \end{minipage}
 
-\paragraph*{}\mbox{}\\
-Using the background $Z$ control sample, we estimate its contribution to out-of-time events using a simple scaling methods which can also be understood as an ABCD method. The method is applied as follows:
-\begin{itemize}
-\item Using a polynomial function, we fit the di-electron candidate mass distribution of the background control sample to extract a set of fit parameters,
-\item Using these fit parameters to define our polynomial function, we use this function  to extract a scaling factor use to determine the true contribution of the background control region events in the signal region which in this case are $Z$ bosons with possible large ECAL timing, $|t| > 3$~ns.
-\item We scale the background control sample timing distribution~(electrons time) using the extracted scale factor. This scale factor is defined as,   $$\displaystyle{\mbox{Scale Factor} = \frac{N}{M_{1} + M_{2}}}$$
-\item By subtracting the scaled background control sample $Z$ candidates timing distribution from the signal sample $Z$ candidate timing distribution, we are left with the real $Z$ boson events whose electron time can fluctuate into larger timing region.
-\item Comparing the total number of observe electron candidates with $t > 3$~ns to those  in-time, $|t| < 2$~ns, their ratio i.e $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}$ gives us an estimate of the possible genuine electromagnetic objects from collision with large ECAL timing. 
-\end{itemize}  
-A simple picture showing the above procedure with distributions is shown in figure \ref{fig:collZ}.
-
+%\paragraph*{}\mbox{}\\
 \begin{minipage}{\linewidth} 
 \begin{center}
 \mbox{
@@ -896,9 +881,9 @@ A simple picture showing the above procedure with distributions is shown in figu
 \end{center}
 \end{minipage}
 %%%%%$$$$$
-
 \paragraph*{}\mbox{}\\
-  The result of the final timing distribution for genuine $Z$ boson events is shown in figure \ref{fig:Ztime}. It is not difficult to see that the ratio $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}  < 10^{-5}$ confirming that indeed the contribution of electromagnetic objects with large timing $t >3$~ns is negligible and in agreement with our assumption that most collision events contain photons which are mostly in-time, $|t| \leq 2$~ns. Its important to not that, we have not applied any \MET selection cuts here. A simple cut, $\MET > 60$\GeV could further reduce this ratio to an even smaller number as assumed in our above background estimation.
+  The estimated ratio for out-of-time events to in-time collision events for the final time distribution of signal electron candidates after the normalized sideband subtraction, shown in Figure \ref{fig:Ztime} is about, $N_{t > 3~ns}/ N_{|t| < 2.0~ns} = 1.29 ^{+0.374}_{-0.325} \times 10^{-5}$.
+In order to get the estimated number of background events of the neutralino decay signal from collisions in the control sample \textsf{D}, $N^{col}_{D}$, we multiply this ratio to the total number of in-time events from the neutralino decay signal event selections which is $28282$. This gives $N^{col}_{D} = 0.366^{+0.106}_{-0.092}$ events. Comparing this to the value obtained with the \textsf{ABCD} method, which is $\frac{28283}{1446522} = 0.0391^{+0.039}_{-0.047}$, we find that numbers from thw two methods of estimating the number of collision background events are not exactly equal. We cannot interpret this inequality between both methods of estimating the number of background events from collision. On the contrary, the fact that this ratio $N_{t > 3~ns}/ N_{|t| < 2.0~ns}$ is very small confirms our speculation that indeed the contribution of collision events with out-of-time photons to our background estimation is almost negligible~(less than a single event) such that the uncertainties on the ratio of out-of-time to in-time events used in our \textsf{ABCD} collision background estimation is irrelevant.  It is also important to not that, we have not applied any \MET selection requirements in selecting our \PZ candidate events. A simple cut, $\MET > 60$\GeV could further reduce this ratio to an even smaller number observed in our background estimation.
   
 \paragraph*{}\mbox{}\\
 \begin{minipage}{\linewidth} 
