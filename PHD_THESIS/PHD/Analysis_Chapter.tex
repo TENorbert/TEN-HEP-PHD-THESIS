@@ -53,9 +53,9 @@ The data sample used in our analysis was produced during proton-proton collision
 \paragraph*{Data}\mbox{}\\
 Mostly single photon triggered events with \textit{good} luminosity section certified data samples have been used. In Table \ref{tab:DATA} we present these data samples with their corresponding integrated luminosity. The \textit{jason} file with the list of certified good luminosity sections is
  \textbf{Cert\_8TeVPromptReco\_Colllisions12\_JASON.txt}.
-%%
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth}  
+\newline
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth}  
 \begin{center}
 %\begin{table}[ht]
 %\renewcommand\arraystretch{1.2}
@@ -63,11 +63,17 @@ Mostly single photon triggered events with \textit{good} luminosity section cert
 \begin{tabular}{l l}
 \toprule
 \hline
-\bfseries{Dataset}& \vtop{\hbox{\strut{\bfseries{Recorded Luminosity}}}  \hbox{\strut{ $[\fbinv]$ }}} \\
+\bfseries{Dataset} & \vtop{\hbox{\strut{\bfseries{Recorded Luminosity}}}  \hbox{\strut{ $[\fbinv]$ }}} \\
 \hline
- \texttt{/Run2012B/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 5.1 \\
- \texttt{/Run2012C/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 6.9 \\
- \texttt{/Run2012D/SinglePhoton/EXODisplacedPhoton-PromptSkim-v3 } & 7.1 \\
+\toprule
+ \vtop{\hbox{\strut{\texttt{/Run2012B/SinglePhoton/}}}
+ \hbox{\strut{\texttt{EXODisplacedPhoton-PromptSkim-v3}}}} & 5.1 \\
+ \hline
+ \vtop{\hbox{\strut{\texttt{/Run2012C/SinglePhoton/}}}
+ \hbox{\strut{\texttt{EXODisplacedPhoton-PromptSkim-v3 }}}} & 6.9 \\
+ \hline
+ \vtop{\hbox{\strut{\texttt{/Run2012D/SinglePhoton/}}}
+ \hbox{\strut{\texttt{EXODisplacedPhoton-PromptSkim-v3 }}}} & 7.1 \\
 \hline\hline
 \texttt{/SingleElectron/Run2012A-22Jan2013-v1/AOD} & 5.2 \\
 \texttt{/DoubleElectron/Run2012C-22Jan2013-v1/AOD} & 4.8 \\
@@ -85,9 +91,10 @@ The MC samples were produced using the \textit{Summer 2012} prescriptions on the
 The $\gamma +$jets MC samples contain events generated at leading order~(LO) cross-section  for different \pt ranges normalized to the 19.1 \fbinv integrated luminosity. Table \ref{tab:mc_QCD_sample} show cross-sections, \pt range and the number of events.
 \newline 
 The GMSB SPS8 signal samples contain 50,000 events each for the scanned lifetime and mass or SUSY breaking scale of the lightest neutralino. These samples cover lightest neutralino lifetimes, $c\tau_{\PSneutralinoOne}$, from 25 to 1000\cm for each $\mathbf{\Lambda_{m}}$ or lightest neutralino mass~($m_{\PSneutralinoOne}$) point. The SUSY breaking scale, $\mathbf{\Lambda_{m}}$, range from $100$ to $300$\TeV which is equivalent to the lightest neutralino mass, $m_{\PSneutralinoOne}$, ranging from $139$ to $430$\GeVcc. These samples are presented in table \ref{tab:mc_GMSB_sample}. The cross-section and neutralino decay to photon and gravitino branching ratio are also presented.
-%%
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+
+%%\newline
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 %\begin{table}[ht]
 %\renewcommand\arraystretch{1.2}
@@ -99,6 +106,7 @@ The GMSB SPS8 signal samples contain 50,000 events each for the scanned lifetime
         \hline
         $\Lambda$~[TeV] & $c\tau$~(mm) & $\sigma_{LO}$~(pb) & \bfseries{Number of Events} & \bfseries{Branching Ratio}\\
        \hline
+       \toprule
        100 & 250-12,000  & 0.368  & 50,000 & 0.9444\\
        120 & 250-12,000  & 0.133  & 50,000 & 0.9042\\
        140 & 250-12,000  & 0.0574 & 50,000 & 0.8711\\
@@ -115,9 +123,10 @@ The GMSB SPS8 signal samples contain 50,000 events each for the scanned lifetime
 %\end{table}
 \end{center}
 \end{minipage}
-%%
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+
+\vspace{5mm}
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 %\begin{table}[ht]
 %\renewcommand\arraystretch{1.2}
@@ -126,6 +135,7 @@ The GMSB SPS8 signal samples contain 50,000 events each for the scanned lifetime
 \hline
 $\hat{\pt}$ & $\sigma_{LO}$ (pb) & \bfseries{Number of Events}\\
 \hline
+\toprule
  50 $\sim$ 80  & 3322.3  & 1995062 \\
  80 $\sim$ 120 &  558.3  & 1992627 \\
 120 $\sim$ 170 &  108.0  & 2000043 \\
@@ -141,12 +151,13 @@ $\hat{\pt}$ & $\sigma_{LO}$ (pb) & \bfseries{Number of Events}\\
 \end{center}
 \end{minipage}
 
-\paragraph*{}\mbox{}\\
+\vspace{5mm} 
+%\paragraph*{}\mbox{}\\
   We perform a quick check on the validity of the GMSB signal samples by looking at the number of photons, the \MET distribution and number of jets in each event. 
 The plots of these quantities at generation level are shown in Figure \ref{fig:NKINE}. At least single photon events are observed confirming our expectation that indeed most of the neutralinos decayed to a photon and gravitino.
-%
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\newline
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \centering
 \mbox{\includegraphics[height=0.5\textwidth,width=0.5\textwidth]{THESISPLOTS/GMSB-SPS8-MODEL-Neutralinio-Pt.png} \hspace{-1cm}
@@ -184,9 +195,9 @@ The spread in both time distributions, $\sigma$ of a Gaussian fit are very simil
 %%%
 \paragraph*{}
   A $\chi^{2}$ calculated from the time measurement of all the crystals belonging to the photon supercluster is a useful quantity to legitimized a photon time and we use it to distinguish fake photons~(jets misidentified as photons) and especially spikes from true isolated photons. Figure  \ref{fig:spikeVsPhoton} shows the profile of the pulse shape~(left) of an identified spike with that of a true photon event. A distribution of the normalized $\chi^{2}$ against the ECAL time is shown in the right plot of the same figure. Most of the photons have ECAL time around zero but many of the ohotons with large ECAL time  have large normalized $\chi^{2}$ values which is expected when the time measurements by non-seeded crystals is inconsistent with the time measurement of the seed crystal. We observed that, with a cut in $\chi^{2} < 4$, we can reduce with 99.2\% efficiency, photons arrival time distribution arising from spikes and misidentified photon events.
-
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\newline
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \mbox{
 \includegraphics[height=0.50\textwidth, width=0.7\textwidth]{THESISPLOTS/ECAL-SeedVsAveTime-Zee.pdf}
@@ -197,8 +208,9 @@ The spread in both time distributions, $\sigma$ of a Gaussian fit are very simil
 \end{center}
 \end{minipage}
 
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \mbox{
 \includegraphics[height=.450\textwidth, width=0.45\textwidth]{THESISPLOTS/spike_pulse_shape.pdf}
@@ -213,16 +225,16 @@ The spread in both time distributions, $\sigma$ of a Gaussian fit are very simil
 The ECAL time for photons from the decay of long-lived neutral particles anomalous events like spikes and noisy crystal channel  present during data taking is not well simulated. Infact, simulating the tails of the ECAL time distribution is very challenging yet most of the events in the tails are populated by spikes, beam halo, cosmics and possible photons from long-lived neutral particle decay.
 We adjust for any data and MC time measurement differences using $\gamma + jets$  event samples and used mainly in-time events~(photon time within a $[-2, 2 ]$~ns window.
 By selecting in-time events with only one or two jets in data, we find the difference in the peak of the photon time distribution from data to the reconstructed MC time~($t^{MC}_{reco}$) of photons from the $\gamma + jets$ samples. The measured time difference of the mean time between the data and MC $\gamma +$ jet sample, is used to smear the reconstructed MC ECAL time. A mean time difference of about $125$~ps is observed between the data and MC ECAL time. After the smearing, both data and MC ECAL time show a close agreement for the photon arrival  average time. The photon from data and MC ECAL time are shown in Figure \ref{fig:DATAMCTime} comparing before(left plot) and after(right plot) the smearing or MC ECAL time adjustment was made. We performed the same smearing for all MC samples used in our analysis.
-\paragraph*{}
+\newline
  It is worth noting that the difference of 125~ps between $t^{MC}_{reco}$ and $t^{DATA}_{reco}$ compared to 500~ps ECAL timing resolution is not enough to influence event selection, however simulating photons ECAL time in the tails of the time distribution still remains.
- %
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \centering
 \mbox{
-\includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/MC_Vs_DataTimeB4Calib.png}
-\includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/MC_Vs_DataTimeAferCalib.png}
+\includegraphics[height=0.5\textwidth, width=0.5\textwidth]{THESISPLOTS/MC_Vs_DataTimeB4Calib.png}
+\includegraphics[height=0.5\textwidth, width=0.5\textwidth]{THESISPLOTS/MC_Vs_DataTimeAferCalib.png}
 }
 \captionof{figure}{ECAL time distributions of in-time photons from MC $\gamma +$ jets~(blue)  and data~(red) samples before~(left) and after~(right) we adjusted the photon time from MC.}
 \label{fig:DATAMCTime}
@@ -234,9 +246,9 @@ The distance traveled in the transverse~($x-y$) plane in the CMS detector by the
 \begin{equation}{\label{eq:decaylength}}
 \mathrm{L} = \left(c\tau_{\PSneutralinoOne}\right) \cdot \left( \gamma \beta_{T}\right) = \left(c\tau_{\PSneutralinoOne}\right) \cdot \left( \frac{\pt}{m_{\PSneutralinoOne}}\right)
 \end{equation} 
-
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\newline
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \mbox{\includegraphics[height=0.45\textwidth,width=0.5\textwidth]{THESISPLOTS/GMSB-SPS8-MODEL-Neutralinio-Pt.png} \hspace{-1cm}
 \includegraphics[height=0.45\textwidth,width=0.5\textwidth]{THESISPLOTS/GMSB-SPS8-MODEL-Neutralino-Proper-DecayLength.png}} \\
@@ -248,11 +260,10 @@ The distance traveled in the transverse~($x-y$) plane in the CMS detector by the
 \end{center}
 \end{minipage}
 
-
-\paragraph*{}\mbox{}\\
+\vspace{5mm}
+%\paragraph*{}\mbox{}\\
 The distance traveled by the neutralino is determined by its \pt and mean  lifetime~($c\tau_{\PSneutralinoOne}$). In Figure \ref{fig:NKINE}, we show  distributions of the \pt of the neutralino~($\pt^{\PSneutralinoOne}$), its measured lifetime~($c\tau_{\PSneutralinoOne}$), transverse momentum of the photon~($\pt^{\Pphoton}$) and the measured arrival time of the photon~($T_{\Pphoton}$)  at  generation level for different $\mathbf{\Lambda}$ and $c\tau_{\PSneutralinoOne}$ points. As a cross check that the signal samples have been generated with the true neutralino lifetime, we do a fit analysis to the distribution of the transverse distance traveled by neutralino before decay and extract the value for $c\tau_{\PSneutralinoOne}$. By comparing the measured value  of  $c\tau_{\PSneutralinoOne}$  to the expected value from theoretical prediction supposedly used in the event generation, we verified that each signal sample has been properly generated with the correct neutralino decay properties. 
 %\clearpage
-
 %%%
 \subsubsection*{Source of Delayed Photons}
 A photon from the decay of neutralino arrives at ECAL with a large time either because the neutralino is traveling slow \ie $\beta << 1$, or because the neutralino was produced with a significant forward boost such that the photon arrived at ECAL through a non-direct travel flight path. To separate these two sources of delayed photons, we estimate the photon arrival time at ECAL using the neutralino and photon  kinematics. Figure \ref{fig:DELAY}(left) is a schematic diagram showing how we estimate the photon arrival time at ECAL for each of the possible different sources. The estimated photon arrival ECAL time is given as follows:
@@ -261,11 +272,9 @@ A photon from the decay of neutralino arrives at ECAL with a large time either b
   \item From non-direct traveled flight path: $\Delta t_2$ = (L1 + L2 - L3)/c
   \item ECAL measured time = $\Delta t_{1} + \Delta t_{2}$
 \end{itemize}
-
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+%\newline
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
-\centering
 \mbox{
 \includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/DelayedPhoton-ECAL.png}
 \includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/dt1_dt2_late.png}
@@ -274,28 +283,30 @@ A photon from the decay of neutralino arrives at ECAL with a large time either b
 \label{fig:DELAY}
 \end{center}
 \end{minipage}
-\paragraph*{}\mbox{}\\
+
+\vspace{5mm}
+%\paragraph*{}\mbox{}\\
 The distribution of the estimated times $\Delta t_{1}$ and $\Delta t_{2}$ plot in Figure \ref{fig:DELAY}(right) shows that most of the late arrival time photons are from the decay of slow moving neutralinos  compared to those arriving late because of their non-direct flight path to ECAL. This proves that a good number of neutralinos produced with low \pt such that the ratio $\frac{\pt}{m_{\tilde{\chi}^{o}_{1}}} << 1$ are very detectable using ECAL time measurements while those with very long lifetimes produced with high \pt will very likely escape the ECAL undetected since they did not decay inside the ECAL volume.
 %%%%%
 \subsubsection*{Satellite Bunch Time}
 An ECAL time distribution for photons with $\pt > 50$\GeVc arriving in the barrel and endcap sections,\ie $|\eta_{\gamma}| < 3.0$, of ECAL show(see figure \ref{fig:TIMEECAL}) a 2.5~ns discrete pattern in 
-%
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+the photon measured arrival time.
+
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \centering
 \mbox{
 %\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
 %\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[height=0.7\textwidth, width=0.9\textwidth]{THESISPLOTS/Data-Photon-TimeEBEBALL.pdf}
+\includegraphics[height=0.65\textwidth, width=0.9\textwidth]{THESISPLOTS/Data-Photon-TimeEBEBALL.pdf}
 }
 \captionof{figure}{ECAL timing distribution of photons in barrel~(\textcolor{blue}{EB}), endcap~(\textcolor{red}{EE}) and all of ECAL~(\textcolor{black}{ALL ECAL}) with $\pt > 50$~GeV from data. A $2.5$~ns delay timing structure is observed in endcaps.}
 \label{fig:TIMEECAL}
 \end{center}
 \end{minipage}
 
-\paragraph*{}\mbox{}\\
-the photon measured arrival time. Mostly endcap photons with $1.47 < \eta < 3.0$ show this signature compared to barrel photons; $|\eta| < 1.47$. Photons with this signature are those produced from proton collisions  between \textit{Ghost}/\textit{Satellite} bunches with either the main proton collision bunch or other \textit{Ghost}/\textit{Satellite} bunches. Photons from these collisions contribute an irreducible amount as background to the photon ECAL time distribution making it very challenging to reject or estimate their contribution quantitatively. We estimate this contribution using the ratio of the protons population in the filling profile of ghost to main proton bunches in the LHC RF cavities. We described earlier in section \ref{Ghost} what are ghost/satellite bunches. This ratio reveals that one in every $10,000$ photons from proton bunch collision is produced from ghosts bunches and most of these photons from ghost bunches are in the endcaps, since very few these photons are produced with high enough \pt to arrive at the barrel. 
+\vspace{5mm}
+Mostly photons in the endcap~($1.47 < \eta < 3.0$) show this signature compared to barrel photons; $|\eta| < 1.47$. Photons with this signature are those produced from proton collisions  between \textit{Ghost}/\textit{Satellite} bunches with either the main proton collision bunch or other \textit{Ghost}/\textit{Satellite} bunches. Photons from these collisions contribute an irreducible amount as background to the photon ECAL time distribution making it very challenging to reject or estimate their contribution quantitatively. We estimate this contribution using the ratio of the protons population in the filling profile of ghost to main proton bunches in the LHC RF cavities. We described earlier in section \ref{Ghost} what are ghost/satellite bunches. This ratio reveals that one in every $10,000$ photons from proton bunch collision is produced from ghosts bunches and most of these photons from ghost bunches are in the endcaps, since very few these photons are produced with high enough \pt to arrive at the barrel. 
 This observation and the the fact that ECAL time resolution in the endcap is relatively poor compared to the barrel, gives us enough reason to not used the endcaps in our analysis. 
 To further confirm the $10^{-5}$  reduction factor of the contribution of photons from ghost collisions in barrel, we use events with $\PZ \rightarrow \EE$ since these events do not require high \pt. If there are electron candidates produced from ghost/satellite collisions, the electron arrival time in barrel distribution should capture the 2.5~ns time signature pattern. We study electron candidates with time within [-2.0, 2.0]~ns window. Full details and the results obtained is discussed in background estimation section of this thesis.
 %%%
@@ -334,13 +345,12 @@ seeded by \texttt{HLT\_L1SingleEG12} level 1 trigger. This trigger was developed
 Similarly, the \ETslash\hspace{0.15cm} HLT efficiency is defined as the fraction of events containing at least a jet and \ETslash\hspace{0.15cm} more than the HLT required \ETslash\hspace{0.15cm} of 25~GeV.
 The results of the trigger efficiency measurements are shown in figure \ref{fig:HLTEff} against photon \pt and \ETslash\hspace{0.15cm}. These efficiency studies are made using the \texttt{HLT\_Photon50\_CaloIdVL\_IsoL} trigger which has no \ETslash\hspace{0.15cm}and jet multiplicity requirement  as the denominator and the \texttt{HLT\_DisplacedPhoton65\_CaloIdVL\_IsoL\_PFMET25} as numerator. A \texttt{SinglePhoton} dataset is used to verify these efficiency while and GMSB and $\gamma +$ jets samples is used to derive any correction factors between data and MC events.
 
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
-\centering
 \mbox{
-\includegraphics[height=0.40\textwidth, width=0.5\textwidth]{THESISPLOTS/PFMET_EffAsym.png}
-\includegraphics[height=0.40\textwidth, width=0.5\textwidth]{THESISPLOTS/Photon_EffAsym.png}}
+\includegraphics[height=0.45\textwidth, width=0.5\textwidth]{THESISPLOTS/PFMET_EffAsym.png}
+\includegraphics[height=0.45\textwidth, width=0.5\textwidth]{THESISPLOTS/Photon_EffAsym.png}}
 \captionof{figure}{Trigger efficiency turn-on curves for photon \pt and $\MET > 25$\GeV~(left) and for \ETslash\hspace{0.15cm} with photon~(right).The $\gamma +$ jets samples require photon $\pt > 170$~\GeVc for selecting events with true \ETslash\hspace{0.15cm}.}
 \label{fig:HLTEff}
 \end{center}
@@ -355,21 +365,19 @@ Our photon selection requirement is summarized in Table \ref{tab:PhotonSel}.
 \newline
 For jets, we select jets reconstructed with the PF algorithm based on the standard jet id selection criteria presented in Table \ref{tab:JetSel}. We require the leading jet in the event to have a \pt of at least 35\GeVc.
 As for missing transverse energy~(MET) selection, with inspiration from our trigger event selection efficiency plot in MET in Figure \ref{fig:HLTEff}, we observed that a missing energy of at least 60\GeV for \ETslash\hspace{0.15cm} and ${\ETslash}^{\gamma}\hspace{0.15cm}$ is enough to suppress $\gamma + $ jets and QCD events with fake missing transverse energy.
-\par
-  In summary, our signal events should have $\ge1~\gamma + \ge2~ jets + \ETslash\hspace{0.15cm} > 60\GeV + {\ETslash}^{\gamma}\hspace{0.15cm} > 60\GeV$. 
-We use control samples(zero and one jet events since these events dominate our background sample, see Figure \ref{fig:JetsTimePlot})  to study the different sources of background.
-%%%%
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+
+\vspace{5mm}
+\begin{minipage}{0.85\linewidth} 
 \begin{center}
 %\begin{table}[ht]
 \centering
-\begin{tabular}{c c }
+\begin{tabular}{l c }
 \toprule
-\multicolumn{2}{c}{\bfseries{Photon Identification  and Selection Criteria}} \\
+\multicolumn{2}{l}{\bfseries{Photon Selection Criteria}} \\
   \hline 
   \bfseries{Criteria} & \bfseries{Requirement} \\
    \hline 
+   \toprule
  % \texttt{primary vertex number of tracks(vnof)}& $>= 4$ \\
  % \texttt{primary vertex transverse distance to beam}~($d0$) & $ < 2$~cm from CMS center \\
 %  \texttt{primary vertex longitudinal distance to beam}~($|z|$) & $ < 24$~cm from CMS center \\
@@ -379,9 +387,7 @@ We use control samples(zero and one jet events since these events dominate our b
  $S_{minor}$  & $ 0.12 \leq S_{Minor} \leq 0.38$ \\
  \textbf{H/E}  & $ < 0.05$ \\
  $\Delta R(\gamma, track)$  & $ > 0.6 $ \\
- HCAL Iso  & $ < 4.0 $ \\
- ECAL Iso   & $ < 4.5 $ \\
- Track Iso   & $ < 0.2 $ \\
+ HCAL Iso, ECAL Iso, Track Iso  & $ < 4.0 $, $ < 4.5 $, $ < 0.2 $ \\
  Photon Isolation cone size $\Delta R(\gamma, other particle)$ & $< 0.4$ \\
  Topological Spike cuts  & $1 - E_{6}/E_{2} < 0.98$, $ 1 - E_{4}/E_{1} < 0.98$ \\ 
   \hline 
@@ -392,19 +398,19 @@ We use control samples(zero and one jet events since these events dominate our b
 %\end{table}
 \end{center}
 \end{minipage}
-%%%
 
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.85\linewidth} 
 \begin{center}
 %\begin{table}[ht]
 \centering
-\begin{tabular}{c c }
+\begin{tabular}{l c }
 \toprule
-\multicolumn{2}{c}{\bfseries{Jet PF identification selection criteria}} \\
+\multicolumn{2}{l}{\bfseries{Jet PF identification selection criteria}} \\
   \hline 
   \bfseries{Criteria} & \bfseries{Requirement} \\
    \hline  
+   \toprule
 \texttt{Jet} \pt & $ > 35$\GeV \\
  \texttt{Number of Jet constituents} & $ > 1$ \\
  \texttt{Charge EM energy fraction~(CEF) } & $ > 0.99$ \\
@@ -424,23 +430,29 @@ We use control samples(zero and one jet events since these events dominate our b
 \end{center}
 \end{minipage}
 
-\paragraph*{}\mbox{}\\
+\vspace{5mm}
 \begin{minipage}{\linewidth} 
 \begin{center}
 \centering
 \includegraphics[height=0.65\textwidth, width=0.8\textwidth]{THESISPLOTS/Photon_SeedXtalTime_Distribution_VsJetMultiplicity.pdf}
-\label{fig:JetsTimePlot}
 \captionof{figure}{Photon with $\pt > 60$\GeV from data ECAL time distribution of events with different jet multiplicity and a single GMSB sample.}
+\label{fig:TimePlotJet}
 \end{center}
 \end{minipage}
+
+\vspace{5mm}
+\par
+  In summary, our signal events should have $\ge1~\gamma + \ge2~ jets + \ETslash\hspace{0.15cm} > 60\GeV + {\ETslash}^{\gamma}\hspace{0.15cm} > 60\GeV$. 
+We use control samples(zero and one jet events since these events dominate our background sample, see Figure \ref{fig:TimePlotJet}) to test our background estimation method.
+
 %%%$$$
 
 \section{Background Estimation}
 The main source of background is not from photon candidates produced in normal $pp$ collisions but rather from out-of-time photon candidates arising from non-collisions. To understand these out-of-time background events, we compare in-time~($|t_{\gamma}| < 1$~ns) photon candidates to out-of-time~($t_{\gamma} < -3$~ns and $t_{\gamma} > 2$~ns) photon candidates.
-We also compare photons candidates from different jet multiplicity events to better understand the different background sources and their contributions. In Figure \ref{fig:BKGPLOTS}, we present scatter plots of the photon's ECAL time against $\eta$~(left) and against $\phi$~(right) for photons passing a loose~($\pt < 60\GeV$, barrel and endcap inclusive, $\ETslash\hspace{0.15cm} > 25\GeV$) event selection criteria. We observe that, although most of the photons arrive with ECAL time about zero, a good number of photon candidates possibly from very different sources, for example the cross-like feature seen in the plot on the left, have large ECAL time. We conclude that the possible sources of background photon candidates with large ECAL time measurements are mainly from beam halo muons, cosmic muons and spikes. A small addition also comes from photon candidates arising from ghost/satellite bunch collisions and some QCD events. To avoid, an irreducible contribution from spikes overpopulating a region with photon time , $t_{\gamma} \approx -12$~ns,  we restrict our definition for out-of-time photons to photons with ECAL time $ 2.0 < t_{\gamma} < 13.0$~ns and $ -10.0 < t_{\gamma} < -3$~ns. As a result, we only search for signal events with photon(s) having ECAL time between $2.0 < t_{\gamma} < 13.0$~ns, with at least $2$ jets and large \ETslash\hspace{0.15cm}.
+We also compare photons candidates from different jet multiplicity events to better understand the different background sources and their contributions. In Figure \ref{fig:BKGPLOTS}, we present scatter plots of the photon's ECAL time against $\eta$~(left) and against $\phi$~(right) for photons passing a loose~($\pt < 60\GeV$, barrel and endcap inclusive, $\ETslash\hspace{0.15cm} > 25\GeV$) event selection criteria.
 
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \centering
 \mbox{
@@ -451,8 +463,11 @@ We also compare photons candidates from different jet multiplicity events to bet
 \end{center}
 \end{minipage}
 
-\paragraph*{}\mbox{}\\
- In our background estimation analysis, we first identify and reject photon candidates from beam halo, cosmic muons and spikes and then estimate the residual non-collision and collision background photon candidates  using the \textbf{\textsf{ABCD}} background estimation technique. 
+\vspace{5mm}
+ We observe that, although most of the photons arrive with ECAL time about zero, a good number of photon candidates possibly from very different sources, for example the cross-like feature seen in the plot on the left, have large ECAL time. We conclude that the possible sources of background photon candidates with large ECAL time measurements are mainly from beam halo muons, cosmic muons and spikes. A small addition also comes from photon candidates arising from ghost/satellite bunch collisions and some QCD events. To avoid, an irreducible contribution from spikes overpopulating a region with photon time , $t_{\gamma} \approx -12$~ns,  we restrict our definition for out-of-time photons to photons with ECAL time $ 2.0 < t_{\gamma} < 13.0$~ns and $ -10.0 < t_{\gamma} < -3$~ns. As a result, we only search for signal events with photon(s) having ECAL time between $2.0 < t_{\gamma} < 13.0$~ns, with at least $2$ jets and large \ETslash\hspace{0.15cm}.
+\newline
+ In our background estimation study, we first identify and reject photon candidates from beam halo, cosmic muons and spikes and then estimate the residual non-collision and collision background photon candidates  using the \textbf{\textsf{ABCD}} background estimation technique. 
+
 \subsection{Collision Background}
 \subsubsection{QCD Photons}
 Events from satellite/ghost proton bunches spaced in $5.0$~ns or $2.5$~ns described in section \ref{Ghost}, produce out-of-time photons which can be present in EB. We refer to these photons as QCD photons. It is challenging to define a strategy for eliminating this background. Our approach, after rejecting non-collsiion events, was to estimate their contribution to signal using the \textsf{ABCD} background estimation method. Using \PZ events, we perform an additional background estimation of large ECAL time photon candidates from collision confirming our expectation that contribution from QCD photon events including true $pp$ collisions events is almost negligible. More on this is discussed in future sections.
@@ -462,8 +477,8 @@ Non-collision background events mainly cosmic muons, beam halo muons and spikes,
 We select events with at least one good vertex, zero or one jet, photons satisfying ECAL spike cleaning, associated with candidate muons satisfying DT time cosmic muon cleaning and CSC tight halo-muon cleaning requirements to study these non-collision events. 
 A schematic diagram in Figure \ref{fig:NeutDecay} show the production of photons from both non-collision and collision{ghost/satellite} in a typical LHC $pp$ collision within the CMS detector. Also shown is a typical photon from a neutralino decay in the GMSB model. Still on the diagram is shown the point of entry of beam halo muons into the CMS detector comparing to what is observed in the photon ECAl time against $\eta$ and $\phi$ plots of Figure \ref{fig:BKGPLOTS}.
 %%%
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \captionsetup{type=figure}
 \mbox{
@@ -490,10 +505,9 @@ t^{\mbox{expected}}_{\mbox{ECAL}} = - \frac{R}{2c} \exp^{(-\eta)}
 \par
 By matching halo muon hit positions in CSC segments to photon supercluster positions in the ECAL calorimeter in $\phi$, since halo muons spread mostly in the horizontal or azimuthal~($\phi$) direction by the deflecting magnets, we are able to associated halo muons to their corresponding halo photons. We use the variable, $\Delta\phi(\mbox{CSC Seg},\gamma)$, which is the difference in $\phi$ between CSC segment  and the photon supercluster position in ECAL. A distribution of $\Delta\phi(\mbox{CSC Seg},\gamma)$ for in-time and out-of-time photons in the left plot of Figure \ref{fig:HALO} show that out-of-time photons have small $\Delta\phi(\mbox{CSC Seg},\gamma)$.
 
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth}  
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth}  
 \begin{center}
-\centering
 %\includegraphics[height=0.35\textwidth, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsPhi.pdf}}
 \mbox{
 \includegraphics[height=0.45\textwidth, width=0.5\textwidth]{THESISPLOTS/CSC-Segment-Halo-Tagging.png}
@@ -504,11 +518,10 @@ By matching halo muon hit positions in CSC segments to photon supercluster posit
 \end{center}
 \end{minipage}
 
-\paragraph*{}\mbox{}\\
+\vspace{5mm}
 To estimate the performance of using $\Delta\phi(\mbox{CSC Seg},\gamma)$ for halo tagging, we use a halo photon candidate sample by selecting photons with $\phi_{\gamma}$ around $\phi = 0, \pm \pi$ and in the endcaps where we expect mostly halo photon candidates.  We were able to tag a good number of photon candidates as halo photons in the endcaps shown in the Figure \ref{fig:HALOENDCAP} comparing halo photons in EE with tagged halo photons in EE  with $\Delta\phi(\mbox{CSC Seg},\gamma) < 0.05$.
-%% 
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+ 
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \centering
 \includegraphics[height=0.45\textwidth, width=0.7\textwidth]{THESISPLOTS/halo_EE_Time.png}
@@ -517,12 +530,11 @@ To estimate the performance of using $\Delta\phi(\mbox{CSC Seg},\gamma)$ for hal
 \end{center} 
 \end{minipage}
 
-
 \subsubsection{Cosmic Photons}
 Cosmic muons like beam Halo muons with sufficient energy  will also radiate~(bremsstrahlung) photons in in ECAL. We refer to these photons as \textit{cosmic photons}. Unlike halo muons, cosmic muons can arrive at ECAL from any direction. Cosmic photons in the barrel are expected to be produced from cosmic muons with hits in the Drift Tubes~(DT) segments. Using DT segments and  photon supercluster $\eta-\phi$ position in ECAL, we can match cosmic muon hits in DT segments to ECAL photon superclusters within $\Delta\eta$ and $\Delta\phi$. The DT position used in calculation of $\Delta\eta$ and $\Delta\phi$ is a projection of the muon trajectory using the direction of the DT segment to the outer surface of ECAL due to the large space between the muon barrel and the ECAL. The two dimensional distribution for $\Delta\eta(\mbox{DT Seg},\gamma)$ and $\Delta\phi(\mbox{DT Seg},\gamma)$ of this matching for events with out-ot-time photons; $t_{\gamma} > 2$~ns and $t_{\gamma} < -3$~ns is shown in the right plot of Figure \ref{fig:COSMIC}. We compared to $\Delta\eta(\mbox{DT Seg},\gamma)$ and $\Delta\phi(\mbox{DT Seg},\gamma)$ distribution for in-time~($|t_{\gamma}| < 1$~ns), shown in the left plot, still in Figure \ref{fig:COSMIC}, we observed that most out-of-time photons have a small $\Delta\eta$ and $\Delta\phi$. Comparing the $\Delta\eta$  and $\Delta\phi$ 2-dimensional distributions of these out-of-time photons to photons from a pure cosmic muons sample~(data taken when no proton-proton collisions is happening), we found a similar small $\Delta\eta$ and $\Delta\phi$ occupancy by true cosmic muons sample, shown in Figure \ref{fig:TRUECOSMIC}. We conclude that small $\Delta\eta(\mbox{DT Seg},\gamma)$  and $\Delta\phi(\mbox{DT Seg},\gamma)$ can be used to tag and reject events with cosmic photons.
 
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \mbox{
 \includegraphics[height=0.45\textwidth, width=0.5\textwidth]{THESISPLOTS/Cosmic_In-time-Photons_Data.png}
@@ -531,10 +543,10 @@ Cosmic muons like beam Halo muons with sufficient energy  will also radiate~(bre
 \captionof{figure}{Scatter plot showing $\Delta\eta(\mbox{DT Seg},\gamma)$ against $\Delta\phi(\mbox{DT Seg},\gamma)$ for out-of-time~($ t_{\gamma} > 2$~ns and $t_{\gamma} < -3$~ns) photons(Right) compared to in-time($|t_{\gamma}| < 1$~ns) photons(Left). Cosmic photon candidates occupy the small $\Delta\eta$ and $\Delta\phi$ region.}
 \label{fig:COSMIC}
 \end{center}
-
 \end{minipage}
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+
+%\paragraph*{}\mbox{}\\
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \mbox{
 \includegraphics[height=0.45\textwidth, width=0.6\textwidth]{THESISPLOTS/Cosmic_Ray_Photons_Cosmic_dataset.png} }
@@ -550,8 +562,8 @@ Because of the absence of crystal scintillation, the arrival time of spikes is m
 \ref{fig:SPIKES}, we observed than most spikes have about 98\% os their energy deposited in a single crystal.
 Using the number of crystals in photon supercluster and comparing in-time photons to a beam halo photons and spike candidate photons~(see left plot in Figure \ref{fig:SPIKES}), we confirmed that most spikes including spikes embedded in electromagnetic candidates have less than $7$ crystals in their supercluster. A combination of the swiss-cross, number of crystals in supercluster, calculated $\chi^{2}$, $S_{\mbox{major}}$ and $ S_{\mbox{minor}}$~(both $S_{\mbox{major}}$ and $ S_{\mbox{minor}}$ describe the shape of the electromagnetic shower), are useful in identifying and rejecting events with spikes.
 
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \captionsetup{type=figure}
 \mbox{
@@ -572,7 +584,7 @@ Using the selection variables studied above for halo, cosmic and spike photons, 
 Our full veto performance in terms of mis-tag rate for the different non-collision background sources studied  is summarized in Table \ref{tab:EVTC}.
 
 %%\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \begin{tabular}{|c| c|}
 %\mbox{Fake Rate }
@@ -588,11 +600,12 @@ Our full veto performance in terms of mis-tag rate for the different non-collisi
 \label{tab:EVTC} 
 \end{center}
 \end{minipage}
-\paragraph*{}\mbox{}\\
+
+\vspace{5mm}
 The result of our tagging of the different types of non-collision background events can be seen in Figure \ref{fig:RESIDUAL}. Halo photons produced from the so-called beam halo muons are the majority of our background out-of-time photon events. Very few late arrival time photons are produced from spikes while there is also some significant contribution from cosmic photons. The most interesting is the residual out-of-time background(in red) which could not be tagged. 
 
 \paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
   \captionsetup{type=figure}
    \includegraphics[height=0.7\textwidth, width=0.8\textwidth]{TimeForAll}
@@ -602,7 +615,7 @@ The result of our tagging of the different types of non-collision background eve
 \end{center}
 \end{minipage}
 
-\paragraph*{}\mbox{}\\
+\vspace{5mm}
 It is possible that the contributions to the residual out-of-time photon events are from 
 mistagged non-collision events since the tagging efficiency is not 100\% efficient, ghost or QCD collision events with out-of-time photons, events with $\PW\rightarrow \Pe\Pagne$ decays with misidentified electron as photon passing the photon selection, or signal events with real delayed photons. To better understand these various contributions, we use the missing transverse energy,${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$, recalling that $\vec{{\ETslash}^{\gamma}\hspace{0.15cm}} = \vec{\ETslash\hspace{0.15cm}} + \vec{\pt^{\gamma}}$ adjusting for out-of-time energy deposits not included in the standard missing transverse energy calculations. 
 \newline
@@ -610,10 +623,11 @@ Signal events because of the undetected gravitino from the neutralino decay will
 High-\pt Non-collision events will have large $\ETslash\hspace{0.15cm}$ attributed mostly due to the exclusion of energy deposits from the out-of-time photons in the missing transverse energy reconstruction and small ${\ETslash}^{\gamma}\hspace{0.15cm}$ when the large transverse energy contribution from energy deposits of the out-of-time photons is re-introduced. Low-\pt Non-collision events will have both ${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$ small since the out-of-time photon transverse energy excluded was not large in the first place. For high-\pt out-of-time collision events, these events naturally have low missing transverse energy so automatically $\ETslash\hspace{0.15cm}$  is required to be small while after re-introducing the energy deposits from out-of-time high-\pt photons, then ${\ETslash}^{\gamma}\hspace{0.15cm}$ becomes large. With the same argument for low-\pt Non-collision events, low-\pt collision events are expected to have both small  ${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$.
 A table showing a summary of our expectations for ${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$ of different background events source contributing to the residual out-of-time photon untagged events is presented in Table \ref{tab:METSAMPLE}.
 
-%%\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
   \begin{center}
    \begin{tabular}{c| c|c}
+   \toprule
      \bfseries{Event Sample} & \bfseries{$\ETslash\hspace{0.15cm}$} &          \bfseries{${\ETslash}^{\gamma}\hspace{0.15cm}$}\\
     \toprule
      \hline
@@ -631,7 +645,8 @@ A table showing a summary of our expectations for ${\ETslash}^{\gamma}\hspace{0.
    \label{tab:METSAMPLE} 
  \end{center}
 \end{minipage}
-\paragraph*{}\mbox{}\\
+
+\vspace{5mm}
 Therefore, to minimizing contributions from events anomalous photon time, we restrict our photon arrival time for signal events to within $3.0 < t_{\gamma} < 13.0$~ns, while also requiring that the signal event missing transverse energy be greater than 60\GeV, \ie ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, $\ETslash\hspace{0.15cm} > 60$\GeV. This reduces the contribution from ghost/satellite background contributing to the untagged out-of-time photons while at the same time enhances our signal event sample.
 Using events from $pp$ collisions with predominantly in-time~($ -2.0 < t_{\gamma} < 2.0$~ns) photons, 
 events with $t_{\gamma} > 3.0$~ns and $t_{\gamma} < -3.0$~ns, we define control samples in different \ETslash\hspace{0.15cm} and also small ${\ETslash}^{\gamma}\hspace{0.15cm}$ event selection regions enhancing either collision or non-collision background events and perform an \textsf{ABCD} background estimation method with the goal of estimating the total expected number of background events with out-of-time photons with $t_{\gamma} > 3.0$~ns.
@@ -665,10 +680,9 @@ Since we expect most of our background events to come from non-collision events,
 \begin{enumerate}
 \item \textbf{Non-Collision Background Estimation}:\newline
 To estimate the number of background events from non-collision, we define \textsf{ABCD} Control Samples~(CS) in ECAL time and  ${\ETslash}^{\gamma}\hspace{0.15cm}$ by selecting events with $\ETslash\hspace{0.15cm} > 60$\GeV. Events with $\ETslash\hspace{0.15cm} > 60$\GeV is a CS for which the contribution from collision~(QCD) background is suppressed since most collision background events as seen in table \ref{tab:METSAMPLE} have small \ETslash\hspace{0.15cm}. The control samples \textsf{A} and \textsf{B} defined in Table \ref{tab:NON-COLLISION} as events
-%\paragraph*{}\mbox{}\\
 
-%%\begin{table}
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
   \begin{center}
    \begin{tabular}{|c| c| c|}
    \hline
@@ -691,7 +705,7 @@ To estimate the number of background events from non-collision, we define \texts
 %\item \textbf{B}: events with ${\ETslash}$~~$ > 60$~GeV and $-10.0 < t_{\gamma} < -3.0$~ns.
 %\item \textbf{D}: events with ${\ETslash}$~~$ > 60$~GeV and $3.0 < t_{\gamma} <  13.0$~ns.
 %\end{itemize}
-\paragraph*{}\mbox{}\\
+\vspace{5mm}
  with photon time, $-10.0 < t_{\gamma} < -3.0$~ns, and \textsf{C} as events with ${\ETslash}^{\gamma}\hspace{0.15cm} < 60$\GeV 
 and photon time  $3.0 < t_{\gamma} < 13.0$~ns, all do not contain signal events. Using these CS for the \textsf{ABCD}  method,  with the assumption that $\frac{N_{D}}{N_{C}} = \frac{N_{B}}{N_{A}}$, the number of non-collision background events with out-of-time photons expected in the signal  CS \textsf{D} is given as
 \begin{equation}
@@ -703,8 +717,8 @@ where $N^{non-col}_{D}$ is the number of non-collision background events we expe
 In order to quantify how suppressed is the contribution from possible collision background events in each of the CSs defined in Table \ref{tab:NON-COLLISION}, we once again employ the \textsf{ABCD} technique by defining Control Samples~(CSs) in ECAL time and \ETslash\hspace{0.15cm}. Since we are interested in contributions into CS \textsf{B} and \textsf{D} of Table \ref{tab:NON-COLLISION}, as these are the only CS where we expect a sizable contribution from collision events~(see Table \ref{tab:METSAMPLE}), we select events with ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV.
 Most collisions events have photons with in-time~($|t_{\gamma}| < 2$~ns), therefore, we use CSs defined with in-time photons to estimate the number of possible collision events with out-of-time photons contributing to CSs \textsf{B} and \textsf{D}. The CSs used for the new \textsf{$A^{\prime}$ $B^{\prime}$ $C^{\prime}$  $D^{\prime}$} method to perform these estimations are defined as shown in Table \ref{tab:COLLISION}. 
 
-%%\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \begin{tabular}{|c| c| c|}
  \hline
@@ -721,7 +735,8 @@ $ -10.0 < t_{\gamma} < -3.0$~ns & \textsf{$A^{\prime}$} &  \textsf{$B^{\prime}$}
 \label{tab:COLLISION} 
 \end{center}
 \end{minipage}
-\paragraph*{}\mbox{}\\
+
+\vspace{5mm}
 The number of collisions events contributing to the CSs \textsf{B}, $N_{B}^{col}$, is estimated as 
 \begin{equation}{\label{eq:COLB}}
 \displaystyle{N_{B}^{col} = N_{B^{\prime}}  = \left( \frac{I}{I^{\prime}} \right)\cdot N_{A^{\prime}}}, 
@@ -763,8 +778,8 @@ where $N_{D}^{Total} = N_{D}^{non-col} + N_{D}^{col}$ is the total background ev
 Using a data sample of $0$ and $1$-jet events where we do not expect any signal events, we performed closure test to validate the background estimation method described in the previous section.
 The closure test checks for an agreement in the number of events expected obtained using our background estimation method and that observed in our signal CS \textsf{D}. The $0$ and $1$-jet events are required to satisfy the same event selection requirements as our signal event except for the number of jet criteria where only $0$ or $1$ events pass. The event yields in each control sample of the background estimation methods including the tagging of beam-halo, cosmic and spike events are shown in Table \ref{tab:EVTYIELD}.
 
-%%\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \begin{tabular}{c| c| c| c| c }
 \toprule
@@ -790,7 +805,8 @@ The closure test checks for an agreement in the number of events expected obtain
 \label{tab:EVTYIELD} 
 \end{center}
 \end{minipage}
-\paragraph*{}\mbox{}\\
+
+\vspace{5mm}
 Using the yields in Table \ref{tab:EVTYIELD} for each CS and Equations \ref{eq:COLB}, \ref{eq:COLD} and \ref{eq:FBKG}, we obtain the following estimates for the expected number of events in signal CS \textsf{D} as
 \begin{align*} 
  N_{B}^{col} &= \frac{35464}{1446522} \times 8 = 0.20^{+0.08}_{-0.06} \\
@@ -829,10 +845,10 @@ The electron ECAL arrival time is taken to be the seed crystal time adjusted to 
 From these selected \PZ candidate events, we define a signal event sample where the \PZ candidates have a well defined di-electron mass \ie  $76 < |m_{\EE}| < 100$~$GeV/c^{2}$ and the background events and the sideband where the di-electron mass satisfies either of the conditions, $50\GeVcc < m_{\EE} < 76$\GeVcc or $100\GeVcc < m_{\EE} < 130$\GeVcc. 
 A scatter plot of the \PZ candidate electron arrival ECAL time against its position in the $(\eta, \phi)$ plane, shown in Figure \ref{fig:Elec}, show a clear difference between the events from \texttt{Single/DoubleElectron} data sample~(plots in the right) which do not have the familiar features~(the X-shape and increase event population around $\phi = 0,\pm \pi$) of beam halo events with the events from \texttt{SinglePhoton} data sample~(plots in the left). 
 This confirms that the \PZ event sample, is a good sample for estimating out-of-time event contributions from collisions without contamination from non-collision events.
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
-\centering
 \mbox{
 \includegraphics[height=0.340\textwidth, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsEtaEB.pdf}
 \includegraphics[height=0.340\textwidth, width=0.5\textwidth]
@@ -844,16 +860,18 @@ This confirms that the \PZ event sample, is a good sample for estimating out-of-
 \label{fig:Elec}
 \end{center}
 \end{minipage}
-\paragraph*{}\mbox{}\\
+
+\vspace{5mm}
 The di-electron mass(left) and electron arrival time(left) for signal~(blue) and background~(red) events is shown in Figure \ref{fig:Zmass}. The out-of-time background contribution to the \PZ event sample is estimated using a \textit{sideband subtraction method} described as follows:
 \begin{itemize}
 \item we fit the di-electron candidate mass distribution of the background control sample with a polynomial function(see top plots of Figure  \ref{fig:collZ}) to extract the background template.
-\item using the background template, we obtain a scale factor $$\displaystyle{\mbox{Scale Factor} = \frac{N}{M_{1} + M_{2}}}$$~(see bottom plot of \ref{fig:collZ}) which is use to determine the correct contribution of the background events to the the signal event sample.
+\item using the background template, we obtain a scale factor $$\displaystyle{\mbox{Scale Factor} = \frac{N}{M_{1} + M_{2}}}$$~(see bottom plot of Figure \ref{fig:collZ}) which is use to determine the correct contribution of the background events to the the signal event sample.
 \item After scaling the background control sample electron arrival ECAL time distribution~(red distribution of right plot in Figure \ref{fig:Zmass}) using the extracted scale factor and subtracting the scaled sideband control sample electron ECAL time distribution from the signal sample  electron ECAL time distribution~(blue distribution of right plot in Figure \ref{fig:Zmass}), the resulting distributions shown in Figure \ref{fig:Ztime} gives an estimate for out-of-time candidate events from collision.
 \item The ratio of the total number of events with the electron ECAL time $t > 3$~ns to those with electron ECAL time, $|t| < 2$~ns, \ie $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}$, gives an estimated fraction of out-of-time background events from collision. 
 \end{itemize}  
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \mbox{
 \includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-SignalMass.pdf}
@@ -866,8 +884,8 @@ The di-electron mass(left) and electron arrival time(left) for signal~(blue) and
 \end{center}
 \end{minipage}
 
-%\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 \mbox{
 \includegraphics[height=0.50\textwidth, width=0.5\textwidth]{THESISPLOTS/Uncleaned-di-Photon-ZMass-Fit-DoubleElectron-Run2012A.pdf}
@@ -876,56 +894,65 @@ The di-electron mass(left) and electron arrival time(left) for signal~(blue) and
 \includegraphics[height=0.55\textwidth, width=0.8\textwidth]{THESISPLOTS/ZBackground_SF.png}
 %\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/CMS_Slice.png}
 }
-\captionof{figure}{\textit{Top}: Control sample~(left) and signal sample~(right) of di-electron candidate mass distribution. \textit{Bottom:} Figure showing definition of scale factor use in estimating the contributions from control sample in signal sample.}
+\captionof{figure}{\textit{Top}: Polynomial fit~(red \& blue lines) of the di-electron invariant mass of candidate \PZ events for the sideband control sample~(left) only and all \PZ events~(right). \textit{Bottom:} Fitting the sideband CS to extract the scale factor use for estimating sideband event contribution in signal sample.}
 \label{fig:collZ}
 \end{center}
 \end{minipage}
 %%%%%$$$$$
-\paragraph*{}\mbox{}\\
+\vspace{5mm}
   The estimated ratio for out-of-time events to in-time collision events for the final time distribution of signal electron candidates after the normalized sideband subtraction, shown in Figure \ref{fig:Ztime} is about, $N_{t > 3~ns}/ N_{|t| < 2.0~ns} = 1.29 ^{+0.374}_{-0.325} \times 10^{-5}$.
 In order to get the estimated number of background events of the neutralino decay signal from collisions in the control sample \textsf{D}, $N^{col}_{D}$, we multiply this ratio to the total number of in-time events from the neutralino decay signal event selections which is $28282$. This gives $N^{col}_{D} = 0.366^{+0.106}_{-0.092}$ events. Comparing this to the value obtained with the \textsf{ABCD} method, which is $\frac{28283}{1446522} = 0.0391^{+0.039}_{-0.047}$, we find that numbers from thw two methods of estimating the number of collision background events are not exactly equal. We cannot interpret this inequality between both methods of estimating the number of background events from collision. On the contrary, the fact that this ratio $N_{t > 3~ns}/ N_{|t| < 2.0~ns}$ is very small confirms our speculation that indeed the contribution of collision events with out-of-time photons to our background estimation is almost negligible~(less than a single event) such that the uncertainties on the ratio of out-of-time to in-time events used in our \textsf{ABCD} collision background estimation is irrelevant.  It is also important to not that, we have not applied any \MET selection requirements in selecting our \PZ candidate events. A simple cut, $\MET > 60$\GeV could further reduce this ratio to an even smaller number observed in our background estimation.
   
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 %\mbox{
 \includegraphics[height=0.55\textwidth, width=0.7\textwidth]{THESISPLOTS/Seed-Time-From-Uncleaned-di-photon-Mass-Fit-DoubleElectron-Run2012A.pdf}
 %\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\captionof{figure}{Timing distribution of genuine $Z$ bosons after background contribution has been subtracted.}
+\captionof{figure}{ECAL time distribution of genuine $\PZ$ bosons after background contribution is subtracted.}
 \label{fig:Ztime}
 \end{center}
 \end{minipage}
 
 
 \section{Systematic Studies}
-The different sources of systematic which affect this analysis and the estimated contribution of each identified source of systematic is shown in table \ref{tab:SYST}.
-These systematic is also used in the calculation of the upper limit on observed signal cross-section. We obtained these systematic percentage by varying each individual source and see how that affects the number of events passing our selection cuts.
-The systematic uncertainty on luminosity measurement has the recommended value of $2.2$\% provided by CMS and LHC luminosity measurements. The uncertainty for the jet energy corrections~(JEC) and jet energy scale~(JES) has also been measured using the standard CMSSW tool by \cite{JES} and provided by the CMS JEMET working group. The uncertainty on the photon energy scale in barrel was estimated to be 1.0\% and based on the final-state radiation~(FSR) in $Z\rightarrow \mu\mu\gamma$ events \cite{PES}. The uncertainty from pardon density functions~(PDF) evaluated using the re-weighting technique using the Master Equation of CTEQ65 model set described in \cite{PDF}. The uncertainty on the \MET resolution uses a conservative estimate from \cite{METRES}. The uncertainty on the ECAL timing obtained be comparing the peak in the timing distribution between $\gamma +$ jet sample and data events with time $|t| < 2$~ns is found to be of the order of 200~ps per event and from a study of high \pt photons beyond gain transitions has agreed by ECAL DPG to be a conservative estimate. Another important source of systematic is in the selection of the background control samples and our background estimation and individual systematic in the tagging and miss-tagging of non-collision background and estimating background contributions from collisions. We combined these separate systematic contributions into a single background estimation systematic referred here as our background estimation systematic. This is our largest source of uncertainty in our analysis which we estimate to vary from 50\% to 200\%. 
+The event selection requirements include a photon \pt greater than 80\GeVc, a jet \pt greater than 35\GeVc and missing energy greater than 60\GeV. We expect this same selections applied to our MC signal event sample to lead to good event selection efficiency. Therefore, any difference in the photon and jet \pt and missing transverse energy between MC and data will lead to systematic uncertainties in our event selection efficiency. We anticipate these uncertainties to come from quantities like jet energy scale~(JES), jet energy resolution~(JER), electron-photon energy scale, instrumentation related and missed or unclustered energy deposits in missing transverse energy reconstruction, photon ECAL arrival time bias and ECAL time resolution. In summary, the different sources of uncertainties considered in this analysis is presented in Table \ref{tab:SYST}. These uncertainties are obtain by varying the nominal values of each quantity while keeping the rest fixed by $1\sigma$ deviation and counting the number of events passing our event selection requirements. Our largest uncertainty is from ECAL timing bias on the absolute reference time(zero ns) of the ECAL timing to measured the photon arrival time. This has the larget impact on our analysis as our analysis is based on counting the number of events with photon ECAL time above $3$~ns. The next largest uncertainties are from unclustered energy deposits which affect missing energy scale and from jet energy scale and resolution.
+\newline
+The uncertainty on the photon energy scale in barrel was estimated to be 4.0\% and based on the final-state radiation~(FSR) in $Z\rightarrow \mu\mu\gamma$ events \cite{PES}.  The uncertainty on the \MET resolution uses a conservative estimate from \cite{METRES}. The uncertainty on the ECAL time resolution was obtained by comparing the peak in the photon ECAL time distribution of events from $\gamma +$ jet MC sample to events from data with photon ECAL time $|t| < 2$~ns. The difference is found to be of the order of 200~ps per event. A study using high \pt photons with energy beyond gain transitions has was also performed and this discrepancy was observed to be worse. 
+The systematic uncertainty on luminosity measurement has the recommended value of $2.2$\% provided by CMS and LHC luminosity measurements while the uncertainty from pardon density functions~(PDF) is evaluated using the re-weighting technique which uses the Master Equation of CTEQ65 model set described in \cite{PDF}.
+\par
+Another important source of systematic is in the selection of the background control samples and our background estimation and individual systematic in the tagging and mistagging of non-collision background and estimating background contributions from collisions. We combined these separate uncertainty contributions into a single background estimation uncertainty referred here as our background estimation uncertain. 
+However, since our background estimation is data-driven, most of the uncertainties arising due to systematic can be neglected~(less than 1\% impact) as the cancel out.
+This is our largest source of uncertainty in our analysis which we estimate to vary it upward by 223\% and downward by 51\% as a statistical uncertainty in the \textsf{ABCD} background estimation method. The large background statistical uncertainty is due to very low event statistics. However, despite the large background estimation uncertainty, the signal selection uncertainties are the most significant uncertainties which impact our final results. These uncertainties are used as nuissance parameters in the calculation of the upper limit on observed signal cross-section~($\sigma_{UL}$).
 
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
 %\begin{table}[ht]
 %\renewcommand\arraystretch{1.2}
 \begin{tabular}{c c}
 \toprule
 \hline
-\bfseries{Source} & \bfseries {Uncertainty on $\sigma^{Exp}_{UL}$}(\%)\\
+\bfseries{Source} & \bfseries {Uncertainty(\%)}\\
 \hline
-\texttt{Photon energy scale}~(1.0\%)  & $< 3.0$\% \\
-\texttt{Jet energy scale}  & $< 0.05$\% \\
-\texttt{Jet energy resolution}~(10\%) &$ < 1.90$\% \\
-\texttt{PDF uncertainty}~(10\%) & $< 1.70$\% \\
-\texttt{\MET resolution}~(10\%) & $ <2.8$\%  \\
-\texttt{ECAL time uncertainty}~(0.5~ns) & $<5.0$\% \\
+\toprule
+\texttt{ECAL absolute time }~(0.0~ns) & $<10.0$\% \\
+\texttt{ECAL time resolution}~(0.5~ns) & $<5.0$\% \\
+\texttt{Unclustered energy deposits} & $<9.0$\% \\
+\texttt{Photon energy scale}  & $< 4.0$\% \\
+\texttt{Jet energy scale}~(JES)  & $< 9.0$\% \\
+\texttt{Jet energy resolution}~(JER) &$ <9.0$\% \\
+\texttt{\MET resolution} & $ <2.8$\%  \\
+\texttt{PDF uncertainty} & $< 1.70$\% \\
 \hline
-\texttt{Background estimation uncertainty}~(50.0) &$<51.0$\% \\
+\toprule
+\texttt{Background estimation uncertainty} &$51.0$\% to 223\% \\
 \hline 
 \texttt{Luminosity}~(4.5\%) & $< 2.2$\% \\
 \hline
 \bottomrule
 \end{tabular}
-\captionof{table}{Summary of systematic uncertainties used in this analysis and applied to our cross-section upper limit, $\sigma_{UL}$ calculation.}
+\captionof{table}{Summary of systematic uncertainties for signal efficiency and background estimation in this analysis and applied to our final results.}
 \label{tab:SYST}
 %\end{table}
 \end{center}
@@ -933,65 +960,68 @@ The systematic uncertainty on luminosity measurement has the recommended value o
 
 
 \section{Results}
-Finally, we perform our background estimation on signal samples which are events with at least 2 jets, at least one high $\pt > 80~GeV/c$ isolated photon with ECAL time  $ 3.0 < t_{\gamma} < 13.0$~ns or $ -10.0 < t_{\gamma} < -3.0$~ns and ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, $\ETslash\hspace{0.15cm} > 60$\GeV.
-We observed $1$ event and expected $0.0888 ^{+0.1869}_{-0.0444}$ background events within our statistical uncertainties. Our complete result is shown in table \ref{tab:RF} and in table \ref{tab:RESULT}, we show the number of GMSB SPS8 signal events  passing our final selection for $\Lambda=180$~\TeV with different $c\tau$ values of the neutralino.
-%%%
-\paragraph*{}\mbox{}\\
-\begin{minipage}{\linewidth} 
+After running our analysis on the SinglePhoton data samples requiring events with at least 2 jets, at least one photon with ECAL time  $ 3.0 < t_{\gamma} < 13.0$~ns, ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, and $\ETslash\hspace{0.15cm} > 60$\GeV, we observed a single event passing all our event selection requirements as a signal event. This event has one photon and two jets. The photon has a transverse momentum  of 224\GeVc and an ECAL time of 12.17~ns.
+\newline
+Our final expected number of background events estimated is $0.093^{+0.301}_{-0.047}$. This number was computed as
+\begin{align*} 
+ N_{B}^{col} &= \frac{28283}{605496} \times 3 = 0.140^{+0.108}_{-0.061} \\
+ N_{D}^{col} &= \frac{28283}{605496} \times 2 = 0.093^{+0.093}_{-0.047} \\
+ N_{D}^{Total} &= \left( \frac{1 - 0.14}{3}\times 0\right) +  0.093 = 0.093^{+0.301}_{-0.047}.
+\end{align*}
+using the event yields and background events vetoed presented in Table \ref{tab:RESULT}. 
+
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
 \begin{center}
-\centering
-\begin{tabular}{|c| c| c|}
-%\mbox{Fake Rate }
+\begin{tabular}{c| c| c| c| c }
 \toprule
+ \hline
+\bfseries{Control Sample} & Yield & Beam Halo & Cosmic & Spike \\
 \hline
-\bfseries{Non-Collision} & $\mathbf{{\ETslash}^{\gamma}\hspace{0.15cm}} < 60$\GeV & $\mathbf{{\ETslash}^{\gamma}\hspace{0.15cm}} > 60$\GeV \\
-\hline
- $3.0 < t_{\gamma} < 13.0$~ns & \textsf{$C$}($0$) & ~\textsf{$D$}(\textcolor{blue}{$1$}) \\
- $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{$A$}($5$) & ~\textsf{$B$}($1$) \\
-\hline \hline
-\bfseries{Collision} & $\mathbf{\ETslash\hspace{0.15cm}} < 60$\GeV & $\mathbf{\ETslash\hspace{0.15cm}} > 60$\GeV \\
-\hline 
- $3.0 < t_{\gamma} < 13.0$~ns & \textsf{$D^{\prime}$}($5$) & ~\textsf{D} \textcolor{red}{$0.0888 ^{+0.1869}_{-0.0444}$} \\
- $-2.0 < t_{\gamma} < 2.0$~ns & \textsf{$F^{\prime}$}($657663$) & ~\textsf{$F$}($30242$) \\
- $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{$B^{\prime}$}($1$) & ~\textsf{$B$} $0.23 ^{+0.092}_{-0.118}$) \\
+\toprule
+\textsf{D} & 1 & 0 & 0 & 0 \\
+\textsc{C} & 0 & 2 & 1& 0  \\
+\textsf{B} & 1 & 1&  1 &  1\\
+\textsf{A} & 3 & 6 & 0 & 0\\
+\hline\hline
+\textsf{$A^{\prime}$}& 2 & 0 & 0 & 0\\ 
+\textsf{$C^{\prime}$}& 4 & 0 & 0 & 0\\  
+\textsf{$I$} & 28283 & -& - & -\\    
+\textsf{$I^{\prime}$}&  669013 & - & - & \\       
 \hline
 \bottomrule
 \end{tabular}
-\captionof{table}{Result of observed events and estimated background from signal sample, events with at least $2$-jets. Numbers in bracket represent our observed number of events while numbers not is bracket are our expected number of background events estimated using \textsf{ABCD} method.}
-\label{tab:RF} 
+\captionof{table}{Event yields used in our final background estimation for signal candidate events with at least a single photon and at least 2 jets, ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, and $\ETslash\hspace{0.15cm} > 60$\GeV. }
+\label{tab:RESULT} 
 \end{center}
 \end{minipage}
 
-\paragraph*{}\mbox{}\\
-
-\begin{minipage}{\linewidth} 
-\begin{center}
-%\begin{table}[ht]
-%\renewcommand\arraystretch{1.2}
-\begin{tabular}{c c}
-\toprule
-\hline
-\bfseries{SPS8 GMSB Signal} & \bfseries {Number of Events}\\
-\hline \hline
-%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=93$~mm) & $000.00 \pm 0.000$ \\
-%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=185$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=250$~mm) & $0.2096$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=500$~mm) & $4.5423$ \\
-%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=733$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1000$~mm) & $6.3646$ \\
-%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1076$~mm) & $000.00 \pm 0.000$ \\
-%\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=1444$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=2000$~mm) & $6.3968$ \\ %\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=3000$~mm) & $000.00 \pm 0.000$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=4000$~mm) & $6.1442$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=6000$~mm) & $4.6498$ \\
-\texttt{GMSB(SPS8)}~($\Lambda=180$~TeV,$c\tau=12000$~mm) & $2.918$ \\
-\hline 
-\bottomrule
-\end{tabular}
-\captionof{table}{Final number for $\Lambda = 180$~\TeV GMSB SPS8 MC signal events  events passing our selection cuts.}
-\label{tab:RESULT}
-%\end{table}
-\end{center}
-\end{minipage}
-%%
+\vspace{5mm} 
+With no significant excess over expected number of background events, we find upper limits on the number of event counts at 95\% confidence limit using the statistical CLs limit finding method.
+%\paragraph*{}\mbox{}\\
+%\begin{minipage}{\linewidth} 
+%\begin{center}
+%\centering
+%%\begin{tabular}{|c| c| c|}
+%%%\mbox{Fake Rate }
+%%\toprule
+%%\hline
+%%\bfseries{Non-Collision} & $\mathbf{{\ETslash}^{\gamma}\hspace{0.15cm}} < 60$\GeV & $\mathbf{{\ETslash}^{\gamma}\hspace{0.15cm}} > 60$\GeV \\
+%%\hline
+%% $3.0 < t_{\gamma} < 13.0$~ns & \textsf{$C$}($0$) & ~\textsf{$D$}(\textcolor{blue}{$1$}) \\
+%% $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{$A$}($5$) & ~\textsf{$B$}($1$) \\
+%%\hline \hline
+%%\bfseries{Collision} & $\mathbf{\ETslash\hspace{0.15cm}} < 60$\GeV & $\mathbf{\ETslash\hspace{0.15cm}} > 60$\GeV \\
+%%\hline 
+%% $3.0 < t_{\gamma} < 13.0$~ns & \textsf{$D^{\prime}$}($5$) & ~\textsf{D} \textcolor{red}{$0.0888 ^{+0.1869}_{-0.0444}$} \\
+%% $-2.0 < t_{\gamma} < 2.0$~ns & \textsf{$F^{\prime}$}($657663$) & ~\textsf{$F$}($30242$) \\
+%% $-10.0 < t_{\gamma} < -3.0$~ns & \textsf{$B^{\prime}$}($1$) & ~\textsf{$B$} $0.23 ^{+0.092}_{-0.118}$) \\
+%%\hline
+%%\bottomrule
+%%\end{tabular}
+%%\captionof{table}{Result of observed events and estimated background from signal sample, events with at least $2$-jets. Numbers in bracket represent our observed number of events while numbers not is bracket are our expected number of background events estimated using \textsf{ABCD} method.}
+%%\label{tab:RF} 
+%%\end{center}
+%%\end{minipage}
+%%\paragraph*{}\mbox{}\\
 \label{Search_Analysis_chapter}
