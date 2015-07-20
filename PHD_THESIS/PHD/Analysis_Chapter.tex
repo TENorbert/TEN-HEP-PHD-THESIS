@@ -590,13 +590,13 @@ Using the number of crystals in a photon supercluster and comparing the number o
 \end{minipage}
 
 \subsection{Event Cleaning, Veto Performance and Fake Rates}
-Using the selection variables studied above for halo, cosmic and spike photons, we tag and reject non-collision events as follows: 
+Using the quantities studied for tagging events with halo, cosmic and spike photons, we tag and reject non-collision background  events as follows: 
 \begin{itemize}
-\item Beam halo photons are tagged and rejected if a CSC segment with $|\eta| > 1.6$ is found within 0.05 radian of the azimuthal angle with a photon supercluster, \ie photons found within $\Delta\phi(\mbox{CSC Seg},\gamma) < 0.05$ are rejected. We found that we are able to reject halo photons with 91\% efficiency and 3\% mis-tag rate using this photon selection requirement.
-\item Cosmic photons are tagged and rejected with $75.5$\% efficiency and $1.4$\% mis-tag rate for photons associated with DT segments within $\Delta\eta(\mbox{DT Seg},\gamma) < 0.1$ and $\Delta\phi(\mbox{DT Seg},\gamma) < 0.1$.
-\item Most of spikes are rejected if the photons has ECAL time $\chi^{2} > 4$, $\mbox{Number of Crystals} < 7$ and $ 1-E_{4}/E_{1} > 0.98$, with only $0.4$\% mis-tag rate.
+\item An event with a halo photon is tagged and rejected if a CSC segment for $|\eta| > 1.6$ is found within 0.05 radian of the azimuthal angle with the photon supercluster, \ie a photon found within $\Delta\phi(\mbox{CSC Seg},\gamma) < 0.05$ is rejected. We found that we are able to reject events with a  halo photon with 91\% efficiency and 3\% mis-tag rate using this photon selection requirement.
+\item An event with cosmic photon is tagged and rejected with $75.5$\% efficiency and $1.4$\% mis-tag rate if the photon can be matched to a DT segment within $\Delta\eta(\mbox{DT Seg},\gamma) < 0.1$ and $\Delta\phi(\mbox{DT Seg},\gamma) < 0.1$.
+\item An event with spike is rejected if the photon has ECAL time $\chi^{2} > 4$, $\mbox{Number of crystals} < 7$, $ 1-E_{4}/E_{1} > 0.98$,$S_{Major} < 0.6$ and $S_{Minor} < 0.17$ with only $0.4$\% mis-tag rate.
 \end{itemize}
-Our full veto performance in terms of mis-tag rate for the different non-collision background sources studied  is summarized in Table \ref{tab:EVTC}.
+The mis-tag rates for the different non-collision background sources is summarized in Table \ref{tab:EVTC}.
 
 %%\paragraph*{}\mbox{}\\
 \begin{minipage}{0.90\linewidth} 
@@ -617,7 +617,7 @@ Our full veto performance in terms of mis-tag rate for the different non-collisi
 \end{minipage}
 
 \vspace{5mm}
-The result of our tagging of the different types of non-collision background events can be seen in Figure \ref{fig:RESIDUAL}. Halo photons produced from the so-called beam halo muons are the majority of our background out-of-time photon events. Very few late arrival time photons are produced from spikes while there is also some significant contribution from cosmic photons. The most interesting is the residual out-of-time background(in red) which could not be tagged. 
+The result of the event tagging is shown in Figure \ref{fig:RESIDUAL}. We see that the majority of non-collision background events are events with a halo photon. Very few late arrival time photons are produced from spikes while there is also some significant contribution from cosmic photons. The most interesting observation is the residual out-of-time background(in red) which could not be tagged. 
 
 \paragraph*{}\mbox{}\\
 \begin{minipage}{0.90\linewidth} 
@@ -625,18 +625,17 @@ The result of our tagging of the different types of non-collision background eve
   \captionsetup{type=figure}
    \includegraphics[height=0.7\textwidth, width=0.8\textwidth]{TimeForAll}
 %\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/Cosmic_Ray_Photons_Cosmic_dataset.png} 
-   \captionof{figure}{ECAL Photon time for a data sample of 0 and 1-jet events showing our tagging performance for non-collision background events.}
+   \captionof{figure}{ECAL photon time for a data sample of 0 and 1-jet events showing our tagging performance for non-collision background events.}
    \label{fig:RESIDUAL}
 \end{center}
 \end{minipage}
 
 \vspace{5mm}
-It is possible that the contributions to the residual out-of-time photon events are from 
-mistagged non-collision events since the tagging efficiency is not 100\% efficient, ghost or QCD collision events with out-of-time photons, events with $\PW\rightarrow \Pe\Pagne$ decays with misidentified electron as photon passing the photon selection, or signal events with real delayed photons. To better understand these various contributions, we use the missing transverse energy,${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$, recalling that $\vec{{\ETslash}^{\gamma}\hspace{0.15cm}} = \vec{\ETslash\hspace{0.15cm}} + \vec{\pt^{\gamma}}$ adjusting for out-of-time energy deposits not included in the standard missing transverse energy calculations. 
+These residual untagged events comprise of some non-collision events, since the tagging is not 100\% efficient, events with QCD photons from ghost/satellite collisions or events with $\PW\rightarrow \Pe\Pagne$ decay with fake photons passing the photon selection. In order to understand the profile of the untagged background events, we use ${\ETslash}^{\gamma}\hspace{0.15cm}$ and \ETslash\hspace{0.25cm}. %, recalling that $\vec{{\ETslash}^{\gamma}\hspace{0.15cm}} = \vec{\ETslash\hspace{0.15cm}} + \vec{\pt^{\gamma}}$ adjusting for out-of-time energy deposits not included in the standard missing transverse energy calculations. 
 \newline
-Signal events because of the undetected gravitino from the neutralino decay will have large ${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$ and events with $\PW\rightarrow \Pe\Pagne$ decay will also have ${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$ because of the undetected neutralino. Non-collision(cosmic, halo, spike) and collision~(ghost/sattelite or QCD) events can be separated into high-\pt and low-\pt events.
-High-\pt Non-collision events will have large $\ETslash\hspace{0.15cm}$ attributed mostly due to the exclusion of energy deposits from the out-of-time photons in the missing transverse energy reconstruction and small ${\ETslash}^{\gamma}\hspace{0.15cm}$ when the large transverse energy contribution from energy deposits of the out-of-time photons is re-introduced. Low-\pt Non-collision events will have both ${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$ small since the out-of-time photon transverse energy excluded was not large in the first place. For high-\pt out-of-time collision events, these events naturally have low missing transverse energy so automatically $\ETslash\hspace{0.25cm}$ is required to be small while after re-introducing the energy deposits from out-of-time high-\pt photons, then ${\ETslash}^{\gamma}\hspace{0.15cm}$ becomes large. With the same argument for low-\pt Non-collision events, low-\pt collision events are expected to have both small  ${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$.
-A table showing a summary of our expectations for ${\ETslash}^{\gamma}\hspace{0.15cm}$ and $\ETslash\hspace{0.15cm}$ of different background events source contributing to the residual out-of-time photon untagged events is presented in Table \ref{tab:METSAMPLE}.
+We expect signal events, because of the undetected gravitino from the neutralino decay, to have large ${\ETslash}^{\gamma}\hspace{0.15cm}$ and \ETslash\hspace{0.15cm}, where by large we mean above 60\GeV, and collision events with $\PW\rightarrow \Pe\Pagne$ decay to equally have large ${\ETslash}^{\gamma}\hspace{0.15cm}$ and \ETslash\hspace{0.15cm} because of the undetected neutrino. The non-collision~(cosmic, halo, spike) and collision~(ghost/sattelite or QCD) background events can be separated into high-\pt and low-\pt events.
+For high-\pt non-collision events we expect these events to have large \ETslash\hspace{0.15cm} due to the exclusion of energy deposits from the out-of-time photons in the missing transverse energy reconstruction and small ${\ETslash}^{\gamma}\hspace{0.15cm}$ when the large transverse energy contribution from energy deposits of the out-of-time photons is re-introduced. For low-\pt non-collision events, we expect these events to have both ${\ETslash}^{\gamma}\hspace{0.15cm}$ and \ETslash\hspace{0.15cm} small since the out-of-time photon transverse energy excluded is small in the first place. For high-\pt out-of-time collision events, we expect these events to have low missing transverse energy so automatically \ETslash\hspace{0.25cm} is expected to be small while after re-introducing the energy deposits from out-of-time high-\pt photons, we expect ${\ETslash}^{\gamma}\hspace{0.15cm}$ to be large. With the same argument for low-\pt non-collision events, we expect low-\pt collision events to have both small ${\ETslash}^{\gamma}\hspace{0.15cm}$ and \ETslash\hspace{0.15cm}.
+A summary of our expectations for ${\ETslash}^{\gamma}\hspace{0.15cm}$ and \ETslash\hspace{0.15cm} for the different expected background events sources with possible contribution to the residual untagged events with out-of-time photon is presented in Table \ref{tab:METSAMPLE}.
 
 \vspace{5mm}
 \begin{minipage}{0.90\linewidth} 
@@ -664,12 +663,13 @@ A table showing a summary of our expectations for ${\ETslash}^{\gamma}\hspace{0.
 \end{minipage}
 
 \vspace{5mm}
-Therefore, to minimizing contributions from events anomalous photon time, we restrict our photon arrival time for signal events to within $3.0 < t_{\gamma} < 13.0$~ns, while also requiring that the signal event missing transverse energy be greater than 60\GeV, \ie ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, $\ETslash\hspace{0.15cm} > 60$\GeV. This reduces the contribution from ghost/satellite background contributing to the untagged out-of-time photons while at the same time enhances our signal event sample.
-Using events from $pp$ collisions with predominantly in-time~($ -2.0 < t_{\gamma} < 2.0$~ns) photons, 
-events with $t_{\gamma} > 3.0$~ns and $t_{\gamma} < -3.0$~ns, we define control samples in different \ETslash\hspace{0.15cm} and also small ${\ETslash}^{\gamma}\hspace{0.15cm}$ event selection regions enhancing either collision or non-collision background events and perform an \textsf{ABCD} background estimation method with the goal of estimating the total expected number of background events with out-of-time photons with $t_{\gamma} > 3.0$~ns.
-\par
-We verify out background estimation technique using a data sample of zero and one jet events where the expected and observed number of events with out-of-time photons, $t_{\gamma} > 3.0$~ns and  ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, $\ETslash\hspace{0.15cm} > 60$\GeV  is supposed to be the same if the method is valid. One of our assumption for using the ABCD method is that the background contributions from QCD events and multijets events is negligible. We also study the consequences of this assumption on the number of background estimated events with a separate control sample of mostly out-of-time photon candidates used in reconstructing the true \PZ mass and measure the its candidate electron's arrival time at ECAL since for these events we expect most of the electrons from the $\PZ \rightarrow \EE$ decay to be in-time. Thus, the observed number of out-of-time electron candidates gives us an estimate of the contributions of collision events in our signal sample.
- 
+%Therefore, to minimizing contributions from events anomalous photon time, we restrict our photon arrival time for signal events to within $3.0 < t_{\gamma} < 13.0$~ns, while also requiring that the signal event missing transverse energy be greater than 60\GeV, \ie ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, $\ETslash\hspace{0.15cm} > 60$\GeV. This reduces the contribution from ghost/satellite background contributing to the untagged out-of-time photons while at the same time enhances our signal event sample.
+\clearpage
+Using control samples defined by \ETslash\hspace{0.15cm} and ${\ETslash}^{\gamma}\hspace{0.15cm}$ for events with in-time~($|t_{\gamma}| < 2.0$~ns) photons, 
+events with $t_{\gamma} > 3.0$~ns and $t_{\gamma} < -3.0$~ns, with each control sample defined to enhance the contribution of either collision or non-collision background events, we perform a background estimation in the signal control sample~($t_{\gamma} > 3.0$~ns, ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV and $\ETslash\hspace{0.15cm} > 60$\GeV) using the so-called \textsf{ABCD} background estimation method.
+We verify the background estimation method using a data sample of zero and one jet events.
+% with out-of-time photons, $t_{\gamma} > 3.0$~ns and  ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, $\ETslash\hspace{0.15cm} > 60$\GeV  is supposed to be the same if the method is valid. One of our assumption for using the ABCD method is that the background contributions from QCD events and multijets events is negligible. We also study the consequences of this assumption on the number of background estimated events with a separate control sample of mostly out-of-time photon candidates used in reconstructing the true \PZ mass and measure the its candidate electron's arrival time at ECAL since for these events we expect most of the electrons from the $\PZ \rightarrow \EE$ decay to be in-time. Thus, the observed number of out-of-time electron candidates gives us an estimate of the contributions of collision events in our signal sample.
+
 %%\begin{figure}[htbp]
 %%  \begin{center}
 %%    \captionsetup{type=figure}
@@ -693,10 +693,10 @@ We verify out background estimation technique using a data sample of zero and on
 %\includegraphics[height=0.7\textwidth, width=0.8\textwidth]{TimeForAll}
 %\end{figure}
 \subsection{Background Estimation with ABDC Method}
-Since we expect most of our background events to come from non-collision events, we first estimate the number of events we expect from non-collision events using the \textsf{ABCD} technique and then estimate the possible contribution from collision events in the control samples used in our \textsf{ABCD} method.
+Since we expect most of our background events to come from non-collision events, we first estimate the number of events we expect from non-collision events using the \textsf{ABCD} technique and then estimate the possible contamination of these control samples used in our \textsf{ABCD} method from collision events.
 \begin{enumerate}
 \item \textbf{Non-Collision Background Estimation}:\newline
-To estimate the number of background events from non-collision, we define \textsf{ABCD} Control Samples~(CS) in ECAL time and  ${\ETslash}^{\gamma}\hspace{0.15cm}$ by selecting events with $\ETslash\hspace{0.15cm} > 60$\GeV. Events with $\ETslash\hspace{0.15cm} > 60$\GeV is a CS for which the contribution from collision~(QCD) background is suppressed since most collision background events as seen in table \ref{tab:METSAMPLE} have small \ETslash\hspace{0.15cm}. The control samples \textsf{A} and \textsf{B} defined in Table \ref{tab:NON-COLLISION} as events
+To estimate the number of background events from non-collision, we define \textsf{ABCD} Control Samples~(CS) in ECAL time and  ${\ETslash}^{\gamma}\hspace{0.15cm}$ by selecting events with $\ETslash\hspace{0.15cm} > 60$\GeV. Events with $\ETslash\hspace{0.15cm} > 60$\GeV is a CS for which the contribution from collision~(QCD) background is suppressed since most collision background events as seen in table \ref{tab:METSAMPLE} have small \ETslash\hspace{0.15cm}. The control samples \textsf{A} and \textsf{B} defined in Table \ref{tab:NON-COLLISION} are events with, respectively, ${\ETslash}^{\gamma}\hspace{0.15cm} < 60$\GeV and ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV  with photon time, $-10.0 < t_{\gamma} < -3.0$~ns, and CS \textsf{C} are events with ${\ETslash}^{\gamma}\hspace{0.15cm} < 60$\GeV  and photon time $3.0 < t_{\gamma} < 13.0$~ns.
 
 \vspace{5mm}
 \begin{minipage}{0.90\linewidth} 
@@ -724,12 +724,11 @@ To estimate the number of background events from non-collision, we define \texts
 %\end{itemize}
 
 \vspace{5mm}
- with photon time, $-10.0 < t_{\gamma} < -3.0$~ns, and \textsf{C} as events with ${\ETslash}^{\gamma}\hspace{0.15cm} < 60$\GeV 
-and photon time  $3.0 < t_{\gamma} < 13.0$~ns, all do not contain signal events. Using these CS for the \textsf{ABCD}  method,  with the assumption that $\frac{N_{D}}{N_{C}} = \frac{N_{B}}{N_{A}}$, the number of non-collision background events with out-of-time photons expected in the signal  CS \textsf{D} is given as
+ Using these control samples for the \textsf{ABCD}  method,  with the assumption that $\frac{N_{D}}{N_{C}} = \frac{N_{B}}{N_{A}}$, the number of non-collision background events with out-of-time photons expected in the signal  CS \textsf{D} is given as
 \begin{equation}
 N^{non-col}_{D} = \left(\frac{N_{B}}{N_{A}} \right)\cdot N_{C},
 \end{equation}
-where $N^{non-col}_{D}$ is the number of non-collision background events we expect in the \textsf{D} CS, $N_{B}$, $N_{A}$  and $N_{C}$ are the number of events observed in respectively \textsf{B}, \textsf{A} and \textsf{C} CSs.
+where $N^{non-col}_{D}$ is the number of non-collision background events we expect in the \textsf{D} CS, $N_{B}$, $N_{A}$  and $N_{C}$ are the number of events observed in respectively \textsf{B}, \textsf{A} and \textsf{C} control samples.
 
 \item\textbf{Collision Background Estimation}:\newline
 In order to quantify how suppressed is the contribution from possible collision background events in each of the CSs defined in Table \ref{tab:NON-COLLISION}, we once again employ the \textsf{ABCD} technique by defining Control Samples~(CSs) in ECAL time and \ETslash\hspace{0.15cm}. Since we are interested in contributions into CS \textsf{B} and \textsf{D} of Table \ref{tab:NON-COLLISION}, as these are the only CS where we expect a sizable contribution from collision events~(see Table \ref{tab:METSAMPLE}), we select events with ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV.
