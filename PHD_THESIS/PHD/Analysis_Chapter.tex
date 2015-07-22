@@ -3,13 +3,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Search Analysis for Long-Lived Particles }
 \section{Analysis Strategy}\label{Analysis}
-This analysis is about the search for events with at least a single late arrival time photon at the Electromagnetic Calorimeter~(ECAL) and  large missing transverse energy~(\MET). It uses a counting approach where an excess in the number of events with photon time above a defined ECAL timing threshold, to the expected number of events from background processes, indicates the presence of a new physics phenomena.
+This analysis is about the search for events with at least a single late arrival time photon at the Electromagnetic Calorimeter~(ECAL) and  large missing transverse energy~(\MET). It uses a counting method where an excess in the number of events with photon time above a defined ECAL timing threshold, to the expected number of events from background processes, indicates the presence of a new physics phenomena.
 \newline
 Because the decay of a massive long-lived neutral particle into a late photon and large \MET is not common with standard model interactions, we expect most of our background events of this search to arise from  non-collision rather than proton-proton collision events.
 \par
-We simulate a typical signal event of the decay of a massive neutral long-lived particle, produced in a  proton-proton~($pp$) collision at the LHC and detected with the CMS detector, according to the prediction of a benchmark Gauge Mediating Supersymmetry Breaking~(GMSB) model described as the "Snowmass Points and Slope 8"~(SPS8). In this model, the massive long-lived neutral particle is the Next-to-Lightest Supersymmetric Particle~(NLSP) which is the lightest neutralino~(\PSneutralinoOne). The \PSneutralinoOne decay into a photon~(\Pphoton) and the Lightest Supersymmetric Particle~(LSP) called the gravitino~($\tilde{G}~$),  $\PSneutralinoOne\rightarrow\Pphoton + \tilde{G}$. The $ \tilde{G}$  is undetected because it interacts very weakly with the CMS detector material. Its presence is indirectly inferred by measuring the missing transverse momentum~(\MET). The photon, because of the finite lifetime of the \PSneutralinoOne, arrives late at the ECAL compared to photons produced from nominal $pp$ collisions. 
+We simulate a typical signal event of the decay of a massive neutral long-lived particle, produced in a  proton-proton~($pp$) collision at the LHC and detected with the CMS detector, according to the prediction of a benchmark Gauge Mediating Supersymmetry Breaking~(GMSB) model described as the "Snowmass Points and Slope 8"~(SPS8). In this model, the massive long-lived neutral particle is the Next-to-Lightest Supersymmetric Particle~(NLSP) which is the lightest neutralino~(\PSneutralinoOne). The \PSneutralinoOne decay into a photon~(\Pphoton) and the Lightest Supersymmetric Particle~(LSP) called the gravitino~($\tilde{G}~$),  $\PSneutralinoOne\rightarrow\Pphoton + \tilde{G}$. The $ \tilde{G}$  is undetected because it does not interacts with the CMS detector material. Its presence is indirectly inferred by measuring the missing transverse momentum~(\MET). The photon, because of the long-lived nature of the \PSneutralinoOne, arrives late at the ECAL compared to photons produced from nominal $pp$ collisions. 
 \par
-In a particle collider, the \PSneutralinoOne can be produced in direct $pp$ interactions, $pp\rightarrow \PSneutralinoOne\PSneutralinoOne$, however, in this analysis, we are interested in the scenario where the \PSneutralinoOne is produced indirectly; from the cascade decay of heavier sypersymmetric particles like gluinos and squarks. This is because the gluino/squark production cross-section is largest at a $pp$ collider like the LHC and in association with the neutralino decay, the event also contain multiple hiph-\pt jets which provide an added signal requirement useful for reducing our background events. Thus, a typical signal event at the CMS detector should comprise of a delayed high-\pt photon, large \MET and multiple high-\pt jets. Observing such an event will be evidence of a new physics phenomena.  
+In a particle collider, the \PSneutralinoOne can be produced in pair or single in direct interaction of the quarks and gluons~(partons) inside the proton, $\Pquark\APquark\rightarrow \PSneutralinoOne\PSneutralinoOne$, however, in this analysis, we are interested in the scenario where the \PSneutralinoOne is produced indirectly; from the cascade decay of heavier sypersymmetric particles like gluinos and squarks. This is because the gluino/squark production cross-section is largest at a $pp$ collider like the LHC and in association with the neutralino decay, the event also contain multiple hiph-\pt jets which provide an added signal requirement useful for reducing our background events. Thus, a typical signal event at the CMS detector should comprise of a delayed high-\pt photon, large \MET and multiple high-\pt jets. Observing such an event will be evidence of a new physics phenomena.  
 %\par 
 %Non-collision events with photons from cosmic, \textit{beam halo} muons and \textit{spikes} can also have large ECAL time measurements. $pp$ collision events with \PW, \PZ, multiple jets and $\gamma +$jet(s) where the electron or jet is misidentified as a photon and its arrival time mismeasured, can also give rise to large ECAL time photons. And if these events happen to have \MET due to finite detector resolution(\ie instrumental \MET), it is possible for them to be misidentified as the decay of a long-lived neutral particle. We refer to these kinds of events as background events.
 %\par 
@@ -40,11 +40,12 @@ and $C_{grav}$ and $\mathbf{\Lambda} $ are left free to vary. By varying, respec
 \par
 Using the SLHA files as inputs to the MC event generator called \textsf{PYTHIA} \cite{PYTHIA6}, we generate events of supersymetric particles produced at center of mass energy, $\sqrt{S} = 8$\TeV, of the colliding protons. The interaction of these supersymmetric particles with the CMS detector is simulated using the GEANT4 particle detector simulation software \cite{GEANT4}. A full physics event is reconstructed from energy deposits~(hits) in the CMS detector using the CMS Event Reconstruction Software~(CMSSW). To minimize any disagreement between MC and data, we use the same CMSSW release version~(\textbf{CMSSW\_5\_3\_29}) in the MC event reconstruction with the same detector conditions as the recorded data from LHC $pp$ collision.
 \par 
-The physics process for the production and decay of \PSneutralinoOne to photon and gravitino we studied at the LHC $pp$ collisions is 
+The physics process, which we described in detail in section \ref{LHCSUSY}, for the production and decay of \PSneutralinoOne to photon and gravitino  at the LHC $pp$ collisions we studied is 
 \begin{equation}
 p+p \rightarrow \PSgluino\PSgluino, \PSq\PSq \rightarrow [\mbox{1 or 2 cascade decays}] \rightarrow 2\PSneutralinoOne + \mbox{jets} \rightarrow 2\Pphoton + 2\tilde{G} + \mbox{jets}.
 \end{equation}
-It is possible for the \PSneutralinoOne to not only decay to $\gamma$ but also to $Z$ bosons, $Higgs$, \EE and the $\tilde{G}$. However, its decay to a $\gamma$ and $\tilde{G}$ is the dominant mode of decay. About 83 to 94\% of the \PSneutralinoOne decay is to a $\gamma + \tilde{G}$ and we observed that 97 to 99\% of all our simulated signal events contain at least a single photon. 
+
+
 \subsection{Background Modeling}
 Our background study is data-driven for most parts, however, we generate a small sample of  $\gamma +$jet(s) events at leading order cross-sections using \textsf{PYTHIA6} and the detector simulation is done with \textsf{GEANT4}. The reconstructed  $\gamma +$jet(s) events is again performed with the same CMSSW release as the signal MC samples. The $\gamma +$jet(s) MC sample is used for studying ECAL time of simulated events in order to make time adjustment between simulation and data. 
 \newline
@@ -92,9 +93,9 @@ We used mostly single photon triggered events from data samples with luminosity 
 \subsubsection*{Monte Carlo Samples}
 The MC samples were produced with \textit{Summer 2012} prescriptions of the calibration and alignment status of the CMS detector and pile up conditions at 8\TeV.
 \newline
-The GMSB SPS8 signal samples contain 50,000 events for each lifetime and SUSY breaking scale or mass of \PSneutralinoOne. These samples cover \PSneutralinoOne lifetimes, $c\tau_{\PSneutralinoOne}$, from 25 to 1000\cm for each $\mathbf{\Lambda_{m}}$ or \PSneutralinoOne mass~($m_{\PSneutralinoOne}$) point. The SUSY breaking scale, $\mathbf{\Lambda_{m}}$, range is from 100 to 300\TeV equivalent to $m_{\PSneutralinoOne}$ ranging from 139 to 430\GeVcc. These samples are presented in Table \ref{tab:mc_GMSB_sample} showing each cross-section and branching ratio for \PSneutralinoOne decay to $\gamma$ and $\tilde{G}$.
+The GMSB SPS8 signal samples contain 50,000 events for each lifetime and SUSY breaking scale or mass of \PSneutralinoOne. These samples cover \PSneutralinoOne lifetimes, $c\tau_{\PSneutralinoOne}$, from 50 to 1000\cm for each $\mathbf{\Lambda_{m}}$ or \PSneutralinoOne mass~($m_{\PSneutralinoOne}$) point. The SUSY breaking scale, $\mathbf{\Lambda_{m}}$, range is from 100 to 300\TeV equivalent to $m_{\PSneutralinoOne}$ ranging from 139 to 430\GeVcc. These samples are presented in Table \ref{tab:mc_GMSB_sample} showing each cross-section and branching ratio for \PSneutralinoOne decay to $\gamma$ and $\tilde{G}$.
 \newline
-The $\gamma +$jets MC samples were generated for different \pt ranges of the colliding quarks or gluons~(partons) of the proton and normalized to the 19.1 \fbinv integrated luminosity. Table \ref{tab:mc_QCD_sample} show the cross-sections, \pt of the parton~($\hat{\pt}$) and the number of events in each sample. A $\hat{\pt}$ range from 50\GeVc to 800\GeVc was scanned.
+The $\gamma +$jets MC samples were generated for different momentum of the colliding quarks or gluons inside the protons~(partons) and normalized to the 19.1 \fbinv integrated luminosity. Table \ref{tab:mc_QCD_sample} show the cross-sections, \pt of the parton~($\hat{\pt}$) and the number of events in each sample. A $\hat{\pt}$ range from 50\GeVc to 800\GeVc was scanned.
 
 \vspace{5mm}
 %\paragraph*{}\mbox{}\\
@@ -111,14 +112,14 @@ The $\gamma +$jets MC samples were generated for different \pt ranges of the col
         $\Lambda$~[TeV] & $c\tau$~(mm) & $\sigma_{LO}$~(pb) & \bfseries{Number of Events} & \bfseries{Branching Ratio}\\
        \hline
        \toprule
-       100 & 250-12,000  & 0.368  & 50,000 & 0.9444\\
-       120 & 250-12,000  & 0.133  & 50,000 & 0.9042\\
-       140 & 250-12,000  & 0.0574 & 50,000 & 0.8711\\
-       160 & 250-12,000  & 0.0277 & 50,000 & 0.8464\\
-       180 & 250-12,000  & 0.0145 & 50,000 & 0.8282\\
-       220 & 250-12,000  & 0.0044 & 50,000 & 0.8282\\
-       260 & 250-12,000  & 0.0015 & 50,000 & 0.8282\\
-       300 & 250-12,000  & 0.0008 & 50,000 & 0.8282\\
+       100 & 500-10,000  & 0.368  & 50,000 & 0.9444\\
+       120 & 500-10,000  & 0.133  & 50,000 & 0.9042\\
+       140 & 500-10,000  & 0.0574 & 50,000 & 0.8711\\
+       160 & 500-10,000  & 0.0277 & 50,000 & 0.8464\\
+       180 & 500-10,000  & 0.0145 & 50,000 & 0.8282\\
+       220 & 500-10,000  & 0.0044 & 50,000 & 0.8282\\
+      % 260 & 250-12,000  & 0.0015 & 50,000 & 0.8282\\
+      % 300 & 500-12,000  & 0.0008 & 50,000 & 0.8282\\
        \hline
        \bottomrule
        \end{tabular}  
@@ -181,7 +182,7 @@ The presence of spikes, noisy crystals and pile-up events, demand a robust metho
 \newline
 The electromagnetic shower of an electromagnetic particle spreads across several crystals~(energy and time measurements from several channels) which belongs to the particle's supercluster containing all of the particle's energy. Using the supercluster, the arrival time of an electromagnetic particle can be defined either using the reconstructed time~($ t_{reco}$) of a single crystal, which is the crystal with the highest energy deposit~(\textit{seed crystal}), or a weighted average time calculated using the reconstructed time of every crystal of the supercluster. We write $t_{seed}$ for the seed time and $t_{Ave}$ for the average time defined as
 \begin{equation}{\label{eq:AVETIME}}
-t_{Ave} = \frac{\sum_{i=1}^N\frac{t_{reco, i}}{\sigma_{i}^{2}}}{\sum_{i=1}^{N}\frac{1}{\sigma_{i}^{2}}},
+t_{Ave} = \frac{\sum_{i=1}^N\frac{t^{i}_{reco}}{\sigma_{i}^{2}}}{\sum_{i=1}^{N}\frac{1}{\sigma_{i}^{2}}},
 \end{equation}
 where $N$ is the total number of crystals of the supercluster, $t_{reco,i}$  and $\sigma_{i}$ are the time and uncertainty on the reconstructed time of each channel, respectively. 
 %Algorithms for extracting and calibrating ECAL crystals using the reconstructed hit~(\textit{rechit}) time have been developed
@@ -213,7 +214,11 @@ Figure \ref{fig:TIME} shows a comparison of a photon time measured as the seed t
 The spread of both time distributions, $\sigma$ of a Gaussian fit, are very similar. A value of  $\sigma = 345$~ps is observed for seed time compared to $\sigma = 336$~ps for the average time distributions. We used the seed time approach for the photon ECAL time since there is not much to gain from either methods.  \newline
 In cases where one or more of the crystals is poorly time calibrated, the photon time from the weighted average time approach is biased. A possible solution for this is to select only properly time calibrated crystals of the supercluster for computing the average time or simply used the times from crystals of the \textit{seed basic cluster}. A supercluster is said to consist of many smaller clusters called \textit{basic clusters}, and the average time of the cluster with the highest energy~(seed basic cluster) can also be used as the particle's measured arrival time.
 \paragraph*{}
-  A $\chi^{2}$ calculated from the time of all the crystals belonging to the photon supercluster is a useful quantity to legitimized a photon time and we use it to distinguish fake photons~(jets misidentified as photons) and especially spikes from true photons. Figure  \ref{fig:spikeVsPhoton} shows the profile of the pulse shape~(left) of an identified spike with that of a true photon event. A distribution of the normalized $\chi^{2}$ against the ECAL time is shown in the right plot of the same figure. Photons with a signal pulse shape profile as that of spikes are associated with large values of $\chi^{2}$ and usually have earlier ECAl arrival time.
+A $\chi^{2}$ on the photon ECAL time calculated as
+\begin{equation}\label{eq:CHI2}
+\chi^{2} = \sum^{N}_{i=0}\frac{(t^{i}_{reco} - t_{Ave})^{2}}{\sigma_{i}^{2}}
+\end{equation}
+where, $N$ is the number of crystals in the photon supercluster, $t^{i}_{reco}$ and $\sigma_{i}$ are the time and uncertainty on the reconstructed time for each crystal and $t_{Ave}$ is the mean time defined in Equation \ref{eq:AVETIME}, is a useful quantity to legitimized the photon time and we use it to distinguish fake photons~(jets misidentified as photons) and especially spikes from true photons. Figure  \ref{fig:spikeVsPhoton} shows the profile of the pulse shape~(left) of an identified spike with that of a true photon event. A distribution of the normalized $\chi^{2}$ against the ECAL time is shown in the right plot of the same figure. Photons with a signal pulse shape profile as that of spikes are associated with large values of $\chi^{2}$ and usually have earlier ECAl arrival time.
  
  \vspace{5mm}
 %\paragraph*{}\mbox{}\\ 
@@ -232,12 +237,12 @@ The plot of $\chi^{2}$ against ECAL time~(left plot of Figure \ref{fig:spikeVsPh
 %%%
 %%%%
 \subsubsection*{Simulated ECAL Time}
-The ECAL time for late arriving photons which might arise from either the decay of long-lived neutral particles, spikes and noisy crystal channels common during data taking is challenging to properly simulate in MC events. This usually leads to disagreements between ECAL time in data and MC events.
-We adjust the time of MC events to account for any data and MC time measurement difference using mostly in-time events~(events with photon time within a $[-2, 2 ]$~ns window).
-Selecting in-time events with only one or two jets in data, we find the difference in the peak of the photon time distribution from data with the reconstructed MC time~($t^{MC}_{reco}$) of photons from the $\gamma +$ jets samples. The measured time difference of the average time for reconstructed photons from data and MC $\gamma +$ jet sample, is used to smear the reconstructed MC ECAL time. A average time difference of about $125$~ps is observed between the data and MC ECAL time. After the smearing, both data and MC ECAL time show a close agreement for the photon arrival time. The photon ECAL time from data and MC $\gamma +$ jet sample both shown in Figure \ref{fig:DATAMCTime} comparing before~(left plot) and after~(right plot) the adjustment on MC ECAL time was made. 
+It is challenging to properly simulate ECAL time for MC events so that it captures the conditions of the ECAL detector during data recording. This usually leads to time from MC events not representing the exact status of ECAL time as in data in terms of mean time and time resolution.
+We adjust the time of MC events to account for any data and MC time difference using selected 1 or 2-jets events from MC $\gamma +$ jet sample. Only events with isolated in-time, $t_{\gamma} < 2$~ns, photon  with $\pt > 80$\GeV are accepted. 
+The adjustment is done by shifting the mean time and smearing the resolution by an additional Gaussian convolution on the photon time of MC events so as to match the mean time and time resolution of data. After this adjustment of the MC time, the photon ECAL time from data and MC $\gamma +$ jet sample both shown in Figure \ref{fig:DATAMCTime} comparing before~(left plot) and after~(right plot) the adjustment on MC ECAL time was made, agree quite well. 
 %We performed the same smearing for all MC samples used in our analysis.
-\newline
- It is worth noting that the difference of 125~ps between $t^{MC}_{reco}$ and $t^{DATA}_{reco}$ compared to 500~ps ECAL timing resolution is not enough to enormously impact our event selection. %however, simulating photons ECAL time in the tails of the time distribution still remains.
+%\newline
+% It is worth noting that the difference of 125~ps between $t^{MC}_{reco}$ and $t^{DATA}_{reco}$ compared to 500~ps ECAL timing resolution is not enough to enormously impact our event selection. %however, simulating photons ECAL time in the tails of the time distribution still remains.
 
 \vspace{5mm}
 %\paragraph*{}\mbox{}\\
@@ -253,13 +258,13 @@ Selecting in-time events with only one or two jets in data, we find the differen
 \end{center}
 \end{minipage}
 %%%
-\clearpage
+%\clearpage
 \subsubsection{Neutralino Measured Lifetime}
-The distance traveled in the transverse~($x-y$) plane in the CMS detector by the \PSneutralinoOne before it decays, mentioned previously in the subsection \ref{NeutralinoDecay}, is given as
+The distance traveled in the CMS detector by the \PSneutralinoOne before it decays, mentioned previously in the subsection \ref{NeutralinoDecay}, is given as
 \begin{equation}{\label{eq:decaylength}}
-\mathrm{L} = \left(c\tau_{\PSneutralinoOne}\right) \cdot \left( \gamma \beta_{T}\right) = \left(c\tau_{\PSneutralinoOne}\right) \cdot \left( \frac{\pt}{m_{\PSneutralinoOne}}\right).
+\mathrm{L} = \left(c\tau_{\PSneutralinoOne}\right) \cdot \left( \gamma \beta\right) = \left(c\tau_{\PSneutralinoOne}\right) \cdot \left( \frac{p}{m_{\PSneutralinoOne}}\right).
 \end{equation} 
-The \pt and mean lifetime~($c\tau_{\PSneutralinoOne}$) of the \PSneutralinoOne determines this distance. Large values of $c\tau_{\PSneutralinoOne}$ means, this distance is large extending even beyond the ECAL volume where detecting the \PSneutralinoOne is not possible while small values of $c\tau_{\PSneutralinoOne}$ means the \PSneutralinoOne decayed quite early and the photon ECAL arrival time is not large enough and detection using ECAL time measurements only is not very reliable. High \pt also means the \PSneutralinoOne is very boosted and can also travel out of the ECAL before it decays while low \pt means the \PSneutralinoOne is less boosted and traveling slow enough for the photon to be delayed at ECAL. In Figure \ref{fig:NKINE}, we show  distributions of the \pt of the \PSneutralinoOne~($\pt^{\PSneutralinoOne}$), its transverse distance traveled, transverse momentum of the photon~($\pt^{\Pphoton}$) and photon's estimated arrival time~($T_{\Pphoton}$)  at event generation level. These distributions are for different $\mathbf{\Lambda}$ and $c\tau_{\PSneutralinoOne}$ points of the SPS8 model. We observed that, the \pt of the \PSneutralinoOne increases with increase values of $\Lambda$, from $\Lambda = 100$ to 300\TeV,  which agrees with our expectation in that, increasing values of $\Lambda$ implies increasing values for the gluino/squark masses which cascade decay to the \PSneutralinoOne. In the same way, increasing values for $\Lambda$ means the \PSneutralinoOne becomes more massive and hence the photon \pt also increases. For a fixed value of $\Lambda$ \ie \pt of the nuetralino is the same, the transverse distance traveled by the \PSneutralinoOne before decay~(top right plot of Figure \ref{fig:NKINE}) and photon expected time at ECAL(bottom right plot of Figure \ref{fig:NKINE}) increased with increased value of \PSneutralinoOne lifetime, $c\tau = 250$ to $6000$\mm. The qualitative agreement of the distributions of both plots confirms our expectation that the photon is delayed as a result of the long lifetime of the \PSneutralinoOne. However, one can argue that this is not entirely the case as we study in detail the source of delayed photons in the next section.
+The momentum~($p$) and mean lifetime~($c\tau_{\PSneutralinoOne}$) of the \PSneutralinoOne determines this distance. Large values of $c\tau_{\PSneutralinoOne}$ means, this distance is large extending even beyond the ECAL volume where detecting the \PSneutralinoOne is not possible while small values of $c\tau_{\PSneutralinoOne}$ means the \PSneutralinoOne decayed early and the photon ECAL arrival time is not large enough and detection using ECAL time measurements only is not very reliable. High \pt also means the \PSneutralinoOne is very boosted and can also travel out of the ECAL before it decays while low momentum means the \PSneutralinoOne is less boosted and traveling slow enough for the photon to be delayed at ECAL. In Figure \ref{fig:NKINE}, we show  distributions of the momentum of the \PSneutralinoOne in the transverse~($x-y$) plane also known as the transverse momentum~( $\pt^{\PSneutralinoOne}$), its transverse distance traveled, transverse momentum of the photon~($\pt^{\Pphoton}$) and photon's estimated arrival time~($T_{\Pphoton}$) at event generation level since we are interested in mostly  events with photon in the barrel region of ECAL. These distributions are for different $\Lambda$ and $c\tau_{\PSneutralinoOne}$ points of the SPS8 model. We observed that, $\pt^{\PSneutralinoOne}$ increases with increase values of $\Lambda$, from $\Lambda = 100$ to 220\TeV,  which agrees with our expectation that, as the value of $\Lambda$ increases, masses of the gluino/squark which cascade decay to the \PSneutralinoOne leading to increase in the momentum of the \PSneutralinoOne. In the same way, increasing values for $\Lambda$ means the \PSneutralinoOne becomes more massive and hence the photon \pt also increases. For a given value of $\Lambda$ or \pt of the nuetralino, the transverse distance traveled by the \PSneutralinoOne before decay~( shown in the top right plot of Figure \ref{fig:NKINE}) and photon expected time at ECAL(shown in the bottom right plot of the same figure) increased with increased value of \PSneutralinoOne mean lifetime, $c\tau = 500$ to $6000$\mm. The qualitative agreement of the distributions of both plots confirms our expectation that the photon is delayed as a result of the long lifetime of the \PSneutralinoOne. However, one can argue that this is not entirely the case as we study in detail the source of delayed photons in the next section.
 
 \vspace{5mm}
 \begin{minipage}{0.95\linewidth} 
@@ -275,9 +280,9 @@ The \pt and mean lifetime~($c\tau_{\PSneutralinoOne}$) of the \PSneutralinoOne d
 \end{minipage}
  
 \subsubsection*{Source of Delayed Photons}
-The photon from the decay of \PSneutralinoOne can arrive late at ECAL for either one of the following reasons: because the \PSneutralinoOne is traveling slow \ie with $\beta=\frac{p_{\PSneutralinoOne}}{m_{\PSneutralinoOne}} << 1$, or because the \PSneutralinoOne was produced with significant boost such that the photon traveled to ECAL through a non-direct flight path from the nominal $pp$ interaction point. We distinguish between these two sources of delayed photons from an estimate of the photon arrival time at ECAL using the  distance traveled by \PSneutralinoOne before decay and photon distance travel from decay point to the point of detection at ECAL. Figure \ref{fig:DELAY}(left) is a schematic diagram showing how we estimate the photon arrival time at ECAL in each of the possible different travel flight path representing the different source of delayed photons. The estimated photon arrival ECAL time for each scenario is given as follows:
+The photon from the decay of \PSneutralinoOne can arrive late at ECAL for either one of the following reasons: because the \PSneutralinoOne is traveling slow \ie with $\beta_{T} = \frac{\pt^{\PSneutralinoOne}}{m_{\PSneutralinoOne}} << 1$, or because the \PSneutralinoOne was produced with significant boost in the transverse direction such that the photon traveled to ECAL through a non-direct flight path from the nominal $pp$ interaction point. We distinguish between these two sources of delayed photons from an estimate of the photon arrival time at ECAL using the  distance traveled by \PSneutralinoOne before decay and photon distance travel from decay point to the point of detection at ECAL. Figure \ref{fig:DELAY}(left) is a schematic diagram showing how we estimate the photon arrival time at ECAL in each of the possible different travel flight path representing the different source of delayed photons. The estimated photon arrival ECAL time for each scenario is given as follows:
 \begin{itemize}
-  \item From slow moving neutralinos: $\Delta t_1$ = (L1/c$\beta$) - (L1/c)
+  \item From slow moving neutralinos: $\Delta t_1$ = (L1/c$\beta_{T}$) - (L1/c)
   \item From non-direct traveled flight path: $\Delta t_2$ = (L1 + L2 - L3)/c
   \item ECAL measured time = $\Delta t_{1} + \Delta t_{2}$
 \end{itemize}
@@ -777,7 +782,7 @@ where the general assumption is that $\frac{N_{B^{\prime}}}{N_{A^{\prime}}}  = \
 %\item $\mathbf{I}$: Events with ${\ETslash}^{\gamma} > 60$~GeV and $|t_{\gamma}| < 2.0$~ns.
 %\end{itemize}
 \item \textbf{Combined Background Estimation}: \newline
-Now that we have estimates for both collision and non-collision event contributions, we can estimate the total number of background events expected our signal CS \textsf{D} which defines events with $\ETslash\hspace{0.15cm} > 60$\GeV, ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV and $3.0 < t_{\gamma} < 13.0$~ns, as
+Now that we have estimates for both collision and non-collision event contributions, we can estimate the total number of background events expected in the signal CS \textsf{D}~(Events with $\ETslash\hspace{0.15cm} > 60$\GeV, ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV and $3.0 < t_{\gamma} < 13.0$~ns), as
 \begin{equation}{\label{eq:FBKG}}
 N_{D}^{Total} = \left(\frac{N_{B} - N_{B}^{col} }{N_{A}} \right)\cdot N_{C} + N_{D}^{col} = N_{D}^{non-col} + N_{D}^{col}
 \end{equation}
@@ -792,8 +797,8 @@ where $N_{D}^{Total} = N_{D}^{non-col} + N_{D}^{col}$ is the total background ev
 %\label{fig:BKGESTI}
 %\end{center}
 \paragraph*{Background Estimation Technique Validation}\mbox{}\\
-Using a data sample of $0$ and $1$-jet events where we do not expect any signal events, we performed closure test to validate the background estimation method described in the previous section.
-The closure test checks for an agreement in the number of events expected obtained using our background estimation method and that observed in our signal CS \textsf{D}. The $0$ and $1$-jet events are required to satisfy the same event selection requirements as our signal event except for the number of jet criteria where only $0$ or $1$ events pass. The event yields in each control sample of the background estimation methods including the tagging of beam-halo, cosmic and spike events are shown in Table \ref{tab:EVTYIELD}.
+We performed a validity test of our background estimation method using a data sample of $0$ and $1$-jet events, where we do not expect any signal events.
+A statistical agreement in the number of expected background events obtained using our background estimation method and the number of events observed in our signal CS \textsf{D}, will indicate provide a positive affirmation that the method. The accepted $0$ and $1$-jet events used must pass the same event selection requirements as potential signal events described in Tables \ref{tab:PhotonSel} and \ref{tab:JetSel}. The event yields in each control sample including the tagging of beam-halo, cosmic and spike events is shown in Table \ref{tab:EVTYIELD}.
 
 \vspace{5mm}
 \begin{minipage}{0.90\linewidth} 
@@ -818,20 +823,20 @@ The closure test checks for an agreement in the number of events expected obtain
 \hline
 \bottomrule
 \end{tabular}
-\captionof{table}{Event yields used in closure test for the validation of \textsf{ABCD} background estimation method using $0$ and $1$-jet events sample. Beam halo/cosmic/spikes yields are obtained from tagged events.}
+\captionof{table}{Event yields used in validity test for the \textsf{ABCD} background estimation method using $0$ and $1$-jet events sample. Beam halo/cosmic/spikes yields are obtained from tagged events. Events must pass photon, jet and \MET selection requirements.}
 \label{tab:EVTYIELD} 
 \end{center}
 \end{minipage}
 
 \vspace{5mm}
-Using the yields in Table \ref{tab:EVTYIELD} for each CS and Equations \ref{eq:COLB}, \ref{eq:COLD} and \ref{eq:FBKG}, we obtain the following estimates for the expected number of events in signal CS \textsf{D} as
+Using the event yields in Table \ref{tab:EVTYIELD} for each CS, and Equations \ref{eq:COLB}, \ref{eq:COLD} and \ref{eq:FBKG}, we obtain the following estimates for the expected number of events in signal CS \textsf{D} as
 \begin{align*} 
  N_{B}^{col} &= \frac{35464}{1446522} \times 8 = 0.20^{+0.08}_{-0.06} \\
  N_{D}^{col} &= \frac{35464}{1446522} \times 2 = 0.05^{+0.05}_{-0.02} \\
  N_{D}^{Total} &= \left( \frac{39 - 0.20}{852}\times 359\right) +  0.05 = 16.40^{+3.04}_{-2.63}.
 \end{align*}
-The uncertainty are statistical uncertainties based on the event statistics in each CS. Our expected number of background events in signal CS \textsf{D} is $6.40^{+3.04}_{-2.63}$  which is, within the statistical uncertainties, agreeable with the 10 events we observed satisfying all our event selection requirements and belonging to the CS \textsf{D}. 
-This give us confidence to now apply our background estimation method for our true data sample.
+The uncertainty are statistical uncertainties based on the event statistics in each CS. Our expected number of background events in signal CS \textsf{D} is $16.40^{+3.04}_{-2.63}$  which is, within the statistical uncertainties, agreeable with the 10 events we observed satisfying all our event selection requirements and belonging to the CS \textsf{D}. 
+This give us confidence that our method is working and should be used in our background estimation method for potential signal events from data sample.
 % We observed $10$ events while from using Equation \ref{eq:FBKG}, we expected $16.78^{+2.95}_{-3.45}$. We argue that within our statistical uncertainties, there is quite an agreement between our expectation and observed events. The complete result from our closure test is shown in Table \ref{tab:EVTC}. This gives us confidence that our  background estimation method is robust and reliable. We apply the same \textsf{ABCD} to estimate the background contribution in our signal sample. Our signal sample consist of events with at least $2$-jets, at least a single photon and ${\ETslash}^{\gamma}\hspace{0.15cm} > 60$\GeV, $\ETslash\hspace{0.15cm} > 60$\GeV
 %\paragraph*{}\mbox{}\\
 %\begin{minipage}{\linewidth} 
@@ -856,12 +861,13 @@ This give us confidence to now apply our background estimation method for our tr
 %\end{center}
 %\end{minipage}
 \subsection{Background Estimation Cross Check}
-We do a cross-check on the estimation of background events from collision using $\PZ \rightarrow \EE$ events. Since the electrons from \PZ decay are mostly in-time due to the prompt decay of the \PZ boson, we select events with atleast two electrons from a \texttt{SingleElectron} and \texttt{DoubleElectron} data of 2012 where contributions from non-collision events is very small. The events are selected such that \PZ candidate events with out-of-time energy deposits in ECAL are included. Out-of-time background events are mostly events from the Drell-Yan process and poorly reconstructed out-of-time  energy deposits in ECAL. To minimize out-of-time contributions from beam halo and cosmic events which can occur simultaneously with true $pp$ collision events, we require that the \PZ candidate event satisfy the following event selection requirements: the two electron candidates of the \PZ boson must each have a $\pt > 30$\GeV/c, di-electron mass, $|m_{\EE} - 91| > 61$\GeV/cc, and both electrons must be in the barrel, \ie $|\eta_{e^{-}}| < 1.479$ and $ |\eta_{e^{+}}| < 1.479$.
-The electron ECAL arrival time is taken to be the seed crystal time adjusted to account for the electron time of flight. The seed crystal must satisfy the recommended crystal(reconstructed hit) cleaning criteria which requires that the seed crystal is not a spike, is not noisy and has been properly time calibrated.
+Another method for estimating background events with out-of-time photons from collision, which we did, is using $\PZ \rightarrow \EE$ events. Since we expect most of the events with electron candidates from \PZ decay to be in-time due to the prompt nature of the decay of \PZ bosons, we use events with electron candidates from a \texttt{SingleElectron} and \texttt{DoubleElectron} data samples of 2012, where we expect the contributions from non-collision events to be very small, to do the estimation. These events are selected such that out-of-time energy deposits in ECAL from electron candidates are accepted. The background events with out-of-time energy deposits are mostly events produced from the Drell-Yan process, where electron candidates can be matched randomly to produce a di-electron mass close to the mass of \PZ and poorly reconstructed out-of-time  energy deposits in ECAL. To further reduce any out-of-time contribution from beam halo and cosmic events, which can occur simultaneously with true $pp$ collision events, we require that events with \PZ candidates must satisfy the following event selection requirements: the two electron candidates of the \PZ boson must each have a $\pt > 30$\GeV/c, di-electron mass, $|m_{\EE} - 91| > 61$\GeV/cc, and both electrons must be in the barrel, \ie $|\eta_{e^{-}}| < 1.479$ and $ |\eta_{e^{+}}| < 1.479$.
 \newline
-From these selected \PZ candidate events, we define a signal event sample where the \PZ candidates have a well defined di-electron mass \ie  $76 < |m_{\EE}| < 100$~$GeV/c^{2}$ and the background events and the sideband where the di-electron mass satisfies either of the conditions, $50\GeVcc < m_{\EE} < 76$\GeVcc or $100\GeVcc < m_{\EE} < 130$\GeVcc. 
-A scatter plot of the \PZ candidate electron arrival ECAL time against its position in the $(\eta, \phi)$ plane, shown in Figure \ref{fig:Elec}, show a clear difference between the events from \texttt{Single/DoubleElectron} data sample~(plots in the right) which do not have the familiar features~(the X-shape and increase event population around $\phi = 0,\pm \pi$) of beam halo events with the events from \texttt{SinglePhoton} data sample~(plots in the left). 
-This confirms that the \PZ event sample, is a good sample for estimating out-of-time event contributions from collisions without contamination from non-collision events.
+From these selected \PZ candidate events, we define a signal event sample where the \PZ candidates have a well defined di-electron mass between $76 < |m_{\EE}| < 100$~$GeV/c^{2}$ and a background or sideband event sample where the di-electron mass is either between $50\GeVcc < m_{\EE} < 76$\GeVcc or $100\GeVcc < m_{\EE} < 130$\GeVcc. 
+\newline
+The electron ECAL arrival time is taken to be the seed crystal time adjusted to account for the electron time of flight. The seed crystal must satisfy the recommended crystal~(reconstructed hit) cleaning criteria which requires that the seed crystal is not a spike, is not noisy and has been properly time calibrated.
+A scatter plot of the arrival ECAL time against $\eta$~(top plots) and  $\phi$~(bottom plots) of the electron candidate of \PZ is shown in Figure \ref{fig:Elec}. A clear difference in the scatter distributions of events is seen comparing events from the \texttt{Single/DoubleElectron} data sample~(plots on the right) which do not have the familiar beam halo features~(the X-shape and increase event population around $\phi = 0,\pm \pi$) to events from \texttt{SinglePhoton} data sample~(plots on the left). 
+This confirms our expectation that the candidate \PZ event sample is free from contamination from non-collision events and thus a good sample for estimating out-of-time event contributions from collisions.
 
 \vspace{5mm}
 \begin{minipage}{0.90\linewidth} 
@@ -873,18 +879,22 @@ This confirms that the \PZ event sample, is a good sample for estimating out-of-
 \mbox{
 \includegraphics[height=0.340\textwidth, width=0.5\textwidth]{THESISPLOTS/SinglePhotonDataSet-TimeVsPhiEB.pdf}
 \includegraphics[height=0.340\textwidth, width=0.5\textwidth]{THESISPLOTS/ZCandidates_TimeVsPhi.pdf}}
-\captionof{figure}{ECAL time, $t$ Vs $\eta$(top) and $t$ Vs $\phi$~(bottom) for photons from \texttt{SinglePhoton} dataset~(left) compared to electron candidates from the \texttt{DoubleElectron} dataset~(right). All photons or electron candidates are in barrel subdetector. Most of the photons with $\phi = 0, \pm \pi$ are halo photons which are not observed in the $\PZ$ boson candidate sample.}
+\captionof{figure}{ECAL time $Vs$ $\eta$~(top plots) and $Vs$ $\phi$~(bottom plots) for photon candidates from \texttt{SinglePhoton} dataset~(left) compared to electron candidates from the \texttt{DoubleElectron} dataset~(right). All photons or electron candidates are in barrel subdetector. Most of the photons with $\phi = 0, \pm \pi$ are halo photons which are not observed in the $\PZ$ boson candidate sample.}
 \label{fig:Elec}
 \end{center}
 \end{minipage}
 
 \vspace{5mm}
-The di-electron mass(left) and electron arrival time(left) for signal~(blue) and background~(red) events is shown in Figure \ref{fig:Zmass}. The out-of-time background contribution to the \PZ event sample is estimated using a \textit{sideband subtraction method} described as follows:
+The di-electron mass~(left plots) and electron arrival time~(right plots) of both electron candidates of the \PZ boson for signal~(blue) and sideband~(red) events is shown in Figure \ref{fig:Zmass}. The out-of-time background contribution to the true \PZ events sample is estimated using a \textit{sideband subtraction method} described as follows:
 \begin{itemize}
-\item we fit the di-electron candidate mass distribution of the background control sample with a polynomial function(see top plots of Figure  \ref{fig:collZ}) to extract the background template.
-\item using the background template, we obtain a scale factor $$\displaystyle{\mbox{Scale Factor} = \frac{N}{M_{1} + M_{2}}}$$~(see bottom plot of Figure \ref{fig:collZ}) which is use to determine the correct contribution of the background events to the the signal event sample.
-\item After scaling the background control sample electron arrival ECAL time distribution~(red distribution of right plot in Figure \ref{fig:Zmass}) using the extracted scale factor and subtracting the scaled sideband control sample electron ECAL time distribution from the signal sample  electron ECAL time distribution~(blue distribution of right plot in Figure \ref{fig:Zmass}), the resulting distributions shown in Figure \ref{fig:Ztime} gives an estimate for out-of-time candidate events from collision.
-\item The ratio of the total number of events with the electron ECAL time $t > 3$~ns to those with electron ECAL time, $|t| < 2$~ns, \ie $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}$, gives an estimated fraction of out-of-time background events from collision. 
+\item We fit the di-electron candidate mass distribution of the sideband control sample with a polynomial function(see top plots of Figure  \ref{fig:collZ}) to extract the background template.
+\item Using the background template, we obtain a scale factor as 
+\begin{equation}
+\mbox{Scale Factor} = \frac{N}{M_{1} + M_{2}},
+\end{equation}
+shown in the bottom plot of Figure \ref{fig:collZ}, which we used to determine the correct contribution of the background events to the signal event sample.
+\item After scaling the electrons arrival ECAL time distribution~(red distribution on the bottom right plot in Figure \ref{fig:Zmass}) of the sideband control sample using the extracted scale factor, we subtract the scaled time distribution from the time distribution~(blue distribution of right plot in Figure \ref{fig:Zmass}) of \PZ electron candidates from the signal sample. The resulting ECAL time distribution, shown in Figure \ref{fig:Ztime} is the time distribution from true \PZ events. This ECAL time distribution is used to estimate the number of events with out-of-time electromagnetic particles from collision.
+\item The ratio of the total number of events with the electron ECAL time, $t > 3$~ns, to those with electron ECAL time, $|t| < 2$~ns, \ie $ N_{t > 3~ns}/ N_{|t| < 2.0~ns}$, gives an estimate of the fraction of out-of-time background events from collision. 
 \end{itemize}  
 
 \vspace{5mm}
@@ -896,7 +906,7 @@ The di-electron mass(left) and electron arrival time(left) for signal~(blue) and
 \mbox{
 \includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/Z-CandidateOverLay-BackgroundMass.pdf}
 \includegraphics[height=0.55\textwidth, width=0.5\textwidth]{/home/tensr/Documents/TEN-HEP-PHD-THESIS/PHD_THESIS/PHD/THESISPLOTS/Z-CandidateOverLay-BackgroundTime.pdf}}
-\captionof{figure}{Di-electron candidate mass distribution~(left) and the time~(right) of the two electrons for the signal \textcolor{blue}{$76 < m_{\EE} < 100$}\GeVcc $\PZ$ boson sample and for Control Samples~(\textcolor{red}{$50 < m_{\EE} < 76$}\GeVcc and \textcolor{red}{$ 100 < m_{\EE} < 130$}\GeVcc). Candidates events are from the \texttt{DoubleElectron} data sample.}
+\captionof{figure}{Di-electron mass distribution~(left) and the time~(right) of the two electron candidates for the signal \textcolor{blue}{$76 < m_{\EE} < 100$}\GeVcc $\PZ$ boson sample and for sideband sample~(\textcolor{red}{$50 < m_{\EE} < 76$}\GeVcc and \textcolor{red}{$ 100 < m_{\EE} < 130$}\GeVcc). Events are from the \texttt{Single/DoubleElectron} data sample.}
 \label{fig:Zmass}
 \end{center}
 \end{minipage}
@@ -911,14 +921,17 @@ The di-electron mass(left) and electron arrival time(left) for signal~(blue) and
 \includegraphics[height=0.55\textwidth, width=0.8\textwidth]{THESISPLOTS/ZBackground_SF.png}
 %\includegraphics[height=6cm, width=0.5\textwidth]{THESISPLOTS/CMS_Slice.png}
 }
-\captionof{figure}{\textit{Top}: Polynomial fit~(red \& blue lines) of the di-electron invariant mass of candidate \PZ events for the sideband control sample~(left) only and all \PZ events~(right). \textit{Bottom:} Fitting the sideband CS to extract the scale factor use for estimating sideband event contribution in signal sample.}
+\captionof{figure}{\textit{Top}: Polynomial fit~(red \& blue lines) of the di-electron invariant mass of candidate \PZ events for the sideband control sample~(left) only and all \PZ events~(right). \textit{Bottom:} Fitting the total \PZ event sample with template extracted from fitting the sideband CS to extract the scale factor use for estimating the background event contribution in true \PZ signal events sample.}
 \label{fig:collZ}
 \end{center}
 \end{minipage}
-%%%%%$$$$$
+
 \vspace{5mm}
   The estimated ratio for out-of-time events to in-time collision events for the final time distribution of signal electron candidates after the normalized sideband subtraction, shown in Figure \ref{fig:Ztime} is about, $N_{t > 3~ns}/ N_{|t| < 2.0~ns} = 1.29 ^{+0.374}_{-0.325} \times 10^{-5}$.
-In order to get the estimated number of background events of the neutralino decay signal from collisions in the control sample \textsf{D}, $N^{col}_{D}$, we multiply this ratio to the total number of in-time events from the neutralino decay signal event selections which is $28282$. This gives $N^{col}_{D} = 0.366^{+0.106}_{-0.092}$ events. Comparing this to the value obtained with the \textsf{ABCD} method, which is $\frac{28283}{1446522} = 0.0391^{+0.039}_{-0.047}$, we find that numbers from thw two methods of estimating the number of collision background events are not exactly equal. We cannot interpret this inequality between both methods of estimating the number of background events from collision. On the contrary, the fact that this ratio $N_{t > 3~ns}/ N_{|t| < 2.0~ns}$ is very small confirms our speculation that indeed the contribution of collision events with out-of-time photons to our background estimation is almost negligible~(less than a single event) such that the uncertainties on the ratio of out-of-time to in-time events used in our \textsf{ABCD} collision background estimation is irrelevant.  It is also important to not that, we have not applied any \MET selection requirements in selecting our \PZ candidate events. A simple cut, $\MET > 60$\GeV could further reduce this ratio to an even smaller number observed in our background estimation.
+\par
+To obtain an estimate of the number of background events from collisions in the signal control sample \textsf{D}, $N^{col}_{D}$, of the \PSneutralinoOne decay, we multiply this estimated ratio to the total number of in-time events~(CS \textsf{$I$}), shown in Table \ref{tab:RESULT}, passing our final signal event selections requirements, which is $28282$. This gives $N^{col}_{D} = 0.366^{+0.106}_{-0.092}$ events. Comparing this to the value obtained with the \textsf{ABCD} method, which is $\frac{28283}{1446522} = 0.0391^{+0.039}_{-0.047}$ events, we find that the two methods of estimating the number of background events from collision are not exactly equal. 
+\par
+We cannot interpret this inequality  as a disagreement between both methods for estimating the number of background events from collision. On the contrary, this non-agreement can be explained. We have not applied any \MET selection requirements for the \PZ candidate events selection. A simple cut in missing transverse energy, $\MET > 60$\GeV, could further reduce the estimated ratio, $N_{t > 3~ns}/ N_{|t| < 2.0~ns}$, to a very smaller number than what we got. In fact, the smallness of this ratio confirms our speculation that indeed the contribution from collision events with out-of-time electromagnetic particles to our background events is almost negligible~(less than a single event) such that the uncertainties on the ratio of out-of-time to in-time events used in our \textsf{ABCD} collision background estimation is irrelevant. This means, the number $N^{col}_{D} = 0.366^{+0.106}_{-0.092}$, can be used for our estimated number of background events from collision and our final results will not change by a lot.
   
 \vspace{5mm}
 \begin{minipage}{0.90\linewidth} 
@@ -933,7 +946,7 @@ In order to get the estimated number of background events of the neutralino deca
 
 
 \section{Systematic Studies}
-The event selection requirements include a photon \pt greater than 80\GeVc, a jet \pt greater than 35\GeVc and missing energy greater than 60\GeV. We expect this same selections applied to our MC signal event sample to lead to good event selection efficiency. Therefore, any difference in the photon and jet \pt and missing transverse energy between MC and data will lead to systematic uncertainties in our event selection efficiency. We anticipate these uncertainties to come from quantities like jet energy scale~(JES), jet energy resolution~(JER), electron-photon energy scale, instrumentation related and missed or unclustered energy deposits in missing transverse energy reconstruction, photon ECAL arrival time bias and ECAL time resolution. In summary, the different sources of uncertainties considered in this analysis is presented in Table \ref{tab:SYST}. These uncertainties are obtain by varying the nominal values of each quantity while keeping the rest fixed by $1\sigma$ deviation and counting the number of events passing our event selection requirements. Our largest uncertainty is from ECAL timing bias on the absolute reference time(zero ns) of the ECAL timing to measured the photon arrival time. This has the larget impact on our analysis as our analysis is based on counting the number of events with photon ECAL time above $3$~ns. The next largest uncertainties are from unclustered energy deposits which affect missing energy scale and from jet energy scale and resolution.
+The event selection requirements include a photon \pt greater than 80\GeVc, a jet \pt greater than 35\GeVc and missing energy greater than 60\GeV. We expect this same selection requirements, when applied to our MC signal event sample, to lead to good event selection efficiency. Any difference in the photon and jet \pt and missing transverse energy between MC and data, will lead to systematic uncertainties in the signal event selection efficiency. We anticipate these uncertainties to come from quantities like jet energy scale~(JES), jet energy resolution~(JER), electron-photon energy scale, instrumentation related and missed or unclustered energy deposits in missing transverse energy reconstruction, photon ECAL arrival time bias and ECAL time resolution. In summary, the different sources of uncertainties considered in this analysis is presented in Table \ref{tab:SYST}. These uncertainties are obtain by varying the nominal values of each quantity while keeping the rest fixed by $1\sigma$ deviation and counting the number of events passing our event selection requirements. Our largest uncertainty is from ECAL timing bias on the absolute reference time(zero ns) of the ECAL timing to measured the photon arrival time. This has the larget impact on our analysis as our analysis is based on counting the number of events with photon ECAL time above $3$~ns. The next largest uncertainties are from unclustered energy deposits which affect missing energy scale and from jet energy scale and resolution.
 \newline
 The uncertainty on the photon energy scale in barrel was estimated to be 4.0\% and based on the final-state radiation~(FSR) in $Z\rightarrow \mu\mu\gamma$ events \cite{PES}.  The uncertainty on the \MET resolution uses a conservative estimate from \cite{METRES}. The uncertainty on the ECAL time resolution was obtained by comparing the peak in the photon ECAL time distribution of events from $\gamma +$ jet MC sample to events from data with photon ECAL time $|t| < 2$~ns. The difference is found to be of the order of 200~ps per event. A study using high \pt photons with energy beyond gain transitions has was also performed and this discrepancy was observed to be worse. 
 The systematic uncertainty on luminosity measurement has the recommended value of $2.2$\% provided by CMS and LHC luminosity measurements while the uncertainty from pardon density functions~(PDF) is evaluated using the re-weighting technique which uses the Master Equation of CTEQ65 model set described in \cite{PDF}.
