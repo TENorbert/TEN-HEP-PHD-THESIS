@@ -17,7 +17,7 @@ We expect most of our background events of this search to arise from  non-collis
 %Together with photons produced from non-collision, events from $pp$ collisions with misreconstucted ECAL time can equally contribute to the tails of the photon time distribution.
 % can mimic the signal of an isolated late photon, with large \MET and multiple jets. In the case where the \PW decay into and electron and neutrino, the electron or jet is mis-identified as a photon and its ECAL time miss-measured during event reconstruction, while the undetected photon is identified as \MET. Events where the \PZ boson decays into neutrinos, have large \MET and if the associated jet(s) is mis-identified as photons and their ECAL time mis-measured, such events could mimic signal events with late photons.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{Signal and Background Events}
+\subsection{Signal and Background Events}
  We expect a typical signal event of the decay of a massive neutral long-lived particle, to be produced in a  proton-proton~($pp$) collision at the LHC and detected with the CMS detector, according to the prediction of a benchmark Gauge Mediating Supersymmetry Breaking~(GMSB) model described as the "Snowmass Points and Slope 8"~(SPS8). In this model, the massive long-lived neutral particle is the Next-to-Lightest Supersymmetric Particle~(NLSP) which is the lightest neutralino~(\PSneutralinoOne). The \PSneutralinoOne decay into a photon~(\Pphoton) and the Lightest Supersymmetric Particle~(LSP) called the gravitino~($\tilde{G}~$),  $\PSneutralinoOne\rightarrow\Pphoton + \tilde{G}$. The $ \tilde{G}$  is undetected because it does not interacts with the CMS detector material. Its presence is indirectly inferred by measuring the missing transverse momentum~(\MET). The photon, because of the long-lived nature of the \PSneutralinoOne, arrives late at the ECAL compared to photons produced from nominal $pp$ collisions. 
 \par
 In a LHC collider, the \PSneutralinoOne can be singly or pair produced in the direct interaction of the quarks/gluons~(partons) inside the proton, $\Pquark\APquark\rightarrow \PSgxpm\PSneutralinoOne$ or $\Pquark\APquark\rightarrow \PSneutralinoOne\PSneutralinoOne$, respectively. However, in this analysis, we are interested in cases where the \PSneutralinoOne is produced indirectly from the cascade decay of heavier sypersymmetric particles like gluino~($\PSgluino$) and squark~($\Psquark$),~ $\Pg\Pg\rightarrow \PSgluino\PSgluino \rightarrow \Pquark\APquark\Pquark\APquark\PSneutralinoOne\PSneutralinoOne$ and $\Pquark\APquark\rightarrow \Psquark\APsquark\rightarrow \APquark\Pquark\PSneutralinoOne\PSneutralinoOne$, respectively. This is because the gluino/squark production cross-section is largest at a $pp$ collider like the LHC, and in association with the neutralino decay, the event also contain multiple hiph-\pt jets which provide an added signal requirement useful for suppressing background events with no jets. Thus, our typical signal event should comprise of at least a single delayed high-\pt photon, large \MET and multiple high-\pt jets. Finding such an event with the CMS detector will be evidence of a new physics phenomena. 
@@ -50,17 +50,15 @@ The events are generated according to the physics process, which we described in
 p+p \rightarrow \PSgluino\PSgluino, \PSq\PSq \rightarrow [\mbox{1 or 2 cascade decays}] \rightarrow 2\PSneutralinoOne + \mbox{jets} \rightarrow 2\Pphoton + 2\tilde{G} + \mbox{jets}.
 \end{equation} 
 We use \textsf{PYTHIA}-6 \cite{PYTHIA6} as the MC event generator. It takes as input an SLHA file and generates events of supersymetric particles, produced at the LHC $pp$ collider with center of mass energy, $\sqrt{S} = 8$\TeV. The interaction of these supersymmetric particles with the CMS detector is simulated using the \textsf{GEANT}4 \cite{GEANT4}, particle detector simulation software. A full physics event is reconstructed from energy deposits~(hits) in the CMS detector using the CMS event reconstruction Software~(CMSSW). To minimize any disagreement between MC and data, we use the same CMSSW release version~(\textbf{CMSSW\_5\_3\_29}) in the MC event reconstruction with the same detector conditions as the recorded data.% from LHC $pp$ collision.
-\par 
+%\par 
 
-
-
-\subsection{Background Modeling}
-Although our background estimation study is data-driven, however, we also generated a small sample of  $\gamma +$jet(s) events at leading order cross-section. The $\gamma +$jet(s) MC sample is used for studying ECAL time of simulated events. 
-\newline
-We did not produced MC samples for background events with \PW, \PZ and $t\bar{t}$ decays because
-in addition to the fact that their contribution as background events is small, our high-\pt~($\pt > 80$\GeVc) photon requirement will suppress these background events further as most of the electrons from these events which can be misidentified as photons are not high-\pt photons. 
-\newline
-We also did not produce MC samples for spikes, cosmic and beam halo muons as simulations of the photon ECAL time is not very reliable especially for those events with large photon ECAL time. 
+%%\subsection{Background Modeling}
+%%Although our background estimation study is data-driven, however, we also generated a small sample of  $\gamma +$jet(s) events at leading order cross-section. The $\gamma +$jet(s) MC sample is used for studying ECAL time of simulated events. 
+%%\newline
+%%We did not produced MC samples for background events with \PW, \PZ and $t\bar{t}$ decays because
+%%in addition to the fact that their contribution as background events is small, our high-\pt~($\pt > 80$\GeVc) photon requirement will suppress these background events further as most of the electrons from these events which can be misidentified as photons are not high-\pt photons. 
+%%\newline
+%%We also did not produce MC samples for spikes, cosmic and beam halo muons as simulations of the %%photon ECAL time is not very reliable especially for those events with large photon ECAL time. 
 % eventhough these events have \MET and multijets, there are not so many cases in which the photon have a  large ECAL time because a jet was misidentified as a photon and its ECAL time mismeasured. Another reason we did not use MC samples of these events is because simulations of photon/electron ECAL time is not very reliable especially for those events with large photon/electron ECAL time. 
 %One of our event selection requirement is high \pt isolated photons, this should reduce contributions from these collision background events by a lot. 
 
@@ -189,7 +187,10 @@ These observations gave us confidence that the signal samples were properly gene
 \end{center}
 \end{minipage}
 %%%
-\subsection{ECAL Time}
+\section{ECAL Timing}
+In this section, we describe how the photon arrival time is measured, how we adjust the MC time so that it agrees with data. We also described the neutralino lifetime and discuss the possible reasons why the photon is delayed and finally we discuss the satellite bunches and argue that they could be a possible background source to late photons.
+
+\subsection{Photon Time Measurement}
 The presence of spikes, noisy crystals and pile-up events, demand a robust method for measuring the photon arrival time at  ECAL and since ECAL time is our main observable for distinguishing background from signal events, such a method must be capable of reducing timing bias which may arise from such anomalous events. As a result, we studied different methods for measuring the photon arrival time at ECAL. 
 \newline
 The electromagnetic shower of an electromagnetic particle spreads across several crystals~(energy and time measurements from several channels) belonging to the particle's supercluster containing all of the particle's energy. Using the supercluster, the arrival time of an electromagnetic particle can be defined using either the reconstructed time~($ t_{reco}$) of a single crystal, the \textit{seed crystal}~(crystal with the highest energy deposit), or a weighted average time calculated using the reconstructed time and its uncertainty of each crystal of the supercluster. We write, $t_{seed}$, for the seed time and, $t_{Ave}$, for the average time defined as
@@ -250,7 +251,7 @@ where, $N$ is the number of crystals in the photon supercluster, $t^{i}_{reco}$ 
 From the $\chi^{2}$ $Vs$ ECAL time plot~(right plot of Figure \ref{fig:spikeVsPhoton}), we observe that  most of the photons have ECAL time around zero but also many of the photons with large ECAL time  have large normalized $\chi^{2}$ values which is expected where the time measurements by non-seeded crystals is inconsistent with the time measurement of the seed crystal. We also observed that, a cut in $\chi^{2} < 4$, can reduce with 99.2\% efficiency, photon contributions from spikes and misidentified jets where a neutron embedded in the jet hitting directly the photo-detectors produces a spike.
 %%%
 %%%%
-\subsubsection*{Simulated ECAL Time}
+\subsubsection{Monte Carlo Time}
 It is challenging to properly simulate ECAL time for MC events so that it captures the conditions of the ECAL detector during data recording. As a result, the time from MC events does not entirely represent the status of ECAL time in data, in terms of mean time and time resolution.
 We extract the adjustments for MC event time needed to match the mean time and timing resolution of data using a MC $\gamma +$jet samples of selected 1 or 2-jets events. Only events with isolated in-time, $t_{\gamma} < 2$~ns, with $\pt > 80$\GeV are selected. 
 We perform the adjustment by shifting the mean time and smearing the timing resolution by an additional Gaussian convolution on the photon time of MC events so as to match the mean time and time resolution of data. The photon ECAL time from data and MC $\gamma +$jet samples both shown in Figure \ref{fig:DATAMCTime}; where we compare before~(left plot) and after~(right plot) the adjustment on MC ECAL time was made, agree quite well. 
@@ -273,7 +274,7 @@ We perform the adjustment by shifting the mean time and smearing the timing reso
 \end{minipage}
 %%%
 %\clearpage
-\subsubsection{Neutralino Measured Lifetime}
+\subsection{Neutralino Lifetime}
 The distance traveled, in the CMS detector, by the \PSneutralinoOne before it decays,  mentioned previously section \ref{NeutralinoDecay}, is given as
 \begin{equation}{\label{eq:decaylength}}
 \mathrm{L} = \left(c\tau_{\PSneutralinoOne}\right) \cdot \left( \gamma \beta\right) = \left(c\tau_{\PSneutralinoOne}\right) \cdot \left( \frac{p}{m_{\PSneutralinoOne}}\right).
@@ -293,7 +294,8 @@ This distance depends on the momentum~($p$) and mean lifetime~($c\tau_{\PSneutra
 \end{center}
 \end{minipage}
  
-\subsubsection*{Source of Delayed Photons}
+%%\subsubsection{Source of Delayed Photons}
+\vspace{5mm}
 The photon from the decay of \PSneutralinoOne can arrive late at ECAL for either one of the following reasons: first, because the \PSneutralinoOne is traveling slow \ie with boost, $\beta = \frac{p_{\PSneutralinoOne}}{m_{\PSneutralinoOne}} << 1$, and second, because the \PSneutralinoOne was produced with significant boost such that the photon traveled to ECAL through a non-direct flight path from the nominal $pp$ interaction point. We distinguish between these two sources of delayed photons by estimating the photon arrival time at ECAL in each scenario using the  distance traveled by \PSneutralinoOne before decay and the distance traveled by the photon from the decay point to the point of detection at ECAL. Figure \ref{fig:DELAY}~(left) is a schematic representation showing how we estimate the photon arrival time at ECAL in each of the possible travel flight path representing the different source of delayed photons. The estimated photon arrival ECAL time in each scenario is given as follows:
 \begin{itemize}
   \item For slow moving neutralinos: $\Delta t_1$ = (L1/c$\beta$) - (L1/c)
@@ -315,7 +317,7 @@ The photon from the decay of \PSneutralinoOne can arrive late at ECAL for either
 \vspace{5mm}
 The \PSneutralinoOne is traveling with velocity, $v = c\beta$, where $c$ is the speed of light in vacuum. The distribution of the estimated photon ECAL arrival times $\Delta t_{1}$ and $\Delta t_{2}$, is plotted shown in Figure \ref{fig:DELAY}(right), where the color intensity represents the photon population. We observed that most of the late arrival time photons are from the decay of slow moving \PSneutralinoOne compared to those from non-direct flight path to ECAL. This proves that a good number of \PSneutralinoOne produced with low momentum such that the ratio $\frac{p_{\PSneutralinoOne}}{m_{\PSneutralinoOne}} << 1$ produced most of our detectable delayed photons, using ECAL time measurements. While \PSneutralinoOne with very long lifetimes~($c\tau$) produced with high momentum will very likely escape the ECAL without detection unless their decay happens within the ECAL volume such that the delayed photon arrives at the ECAL in a non-direct flight path.
 %%%%%
-\subsubsection*{Satellite Bunch Time}
+\subsection{Satellite Bunches}
 We observed~(see Figure \ref{fig:TIMEECAL}) a 2.5~ns discrete pattern in the photon ECAL time of events, produced in $pp$ collisions, with photon $\pt > 50$\GeVc and belonging to the barrel and endcaps.
 
 \begin{minipage}{0.90\linewidth} 
@@ -332,14 +334,14 @@ We observed~(see Figure \ref{fig:TIMEECAL}) a 2.5~ns discrete pattern in the pho
 \end{minipage}
 
 \vspace{5mm}
-Most of the photons with this signature belong to the endcap~($1.47 < \eta < 3.0$) and the rest in the barrel~($|\eta| < 1.47$). Photons with this signature are produced from collisions of protons in \textit{Ghost}/\textit{Satellite} bunches, described in section \ref{Ghost}, with either the main proton bunch or other \textit{Ghost}/\textit{Satellite} bunches. These events are considered background events to our delayed photon signal because they produced photons from collisions with large ECAL time. It is challenging to reject these background events. We estimate their contribution using the ratio of the number of protons in ghost to main proton bunches taken from the proton population in the RF cavity of the LHC proton filling profile. From this ratio, we conclude that one in every $100,000$ photons from $pp$ collisions, observed in ECAL particularly the endcaps, is from ghosts bunch collisions.
-Their limited presence in the barrel is because very few of these photons are produced with high enough transverse momentum, \pt, to travel to the barrel and survive the 50\GeVc requirement. 
+Most of the photons with this signature belong to the endcap~($1.47 < \eta < 3.0$) with a few in the barrel~($|\eta| < 1.47$). These out-of-time photons are produced  from beam halo muons from protons in \textit{Ghost}/\textit{Satellite} bunches or RF cavity, described in section \ref{Ghost}. We consider these events as background to our delayed photon signal. In addition to developing methods to tag and veto these events, a simple estimate of their contribution can be made using the ratio of the number of protons in the ghost RF cavities or bunches to the main proton bunches taken from the proton population in the RF cavity of the LHC proton filling profile. From this ratio, we estimate that one in every $100,000$ photons observed in ECAL particularly the endcaps, is from beam halo muons produced by ghosts bunches. Their presence is not clearly visible in the barrel as in the endcaps as they will be highly smeared in the barrel because their time is dependent on $\eta$ which is not the case in the endcaps. 
+%is because very few of these photons are produced with high enough transverse momentum, \pt, to travel to the barrel and survive the 50\GeVc requirement. 
 \newline
 Our observation of this phenomenon together with the sub-par ECAL time resolution in the endcaps compared to the barrel, means, this analysis only uses photons belonging to the barrel.
 \newline
-We estimate, the contribution of these events to our delayed photon background in the signal using an  control sample of events with electromagnetic particles of moderate \pt range in the barrel like events with $\PZ \rightarrow \EE$ decay. The details of this study and the results obtained is discussed in the collision background estimation section of this analysis.
+We estimate, the contribution of these events to our delayed photon background in the signal using a  control sample of events with electromagnetic particles of moderate \pt range in the barrel like events with $\PZ \rightarrow \EE$ decay. The details of this study and the results obtained is discussed in the collision background estimation section of this analysis.
 %%%
-\paragraph*{\MET Adjustments} \mbox{}\\
+\subsection{\MET Adjustments}
   During energy clustering in the formation of superclusters used for event reconstruction by the particle flow~(PF) algorithm, "out-of-time" energy deposits in ECAL are excluded. The reason is because the algorithm avoids energy deposits from particles not produced from the main proton-proton bunch collisions like cosmic muons and machine induced backgrounds which are normally out-of-time. As a result of the exclusion, the out-of-time photon \et is not included in the calculation of missing transverse energy or \ETslash\hspace{0.15cm}~(from now on, we will be using for convenience, \ETslash\hspace{0.15cm} instead of \MET as the symbol for missing transverse energy) of the event. This exclusion introduces some differences in the calculation of \ETslash\hspace{0.15cm} for in-time~($|t_{\gamma}| < 3.0$~ns) and out-of-time photon events. 
 \newline
 Because energy deposits from events with out-of-time photons could be from a possible signal event, and we are searching for events with large arrival time photons, we correct for this exclusion by adding back the out-of-time photon's $\ET$ vector to the  particle flow reconstructed \ETslash\hspace{0.15cm}~(PF-MET) vector for events with out of time photons.
@@ -359,22 +361,22 @@ We introduced an additional missing transverse energy variable defined as $\vec{
 %\label{fig:METS}
 %\end{center}
 \section{Event Selection}
-Our event selection happens in two stages. The first stage is online at the HLT trigger level where only triggered single photon events are selected and the second stage happens offline where the full signal event selection requirement is applied. 
+Our event selection happens in two stages. The first stage is online at the L1 and HLT trigger levels where only triggered single photon events are selected while the second stage happens offline where our signal-like event selection requirement is applied. 
 \newline
-The full event selection criteria offline is designed to select signal events with event topology comprising of at least a single photon, multiple jets and large \ETslash\hspace{0.15cm}. The cascade decay of gluino or squark to other quarks/gluons along with the \PSneutralinoOne, is the reason for the multiple jets requirement and the at least a single photon and large \ETslash\hspace{0.15cm} requirement is if at least one of the pair of \PSneutralinoOne decay to a photon and gravitino. The large \ETslash\hspace{0.15cm} requirement is useful for eliminating $\gamma + $jets and QCD events whose \ETslash\hspace{0.15cm} is \textit{fake} \ETslash\hspace{0.15cm}, present because of poor energy reconstruction  while the multijets requirement helps to reduce background events not produced from nominal $pp$ collisions like cosmic muons, beam halo muons and spikes, which usually produce out-of-time photons.
-The multiple jets requirement also helps to reduce ElectroWeak~(EWK) background events from $pp$ collisions which are events with the decay of $\PW \rightarrow e + \nu$ and $t\bar{t}$, where the top~($t$) decays to a $b$ quark and a \PW 100\% of the time. These events can produce fake photons~(misidentified electron as a photon) and real \ETslash\hspace{0.15cm} arising from the presence of the neutrino~($\nu$). However, the high-\pt photon requirement in our photon selection certainly reduce the contribution from EWK background events.
+The offline event selection criteria is designed to select signal-like events whose event topology comprise of at least a single photon, multiple jets and large \ETslash\hspace{0.15cm}. The multiple jets arise from the cascade decay of gluino or squark to other quarks/gluons in addition to the neutralino. We require multiple jets in our event selection as this helps suppress non-collision background events like cosmic and beam halo muons, and $pp$ collision background events like the ElectroWeak~(EWK) background events of $\PW \rightarrow e + \nu$ and $t\bar{t}$ decays, where the top~($t$) decays to a $b$ quark and a \PW boson 100\% of the time. These events with \PW boson can produce fake photons~(misidentified electron as photon) and real \ETslash\hspace{0.15cm} arising from the presence of the neutrino~($\nu$). 
 \newline 
-In order to reduce another source of collision background events which are events with fake photons from multijets and QCD events, where a jet is misidentified as a photon, we require  high-\pt jets of very good quality since jets from multijet QCD events are not of very good quality as a lot of other particles like electrons or muons can be found embedded in these jets.
-\newline 
-An important part of our photon selection requirement is that we accept only photons in the barrel~($|\eta_{\gamma}| < 1.479$) region of ECAL in order to reduce out-of-time photon background contribution from ghost/satellite bunch collisions. Another out-of-time photon background source is from events with spikes, we reject some of these events at the HLT trigger level using electromagnetic shower shape related quantities like $S_{Minor}$ and $S_{Major}$.  
+Other collision background events producing fake photons~(jet misidentified as photon) like multijets and QCD events can also be suppressed by selecting purely hadronic jets \ie jets containing a greater portion of hadronic energy fraction from pions and kaons.
+\newline
+The single late photon and large \ETslash\hspace{0.15cm} is from  $\PSneutralinoOne \rightarrow \gamma + \tilde{G}$ decay. We select only photons in the barrel~($|\eta_{\gamma}| < 1.479$). This suppresses out-of-time photons from the so-called halo muons from ghost/satellite proton bunches populating mostly the endcaps~($1.5 < \eta_{\gamma} < 3.0$). We also require the photons to be of high-\pt and this helps suppress misidentified out-of-time photon contribution from EWK events.
+\newline
+The large \ETslash\hspace{0.15cm} requirement is useful for suppressing $\gamma + $jets and QCD events with apparent \ETslash\hspace{0.15cm} or \textit{fake} \ETslash\hspace{0.15cm} which arise from energy misreconstruction and cracks in the detector. 
+Out-of-time photon contribution from spikes can be reduced by applying electromagnetic shower shape selection on $S_{Minor}$ and $S_{Major}$ at the HLT trigger level. 
 %%%
 %%%
 \subsection{Trigger Selection}
-In our online event selection, we select only events passing our online higher level trigger~(HLT). The HLT trigger used for our event selection during $pp$ collisions at $\sqrt{S} = 8$\TeV for this analysis is \texttt{HLT\_DisplacedPhoton65\_CaloIdVL\_IsoL\_PFMET25}, which is 
-seeded by level 1 trigger; \texttt{HLT\_L1SingleEG12}. This trigger was developed primarily to study delayed photons and to avoid bias in the event selection towards any particular signal model, the trigger only requires that an accepted event contains at least a single photon with a \pt of at least 65\GeVc and \ETslash\hspace{0.15cm} above 25\GeV. The minor axis of the photon electromagnetic shower must not be spread across many crystals in $\phi$ implemented as $ 0.1 < S_{Minor} < 0.4$. The trigger efficiency and turn-on~(efficiency becomes nearly 100\%) curve for selecting events with delayed photon candidates is studied for the photon \pt and event \ETslash\hspace{0.15cm}. In order to avoid any correlation between the photon and \ETslash\hspace{0.15cm}, the efficiency for each variable is studied separately using another trigger \texttt{HLT\_Photon50\_CaloIdVL\_IsoL}.  The photon candidates used in this photon efficiency study must pass our offline photon selection criteria shown in table \ref{tab:PhotonSel}. The HLT photon selection efficiency for \pt is defined as the fraction of offline reconstructed photons to those triggered by \texttt{HLT\_IsoPhoton50} trigger within $\Delta R < 0.5$.
-% We do this by using a \texttt{SingleMuon} dataset~(\texttt{HLT\_IsoMu30}) to study the efficiency measurements.
-Similarly, the \ETslash\hspace{0.15cm} HLT efficiency is defined as the fraction of events containing at least a jet and \ETslash\hspace{0.15cm} more than the HLT required \ETslash\hspace{0.15cm} of 25\GeV.
-The results of the trigger efficiency measurements are shown in Figure \ref{fig:HLTEff} against photon \pt and \ETslash\hspace{0.15cm}. This HLT event selection efficiency study indicates that the event selection efficiency is 100\% for events with photon $\pt > 80$\GeVc and $\ETslash\hspace{0.15cm} > 60$\GeV. These efficiency studies use the \texttt{HLT\_Photon50\_CaloIdVL\_IsoL} trigger which has no \ETslash\hspace{0.15cm} and jet multiplicity requirement for the denominator and the \texttt{HLT\_DisplacedPhoton65\_CaloIdVL\_IsoL\_PFMET25} for the numerator. A \texttt{SinglePhoton} data sample is used to verify these efficiency study while the GMSB SPS8 and $\gamma +$jets samples are used to derive any correction factors between data and MC events.
+In our online event selection, we select events passing our online higher level trigger~(HLT): \texttt{HLT\_DisplacedPhoton65\_CaloIdVL\_IsoL\_PFMET25}, which is 
+seeded by a level 1 trigger:\texttt{HLT\_L1SingleEG12}. The HLT trigger was developed primarily to trigger on events with delayed photons with the requirement  that the accepted event contains at least one photon with \pt more than 65\GeVc and \ETslash\hspace{0.15cm}~(without any out-of-time energy deposit bias) above 25\GeV. The minor axis of the photon electromagnetic shower must not be spread across many crystals in any direction. This is implemented as $ 0.1 < S_{Minor} < 0.4$ of the photon. We studied the HLT efficiency and turn-on~(efficiency becomes nearly 100\%) curve in the photon \pt and event \ETslash\hspace{0.15cm} and separately for \pt and \ETslash\hspace{0.15cm} using another trigger \texttt{HLT\_Photon50\_CaloIdVL\_IsoL} as the denominator. The \texttt{HLT\_Photon50\_CaloIdVL\_IsoL} selects photon candidates which are very loose isolated with $\pt > 65\GeVc$ and must also satisfy our offline photon selection requirement summarized in Table \ref{tab:PhotonSel}. The HLT event selection efficiency in \pt is defined as the fraction of offline reconstructed photons to photons triggered by the \texttt{HLT\_Photon50\_CaloIdVL\_IsoL} trigger within $\Delta R < 0.5$ while the efficiency in \ETslash\hspace{0.15cm} uses the \texttt{HLT\_Photon50\_CaloIdVL\_IsoL} trigger which has no \ETslash\hspace{0.15cm} and jet multiplicity requirement for the denominator and the \texttt{HLT\_DisplacedPhoton65\_CaloIdVL\_IsoL\_PFMET25} for the numerator
+The results of the trigger efficiency measurements in photon \pt and event \ETslash\hspace{0.15cm} shown in Figure \ref{fig:HLTEff} indicate that the event selection efficiency is 100\% for events with photon $\pt > 80$\GeVc and $\ETslash\hspace{0.15cm} > 60$\GeV. %A \texttt{SinglePhoton} data sample is used to verify these efficiency study while the GMSB SPS8 and $\gamma +$jets samples are used to derive any correction factors between data and MC events.
 
 \vspace{5mm}
 \begin{minipage}{0.90\linewidth} 
@@ -382,21 +384,26 @@ The results of the trigger efficiency measurements are shown in Figure \ref{fig:
 \mbox{
 \includegraphics[height=0.45\textwidth, width=0.5\textwidth]{THESISPLOTS/PFMET_EffAsym.png}
 \includegraphics[height=0.45\textwidth, width=0.5\textwidth]{THESISPLOTS/Photon_EffAsym.png}}
-\captionof{figure}{Our HLT trigger efficiency turn-on curves for photon \pt~(right) and event \ETslash\hspace{0.15cm}~(left).The $\gamma +$jets samples require photon $\pt > 170$~\GeVc.}
+\captionof{figure}{Our HLT trigger efficiency turn-on curves in photon \pt~(right) and event \ETslash\hspace{0.15cm}~(left).The $\gamma +$jets samples require photon $\pt > 170$~\GeVc.}
 \label{fig:HLTEff}
 \end{center}
 \end{minipage}
 %%%%
 \subsection{Offline Selection}
-In addition to the HLT selection, we apply an offline event selection on the photon, jets and \ETslash\hspace{0.15cm} of these events.
+Our offline event selection, applied on HLT triggered single photon events, require that the leading photon   have $\pt > 80\GeVc$ and if the event has more than one photon, the sub-leading photon have $\pt > 45\GeVc$. Electromagnetic showers initiated by charged hadrons are rejected by requiring $E^{\mbox{HCAL}}/E^{\gamma} < 0.05$, where $E^{\mbox{HCAL}}$ is the sum of the energy in the HCAL towers directly behind the ECAL photon supercluster within a $\Delta R < 0.15$, with $\Delta R = \sqrt{(\eta - \eta^{\gamma})^{2} + (\phi - \phi^{\gamma})^{2}} $, and $E^{\gamma}$ the photon energy in ECAL. Electrons are rejected by requiring the absence of hits in the first two layers of the pixel detector that is consistent with an electron track matching the observed location and energy of the photon candidate~(this is known as pixel veto requirement).
 \newline
-The leading photon of an event must have a \pt  greater than 80\GeVc and the sub-leading photon candidates of the same event must have $\pt > 45\GeVc$. Because the Particle Flow~(PF) algorithm does not consider out-of-time isolated photon energy deposits, we do not use the PF photon isolation criteria but rather a \textit{simple cut-based} isolation requirement where we request that there should be no tracks near the selected photon within a range in $\Delta R(\gamma, track) < 0.6$. Tracker, ECAL and HCAL isolation based on the photon \pt and \et, must be within the accepted range required by the simple cut-based approach given in Table \ref{tab:PhotonSel}. The ratio of the photon energy  deposit in HCAL to ECAL must be less than 5\% to avoid misidentifying high fraction electromagnetic and neutral component jets as photons and the photon shower shape along the minor axis~($S_{Minor}$) must be be within 0.12 and 0.38 to avoid selecting spikes as photons. To prevent double counting jets with high electromagnetic energy component as photons with other photons, the photon must be isolated from any other particle in a cone size of $\Delta R(\gamma, \mbox{Other particle})< 0.4$. 
-We only selected photons belonging to the barrel~(EB) region \ie $|\eta_{\gamma}| < 1.479$ since we observed many out-of-time photon candidates from ghost/satellite bunch collisions belong to the endcap~(EE) shown in Figure \ref{fig:TIMEECAL} of a photon ECAL time comparison between photon candidates belonging to EB and EE.
-Our photon selection requirement is summarized in Table \ref{tab:PhotonSel}.
+The photon candidates must satisfy three \textit{isolation} requirements that reject photons produced in hadronic decays:(1) $Iso_{\mbox{TRK}} < 0.2\GeV$, where $Iso_{\mbox{TRK}}$ is the sum of the \pt of tracks compatible with the primary event vertex in an annulus $0.015 < \Delta R < 0.40$, excluding a strip half $\eta$ width of 0.015 and the additional inner cone of size 0.04, optimized to exclude reconstructed tracks from $\PZ\rightarrow \EE$ events, centered around the line of vertex pointing to the photon supercluster. The exclusion is to remove the photon's own energy if it converts into an $\EE$ pair;
+(2) $Iso_{\mbox{ECAL}} < 4.5\GeV$, where $Iso_{\mbox{ECAL}}$ is the transverse energy deposited in ECAL in an annulus  $0.045 < \Delta R < 0.4$ centered around the photon ECAL supercluster, excluding the strip half $\eta$ width of 0.02 and the additional inner cone of size 0.045 centered around the ECAL supercluster position; (3) $Iso_{\mbox{HCAL}} < 4.0\GeV$, where  $Iso_{\mbox{HCAL}}$ is the transverse energy of HCAL tower in an annulus of $0.15 < \Delta R < 0.40$ centered about the ECAL supercluster position.
+If the photon is very closed to a track within a range in $\Delta R(\gamma, track) < 0.6$ it is rejected. This is to avoid misidentifying charge particles as photons and to prevent double counting jets with high electromagnetic energy component as photons. The photon must also be isolated from any other particle in a cone size of $\Delta R(\gamma, \mbox{particle})< 0.4$.  The size of the photon electromagnetic shower along the minor axis~($S_{Minor}$) must be be within 0.12 and 0.38 to suppress photons embedded in hadronic jets. 
 \newline
-For jets, we select jets reconstructed with the PF algorithm based on the CMS standard good quality jet identification selection criteria presented in Table \ref{tab:JetSel}. We require the leading jet in the event to have a \pt of at least 35\GeVc.
+Only photons belonging to the barrel~(EB) region \ie $|\eta_{\gamma}| < 1.479$, are accepted to avoid many out-of-time photon candidates from ghost/satellite beam halo which belong to the endcap~(EE) shown in Figure \ref{fig:TIMEECAL}.
 \newline
-As for Missing Transverse Energy~(MET) selection requirement, with inspiration from our trigger event selection efficiency plot in MET in Figure \ref{fig:HLTEff}, we observed that a missing energy of at least 60\GeV for \ETslash\hspace{0.15cm} and ${\ETslash}^{\gamma}\hspace{0.15cm}$ is enough to suppress $\gamma + $jets and QCD events with fake missing transverse energy.
+Topological selection cuts, $1 - E_{6}/E_{2} < 0.98$ and $ 1 - E_{4}/E_{1} < 0.98$ on the photon energy deposit helps suppress direct interactions in the ECAL APDs by charged particles and neutrons producing anomalous photons known as spikes.
+Our full photon selection criteria is presented in Table \ref{tab:PhotonSel}.
+\newline
+For jets, we select jets with $\eta_{jet} < 2.4$, require that the leading jet in the event has a $\pt > 35\GeVc$ and the number of jets in an event must be at least 1. This helps suppress non-collision background events without jets. The jets are reconstructed using the PF algorithm and identified based on the  identification selection criteria summarized in Table \ref{tab:JetSel}, where the charge electromagnetic fraction~(CHF) and the neutral electromagnetic fractions~(NEF) must make up a greater portion of the jet sub-structure~($>99$\%),the neutral energy fraction~(NEF) must be than 99\% less in order that the jet is not easily misidentified as a photon. A jet near a photon object within a cone of 0.3 is rejected. 
+\newline
+From our HLT trigger event selection efficiency plot in Missing Transverse Energy~(MET) shown in Figure \ref{fig:HLTEff}, we observed that a missing transverse energy of at least 60\GeV for \ETslash\hspace{0.15cm} and ${\ETslash}^{\gamma}\hspace{0.15cm}$ is enough to suppress $\gamma + $jets and QCD events with apparent missing transverse energy.
 
 
 \vspace{5mm}
@@ -418,10 +425,10 @@ As for Missing Transverse Energy~(MET) selection requirement, with inspiration f
   \texttt{Other photons in event must have} $\pt(\gamma^{2,3,...})$  & $ > 45$~ GeV \\
  $|\eta_{\gamma}|$,(\texttt{Barrel Only}),  & $ < 3.0$ ($ < 1.5$) \\
  $S_{Minor}$  & $ 0.12 \leq S_{Minor} \leq 0.38$ \\
- \textbf{H/E}  & $ < 0.05$ \\
+ $E^{\mbox{HCAL}}/E^{\gamma}$  & $ < 0.05$ \\
  $\Delta R(\gamma, track)$  & $ > 0.6 $ \\
- HCAL Iso, ECAL Iso, Track Iso  & $ < 4.0 $, $ < 4.5 $, $ < 0.2 $ \\
- Photon Isolation cone size $\Delta R(\gamma, \mbox{Other particle})$ & $< 0.4$ \\
+ $Iso_{\mbox{HCAL}}$, $Iso_{\mbox{ECAL}}$, $Iso_{\mbox{TRK}}$  & $ < 4.0\GeV $, $ < 4.5\GeV $, $ < 0.2\GeV $ \\
+ Photon Isolation cone size $\Delta R(\gamma, \mbox{particle})$ & $< 0.4$ \\
  Topological Spike cuts  & $1 - E_{6}/E_{2} < 0.98$, $ 1 - E_{4}/E_{1} < 0.98$ \\ 
   \hline 
   \bottomrule
@@ -475,13 +482,12 @@ As for Missing Transverse Energy~(MET) selection requirement, with inspiration f
 
 \vspace{5mm}
 \par
-  In summary, our signal events should have event topology comprise of $\ge1~\gamma + \ge2~ jets + \ETslash\hspace{0.15cm} > 60\GeV + {\ETslash}^{\gamma}\hspace{0.15cm} > 60\GeV$ and
-we use a control sample made of events with zero and one jet background study since these events dominate our background sample shown in Figure \ref{fig:TimePlotJet}.
+  In summary, our signal events are events whose topology comprise of $\ge1~\gamma + \ge2~ jets + \ETslash\hspace{0.15cm} > 60\GeV + {\ETslash}^{\gamma}\hspace{0.15cm} > 60\GeV$. In Figure \ref{fig:TimePlotJet}, we observed that most of our background events, especially non-collision background events like beam halo, are mostly zero and one jet events. Thus, we use these zero and one jet events as a control sample to do our background study.
 
 %%%$$$
 
 \section{Background Estimation}
-Most of our background events with out-of-time photons are non-collision events produced from many different sources. In order to qualify and quantify the different sources, we compare in-time~($|t_{\gamma}| < 1$~ns) photon candidates to out-of-time~($t_{\gamma} < -3$~ns and $t_{\gamma} > 2$~ns) photon candidates.
+Most of our background events with out-of-time photons are non-collision events produced from many different sources. In order to qualify and quantify the different sources, we compare in-time~($|t_{\gamma}| < 2$~ns) photon candidates to out-of-time~($t_{\gamma} < -3$~ns and $t_{\gamma} > 3$~ns) photon candidates.
 By also comparing photon candidates of events with different number of jets, we were able to uncover the different background sources and better quantify their contribution. In Figure \ref{fig:BKGPLOTS}, we present scatter plots of the photon's ECAL time against $\eta$~(left) and against $\phi$~(right) for events with photon $\pt < 60\GeV$, belonging to both the barrel and endcap regions and event $\ETslash\hspace{0.15cm} > 25\GeV$.
 
 \vspace{5mm}
