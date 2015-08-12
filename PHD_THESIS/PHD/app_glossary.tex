@@ -22,6 +22,25 @@ meaning.
 the abundant energetic particles originating outside of the Earth's
 atmosphere.
 \item \textbf{SUSY} -- A theoretical model based on a fundamental symmetry called supersymmetry in which the fermions and bosons can exchange their spin, extending the standard model to account for the stability in the observed Higgs boson mass and to also predicting the existence of many extra new particles which could be candidates of dark matter.
+\item \textbf{CMS Coordinate System} -- CMS uses a right-handed coordinate system, with the origin at the nominal interaction point, the \emph{$x$}-axis pointing to the center of the LHC, 
+the \emph{$y$}-axis pointing up (perpendicular to the LHC plane), and the \emph{$z$}-axis along the counterclockwise-beam direction. The polar angle, $\theta$, 
+is measured from the positive \emph{$z$}-axis and the azimuthal angle, $\phi$, is measured in the \emph{$x$-$y$} plane. 
+\item \textbf{Eta}  -- 
+\begin{equation}
+\boldmath{\eta} = \boldmath{-\ln\tan(\theta/2)}
+\end{equation}
+\item \textbf{Transverse Energy and Momentum} -- The transverse energy and momentum are defined as
+\begin{eqnarray}
+ \boldmath{\ET} &= \boldmath{E\sin\theta} \\
+ \boldmath{\PT} &= \boldmath{p\sin\theta} 
+\end{eqnarray} 
+ where $p$ is the momentum measured in the tracking system and $E$ is the energy measured in the calorimeters.
+ 
+\item \textbf{Missing Transverse Energy} or \MET --
+\begin{equation}
+\boldmath{\MET} = \boldmath{\vert -\sum_{i}\ET^{i}\vec{n_{i}}\vert}
+\end{equation}
+ where $\vec{n_{i}}$ is a unit vector that points from the interaction vertex to the transverse plane.
 
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}
@@ -40,9 +59,12 @@ atmosphere.
 \caption{Acronyms} \label{Acronyms} \\
 
 \hline
-NMLLP & Neutral Massive Long-Lived Particles. \\
+LLNP  & Long-Lived Neutral Particle. \\
 DM    &  Dark Matter. \\
 DE     &  Dark Energy. \\
+SM   & Standard Model \\
+BSM  & Beyond Standard Model \\
+SUSY & Supersymmetry \\
 GMSB   & Gauge Mediated Supersymmetry Breaking \\
 LHC & Large Hadron Collider \\
 CMS & Compact Muon Solenoid \\
@@ -66,4 +88,55 @@ Acronym & Meaning \\
 CR$\mu$ & Cosmic-Ray Muon \\
 
 \end{longtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analysis How To and Data Samples}
+\subsection{Check Out Software Packages}
+To check out the analysis packages, do the following steps:
+\begin{itemize}
+\item \texttt{cmsrel CMSSW\_5\_3\_29} 
+\item \texttt{cd CMSSW\_5\_3\_29\char`\\src} 
+
+
+\end{itemize}
+
+\subsection{Data Samples}
+In Table \ref{tab:DATA} show the data samples and the corresponding integrated luminosity.
+\newline
+The \textit{jason} file with the list of certified good luminosity sections is 
+\newline
+ \textbf{Cert\_8TeVPromptReco\_Colllisions12\_JASON.txt}.
+
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth}  
+\begin{center}
+%\begin{table}[ht]
+%\renewcommand\arraystretch{1.2}
+\begin{tabular}{l l}
+\toprule
+\hline
+\bfseries{Data Sample} & \vtop{\hbox{\strut{\bfseries{Recorded Luminosity}}}  \hbox{\strut{ $[\fbinv]$ }}} \\
+\hline
+\toprule
+ \vtop{\hbox{\strut{\texttt{/Run2012B/SinglePhoton/}}}
+ \hbox{\strut{\texttt{EXODisplacedPhoton-PromptSkim-v3}}}} & 5.1 \\
+ \hline
+ \vtop{\hbox{\strut{\texttt{/Run2012C/SinglePhoton/}}}
+ \hbox{\strut{\texttt{EXODisplacedPhoton-PromptSkim-v3 }}}} & 6.9 \\
+ \hline
+ \vtop{\hbox{\strut{\texttt{/Run2012D/SinglePhoton/}}}
+ \hbox{\strut{\texttt{EXODisplacedPhoton-PromptSkim-v3 }}}} & 7.1 \\
+\hline\hline
+\texttt{/SingleElectron/Run2012A-22Jan2013-v1/AOD} & 5.2 \\
+\texttt{/DoubleElectron/Run2012C-22Jan2013-v1/AOD} & 4.8 \\
+\hline
+\bottomrule
+\end{tabular}
+\captionof{table}{Data samples and their corresponding integrated luminosity totaling 19.1~\fbinv used in the our delayed photon search analysis}
+\label{tab:DATA}
+%\end{table}
+\end{center}
+\end{minipage}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%}}}
