@@ -1,63 +1,32 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % data_set.tex:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Search Analysis for Long-Lived Particles }
+\chapter{Search for Long-Lived Neutral Particles }
 \section{Analysis Strategy}\label{Analysis}
-This analysis is about the search for events with at least a single late arrival time photon at the Electromagnetic Calorimeter~(ECAL) and  large missing transverse energy~(\MET). It uses a counting method, where an excess in the number of events with photon time above a defined ECAL timing threshold, to the expected number of events from background processes, indicates the presence of a new physics phenomena. Such a phenomena is the decay of a massive long-lived neutral particle into a late photon and large \MET which is not common with standard model interactions. 
-\newline
-We expect most of our background events of this search to arise from  non-collision rather than proton-proton collision events.
-%\par 
-%Non-collision events with photons from cosmic, \textit{beam halo} muons and \textit{spikes} can also have large ECAL time measurements. $pp$ collision events with \PW, \PZ, multiple jets and $\gamma +$jet(s) where the electron or jet is misidentified as a photon and its arrival time mismeasured, can also give rise to large ECAL time photons. And if these events happen to have \MET due to finite detector resolution(\ie instrumental \MET), it is possible for them to be misidentified as the decay of a long-lived neutral particle. We refer to these kinds of events as background events.
-%\par 
-%To estimate the background contamination to signal, we  use a data driven approach where we divide our data sample using ECAL time, jet multiplicity and \MET into different control regions~(CRs). After rejecting events with spikes, cosmic and beam halo muons, we employ an \textsf{ABCD} background estimation method to estimate background events contributing to the signal region. 
-%\newline 
-%Our analysis approach is to count the number events with late photon(s) from proton-proton collision we observed compared to the number of background events we expected.
-%Events containing \textit{spikes} produced when particles like high \pt neutrons by-pass the $\pb$ crystals and hit directly the photo-detectors~(APDs) is also a source of isolated early and also late arrival photons. Although  ECAL time measurements of most spikes show they are isolated and have high \pt, with arrival time much earlier compared to "\textit{normal}" photons produced at the nominal proton-proton interaction region whose calibrated average arrival time at ECAL is 0~ns. These different sources of background make it challenging to distinguish a possible signal photon from these separate background photons.
-%\newline 
-%Together with photons produced from non-collision, events from $pp$ collisions with misreconstucted ECAL time can equally contribute to the tails of the photon time distribution.
-% can mimic the signal of an isolated late photon, with large \MET and multiple jets. In the case where the \PW decay into and electron and neutrino, the electron or jet is mis-identified as a photon and its ECAL time miss-measured during event reconstruction, while the undetected photon is identified as \MET. Events where the \PZ boson decays into neutrinos, have large \MET and if the associated jet(s) is mis-identified as photons and their ECAL time mis-measured, such events could mimic signal events with late photons.
-%We expect a typical signal event of the decay of a massive neutral long-lived particle, to be produce in a  proton-proton~($pp$) collision at the LHC and detected with the CMS detector, according to the prediction of a benchmark Gauge Mediating Supersymmetry Breaking~(GMSB) model described as the "Snowmass Points and Slope 8"~(SPS8). In this model, the massive long-lived neutral particle is the Next-to-Lightest Supersymmetric Particle~(NLSP) which is the lightest neutralino~(\PSneutralinoOne).
+A search for events with at least a single late arrival time photon at the Electromagnetic Calorimeter~(ECAL) and  large missing transverse energy~(\MET) is described. The search uses a counting method, in which an excess number of events with photon time above a timing threshold to the expected number of background events, hint at the presence of a new physics phenomena. Such a phenomena is expressed through the decay of a Long-Lived Neutral Particle~(LLNP) into a late photon and large \MET, which is not common with standard model interactions. We expect most of the background events to arise from  non-collision rather than proton-proton~($pp$) collision events.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Signal and Background Events}
-The lightest neutralino~(\PSneutralinoOne) serves as the Long-Lived Neutral Particle~(LLNP). It decay into a photon~(\Pphoton) and the gravitino~($\tilde{G}~$),  $\PSneutralinoOne\rightarrow\Pphoton + \tilde{G}$. The $ \tilde{G}$  is undetected because it does not interacts with the CMS detector material and as a result, its presence is indirectly inferred by measuring the missing transverse momentum~(\MET). The photon, because of the long-lived nature of the \PSneutralinoOne, arrives late at the ECAL compared to photons produced from nominal $pp$ collisions. 
-\par
-The \PSneutralinoOne can be produced, at the LHC, alone~($\Pquark\APquark\rightarrow \PSgxpm\PSneutralinoOne$) or as a pair~( $\Pquark\APquark\rightarrow \PSneutralinoOne\PSneutralinoOne$), through the direct interaction of the quarks/gluons~(partons) inside the proton. In our analysis, we are interested in the indirect production of the \PSneutralinoOne from the cascade decay of heavier sypersymmetric particles like gluino~($\PSgluino$) or squark~($\Psquark$), \ie $\Pg\Pg\rightarrow \PSgluino\PSgluino \rightarrow \Pquark\APquark\Pquark\APquark\PSneutralinoOne\PSneutralinoOne$ or $\Pquark\APquark\rightarrow \Psquark\APsquark\rightarrow \APquark\Pquark\PSneutralinoOne\PSneutralinoOne$. This is because the gluino/squark production cross-section is relatively large at a $pp$ collider like the LHC, since it is a strong interaction process. In association with the \PSneutralinoOne decay, these signal events also contain multiple hiph-\pt jets and this provide an event selection requirement useful for suppressing background events without jets. Therefore, we expected a typical signal event to comprise of at least a single delayed high-\pt photon, large \MET and multiple high-\pt jets. Such an event signature is not expected from standard model events. %Finding such an event with the CMS detector will be evidence of a new physics phenomena. 
-%\par 
-%Our signal event must have at least one high-\pt delayed photon, a number of high-\pt jets and large missing transverse momentum(\MET).
-%of the neutralino decay, $\PSneutralinoOne \rightarrow \Pphoton + \tilde{G} $, 
-%possible new physics parameter space used for the present physics analysis involves: $\tan(\beta) = 15$, $sign(\mu) = 1$, and $\mathbf{M}_{m} = 2\mathbf{\Lambda}$. While $c\tau$ and $\mathbf{\Lambda}$ are used to scan the available parameter space which maximises the sensitivity of the CMS detector to long-lived particles, in this scenario mostly neutralinos~($\tilde{\chi}^{0}_{1}$). The cascade decay of higher mass SUSY particles in the SUSY spectrum to $\tilde{\chi}^{0}_{1}$ allows for signal events with the following constituents:
-%\begin{itemize}
-\par
-Our background events could be produce from $pp$ collisions which we call \textit{collision background events} and from non-$pp$ collisions which we call \textit{non-collision background events}, like the so-called beam halo, cosmic muons and spikes. Most of our background events are from non-collision background events with late photons and large \MET.
+The late photon~(\Pphoton) and large missing transverse momentum~(\MET) are from the decay of the lightest neutralino~(\PSneutralinoOne), \ie $\PSneutralinoOne\rightarrow\Pphoton + \tilde{G}$, which serves as the LLNP. Because the \PSneutralinoOne is produced indirectly through the the cascade decay of heavier sypersymmetric particles like gluino~($\PSgluino$) or squark~($\Psquark$), \ie $\Pg\Pg\rightarrow \PSgluino\PSgluino \rightarrow \Pquark\APquark\Pquark\APquark\PSneutralinoOne\PSneutralinoOne$ or $\Pquark\APquark\rightarrow \Psquark\APsquark\rightarrow \APquark\Pquark\PSneutralinoOne\PSneutralinoOne$, in addition to the late photon and large \MET, the signal event topology includes multiple hiph-\pt jets. The large \MET is due to the undetected gravitino~($\tilde{G}~$) at the CMS detector. We, thus expect a typical signal event to comprise of at least one late high-\pt photon, large \MET and multiple high-\pt jets. Such an event composition is not expected of standard model events. The multiple high-\pt jets also provide an added handle in the event selection to help suppress background events with no jets.
+\par 
+Our background events are events from either $pp$ collisions or non-collisions which mimic the late photon, large \MET and multiple jets signal.
 \newline
-Collision background events can mimic the \PSneutralinoOne decay signal producing late photons and large \MET in cases where the ECAL time or \MET is mismeasured or the collision event has real \MET. For example, multijets and QCD events, inclusive $\PZ +$jets/$\PW +$jets events, inclusive top-anti-top~($t\bar{t}) +$jets events and inclusive $\PZ\PZ$/$\PW\PW$/$\PW\PZ +$jets events can either have true \MET ; like events with $\PZ \rightarrow \Pnu\APnu$ and $\PW\rightarrow\Pe\APnue$ decays, where the undetected neutrino~(\Pnu) leads to true \MET, or fake \MET~(instrumental \MET), where there is no undetected particle pertaining to the event but rather \MET arising because of poor reconstruction of the energy of particles, as it is with the case for QCD events. 
+The non-collision background events include the so-called \textit{Beam Induced Backgrounds} or beam halo, cosmic rays and spikes. Most of these events have a late high-\pt photon and large \MET.
 \newline
-The late photon arises when one of the jets or an electron is misidentified as a photon and it's ECAL time is misreconstructed. The other jets in the event satisfy the high-\pt multijets requirement.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%\subsection{Background Modeling}
-%%Although our background estimation study is data-driven, however, we also generated a small sample of  $\gamma +$jet(s) events at leading order cross-section. The $\gamma +$jet(s) MC sample is used for studying ECAL time of simulated events. 
-%%\newline
-%%We did not produced MC samples for background events with \PW, \PZ and $t\bar{t}$ decays because
-%%in addition to the fact that their contribution as background events is small, our high-\pt~($\pt > 80$\GeVc) photon requirement will suppress these background events further as most of the electrons from these events which can be misidentified as photons are not high-\pt photons. 
-%%\newline
-%%We also did not produce MC samples for spikes, cosmic and beam halo muons as simulations of the %%photon ECAL time is not very reliable especially for those events with large photon ECAL time. 
-% eventhough these events have \MET and multijets, there are not so many cases in which the photon have a  large ECAL time because a jet was misidentified as a photon and its ECAL time mismeasured. Another reason we did not use MC samples of these events is because simulations of photon/electron ECAL time is not very reliable especially for those events with large photon/electron ECAL time. 
-%One of our event selection requirement is high \pt isolated photons, this should reduce contributions from these collision background events by a lot. 
+Collision background events can mimic the \PSneutralinoOne decay signal producing late photons and large \MET in cases where the photon time and/or \MET are mis-measured. Other collision events might have real \MET and a misidentified photon object. For example, inclusive $\PZ +$jets/$\PW +$jets events, inclusive top-anti-top~($t\bar{t}) +$jets events and inclusive $\PZ\PZ$/$\PW\PW$/$\PW\PZ +$jets events can have true \MET through the $\PZ \rightarrow \Pnu\APnu$ and $\PW\rightarrow\Pe\APnue$ decays, where the undetected neutrino~(\Pnu) give rise to \MET. Multijets and QCD events, on the other hand, give rise to fake \MET~(instrumental \MET), where there is no undetected particle pertaining to the event but rather \MET arising because of poor reconstruction of the energy of particles. The late photon arises when one of the jets or an electron is misidentified as a photon and it's ECAL time is mis-measured. The other jets in the event satisfy the high-\pt multiple jets requirement.
+\subsection{Samples}
+\subsection*{Datasets}
+The data sample we use for this search contain events passing the HLT trigger with at least one photon. These events were produced during LHC Run 1 in 2012 of $pp$ collisions at the center of mass energy, $\sqrt{S} = 8$\TeV. The data is equivalent to a total integrated luminosity of 19.1~\fbinv recorded by the CMS detector.
 
-\subsection{Datasets}
-\subsection*{Data}
-The data sample we use contain events with at least one photon passing our online trigger. The data was  produced during LHC Run 1 in 2012 with proton-proton~($pp$) collisions at the center of mass energy, $\sqrt{S} = 8$\TeV. We used data equivalent to total integrated luminosity of 19.1~\fbinv recorded by the CMS detector.
-
-\subsubsection*{Monte Carlo Samples}
+\subsection*{Monte Carlo Samples}
 The MC samples were produced with \textit{Summer 2012} prescription of the calibration and alignment status of the CMS detector and pile up conditions at 8\TeV.
 \newline
-The GMSB SPS8 signal samples had 50,000 events for each mean lifetime~($c\tau$) and effective SUSY breaking scale~($\mathbf{\Lambda}$) or mass of \PSneutralinoOne~($m_{\PSneutralinoOne}$). The sample are produced for different $c\tau$ ranging from 50\cm to 1000\cm for each $\mathbf{\Lambda}$ or $m_{\PSneutralinoOne}$ point. We vary $\mathbf{\Lambda}$ from 100\TeV to 220\TeV which is equivalent to $m_{\PSneutralinoOne}$ ranging from 139\GeVcc to 314\GeVcc. Table \ref{tab:mc_GMSB_sample} shows a summary of our signal MC samples used in this analysis with the number of events, cross-section and branching ratio for \PSneutralinoOne production and decay to $\gamma$ and $\tilde{G}$ for each SUSY breaking scale.
+The GMSB SPS8 signal samples have 50,000 events for each mean lifetime~($c\tau$) and effective SUSY breaking scale~($\mathbf{\Lambda}$) or mass of \PSneutralinoOne~($m_{\PSneutralinoOne}$). These samples are produced for different $c\tau$ ranging from 50\cm to 1000\cm for each $\mathbf{\Lambda}$ or $m_{\PSneutralinoOne}$ point. We vary $\mathbf{\Lambda}$ from 100\TeV to 220\TeV which is equivalent to $m_{\PSneutralinoOne}$ ranging from 139\GeVcc to 314\GeVcc. Table \ref{tab:mc_GMSB_sample} shows a summary of our signal MC samples used in this analysis. For each sample, the number of events, cross-section and branching ratio for \PSneutralinoOne production and decay to $\gamma$ and $\tilde{G}$ for each SUSY breaking scale is also given.
 \newline
-The $\gamma +$jet MC samples were generated for different momentum of the colliding partons and normalized to the 19.1 \fbinv integrated luminosity. The cross-sections, \pt of the photon~($\hat{\pt}$) radiated by the colliding parton and the number of events in each sample is summarized in Table \ref{tab:mc_QCD_sample}. The $\hat{\pt}$ range from 50\GeVc to 800\GeVc was covered.
+The $\gamma +$jet MC samples were generated for different momentum of the photon with respect to the colliding partons and normalized to the 19.1 \fbinv of integrated luminosity. The cross-sections, \pt of the photon~($\hat{\pt}$) radiated by the colliding parton and the number of events in each sample is summarized in Table \ref{tab:mc_QCD_sample}. The $\hat{\pt}$ range is from 50\GeVc to 800\GeVc.
 
 \vspace{5mm}
 %\paragraph*{}\mbox{}\\
-\begin{minipage}{0.90\linewidth} 
+\begin{minipage}{0.94\textwidth} 
 \begin{center}
 %\begin{table}[ht]
 %\renewcommand\arraystretch{1.2}
@@ -81,7 +50,7 @@ The $\gamma +$jet MC samples were generated for different momentum of the collid
        \hline
        \bottomrule
        \end{tabular}  
-\captionof{table}{Signal GMSB SPS8 Monte Carlo samples for different $\Lambda$ with $50\cm < c\tau < 1000\cm$ and Branching Ratios~(BR) studied in this analysis}
+\captionof{table}{Signal GMSB SPS8 Monte Carlo samples for different $\mathbf{\Lambda}$ with $50\cm < c\tau < 1000\cm$ and Branching Ratios~(BR).}
 \label{tab:mc_GMSB_sample}
 %\end{table}
 \end{center}
@@ -108,7 +77,7 @@ $\hat{\pt}$ & $\sigma_{LO}$ (pb) & \bfseries{Number of Events}\\
 \hline
 \bottomrule
 \end{tabular}
-\captionof{table}{The $\gamma +$ jets samples studied in this analysis}
+\captionof{table}{The $\gamma +$ jets samples for $\hat{\pt}$ from  50\GeVc to 800\GeVc }
 \label{tab:mc_QCD_sample}
 %\end{table}
 \end{center}
@@ -205,7 +174,7 @@ These ghost/satellite bunches are the source of Beam halo-induced photons produc
 \mbox{
 %\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
 %\includegraphics[scale=0.2]{THESISPLOTS/CMS_Slice.png}
-\includegraphics[height=0.55\textwidth, width=0.9\textwidth]{THESISPLOTS/Data-Photon-TimeEBEBALL.pdf}
+\includegraphics[height=0.60\textwidth, width=0.85\textwidth]{THESISPLOTS/PhotonTimeALLVsEBVsEE.pdf}
 }
 \captionof{figure}{ECAL timing distribution of photons in barrel~(\textcolor{blue}{EB}), endcap~(\textcolor{red}{EE}) and all of ECAL~(\textcolor{black}{ALL ECAL}) with $\pt > 50$~GeV from data. A $2.5$~ns delay timing structure is observed in endcaps.}
 \label{fig:TIMEECAL}
@@ -497,7 +466,7 @@ If we compare these scatter plots of $\Delta\eta$  and $\Delta\phi$, for these o
 
 
 %By looking at the signal pulse height, the pulse shape for a spike signal appear different from a signal form an electromagnetic particle. Because of this difference in pulse shape profile, the reconstructed ECAL time for spikes usually have large calculated $\chi^{2}$~(defined in Equation \ref{eq:CHI2})  values.
-\subsubsection{spike-seeded Photons}
+\subsubsection{Spike-Seeded Photons}
 Neutrons and charge hadrons can at times deposit their energy directly on the APDs in addition to  going through the crystal scintillation process. Such signals, read from the APDs, are \textit{anomalous} and referred to as \textit{spike-seeded photons} or simply \textit{spikes}. Spikes produced from $pp$ collisions and passing our photon selection requirements, can easily be identified as good photon candidates. A spike supercluster consist of very few crystals; most often one or two crystals. Because spikes occupy few crystals, they can overlapped with good photon candidates, embedded in the photon's supercluster, or buried inside jets. Such embedded spikes cannot be easily identified. 
 \newline
 The arrival time of spikes is much earlier~(negative), usually about $t = -12.0$~ns, than for photons produced in nominal $pp$ collisions and depositing their energy, through crystal scintillation, on the APDs. This is because for spikes, there is the absence of the crystal scintillation process; which takes on average 10~ns. The few crystals holding the spike energy deposits, make it possible for spikes to be identified using a energy topological selection quantity, know as \textit{swiss-cross} and defined as  $1-\frac{E_{4}}{E_{1}}$. A distribution of swiss-cross for in-time photon events, compare to events from a spike sample~(events with photon time $t = -12$~ns) is shown on the right plot of Figure \ref{fig:SPIKES}. We find that most spikes have about 98\% of their energy deposited in a single crystal.
@@ -1025,6 +994,9 @@ In our final result, we use the collision background estimated using the $\PZ\ri
 
 \vspace{5mm} 
 With no significant excess over expected number of background events, we find upper limits on the number of event counts at 95\% confidence limit using the statistical CLs limit finding method.
+
+\label{Search_Analysis_chapter}
+
 %\paragraph*{}\mbox{}\\
 %\begin{minipage}{\linewidth} 
 %\begin{center}
@@ -1064,4 +1036,40 @@ With no significant excess over expected number of background events, we find up
 %%It is denoted as $t_{Ave}$ or $t_{mean}$.
 %%\end{enumerate}
 %Therefore, the arrival time of a photon or an electromagnetic object, $t_{\gamma}$ or $t_{\Pepm}$, can either be given as $t_{seed}$ or $t_{Ave}$.
-\label{Search_Analysis_chapter}
+
+
+%%% Useless intro
+%\par 
+%Non-collision events with photons from cosmic, \textit{beam halo} muons and \textit{spikes} can also have large ECAL time measurements. $pp$ collision events with \PW, \PZ, multiple jets and $\gamma +$jet(s) where the electron or jet is misidentified as a photon and its arrival time mismeasured, can also give rise to large ECAL time photons. And if these events happen to have \MET due to finite detector resolution(\ie instrumental \MET), it is possible for them to be misidentified as the decay of a long-lived neutral particle. We refer to these kinds of events as background events.
+%\par 
+%To estimate the background contamination to signal, we  use a data driven approach where we divide our data sample using ECAL time, jet multiplicity and \MET into different control regions~(CRs). After rejecting events with spikes, cosmic and beam halo muons, we employ an \textsf{ABCD} background estimation method to estimate background events contributing to the signal region. 
+%\newline 
+%Our analysis approach is to count the number events with late photon(s) from proton-proton collision we observed compared to the number of background events we expected.
+%Events containing \textit{spikes} produced when particles like high \pt neutrons by-pass the $\pb$ crystals and hit directly the photo-detectors~(APDs) is also a source of isolated early and also late arrival photons. Although  ECAL time measurements of most spikes show they are isolated and have high \pt, with arrival time much earlier compared to "\textit{normal}" photons produced at the nominal proton-proton interaction region whose calibrated average arrival time at ECAL is 0~ns. These different sources of background make it challenging to distinguish a possible signal photon from these separate background photons.
+%\newline 
+%Together with photons produced from non-collision, events from $pp$ collisions with misreconstucted ECAL time can equally contribute to the tails of the photon time distribution.
+% can mimic the signal of an isolated late photon, with large \MET and multiple jets. In the case where the \PW decay into and electron and neutrino, the electron or jet is mis-identified as a photon and its ECAL time miss-measured during event reconstruction, while the undetected photon is identified as \MET. Events where the \PZ boson decays into neutrinos, have large \MET and if the associated jet(s) is mis-identified as photons and their ECAL time mis-measured, such events could mimic signal events with late photons.
+%We expect a typical signal event of the decay of a massive neutral long-lived particle, to be produce in a  proton-proton~($pp$) collision at the LHC and detected with the CMS detector, according to the prediction of a benchmark Gauge Mediating Supersymmetry Breaking~(GMSB) model described as the "Snowmass Points and Slope 8"~(SPS8). In this model, the massive long-lived neutral particle is the Next-to-Lightest Supersymmetric Particle~(NLSP) which is the lightest neutralino~(\PSneutralinoOne).
+
+%It decay into a photon~(\Pphoton) and the,  $\PSneutralinoOne\rightarrow\Pphoton + \tilde{G}$. The $ \tilde{G}$  is undetected because it does not interacts with the CMS detector material and as a result, its presence is indirectly inferred by measuring the missing transverse momentum~(\MET). The photon, because of the long-lived nature of the \PSneutralinoOne, arrives late at the ECAL compared to photons produced from nominal $pp$ collisions. 
+%\par
+%The \PSneutralinoOne can be produced, at the LHC, alone~($\Pquark\APquark\rightarrow \PSgxpm\PSneutralinoOne$) or as a pair~( $\Pquark\APquark\rightarrow \PSneutralinoOne\PSneutralinoOne$), through the direct interaction of the quarks/gluons~(partons) inside the proton. In our analysis, we are interested in the indirect production of the \PSneutralinoOne from  This is because the gluino/squark production cross-section is relatively large at a $pp$ collider like the LHC, since it is a strong interaction process. 
+%in association with the \PSneutralinoOne decay, these signal events also contain  and this provide an  requirement useful for suppressing background events without jets.
+ %Finding such an event with the CMS detector will be evidence of a new physics phenomena. 
+%\par 
+%Our signal event must have at least one high-\pt delayed photon, a number of high-\pt jets and large missing transverse momentum(\MET).
+%of the neutralino decay, $\PSneutralinoOne \rightarrow \Pphoton + \tilde{G} $, 
+%possible new physics parameter space used for the present physics analysis involves: $\tan(\beta) = 15$, $sign(\mu) = 1$, and $\mathbf{M}_{m} = 2\mathbf{\Lambda}$. While $c\tau$ and $\mathbf{\Lambda}$ are used to scan the available parameter space which maximises the sensitivity of the CMS detector to long-lived particles, in this scenario mostly neutralinos~($\tilde{\chi}^{0}_{1}$). The cascade decay of higher mass SUSY particles in the SUSY spectrum to $\tilde{\chi}^{0}_{1}$ allows for signal events with the following constituents:
+%\begin{itemize}
+%\par
+%Our background events could be produce from $pp$ collisions which we call \textit{collision background events} and from non-$pp$ collisions which we call \textit{non-collision background events}, like the so-called beam halo, cosmic muons and spikes. .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\subsection{Background Modeling}
+%%Although our background estimation study is data-driven, however, we also generated a small sample of  $\gamma +$jet(s) events at leading order cross-section. The $\gamma +$jet(s) MC sample is used for studying ECAL time of simulated events. 
+%%\newline
+%%We did not produced MC samples for background events with \PW, \PZ and $t\bar{t}$ decays because
+%%in addition to the fact that their contribution as background events is small, our high-\pt~($\pt > 80$\GeVc) photon requirement will suppress these background events further as most of the electrons from these events which can be misidentified as photons are not high-\pt photons. 
+%%\newline
+%%We also did not produce MC samples for spikes, cosmic and beam halo muons as simulations of the %%photon ECAL time is not very reliable especially for those events with large photon ECAL time. 
+% eventhough these events have \MET and multijets, there are not so many cases in which the photon have a  large ECAL time because a jet was misidentified as a photon and its ECAL time mismeasured. Another reason we did not use MC samples of these events is because simulations of photon/electron ECAL time is not very reliable especially for those events with large photon/electron ECAL time. 
+%One of our event selection requirement is high \pt isolated photons, this should reduce contributions from these collision background events by a lot. 
