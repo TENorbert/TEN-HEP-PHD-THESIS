@@ -4,55 +4,16 @@
 \chapter{Time Reconstruction and Resolution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{ECAL Time Overview}
-The Electromagnetic Calorimeter~(ECAL) was designed to precisely measure the energy of electrons and photons with a target barrel resolution of 0.5\% for photons with energy more than 50\GeV. In addition to energy measurements, the combination of fast scintillation for \pb crystals, the electronic pulse shaping and sampling rate of 40~MHz allow for excellent time measurements.  
-The time measured by each channel is reconstructed from 10 discrete samples of the digitized analog pulse height using a time reconstruction algorithm. A pulse shaping chip in each channel, matching the pulse shape with less than 1\% non-linearity, ensures a linear and uniform pulse height from among all the channels in ECAL \cite{ECALTDR,ECALREADOUT,ECAL}. 
-
-
-%The definitions $t_{seed}$ and $t_{Ave}$ have similar performances and also advantages and disadvantages. We explore these in the analysis section of this thesis.
-%Before we continue, let us describe in detail how a crystal time is actually recorded by the ECAL detector. We first describe the electronics read out sequence of the ECAL and continue with how we extract the timing from the electronic signals recorded.
-\section{Electromagnetic Calorimeter Readout Electronics}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%The ECAL electronics readout system fully described in \cite{ECALREADOUT} is a light-to-light system.
-The scintillating light from the \pb crystals is readout and converted into electric charge using Avalanche Photo-Diodes~(APD) and Vacuum Photo-Triodes~(VPT) in the barrel and endcap detector regions, respectively. %These Photo-Diodes~(APD and VPT) convert the scintillating light into electric current which is readout by the readout electronics system.
-\newline
-The ECAL electronics readout and control system comprise of a Front End~(FE) and an Off Detector~(OD) electronics. The FE electronics, made with radiation-hard ASIC chips to withstand the high radiation dose from collisions are installed inside the detector volume at the back of ECAL, while the OD electronics, responsible for trigger primitive generation, event triggering and timing control is in the upper counting room. The FE electronics is connected to the OD electronics by 100~m radiation hard Gigabit Optical fiber Links~(GOL) for transporting the optical data stream. Among the ASIC chips of the FE board, is a Clock and Control Unit~(CCU) chip which enables the exchange of control information between the OD and the FE electronics through a Clock and Control link.
-\par
-Each FE receives signals from a group of crystals typically forming a $5\times5$ crystals matrix. A FE board, shown in right schematic diagram of Figure \ref{fig:readout}, hosts five Very Front End~(VFE) boards with each VFE board holding five analog channels. Each channel, shown in the left schematic diagram of Figure \ref{fig:readout}, consists of a Multi-Gain Pre-Amplifier~(MGPA) and 12 bit Analog-to-Digital Converted~(ADC), which are used to amplify, shape and digitize the signal coming from the Photo-Diodes.
-\newline
-The MGPA chip uses 3 gain ranges with gain ratios of 1, 6 and 12 to span the overall dynamic range of the signal which can go from a few \MeV up to \TeV. Equipped with a Capacitor-Resistor-Resistor-Capacitor~(CR-RC) filter with a pulse shaping time of 40~ns and less than 1\% of non-linearity, the MGPA ensures a linearity and pulse shape matching across all three ranges which allows for precise pulse shape reconstruction.
-\newline
-The required readout and precision performance demands a multi range 12-bit ADC chip with a sampling frequency of 40~MHz to digitize the analog pulse signal of the highest unsaturated range into 10 discrete samples, with an electronic noise  of about 40~MeV.
-%from each VFE is typically 1.1, 0.75, 0.6 ADC counts for gains 12, 6 and 1 respectively. This would be about 40~MeV for gain 12.
-\newline
-The digitized data  are stored in pipeline buffers until a Trigger Level 1~(LV1) accept decision is made. At the same time the digitized data are sent to a digital signal processing FERNIX chip which performs Trigger Primitive Generation~(TPG) for the LV1 trigger system. The TPs are sent to the Trigger Concentration Card~(TCC) on the OD electronics at a rate of 1 word/25~ns.
-Upon a positive trigger LV1 decision, the data samples corresponding to a single event are transferred to primary event buffers which are eventually merged and sent to the Data Concentration Card~(DCC) through readout links at 800~Mbps. The crystal readout data from the FE board is collected by the OD electronics DCC.
-\par 
-  The OD board hosts the DCC, TCC and a Clock and Control System card~(CCS). The TCC completes TPG process by combining the TPs generated and transmit them to the regional Calorimeter Trigger system while the CCS is tasked primarily with distributing fast timing signals~(LHC 40~MHz clock and trigger commands) to the FE and OD electronics and to synchronize their operation. 
-A common clock distribution serving $5\times5$ readout unit of the FE reduces any needed channel-to-channel synchronization.
-
-\vspace{5mm}
-\begin{minipage}{0.94\textwidth} 
-\begin{center}
-\mbox{
-\includegraphics[height=0.5\textwidth, width=0.450\textwidth]{THESISPLOTS/ReadOut.png}
-\includegraphics[height=0.5\textwidth, width=0.50\textwidth]{THESISPLOTS/ECAL-FRONT-END-ELECTRONICS.jpg}
-%\includegraphics[height=0.5\textwidth, width=0.50\textwidth]{THESISPLOTS/CMS-ECAL-READOUT-CHAIN.png} \quad
-} 
-\captionof{figure}{Schematic diagram of the ECAL electronics readout for a single channel~(left) and the entire Trigger Tower~(TT) or Front End~(FE) Card~(right).}
-\label{fig:readout}
-\end{center}
-\end{minipage}
-
-\vspace{5mm}
-
+The Electromagnetic Calorimeter~(ECAL) was designed to precisely measure the energy of electrons and photons with a target barrel resolution of 0.5\% for photons with energy more than 50\GeV. In addition to energy measurements, the combination of fast scintillation for \pb crystals, the electronic pulse shaping and a digitization rate of 40~MHz allows for an excellent time measurement.  
+The time of the signal measured by each crystal is reconstructed from 10 discrete samples of the digitized analog pulse height\cite{ECALTDR,ECALREADOUT,ECAL}. 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Time Reconstruction}\label{timereco}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Anlog signals from the APD/VPT of a single crystal is preamplified producing a typical signal pulse shown in figure \ref{fig:pulse}. 
-An analog pulse shape from a single channel is shown in Figure \ref{fig:amplVsTmax}(a). 
+An analog pulse shape from a single crystal is shown in Figure \ref{fig:amplVsTmax}(a). 
 Overlaying the pulse shape are typical 10 digitized  samples in red. The first three samples are taken in the absence of a signal and correspond to the pedestal.
 The ADC chip responsible for the digitization, has a sampling frequency of 40~MHz, \ie one sample is made every 25~ns, which is the same rate as the LHC proton-proton bunch collision frequency of one bunch crossing every 25~ns, and a total time of 250~ns corresponding to the 10 digitized samples is covered.
-In addition, the timing phase of sampling within the 25~ns interval is adjusted so that the maximum of the signal pulse shape corresponds to one of the samplings to within 1~ns.
+In addition, the timing phase of sampling within the 25~ns interval is adjusted so that the maximum of the signal pulse shape corresponds to one of the digitized samples to within 1~ns.
 A time reconstruction algorithm uses the 10 digitized samples to measure the time of a single channel by finding the precise time, $\mathbf{T_{max}}$, corresponding to the maximum of the pulse shape \cite{RECOAMPLI,TIME}. 
 % To measure the time, $\mathbf{T_{max}}$, corresponding to the maximum of the pulse shape,$\mathbf{A_{max}}$, a time reconstruction algorithm is used.
 
