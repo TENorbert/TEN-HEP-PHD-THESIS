@@ -73,11 +73,13 @@ We summarize in Table \ref{tab:tableLHC}, the LHC design and operation condition
 
 \vspace{5mm}
 
-\begin{center}
-%\begin{sidewaystable}
- \begin{table}[H]
-  \begin{turn}{90}
-  \centering
+\afterpage{ %
+    \clearpage% Flush earlier floats (otherwise order might not be correct)
+   %% \thispagestyle{empty}% empty page style (?)
+  \begin{landscape}% Landscape page
+   \begin{center}
+  % \begin{table}[H]
+   % \begin{turn}{90}
  %\setlength{\abovecaptionskip}{0pt}
   %\setlength{\belowcaptionskip}{10pt}
  % \topcaption{GMSB,GGM Phenomenology and Relevant final states}
@@ -115,15 +117,17 @@ We summarize in Table \ref{tab:tableLHC}, the LHC design and operation condition
  \hline  
   \bottomrule
   \end{tabular}
-   \caption{LHC operation parameter conditions during RUN 1, 2010-2013}
-   \label{tab:tableLHC}
+  \captionof{table}{LHC operation parameter conditions during RUN 1, 2010-2013}
+  \label{tab:tableLHC}
  %\end{sidewaystable}
-   \end{turn}
-  \end{table}
-\end{center}
-
-
-\clearpage
+ %\end{turn}
+ %\end{table}
+ \end{center}
+ \end{landscape}
+ \clearpage% Flush page
+}
+%\lipsum % Text after
+%\clearpage
 
 \section{Compact Muon Solenoid}
 \subsection{Overview}
@@ -150,7 +154,7 @@ The coordinate system $(\eta, \phi)$, and its radial distance $R$, identifies a 
 \label{fig:CMSDCORD}
 \end{center}
 
-\subsection{Calorimeter}
+\subsection{Calorimeters}
 The calorimeter absorbs a good fraction of energy of an incident particle and produces a signal with an amplitude proportional to the absorbed energy. The energy absorption happens through the cascade production of secondary particles with the energy of the incident particle directly proportional to the number of secondary particles produced. The are two types of calorimetry choices used in the CMS detector: the \textit{Electromagnetic Calorimeter}~(ECAL) which is used for absorbing the energy of electromagnetic particles like photons and electrons and a \textit{Hadronic Calorimeter}~(HCAL) constructed with more than one type of material and is used for stopping and absorbing the energy of hadrons such as kaons and pions through strong interactions. The combined calorimeter subdetectors in CMS covers a region in $|\eta| < 5$, making it nearly hermetic which is needed for good missing transverse energy measurements. The ECAL and HCAL are arranged in a nested fashion shown in Figure \ref{fig:ECAL-HCAL} with the HCAL enclosing the ECAL so that electromagnetic particles can be distinguished from hadronic particles by comparing the depth of the particle shower penetration in both calorimeters.
 
 \begin{center}
@@ -159,52 +163,82 @@ The calorimeter absorbs a good fraction of energy of an incident particle and pr
 \captionof{figure}{Schematic diagram of CMS calorimetry system with HCAL enclosing ECAL in the barrel and endcap regions.}
 \label{fig:ECAL-HCAL}
 \end{center}
-
+%Low energy electrons loss their energy through elastic scattering and annihilation while
 \subsubsection{Electromagnetic Calorimeter}
- The ECAL detects photons and electrons through their interaction with the atoms of the lead tungstate~(\pb) crystals. During this interaction process which might happen through Coulomb scattering~(electron-neutron scattering), Compton scattering~(photon-electron scattering), photon emission~(also known as \textit{bremsstrahlung}) and electron-positron pair production, the incoming photon or electron deposits practically almost all of its energy into the detecting medium. Electrons loss most of their energy due to their small mass through radiation~(photon emission). Low energy electrons loss their energy through  ionization, elastic scattering and annihilation while high energy electrons loss their energy through bremsstrahlung and pair production processes which lead to the production of electromagnetic showers. High energy photons of several \GeV loss most of their energy into the \pb crystals through pair-production or electromagnetic shower which is an avalanche of electrons, positrons and  further energetic photons.
+ The Electromagnetic Calorimeter~(ECAL) detects photons and electrons through their interaction with the atoms of the lead tungstate~(\pb) crystals. During this interaction process which might happen through Coulomb scattering~(electron-neutron scattering), Compton scattering~(photon-electron scattering), photon emission~(also known as \emph{Bremsstrahlung}) and \emph{electron-positron pair production}, the incoming photon or electron deposits practically almost all of its energy into the detecting medium. Electrons loss most of their energy, due to their small mass, through radiation~(photon emission). High energy electrons and photons of several \GeV deposit their energy to the \pb crystals through Bremsstrahlung and pair production processes producing electrons, positrons and photons in the process which subsequently produce more electrons, positrons and photons creating an avalanche of electrons, positrons and photons known as an \textit{electromagnetic showers}. The process stops when the electron or photon energy becomes low. The probability of an electromagnetic particle with high energy to interact either through Bremsstrahlung or pair production with the detecting material is proportional to the nuclear charge, \text{Z}, of the material.
 \par 
-The choice of \pb crystals as the calorimetry material by CMS for operation in the LHC environment is because it is a high \text{Z} material with a density of 8.28~g/$\cm^{3}$). It also has a short radiation length~($X_{0}$=0.89~\cm) and a small Moli$\grave{e}$re radius~(22~\cm). This property  combination ensures that on average about $95$\,\% of the electromagnetic shower energy produced by the photon or electron is contained within a crystal volume of about 9 crystals. This reduces the transverse spread of the electromagnetic cascade from multiple scattering of electrons and helps improve on  the estimation of the transverse position of impact of an incident particle. The arrangement of the \pb crystals also provide a fine granularity for measuring the particle's energy by providing fewer overlap of particle signals. The dense nature of the \pb crystals allow for the electromagnetic shower to develop early and therefore likely to be fully contained within a compact detector like CMS.
+The choice of \pb crystals as the calorimetry material by CMS for operation in the LHC environment is because of the following reasons: \pb crystal is a high \text{Z} material with a density of 8.28~g/$\cm^{3}$), has a short radiation length~($X_{0}$=0.89\cm) and a small Moli$\grave{e}$re radius~(22\cm). The dense nature of the \pb crystals allow for the electromagnetic shower to develop early and therefore likely to be fully contained within a compact detector like CMS. The short radiation length ensures that on average about $95$\,\% of the electromagnetic shower energy produced by the photon or electron is contained within a crystal volume of about 9 crystals while the small Moli$\grave{e}$re radius reduces the transverse spread of the electromagnetic cascade from multiple scattering of electrons and helps improve the estimation of the transverse position of impact of an incident particle. The arrangement of the \pb crystals also provide a fine granularity for measuring the particle's energy by providing fewer overlap of particle signals.
 \newline
-The \pb crystal is also preferred to other crystal materials because of its high radiation resistance and fast scintillation decay time which is comparable to the LHC bunch crossing interval of 25~ns which is required for the high radiation dose and fast timing~(25~ns proton bunch spacing) LHC environment.  About 80\% of the energy absorbed is emitted as light in less than 25~ns. The probability of an electromagnetic particle with high energy to interact either through \emph{Bremsstrahlung} or \textit{pair production} with detecting material is proportional to the nuclear charge, \text{Z}, of the material. 
+\pb crystal is also preferred to other crystal materials because of its high radiation resistance and fast scintillation decay time which is comparable to the LHC bunch crossing interval of 25~ns required for the high radiation dose and fast timing~(25~ns proton bunch spacing) LHC environment.  About 80\% of the energy absorbed by the \pb crystal is emitted as light in less than 25~ns.  
 \par 
-The ECAL has 75848 \pb crystals in total mounted in a cylindrical geometry, with a barrel~(\textsc{EB}) and an endcap~(\textsc{EE}) structure. The EB section of the ECAL covers a pseudo-rapidity of $\vert \eta \vert< 1.479 $. It has 61,200 crystals providing a granularity of 
-$360$ degree fold in $\phi$ and $(2 \times 85)$-fold in $\eta$.The crystals are mounted in a quasi-projective geometry so that their axes make an angle of 3\% with respect to a line vector from the nominal interaction vertex in $\eta$ and $\phi$ directions. This avoids cracks aligned with a particle's trajectory. A crystal in EB is approximately 0.0174~$\times$~0.0174 in $\eta-\phi$ or 22~$\times$ 22~$\mm^{2}$ at its front face and 26~$\times$~26~$mm^{2}$ at its rear face. Each crystal is 230~\mm long corresponding to about 25.8~$X_{0}$ radiation lengths. The crystal's radial distance measuring from the center of the face of the crystal to the beam line is 1.29~m. A number of crystals are placed in a thin-walled alveolar structure made with aluminum forming a \textit{submodule}.  
-Each submodule is arranged into 4 modules of different types according to their $\eta$ position. There are about 400 to 500 crystals in each module and these 4 combined make one \textit{supermodule} containing 1700 crystals.
-To reduce crystal reflective lost, the aluminum surface is coated to avoid oxidation leading to coloration. On the rear end of each EB crystal, two \textit{Avalanche Photodiodes}~(APD)  is glued to collect the scintillating light from the crystals converting light into charge current which is further collected by the read-out electronics.
+The ECAL has 75848 \pb crystals in total mounted in a cylindrical geometry, with a barrel~(\textsc{EB}) and an endcap~(\textsc{EE}) structure. 
+\newline
+The EB region of the ECAL covers a pseudo-rapidity of $\vert \eta \vert< 1.479 $. It has 61,200 crystals providing a granularity of 
+$360$ degree fold in $\phi$ and $(2 \times 85)$-fold in $\eta$. The crystals are mounted in a quasi-projective geometry so that their axes make an angle of 3\% with respect to a line vector from the nominal interaction vertex in $\eta$ and $\phi$ directions. This is to avoid loss of energy into cracks aligned with a particle's trajectory. A crystal in EB is approximately $0.0174\times0.0174$ in $(\eta,\phi)$, $22\times22\mm^{2}$ at its front face and $26\times26\mm^{2}$ at its rear face. Each crystal is 230\mm long corresponding to about 25.8~$X_{0}$ radiation lengths. The crystal's radial distance measuring from the center of the face of the crystal to the beam line is 1.29\m. A number of crystals are placed in a thin-walled alveolar structure made with aluminum forming a \textit{submodule}.  
+Each submodule is arranged into 4 modules of different types according to their $\eta$ position. There are about 400 to 500 crystals in each module and these 4 combined make one \textit{supermodule} containing 1700 crystals.To reduce crystal reflective lost, the aluminum surface is coated to avoid oxidation leading to coloration. On the rear end of each EB crystal, two \textit{Avalanche Photodiodes}~(APD)  is glued to collect the scintillating light from the crystals converting light into charge current which is further collected by the read-out electronics.
  \newline
-The endcap sector covers a pseudo-rapidity region of $1.479 <\vert \eta \vert < 3.0$ with a Preshower~(\textsc{ES}) detector made of silicon strip sensors interleaved with lead placed immediately in front of it. The purpose of the preshower is to identify photons from the decay of neutral pion, $\Ppizero \rightarrow \Pphoton\Pphoton$ and also to help separate photons producing electrons through pair production from photons not producing electrons before their arrival at the EE. 
-The endcap located on the $+z$ side of the nominal interaction is denoted \textsc{EE}$+$ while the other located on the $-z$ side  is denoted as \textsc{EE}$-$. The longitudinal distance between the IP and the center of the surface of the \textsc{EE} crystals is $3.154$~\cm. Each endcap is divided into two halves called \textit{Dees} with each Dee holding 3662 crystals. 
-Crystals in \textsc{EE} with identical shape are grouped into 5~$\times$~5 units called \textit{supercrystals}~(SC). 
-The crystals in the SC form an $x-y$ grid. Each crystal is 220~mm~(24.7~$X_{o}$) in length and has a front face and rear cross section of 28.62~$\times$~28.62~square~\mm and 30~$\times$~30~square~\mm, respectively. 
-Vacuum Phototriodes~(VPT) instead of APDs is glued on the rear face of each crystal for scintillating light  conversion into electrical signals. The VPT is used in the \textsc{EE} because of its high resistance to radiation and smooth operation in a strong magnetic field environment. These APDs and VPTs are used because of their high gain relative to regular photodiodess with no gain and the fact that they are not affected by the high magnetic field. Although the light yield for \pb crystals is rather low~($\approx 70$photons/\MeV), these photo-detectors have internal gain~($50$ for APDs and 10 for VPTs) and quantum efficiency of $75$\,\% for APDs and $20$\,\% for VPTs of the emission wavelength. This makes it possible that signals from incident particles with energies of a few to high \GeV longer than noise.
- 
-The signals from the APDs and VPTs are digitized by voltage-sensitive analogue-to-digital converters and through fibre-optic links transported as light signals to the counting room located adjacent to the experimental cavern.
+The EE region covers a pseudo-rapidity region of $1.479 <\vert \eta \vert < 3.0$ with a \textit{Preshower}~(\textsc{ES}) detector made of silicon strip sensors interleaved with lead placed immediately in front of it. The purpose of the preshower is to identify photons from the decay of neutral pion, $\Ppizero \rightarrow \Pphoton\Pphoton$, and also to help separate photons producing electrons through pair production from photons not producing electrons before their arrival at the EE. 
+The endcap located on the $+z$ side of the nominal interaction is denoted \textsc{EE}$+$ while the other located on the $-z$ side  is denoted as \textsc{EE}$-$. The longitudinal distance between the IP and the center of the surface of the \textsc{EE} crystal is $3.154$\m. Each endcap is divided into two halves called \textit{Dees} with each Dee holding 3662 crystals. 
+Crystals in \textsc{EE} with identical shape are grouped into 5$\times$5 mechanical units called \textit{supercrystals}~(SC). 
+The crystals in the SC form an $x-y$ grid. Each crystal is 220\mm~(24.7~$X_{o}$) in length and has a front and rear face cross sections of $28.62\times28.62\mm^{2}$ and $30\times30\mm^{2}$, respectively. 
+A \textit{Vacuum Phototriode}~(VPT) instead of an APD is glued on the rear face of each crystal for receiving and converting the scintillating light into electrical signals. The VPT is used in the \textsc{EE} because of its high resistance to radiation and smooth operation in a strong magnetic field environment. CMS uses APDs and VPTs because they are not affected by the high magnetic field and they have a high gain relative to regular photodiodes which have no gain. Although the light yield for \pb crystals is rather low~($\approx 70$~photons/\MeV), these photo-detectors have internal gain~($50$ for APDs and 10 for VPTs) and quantum efficiency of $75$\,\% for APDs and $20$\,\% for VPTs of the emission wavelength which makes it possible for detecting signals from incident particles with energies of a few to high \GeV. The signals from the APDs and VPTs are amplified and digitized by voltage-sensitive analogue-to-digital converters and transported through optical fibres as light signals to the underground counting room which is located adjacent to the CMS experimental cavern.
 \newline
-The energy resolution and geometry structure of the ECAL ensures that the photon or electron's arrival energy, time, position and even the direction through the shape of its electromagnetic shower in the crystals can be identified and measured with good precision.
+The energy resolution and geometry structure of the ECAL ensures that the photon or electron's energy, arrival time, position and even the direction through the shape of its electromagnetic shower in the crystals is measured with good precision.
 
-\subsubsection*{ECAL Readout Electronics}
+\vspace{5mm}
+\begin{minipage}{0.99\textwidth} 
+\begin{center}
+\centering
+\mbox{\includegraphics[height= 0.55\textwidth, width=0.8\textwidth]{THESISPLOTS/CMS-ECAL-EB-EE.png}}
+%\mbox{\includegraphics[scale=0.2]{THESISPLOTS/CMS-ECAL.png}}
+%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
+\captionof{figure}{Layout of the CMS electromagnetic calorimeter showing the arrangement of crystal modules, supermodules in the barrel with the preshower infront of endcap with supercrystals.}
+\label{fig:CMSECAL}
+\end{center}
+\end{minipage}
+
+
+\subsubsection{ECAL Readout Electronics}\label{ecalreadout}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %The ECAL electronics readout system fully described in \cite{ECALREADOUT} is a light-to-light system.
-The scintillating light from the \pb crystals is readout and converted into electric charge using Avalanche Photo-Diodes~(APD) and Vacuum Photo-Triodes~(VPT) in the barrel and endcap detector regions, respectively. 
-\newline
-The ECAL electronics readout is divided into a Front End~(FE) and an Off Detector~(OD) electronics. The FE electronics, made with radiation-hard electronics is designed to withstand the high radiation dose  is installed inside the detector volume behind the crystals and infront of the hadron calorimeter while the OD electronics, responsible for trigger primitive generation, event triggering and timing control is in the undergroud service cavern located approximately 80\m from the detector. The data from the FE is transferred to the OD electronics by 100\m radiation hard  fibers operating at 800Mb/s.
-\par 
-Among the ASIC chips of the FE board, is a Clock and Control Unit~(CCU) chip which enables the exchange of control information between the OD and the FE electronics through a Clock and Control link.
-\par
-Each FE receives signals from a group of crystals typically forming a $5\times5$ crystals matrix. A FE board, shown in Figure \ref{fig:readout1}, hosts five Very Front End~(VFE) boards with each VFE board holding five analog channels. Each channel, shown in Figure \ref{fig:readout2}, consists of a Multi-Gain Pre-Amplifier~(MGPA) and 12 bit Analog-to-Digital Converted~(ADC), which are used to amplify, shape and digitize the signal coming from the Photo-Diodes.
-\newline
-The MGPA chip has 3 gain ranges with gain ratios of 1, 6 and 12 to span the overall dynamic range of the signal which can go from a 12\MeV up to 1.7\TeV. Equipped with a Capacitor-Resistor-Resistor-Capacitor~(CR-RC) filter with a pulse shaping time of 40~ns and less than 1\% of non-linearity, the MGPA ensures a linearity and pulse shape matching across all three ranges which allows for precise pulse shape reconstruction.
-\newline
-The required readout and precision performance demands a 12-bit ADC chip with a sampling frequency of 40~MHz to digitize the analog pulse signal of the highest unsaturated range into 10 discrete samples, with an electronic noise  of about 40\MeV.
 %from each VFE is typically 1.1, 0.75, 0.6 ADC counts for gains 12, 6 and 1 respectively. This would be about 40~MeV for gain 12.
+%Scintillating light from the \pb crystals is readout and converted into electric charge using Avalanche Photo-Diodes~(APD)  in EB or Vacuum Photo-Triodes~(VPT) in EE. 
+%\newline
+The ECAL readout electronics is divided into an On-Detector or Front End~(FE) board and an Off-Detector~(OD) electronics. The FE board is installed inside the detector volume behind the crystals and infront of the hadron calorimeter and is made with radiation-hard electronics to withstand the high radiation dose. Data from the FE is transferred by radiation hard fibres to the OD electronics which is in the underground service cavern located approximately 80\m from the CMS detector. 
 \newline
-The digitized data  are stored in pipeline buffers until a Trigger Level 1~(LV1) accept decision is made. At the same time the digitized data are sent to a digital signal processing FERNIX chip which performs Trigger Primitive Generation~(TPG) for the LV1 trigger system. The TPs are sent to the Trigger Concentration Card~(TCC) on the OD electronics at a rate of 1 word/25~ns.
-Upon a positive trigger LV1 decision, the data samples corresponding to a single event are transferred to primary event buffers which are eventually merged and sent to the Data Concentration Card~(DCC) through readout links at 800~Mbps. The crystal readout data from the FE board is collected by the OD electronics DCC.
+A Clock and Control Unit~(CCU) chip on each FE board communicates through bi-directional optical links with the Clock and Control System~(CCS) board of the OD. These links carry clock and control  signals and the trigger Level 1 accept~(L1A) signal from the Timing, Trigger and Control~(TTC) board and the Trigger Control System~(TCS). A voltage controlled Quartz Phase-Lock Loop~(QPLL) time jitter-filter and clock multiplier chip  with an output clock jitter of 16~ps rms ensures that the LHC clock signal is transmitted to both the FE and OD electronics for synchronization.
+\par
+Each FE board, shown in Figure \ref{fig:readout2}, receives signals from a group of crystals typically forming a $5\times5$ crystal matrix and hosts five Very Front End~(VFE) boards with each VFE board holding five analog channels. Each channel, shown in Figure \ref{fig:readout1}, is carrying the signal from a single crystal and consists of a Multi-Gain Pre-Amplifier~(MGPA) and three identical 12 bit Analog-to-Digital Converters~(ADC), which are used to amplify, shape and digitize the signal coming from the Photo-Diode.
+\newline
+The MGPA chip has 3 gain ranges with gain ratios of 1, 6 and 12 to span the overall dynamic range of the signal which can go from 12\MeV up to 1.7\TeV. Equipped with a Capacitor-Resistor-Resistor-Capacitor~(CR-RC) filter with a pulse shaping time of 40~ns and less than 1\% of non-linearity, the MGPA ensures a uniform pulse shape matching and linearity across all 3 gain ranges allowing for precise pulse shape reconstruction.
+\newline
+The required readout and precision performance of the FE electronics demands a 12-bit ADC chip with a sampling frequency of 40~MHz to digitize the analog pulse signal of the highest unsaturated range into 10 discrete samples with an electronic noise  of about 40\MeV. The FE card stores the digitized crystal data~(ten 40~MHz discrete samples per channel) in 256-word-deep memories called \textit{pipelines}. Five such pipelines and the logic to calculated the energy sum of 5 crystals once every LHC proton bunch crossing is integrated into a $0.25~\mu\m$ technology FERNIX ASIC chip. Each VFE card is serviced by one such chip allowing for the energy to be summed in strips of 5 crystals along $\phi$. In EE the five strip energy sums are transmitted to the  Trigger Concentration Card~(TCC) on the OD electronics, while for EB, a sixth chip sums the five strip energy sums and calculates the "fine-grain" electromagnetic bit which identifies the electromagnetic shower candidates on the basis of the energy profile of the $5\times5$ crystal matrix or \textit{Trigger Tower}~(TT). The TT energy sum and the fine grain bit are transmitted to the TCC at 800~Mbits/s. The corresponding crystal data~(the ten 40~MHz discrete samples per crystal) upon receipt of a positive trigger L1A decision, is transmitted to the Data Concentration Card~(DCC) also on the OD electronics system over a distance of approximately 80\m through optical fibres at a data transfer rate of 800~Mbits/s.
 \par 
-  The OD board hosts the DCC, TCC and a Clock and Control System card~(CCS). The TCC completes TPG process by combining the TPs generated and transmit them to the regional Calorimeter Trigger system while the CCS is tasked primarily with distributing fast timing signals~(LHC 40~MHz clock and trigger commands) to the FE and OD electronics and to synchronize their operation. 
-A common clock distribution serving $5\times5$ readout unit of the FE reduces any needed channel-to-channel synchronization.
+  The OD electronics system, shown in Figure \ref{fig:readout}, hosts the DCC, TCC and CCS electronic boards. It serves both the Data Acquisition~(DAQ) and trigger paths.  In the DAQ path, the DCC collects the digitized crystal data from up to 68 FE boards and performs data verification and data reduction based on readout flags from the Selective Read-Out  Processor~(SRP) system, while in the trigger path, the TCC collects trigger data from up to 68 FE boards corresponding to a supermodule in the barrel and 48 FE boards  corresponding to the inner and outer  part of a $20^{o}$ in $\phi$. The TCC completes a Trigger Primitive Generation~(TPG) process started at the FE by computing \textit{trigger primitives} and synchronized them by the Synchronization and Link mezzanine Board~(SLB) before  their eventual transmission to the Regional Calorimeter Trigger system at each LHC proton bunch crossing. Each Trigger Primitive~(TP) consist of the summed transverse energy deposited in each TT and the fine-grain bit. The 24 bits TPs are stored in the TCC during a Level-1 trigger latency and multiplexed into an 8-bit word encoding the summed transverse energy in a tower and the fine-grain bit and finally transferred to the DCC at a rate of 1 word/25~ns.
+\par 
+The CCS is tasked primarily with distributing fast timing signals~(LHC 40.08~MHz clock, L1A  and control signals to the TCC, DCC and CCUs of the FE board. By interfacing the on- and off-detector electronics to the TCS and Trigger Throttling System~(TTS), the CCS synchronizes all the activities of the OD and configures the on-detector electronics \cite{ECALREADOUT}.  
+\newline
+The 40.08~MHz LHC Bunch-Crossing~(BX) clock and 11.246~KHz~(88.9\mus) orbit signals from the RF generators of the LHC machine are broadcast over singlemode optical fibres from high power laser transmitters at the Prevessin Control Room~(PCR) to the four LHC experiments. The combined signals  are received at CMS by a TTC machine interface~(TTCmi) minicrate carrying an LHC clock receiver~(LHCrx) module and a TTC Clock fanout~(TTCcf) module. Embedded in the TTCmi is a voltage controlled \textit{Quartz Phase-Lock Loop}~(QPLL) ASIC with a clock frequency or locking range of 40.0749~MHz to 40.0823~MHz. The QPLL acts as a jitter-filter and clock multiplier for clock signals operating at the LHC bunch-crossing frequency with and output clock time jitter up to 16 picoseconds~(ps) in rms. The QPLL adjusts for any clock phase and then makes multiple copies of the LHC clock signals before distributing them to the local TTC transmitters. The local TTCcf distributes the low-jitter LHC clock signals to the TTC receiver~(TTCrx) module of the TTC system which is eventually distributed through optical fibres to FE boards, trigger and OD readout electronics used for Level trigger accept, bunch counter reset, bunch crossing number event counter reset and event number and the millions of electronics channels. The TTCmi also has master phase adjustment for the  orbit signal and facilitates monitoring of clock signal quality. The local TTC system is programmed to distribute to all the trigger synchronization circuits or Synchronization and Link mezzanine Board~(SLB) the  Bunch-Crossing zero~(BC0) broadcast signal. 
+\newline
+In the SLB of each TCC, the BC0 timing is synchronized \cite{TRIGSYNC} to match the arrival of the bunch zero or first bunch crossing TP data at the SLB. The synchronization circuits make use of FIFOs to archive the synchronization \ie after a clear FIFO is executed during the LHC extraction gap of 127 missing proton bunches of the LHC orbit, the first data entering each FIFO must correspond to the bunch zero crossing. This synchronization is needed to account for the non-negligible and unpredictable phase on the trigger primitives arrival time to the processors introduced by different particle flight paths to different regions of the detector, different optical transmission fibre lengths and different phase lock delays in the electronic serializers and ensures that the electromagnetic and hadronic calorimeter trigger primitives in each TT is time aligned with respect to the "bunch 0 clock" which corresponds to the start of the LHC orbit. The synchronized trigger primitives are sent at 1.2~Gbits/s to the Regional Calorimeter Trigger through 10\m electrical cables where with HCAL trigger primitives, the electron/photon and jet candidates are computer together with their total transverse energy. 
+\newline
+In the DCC the data integrity is verified and formatted together with the TCC information, the selective readout flags and the crystal data of the selected TT according to the selective readout processor flags. Words of 64 bits are formed and sent to the DAQ at L1A rate provided by the trigger system.
+% In the DCC it is stored in a pipeline buffer until a Trigger Level 1~(LV1) accept decision is received after which it is sent to the DAQ. The digitized data in the TCC is used for completion of the Trigger Primitive Generation~(TPG) started at the FE and and eventual transfer to the LV1 trigger system.  The TPs are sent to the Trigger Concentration Card~(TCC) on the OD electronics at a rate of .
 
-\clearpage
+\vspace{5mm}
+
+\begin{minipage}{0.99\textwidth} 
+\begin{center}
+\mbox{
+\includegraphics[height=0.6\textwidth, width=0.9\textwidth]{THESISPLOTS/ECAL-FRONT-END-ELECTRONICS.jpg}
+%\includegraphics[height=0.5\textwidth, width=0.50\textwidth]{THESISPLOTS/CMS-ECAL-READOUT-CHAIN.png} \quad
+} 
+\captionof{figure}{Schematic diagram of the ECAL electronics readout  Trigger Tower~(TT) or Front End~(FE) board.}
+\label{fig:readout2}
+\end{center}
+\end{minipage}
+
+
 \vspace{5mm}
 \begin{minipage}{0.99\textwidth} 
 \begin{center}
@@ -216,18 +250,19 @@ A common clock distribution serving $5\times5$ readout unit of the FE reduces an
 \end{center}
 \end{minipage}
 
-\vspace{5mm}
 
+\vspace{5mm}
 \begin{minipage}{0.99\textwidth} 
 \begin{center}
 \mbox{
-\includegraphics[height=0.6\textwidth, width=0.9\textwidth]{THESISPLOTS/ECAL-FRONT-END-ELECTRONICS.jpg}
-%\includegraphics[height=0.5\textwidth, width=0.50\textwidth]{THESISPLOTS/CMS-ECAL-READOUT-CHAIN.png} \quad
-} 
-\captionof{figure}{Schematic diagram of the ECAL electronics readout  Trigger Tower~(TT) or Front End~(FE) Card.}
-\label{fig:readout2}
+\includegraphics[height=0.6\textwidth, width=0.9\textwidth]{THESISPLOTS/ECAL-Off-Detector-and-ReadOut-Electronics.png}
+}
+\captionof{figure}{Schematic diagram of the ECAL Off-Detector and Readout Architecture.}
+\label{fig:readout}
 \end{center}
 \end{minipage}
+
+
 
 %Photodiodes like APDs and VPTs are similar to silicon photodiodes, with the exception that they have a buried p-n junction reversed-biased at a very high electric field. The photo electrons arriving at the junction undergo avalanche multiplication giving the device a gain.
 %This homogenous design of the ECAL provides it with a performance which is optimal(by design) in its potential to discover a Higgs in the mass region 
@@ -236,92 +271,80 @@ A common clock distribution serving $5\times5$ readout unit of the FE reduces an
 %ECAL has a current  timing resolution better than 500~ps for large energy deposits(more than 10-20~GeV in the \text{EB})~\cite{TIME} 
 %and an energy resolution of ${\displaystyle\sigma/E\approx 0.45\,\%}$ for unconverted photons with energies above 100~GeV~\cite{CMSTDR}.
 \subsubsection{Hadronic Calorimeter}
-Hadrons traveling through a medium transfer their energy to the constituent atoms in the medium through ionization or excitation of the atoms. The major energy loss is through the formation of ion pairs~(positive ions and electron). A hadronic shower develops through the inelastic collision of the incident hadron with the nucleus of the absorber material producing secondary hadrons which travel through the next layers of the absorber material producing further hadrons. This is the basic phenomenon in which particles are detected in the HCAL.
-
-The HCAL is comprised of four distinct subdetectors: the Barrel~(\text{HB}), the Endcap~(\text{HE}), the Outer Barrel~(\text{HO}), and the Forward~(\text{HF}). Unlike the ECAL, the HB,HE and HO subdetectors are scintillator-sampling calorimeters with embedded wavelength shifting fibers~(WLS). 
-HB, HE and HO uses brass plates as the inactive material and plastic scintillator with WLS as the active material. 
-The brass plate is used for absorbing the hadronic shower which comprise of an \textit{electromagnetic}(particles like $\Ppizero$s, $\Peta$s and other mesons generated in the absorption process and decay to $\Pphoton$s which develop electromagnetic~(em) showers) and \textit{non-electromagnetic} components.  The plastic scintilator is divided into $16$ $\eta$ sectors resulting in segmentation of
- $\Delta\eta\times\Delta\phi=0.087 \times\ 0.087$. It was chosen for its long-term stability and moderate radiation hardness.
-energy. The scintillating light through the WLS brings the light to hybrid photodiodes~(HPDs) in the HB and HE. HPDs which have high
-electrical noise and will be replaced with silicon photon multipliers~(SiPM) which have low noise during the current CMS detector upgrade. 
-The \text{HB} and \text{HE} combine cover a region in pseudo-rapidity of $\vert \eta \vert < 3$. 
-The HB covering the region $|\eta| < 1.3$, is divided into two-half barrel~(HB+ and HB-) sections each composed of 18 identical $20^{o}$ wedges in $\phi$. Each wedge is made of flat brass alloy and steel(only front and back plates) absorber plate.
-HE covers $1.3 < \eta < 3.1$ and has plastic scintillation tiles with granularity of  $\Delta\eta\times\Delta\phi=0.087 \times\ 0.087$ for $|\eta| < 1.6$ and  $\Delta\eta\times\Delta\phi=0.17 \times\ 0.17$ for $|\eta| > 1.6$.
-The HO is an extension of HB outside the solenoid and thus utilizes the solenoid coil as an additional absorber. It is used to
-identify the starting shower and to measure the shower energy deposited after HB.
-
-The first active layer of the scintillating tiles is situated directly behind the ECAL in order to actively sample low energy showering particles from the support material between the ECAL and HCAL. 
+The Hadron Calorimeter~(HCAL) is important for the measurement of protons, pions, kaons, fragmenting quarks and gluons also known as \textit{jets} with energies in the \GeV-\TeV range and neutrinos or exotic particles producing apparent missing transverse energy. High-energy hadrons traveling through a medium transfer their energy to the constituent atoms in the medium through ionization or excitation of atoms in the medium. This energy deposition is through the formation of ion-electron pairs~(positive ion and electron) which ultimately leads to the production of \textit{hadronic showers}. A hadronic shower has an \textit{electromagnetic}~(em) and a \textit{non-electromagnetic}~(non-em) components. The em component which has one to two thirds of the energy deposited by the high-energy hadron is measured in the same way as in ECAL using an active scintillating material while the non-em shower energy is deposited in an absorber material through the inelastic collision of the incident hadron with the nucleus of the non-active absorber material and does not contribute to the measured signal but rather in the production of secondary hadrons which travel through the next layers of the absorber material producing further hadrons and very densely ionizing particles. This combination of active and non-active material is the chosen design for high-energy hadron detection in HCAL and is the reason why the HCAL is referred to as a \textit{Sampling Calorimeter}.
+\par 
+The HCAL is comprised of four distinct subdetectors: the Hadronic Barrel~(\text{HB}),   Endcap~(\text{HE}), Outer Barrel~(\text{HO}) and  Forward~(\text{HF}). Unlike the ECAL, the HB, HE and HO subdetectors are scintillator-sampling calorimeters using brass plates as the inactive absorber material and plastic scintillator tiles with embedded wavelength shifting fibers~(WLS) to bring out the light as the active material. The brass plate is used for absorbing and so stopping the high-energy hadron producing hadronic showers with an em~(particles like $\Ppizero$, $\Peta$ and other mesons generated in the absorption process which decay to photons and develop electromagnetic shower) and non-em~(mostly charged pions and kaons) components while the plastic scintillator with WLS is used for measuring the energy of the em component. The first active layer of the scintillating tiles is situated directly behind the ECAL in order to actively sample low energy showering particles from the support material between the ECAL and HCAL. The plastic scintilator, chosen for its long-term stability and moderate radiation hardness, is divided into $16$ $\eta$ sectors resulting in segmentation of $\Delta\eta\times\Delta\phi=0.087 \times\ 0.087$. The scintillating light is collected and brought to Hybrid Photodiodes~(HPDs) through the WLS in the HB and HE. HPDs have high electrical noise and was used during the CMS data recording of this thesis have been replaced with \textit{silicon photon multipliers}~(SiPM) which have low noise during the CMS detector upgrade in 2013-2014.
+\newline 
+The HB, covering the region $|\eta| < 1.3$, is divided into two-half barrel~(HB+ and HB-) sections with each composed of 18 identical $20^{o}$ wedges in $\phi$. Each wedge is made of flat brass alloy and steel~(only front and back plates) absorber plate. The HO is an extension of the HB outside the solenoid and utilizes the solenoid coil as an additional absorber. It is used to identify the starting shower and to measure the shower energy deposited after HB. For this reason the HO is also known as the \textit{tail catcher}.
+The HE covers the region $1.3 < \eta < 3.1$, and has plastic scintillation tiles with granularity of  $\Delta\eta\times\Delta\phi=0.087 \times\ 0.087$ for $|\eta| < 1.6$ and  $\Delta\eta\times\Delta\phi=0.17 \times\ 0.17$ for $|\eta| > 1.6$. This granularity provides good measurement of forward moving particles through non-overlapping showers. 
+\newline
+The \text{HF} occupies a pseudo-rapidity region of $3 < \vert \eta \vert < 5$.
+Its purpose is to provide a nearly $4\pi$ hermetic phase space coverage required for the  measurements of missing transverse energy~(\text{MET}). MET is the established signal for particles like neutrino and exotic particles such as supersymetric particles like gravitino which escape detection. The HF consists of radiation hard quartz fibres embedded in steel absorbers running parallel to the beam axis. The signal from Cherenkov light emitted in the quartz fibres in response to charged particles make it possible for the HF to detect all charge particles in the forward region. The HF calorimeter has long and short fibers for better sampling and to distinguish em showers from non-em showers. The choice of quartz fibers is because of its high resistance to the high radiation dose present in the more forward region of the CMS detector and for its fast production of light through the Chererenkov process. 
+\newline
+For $\vert \eta \vert < 1.48$, the HCAL cells map on to $5\times5$ ECAL crystal matrix to form calorimeter towers projecting  outwards from near the nominal interaction point. In each tower, the energy in ECAL and HCAL cells is summed to define the calorimeter energy tower. The energy ratio of an HCAL tower to an ECAL in a calorimeter energy tower can be used to improve photon and electron identification. 
 % to absorb the hadronic shower and sits parallel to beam axis with the innermost and outermost layers made up of stainless steal interleaved by plastic scintillating tiles.
 %Each scintillating tile has a size of $\Delta\eta\times\Delta\phi=0.087 \times\ 0.087$ and is instrumented with a single wave length shifting fiber(WLS) for collecting the light. The summed light optical signals is converted into fast electronic signals by photo-sensors called  hybrid photo-diode(HPD).
 %This in-homogeneous design gives the HCAL, an energy resolution of ${\displaystyle \Delta E/E \approx 0.5/\sqrt{E(GeV)} }$ for particles with energy above 250~GeV, much lower compared to that of homogeneous ECAL detector.
 %Hadrons like protons, neutrons kaons and pions are unlike electromagnetic particle strongly interacting~(strong force is the force that binds nuclei together). A hadronic shower is formed when an incident hadron undergoes an inelastic collision with the nucleus of the absorber material producing secondary hadrons which as they go through successive layers of absorber material interact inelastically with other nuclei to produce further hadrons etc. 
 %The  hadronic cascade loses about 30\,\% of incident hadron energy through nuclear excitation of the nuclei of atoms of the  absorber material.  Hadronic showers start to develop later with more lateral spread and and larger in the longitudinal dimensions than electromagnetic showers. 
-\newline
-The \text{HF} occupies a pseudo-rapidity region of $3 < \vert \eta \vert < 5$.
-Its purpose is to provide a closer to $4\pi$ hermetic phase space coverage required for missing transverse energy calculation or \text{MET}. MET is the established signal for very weakly interacting particles like neutrino and supersymetric particles like gravitino which travel through the detector undetected. %HF calorimeters placed upstream also have scintillating tiles called \textit{Beam Scintillation Counters}~(BSC) which in coincidence with the \textit{beam pick-up monitors}~(BPTX) detector help eliminate beam background contamination at the trigger level. 
-HF consists of radiation hard quartz fibers embedded in steel absorbers running parallel to the beam axis. The signal from Cherenkov light emitted in the quartz fibers in response to charged particles makes it possible to detect all charge particles in the forward region. The HF calorimeter has long and short fibers for better sampling and to distinguish showers generated by electrons and photons from those generated by hadrons.
-%The goal of this hardware design is to give better compensation for different shower components in the hadronic shower.
- The choice of quartz fibers is because of its high resistance to the high radiation in the forward detectors and its fast production of light through Chererenkov process. 
+ %HF calorimeters placed upstream also have scintillating tiles called \textit{Beam Scintillation Counters}~(BSC) which in coincidence with the \textit{beam pick-up monitors}~(BPTX) detector help eliminate beam background contamination at the trigger level. 
  %The HF enables the HCAL to pick up myriad of particles coming out of the collision point which would otherwise be undetected due to their very forward trajectory.
-\newline
-%For $\vert \eta \vert< 1.74$ region, the HCAL cells are 0.087~$\times$~0.087\,rad  in pseudo-rapidity($\eta$) and in azimuth ($\phi$).
-For $\vert \eta \vert < 1.48$, the HCAL cells map on to $5 \times 5$ ECAL crystal arrays to form calorimeter towers projecting  outwards from near the nominal interaction point. 
-%At larger values of $\vert \eta \vert$, the size of the towers increases and the matching ECAL arrays contain fewer crystals. 
-In each tower, the energy in ECAL and HCAL cells is summed to define the calorimeter energy tower. The energy ratio of an 
-HCAL tower to an ECAL in a calorimeter energy tower can be used to improve photons and electron identification. 
+ %The goal of this hardware design is to give better compensation for different shower components in the hadronic shower.
 %This ratio of the energy deposit if a particle in the ECAL crystals to that in the HCAL towers is used to distinguished between true photons from neutral hadronic showers.
-% \newline
 % All these information is fed into the PF algorithm for particle reconstruction.
 \subsection{Muon Chambers}
 Muons unlike electrons and hadrons do not deposit most of their energy in the calorimeters.
-They are capable of traveling across the entire CMS detector into the muon chambers. Muons produce tracks which run across
-the CMS detector starting from the silicon pixel and strip subdetector closest to the IP called the \textit{Tracker} and depositing very little fraction of their energy in the calorimeters unto the muon chambers. 
+They are capable of traveling across the entire CMS detector into the muon chambers. Muons produce tracks which run across the CMS detector starting from the silicon pixel and strip subdetector closest to the $pp$ interaction point~(IP) called the \textit{Tracker}, depositing very little fraction of their energy in the calorimeters, and unto the muon chambers. 
 The muon chambers use the process of ionization and a 2~T magnetic field from the return iron yokes~(bending the tracks of charge particles) to measure the momentum of charged particles.
-The three different types of muon chambers used by the CMS are: the drift tubes~(DT) chambers in the barrel, cathode strip chambers~(CSC) 
-in the endcaps and resistive plate chambers~(RPC) glued to the DT and CSC chambers.
+The three different types of muon chambers used in the CMS detector are: the Drift Tubes~(DT) chambers in the barrel, Cathode Strip Chambers~(CSC) in the endcaps and Resistive Plate Chambers~(RPC) glued to the DT and CSC chambers.
 Four layers or stations of DT/RPC and CSC/RPC are embedded in an interleaved  style with the iron yoke for track reconstruction and triggering. Figure \ref{fig:cmslview} is a longitudinal view of the CMS detector showing the position of the muon stations.
-The DT and CSC record track segments characterized by the position of the track and the bending angle. This information is used to determine the precise transverse momentum and charge of particles during particle reconstruction.
+The DT and CSC record track segments characterized by the position of the track and the bending angle. This information is used to determine the precise transverse momentum and charge of the particle during event reconstruction.
 The RPCs(DTs and CSC will also be used after the current detector upgrade) are dedicated L1 trigger chambers used to determine the candidate muon's approximate transverse momentum and proton bunch crossing number. The RPC has a timing resolution of about 3~ns.
-\clearpage
-\begin{center}
-\centering
-\mbox{\includegraphics[height= 0.5\textwidth, width=0.7\textwidth]{THESISPLOTS/CMS-ECAL-EB-EE.png}}
-%\mbox{\includegraphics[scale=0.2]{THESISPLOTS/CMS-ECAL.png}}
-%\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
-\captionof{figure}{Layout of the CMS electromagnetic calorimeter showing the arrangement of crystal modules, supermodules in the barrel with the preshower infront of endcap with supercrystals.}
-\label{fig:CMSECAL}
-\end{center}
+ \par 
+We summarize in Table \ref{tab:tableCMS} CMS detector performance and material type of each subdetector.
 
+
+\subsection{Event Triggering}
+Assigning particles to the correct $pp$ collision  and storing the partially reconstructed event in the DAQ before the next collision happens in 25~ns is a very challenging problem. In addition to this, we want to select only potentially interesting events \ie events with large transverse energy or interesting particle combination, to reduce the event rate during read-out and since the full event information comes from  millions of electronic channels of the CMS detector, the signals from every channel have to be synchronized with the 40.08~MHz LHC bunch crossing frequency. CMS solves these very challenging problems by using a Timing, Triger and Control system and two event selection triggers: a \textit{Level}-1~(L1) and an \textit{High Level Triggers}~(HLT) trigger. 
+\par 
+The L1 trigger consists of custom-designed programmable electronics system implemented in FPGA and ASIC technology and uses information from the calorimeter, muon and a global trigger board. The global trigger makes the final decision based on the decisions of the calorimeter and muon triggers to reject or keep an event for further processing at the HLT trigger. The L1 trigger is responsible for selecting the best 100,000 events/second from the initial 1 billions events/second produced from $pp$ collisions.
+L1 trigger selection and synchronization starts with the Trigger Primitive Generators~(TPGs) which are based on summed transverse energy deposits in the calorimeter trigger towers and track segments of hit patterns in the muon chambers, respectively. The TPG electronics is integrated with the calorimeter read-out electronics which we described in section \ref{ecalreadout}. 
+\newline
+The calorimeter TPGs generation and synchronization begins in the on-detector front-end electronics which receives ADC signals from 25 crystals also known as trigger towers at the trigger level. An off-detector Trigger and Concentration Card communicating with the Trigger, Timing and Control~(TTC) system which distributes the LHC 40.08~MHz bunch crossing clock, collects trigger primitives~(tranverse energy sums) from 68 front-end electronics boards in the barrel and 48 boards in the endcaps, finalize the TPG generation and store the trigger primitives during a L1 latency before transferring the trigger primitives to the regional calorimeter trigger~(RCT) and finally the Global trigger upon receipt of a L1A trigger signal from the TTC system. In the RCT, Synchronization and Link Boards~(SLB) carrying synchronization circuits synchronize the trigger data of each trigger tower. Each trigger tower is aligned with the bunch crossing zero signal by comparing it to histograms of the LHC bunch crossing profile. The aligned data is read by the data concentration card and after verification and reduction of event size if needed is sent to the DAQ. 
+\newline
+In HCAL the energy values of the front and back towers are added to the trigger primitives and the bunch crossing  number is assigned by a peak filtering algorithm.  A schematic picture of the CMS  Level-1 trgger architecture is shown in Figure \ref{fig:l1trigger}.
+\par
+The HLT is a software implementing a sequence of preliminary event selection algorithms and running on a farm of more than 1000 standard computers. These complex algorithms include instructions like, match tracks to hits from the muon chambers, select energy deposits above a certain threshold in the calorimeters with no tracks and more. The HLT begins the first step of event selection and just like the L1 trigger, the HLT  uses assimilated and synchronized information from different parts of the CMS detector to create an entire event. By the time the HLT selection process is complete, there are now only 100 events/second with the remaining 99,900 thrown away.  Considering an average event size is 1~Megabyte during stable and effective LHC $pp$ collision period of a year~($10^{7}$~seconds), CMS produces about a Petabyte of data each year which is stored and used later for offline physics analysis.
+
+
+\vspace{5mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}{0.99\textwidth} 
 \begin{center}\label{CMS-SUBD}
-\centering
-\mbox{\includegraphics[height= 0.5\textwidth, width=0.7\textwidth]{THESISPLOTS/CMS_Int_View.png}} 
+\mbox{\includegraphics[height= 0.6\textwidth, width=0.8\textwidth]{THESISPLOTS/CMS_Int_View.png}} 
 \captionof{figure}{Cross section view showing the coverage range of CMS sub-detectors and their longitudinal distance from the IP.}
 \label{fig:cmslview}
 \end{center}
-\clearpage
+\end{minipage}
+%\clearpage
 
-\subsection{Triggering}
-In CMS, there are a billion interactions including \textit{pile up}~(PU) happening every second. This means data from each 25~ns proton-proton~($pp$) collision has to be processed and stored before the next collision happens.  To be able to assign particles to the right event and from the right  $pp$ collisions, the detectors must have a good time resolution and the signals from millions of electronic channels must be synchronized so  that they can be identified as being from the same event.
-Also, since not all these collisions produce interesting physics events, we have to be capable of selecting only interesting physics events produced from proton-proton collisions with sufficient  energy. The process of selecting such interesting events is called \textit{triggering}.
-\par 
-CMS uses a two level triggering system for selecting interesting events produced with enough energy from collisions.
-The comprise of the \textit{Level}-1~(L1) and \textit{High Level Triggers}~(HLT) triggers.
-% with enough energy. and a pipeline system to temporarily store and process information from many interactions at the same time. The pipeline system helps to separate events belonging to different bunch crossings~(BX).
-%Signals from millions of electronic channels from subdetectors are identified and synchronized  produced by the same event.
-%The \textit{Level}-1~(L1) and \textit{High Level Triggers}~(HLT) triggers make up the CMS triggering system.
-\newline
-The L1 triggers is a hardware designed electronics system implemented in FPGA and ASIC technology and uses information from the calorimeter, muon trigger and a global trigger board. The global trigger board makes the final decision based on the calorimeter and muon triggers to reject or keep an event for further processing at the HLT trigger. The L1 trigger is responsible for selecting the best 100,000 events/second from the initial 1 billions events/second produced. %The pipeline system is used during the L1 trigger latency time of about 3.2~$\mu$s.
-\newline
-The HLT is a software comprised of implemented selection algorithms running on a farm of more than 1000 standard computers. %Thus event selection begins at the L1 and HLT triggers.. 
-These complex algorithms include instructions like, match tracks to hits from the muon chambers, select energy deposits above a certain threshold in the calorimeters with no tracks for electromagnetic objects, and begins the first step of event selection. Just like the L1 trigger, the HLT  uses assimilated and synchronized information from different parts of the CMS detector to create the entire event. 
-By the time this selection process is complete, there are now only 100 events/second with the remaining 99,900 thrown away.
-Taking an average event size to be 1~Megabyte, in a stable and effective LHC proton collision period of a year or $10^{7}$~seconds, CMS produces about a Petabyte of data which is stored and used later for offline physics analysis.
-\par
-Meanwhile in Table \ref{tab:tableCMS}, we provide a performance summary and  material type of each subdetector of the CMS detector.
+\vspace{5mm}
+\begin{minipage}{0.99\textwidth} 
+\begin{center}\label{CMS-SUBD}
+\mbox{\includegraphics[height= 0.6\textwidth, width=0.8\textwidth]{THESISPLOTS/Level-1-Trigger-Architecture.png}}
+\captionof{figure}{Level-1 trigger architecture of CMS.}
+\label{fig:l1trigger}
+\end{center}
+\end{minipage}
 
+\vspace{5mm}
+
+\afterpage{ %
+    \clearpage% Flush earlier floats (otherwise order might not be correct)
+   %% \thispagestyle{empty}% empty page style (?)
+  \begin{landscape}% Landscape page
+\begin{minipage}{0.99\textwidth} 
 \begin{center}
-\centering
  %\setlength{\abovecaptionskip}{0pt}
   %\setlength{\belowcaptionskip}{10pt}
  % \topcaption{GMSB,GGM Phenomenology and Relevant final states}
@@ -349,7 +372,10 @@ Meanwhile in Table \ref{tab:tableCMS}, we provide a performance summary and  mat
   \captionof{table}{CMS detector performance for LHC RUN 1 \cite{CMSTDR2}. }
  \label{tab:tableCMS}
  \end{center}
-
+\end{minipage}
+\end{landscape}
+ \clearpage% Flush page
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{Collider_And_Detector_chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
