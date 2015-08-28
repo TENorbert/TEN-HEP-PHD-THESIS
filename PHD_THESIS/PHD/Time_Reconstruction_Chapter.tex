@@ -86,60 +86,66 @@ Knowing that it takes on average 4.3~ns for a photon to reach the ECAL surface p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ECAL Time Performance from Collision}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The time resolution during LHC proton-proton~($pp$) collisions is expected to be worse than what the test beam study show since factors present only during LHC $pp$ like LHC clock time variations over extended time, timing bias with energy due to gain transition and loss in crystal transparency due to radiation, which leads to difference in pulse shape, can affect the time resolution. To reduce the impact of these effects on the time resolution, we synchronize all the ECAL crystals using $pp$ collision data. 
+The time resolution during LHC proton-proton~($pp$) collisions is expected to be worse than what the test beam study show since the conditions during test beam are not the same as during LHC $pp$ collisions. Effects like LHC clock time variations over extended periods, time bias with energy due to gain transitions in the front-end electronics and loss in crystal transparency due to radiation could affect the pulse shape which will ultimately worsen the ECAL time resolution. The impact of some of these effects can be minimized if all the crystals in ECAL are synchronize using events from $pp$. 
 
-\subsection{Time Calibrations}
+\subsection{Crystal Time Synchronization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Variations in the crystal time may be caused by the difference in pulse shape or by clock drift over time or time shifts introduced during CMS detector repairs. These variations, about 1 to 3 ns on average, can be removed by aligning in time or synchronizing all 75,848 \pb crystals in ECAL. The crystal time alignment is performed once or twice every month and ensures that there is a uniform response by all the crystals to photons produced from $pp$ collisions, at interaction point, and traveling along a straight path with speeds close to the speed of light to ECAL. Crystal time alignment equally guarantees the synchronization of most particles of an event and assigns each event to the correct LHC proton bunch crossing at the trigger level. 
+The cause of crystal time variations may be either due to differences in pulse shape or LHC clock drift over time or time shifts introduced during CMS detector repairs. These variations of about 1 to 3 ns on average can be removed by time aligning or synchronizing all 75,848 \pb crystals in ECAL as the need arises. This synchronization ensures optimal timing resolution throughout the LHC stable beam collision period and continues to maintain the uniform response by all the crystals in measuring the times of electromagnetic particles produced from $pp$ collisions. It also guarantees that the particles  belonging to a given event are always assigned to the correct LHC proton bunch crossing. 
 \newline
-The presence of the "$T_{max}$ Phase", the difference in pulse shape between each crystal, variation in the time of flight by a few nanosecond~(ns) and the different intrinsic delays in each channel motivates a time calibration at two separate levels. At the FE electronics, a timing synchronization is performing by adjusting the time of $5\times5$ crystals or trigger tower in steps of 1.04~ns. This process, known as \textit{Hardware Synchronization}, involves determining the trigger tower time constants needed for time aligning all the trigger towers using $pp$ collision data. 
+Photons produced from $pp$ collisions at the interaction point~(IP), traveling along a straight path with nearly the speed of light and impinging on the front face of the crystals in ECAL are used to define the absolute zero or reference time. 
+\par 
+The synchronization is performed at two levels. The first is by adjusting in steps of 1.04~ns the time delay of the LHC clock signal of a $5\times5$ crystal matrix at the front-end electronics which make up the Clock and Control Unit~(CCU). This is called \textit{Hardware Synchronization}. The second is by adjusting the time of the individual crystals to correct for the presence of the "$T_{max}$ Phase", the difference in pulse shape and the different intrinsic delays in each channel. The crystal time is adjusted during event reconstruction to ensure the best timing reconstruction of each crystal and the process is called \textit{Offline Crystal Synchronization}.
+\subsubsection{Offline Crystal Synchronization}
+The purpose of offline crystal synchronization is to compute time constants needed for the synchronization of all the crystals. Since the crystals are well synchronized if their measured average time over many events for photons produced from $pp$ collisions at the interaction point~(IP), traveling along a straight path with nearly the speed of light and impinging on the front face of the crystals is zero, this means the time constant of each crystal is taken to be the reverse sign of the mean average time measured by the crystal. To validate the crystal time constant, we expect the sum of its measured mean time and the time constant to be zero when averaged over many events. The average time and time constant are computed using the reconstructed energy deposits~(rechits) by the photon on the crystal.
+The time constants are produced in sets and have an \textit{interval of validity}~(IOV) which is defined by the a $pp$ collision running period of the LHC. A total of 17 IOV sets of time constants were produced for the entire LHC run in 2011 and 44 IOV sets for 2012. Presented in Figure \ref{fig:TimeCalibb4} and \ref{fig:TimeCalibaf} are maps showing the average time for the 61,200 crystals in EB~(top plots) and 14648 crystals in EE~(bottom plots). The maps in Figure \ref{fig:TimeCalibb4} show the average time of each crystal before synchronization. A few crystals in EB can be seen having an average time as large as $-1.0$~ns while many in EE have average times varying from $-1.0$ to $+1.0$~ns, especially those in the high-$\eta$ region. The few white spots on the maps are crystals which were masked during data recording by ECAL. The mean time of the average time for all the crystals in EB is $-0.113$~ns with an average of 205 number of rechits per crystal and $-0.337$~ns~($-0.346$~ns) with the number of rechits per crystal of 333~(342) for EE$-$~(EE$+$). The standard deviation of the mean time for all the crystals in EB is $0.119$~ns and $0.282$~ns~($0.256$~ns) for EE$-$~(EE$+$).
+\newline 
+Figure \ref{fig:TimeCalibaf} show the average time of the same ECAL crystals after synchronization. Most of the crystals have a mean average time of approximately $0$~ns, indicating the accuracy of the time constants and performance of the synchronization. The improvement can be see in the mean time of the average time for all the crystals in EB is now $-0.014$~ns and $-0.003$~ns~($-0.004$~ns) for EE$-$~(EE$+$) for the same number of rechits per crystal as before synchronization.  The standard deviation of the mean time for all the crystals in EB is $0.021$~ns and $0.002$~ns~($0.021$~ns) for EE$-$~(EE$+$).
 \newline
-At offline, during energy hits reconstruction or rechits in the transition from uncalibrated to calibrated hits, a time constant, which is the average of the measured time by a crystal over many events, is used to time align individual crystals in ECAL.
-
-
-\subsubsection{Offline Time Calibration}
-The offline time aligning is performed during event reconstruction in CMS. The time constant used by each crystal is the reverse sign of the average time of all the reconstructed energy deposits~(rechits) by the crystal. New sets of time constants are produced each month throughout the entire LHC run period. Each set of time constants produced has an \textit{interval of validity}~(IOV).
-A total of 17 IOV time constants were produced for the entire LHC run in 2011 and 44 IOV time constants for 2012. The time constant for each crystal is produced using $pp$ collision data of mostly triggered photons so as to minimize any time of flight delay that might affect the average time over events for each crystal. 
-The maps in Figure \ref{fig:TimeCalib}, show two dimensional distribution of the average time~(time calibration constants) for each of the 61,200 crystals in EB and 14648 crystals in EE. The figure shows each crystal average time before~(\textit{top 3 plots}) and after~(\textit{bottom 3 plots}) calibration. More information about crystal time calibration for the entire LHC Run 1 is found in \cite{ECALCAL}.
+The details of the procedure for performing the synchronization and the results obtain for all the IOVs produced in the entire LHC Run 1 can be found in \cite{ECALCAL}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth}
 \begin{center}
-\centering
 \mbox{\includegraphics[height=0.50\textwidth, width=0.80\textwidth]{THESISPLOTS/calibDiffMapEB_Before_Calibration.png}}
 \mbox{\includegraphics[height=0.52\textwidth, width=0.45\textwidth]{THESISPLOTS/calibDiffMapEEM_Before_CALIB.png} \quad
 \includegraphics[height=0.52\textwidth, width=0.45\textwidth]{THESISPLOTS/calibDiffMapEEP_Before_CALIB.png}
 }
+\captionof{figure}{Timing maps showing the distribution of average~(mean) time for each \pb crystal in EB~(top) and EE~(below: EE\texttt{-}(left), EE\texttt{+}(right)) before crystal synchronization.}
+\label{fig:TimeCalibb4}
+\end{center}
+\end{minipage}
 %\hline
 %\vspace{1.5cm}
-\clearpage
+\vspace{5mm}
 
+\begin{minipage}{0.90\linewidth}
+\begin{center}
 \mbox{\includegraphics[height=0.50\textwidth, width=0.80\textwidth]{THESISPLOTS/calibDiffMapEB_After_Calibration.png}}
 \mbox{\includegraphics[height=0.52\textwidth, width=0.45\textwidth]{THESISPLOTS/calibDiffMapEEM_AFter_CALIB.png} \quad
 \includegraphics[height=0.52\textwidth, width=0.45\textwidth]{THESISPLOTS/calibDiffMapEEP_After_CALIB.png}
 }
-\captionof{figure}{\textit{Top 3}: Time calibration maps showing the distribution of mean time for each channel/\pb crystal in EB~(top) and EE~(below: EE\texttt{-}(left), EE\texttt{+}(right)) before calibration.
-\textit{Bottom 3}: Time calibration maps showing the distribution of mean time after calibration. 
-After calibration most crystals have an average time of zero(\textcolor{green}{GREEN}).}
-\label{fig:TimeCalib}
+\captionof{figure}{Timing maps showing the distribution of average time of each crystal after synchronization with most crystals having an average time of zero indicating the success of the crystal synchronization process and validity of the time constants.}
+\label{fig:TimeCalibaf}
 \end{center}
+\end{minipage}
 
-\subsubsection{Hardware Time Calibration}
-Time alignment at the trigger tower level using the average time of $5\times5$ crystals for events from $pp$ collision or laser is performed during data recording by the CMS detector.
+\subsubsection{Hardware Synchronization}
+We synchronize the CCUs using histograms of the trigger tower timing from Data Quality Monitoring~(DQM) services of events from $pp$ collisions. The synchronization is often done during LHC stable proton beams and guarantees that trigger primitives are assigned to correct LHC proton bunch crossing. It is also possible to synchronize the CCUs using crystal transparency monitoring with lasers.
+\paragraph{Hardware Synchronization With Collision} \mbox{}\\
+The CCU average time is computed for events produced from $pp$ collision and the sign of the time constants is chosen to be opposite to the offset observed from the LHC Clock drift so that their difference for each CCU is zero. During the process of synchronization, the CMS experiment experiences interruption of its data recording process during stable beams. The reason for the interruption is to update the CCUs with the new time constants before the next stable proton beams arrive. Since the CMS experiment wants to eliminate such interruptions, an alternative approach to synchronizing the CCUs is needed. This new approach, which is yet to be validated, is a laser based approach and does not require any interruption of the CMS experiment during stable beams.
 
-\paragraph{Hardware Time Calibration With Collision} \mbox{}\\
-Using $pp$ collision data, the time alignment is performed during CMS data recording using time constants derived from data recorded by the CMS detector. The frequent down times of the CMS detector during stable $pp$ beam collision needed for the FE or trigger tower time adjustments to be made is one of the causes for the difference between the luminosity recorded by CMS detector compared to luminosity delivered by the LHC. This makes hardware time adjustments using collision data less desirable and as a result a laser based time alignment method which requires no CMS detector downtime can be used.
-
-\paragraph{Hardware Time Calibration With Laser}\mbox{}\\
-The ECAL laser system comprise of two lasers, a 440~nm wavelength~(close to peak emission for \pb crystals) laser for monitoring crystal transparency losses and a 796~nm wavelength laser for monitoring readout electronics chain from photodetectors to the electronics~(\ie APDs to ADCs). Both lasers have a jitter of less than 4~ns and as a result, the time from the lasers is averaged over 600 event pulses. The time for each crystal from the laser is expected to be the same as the time from collision data and is represented as $\mathbf{T^{APD}_{MAX}}$. The laser system is also equipped with a fast acquisition card called MATACQ. The time for each channel recorded using the Matacq is also averaged over 600 event pulses and is denoted  $\mathbf{T_{MATACQ}}$.
-The difference, $ \mathbf{T^{APD}_{MAX}} - \mathbf{T_{MATACQ}}$, of the two times, averaged over the  25 crystals of a Clock and Control Unit ~(CCU) is used as the time for each CCU, $ t_{CCU} = \left\langle \mathbf{T^{APD}_{MAX} - T_{MATACQ}} \right\rangle $. 
-To obtain the time shift of 25 crystals belonging to the same Front End~(FE) electronics, we monitor for change of this average time before~($\mathbf{t^{B}_{CCU}} $) and after~($\mathbf{t^{A}_{CCU}} $) hardware intervention during detector maintenance.  
-The time difference, $\Delta t_{CCU} = t^{A}_{CCU} - t^{B}_{CCU}$, averaged over all the 25 crystals, \ie ~$\left\langle t^{A}_{CCU} - t^{B}_{CCU} \right\rangle_{25} $, gives the time shift, and the time calibration constant for the CCU is of opposite sign so that after correcting, the average time of the CCU is zero. This is done for all the 68 CCUs in a given supermodule~(SM) or front end detector~(FED). The global time shift of a given FED is caused by the non-homogeneous laser light distribution on all CCU or trigger towers. Each FED has 1,700 \pb crystals and we produced laser based time calibration constants for all its crystals. Time alignment using laser data is described in detail here \cite{ECALHW}.
+\paragraph{Hardware Synchronization With Laser}\mbox{}\\
+The ECAL laser system comprise of two lasers, a 440~nm wavelength~(close to peak emission for \pb crystals) laser used for monitoring crystal transparency losses and a 796~nm wavelength laser for monitoring the readout electronics chain from photodetectors to the electronics~(\ie APDs to ADCs). The timing information from the laser can be used for monitoring the Clock and Control Unit~(CCU) time with the time of each crystal from laser averaged over 600 event pulses to minimize the effect of the jitter which is less than 4~ns. This crystal time is denoted as $\mathbf{T^{APD}_{MAX}}$. The laser system is also equipped with a fast acquisition card called MATACQ which also records the time for each crystal denoted as $\mathbf{T_{MATACQ}}$. This time is equally averaged over 600 event pulses.
+The difference, $ \mathbf{T^{APD}_{MAX}} - \mathbf{T_{MATACQ}}$, of the two times, averaged over the  25 crystals of each CCU is used as the time for each CCU, \ie $\mathbf{t_{CCU}} \equiv \left\langle \mathbf{T^{APD}_{MAX} - T_{MATACQ}} \right\rangle_{25} $. 
+To extract the time shift for each CCU, we study the change in $\mathbf{t_{CCU}}$ before~($\mathbf{t^{B}_{CCU}} $) and after~($\mathbf{t^{A}_{CCU}} $) a hardware intervention during CMS machine repairs.  
+The time difference, $\mathbf{\Delta t_{CCU}} = \mathbf{t^{A}_{CCU} - t^{B}_{CCU}}$, averaged over the 25 crystals, \ie ~$\left\langle \mathbf{\Delta t_{CCU}} \right\rangle_{25}$, gives the time shift, and the time constant for the CCU is the opposite sign of $\left\langle \mathbf{\Delta t_{CCU}} \right\rangle_{25} $, so that the sum of the CCU time shift and its time constant is on average zero. The CCU synchronization is done for all the 68 CCUs in a given supermodule~(SM) or front-end-detector~(FED). The effect of any global time shift of a given FED caused by the non-homogeneous laser light distribution on all the CCUs is also taken into account in the synchronization process if present. Each FED has 1,700 \pb crystals, thus 68 timing constants are needed per FED. Detail information on hardware synchronization using laser monitoring can be obtained from here \cite{ECALHW}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Time Bias}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The time reconstruction algorithm assumes smooth performance for all energy values of the incident particle. However, during data recording in LHC Run 1, it was observed that for very energetic particles with energy above 160\GeV in EB and 250\GeV in EE, an inherent bias in the time is introduced by the multi-gain pre-amplifier electronics at gain transition points due to not-quite-high-enough slew rate of the amplifiers. The time bias was also observed for very low energy values of less than 2\GeV. The first gain transition point~(Gain-1) of the multi-gain pre-amplifier occurs near $4095$~ADC counts corresponding to $159.744$\GeV in EB and $258.048$\GeV in EE. The subsequent Gain-6 and 12 transitions occur at energy values of \TeV.
-The full conversion of the energy of a particle recorded by a crystal in ADC counts to \GeV is expressed as; $ E_{i} =  G \cdot S_{i}(t) \cdot C_{i} \cdot A_{i}$, where $A$ is the amplitude from the pulse shape in ADC counts, $G$ is the ADC-to-GeV conversion factor equal to $0.039$($0.063$) in EB(EE), $C_{i}$ is the inter-calibration coefficients accounting for individual channel response to the electromagnetic shower and $S_{i}(t)$ is the correction term obtained from laser accounting for radiation-induced channel response.  $S_{i}$ changes over time.
 \newline
-The observed time bias is corrected on an energy dependent basis during event reconstruction and is CMS event reconstruction software~(CMSSW) release dependent. Figure \ref{fig:TimeBias} show the comparison between two CMS event reconstruction software releases, CMSSW44X, where these time bias corrections were made for the first time and CMSSW53X, where the second set of time bias corrections were applied. Evidently, the average time displayed in both CMSS44X and CMSS53X show the disappearance of the time bias after the time bias corrections were made again in CMSSW53X for all values of the incident particle's energy. 
+The observed time bias with energy is adjusted on a rechit energy dependent basis during event reconstruction and is CMS event reconstruction software~(CMSSW) release dependent. Figure \ref{fig:TimeBias} show the comparison between two CMS event reconstruction software releases, CMSSW44X, where these time bias corrections were made for the first time and CMSSW53X, where the second set of time bias corrections were applied. Evidently, the average time displayed in both CMSS44X and CMSS53X show the disappearance of the time bias after the time bias corrections were made again in CMSSW53X for all values of the incident particle's energy. 
 
 \vspace{5mm}
 \begin{minipage}{0.94\textwidth} 
@@ -151,10 +157,12 @@ The observed time bias is corrected on an energy dependent basis during event re
 \includegraphics[height=0.460\textwidth, width=0.85\textwidth]{THESISPLOTS/TimingResolutionCMSSW_Comparison.png}
 }
 \vspace{-5cm}
-\captionof{figure}{Distribution of mean time~($\mu$)[\textit{top row}] and time deviation~($\sigma$)[ \textit{bottom row}] as a function of crystal energy for EB prior~(left) and after~(right) time bias corrections depending on energy have been applied.}
+\captionof{figure}{Distribution of mean time~($\mu$)[\textit{top row}] and time resolution[ \textit{bottom row}] as a function of crystal energy for EB prior~(left) and after~(right) time bias corrections depending on energy have been applied.}
 \label{fig:TimeBias}
 \end{center}
 \end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%The full conversion of the energy of a particle recorded by a crystal in ADC counts to \GeV is expressed as; $ E_{i} =  G \cdot S_{i}(t) \cdot C_{i} \cdot A_{i}$, where $A$ is the amplitude from the pulse shape in ADC counts, $G$ is the ADC-to-GeV conversion factor equal to $0.039$($0.063$) in EB(EE), $C_{i}$ is the inter-calibration coefficients accounting for individual channel response to the electromagnetic shower and $S_{i}(t)$ is the correction term obtained from laser accounting for radiation-induced channel response.  $S_{i}$ changes over time and so does $C_{i}$.
 
 %%\vspace{5mm}
 %%Further investigation on any additional time bias not related to energy have been performed. A study on how the time might be biased because of a crystal's geometric position in ECAL which ranges from barrel to endcap, \ie from $\eta = 0$ to $\eta = 3.142$, show~(see Figure \ref{fig:EtaDep}) no crystal position or $\eta$ dependence of the time. However, a uniform with $\eta$ time bias of the order of 100~ps have been observed and there are efforts to understand the source of this time bias. The speculation is that the time bias might be caused by electronics or loss in \pb crystal transparency due to radiation \cite{ECALTD}.
@@ -173,14 +181,14 @@ The observed time bias is corrected on an energy dependent basis during event re
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ECAL Time Performance With Z Bosons}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We evaluate the precision of ECAL timing measurements, during $pp$ collisions, by studying the time measurements in events with the decay of the \PZ boson to an electron pair, \ie $\PZ \rightarrow \Pelectron \Ppositron$.  The selection for \PZ candidate events require that each electron have a transverse energy above 10\GeV  and the reconstructed \PZ mass is within, $60\GeVcc < m_{e_{1},e_{2}} < 120\GeVcc$, to ensure that the sample is pure. 
+We evaluate the precision of ECAL timing measurements, during $pp$ collisions, by studying the electron time measurements of events with the decay of the \PZ boson, \ie $\PZ \rightarrow \Pelectron \Ppositron$.  The selection for \PZ candidate events require that each electron have transverse energy above 10\GeV  and the reconstructed \PZ mass is within, $60\GeVcc < m_{e_{1},e_{2}} < 120\GeVcc$, to ensure that the sample contains mostly good \PZ candidates. 
 \newline 
 We use the standard deviation, $\sigma_{eff}$, of the difference in arrival time of the two electrons to evaluate ECAL timing performance. This standard deviation is obtained from the difference in the seed time, $t_{seed}$, of each electron's electromagnetic shower after correcting for the extra time due to the bending of the electron's travel path inside the CMS magnetic field of 3.8~T.  
-In Figure \ref{fig:ZeeTimePerformance2}, we present the distribution of the time difference,  $t_{electron1} - t_{electron2} = t_{seed1}-t_{seed2}$, and the value of the time resolution~($\sigma_{eff}(t_{1} - t_{2})$) of both electrons with the time of flight adjustments made while in Figure \ref{fig:ZeeTimePerformance1}, we show the absolute time resolution~($\sigma_{eff}(t_{seed})$), obtained from the time distribution of a single electron's seed crystal time without correcting for the time due to the bending of the electron's flight path. 
+Figure \ref{fig:ZeeTimePerformance2} shows the distribution of the time difference,  $t_{electron1} - t_{electron2} \equiv t_{seed1}-t_{seed2}$, and the value of the time resolution~($\sigma_{eff}(t_{1} - t_{2})$) of both electrons after adjusting the time due to its non-straight time of flight path, and in Figure \ref{fig:ZeeTimePerformance1}, we show the \textit{absolute time resolution}~($\sigma_{eff}(t_{seed})$), obtained from the time distribution of a single electron's seed crystal time after adjusting for the time due to the bending of the electron's flight path. 
 \newline
-A time resolution of $0.232$~ns in EB and $0.384$~ns in EE is measured with a single precision resolution of $164$~ps in EB and $272$~ps in EE shown in Table \ref{tab:TIMERes}.
+A time resolution of $0.232$~ns in EB and $0.384$~ns in EE is measured with a \textit{single crystal precision resolution}~($\sigma_{eff}(t_{1} - t_{2})/\sqrt{2}$) of $0.164$~ns in EB and $0.272$~ns in EE presented in Table \ref{tab:TIMERes}.
 \newline
-The absolute time resolution, $\sigma_{eff}(t_{seed})$, for a single crystal is measured to be $386$~ps for EB and $388$~ps for EE. However, if we remove the contribution from the spread in time, $\sigma(t_{colision})$, due to the finite time it takes for the two proton bunches of length $5.5$\cm to collide; which is about $\sigma(t_{colision}) = \sigma(t_{Z}) = 183~ps$, we obtain an improve absolute time resolution of $340$~ps in EB and $342$~ps in EE.
+The absolute time resolution, $\sigma_{eff}(t_{seed})$, for a single crystal is measured to be $0.386$~ns for EB and $0.388$~ns for EE. However, if we remove the contribution from the spread in time, $\sigma(t_{colision})$, due to the finite time it takes for the two proton bunches of length $5.5$\cm to collide; which is about $\sigma(t_{colision}) = \sigma(t_{Z}) = 0.183$~ns, we get an improvement in absolute time resolution which is $0.340$~ns in EB and $0.342$~ns in EE.
 
 \vspace{5mm}
 \begin{minipage}{0.94\textwidth} 
@@ -189,7 +197,7 @@ The absolute time resolution, $\sigma_{eff}(t_{seed})$, for a single crystal is 
 \mbox{
 \includegraphics[height=0.5\textwidth, width=0.45\textwidth]{/home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-TOF-Corr-difference-of-seed.png}\quad
 \includegraphics[height=0.5\textwidth, width=0.45\textwidth]{/home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-TOF-Corr-difference-of-seed.png}}
-\captionof{figure}{Ecal time difference between the two reconstructed electrons in $\PZ \rightarrow \Pelectron \Ppositron$ decay. The electron time is the seed~(crystal with highest energy deposit) time with additional correction due to the time of flight of the electron in EB and EE.} 
+\captionof{figure}{Time difference between the two reconstructed electrons in $\PZ \rightarrow \Pelectron \Ppositron$ decay. The electron time is the seed~(crystal with highest energy deposit) time with additional correction due to the time of flight of the electron in EB and EE.} 
 \label{fig:ZeeTimePerformance2}
 %\end{figure}
 \end{center}
@@ -202,16 +210,16 @@ The absolute time resolution, $\sigma_{eff}(t_{seed})$, for a single crystal is 
 \includegraphics[height=0.5\textwidth, width=0.45\textwidth]{/home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EB-EB-Time-of-seed.png}\quad
 \includegraphics[height=0.5\textwidth, width=0.45\textwidth]{/home/tensr/Documents/ECAL_NOTES/PLOTS/2013/ECALTDRPLOTS/EE-EE-Time-of-Seed.png}}
 %\vspace{-1cm}
-\captionof{figure}{Ecal absolute time of a single reconstructed electron in $\PZ \rightarrow \Pelectron \Ppositron$ decay. The electron time is the seed~(crystal with highest energy deposit)time of the electron in EB and EE.} 
+\captionof{figure}{Absolute time of a single reconstructed electron in $\PZ \rightarrow \Pelectron \Ppositron$ decay. The electron time is the seed~(crystal with highest energy deposit) time of the electron in EB and EE.} 
 \label{fig:ZeeTimePerformance1}
 \end{center}
 \end{minipage}
 
 \vspace{5mm}
 We also investigate the timing bias attributed to the FE electronics using events with $\PZ \rightarrow \Pelectron \Ppositron$ decay.
-Figure \ref{fig:ZeeTimeResolution}~(left) show the time resolution measured in the case where the seed crystal time is measured from both crystals belonging to the same FE electronics  compared to the other case, shown in Figure \ref{fig:ZeeTimeResolution}~(right), where the seed crystal time is read from crystals belonging to two different FE electronics. The Constant term, $C$, for the same FE electronics is about $67$~ps while that for different FE electronics is $130$~ps, which indicates that electronic readout de-synchronization contributes to the worsening of the time resolution \cite{ECALTIME,ECALTD,ECALTIME2014,ECALT,ECALTIMEUPGRADE}.
+Figure \ref{fig:ZeeTimeResolution}~(left) show the time resolution measured in the case where the seed crystal time is reconstructed from the same FE electronics compared to the other case, shown in Figure \ref{fig:ZeeTimeResolution}~(right), where the seed crystal time is reconstructed from different FE electronics. The Constant term, $C$, for the same FE electronics is about $0.067$~ns while that for different FE electronics is $0.130$~ns, which indicates that the differences in electronic readout de-synchronization among different FE contributes to the worsening of the time resolution \cite{ECALTIME,ECALTD,ECALTIME2014,ECALT,ECALTIMEUPGRADE}.
 \newline
-The ECAL time resolution for the entire LHC Run 1 of 2011 and 2012, comparing the absolute and single precision time measurements is summarized in Table \ref{tab:TIMERes}.
+The ECAL time resolution for the entire LHC Run 1 of 2011 and 2012, comparing the absolute and single precision time measurements is summarized in Table \ref{tab:TIMERes}. However, the source of approximately $0.400$~ns limit in the improvement of the time resolution remains to be understood. We can only speculate that a combination of effects like pulse shape differences caused by loss of crystal transparency, fluctuations in the shower development in the crystals especially for energetic electromagnetic particles, about $0.100$~ns differences arising from the differences in FE electronics de-synchronization among different electronics and phase shifts in the LHC clock phase lock by the QPLL. Additional studies are needed to fully understand and quantify the contributions from each of these sources. 
 
 \vspace{5mm}
 \begin{minipage}{0.94\textwidth} 
