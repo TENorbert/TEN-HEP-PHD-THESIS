@@ -143,22 +143,34 @@ The time difference, $\mathbf{\Delta t_{CCU}} = \mathbf{t^{A}_{CCU} - t^{B}_{CCU
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Time Bias}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The time reconstruction algorithm assumes smooth performance for all energy values of the incident particle. However, during data recording in LHC Run 1, it was observed that for very energetic particles with energy above 160\GeV in EB and 250\GeV in EE, an inherent bias in the time is introduced by the multi-gain pre-amplifier electronics at gain transition points due to not-quite-high-enough slew rate of the amplifiers. The time bias was also observed for very low energy values of less than 2\GeV. The first gain transition point~(Gain-1) of the multi-gain pre-amplifier occurs near $4095$~ADC counts corresponding to $159.744$\GeV in EB and $258.048$\GeV in EE. The subsequent Gain-6 and 12 transitions occur at energy values of \TeV.
+The time reconstruction algorithm assumes the reconstructed time does not depend on the energy of the incident particle. However, it was observed during CMS data recording in LHC Run 1 that for very energetic particles~(energy above 130\GeV in EB and 250\GeV in EE, an inherent bias in the time is introduced by the multi-gain pre-amplifier electronics at gain transition points due to not-quite-high-enough slew rate of the amplifiers. The time bias was also observed for very low energy values of less than 2\GeV. The first gain transition from gain-12 to gain-6 of the multi-gain pre-amplifier occurs near  $159.744$\GeV in EB and $258.048$\GeV in EE. The next gain transition is from gain-6 to gain-1 and occur at energies of about \TeV.
 \newline
-The observed time bias with energy is adjusted on a rechit energy dependent basis during event reconstruction and is CMS event reconstruction software~(CMSSW) release dependent. Figure \ref{fig:TimeBias} show the comparison between two CMS event reconstruction software releases, CMSSW44X, where these time bias corrections were made for the first time and CMSSW53X, where the second set of time bias corrections were applied. Evidently, the average time displayed in both CMSS44X and CMSS53X show the disappearance of the time bias after the time bias corrections were made again in CMSSW53X for all values of the incident particle's energy. 
+We correct the energy dependence timing bias on a rechit energy basis during event reconstruction. The corrections were applied depending on a CMS event reconstruction software~(CMSSW) release version to account for different CMS data recording and event reconstruction conditions. In Figure \ref{fig:TimeBiasM} we show a comparison of the performance of the time bias corrections on the average time against rechit energy during the reconstruction of rechits between two CMS event reconstruction software releases. In CMSSW44X~(left plot), the time bias corrections made previously did not perform as expected while in CMSSW53X~(right plot) after the second set of time bias corrections were made, the average time is flat with energy. This flatness is seen even for the different modules 1 through 4~( modules contain crystals for different regions in EB) in the barrel.
+\newline 
+The the standard deviation on the time  against rechit energy in plots CMSSW44X~(left) and CMSSW53X~(right) of Figure \ref{fig:TimeBiasR}, show that despite the timing bias corrections, the standard deviation does not change in both CMSSW software releases. This is as expected since the ability to measure the arrival time should not depend on the choice of the reference time.  
 
 \vspace{5mm}
 \begin{minipage}{0.94\textwidth} 
 \begin{center}
 \mbox{
-\includegraphics[height=0.450\textwidth, width=0.85\textwidth]{THESISPLOTS/AmplitudeVsTimeCMSSW_Comparison.png} } 
-\vspace{5cm}
+\includegraphics[height=0.55\textwidth, width=0.50\textwidth]{THESISPLOTS/EB_TimeVsEnergy_Stability_CMS44X.png} 
+\includegraphics[height=0.55\textwidth, width=0.50\textwidth]{THESISPLOTS/EB_TimeVsEnergy_Stability-CMSSW-53X-GeV.png}} 
+%\vspace{-5cm}
+\captionof{figure}{Average time~($\mu$) against rechit energy for EB. The first gain transitions~(gain-12 to 6) happens at about 130\GeV and time bias on energy is seen in CMSSW44X~(left) and very little in CMSSW53X~(right) where the corrections have been applied during rechit reconstruction.}
+\label{fig:TimeBiasM}
+\end{center}
+\end{minipage}
+
+\vspace{5mm}
+\begin{minipage}{0.94\textwidth} 
+\begin{center}
 \mbox{
-\includegraphics[height=0.460\textwidth, width=0.85\textwidth]{THESISPLOTS/TimingResolutionCMSSW_Comparison.png}
+\includegraphics[height=0.55\textwidth, width=0.50\textwidth]{THESISPLOTS/EB_SigmaVsEnergy_Stability-CMSSW-44X-GeV.png}
+\includegraphics[height=0.55\textwidth, width=0.50\textwidth]{THESISPLOTS/EB_SigmaVsEnergy_Stability-CMSSW53X.png}
 }
-\vspace{-5cm}
-\captionof{figure}{Distribution of mean time~($\mu$)[\textit{top row}] and time resolution[ \textit{bottom row}] as a function of crystal energy for EB prior~(left) and after~(right) time bias corrections depending on energy have been applied.}
-\label{fig:TimeBias}
+%\vspace{-5cm}
+\captionof{figure}{The standard deviation against rechit energy for EB in CMSSW44X~(left) and CMSSW53X~(right). The time bias corrections don't affect the standard deviation on the time.}
+\label{fig:TimeBiasR}
 \end{center}
 \end{minipage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
