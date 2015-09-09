@@ -9,90 +9,78 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Limit Computation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-From the results obtained, discussed in the previous chapter, we set limits on the number of observed signal events using the modified \textit{Confidence Limit} computing procedure also known as the \textit{CLs} technique. Using the number of observed events, the expected background events, the expected signal events according to the SPS8 benchmark GMSB model and the systematic uncertainties, we compute 95\% Confidence Limit~(CL) on the mean lifetime, $\tau_{\tilde{\chi}^{0}_{1}}$~(ns), and the mass of the  \PSneutralinoOne, $m_{\tilde{\chi}^{0}_{1}}$~(\GeVcc),  or the effective SUSY breaking scale, $\mathbf{\Lambda}$~(\TeV). We also produce a two dimensional limit in $\tau_{\tilde{\chi}^{0}_{1}}$ and $m_{\tilde{\chi}^{0}_{1}}$~(\GeVcc) still using the CLs technique.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\par 
-The acceptable statistical search and discovery experiment method by CMS is by computing \textit{p-values} from the test statistics of the different hypothesis involved in the search. From these $p$-values, the confidence intervals or CL~(in our case the CLs) is derived. The computation of the CL from the results of the hypothesis testing is according to the following procedure:
+Since we did not find an excess of events produced by a new phenomenon in our event counting search experiment, we need to make important quantitative statements such as "exclusion limits" about this negative result which can be useful to other particle physicists or future experiments. The new phenomenon, which is described by the SPS8 GMSB model, is the decay of the lightest neutralino~(\PSneutralinoOne) into a late photon and a gravitino giving rise to events with a late photon and large missing transverse energy. An exclusion limit, which can be either an "upper" or "lower" limit, is a limit set on the lifetime and mass of \PSneutralinoOne and event production rate or cross section of the new phenomenon serves as an important quantitative information. For example, through exclusion limits, we can make statements like the following: 
 \begin{itemize}
-\item A \textit{NULL}~($H_{0}$) and an \textit{Alternate}~($H_{1}$) hypothesis are defined. Additional hypothesis can also be defined, however, for limit computing two is enough,
-\item A Test statistics~($t(x)$), where $x$ is the data, and its corresponding test statistics calculator are selected,
-\item The confidence interval is computed by inverting the results of the hypothesis test.
+\item a lightest neutralino, if it exists, is produced with a cross section below a certain threshold, with this probability, and the certain threshold is an \textbf{upper} on the lightest neutralino production cross section.
+\item a lightest neutralino decay, if it happens, takes place with a mean lifetime larger than this threshold, with this probability, and this threshold is a \textbf{lower} limit on the neutralino mean lifetime.
 \end{itemize}
-Before we discuss the limit computation, first, let us describe the CLs technique.
-\subsection{CLs Technique}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We evaluate an exclusion limit for the lightest neutralino decay to photon and gravitino using a method for deriving an exclusion limit from the \textit{Confidence Interval} or \textit{Confidence Limit}~(CL) known as the \textit{modified frequentist approach} or the $CL_{s}$ method.  This method uses the number of observed events, the expected background events, the expected signal events according to the SPS8 benchmark GMSB model and the systematic uncertainties to compute 95\% CL on the cross section which can be translated into exclusion limits on the mean lifetime, $\tau_{\PSneutralinoOne}$~(ns), and the mass of the  \PSneutralinoOne, $m_{\PSneutralinoOne}$~(\GeVcc),  or the effective SUSY breaking scale, $\mathbf{\Lambda}$~(\TeV). %We also produce a two dimensional limit in $\tau_{\PSneutralinoOne}$ and $m_{\PSneutralinoOne}$~(\GeVcc) still using the CLs technique.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The $CL_{s}$ technique \cite{CLS} is attributed as the standard technique or framework for computing the confidence or exclusion intervals in a search and discovery experiment. It has been tested and validated during the search for the Higgs boson at previous CERN experiment known as LEP and recently in the discovery of the scalar boson with mass, $m_{H} = 125.36\pm 0.37(stat.Unc)\pm0.18(syst.Unc)$, in 2012, by both CMS and ATLAS experiments.
-\newline
-The $CL_{s}$ is defined as:
+\subsection{CLs Method}
+The $CL_{s}$ method serves as the standard method for evaluating exclusion limits in a search and discovery experiment as recommended by the the CMS statistics committee \cite{CLS}. This is because in search  and discovery experiments the discrimination between the background-only hypothesis with the signal plus background hypothesis is very poor and there is a huge overlap between the probability density functions~(pdfs) of the test statistics of both hypothesis as shown in Figure \ref{fig:CLS}, where the magenta-colored function and shaded area under the pdf is for the background-only hypothesis pdf and the blue is for the signal plus background hypothesis pdf. Each area under the corresponding pdf is the probability or $p$-value computed from the observed value of the test statistics from data, $q^{obs}_{1}$,  to higher values. Rather than using the observed or expected confidence limit of the signal plus background hypothesis, $CL_{s+b}$, the $CL_{s}$ method uses a new confidence interval quantity, $CL_{s}$, defined as 
 \begin{equation}
 CL_{s}  =  \frac{CL_{s+b}}{CL_{b}}  = \frac{p_{s+b}}{1 - p_{b}}
 \end{equation}
-where $s+b$ means signal and background and $CL_{s+b}$ or $p_{s+b}$ is the $p$-value of the signal plus background hypothesis and $CL_{b}$ or $p_{b}$ is that for the background only hypothesis.
-\newline
-The purpose of the using the $CL_{s}$ method is to compute reliable upper limits in a search scenario when
-the observed signal is very small compared to the background.
-In the $CL_{s}$ technique, one uses not the p-value~($CL_{s+b}$) but rather divide this by $CL_{b}$~( which is 1 minus the $p$-value for background only hypothesis). The reason for this is to define a conditional probability conditioned to the scenario of observing only background or background only hypothesis.
-\newline
-In CMS, the $CL_{s}$ method has been implemented in a unique statistical software package called \textit{HiggsCombine} \cite{LIMITS}, with the goal of providing direct access to a variety of robust statistical methods with optimised performance for computing limits or confidence intervals.
-HiggsCombine is the official standard tool recommended by the CMS statistical committee and CMS Higgs group for calculating limits in any CMS search and discovery analysis.
-It takes as input estimates on the number or distribution of signal and background and the observed number or distribution from data and produces an upper limit in the production cross section of a given physics process for a given value of a parameter of interest~(POI).
-Higgscombine tool has the advantage in that, it allows for the possibility to use several different statistical methods of calculating the upper limit. This way, one can make comparison and simple checks for any inconsistency. In this analysis, we used an Asymptotic \cite{ASYMP}, for testing and the HybridNew~(a hybrid of Frequentist and Bayesian methods) \cite{LIMITS}, to calculate our final observed  limits. 
+where $CL_{b}$ is the confidence interval derived from the background-only hypothesis test statistics and, $s+b$, means signal plus background. The motivation for dividing the  $CL_{s+b}$ by the $CL_{b}$ is to define a conditional probability which is conditioned to the scenario of observing only background or agreeing with the background-only hypothesis such that the exclusion limit is not easily moved by fluctuations in the background and the limit is said to be a "conservative choice" \cite{LIM}. 
+
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
+\begin{center}
+\mbox{
+\includegraphics[height=0.55\textwidth, width=0.7\textwidth]{THESISPLOTS/CLS_METHOD.png}}
+\captionof{figure}{Test statistic probability density functions~(pdfs) of the signal plus background hypothesis~(blue) and background-only~(magenta) hypothesis showing a typical scenario where using the $CL_{s}$ approach instead of the $CL_{s+b}$ leads to better or conservative exclusion limits.}
+\label{fig:CLS}
+\end{center}
+\end{minipage}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{Statistical Test Formalism}
-The Neyman-Pearson Theorem states that the likelihood ratio gives the most powerful hypothesis test. Therefore, we construct our test statistics $t_\mu$ as a function of the observed data, as a likelihood ratio.
-In a search analysis, one defines the null hypothesis $H_{0}$ describing only known processes, or the background only which is to be tested against an alternate hypothesis $H_{1}$ defined as a background  and signal. However in the computation of upper limits:
-\begin{itemize}
-\item $H_{0}$ being the NULL hypothesis includes the background and signal~$(s + b)$ while
-\item $H_{1}$ being the ALTERNATE hypothesis includes only the  background~($b$). 
-\end{itemize}
-
-Using these, two hypothesis we quantify the level of agreement between our observed data with either of the hypothesis by computing a $p$-value~($p$-value if the probability under the assumption of a given hypothesis, of finding data of equal or greater incompatibility with the predictions of the given hypothesis).
-A given hypothesis is then regarded as being excluded if its $p$-value is observed below a given threshold. In particle physics, this threshold value for the $p$-value is 0.05 corresponding to 95\% of confidence level~(CL).
-The CMS accepted method of computing upper upper limit is based on mix of frequentist-hybrid significance test using the profilelikelihood ratio as a test statistics~(HybridNew method). 
-The parameter of interests in in our case the rate ~(cross section) of signal process as well as \textit{nuissance parameters} as systematics for the background and signal models. This parametrized systematics effects results, as is always the case, to loss in sensitivity.
-
-In this search experiment, for each event in the signal, we measured the timing of the photon as our observable. We use this value to construct a histogram $\mathbf{n} = \left( n_{1}, \cdots, n_{N}\right)$. The expectation value for each value of $n_{i}$ can be written as:
+In order to compute the exclusion limits, we perform a statistical inference on the Alternate hypothesis, $H_{1}$, which is the SPS8 benchmark GMSB model. Since the result of our search was negative, we try to exclude a region in a parameter space of the SPS8  benchmark GMSB model which do not pass the goodness-of-fit test to the observed data. A set of values of the \textit{Parameter Of Interest}~(POI) describing the SPS8 benchmark GMSB model is excluded if the corresponding evaluated value of the $CL_{s}$ is below $0.05$, which corresponds to 95\% of confidence level~(CL).
+\par 
+Since our search experiment is an event counting experiment, we construct a histogram, in the photon ECAL time, of the number of events, $\mathbf{M}$, passing our final event selection and acceptance. Suppose the number of events in each bin of the histogram is $n_{i}$,  with $i = 1, \cdots, N$, where $N$ is the number of bins of the histogram. The expected number of events in the $i^{th}$ bin, $E[n_{i}]$, is the sum of events from all known physics processes which is a combination of events due to the Standard Model, which we  call background events, $b_{i}$, and events due to the  SPS8 benchmark GMSB model, which we call signal events, $s_{i}$. Thus, the expected number of events in the $i^{th}$ bin is given as
 \begin{equation}
  E[n_{i}] = \mu s_{i} + b_{i}
 \end{equation}
-where $\mu$ is the parameter which determines the signal strength, when $\mu = 0$ means background-only and when $\mu=1$ then we have the signal and background hypothesis. The the mean number of entries in the $i$th bin from signal and background are given as:
+where $\mu$ is the  POI which is the \textit{signal strength}. It relates the expected cross section~($\sigma_{th}$) according to the SPS8  benchmark GMSB model and the actual observed cross section~($\sigma^{Obs}$) through 
 \begin{equation}
-s_{i} = s_{tot} \int_{bin, i} f_{s}\left(t;\mathbf{\theta_{s}}\right) \quad 
-b_{i} = b_{tot} \int_{bin, i} f_{b}\left(t;\mathbf{\theta_{b}}\right)
+\mu = \frac{\sigma^{Obs}}{\sigma_{th}}.
 \end{equation}
-with the functions $f_{s}\left(t;\mathbf{\theta_{s}}\right) $ and $f_{b}\left(t;\mathbf{\theta_{b}}\right) $ being the probability density functions~(Pdfs) of the variable $t$ for the signal and background events and $\mathbf{\theta_{s}} $ and $\mathbf{\theta_{b}} $ representing the parameters which characterise the shapes of the pdfs. $s_{tot}$ and $b_{tot}$ represents the total mean numbers of signals and backgrounds while the integrals represent the probabilities for an event to be found in bin $i$. $\mathbf{\theta} = \left( \mathbf{\theta_{s}}, \mathbf{\theta_{b}}, b_{tot} \right)$ denote all nuisance parameters~(systematic uncertainties) while $s_{tot}$ is the signal normalization is fixed to the value predicted by the nominal signal model.
-
-The likelihood function is the product of the Poisson probabilities for all bins:
+When $\mu = 0$, it means the  SPS8  benchmark GMSB model had no contribution to the number of events in each bin and provides a test for the Standard Model background-only hypothesis. When $\mu=1$, it means the SPS8  benchmark GMSB theory contributed to the number of events as expected and this provides a tests for the signal plus background hypothesis. The other values for $\mu$ corresponds to different rates of the SPS8 benchmark GMSB model.
+\par 
+The exclusion limits of $\mu$ can be derived from the \textit{test statistics}, which is a function of $\mu$, of the alternate hypothesis under testing. There are many different ways to construct a test statistics, however, the CMS statistics committee recommends the \textbf{profile likelihood ratio} as the test statistics to be used in a search and discovery experiment and according to the Neyman-Pearson theorem, the profile likelihood ratio gives the most powerful hypothesis test \cite{NPT}. 
+The profile likelihood ratio is computed from the likelihood function for the histogram. This likelihood function, $\mathcal{L}$, is the product of the Poisson probabilities for all the bins of the histogram:
 \begin{equation}\label{eq:LL}
-\mathcal{L}\left( \mu, \mathbf{\theta} \right) = \prod^{N}_{r=1} \frac{{\left( \mu s_{r} + b_{r} \right)}^{n_{r}}}{n_{r}!} e^{-(\mu s_{r} + b_{r})} \cdot \mathcal{G}(\mathbf{\theta} )
+\mathcal{L}\left( \mu, \mathbf{\theta} \right) = \prod^{N}_{i=1} \frac{{\left( \mu s_{i} + b_{i} \right)}^{n_{i}}}{n_{i}!} e^{-(\mu s_{i} + b_{i})} \cdot \mathcal{G}(\mathbf{\theta} ),
 \end{equation}
-where $\mathcal{G}(\mathbf{\theta} )$ is a discrete~(Poisson) distribution of the nuisance parameters. This distribution can be different for different nuisance parameter.
-
-Using the likelihood function, the profilelikelihood ratio is then defined as:
+where $\mathcal{G}(\mathbf{\theta})$, is a discrete~(Poisson) distribution of the \textit{nuisance parameters} through which the systematic uncertainties due to efficiency of the signal events and the integrated luminosity and the theory uncertainties which can impact the final result on $\mu$ can be introduced. If the profile likelihood is plotted as a function of $\mu$, the nuisance parameter will cause broadening of the distribution of the profile likelihood and this reflects the loss in sensitivity or loss of information about the parameter $\mu$, due to the systematic uncertainties.
+%The distribution can be different for different nuisance parameter since $\mu$ is also dependent of $\theta$.
+\newline
+Using the likelihood function, the profile likelihood ratio~(for simplicity, instead of writing the explicit dependence of $\mathcal{L}$ on $n_{i}$, we write  $\mathcal{L}$ in terms of the parameters) is defined as
 \begin{equation}\label{eq:PLL}
-\lambda(\mu) =  \frac{\mathcal{L}(\mu, \hat{\hat{\mathbf{•\theta}}})}{\mathcal{L}(\hat{\mu}, \hat{\mathbf{\theta}} )}
+\lambda(\mu) =  \frac{\mathcal{L}(\mu, \hat{\hat{\mathbf{\theta}}})}{\mathcal{L}(\hat{\mu}, \hat{\mathbf{\theta}} )}
 \end{equation}
-Here $\hat{\hat{\mathbf{•\theta}}} $ is the the value of $\mathbf{\theta}$ that maximizes $\mathcal{L}$ for a specified $\mu$, thus, it is referred to as the \textit{conditional maximum-likelihood estimator}~(CMLE) of $\mathbf{\theta}$ (given as a function of $\mu$). While $\mathcal{L}(\hat{\mu}, \hat{\mathbf{\theta}} )$ is the maximized (unconditional) likelihood function with $\hat{\mu}$ and $\hat{\mathbf{\theta}}$ being its \textit{maximum likelihood}~(ML) estimators.
-The nuisance parameters broadens the profilelikelihood as a function of $\mu$ relative to what is expected if their values where fixed and this reflects in the loss of sensitivity or information about $\mu$ due to the systematic uncertainties.
-\subsection{Test statistics and $p$-values}
-\par
-The above expression for $\lambda(\mu)$ shows that $0 \leq \lambda \leq 1$, where $\lambda$ close to 1 indicates a very good agreement between the data and hypothesis value of $\mu$.
-The test statistics  to be used for our statistical test is defined as:
+where $\hat{\hat{\mathbf{\theta}}}$, known as the \textit{conditional maximum-likelihood estimator}~(CMLE) of $\mathbf{\theta}$, is the the value of $\mathbf{\theta}$ that maximizes $\mathcal{L}$ for a fixed value of $\mu$, and it is a function of $\mu$.  $\mathcal{L}(\hat{\mu}, \hat{\mathbf{\theta}} )$ is the maximized (unconditional) likelihood function with $\hat{\mu}$ and $\hat{\mathbf{\theta}}$ being its \textit{maximum likelihood}~(ML) estimators. 
+\newline
+We are interested in estimating an interval for the parameter $\mu$.
+\newline
+In our statistical inference test, we use only a single bin, which means $N = 1$, in the expected signal, estimated background and data histograms since we observed only one event passing our final event selection.
+\subsubsection{Test statistics and $p$-values} 
+The expression for $\lambda(\mu)$ given in Equation \ref{eq:LL}, suggest that $0 \leq \lambda \leq 1$. When $\lambda$ is close to 1, it means a very good agreement between the data and the given hypothesis defined by the value of $\mu$.  Using $\lambda(\mu)$, the test statistics is defined as
 \begin{equation}
- t_{\mu} = -2\ln \lambda(\mu)
+ q_{\mu} = -2\ln \lambda(\mu) .
 \end{equation}
-It is important to note that the test statistics approach to any statistical test is favourable because just be looking at the values of the test statistics, higher values corresponds to increasing incompatibility between the data and the value of $\mu$ which is from the signal hypothesis. 
-This incompatibility or disagreement between the data and a given hypothesis is quantified by calculating the probability or $p$-value as:
+\par 
+The test statistics approach to hypothesis testing is very favorable because of its very simple interpretation: higher values of the test statistics corresponds to increasing incompatibility between the data and signal plus background hypothesis and this incompatibility can be quantified by calculating a $p$-value, which is \textit{probability of compatibility} from the test statistics. 
+\newline
+Using the observed data, this probability or confidence interval is evaluated as 
 \begin{equation}
- CL_{s+b} = p_{u} = \int^{\infty}_{t_{\mu,obs}} f(t_{\mu}|\mu) dt_{\mu}
+ CL^{(\mu)}_{s+b} = p_{s+b} = \int^{\infty}_{q^{obs}_{\mu}} f(q_{\mu}|\mu) dq_{\mu},
 \end{equation}
-where, $t_{\mu,obs}$ is the value of the test statistics $t_{\mu}$ obtained from the data and $f(t_{\mu}|\mu)$ is a pdf constructed from $t_{\mu}$ depending on the signal strength $\mu$.
-The set of values for $\mu$ that a rejected because their $p$-value is below a specified threshold value $\alpha$
-lying on either sides of those not rejected gives a two sided confidence interval of $\mu$ and if just on one side of the ones not rejected gives an upper limit on the rejected values of $\mu$.
-
-In the background only scenario i.e $\mu = 0$, the test statistics is defined as:
-
+where, $q^{obs}_{\mu}$, is the value of the test statistics~($q_{\mu}$) from data.
+$f(q_{\mu}|\mu)$ is a probability density function~(pdf) of the test statistic. The notation for the pdf, $f(q_{\mu}|\mu^{\prime})$, is interpreted as the pdf for the test statistics, $q_{\mu}$, computed for a sample of events generated through Monte Carlo event generation with the assumption that $\mu = \mu^{\prime}$. 
+\newline
+For the background-only scenario, the test statistics with $\mu = 0$, is re-written as
 %\begin{equation}\label{eq:HNULL}
 \[\label{eq:HNULL}
  q_{\mu} = \left\lbrace  
@@ -102,43 +90,75 @@ In the background only scenario i.e $\mu = 0$, the test statistics is defined as
   \end{array}
   \right.
 \]
-
-where $\lambda(0)$ is the profilelikelihood ratio for $\mu = 0$  defined in \ref{eq:PLL}.
-and again to quantify the disagreement between the background-only hypothesis~($\mu = 0$) and the data is given by the $p$-value as:
+where, $\lambda(0)$, is the profile likelihood ratio for $\mu = 0$, defined in Equation \ref{eq:PLL}.
+The probability for the background-only~($\mu = 0$) hypothesis being compatible with the data, $ CL^{(\mu)}_{b}$  is defined as
+\begin{equation}\label{eq:HALT}
+ CL^{(\mu)}_{b} = 1 - p_{b} = \int^{\infty}_{q^{obs}_{\mu}} f(q_{\mu}|0) dq_{\mu},
+\end{equation}
+where, $f(q_{\mu}|0)$, denotes the pdf of the test statistics, $q_{\mu}$, under the background-only~($\mu = 0$) hypothesis.
+Using Equation \ref{eq:HNULL} and \ref{eq:HALT}, the \textbf{observed} confidence limit or probability, $ CL^{(\mu)}_{s} $ is evaluated as
 \begin{equation}
- CL_{b} = p_{0} = \int^{\infty}_{q_{0,obs}} f(q_{0}|0) dq_{0}
+CL^{(\mu)}_{s} = \frac{CL^{(\mu)}_{s+b} }{ CL^{(\mu)}_{b}}.
 \end{equation}
-where $f(q_{0}|0)$ denotes the pdf if the test statistics $q_{0}$ under the background-only~($\mu = 0$) hypothesis.
-Figure \ref{fig:LIM} shows a sampling distributions of the test statistics and how the $p$-values can be extracted from these distributions.
+By increasing the value of $\mu$~(increasing the contribution of the signal), the $CL^{(\mu)}_{s}$ decreases, and the value $\mu^{UL}$ for which $CL^{(\mu^{UL})}_{s} = \alpha$ is the observed \textbf{upper limit} for $\mu$ at the required confidence level $1 - \alpha$. In the case of our 95\% confidence interval, $\alpha = 0.05$
+\newline
+In practice, the pdfs $f(q_{\mu}|\mu)$ and $f(q_{\mu}|0)$ of the test statistics for signal plus background and  background-only hypothesis, respectively, are obtain for the different values of $\mu$, until the value of $\mu$ which gives the upper limit is obtained. The pdfs are evaluated through Monte Carlo samples generated for the cases with arbitrary $\mu $ and $\mu = 0$, respectively, and their $p$-values are the area under each pdf bounded from below by the observed value of the test statistics from data, $q^{obs}$.
+\newline
+The \textbf{expected} confidence limit is obtained using the median of the test statistics $q_{\mu} = 0.5$, also from Monte Carlo simulation of the search experiment and gives the expected exclusion limit of the SPS8 benchmark GMSB  hypothesis.  
+\subsection{HiggsCombine Tool}
+In CMS, the $CL_{s}$ method for hypothesis testing and evaluating confidence limits has been implemented in a statistical software package called \textit{HiggsCombine} \cite{LIMITS}. The Higgscombine tool provides access to a variety of robust statistical methods with optimized performance for computing limits. The HiggsCombine tool takes as input the expected number of events or histogram of signal and estimated  background, the observed number of events or histogram from data, estimates or histogram of the uncertainties and produce an upper limit in the production cross section of a given physics process for a given value of a parameter of interest~(POI). In addition to the numerous computing and optimization advantages, the Higgscombine tool allows for the possibility of using several different statistical inference methods like Frequentist, Bayesian, Analytical and Hybrid methods to calculate the upper limit. This way, one can make comparison and simple checks for any inconsistency. In this analysis, we used an Asymptotic method for testing and the HybridNew~(a hybrid of Frequentist and Bayesian methods) method  to evaluate our final observed  limits \cite{LIMITS,ASYMP}. 
 
-\vspace{5mm}
-\begin{minipage}{0.94\textwidth} 
-\begin{center}
-\mbox{
-\includegraphics[height=0.65\textwidth, width=0.45\textwidth]{THESISPLOTS/Asymptotics_Test_Stats.png}
-\includegraphics[height=0.615\textwidth, width=0.45\textwidth]{THESISPLOTS/TEST_STATISTICS.png}
-}
-\captionof{figure}{Sampling distributions for $f(t_{\mu}|\mu)$ showing how one extracts the $p$-vlaues. left: is the using a analytic of the Asymptotic method and right: is from the HybridNew method.}
-\label{fig:LIM}
-\end{center}
-\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+%%In addition to the $p$-value which is used for quantifying the level of incompatibility between the data and a given hypothesis, the HiggsCombine tool also provides a quantity known as the \textit{significance}~($\mathcal{Z}$). $\mathcal{Z}$ and the $p$-value have a very non-linear relation which can be defined using a two-sided fluctuation if a Gaussian variable $\sigma$, with $5\sigma$ significance corresponding to a $p$-value of $p = 5.7 \times 10^{-7}$ to denote a discovery. Since, we have not observed any significant excess of events over our standard model background, we will not mention a lot about significance in this thesis, but rather talk about $p$-values as they are indispensable in computing limits.
+%In summary, our hypothesis test is performed using a given statistical method on each value of a chosen parameter of interest~(POI)(usually denoted $\mu$). The $p$-value is obtained from the sampling distribution of the test statistics being used. Can either obtain this test statistics analytically or through Monte Carlo computation and  numerical integration. By plotting the $p$-value as a function of the POI, we obtain a $p$-value curve~(in this case the $CL_{s} = \frac{CL_{s+b}}{CL_{b}}$).
+%The value of $\mu$ which has a p-value $\alpha = 0.05$ is the upper limit~(for 1-dimensional limits, 2-dimensional limits gives lower and upper limits) of $1 - \alpha$  confidence interval~(\ie 95\%).
+%\vspace{5mm}
+%\begin{minipage}{0.94\textwidth} 
+%\begin{center}
+%\mbox{
+%\includegraphics[height=0.65\textwidth, width=0.45\textwidth]{THESISPLOTS/Asymptotics_Test_Stats.png}
+%\includegraphics[height=0.615\textwidth, width=0.45\textwidth]{THESISPLOTS/TEST_STATISTICS.png}
+%}
+%\captionof{figure}{Sampling distributions for $f(t_{\mu}|\mu)$ showing how one extracts the $p$-vlaues. left: is the using a analytic of the Asymptotic method and right: is from the HybridNew method.}
+%\label{fig:LIM}
+%\end{center}
+%\end{minipage}
+%\vspace{5mm}
+%The important question is always, how does one obtain an expression or a distribution of the test %statistics and $f(t_{\mu}|\mu)$ from the likelihood function? To answer this question, the HiggsCombine tool was developed which consist of various ways of both analytically~(\eg the Asymptotic statistical method \cite{ASYMP}) or through numerical integration or Monte Carlo computation~(\eg the HybridNew statistical method) obtain the test statistics and $ f(t_{\mu}|\mu)$. We have shown the limit computation results of both methods as used in this analysis.
+%As an example, the pdf $ f(t_{\mu}|\mu)$ of the test statistics~($t_{\mu}$) obtained though the \textcolor{green}{Asymptotic} statistical method as given in \cite{ASYMP} is:
+%\begin{equation}\label{eq:ASYPTOTIC}
+%f(t_{\mu}|{\mu}^{\prime}) = \mathbf{\Phi}\left( \frac{\mu -{\mu}^{\prime}}{\sigma}\right)\delta(t_{\mu}) +
+ %                            \frac{1}{2}\frac{1}{\sqrt{2\pi}}\frac{1}{t_{\mu}}\exp\left[-\frac{1}{2} %\left(  \sqrt{t_{\mu}} - \frac{\mu - {\mu}^{\prime}}{\sigma}\right)^{2} \right]
+%\end{equation}
+%where result to a half-chi-square distribution when $\mu = \mu^{\prime}$.
 
-\vspace{5mm}
-In addition to the $p$-value, for expressing the disagreement between the data and a given hypothesis, the Higgscombine tool also provides a quantity known as the \textit{significance}~($\mathcal{Z}$). $\mathcal{Z}$ and the $p$-value have a very non-linear relation. Once can defined that relation using a two-sided fluctuation if a Gaussian variable $\sigma$, with $5\sigma$ significance corresponding to a $p$-value of $p = 5.7 \times 10^{-7}$ to denote a discovery. Since, we have not observed any significant excess of events over our standard model background, we will not mention a lot about significance in this thesis, but rather talk about $p$-values as they are indispensable in computing limits.
+%In subtle point worth mentioning is that in the HybridNew approach, systematics uncertainties are taken into account through the Beyesian prior density $\mathbf{\pi(\theta)}$, and the distribution of the test statistics is computed under the assumption if the Beyesian model of average given as: $$\displaystyle{f(t) = \int f(t|\theta)\pi(\theta)d\theta}$$ and the prior pdf $\mathbf{\pi(\theta)}$ is obtained from some measurements characterized by a given likelihood function $\mathcal{L}_{\mathbf{\theta}}(\mathbf{\theta} )$ which is then used to find the prior using Bayes' Theorem. Unlike other cases where systematic uncertainties are taking as being part of the data and incorporated directly through $\mathcal{G}(\theta)$ as shown in equation \ref{eq:LL}. Nevertheless, they arrive at the same result.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%The accepted method by CMS statistics committee for computing upper upper limit by any search and discovery experiment like ours is to use a profilelikelihood ratio as the test statistics and a mixture of frequentist-hybrid significance test for the test statistics calculator and limit extraction. This method is known as the \textit{HybridNew}  method. The parameters of interests~(POI) in our case are the cross section of signal process and the \textit{nuissance parameters} which are the systematics for the background plus signal model. The sensitivity of the search experiment depends on the systematics and hence the nuissance parameters.
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%In a shape based experiment, the mean number of entries in the $i$th bin of the histogram from signal and background will be given as 
+%\begin{equation}
+%s_{i} = s_{tot} \int_{bin, i} f_{s}\left(t;\mathbf{\theta_{s}}\right) ,\quad 
+%b_{i} = b_{tot} \int_{bin, i} f_{b}\left(t;\mathbf{\theta_{b}}\right)
+%\end{equation}
+%where the functions $f_{s}\left(t;\mathbf{\theta_{s}}\right) $ and $f_{b}\left(t;\mathbf{\theta_{b}}\right) $ are the probability density functions~(Pdfs) of the variable $t$~(ECAL time) for the signal and background events, respectively, and $\mathbf{\theta_{s}} $ and $\mathbf{\theta_{b}} $ represent the parameters which characterize the shapes of the Pdfs. $s_{tot}$ and $b_{tot}$ represents the total mean number of signal and background events, respectively, while each integral gives the probability for an event to be found in bin $i$. $\mathbf{\theta} = \left( \mathbf{\theta_{s}}, \mathbf{\theta_{b}}, b_{tot} \right)$ denote all nuisance parameters~(systematic uncertainties) and $s_{tot}$ is the signal normalization which is fixed to the value predicted by the nominal signal model.
 
-The important question is always, how does one obtain an expression or a distribution of the test statistics and $f(t_{\mu}|\mu)$ from the likelihood function? To answer this question, the HiggsCombine tool was developed which consist of various ways of both analytically~(e.g the Asymptotic statistical method \cite{ASYMP}) or through numerical integration or Monte Carlo computation~( e.g the HybridNew statistical method) obtain the test statistics and $ f(t_{\mu}|\mu)$. We have shown the limit computation results of both methods as used in this analysis.
-As an example, the pdf $ f(q_{\mu}|\mu)$ of the test statistics~($q_{\mu}$) obtained though the \textcolor{green}{Asymptotic} statistical method as given in \cite{ASYMP} is:
-\begin{equation}\label{eq:ASYPTOTIC}
-f(t_{\mu}|{\mu}^{\prime}) = \mathbf{\Phi}\left( \frac{\mu -{\mu}^{\prime}}{\sigma}\right)\delta(t_{\mu}) +
-                             \frac{1}{2}\frac{1}{\sqrt{2\pi}}\frac{1}{t_{\mu}}\exp\left[-\frac{1}{2} \left(  \sqrt{t_{\mu}} - \frac{\mu - {\mu}^{\prime}}{\sigma}\right)^{2} \right]
-\end{equation}
-where result to a half-chi-square distribution when $\mu = \mu^{\prime}$.
+%The $CL_{s}$ method advantage in search experiments where  . The method is used for making statistical inferences by computing the probability or \textit{p-value} from  \textit{test statistics} of the different hypothesis to be tested. From these $p$-values the CL is computed and the exclusion limits derived. The computation of the CL from the results of the hypothesis testing is according to the following procedure:
+%%\begin{itemize}
+%\item A \textit{Null}~($H_{0}$) and an \textit{Alternate}~($H_{1}$) hypothesis are defined. Additional hypothesis can also be defined, however, in our case we have just two hypothesis to test,
+%\item A Test statistics~($t(x)$), where $x$ is the data histogram variable, and its corresponding test %statistics calculator are selected,
+%\item The confidence limit is computed by inverting the results of the hypothesis test.
+%\end{itemize}
+%Before we discuss the limit computation, first, let us describe the CLs technique.
+%\par 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The acceptance is because it has been tested and validated during the search for the Higgs boson at a previous CERN experiment known as LEP and recently in the discovery of the Higgs boson with mass, $m_{H} = 125.36\pm 0.37(stat.Unc)\pm0.18(syst.Unc)$, in 2012, by both CMS and ATLAS experiments.
+%where $s+b$ means signal plus background, $CL_{s+b}$ or $p_{s+b}$ is the $p$-value of the signal plus background hypothesis and $CL_{b}$ or $p_{b}$ is that for the background only hypothesis.
 
-In subtle point worth mentioning is that in the HybridNew approach, systematics uncertainties are taken into account through the Beyesian prior density $\mathbf{\pi(\theta)}$, and the distribution of the test statistics is computed under the assumption if the Beyesian model of average given as: $$\displaystyle{f(q) = \int f(q|\theta)\pi(\theta)d\theta}$$ and the prior pdf $\mathbf{\pi(\theta)}$ is obtained from some measurements characterised by a given likelihood function $\mathcal{L}_{\mathbf{\theta}}(\mathbf{\theta} )$ which is then used to find the prior using Bayes' Theorem. Unlike other cases where systematic uncertainties are taking as being part of the data and incorporated directly through $\mathcal{G}(\theta)$ as shown in equation \ref{eq:LL}. Nevertheless, they arrive at the same result.
 
-\par
-In summary, the hypothesis test is performed using a given statistical method on each value of a chosen parameter of interest~(POI)(usually denoted $\mu$). The $p$-value if obtained from the sampling distribution of the test statistics being used. Can either obtain this test statistics analytically or through Monte Carlo computation and  numerical integration. By plotting the p-value as a function of the POI, we obtain the p-value curve~(in this case the $CL_{s} = \frac{CL_{s+b}}{CL_{b}}$).
-The value of $\mu$ which has a p-value $\alpha$~( e.g $0.05$) is the upper limit~(for 1-dimensional limits,2-dimensional limits gives lower and upper limits) of $1 - \alpha$  confidence interval~(e.g 95\%).
+\end{comment}
+
 
 %%\vspace{5mm}
 %%\begin{minipage}{0.94\textwidth} 
