@@ -896,56 +896,6 @@ Di-electron invariant mass and polynomial fit~(red) for sideband sample~($50 < m
 %%\end{center}
 %%\end{minipage}
 
-
-\section{Systematic Studies}
-We have required in our event selection that the photon \pt is greater than 80\GeVc, the jet \pt is greater than 35\GeVc and the missing energy is greater than 60\GeV. The same selection requirements applied to our MC signal event sample should guarantee a good event selection efficiency estimate. Any difference in the photon \pt, jet \pt and missing transverse energy between MC and data, will be a source of systematic uncertainties on the efficiency of selecting signal events. These uncertainties can come from quantities like jet energy scale~(JES), jet energy resolution~(JER), electron-photon energy scale, instrumentation related and energy deposits not clustered during missing transverse energy reconstruction, photon ECAL arrival time bias and ECAL time resolution. 
-\newline
-Table \ref{tab:SYST} presents the sources of uncertainties considered in this analysis. These uncertainties are computed by varying the nominal values of each quantity, while keeping the others fixed, by $1\sigma$ deviation and counting the number of events passing our event selection requirements. ECAL timing bias which has to do with the absolute reference time~(zero ns) of the ECAL timing, is the source of our largest uncertainty. The photon arrival time is measured with respect to this reference time. This ECAL time uncertainty has the largest impact on our analysis, since our analysis is based on counting the number of events with photon ECAL time above $3$~ns. The next largest uncertainties are from energy deposits missed by the clustering algorithm. This affects the photon energy scale, missing energy scale,  jet energy scale and resolution.
-The uncertainty on the photon energy scale in the barrel was estimated to be 4.0\%  which is based on measuring the photon energy of events with $Z\rightarrow \mu\mu\gamma$ decay, where the muon radiates a photon in a process known as the final-state radiation~(FSR) \cite{PES}.  
-\newline
-The uncertainty on the \MET resolution uses a conservative estimate from \MET measurements in QCD events \cite{METRES}, where the \MET uncertainty is calculated using the fraction of events passing an event selection based on \MET for varying thresholds of \MET. 
-\newline
-The uncertainty on the ECAL time resolution was obtained by comparing the mean time of photons of events from $\gamma +$ jet MC sample to events from data with photon ECAL time, $|t_{\gamma}| < 2$~ns. The difference is found to be of the order of 200~ps per event. 
-\newline
-Meanwhile, the systematic uncertainty on luminosity measurement has the recommended value of $2.2$\% provided by CMS and LHC luminosity measurements while the uncertainty from Parton Density Functions~(PDF) is evaluated using the re-weighting technique which uses the Master Equation of CTEQ65 model set described in \cite{PDF}.
-\newline
-Since our background estimation is data-driven, the systematic uncertainties do not impact our results in a significant way.
-The statistical uncertainty in the \textsf{ABCD} background estimation method is our largest source of uncertainty in this analysis and we estimate it to vary upward by 223\% and downward by 51\%. This large background statistical uncertainty is because of the very low event yields. Our final result is affected by the signal selection efficiency only, despite the large background estimation uncertainty. These signal selection uncertainties are used as nuissance parameters in the calculation of the upper limit on the observed signal cross section~($\sigma_{UL}$).
-
-\vspace{5mm}
-\begin{minipage}{0.90\linewidth} 
-\begin{center}
-%\begin{table}[ht]
-%\renewcommand\arraystretch{1.2}
-\begin{tabular}{c c}
-\toprule
-\hline
-\bfseries{Source} & \bfseries {Uncertainty(\%)}\\
-\hline
-\toprule
-\texttt{ECAL absolute time }~(0.0~ns) & $<10.0$\% \\
-\texttt{ECAL time resolution}~(0.5~ns) & $<5.0$\% \\
-\texttt{Unclustered energy deposits} & $<9.0$\% \\
-\texttt{Photon energy scale}  & $< 4.0$\% \\
-\texttt{Jet energy scale}~(JES)  & $< 9.0$\% \\
-\texttt{Jet energy resolution}~(JER) &$ <9.0$\% \\
-\texttt{\MET resolution} & $ <2.8$\%  \\
-\texttt{PDF uncertainty} & $< 1.70$\% \\
-\hline
-\toprule
-\texttt{Background estimation uncertainty} &$51.0$\% to 223\% \\
-\hline 
-\texttt{Luminosity}~(4.5\%) & $< 2.2$\% \\
-\hline
-\bottomrule
-\end{tabular}
-\captionof{table}{Summary of systematic uncertainties for signal efficiency and background estimation in this analysis and applied to our final results.}
-\label{tab:SYST}
-%\end{table}
-\end{center}
-\end{minipage}
-
-\clearpage
 \section{Results}
 After running our analysis on the SinglePhoton data samples requiring events with at least 2 jets, at least one photon with ECAL time  $ 3.0 < t_{\gamma} < 13.0$~ns, ${\ETslash}^{\gamma}\hspace{0.25cm} > 60$\GeV, and $\ETslash\hspace{0.25cm} > 60$\GeV, we observed a single event passing all our event selection requirements as a signal candidate. This event has one photon and two jets. The photon has a transverse momentum  of 224\GeVc and an ECAL time of 12.17~ns.
 \newline
@@ -993,8 +943,27 @@ In our final result, we use the collision background estimated using the $\PZ\ri
 \end{minipage}
 
 \vspace{5mm} 
-With no significant excess over expected number of background events, we compute limits on the number of events at 95\% confidence interval using the CLs limit computing method.
 
+Using the one event observed in our signal region passing our final event selection and acceptance and our estimated $0.37$ background events, we obtain an upper limit on the number of events of $4.07$ at 95\% Confidence Level~(CL) using the $CL_{s}$ procedure. This upper limit is obtain assuming a Poisson distribution of the events in CLs procedure which is the official CMS limit computing method.
+%and the case when the maximum number of signal events expected is $2.95$ for our integrated luminosity of 19.1\fbinv.
+\subsection{CLs Method}
+The $CL_{s}$ method serves as the standard method for evaluating exclusion limits in a search and discovery experiment as recommended by the the CMS statistics committee \cite{CLS}. This is because in search  and discovery experiments the discrimination between the background-only hypothesis with the signal plus background hypothesis is very poor and there is a huge overlap between the probability density functions~(pdfs) of the test statistics of both hypothesis as shown in Figure \ref{fig:CLS}, where the magenta-colored function and shaded area under the pdf is for the background-only hypothesis pdf and the blue is for the signal plus background hypothesis pdf. Each area under the corresponding pdf is the probability or $p$-value computed from the observed value of the test statistics from data, $q^{obs}_{1}$,  to higher values. Rather than using the observed or expected confidence limit of the signal plus background hypothesis, $CL_{s+b}$, the $CL_{s}$ method uses a new confidence interval quantity, $CL_{s}$, defined as 
+\begin{equation}
+CL_{s}  =  \frac{CL_{s+b}}{CL_{b}}  = \frac{p_{s+b}}{1 - p_{b}}
+\end{equation}
+where $CL_{b}$ is the confidence interval derived from the background-only hypothesis test statistics and, $s+b$, means signal plus background. The motivation for dividing the  $CL_{s+b}$ by the $CL_{b}$ is to define a conditional probability which is conditioned to the scenario of observing only background or agreeing with the background-only hypothesis such that the exclusion limit is not easily moved by fluctuations in the background and the limit is said to be a "conservative choice" \cite{LIM}. 
+
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
+\begin{center}
+\mbox{
+\includegraphics[height=0.55\textwidth, width=0.7\textwidth]{THESISPLOTS/CLS_METHOD.png}}
+\captionof{figure}{Test statistic probability density functions~(pdfs) of the signal plus background hypothesis~(blue) and background-only~(magenta) hypothesis showing a typical scenario where using the $CL_{s}$ approach instead of the $CL_{s+b}$ leads to better or conservative exclusion limits.}
+\label{fig:CLS}
+\end{center}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{Search_Analysis_chapter}
 
 %\paragraph*{}\mbox{}\\
