@@ -88,7 +88,7 @@ $\hat{\pt}$ & $\sigma_{LO}$ (pb) & \bfseries{Number of Events}\\
 \section{ECAL Timing}
 In this section, we describe how the photon arrival time is measured and the adjustments we made on the MC time so that it captures the same conditions as data. We discuss the ghost/satellite proton bunches and argue that they are a possible background source to late photons.
 
-\subsection{Photon Time Measurement}
+\subsection{Photon Time Measurement for this Analysis}
 The electromagnetic shower of a photon spreads across several crystals, and as a result, the photon's energy and time measurements are read from several crystals belonging to the photon's supercluster, which contains all of its energy.
 The presence of anomalous signals from spikes, noisy crystals and pile-up events, demand a robust method for measuring the photon arrival time at  ECAL, and since the photon's ECAL time is our main observable for distinguishing background from signal events, we employ a method, which is capable of reducing timing bias that could arise from such anomalous signals, for measuring the photon's arrival time. 
 \newline
@@ -96,7 +96,7 @@ The presence of anomalous signals from spikes, noisy crystals and pile-up events
 \begin{equation}{\label{eq:AVETIME}}
 t_{Ave} = \frac{\sum_{i=1}^N\frac{t^{i}_{reco}}{\sigma_{i}^{2}}}{\sum_{i=1}^{N}\frac{1}{\sigma_{i}^{2}}},
 \end{equation}
-where, $N$ is the total number of crystals of the supercluster, $t_{reco,i}$  and $\sigma_{i}$ are the time and uncertainty on the reconstructed time of each crystal, respectively. 
+where, $N$ is the total number of crystals of the supercluster, $t^{i}_{reco}$  and $\sigma_{i}$ are the time and uncertainty on the reconstructed time of each crystal, respectively. 
 Figure \ref{fig:TIME} shows a comparison of the seed time, $t_{seed}$, and the average time, $t_{Ave}$, to be the photon ECAL time. Both distributions are normalized to total number of events.
 
 \vspace{5mm}
