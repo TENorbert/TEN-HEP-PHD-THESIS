@@ -1,59 +1,65 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Limit_Setting.tex: Limit Setting
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Statistical Analysis and Limit Interpretation}
+\chapter{Limit  Setting and Interpretation}
 \label{Limit_Setting_and_Interpretation_Chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Limit Setting}
+\section{Exclusion Limit Setting}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Since we did not find any excess of events due to a new phenomenon over the expected SM background in our event counting search experiment, we need to make important quantitative statements which are based on the negative finding and will be useful to other particle physicists or future experiments. The expected new phenomenon described by the SPS8 benchmark GMSB model is the decay of the lightest neutralino~(\PSneutralinoOne) into a late photon and a gravitino which can be observed in events with a late photon and large missing transverse energy. An exclusion limit~(is either an "upper" or "lower" limit) is an important quantitative statement on the lifetime, mass of the \PSneutralinoOne and the product of its production cross section and branching ratio. It allows us to make statements like the following: 
+Since we did not find any excess of events over the expected SM background prediction we compute \textit{exclusion limits} based on our findings. In a search and discovery experiment, the exclusion limit is either an "upper" or a "lower" limit which is set on some \textit{Parameter Of Interest}~(POI) of a model, like the signal-strength modifier, $\mu$, which is directly related to the production cross-section of a new particle predicted to exist by the model. An exclusion limit on $\mu$ can be easily translated into exclusion limits on the mass and lifetime of the new particle allowing us to make following quantitative statements: 
 \begin{itemize}
-\item a lightest neutralino, if it exists, is produced with a cross section below a certain threshold, with this probability, and the certain threshold is an \textbf{upper} limit on the lightest neutralino production cross section.
-\item a lightest neutralino decay, if it happens, takes place with a mean lifetime larger than a certain threshold, with this probability, and this threshold is a \textbf{lower} limit on the neutralino mean lifetime.
+\item a Long-Lived Neutral Particle, if it exists, is produced with a cross-section below a certain threshold with this probability and the certain threshold is an \textbf{upper} limit on the Long-Lived Neutral Particle's production cross-section.
+\item a Long-Lived Neutral Particle decay, if it happens, takes place with a mean lifetime larger than a certain threshold with this probability and the threshold is a \textbf{lower} limit on the Long-Lived Neutral Particle's mean lifetime.
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We evaluate an exclusion limit for the lightest neutralino decay to photon and gravitino using a method for deriving an exclusion limit from the \textit{Confidence Interval} or \textit{Confidence Limit}~(CL) known as the \textit{modified frequentist approach} or the $CL_{s}$ method.  This method uses the number of observed events, the expected background events, the expected signal events according to the SPS8 benchmark GMSB model and the systematic uncertainties to compute 95\% CL on the cross section which can be translated into exclusion limits on the mean lifetime, $\tau_{\PSneutralinoOne}$~(ns), and the mass of the  \PSneutralinoOne, $m_{\PSneutralinoOne}$~(\GeVcc),  or the effective SUSY breaking scale, $\mathbf{\Lambda}$~(\TeV). %We also produce a two dimensional limit in $\tau_{\PSneutralinoOne}$ and $m_{\PSneutralinoOne}$~(\GeVcc) still using the CLs technique.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Signal Efficiency and Acceptance}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The plot in Figure \ref{fig:EffAcc} show our signal selection efficiency and acceptance for signal events of MC samples with different mean lifetime in \mm or \textit{proper decay length}, $c\tau$, ranging from 500\mm to 6000\mm with the same lightest neutralino mass of 255\GeVcc or effective SUSY breaking scale $\mathbf{\Lambda=180}$\TeV. 
+Other equally important parameters like the uncertainties of the experiment, detector inefficiencies and luminosity  measurements which can impact the exclusions limits but are not the parameters under investigation by the analysis are called \textit{nuisance parameters}, usually denoted as $\mathbb{\theta}$. Nuisance parameters are used to introduce uncertainties in the computation of the exclusion limits.
 
-\vspace{5mm}
-\begin{minipage}{0.90\linewidth} 
-\begin{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{CLs Method to Determine Exclusion Limits}
+The $CL_{s}$ method is a statistical procedure used in a search and discovery experiment for evaluating exclusion limits and making constrains on the possible range of values of the fundamental parameters of a model which attempts to describe the observation or data from the experiment \cite{CLS}. The goal of the method is to constraint the value of the POI, $\mu$, and this is obtained from the ratio of the probabilities or $p$-values of the confidence interval derived from the signal plus background model or hypothesis to the background-only hypothesis. This ratio which is the $CL_{s}$ is defined as: 
+\begin{equation}
+CL_{s}  =  \frac{CL_{s+b}}{CL_{b}}  = \frac{p_{s+b}}{1 - p_{b}}
+\end{equation}
+where $CL_{b}$ and $CL_{s+b}$ are the  probabilities of the confidence intervals derived from the background-only and signal plus background~($s+b$) hypothesis, respectively, and $p_{s+b}$ and $p_{b}$ are the $p$-values of $s+b$ and $b$-only hypothesis, respectively. 
+The $CL_{s}$ is computed for different values of $\mu$ with each value signifying the level of signal contribution required to describe the observation. A set of values of $\mu$ in an experimentally defined region in the phase-space is excluded if the corresponding evaluated value of the $CL_{s}$ is below $0.05$ and this automatically corresponds to 95\% Confidence Level~(CL) in the excluded region of the parameter.
+\newline
+The $CL_{s}$ is the most favorable method compared to the $CL_{s+b}$ for evaluating the exclusion limits. This is because in some cases using the $CL_{s+b}$ produces limits where the background-only hypothesis is also excluded or the limit on the signal is negative~(large background and small observed number of events) and such limits are difficult to interpret. Thus with the $CL_{s}$ we are always guaranteed to produce non-negative limits. In other words, by \textit{normalizing} the $CL_{s+b}$~(dividing the $CL_{s+b}$ with the $CL_{b}$) we avoid producing erroneous limits like in the scenario where when the background rate, $b$, is small the evaluated interval using $CL_{s}$ still covers the true value unlike using the $CL_{s+b}$ procedure where when $b$ is small the procedure is more likely to produce an error \ie evaluates an interval which does not cover the true value \cite{LIM}. 
+\newline
+Theoretical, systematic and statistical uncertainties are taken into account in the $CL_{s}$ method through the use of nuisance parameters.
+
+\begin{comment}
+%The reason for using the $CL_{s}$ method is because in search  and discovery experiments the discrimination between the background-only hypothesis with the signal plus background hypothesis is very poor and there is a huge overlap between the probability density functions~(pdfs) of the test statistics of both hypothesis as shown in Figure \ref{fig:CLS}, where the magenta-colored function and shaded area under the pdf is for the background-only hypothesis pdf and the blue is for the signal plus background hypothesis pdf. Each area under the corresponding pdf is the probability or $p$-value computed from the observed value of the test statistics from data, $q^{obs}_{1}$,  to higher values.
+%exclusion limit is not easily moved by fluctuations in the background \cite{LIM}. 
+
+%\vspace{5mm}
+%\begin{minipage}{0.90\linewidth} 
+%\begin{center}
 %\mbox{
-%\includegraphics[width=0.49\textwidth,height=0.5\textwidth]
-\includegraphics[height=0.65\textwidth, width=0.8\textwidth]{THESISPLOTS/Eff_180_ctau_2015.png}
-%\includegraphics[height=0.5\textwidth, width=0.5\textwidth]{THESISPLOTS/SignalReconstructionAcceptance.png}}
-\captionof{figure}{The efficiency for different mean decay length, $c\tau$~[\mm] with  $\mathbf{\Lambda=180}$\TeV. TACC/ALL~(yellow square markers) is the  Efficiency $\times$ Acceptance($t>3$~ns) \ie $\varepsilon \times A$, used in evaluating the exclusion limits. }
-\label{fig:EffAcc}
-\end{center}
-\end{minipage}
+%\includegraphics[height=0.55\textwidth, width=0.7\textwidth]{THESISPLOTS/CLS_METHOD.png}}
+%\captionof{figure}{Test statistic probability density functions~(pdfs) of the signal plus background hypothesis~(blue) and background-only~(magenta) hypothesis showing a typical scenario where using the $CL_{s}$ approach instead of the $CL_{s+b}$ leads to better or conservative exclusion limits.}
+%\label{fig:CLS}
+%\end{center}
+%\end{minipage}
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{5mm}
-The efficiency times acceptance~($\varepsilon \times A$) used in Equation \ref{eq:SIGMAUPA} to evaluate the exclusion limits is the TACC/ALL which is the ratio of the events passing our event selection with photon time, $t > 3$~ns in the barrel to all events with photons from the decay of the generated lightest neutralino. The $\times 10$  factor for TACC/ALL shown on the plot  is only for display purpose and was not used in evaluating the limits. 
+\subsection{Uncertainty Studies}
+We have required in our event selection that the photon \pt be greater than 80\GeVc, the jet \pt be greater than 35\GeVc and the missing transverse energy be greater than 60\GeV. The same selection requirements applied to our MC signal event sample should guarantee a good event selection efficiency estimate. Any difference in the photon \pt, jet \pt and missing transverse energy between MC and data will be a source of systematic uncertainty on the efficiency of selecting signal events. These uncertainties can come from quantities like jet energy scale~(JES), jet energy resolution~(JER), electron-photon energy scale, instrumentation related and energy deposits not clustered during missing transverse energy reconstruction, photon arrival time bias and ECAL time resolution. 
 \newline
-The efficiency times acceptance, is small~(less than 10\%) for smaller values of $c\tau = 500\mm$~($\tau = 1.7$~ns) since very few of the events with photon from the lightest neutralino decay have time, $t > 3$~ns, despite many of photons reaching ECAL as is seen in the ECAL/ALL~(ratio of events with photons reaching ECAL to all events with photons from the decay of the generated lightest neutralino.) where the efficiency times acceptance is high for low $c\tau$ values. 
+Table \ref{tab:SYST} presents some of the sources of uncertainties considered in this analysis. The uncertainty values displayed are computed by varying by $1\sigma$ deviation of the nominal value of the given quantity, like JES, while keeping the values of the other uncertainty sources fixed and counting the number of events passing our event selection requirements. ECAL timing bias which has to do with the absolute reference time~(0\ns) of the ECAL time is the source of our largest uncertainty and since the photon arrival time is measured with respect to this reference time the ECAL time uncertainty has the largest impact on our analysis as our analysis is based on counting the number of events with photon ECAL time above $3$\ns. The next largest uncertainties are from energy deposits missed by the clustering algorithm. This affects the photon energy scale, missing transverse energy scale, jet energy scale and resolution.
+The uncertainty on the photon energy scale in the barrel was estimated to be 4.0\%  which is based on measuring the photon energy of events with $Z\rightarrow \mu\mu\gamma$ decay where the muon radiates a photon in a process known as the final-state radiation~(FSR) \cite{PES}.  
 \newline
-The efficiency times acceptance shown in Figure \ref{fig:EffAcc} peaks at $c\tau = 2000\mm$~($\tau = 6.7$~ns) and then begins to slightly fall for larger $c\tau$ values. For very large $c\tau > 6000\mm$ values not shown on the plots, the efficiency times acceptance is again less than 10\% since most of the lightest neutralinos decay outside of the ECAL and are undetected, as seen in the ECAL/ALL where the efficiency keeps dropping with increased $c\tau$ values.
-
-\subsection{Systematic Studies}
-We have required in our event selection that the photon \pt is greater than 80\GeVc, the jet \pt is greater than 35\GeVc and the missing energy is greater than 60\GeV. The same selection requirements applied to our MC signal event sample should guarantee a good event selection efficiency estimate. Any difference in the photon \pt, jet \pt and missing transverse energy between MC and data, will be a source of systematic uncertainties on the efficiency of selecting signal events. These uncertainties can come from quantities like jet energy scale~(JES), jet energy resolution~(JER), electron-photon energy scale, instrumentation related and energy deposits not clustered during missing transverse energy reconstruction, photon ECAL arrival time bias and ECAL time resolution. 
+The uncertainty on the \MET resolution uses a conservative estimate from \MET measurements in QCD events \cite{JES,METRES} where the \MET uncertainty is calculated using the fraction of events passing an event selection based on \MET for different \MET thresholds. 
 \newline
-Table \ref{tab:SYST} presents the sources of uncertainties considered in this analysis. These uncertainties are computed by varying the nominal values of each quantity, while keeping the others fixed, by $1\sigma$ deviation and counting the number of events passing our event selection requirements. ECAL timing bias which has to do with the absolute reference time~(zero ns) of the ECAL timing, is the source of our largest uncertainty. The photon arrival time is measured with respect to this reference time. This ECAL time uncertainty has the largest impact on our analysis, since our analysis is based on counting the number of events with photon ECAL time above $3$~ns. The next largest uncertainties are from energy deposits missed by the clustering algorithm. This affects the photon energy scale, missing energy scale,  jet energy scale and resolution.
-The uncertainty on the photon energy scale in the barrel was estimated to be 4.0\%  which is based on measuring the photon energy of events with $Z\rightarrow \mu\mu\gamma$ decay, where the muon radiates a photon in a process known as the final-state radiation~(FSR) \cite{PES}.  
+The uncertainty on the ECAL time resolution was obtained by comparing the mean time of photons of events from $\gamma +$jet MC sample to events from data with photon ECAL time, $|t_{\gamma}| < 2$~ns. The difference is found to be of the order of 200\ps per event. 
 \newline
-The uncertainty on the \MET resolution uses a conservative estimate from \MET measurements in QCD events \cite{METRES}, where the \MET uncertainty is calculated using the fraction of events passing an event selection based on \MET for varying thresholds of \MET. 
+Meanwhile, the systematic uncertainty on luminosity measurement has the recommended value of $2.2$\% provided by CMS and LHC luminosity measurements while the uncertainty from the measurement of the Parton Density Functions~(PDF) is evaluated using the re-weighting technique which uses the Master Equation of CTEQ65 model set described in \cite{PDF}.
 \newline
-The uncertainty on the ECAL time resolution was obtained by comparing the mean time of photons of events from $\gamma +$ jet MC sample to events from data with photon ECAL time, $|t_{\gamma}| < 2$~ns. The difference is found to be of the order of 200~ps per event. 
+The systematic uncertainties do not impact our results in a significant way since we use a data-driven method for estimating our background.
 \newline
-Meanwhile, the systematic uncertainty on luminosity measurement has the recommended value of $2.2$\% provided by CMS and LHC luminosity measurements while the uncertainty from Parton Density Functions~(PDF) is evaluated using the re-weighting technique which uses the Master Equation of CTEQ65 model set described in \cite{PDF}.
-\newline
-Since our background estimation is data-driven, the systematic uncertainties do not impact our results in a significant way.
-The statistical uncertainty in the \textsf{ABCD} background estimation method is our largest source of uncertainty in this analysis and we estimate it to vary upward by 223\% and downward by 51\%. This large background statistical uncertainty is because of the very low event yields. Our final result is affected by the signal selection efficiency only, despite the large background estimation uncertainty. These signal selection uncertainties are used as nuissance parameters in the calculation of the upper limit on the observed signal cross section~($\sigma_{UL}$).
+The statistical uncertainty in the \textsf{ABCD} background estimation method is our largest source of uncertainty in this analysis and we estimate it to vary upward by 223\% and downward by 51\%. This large background statistical uncertainty is because of the very low event yields. Our final result is affected by the signal selection efficiency only despite the large background estimation uncertainty. These signal selection uncertainties are used as nuissance parameters in the calculation of the upper limit on the observed signal cross-section~($\sigma_{UL}$).
 
 \vspace{5mm}
 \begin{minipage}{0.90\linewidth} 
@@ -87,51 +93,54 @@ The statistical uncertainty in the \textsf{ABCD} background estimation method is
 %\end{table}
 \end{center}
 \end{minipage}
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Statistical Test Formalism}
-In order to compute the exclusion limits, we perform a statistical inference on the Alternate hypothesis, $H_{1}$, which is the SPS8 benchmark GMSB model. Since the result of our search was negative, we try to exclude a region in a parameter space of the SPS8  benchmark GMSB model which do not pass the goodness-of-fit test to the observed data. A set of values of the \textit{Parameter Of Interest}~(POI) describing the SPS8 benchmark GMSB model is excluded if the corresponding evaluated value of the $CL_{s}$ is below $0.05$, which corresponds to 95\% of confidence level~(CL).
-\par 
-Since our search experiment is an event counting experiment, we construct a histogram, in the photon ECAL time, of the number of events, $\mathbf{M}$, passing our final event selection and acceptance. Suppose the number of events in each bin of the histogram is $n_{i}$,  with $i = 1, \cdots, N$, where $N$ is the number of bins of the histogram. The expected number of events in the $i^{th}$ bin, $E[n_{i}]$, is the sum of events from all known physics processes which is a combination of events due to the Standard Model, which we  call background events, $b_{i}$, and events due to the  SPS8 benchmark GMSB model, which we call signal events, $s_{i}$. Thus, the expected number of events in the $i^{th}$ bin is given as
-\begin{equation}
- E[n_{i}] = \mu s_{i} + b_{i}
-\end{equation}
-where $\mu$ is the  POI which is the \textit{signal strength}. It relates the expected cross section~($\sigma_{th}$) according to the SPS8  benchmark GMSB model and the actual observed cross section~($\sigma^{Obs}$) through 
+\subsection{The \textsc{HiggsCombine} Tool for Evaluating Upper Limits}
+CMS has developed a statistical software package which implements the $CL_{s}$ method for hypothesis testing and evaluating confidence limits called \textsc{HiggsCombine} \cite{LIMITS}. The  \textsc{HiggsCombine} tool provides access to a variety of robust statistical methods with optimized performance for computing limits and takes as input the expected number of events or a histogram of the signal, the estimated background, the observed number of events from data and the uncertainties and produces an upper limit in the signal-strength modifier, $\mu$, which is translated to the production cross-section of a given physics process. In addition to the numerous computing and optimization advantages, the \textsc{HiggsCombine} tool allows for the possibility of using several different statistical inference methods like Frequentist, Bayesian, Analytical and Hybrid methods to compute the upper limits. Through this way we  are able to make comparisons and perform simple checks for any inconsistency. In this analysis we used the prescribed HybridNew~(a hybrid of Frequentist and Bayesian methods) method to evaluate the observed  limits. We describe in detail in the next subsections how the statistical hypothesis testing is formulated and upper limits are derived.
+
+\subsubsection{Statistical Test Formalism}
+The objective of a statistical test is to set upper limits on the cross-sections derived from a signal plus background hypothesis which in our case is the SPS8 benchmark GMSB model. The region of the phase-space of the cross-section defined by the POI, $\mu$, of the SPS8  benchmark GMSB model which fails the goodness-of-fit test to the observed data which is the result of our search experiment  is excluded. The statistical formalism to perform such a test goes in the following way. 
+\newline
+Since our search experiment is an event counting experiment, we construct a histogram in the photon ECAL time of the number of events, $\mathbf{M}$, passing our final event selection and acceptance. Suppose the number of events in each bin of the histogram is $n_{i}$ with $i = 1, \cdots, N$, where $N$ is the number of bins of the histogram. Since we only observed a single event filling just one bin this means $N = 1$. The expected number of events in the $i^{th}$ bin given as:
+$ E[n_{i}] = \mu s_{i} + b_{i}$, is the sum of events from all known physics processes which is a combination of events due to the Standard Model which we  call background events, $b_{i}$, and events due to the  SPS8 benchmark GMSB model which we call signal events, $s_{i}$. The signal-strength modifier, $\mu$, being the POI relates the expected cross-section~($\sigma_{th}$) as predicted by the SPS8  benchmark GMSB model to the actual observed cross-section~($\sigma^{Obs}$) as
 \begin{equation}
 \mu = \frac{\sigma^{Obs}}{\sigma_{th}}.
 \end{equation}
-When $\mu = 0$, it means the  SPS8  benchmark GMSB model had no contribution to the number of events in each bin and provides a test for the Standard Model background-only hypothesis. When $\mu=1$, it means the SPS8  benchmark GMSB theory contributed to the number of events as expected and this provides a tests for the signal plus background hypothesis. The other values for $\mu$ corresponds to different rates of the SPS8 benchmark GMSB model.
+When $\mu = 0$ it means the  SPS8  benchmark GMSB model contributes nothing to the number of events in each bin and gives an opportunity to test the Standard Model background-only hypothesis.
+\newline
+When $\mu=1$ it means the SPS8  benchmark GMSB theory contributed to the number of events in each bin and gives an opportunity to tests the signal plus background hypothesis. 
+\newline
+The other values for $\mu$ corresponds to different rates of contribution by the SPS8 benchmark GMSB model.
 \par 
-The exclusion limits of $\mu$ can be derived from the \textit{test statistics}, which is a function of $\mu$, of the alternate hypothesis under testing. There are many different ways to construct a test statistics, however, the CMS statistics committee recommends the \textbf{profile likelihood ratio} as the test statistics to be used in a search and discovery experiment and according to the Neyman-Pearson theorem, the profile likelihood ratio gives the most powerful hypothesis test \cite{NPT}. 
-The profile likelihood ratio is computed from the likelihood function for the histogram. This likelihood function, $\mathcal{L}$, is the product of the Poisson probabilities for all the bins of the histogram:
+In order to measure the compatibility of a given hypothesis to the observed data we define a joint probability density function called the \textit{likelihood}. The cross-section of an interesting event like a new particle is very low compared to the total cross-section of any scattering event happening, as a result, the likelihood function, $\mathcal{L}$, is the product of the Poisson probabilities for all the bins of the histogram:
 \begin{equation}\label{eq:LL}
 \mathcal{L}\left( \mu, \mathbf{\theta} \right) = \prod^{N}_{i=1} \frac{{\left( \mu s_{i} + b_{i} \right)}^{n_{i}}}{n_{i}!} e^{-(\mu s_{i} + b_{i})} \cdot \mathcal{G}(\mathbf{\theta} ),
 \end{equation}
-where $\mathcal{G}(\mathbf{\theta})$, is a discrete~(Poisson) distribution of the \textit{nuisance parameters} through which the systematic uncertainties due to efficiency of the signal events and the integrated luminosity and the theory uncertainties which can impact the final result on $\mu$ can be introduced. If the profile likelihood is plotted as a function of $\mu$, the nuisance parameter will cause broadening of the distribution of the profile likelihood and this reflects the loss in sensitivity or loss of information about the parameter $\mu$, due to the systematic uncertainties.
-%The distribution can be different for different nuisance parameter since $\mu$ is also dependent of $\theta$.
-\newline
-Using the likelihood function, the profile likelihood ratio~(for simplicity, instead of writing the explicit dependence of $\mathcal{L}$ on $n_{i}$, we write  $\mathcal{L}$ in terms of the parameters) is defined as
+where $\mathcal{G}(\mathbf{\theta})$ is a product of probability distributions of the \textit{nuisance parameters} through which the uncertainties which impact the limit on $\mu$ are introduced. This probability distributions can be different for different uncertainties ranging from Poisson, Lognormal, Gaussian and Gamma distributions. In our evaluation of the exclusion limits in this analysis we introduced all the uncertainties presented in Table \ref{tab:SYST} as nuisance parameters with Lognormal distributions.
+In the $CL_{s}$ method the uncertainties are treated differently depending on the method used to perform the statistical inference. By Choosing the HybridNew method to compute are limits, we treat the nuisance parameters in the same way as the ATLAS and CMS prescription which uses the Frequentists methods by "marginalizing" the likelihood \ie integrating out all the nuisance parameters. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Test statistics and $p$-values} 
+To access the agreement between the observed data with either the background-only hypothesis and the signal plus background hypothesis we define a quantity known as the \textit{test statistics}. The test statistics is a quantity which distinguishes two predictions based on their agreement with data.
+According to the Neyman-Pearson theorem the profile likelihood ratio gives the most powerful hypothesis test \cite{NPT}. Therefore using the marginalized likelihood function we define the \textit{profile likelihood} ratio~(for simplicity, instead of writing the explicit dependence of $\mathcal{L}$ on $n_{i}$, we write  $\mathcal{L}$ in terms of the parameters) as
 \begin{equation}\label{eq:PLL}
 \lambda(\mu) =  \frac{\mathcal{L}(\mu, \hat{\hat{\mathbf{\theta}}})}{\mathcal{L}(\hat{\mu}, \hat{\mathbf{\theta}} )}
 \end{equation}
-where $\hat{\hat{\mathbf{\theta}}}$, known as the \textit{conditional maximum-likelihood estimator}~(CMLE) of $\mathbf{\theta}$, is the the value of $\mathbf{\theta}$ that maximizes $\mathcal{L}$ for a fixed value of $\mu$, and it is a function of $\mu$.  $\mathcal{L}(\hat{\mu}, \hat{\mathbf{\theta}} )$ is the maximized (unconditional) likelihood function with $\hat{\mu}$ and $\hat{\mathbf{\theta}}$ being its \textit{maximum likelihood}~(ML) estimators. 
+where $\hat{\hat{\mathbf{\theta}}}$ known as the \textit{conditional maximum-likelihood estimator}~(CMLE) of $\mathbf{\theta}$ is the the value of $\mathbf{\theta}$ that maximizes $\mathcal{L}$ for a fixed value of $\mu$, and it is a function of $\mu$.  $\mathcal{L}(\hat{\mu}, \hat{\mathbf{\theta}} )$ is the maximized (unconditional) likelihood function with $\hat{\mu}$ and $\hat{\mathbf{\theta}}$ being its \textit{maximum likelihood}~(ML) estimators. 
 \newline
-We are interested in estimating an interval for the parameter $\mu$.
+If the profile likelihood is plotted as a function of $\mu$ the nuisance parameter will cause broadening of the distribution of the profile likelihood and this reflects the loss in sensitivity or loss of information about the parameter $\mu$ due to the systematic uncertainties.
 \newline
-In our statistical inference test, we use only a single bin, which means $N = 1$, in the expected signal, estimated background and data histograms since we observed only one event passing our final event selection.
-\subsubsection{Test statistics and $p$-values} 
-The expression for $\lambda(\mu)$ given in Equation \ref{eq:LL}, suggest that $0 \leq \lambda \leq 1$. When $\lambda$ is close to 1, it means a very good agreement between the data and the given hypothesis defined by the value of $\mu$.  Using $\lambda(\mu)$, the test statistics is defined as
+The expression for $\lambda(\mu)$ given in Equation \ref{eq:LL} suggest that $0 \leq \lambda \leq 1$. When $\lambda$ is close to 1 it means $\mu$ is compatible with data. Using the test statistics defined as
 \begin{equation}
- q_{\mu} = -2\ln \lambda(\mu) .
+ q_{\mu} = -2\ln \lambda(\mu).
 \end{equation}
-\par 
-The test statistics approach to hypothesis testing is very favorable because of its very simple interpretation: higher values of the test statistics corresponds to increasing incompatibility between the data and signal plus background hypothesis and this incompatibility can be quantified by calculating a $p$-value, which is \textit{probability of compatibility} from the test statistics. 
+The agreement or disagreement between a given hypothesis and data takes an even more simpler interpretation: higher values of the test statistics indicates that the assumed level of the signal represented by the value of $\mu$ is incompatible with data. This incompatibility can be quantified by calculating a $p$-value. 
 \newline
-Using the observed data, this probability or confidence interval is evaluated as 
+From the observed data this probability on the confidence interval for signal plus background hypothesis is evaluated as 
 \begin{equation}
  CL^{(\mu)}_{s+b} = p_{s+b} = \int^{\infty}_{q^{obs}_{\mu}} f(q_{\mu}|\mu) dq_{\mu},
 \end{equation}
-where, $q^{obs}_{\mu}$, is the value of the test statistics~($q_{\mu}$) from data.
+where $q^{obs}_{\mu}$ is the value of the test statistics~($q_{\mu}$) from data.
 $f(q_{\mu}|\mu)$ is a probability density function~(pdf) of the test statistic. The notation for the pdf, $f(q_{\mu}|\mu^{\prime})$, is interpreted as the pdf for the test statistics, $q_{\mu}$, computed for a sample of events generated through Monte Carlo event generation with the assumption that $\mu = \mu^{\prime}$. 
 \newline
 For the background-only scenario, the test statistics with $\mu = 0$, is re-written as
@@ -144,7 +153,7 @@ For the background-only scenario, the test statistics with $\mu = 0$, is re-writ
   \end{array}
   \right.
 \]
-where, $\lambda(0)$, is the profile likelihood ratio for $\mu = 0$, defined in Equation \ref{eq:PLL}.
+where $\lambda(0)$ is the profile likelihood ratio for $\mu = 0$ defined in Equation \ref{eq:PLL}.
 The probability for the background-only~($\mu = 0$) hypothesis being compatible with the data, $ CL^{(\mu)}_{b}$  is defined as
 \begin{equation}\label{eq:HALT}
  CL^{(\mu)}_{b} = 1 - p_{b} = \int^{\infty}_{q^{obs}_{\mu}} f(q_{\mu}|0) dq_{\mu},
@@ -158,39 +167,66 @@ By increasing the value of $\mu$~(increasing the contribution of the signal), th
 \newline
 In practice, the pdfs $f(q_{\mu}|\mu)$ and $f(q_{\mu}|0)$ of the test statistics for signal plus background and  background-only hypothesis, respectively, are obtain for the different values of $\mu$, until the value of $\mu$ which gives the upper limit is obtained. The pdfs are evaluated through Monte Carlo samples generated for the cases with arbitrary $\mu $ and $\mu = 0$, respectively, and their $p$-values are the area under each pdf bounded from below by the observed value of the test statistics from data, $q^{obs}$.
 \newline
-The \textbf{expected} exclusion limit of the SPS8 benchmark GMSB hypothesis is obtained using the median of the test statistics from producing toy search experiment through Monte Carlo simulation and gives the initial sensitivity of the experiment.  
-\subsection{HiggsCombine Tool}
-In CMS, the $CL_{s}$ method for hypothesis testing and evaluating confidence limits has been implemented in a statistical software package called \textit{HiggsCombine} \cite{LIMITS}. The Higgscombine tool provides access to a variety of robust statistical methods with optimized performance for computing limits. The HiggsCombine tool takes as input the expected number of events or histogram of signal and estimated  background, the observed number of events or histogram from data, estimates or histogram of the uncertainties and produce an upper limit in the production cross section of a given physics process for a given value of a parameter of interest~(POI). In addition to the numerous computing and optimization advantages, the Higgscombine tool allows for the possibility of using several different statistical inference methods like Frequentist, Bayesian, Analytical and Hybrid methods to calculate the upper limit. This way, one can make comparison and simple checks for any inconsistency. In this analysis, we used an Asymptotic method for testing and the HybridNew~(a hybrid of Frequentist and Bayesian methods) method  to evaluate our final observed  limits \cite{LIMITS,ASYMP}. 
+\begin{enumerate}
+\item \textbf{Explain here what the observed, expected and standard deviation limits are and what they are used for}
+\item \textbf{Also explain the excluded regions excluded this far.}
+\end{enumerate}
 
+The \textbf{expected} exclusion limit of the SPS8 benchmark GMSB hypothesis is obtained using the median of the test statistics from producing toy search experiment through Monte Carlo simulation and gives the initial sensitivity of the experiment. We also evaluate the uncertainties on the \textbf{expected} or median~(50\%) limit~(dashed red line) at 68\%~($+ 1\sigma$) or 16\%~($- 1\sigma$) and at 98\%~($+ 2\sigma$) or 2.5\%~($- 2\sigma$) shown with the \textcolor{green}{GREEN} and \textcolor{yellow}{YELLOW}  bands, respectively, in the same Figure \ref{fig:SPS8_Ctau_Ulimit}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%#######################################################################################################
 \section{Limit Interpretation in the SPS8 Benchmark GMSB Model}
-\textbf{Explain here what the observed, expected and standard deviation limits are and what they are used for}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We evaluate an exclusion limit for the lightest neutralino decay to photon and gravitino using the $CL_{s}$ method which uses the number of observed events, the expected background events, the expected signal events according to the SPS8 benchmark GMSB model and the systematic uncertainties to compute 95\% Confidence Limit on the cross-section. The cross-section limits are then translated into exclusion limits on the mean lifetime, $\tau_{\PSneutralinoOne}$~(ns), and the mass of the  \PSneutralinoOne, $m_{\PSneutralinoOne}$~(\GeVcc),  or the effective SUSY breaking scale, $\mathbf{\Lambda}$~(\TeV).%We also produce a two dimensional limit in $\tau_{\PSneutralinoOne}$ and $m_{\PSneutralinoOne}$~(\GeVcc) still using the CLs technique.
+\newline 
+The \textbf{observed} limit is shown as a solid black line in Figure \ref{fig:SPS8_Ctau_Ulimit}.
 \newline
-\textbf{Also explain the excluded regions excluded this far.}
-\par 
-In addition to the \textbf{observed} limit~(shown as a solid black line in Figure \ref{fig:SPS8_Ctau_Ulimit}), we also evaluate the uncertainties on the \textbf{expected} or median~(50\%) limit~(dashed red line) at 68\%~($+ 1\sigma$) or 16\%~($- 1\sigma$) and at 98\%~($+ 2\sigma$) or 2.5\%~($- 2\sigma$) shown with the \textcolor{green}{GREEN} and \textcolor{yellow}{YELLOW}  bands, respectively, in the same Figure \ref{fig:SPS8_Ctau_Ulimit}.
-\newline
-Using  the upper limits in $\tau$ and mass of the lightest neutralino or effective SUSY breaking scale, $\mathbf{\Lambda}$, we produce a two dimensional exclusion limit in $\tau$ and $\mathbf{\Lambda}$ and also a cross section limit according to the SPS8 benchmark GMSB model. 
+Using  the upper limits in $\tau$ and mass of the lightest neutralino or effective SUSY breaking scale, $\mathbf{\Lambda}$, we produce a two dimensional exclusion limit in $\tau$ and $\mathbf{\Lambda}$ and also a cross-section limit according to the SPS8 benchmark GMSB model. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Cross Section and Branching Ratio Limits}
-From the \texttt{HiggsCombine}, we obtain an upper limit on parameter of interest, $\mu^{UL}$ or observed number of events, $N^{Obs}$). Using the efficiency and acceptance the upper limit on the observed number of events can be the observed upper limit on the cross section given as 
+\subsection{Cross-section Upper Limits}
+From the \textsc{HiggsCombine}, we obtain an upper limit on parameter of interest, $\mu^{UL}$ or observed number of events, $N^{Obs}$). Using the efficiency and acceptance the upper limit on the observed number of events can be the observed upper limit on the cross-section given as 
 \begin{equation}{\label{eq:SIGMAUPA}}
 \sigma^{Obs}_{UL} = \frac{\mu^{UL} \cdot N^{Expt}}{\varepsilon\times A\cdot \mathscr{L}}
 \end{equation}
-where, $\mathscr{L}$, is the integrated luminosity~(19\fbinv) and $\varepsilon$ and $A$ are the signal selection Efficiency and Acceptance, respectively and we have used the relationship between the cross section~($\sigma$) the number of events~($N$): $\sigma = \frac{N}{\varepsilon\times A \cdot \mathscr{L}}$.
+where, $\mathscr{L}$, is the integrated luminosity~(19\fbinv) and $\varepsilon$ and $A$ are the signal selection Efficiency and Acceptance, respectively and we have used the relationship between the cross-section~($\sigma$) the number of events~($N$): $\sigma = \frac{N}{\varepsilon\times A \cdot \mathscr{L}}$.
+
+\subsubsection{Signal Efficiency and Acceptance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The plot in Figure \ref{fig:EffAcc} show our signal selection efficiency and acceptance for signal events of MC samples with different mean lifetime in \mm or \textit{proper decay length}, $c\tau$, ranging from 500\mm to 6000\mm with the same lightest neutralino mass of 255\GeVcc or equivalently $\mathbf{\Lambda=180}$\TeV in the SPS8 benchmark GMSB model. 
+
+\vspace{5mm}
+\begin{minipage}{0.90\linewidth} 
+\begin{center}
+%\mbox{
+%\includegraphics[width=0.49\textwidth,height=0.5\textwidth]
+\includegraphics[height=0.65\textwidth, width=0.8\textwidth]{THESISPLOTS/Eff_180_ctau_2015.png}
+%\includegraphics[height=0.5\textwidth, width=0.5\textwidth]{THESISPLOTS/SignalReconstructionAcceptance.png}}
+\captionof{figure}{The efficiency for different mean decay length, $c\tau$~[\mm] with  $\mathbf{\Lambda=180}$\TeV. TACC/ALL~(yellow square markers) is the  Efficiency $\times$ Acceptance($t>3$~ns) \ie $\varepsilon \times A$, used in evaluating the exclusion limits. }
+\label{fig:EffAcc}
+\end{center}
+\end{minipage}
+
+\vspace{5mm}
+The efficiency times acceptance~($\varepsilon \times A$) used in Equation \ref{eq:SIGMAUPA} to evaluate the exclusion limits is the TACC/ALL which is the ratio of the events passing our event selection with photon time, $t > 3$~ns in the barrel to all events with photons from the decay of the generated lightest neutralino. The $\times 10$  factor for TACC/ALL shown on the plot  is only for display purpose and was not used in evaluating the limits. 
 \newline
-If the effective SUSY breaking scale is $\mathbf{\Lambda} = 180\TeV$ then the upper limit on the product of the lightest neutralino production cross section and branching ratio decay to a photon and gravitino channel, $\PSneutralinoOne \rightarrow \gamma + \tilde{G}$, according to the SPS8 benchmark GMSB model is, $\sigma\times BR = 12.05$~fb. The mean lifetime of the lightest neutralino $\tau_{\PSneutralinoOne}$, is either less than $3.2$~ns or larger than 19.87~ns as shown in right plot of Figure \ref{fig:SPS8_Ctau_Ulimit}.
+The efficiency times acceptance, is small~(less than 10\%) for smaller values of $c\tau = 500\mm$~($\tau = 1.7$~ns) since very few of the events with photon from the lightest neutralino decay have time, $t > 3$~ns, despite many of photons reaching ECAL as is seen in the ECAL/ALL~(ratio of events with photons reaching ECAL to all events with photons from the decay of the generated lightest neutralino.) where the efficiency times acceptance is high for low $c\tau$ values. 
 \newline
-For a given lightest neutralino mass and mean lifetime, we can also find its corresponding excluded cross section using Figure \ref{fig:SPS8_SIGMA-Ulimit}. For example, lightest neutralinos with mass,  $m_{\PSneutralinoOne} = 255\GeVcc$, or effective SUSY breaking scale,  $\mathbf{\Lambda} = 180\TeV$, and mean lifetime, $\tau_{\PSneutralinoOne} = 10.0$~ns, have an observed upper limit on their production cross section times branching ratio in the decay to photon and gravitino channel of $\sigma^{UP}_{\PSneutralinoOne} \geq 0.01$~pb at 95\% CL.
+The efficiency times acceptance shown in Figure \ref{fig:EffAcc} peaks at $c\tau = 2000\mm$~($\tau = 6.7$~ns) and then begins to slightly fall for larger $c\tau$ values. For very large $c\tau > 6000\mm$ values not shown on the plots, the efficiency times acceptance is again less than 10\% since most of the lightest neutralinos decay outside of the ECAL and are undetected, as seen in the ECAL/ALL where the efficiency keeps dropping with increased $c\tau$ values.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Upper Limits Described Theory cross-section proediction & Already excluded limits \ie where upper limts are lower than prediction & current exclusion limits
+\par 
+If the effective SUSY breaking scale is $\mathbf{\Lambda} = 180\TeV$ then the upper limit on the product of the lightest neutralino production cross-section and branching ratio decay to a photon and gravitino channel, $\PSneutralinoOne \rightarrow \gamma + \tilde{G}$, according to the SPS8 benchmark GMSB model is, $\sigma\times BR = 12.05$~fb. The mean lifetime of the lightest neutralino $\tau_{\PSneutralinoOne}$, is either less than $3.2$\ns or larger than 19.87~ns as shown in right plot of Figure \ref{fig:SPS8_Ctau_Ulimit}.
+\newline
+For a given lightest neutralino mass and mean lifetime, we can also find its corresponding excluded cross-section using Figure \ref{fig:SPS8_SIGMA-Ulimit}. For example, lightest neutralinos with mass,  $m_{\PSneutralinoOne} = 255\GeVcc$, or effective SUSY breaking scale,  $\mathbf{\Lambda} = 180\TeV$, and mean lifetime, $\tau_{\PSneutralinoOne} = 10.0$\ns, have an observed upper limit on their production cross-section times branching ratio in the decay to photon and gravitino channel of $\sigma^{UP}_{\PSneutralinoOne} \geq 0.01$~pb at 95\% CL.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Mass and Lifetime Limits}
-Using the cross section from theory~(shown as the blue line in Figure \ref{fig:SPS8_Ctau_Ulimit}, for example), the excluded region in the mean lifetime of the lightest neutralino according to the SPS8 benchmark GMSB model are the values of mean lifetime, $\tau$, for which the observed cross section is below the theory cross section, \ie a lower limit and an upper limit on $\tau$ is extracted for the corresponding points where the observed cross section and the theory cross section intersect.
-An exclusion  upper limit on the mass or effective SUSY breaking scale, $\mathbf{\Lambda}$, is obtained from Figure \ref{fig:MASS-limits} at the point where the observed cross section~(solid black line) intersects with the expected~(blue line) cross section. 
+\subsection{Mass and Lifetime Upper Limits}
+Using the cross-section from theory~(shown as the blue line in Figure \ref{fig:SPS8_Ctau_Ulimit}, for example), the excluded region in the mean lifetime of the lightest neutralino according to the SPS8 benchmark GMSB model are the values of mean lifetime, $\tau$, for which the observed cross-section is below the theory cross-section, \ie a lower limit and an upper limit on $\tau$ is extracted for the corresponding points where the observed cross-section and the theory cross-section intersect.
+An exclusion  upper limit on the mass or effective SUSY breaking scale, $\mathbf{\Lambda}$, is obtained from Figure \ref{fig:MASS-limits} at the point where the observed cross-section~(solid black line) intersects with the expected~(blue line) cross-section. 
 \newline
-The excluded lightest neutralino mass, $m_{\PSneutralinoOne}$, or effective SUSY breaking scale, $\mathbf{\Lambda}$, observed from the cross section against lightest neutralino mass plot of Figure \ref{fig:MASS-limits} for $\tau = 6.7$~ns is up to  $m_{\PSneutralinoOne} = 300\GeVcc$ or  $\mathbf{\Lambda} = 220\TeV$, still in the context of the SPS8 benchmark GMSB model.
+The excluded lightest neutralino mass, $m_{\PSneutralinoOne}$, or effective SUSY breaking scale, $\mathbf{\Lambda}$, observed from the cross-section against lightest neutralino mass plot of Figure \ref{fig:MASS-limits} for $\tau = 6.7$~ns is up to  $m_{\PSneutralinoOne} = 300\GeVcc$ or  $\mathbf{\Lambda} = 220\TeV$, still in the context of the SPS8 benchmark GMSB model.
 \newline
-From the 2 dimensional plane define by $(\mathbf{\Lambda},\tau_{\PSneutralinoOne})$ of the exclusion limit, shown in  Figure \ref{fig:SPS8_2D-Ulimit}, the excluded lightest neutralino mean lifetime, $\tau_{\PSneutralinoOne}$, is from $2.0$~ns to $45.0$~ns for low mass~($m_{\PSneutralinoOne} < 150\GeVcc$) lightest neutralino. This exclusion in mean lifetime shrinks as the mass of the lightest neutralino increases or effective SUSY breaking scale increases. This is because the production cross section for the lightest neutralino decreases with increase in its mass or $\mathbf{\Lambda}$. 
+From the 2 dimensional plane define by $(\mathbf{\Lambda},\tau_{\PSneutralinoOne})$ of the exclusion limit, shown in  Figure \ref{fig:SPS8_2D-Ulimit}, the excluded lightest neutralino mean lifetime, $\tau_{\PSneutralinoOne}$, is from $2.0$~ns to $45.0$~ns for low mass~($m_{\PSneutralinoOne} < 150\GeVcc$) lightest neutralino. This exclusion in mean lifetime shrinks as the mass of the lightest neutralino increases or effective SUSY breaking scale increases. This is because the production cross-section for the lightest neutralino decreases with increase in its mass or $\mathbf{\Lambda}$. 
 
 \vspace{5mm}
 \begin{minipage}{0.90\linewidth}
@@ -199,7 +235,7 @@ From the 2 dimensional plane define by $(\mathbf{\Lambda},\tau_{\PSneutralinoOne
 %\includegraphics[height=0.65\textwidth, width=0.53\textwidth]{THESISPLOTS/100TeV_Neutralino_CrossSecTimesBR_Uplimit.pdf}
 \includegraphics[height=0.8\textwidth, width=0.85\textwidth]{THESISPLOTS/Neutralino_CrossSecTimesBR_Uplimit.pdf} 
 %}
-\captionof{figure}{ 95\% CL evaluated using the $CL_{s}$ procedure on the lightest neutralino production cross section times branching ratio~($\sigma\times BR$) against mean lifetime~(ns) for $\mathbf{\Lambda = 180}$\TeV in the SPS8 benchmark GMSB model.}
+\captionof{figure}{ 95\% CL evaluated using the $CL_{s}$ procedure on the lightest neutralino production cross-section times branching ratio~($\sigma\times BR$) against mean lifetime~(ns) for $\mathbf{\Lambda = 180}$\TeV in the SPS8 benchmark GMSB model.}
 \label{fig:SPS8_Ctau_Ulimit}
 \end{center}
 \end{minipage}
@@ -216,7 +252,7 @@ From the 2 dimensional plane define by $(\mathbf{\Lambda},\tau_{\PSneutralinoOne
 %\mbox{
 \includegraphics[height=0.8\textwidth, width=0.85\textwidth]{THESISPLOTS/Neutralino_CrosSecVsMass_Exclusion_limit_11000.pdf}
 %\includegraphics[height=0.65\textwidth, width=0.53\textwidth]{THESISPLOTS/Neutralino_CrosSecVsMass_Exclusion_limit_6000.pdf} }
-\captionof{figure}{95\% CL evaluated using the $CL_{s}$ procedure on the lightest neutralino production cross section times branching ratio~($\sigma\times BR$) for different $\mathbf{\Lambda}$~(or mass of lightest neutralino) for $c\tau = 11000\mm$ or $\tau = 36.7$~ns in the SPS8 benchmark GMSB model.}
+\captionof{figure}{95\% CL evaluated using the $CL_{s}$ procedure on the lightest neutralino production cross-section times branching ratio~($\sigma\times BR$) for different $\mathbf{\Lambda}$~(or mass of lightest neutralino) for $c\tau = 11000\mm$ or $\tau = 36.7$~ns in the SPS8 benchmark GMSB model.}
 \label{fig:MASS-limits}
 \end{center}
 %\end{figure}
@@ -235,7 +271,7 @@ From the 2 dimensional plane define by $(\mathbf{\Lambda},\tau_{\PSneutralinoOne
 \begin{minipage}{0.95\linewidth}
 \begin{center}
 \includegraphics[height=0.85\textwidth, width=0.9\textwidth]{THESISPLOTS/limit2D_Cross-Section-Observed.png}
-\captionof{figure}{95\% CL in cross section for different mass and lifetime of the lightest neutralino using the 8\TeV data corresponding to an integrated luminosity of 19.1\fbinv of the CMS experiment.}
+\captionof{figure}{95\% CL in cross-section for different mass and lifetime of the lightest neutralino using the 8\TeV data corresponding to an integrated luminosity of 19.1\fbinv of the CMS experiment.}
 \label{fig:SPS8_SIGMA-Ulimit}
 \end{center}
 \end{minipage}
@@ -284,15 +320,6 @@ From the 2 dimensional plane define by $(\mathbf{\Lambda},\tau_{\PSneutralinoOne
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 %%In addition to the $p$-value which is used for quantifying the level of incompatibility between the data and a given hypothesis, the HiggsCombine tool also provides a quantity known as the \textit{significance}~($\mathcal{Z}$). $\mathcal{Z}$ and the $p$-value have a very non-linear relation which can be defined using a two-sided fluctuation if a Gaussian variable $\sigma$, with $5\sigma$ significance corresponding to a $p$-value of $p = 5.7 \times 10^{-7}$ to denote a discovery. Since, we have not observed any significant excess of events over our standard model background, we will not mention a lot about significance in this thesis, but rather talk about $p$-values as they are indispensable in computing limits.
@@ -320,7 +347,7 @@ From the 2 dimensional plane define by $(\mathbf{\Lambda},\tau_{\PSneutralinoOne
 
 %In subtle point worth mentioning is that in the HybridNew approach, systematics uncertainties are taken into account through the Beyesian prior density $\mathbf{\pi(\theta)}$, and the distribution of the test statistics is computed under the assumption if the Beyesian model of average given as: $$\displaystyle{f(t) = \int f(t|\theta)\pi(\theta)d\theta}$$ and the prior pdf $\mathbf{\pi(\theta)}$ is obtained from some measurements characterized by a given likelihood function $\mathcal{L}_{\mathbf{\theta}}(\mathbf{\theta} )$ which is then used to find the prior using Bayes' Theorem. Unlike other cases where systematic uncertainties are taking as being part of the data and incorporated directly through $\mathcal{G}(\theta)$ as shown in equation \ref{eq:LL}. Nevertheless, they arrive at the same result.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%The accepted method by CMS statistics committee for computing upper upper limit by any search and discovery experiment like ours is to use a profilelikelihood ratio as the test statistics and a mixture of frequentist-hybrid significance test for the test statistics calculator and limit extraction. This method is known as the \textit{HybridNew}  method. The parameters of interests~(POI) in our case are the cross section of signal process and the \textit{nuissance parameters} which are the systematics for the background plus signal model. The sensitivity of the search experiment depends on the systematics and hence the nuissance parameters.
+%%The accepted method by CMS statistics committee for computing upper upper limit by any search and discovery experiment like ours is to use a profilelikelihood ratio as the test statistics and a mixture of frequentist-hybrid significance test for the test statistics calculator and limit extraction. This method is known as the \textit{HybridNew}  method. The parameters of interests~(POI) in our case are the cross-section of signal process and the \textit{nuissance parameters} which are the systematics for the background plus signal model. The sensitivity of the search experiment depends on the systematics and hence the nuissance parameters.
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %In a shape based experiment, the mean number of entries in the $i$th bin of the histogram from signal and background will be given as 
 %\begin{equation}
