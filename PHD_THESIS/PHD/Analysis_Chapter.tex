@@ -442,7 +442,7 @@ Comparing these scatter plots of $\Delta\eta$  and $\Delta\phi$ for these out-of
 \includegraphics[height=0.5\textwidth, width=0.5\textwidth]{THESISPLOTS/Cosmic_In-time-Photons_Data.png}
 \includegraphics[height=0.5\textwidth, width=0.5\textwidth]{THESISPLOTS/Cosmic_Out-Of-time-Photons_Data.png} 
 }
-\captionof{figure}{Scatter plot showing $\Delta\eta(\mbox{DT Seg},\gamma)$ against $\Delta\phi(\mbox{DT Seg},\gamma)$ for out-of-time~($ t_{\gamma} > 2$~ns and $t_{\gamma} < -3$~ns) photons~(right) compared to in-time($|t_{\gamma}| < 1$~ns) photons~(left). Cosmic photon candidates have small $\Delta\eta$ and $\Delta\phi$.}
+\captionof{figure}{Scatter plot showing $\Delta\eta(\mbox{DT Seg},\gamma)$ against $\Delta\phi(\mbox{DT Seg},\gamma)$ for out-of-time~($ t_{\gamma} > 2$\ns and $t_{\gamma} < -3$\ns) photons~(right) compared to in-time($|t_{\gamma}| < 1$\ns) photons~(left). Cosmic photon candidates have small $\Delta\eta$ and $\Delta\phi$.}
 \label{fig:COSMIC}
 \end{center}
 \end{minipage}
@@ -471,9 +471,9 @@ Comparing the number of crystals in a photon supercluster of in-time photons, ha
 \begin{center}
 \captionsetup{type=figure}
 \mbox{
-\includegraphics[height=0.50\textwidth, width=0.5\textwidth]{THESISPLOTS/Number-Of-Crystals-In-Photon-SC.pdf}
+\includegraphics[height=0.55\textwidth, width=0.5\textwidth]{THESISPLOTS/NumberOfCrystalsInPhotonEB-Comparison.pdf}
 \includegraphics[height=0.50\textwidth, width=0.5\textwidth]{THESISPLOTS/swissX.png} }
-\captionof{figure}{\textit{Number of crystals} of a photon supercluster~(left) for in-time photon candidates~(black), spike-seeded photon candidates~(magenta) and halo-induced photon candidates~(red). The spike-seeded photon candidates are selected using a Swiss-Cross variable~($1- E_{4}/E_{1}$)~(right), shown comparing in-time photons~($|t_{\gamma}| < 1.0 $) to spike candidate sample selected using $S_{Minor}$.}
+\captionof{figure}{Number of crystals in photon supercluster~(left) comparing all photon candidates in EB~(black), halo-induced photon candidates~(blue), spike-seeded photon candidates~(red) and photons with $|t_{\gamma}| < 1.0 $~(green). The spike-seeded photon candidates are selected using a Swiss-Cross variable~($1- E_{4}/E_{1}$)~(right) which is comparing in-time photons~($|t_{\gamma}| < 1.0 $) to spike candidate photons which were selected using $S_{Minor}$.}
 \label{fig:SPIKES}
 \end{center}
 \end{minipage}
@@ -625,7 +625,7 @@ N^{non-col}_{D} = \left(\frac{N_{B}}{N_{A}} \right)\cdot N_{C},
 where $N_{B}$ $N_{A}$ and $N_{C}$ are the number of events observed in \textsf{B}, \textsf{A} and \textsf{C} samples in that order and $N^{non-col}_{D}$ is the number of non-collision background events we expect in the signal sample \textsf{D}.
 %%%%%
 \subsubsection{Collision Background Estimation}
-We want to estimate the contribution from collision background events to samples \textsf{B} and \textsf{D} of Table \ref{tab:NON-COLLISION}. Using the \textsf{ABCD} technique once more we define samples in the photon ECAL time and ${\ETslash}^{\gamma}\hspace{0.15cm}$ for events selected with $\ETslash\hspace{0.25cm} > 60$\GeV. The events with $\ETslash\hspace{0.25cm} > 60$\GeV define a control sample where the contribution from collision events is dominant as reflected in Table \ref{tab:METSAMPLE}. Most collision events have in-time~($|t_{\gamma}| < 2$\ns) photons. The few collision events with out-of-time photons which might contribute to \textsf{B} and \textsf{D} samples because the photon time is mis-measured can be estimated using control samples made of in-time photons. The definition of each sample as used in the \textsf{ABCD} method to estimate the out-of-time photon collision background is given in Table \ref{tab:COLLISION}. Samples \textsf{A}, \textsf{B}, \textsf{C},  and \textsf{D} are not the same as samples used in \ref{NONBKG}.
+We want to estimate the contribution from collision background events to samples \textsf{B} and \textsf{D} of Table \ref{tab:NON-COLLISION}. Using the \textsf{ABCD} technique once more we define samples in the photon ECAL time and ${\ETslash}^{\gamma}\hspace{0.15cm}$ for events selected with $\ETslash\hspace{0.25cm} > 60$\GeV. The events with $\ETslash\hspace{0.25cm} > 60$\GeV define a control sample where the contribution from collision events is dominant as reflected in Table \ref{tab:METSAMPLE}. Most collision events have in-time~($|t_{\gamma}| < 2$\ns) photons. The few collision events with out-of-time photons which might contribute to \textsf{B} and \textsf{D} samples because the photon time is mis-measured can be estimated using control samples made of in-time photons. The definition of each sample as used in the \textsf{ABCD} method to estimate the out-of-time photon collision background is given in Table \ref{tab:COLLISION}. Samples \textsf{A}, \textsf{B}, \textsf{C},  and \textsf{D} are defined differently from the samples used in \ref{NONBKG}.
 
 \vspace{5mm}
 \begin{minipage}{0.90\linewidth} 
@@ -858,7 +858,7 @@ Di-electron invariant mass and polynomial fit~(red) for sideband sample~($50 < m
 %%\end{center}
 %%\end{minipage}
 
-\section{Results}
+\section{Results}\label{RES}
 After running our analysis on the SinglePhoton data samples requiring events with at least 2 jets, at least one photon with ECAL time  $ 3.0 < t_{\gamma} < 13.0$\ns, ${\ETslash}^{\gamma}\hspace{0.25cm} > 60$\GeV, and $\ETslash\hspace{0.25cm} > 60$\GeV, we observe a single event passing all our event selection requirements as a signal candidate. This event has one photon and two jets. The photon has a transverse momentum  of 224\GeVc and an ECAL time of 12.17\ns.
 \newline
 Our expected number of background events estimated is $0.093^{+0.301}_{-0.047}$ which was computed as
@@ -868,7 +868,6 @@ Our expected number of background events estimated is $0.093^{+0.301}_{-0.047}$ 
 using the event yields presented in Table \ref{tab:EVTYIELD}.
 %% N_{B}^{col} &= \frac{28246}{604958} \times 3 = 0.140^{+0.108}_{-0.061} \\
 %% N_{D}^{col} &= \frac{28246}{604958} \times 2 = 0.093^{+0.093}_{-0.047} \\
-
 \par 
 For the final result we use the $\PZ\rightarrow\EE$ method to estimate the collision background. This is because the di-electron candidates sample provides a good sample where the non-collision background contribution is almost negligible and in terms of kinematics is the most appropriate sample to estimate how often the time of an electromagnetic particle is mis-measured. The estimated number of background events from collision contributing to samples \textsc{B} and \textsc{D} and total number of background events is given as
 \begin{align*} 
@@ -876,11 +875,18 @@ For the final result we use the $\PZ\rightarrow\EE$ method to estimate the colli
  N_{D}^{col} &= 0.37^{+0.09}_{-0.07} \\
  N_{D}^{Total} &= \left( \frac{1 - 0.51}{3}\times 0\right) +  0.37 = 0.37^{+0.39}_{-0.07}.
 \end{align*}
+\vspace{10mm}
+\subsection{Model-independent cross-section Limit}
+Assuming a Poisson distribution for the observed number of events we obtained a model-independent upper limit of $4.37$ on the number of signal events~($N_{\mbox{\tiny{sig}}}$) at 95\% Confidence Level~(CL) using the one event observed in the signal sample and the estimated $0.37$ background events. This model-independent upper limit on the number of signal events can be translated into an upper limit on the cross-section as predicted by any Beyond the Standard Model~(BSM) model for a given total integrated luminosity using the following Equation: 
+\begin{equation}{\label{eq:SIGMAUPA}}
+\sigma^{\mbox{\tiny{UL}}} = \sigma \times\varepsilon\times A = \frac{N^{\mbox{\tiny{UL}}}_{\mbox{\tiny{sig}} }}{\mathscr{L}} ,
+\end{equation}
+where $\mathscr{L}$ is the total integrated luminosity~(19\fbinv), $\varepsilon$ is the signal event selection efficiency of the given BSM model and $A$ is the acceptance. 
+\newline
+If the cross-section is given as $\sigma \times\varepsilon\times A $, it is called the \textit{visible} cross-section as defined by a specific BSM physics model and is thus \textit{model-dependent} while if the cross-section is defined as $\sigma \times A $, it is called the \textit{fiducial} cross-section and the resulting cross-section upper limit derived for any BSM physics model and as a result it is \textit{model-independent}. 
+With an acceptance of 1.6\%~(our conservative signal event acceptance for which the ECAL is most sensitive to late photons), we set a model-independent upper limit on the production cross-section at $0.0143\pba$ at 95\% CL.   
 
-\par 
-Assuming a Poisson distribution for the observed number of events we obtain a upper limit of $4.37$ on the number of signal events at 95\% Confidence Level~(CL) using the one event observed in the signal sample and the estimated $0.37$ background events.
-
-\vspace{5mm}
+\vspace{10mm}
 \begin{minipage}{0.90\linewidth} 
 \begin{center}
 \begin{tabular}{c|c|c}
@@ -906,7 +912,7 @@ Assuming a Poisson distribution for the observed number of events we obtain a up
 \label{tab:EVTYIELD} 
 \end{center}
 \end{minipage}
-
+%%%% Model-independent Limits
 
 \begin{comment}
 %%\vspace{5mm}
