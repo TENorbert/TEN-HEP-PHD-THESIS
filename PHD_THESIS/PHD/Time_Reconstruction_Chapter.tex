@@ -4,17 +4,16 @@
 \chapter{Time Reconstruction and Resolution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{ECAL Time Overview}
-The Electromagnetic Calorimeter~(ECAL) was designed to precisely measure the energy of electrons and photons with a target barrel resolution of 0.5\% for photons with energy more than 50\GeV. In addition to energy measurements, the combination of fast scintillation for \pb crystals, the electronic pulse shaping and a digitization rate of 40~MHz allows for an excellent time measurement.  
-The time of the signal measured by each crystal is reconstructed from 10 discrete samples of the digitized analog pulse height\cite{ECALTDR,ECALREADOUT,ECAL}. 
+The Electromagnetic Calorimeter~(ECAL) was designed to precisely measure the energy of electrons and photons with a target barrel resolution of 0.5\% for photons with energy more than 50\GeV. In addition to energy measurements the combination of fast scintillation of \pb crystals, the electronic pulse shaping and a digitization rate of 40~MHz allows for an excellent time measurement.  
+The time of the signal measured by each crystal is reconstructed from 10 discrete samples of the digitized analog pulse heights \cite{ECALTDR,ECALREADOUT,ECAL}. 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Time Reconstruction}\label{timereco}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Anlog signals from the APD/VPT of a single crystal is preamplified producing a typical signal pulse shown in figure \ref{fig:pulse}. 
 An analog pulse shape from a single crystal is shown in Figure \ref{fig:amplVsTmax}(a). 
-Overlaying the pulse shape are typical 10 digitized  samples in red. The first three samples are taken in the absence of a signal and correspond to the pedestal.
-The ADC chip responsible for the digitization, has a sampling frequency of 40~MHz, \ie one sample is made every 25~ns, which is the same rate as the LHC proton-proton bunch collision frequency of one bunch crossing every 25~ns, and a total time of 250~ns corresponding to the 10 digitized samples is covered.
-In addition, the timing phase of sampling within the 25~ns interval is adjusted so that the maximum of the signal pulse shape corresponds to one of the digitized samples to within 1~ns.
-A time reconstruction algorithm uses the 10 digitized samples to measure the time of a single channel by finding the precise time, $\mathbf{T_{max}}$, corresponding to the maximum of the pulse shape \cite{RECOAMPLI,TIME}. 
+Overlaying the pulse shape are typical 10 sampling times when the pulse heights are digitized are indicated in red. The first three samples are taken in the absence of a signal and correspond to the pedestal. The ADC chip responsible for the digitization has a sampling frequency of 40\MHz, \ie one sample is made every 25\ns, which is the same rate as the LHC proton-proton bunch collisions and a total time of 225\ns. A time reconstruction algorithm uses the 10 digitized samples to measure the time of a single channel by finding the precise time, $\mathbf{T_{max}}$, corresponding to the maximum of the pulse shape \cite{RECOAMPLI,TIME}. 
+%Also, the timing phase of sampling within the 25\ns interval is adjusted so that the maximum of the signal pulse shape corresponds to one of the digitized samples to within 1\ns.
+
 % To measure the time, $\mathbf{T_{max}}$, corresponding to the maximum of the pulse shape,$\mathbf{A_{max}}$, a time reconstruction algorithm is used.
 
 \vspace{5mm}
@@ -23,46 +22,47 @@ A time reconstruction algorithm uses the 10 digitized samples to measure the tim
 \mbox{\includegraphics[height=0.50\textwidth, width=0.90\textwidth]{THESISPLOTS/AmplitudeVsTMax.png}}
 %%\includegraphics[height=0.45\textwidth, width=0.45\textwidth]{THESISPLOTS/TMaxPhaseVsRatio.png}}
 %\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
-\captionof{figure}{(a) A measured ECAL pulse shape for a single channel. (b) $\mathbf{T-T_{max}}$ Vs $ R(T)$ relationship whose inverse is $T(R)$. Solid line is pulse shape from test beam while dots are typical 10 discrete samples corresponding to signal from proton-proton collision.}
+\captionof{figure}{(a) A measured ECAL pulse shape for a single channel.Solid line is pulse shape from test beam while dots are typical 10 discrete samples corresponding to signal from proton-proton collision. (b) $\mathbf{T-T_{max}}$ Vs $ R(T)$ relationship whose inverse is $T(R)$. }
 \label{fig:amplVsTmax}
 \end{center}
 \end{minipage}
 
 \vspace{5mm}
 
-The pulse shape is used to determine $\mathbf{T_{max}}$ in the following way. The height ratio 
+The pulse shape is used to determine $\mathbf{T_{max}}$ in the following way. The expected pulse height ratio 
 \begin{equation}{\label{eq:TREC}}
    R_{i} = A(T_{i})/A(T_{i+1}),
 \end{equation}  
-where $T_{i}$ is the time when the $i^{th}$ pulse height sample is taken, is uniquely determined from the pulse shape. The pulse height ratio, $R_{i}(T_{i}-T_{max})$, shown in Figure \ref{fig:amplVsTmax}(b), is a function of the time that the pulse height of the first of a pair of samples is taken relative to the time of the maximum pulse height, $\mathbf{T_{i}-T_{max}}$. From the inverse of this function, $T(R)$, we obtain $\mathbf{T_{max}} = T_{i} - T(R_{i})$ and the uncertainty, $\sigma_{i}$, for each $R_{i}$ point. The uncertainty on each measurement is a product of the derivative of the function, $T(R)$, and the uncertainty on the value of $R_{i}$ which itself depends on three separate uncertainties: the noise fluctuation~($\sigma_{n}$) of each sample, the uncertainty in the estimation of the pedestal value, which is always subtracted from the measured value, and the truncation during 12-bit digitization. 
+where $T_{i}$ is the time when the $i^{th}$ pulse height sample is taken, is calculable from the pulse shape given in Figure \ref{fig:amplVsTmax}(a). Figure \ref{fig:amplVsTmax}(b) shows this expected pulse height ratio, $R_{i}(T_{i}-T_{max})$, as function of the time that the pulse height of the first of a pair of samples is taken relative to the time of the maximum pulse height, $\mathbf{T_{i}-T_{max}}$ 
+when pulse-height measurements are made. $R_{i}$ is calculated for $i = 4-9$ and using the inverse function, $T(R)$, to obtain $\mathbf{T_{max}}$ from each ratio and the uncertainty, $\sigma_{i}$. The uncertainty on each measurement is a product of the derivative of the function, $T(R)$, and the uncertainty on the value of $R_{i}$ which itself depends on three separate uncertainties: the noise fluctuation~($\sigma_{n}$) of each sample, the uncertainty in the estimation of the pedestal value, which is always subtracted from the measured value, and the truncation during 12-bit digitization. 
 \newline
-A precise value for  $\mathbf{T_{max}}$ is, most of the time, obtained using the ratios $R_{4}$ through $R_{7}$. The other ratios, $R_{8}$ and $R_{9}$ are not used for the estimation of $T_{max}$ because their associated uncertainties are large due to the large slope of the $T(R)$ function.  A weighted average of each $T_{max,i}$, and $\sigma_{i}$, obtained from ratios $R_{4}$ through $R_{7}$ is given as
+A precise value for $\mathbf{T_{max}}$ is, most of the time, obtained using the ratios $R_{4}$ through $R_{7}$. The other ratios, $R_{8}$ and $R_{9}$ are not used for the estimation of $T_{max}$ because their associated uncertainties are large due to the large slope of the $T(R)$ function.  A weighted average $\mathbf{T_{max}}$ is obtained from
 \begin{equation}{\label{eq:TMAX}}
 \displaystyle{\mathbf{T_{max}} = \frac{\sum \frac{T_{max,i}}{\sigma^{2}_{i}}}{\sum \frac{1}{\sigma^{2}_{i}}}} \quad , \quad\quad
-\displaystyle{\frac{1}{\sigma^{2}_{T}} =  \sum \frac{1}{\sigma^{2}_{i}} }
+\displaystyle{\frac{1}{\sigma^{2}_{T}} =  \sum \frac{1}{\sigma^{2}_{i}} },
 \end{equation}
-where the sum is from  $i = 4,\cdots,7$, gives the best estimate of $\mathbf{T_{max}}$ and uncertainty.
+where the sum is from  $i = 4,\cdots,7$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ECAL Time Performance from Test Beam}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{ECAL Time Resolution}
-The intrinsic time resolution of ECAL, measured during test a beam study, can be parametrized using the standard deviation of a Gaussian distribution. It consists of three main contributions which can be summed in quadrature since they are uncorrelated. These three contributions are the noise, stochastic and constant terms. The \textit{Noise}~($N$) term arises from the electronic noise, coherent movement of the baseline and effects of overlapping hits. 
+The intrinsic time resolution of ECAL measured during the test a beam study in late 2008 was obtained using the standard deviation of the distribution of the measured time from each crystal used in the study \cite{TIME}. The time resolution consists of three main contributions which can be summed in quadrature since they are uncorrelated. These three contributions are the noise, stochastic and constant terms. The \textit{Noise}~($N$) term arises from the electronic noise, coherent movement of the baseline and effects of overlapping hits. 
 %some of which come from other soft proton-proton collisions called \textit{pile up}~(PU) events.
-The \textit{Stochastic} term~($S$) arises from fluctuations in the number of photons collected during the sample times. Lastly, the \textit{Constant} term~($C$), whose contribution is independent of the energy deposited and arises from both variations in the point of shower initiation within the crystal, variations in the pulse shape for each channel and calibration effects.
+The \textit{Stochastic} term~($S$) arises from fluctuations in the number of photons collected during the sample times. Lastly, the \textit{Constant} term~($C$), whose contribution is independent of the energy deposited and arises from both variations in the pulse shape for each channel and calibration effects.
 The full parametrization of the time resolution with all three contributions is given as
 \begin{equation}{\label{eq:TimeRes}}
 \sigma^{2}(t) = \left(\frac{N}{A/ \sigma_{n}}\right)^{2} + \left(\frac{S}{\sqrt{A}}\right)^{2} + C^{2},
 \end{equation}
-where $A$ is the measured amplitude in ADC counts corresponding to the energy deposited and $\sigma_{n}$ is the intrinsic noise in the amplitude for an individual channel. $\sigma_{n}$ has a value of $42$\MeV and $140$\MeV in the barrel and endcap, respectively. $N = 33$~ns has been estimated from Monte Carlo~(MC) simulation studies and the contribution from the stochastic term, ($S$) is small, with a value of $S < 7.9$~ns$\cdot \MeV^{1/2}$.
+where $A$ is the measured amplitude in ADC counts corresponding to the energy deposited and $\sigma_{n}$ is the intrinsic noise in the amplitude for an individual channel. $\sigma_{n}$ has a value of $42$\MeV and $140$\MeV in the barrel and endcap, respectively. $N = 33$\ns has been estimated from Monte Carlo~(MC) simulation studies and the contribution from the stochastic term, ($S$) is small, with a value of $S < 7.9$\ns$\cdot \MeV^{1/2}$.
 \newline
-The measured timing resolution was obtained from the Gaussian distribution of the difference in the time of two crystals sharing energy and belonging to the same electromagnetic shower, after about 25\% of the barrel and endcap crystals were exposed to electron beams with energy  between 15\GeV and 250\GeV at H2 and H4 test beam facilities at CERN. This method of measuring $\sigma(t)$ using the time difference of two crystals reduces the contribution to the constant term arising from crystal-to-crystal synchronization. And since the stochastic term is small, the parametrization of the time resolution expressed in Equation \ref{eq:TimeRes} can be reduced to 
+The time resolution is obtained from the width of the distribution of the difference in the time of two crystals sharing energy and belonging to the same electromagnetic shower in the data obtained with some of the barrel and endcap crystals which were exposed to electron beams with energies between 15\GeV and 250\GeV at the \textsc{H2} and \textsc{H4} test beam facilities at CERN. This method of measuring $\sigma(t)$ using the time difference of two crystals reduces the contribution to the constant term arising from crystal-to-crystal synchronization. And since the stochastic term is small, the parametrization of the time resolution expressed in Equation \ref{eq:TimeRes} can be reduced to 
 \begin{equation}{\label{eq:TIMERES}}
  \sigma^{2}(t_{1} - t_{2}) = \left(\frac{N}{A_{eff}/ \sigma_{n}}\right)^{2} + 2\bar{C}^{2}
  \end{equation}
 where $A_{eff} = A_{1}A_{2}/\sqrt{A^{2}_{1} + A^{2}_{2}}$, while $t_{1,2}$ and $A_{1,2}$ are the times and amplitudes of the two crystals. $\bar{C}$ is their residual constant term contribution.
 \newline 
-In practice, the time resolution is measured from the standard deviation of a Gaussian fit to the time distribution from each slice of $A_{eff}/\sigma_{n}$ of the $A_{eff}/\sigma_{n}$ distribution. The resulting distribution of $\sigma(t_{1} - t_{2})$  of these standard deviations plotted against $A_{eff}/\sigma_{n}$ is used to extract the noise and residual constant terms.  The result presented in Figure \ref{fig:FitTimeRes}, of the test beam study gives a noise factor $N = (35.1 \pm 0.2)$~ns which agrees with our Monte Carlo estimate to within 6\%.
+In practice, the time resolution is measured from the standard deviation of a Gaussian fit to the time distribution from each slice of $A_{eff}/\sigma_{n}$ of the $A_{eff}/\sigma_{n}$ distribution. The resulting distribution of $\sigma(t_{1} - t_{2})$  of these standard deviations plotted against $A_{eff}/\sigma_{n}$ is used to extract the noise and residual constant terms.  The result presented in Figure \ref{fig:FitTimeRes}, of the test beam study gives a noise factor $N = (35.1 \pm 0.2)$\ns which agrees with our Monte Carlo estimate to within 6\%.
 %\newline
 %Other studies of the timing resolutions using the time difference between two basic clusters of separate electromagnetic shower was used and the results gave similar values of $N$.
 
@@ -73,24 +73,25 @@ In practice, the time resolution is measured from the standard deviation of a Ga
 \mbox{\includegraphics[height=0.60\textwidth, width=0.85\textwidth]{THESISPLOTS/ECAL_Timing_Resolution.png}}
 %\mbox{\includegraphics[scale=0.45]{THESISPLOTS/TMaxPhaseVsRatio.png}}
 %\includegraphics[scale=0.06]{THESISPLOTS/endcap_CMS.png}} 
-\captionof{figure}{Difference in the time measurements as a function of $A_{eff}/\sigma_{n}$ of two crystals sharing an energy and belonging to the same electromagnetic shower obtained during electron test beam measurements. The single crystal energy scales for barrel~(EB) and endcap~(EE) is overlaid. The fitted results give $N = (35.1 \pm 0.2)$~ns and $\bar{C} = (20 \pm 4)$ ~ns. }
+\captionof{figure}{Difference in the time measurements as a function of $A_{eff}/\sigma_{n}$ of two crystals sharing an energy and belonging to the same electromagnetic shower obtained during electron test beam measurements. The single crystal energy scales for barrel~(EB) and endcap~(EE) is overlaid. The fitted results give $N = (35.1 \pm 0.2)$\ns and $\bar{C} = (20 \pm 4)$\ns. }
 \label{fig:FitTimeRes}
 \end{center}
 \end{minipage}
 
 \vspace{5mm}
 
-Knowing that it takes on average 4.3~ns for a photon to reach the ECAL surface produced from the proton-proton interaction point, this demonstrates an intrinsic time resolution of 2\% for photons with energy $E > 20$\GeV in the barrel.%, a time resolution better than 100~ps can be realized during proton-proton collisions. %we can obtain a resolution better than $100$~ps.
+%Knowing that it takes on average 4.3\ns for a photon to reach the ECAL surface produced from the proton-proton interaction point, t
+The test beam study demonstrates that it is possible to archive an intrinsic time resolution of 0.2\ns for photons with energy $E > 20$\GeV in the barrel.%, a time resolution better than 100~ps can be realized during proton-proton collisions. %we can obtain a resolution better than $100$~ps.
 %The test beam study demonstrates that an intrinsic time resolution better than $0.1$~ns for energy $E > 20$\GeV in EB can be realized.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ECAL Time Performance from Collision}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The time resolution during LHC proton-proton~($pp$) collisions is expected to be worse than what the test beam study show since the conditions during test beam are not the same as during LHC $pp$ collisions. Effects like LHC clock time variations over extended periods, time bias with energy due to gain transitions in the front-end electronics and loss in crystal transparency due to radiation could affect the pulse shape which will ultimately worsen the ECAL time resolution. The impact of some of these effects can be minimized if all the crystals in ECAL are synchronize using events from $pp$. 
+The time resolution during LHC proton-proton~($pp$) collisions is expected to be worse than what the test beam study show since the conditions during test beam are not the same as during LHC $pp$ collisions. Effects like LHC clock time variations over extended periods, time bias with energy due to gain transitions in the front-end electronics and loss in crystal transparency due to radiation could affect the pulse shape which will ultimately worsen the ECAL time resolution. The impact of some of these effects can be minimized if all the crystals are properly aligned in time or calibrated using events with photons from $pp$ collisions. 
 
 \subsection{Crystal Time Synchronization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The cause of crystal time variations may be either due to differences in pulse shape or LHC clock drift over time or time shifts introduced during CMS detector repairs. These variations of about 1 to 3 ns on average can be removed by time aligning or synchronizing all 75,848 \pb crystals in ECAL as the need arises. This synchronization ensures optimal timing resolution throughout the LHC stable beam collision period and continues to maintain the uniform response by all the crystals in measuring the times of electromagnetic particles produced from $pp$ collisions. It also guarantees that the particles  belonging to a given event are always assigned to the correct LHC proton bunch crossing. 
+The cause of crystal time variations may be either due to differences in pulse shape, LHC clock drift over time or time shifts introduced during CMS detector repairs. These variations of less than 1\ns on average can be removed by time aligning or synchronizing all 75,848 \pb crystals in ECAL as the need arises. This synchronization ensures optimal timing resolution throughout the LHC stable beam collision period and continues to maintain the uniform response by all the crystals in measuring the times of electromagnetic particles produced from $pp$ collisions. It also guarantees that the particles  belonging to a given event are always assigned to the correct LHC proton bunch crossing. 
 \newline
 Photons produced from $pp$ collisions at the interaction point~(IP), traveling along a straight path with nearly the speed of light and impinging on the front face of the crystals in ECAL are used to define the absolute zero or reference time. 
 \par 
